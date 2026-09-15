@@ -47,6 +47,15 @@ document.querySelectorAll('.subscribe-box').forEach((subscribeForm) => {
     e.preventDefault();
     statusEl.textContent = '';
     statusEl.removeAttribute('data-state');
+
+    // Honeypot: bots fill every field. Pretend success without submitting.
+    if (websiteInput && websiteInput.value) {
+      statusEl.textContent = "You're on the list. Thanks!";
+      statusEl.setAttribute('data-state', 'ok');
+      subscribeForm.reset();
+      return;
+    }
+
     submitBtn.disabled = true;
 
     try {
@@ -55,13 +64,14 @@ document.querySelectorAll('.subscribe-box').forEach((subscribeForm) => {
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ email: emailInput.value.trim(), website: websiteInput ? websiteInput.value : '' }),
       });
-      const data = await res.json();
-      if (res.ok && data.ok) {
+      let data = {};
+      try { data = await res.json(); } catch {}
+      if (res.ok) {
         statusEl.textContent = "You're on the list. Thanks!";
         statusEl.setAttribute('data-state', 'ok');
         subscribeForm.reset();
       } else {
-        statusEl.textContent = data.error || 'Something went wrong. Please try again.';
+        statusEl.textContent = data.error || data.message || 'Something went wrong. Please try again.';
         statusEl.setAttribute('data-state', 'error');
       }
     } catch {
