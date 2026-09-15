@@ -36,53 +36,6 @@ document.querySelectorAll('.nav-links a, .nav-drawer a').forEach((a) => {
   }
 });
 
-document.querySelectorAll('.subscribe-box').forEach((subscribeForm) => {
-  const emailInput = subscribeForm.querySelector('input[type="email"]');
-  const websiteInput = subscribeForm.querySelector('.hp-field input');
-  const statusEl = subscribeForm.querySelector('.subscribe-status');
-  const submitBtn = subscribeForm.querySelector('.subscribe-submit');
-  if (!emailInput || !statusEl || !submitBtn) return;
-
-  subscribeForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    statusEl.textContent = '';
-    statusEl.removeAttribute('data-state');
-
-    // Honeypot: bots fill every field. Pretend success without submitting.
-    if (websiteInput && websiteInput.value) {
-      statusEl.textContent = "You're on the list. Thanks!";
-      statusEl.setAttribute('data-state', 'ok');
-      subscribeForm.reset();
-      return;
-    }
-
-    submitBtn.disabled = true;
-
-    try {
-      const res = await fetch('/subscribe', {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ email: emailInput.value.trim(), website: websiteInput ? websiteInput.value : '' }),
-      });
-      let data = {};
-      try { data = await res.json(); } catch {}
-      if (res.ok) {
-        statusEl.textContent = "You're on the list. Thanks!";
-        statusEl.setAttribute('data-state', 'ok');
-        subscribeForm.reset();
-      } else {
-        statusEl.textContent = data.error || data.message || 'Something went wrong. Please try again.';
-        statusEl.setAttribute('data-state', 'error');
-      }
-    } catch {
-      statusEl.textContent = 'Something went wrong. Please try again.';
-      statusEl.setAttribute('data-state', 'error');
-    } finally {
-      submitBtn.disabled = false;
-    }
-  });
-});
-
 const tocLinks = document.querySelectorAll('.article-toc a');
 if (tocLinks.length && 'IntersectionObserver' in window) {
   const headings = Array.from(tocLinks)
