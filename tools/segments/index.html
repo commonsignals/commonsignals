@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI attitudes segment calculator (concept demo): Common Signals</title>
+<meta name="description" content="A working demo of a values-based segmentation quiz, the method behind Britain Talks Climate, applied to AI. The segments are illustrative placeholders, not real research findings." />
+
+<meta property="og:title" content="AI attitudes segment calculator (concept demo)" />
+<meta property="og:description" content="A working demo of a values-based segmentation quiz, the method behind Britain Talks Climate, applied to AI. The segments are illustrative placeholders, not real research findings." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://commonsignals.org/tools/segments/" />
+<meta property="og:site_name" content="Common Signals" />
+<meta property="og:image" content="https://commonsignals.org/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Common Signals: helping AI communicators know which messages and messengers actually work." />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AI attitudes segment calculator (concept demo)" />
+<meta name="twitter:description" content="A working demo of a values-based segmentation quiz, the method behind Britain Talks Climate, applied to AI. The segments are illustrative placeholders, not real research findings." />
+<meta name="twitter:image" content="https://commonsignals.org/og-image.png" />
+
+<link rel="canonical" href="https://commonsignals.org/tools/segments/" />
+<meta name="robots" content="index, follow" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%237a1e49'/%3E%3Cpath d='M4 20 Q8 12 11 20 T18 20' stroke='%23f5f4ef' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M18 20 Q22 8 28 20' stroke='%23f5f4ef' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "AI attitudes segment calculator (concept demo)",
+  "description": "A working demo of a values-based segmentation quiz, the method behind Britain Talks Climate, applied to AI. The segments are illustrative placeholders, not real research findings.",
+  "url": "https://commonsignals.org/tools/segments/",
+  "isPartOf": { "@type": "WebSite", "name": "Common Signals", "url": "https://commonsignals.org/" }
+}
+</script>
+<style>
+  .quiz-form {
+    display: grid;
+    gap: 1.8rem;
+    margin: 2rem 0;
+  }
+  .quiz-q {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--paper-2);
+    padding: 1.5rem 1.6rem;
+    margin: 0;
+  }
+  .quiz-q legend {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--ink);
+    padding: 0 0.2rem;
+    margin-bottom: 0.9rem;
+  }
+  .quiz-options {
+    display: grid;
+    gap: 0.6rem;
+  }
+  .quiz-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    font-size: 1rem;
+    color: var(--ink-soft);
+    cursor: pointer;
+    line-height: 1.5;
+  }
+  .quiz-option input {
+    margin-top: 0.3rem;
+    accent-color: var(--signal);
+    flex: none;
+  }
+  .quiz-option:hover { color: var(--ink); }
+  .quiz-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+  .quiz-actions button {
+    font-family: var(--mono);
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+    padding: 0.85rem 1.6rem;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    background: var(--signal);
+    color: var(--paper);
+  }
+  .quiz-actions button:hover { transform: translateY(-1px); }
+  .quiz-note {
+    font-family: var(--mono);
+    font-size: 1rem;
+    color: var(--signal);
+    min-height: 1.2em;
+  }
+  #quizResult {
+    display: none;
+    margin-top: 2.4rem;
+    padding-top: 2.4rem;
+    border-top: 1px solid var(--line);
+  }
+  #quizResult.show { display: block; }
+  .result-kicker {
+    font-family: var(--mono);
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--teal-text);
+    margin: 0 0 0.6rem;
+  }
+  .result-name {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(1.6rem, 4vw, 2.1rem);
+    margin: 0 0 1.1rem;
+  }
+  .result-text p { color: var(--ink-soft); line-height: 1.7; margin: 0 0 1rem; }
+  .scatter-wrap { margin: 2rem 0; }
+  .scatter-wrap svg { width: 100%; height: auto; display: block; }
+  .result-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.8rem;
+  }
+  .retake-btn {
+    font-family: var(--mono);
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+    padding: 0.7rem 1.3rem;
+    border-radius: 999px;
+    border: 1px solid var(--ink);
+    background: none;
+    color: var(--ink);
+    cursor: pointer;
+  }
+  .retake-btn:hover { background: var(--ink); color: var(--paper); }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a href="/" class="wordmark">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#7a1e49"/><path d="M4 20 Q8 12 11 20 T18 20" stroke="#f5f4ef" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M18 20 Q22 8 28 20" stroke="#f5f4ef" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
+      Common Signals
+    </a>
+    <ul class="nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/research">Research</a></li>
+      <li><a href="/tools">Tools</a></li>
+      <li><a href="/training">Training</a></li>
+      <li><a href="/workshops">Workshops</a></li>
+      <li><a href="/updates">Updates</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navDrawer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <a class="nav-cta" href="mailto:hello@commonsignals.org">Get in touch</a>
+  </div>
+  <div class="nav-drawer" id="navDrawer">
+    <ul>
+      <li><a href="/about">About</a></li>
+      <li><a href="/research">Research</a></li>
+      <li><a href="/tools">Tools</a></li>
+      <li><a href="/training">Training</a></li>
+      <li><a href="/workshops">Workshops</a></li>
+      <li><a href="/updates">Updates</a></li>
+      <li><a href="mailto:hello@commonsignals.org">Get in touch</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="page-hero">
+    <span class="tag-pill">Concept demo</span>
+    <h1>Which AI attitudes segment are you?</h1>
+    <p class="sub">A working demo of a segmentation calculator for AI attitudes: answer ten questions, and it plots you against six illustrative segments. It's a real, working mechanic. The segments are not real findings.</p>
+  </div>
+
+  <section id="disclaimer" class="reveal">
+    <div class="wrap">
+      <div class="article-box">
+        <h3>This is a demo</h3>
+        <p>The six segments below are placeholders we built to test the mechanic, not the output of a survey. Common Signals hasn't run its pilot study yet. Real, evidence-based audience segments for AI attitudes will be published once it has, and this page will be replaced with the genuine article.</p>
+      </div>
+      <div class="article-box">
+        <h3>How this demo calculates your result</h3>
+        <p>Two scores are calculated from your answers: preference for order and stability (from questions 1 to 5) and trust in institutions and experts (from questions 6 to 10). Each is a simple sum of the points behind your chosen answers, rescaled to a 0 to 10 scale. Your position is then matched to whichever of the six segments sits closest to it on that plane, by straight-line distance.</p>
+        <p>The questions ask about values and worldview, not AI. That's deliberate: the method this demo illustrates, the Britain Talks Climate and More in Common core beliefs approach, segments people on beliefs that never mention the issue at hand, then reads issue attitudes off per segment afterwards. Asking about AI directly would defeat the point.</p>
+        <p>These ten items are original placeholders written in the spirit of a core-beliefs battery. They will be replaced by a validated set once the pilot has run.</p>
+        <p>The mechanic is real: the maths above is exactly what runs in your browser. The six segments themselves, their names, positions and descriptions, are not: they are placeholders we invented to demonstrate the mechanic, not the output of any survey.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="quiz" class="reveal">
+    <div class="wrap">
+      <h2>Ten questions</h2>
+      <p class="lede">Pick the closest answer for each. There's no right answer; your segment is calculated in your browser.</p>
+
+      <form class="quiz-form" id="segmentQuiz">
+        <fieldset class="quiz-q" data-axis="concern">
+          <legend>1. When society changes quickly, my first instinct is:</legend>
+          <div class="quiz-options">
+            <label class="quiz-option"><input type="radio" name="q1" value="0" required> Excitement about what's possible</label>
+            <label class="quiz-option"><input type="radio" name="q1" value="1"> Curiosity, with some caution</label>
+            <label class="quiz-option"><input type="radio" name="q1" value="2"> Unease, things get lost</label>
+            <label class="quiz-option"><input type="radio" name="q1" value="3"> Alarm, change should be slowed</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="quiz-q" data-axis="concern">
+          <legend>2. The world today feels:</legend>
+          <div class="quiz-options">
+            <label class="quiz-option"><input type="radio" name="q2" value="0" required> Safer than people think</label>
+            <label class="quiz-option"><input type="radio" name="q2" value="1"> About as safe as it's always been</label>
+            <label class="quiz-option"><input type="radio" name="q2" value="2"> More dangerous than it used to be</label>
+            <label class="quiz-option"><input type="radio" name="q2" value="3"> Dangerous in ways we're not prepared for</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="quiz-q" data-axis="concern">
+          <legend>3. Rules and traditions that have lasted a long time:</legend>
+          <div class="quiz-options">
+            <label class="quiz-option"><input type="radio" name="q3" value="0" required> Mostly hold people back</label>
+            <label class="quiz-option"><input type="radio" name="q3" value="1"> Are worth questioning case by case</label>
+            <label class="quiz-option"><input type="radio" name="q3" value="2"> Usually exist for a good reason</label>
+            <label class="quiz-option"><input type="radio" name="q3" value="3"> Should be protected unless there's a very strong case</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="quiz-q" data-axis="concern">
+          <legend>4. When a group I belong to is criticised from outside, I tend to:</legend>
+          <div class="quiz-options">
+            <label class="quiz-option"><input type="radio" name="q4" value="0" required> Consider whether the criticism is fair</label>
+            <label class="quiz-option"><input type="radio" name="q4" value="1"> Feel a bit defensive but listen</label>
+            <label class="quiz-option"><input type="radio" name="q4" value="2"> Defend the group first</label>
+            <label class="quiz-option"><input type="radio" name="q4" value="3"> Assume the critic has an agenda</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="quiz-q" data-axis="concern">
+          <legend>5. Children do best when they are taught to be:</legend>
+          <div class="quiz-options">
+            <label class="quiz-option"><input type="radio" name="q5" value="0" required> Independent and questioning</label>
+            <label class="quiz-option"><input type="radio" name="q5" value="1"> Curious but respectful</label>
+            <label class="quiz-option"><input type="radio" name="q5" value="2"> Respectful and hard-working</label>
+            <label class="quiz-option"><input type="radio" name="q5" value="3"> Obedient and well-behaved</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="quiz-q" data-axis="efficacy">
+          <legend>6. When experts and ordinary people disagree, the experts are usually:</legend>
+          <div class="quiz-options">
+            <label class="quiz-option"><input type="radio" name="q6" value="0" required> Wrong or out of touch</label>
+            <label class="quiz-option"><input type="radio" name="q6" value="1"> Right about half the time</label>
+            <label class="quiz-option"><input type="radio" name="q6" value="2"> Right more often than not</label>
+            <label class="quiz-option"><input type="radio" name="q6" value="3"> Right, they know things the rest of us don't</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="quiz-q" data-axis="efficacy">
+          <legend>7. Government, on balance:</legend>
+          <div class="quiz-options">
+            <label class="quiz-option"><input type="radio" name="q7" value="0" required> Makes most things worse</label>
+            <label class="quiz-option"><input type="radio" name="q7" value="1"> Is a necessary evil</label>
+            <label class="quiz-option"><input type="radio" name="q7" value="2"> Does more good than harm</label>
+            <label class="quiz-option"><input type="radio" name="q7" value="3"> Is essential to a fair society</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="quiz-q" data-axis="efficacy">
+          <legend>8. People who succeed in life mostly:</legend>
+          <div class="quiz-options">
+            <label class="quiz-option"><input type="radio" name="q8" value="3" required> Got lucky or had connections</label>
+            <label class="quiz-option"><input type="radio" name="q8" value="2"> Had advantages plus effort</label>
+            <label class="quiz-option"><input type="radio" name="q8" value="1"> Worked for it, with some luck</label>
+            <label class="quiz-option"><input type="radio" name="q8" value="0"> Earned it through hard work</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="quiz-q" data-axis="efficacy">
+          <legend>9. When a large company says it is acting responsibly, I:</legend>
+          <div class="quiz-options">
+            <label class="quiz-option"><input type="radio" name="q9" value="0" required> Assume it's spin</label>
+            <label class="quiz-option"><input type="radio" name="q9" value="1"> Want to see proof</label>
+            <label class="quiz-option"><input type="radio" name="q9" value="2"> Give it some benefit of the doubt</label>
+            <label class="quiz-option"><input type="radio" name="q9" value="3"> Generally take it at face value</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="quiz-q" data-axis="efficacy">
+          <legend>10. How much influence do ordinary people have over big decisions in society?</legend>
+          <div class="quiz-options">
+            <label class="quiz-option"><input type="radio" name="q10" value="0" required> None, it's decided elsewhere</label>
+            <label class="quiz-option"><input type="radio" name="q10" value="1"> Very little</label>
+            <label class="quiz-option"><input type="radio" name="q10" value="2"> Some, if they organise</label>
+            <label class="quiz-option"><input type="radio" name="q10" value="3"> A lot, if they choose to use it</label>
+          </div>
+        </fieldset>
+
+        <div class="quiz-actions">
+          <button type="submit">See my segment</button>
+          <span class="quiz-note" id="quizNote" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+
+      <div id="quizResult">
+        <p class="result-kicker">Your illustrative segment</p>
+        <h2 class="result-name" id="resultName"></h2>
+        <div class="result-text" id="resultText"></div>
+
+        <div class="scatter-wrap">
+          <svg id="scatterSvg" viewBox="0 0 620 420" role="img" aria-label="Scatter plot of the six segments by preference for order and stability and trust in institutions and experts, with your position highlighted">
+            <style>
+              .sc-t{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:12px;fill:#635f54}
+              .sc-l{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:12px;fill:#5a564c}
+              .sc-ax{stroke:#d8d6d1;stroke-width:1}
+            </style>
+            <rect width="620" height="420" fill="#f5f4ef"/>
+            <line class="sc-ax" x1="80" y1="30" x2="80" y2="350"/>
+            <line class="sc-ax" x1="80" y1="350" x2="600" y2="350"/>
+            <text class="sc-t" x="340" y="395" text-anchor="middle">Preference for order and stability &#8594;</text>
+            <text class="sc-t" x="28" y="190" text-anchor="middle" transform="rotate(-90 28 190)">Trust in institutions and experts &#8594;</text>
+            <g id="scatterDots"></g>
+          </svg>
+        </div>
+
+        <div class="result-actions">
+          <button type="button" class="btn btn-primary" id="shareResultBtn">Share results</button>
+          <button type="button" class="retake-btn" id="retakeBtn">Start again</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="reveal">
+    <div class="wrap">
+      <h2>Want the real segments when they're ready?</h2>
+      <div class="contact-card">
+        <div>
+          <div class="mail"><a href="mailto:hello@commonsignals.org">hello@commonsignals.org</a></div>
+        </div>
+        <a class="btn btn-primary" href="mailto:hello@commonsignals.org">Say hello</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-subscribe">
+      <h3>Want to stay up to date?</h3>
+      <form id="subscribeForm" class="subscribe-box" novalidate>
+        <div class="subscribe-row">
+          <label for="subscribeEmail" class="sr-only">Email address</label>
+          <input type="email" name="email" id="subscribeEmail" placeholder="Enter your email" required autocomplete="email" />
+          <button type="submit" class="btn btn-primary subscribe-submit">Subscribe <span aria-hidden="true">&#8599;</span></button>
+        </div>
+        <div class="hp-field" aria-hidden="true">
+          <label for="subscribeWebsite">Leave this field blank</label>
+          <input type="text" id="subscribeWebsite" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+        <p class="subscribe-note">Stay up to speed with our research on public understanding of AI. Roughly monthly.</p>
+        <p class="subscribe-status" id="subscribeStatus" role="status" aria-live="polite"></p>
+      </form>
+      <div class="social-links">
+        <a href="https://www.youtube.com/@commonsignals" target="_blank" rel="noopener" aria-label="Common Signals on YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2.5" y="5" width="19" height="14" rx="4"/>
+            <path d="M10 9 L15.5 12 L10 15 Z" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/commonsignals" target="_blank" rel="noopener" aria-label="Common Signals on LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <text x="12" y="16.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="10.5" fill="currentColor" stroke="none">in</text>
+          </svg>
+        </a>
+        <a href="https://commonsignalsorg.substack.com/" target="_blank" rel="noopener" aria-label="Common Signals on Substack">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <text x="12" y="16.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="10.5" fill="currentColor" stroke="none">S</text>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/about">About</a></li>
+        <li><a href="/research">Research</a></li>
+        <li><a href="/tools">Tools</a></li>
+        <li><a href="/theory-of-change">Theory of change</a></li>
+        <li><a href="/glossary">Glossary</a></li>
+      </ul>
+      <ul>
+        <li><a href="/training">Training</a></li>
+        <li><a href="/workshops">Workshops</a></li>
+        <li><a href="/updates">Updates</a></li>
+      </ul>
+    </nav>
+    <p class="copyright">&copy; 2026 Common Signals &middot; <a href="mailto:hello@commonsignals.org">hello@commonsignals.org</a></p>
+  </div>
+</footer>
+
+<script src="/main.js" defer></script>
+<script>
+(function () {
+  var SEGMENTS = [
+    {
+      id: "alarmed-advocates",
+      name: "Alarmed Advocates",
+      concern: 8.5,
+      efficacy: 8.5,
+      text: "You're uneasy about fast social change and inclined to think rules and traditions usually exist for good reasons. At the same time you trust that experts and institutions generally get things right, and that government does more good than harm. On AI, this combination illustratively predicts real concern about where things are heading, paired with faith that regulators and experts can be trusted to manage it."
+    },
+    {
+      id: "anxious-bystanders",
+      name: "Anxious Bystanders",
+      concern: 8.5,
+      efficacy: 2.5,
+      text: "You're uneasy about fast change and would rather protect what's worked before than disrupt it. But you don't extend that caution to institutions: you think experts get things wrong more than they let on, and that ordinary people have little real influence over big decisions. On AI, this combination illustratively predicts real worry about the technology alongside deep scepticism that anyone in charge will manage it well."
+    },
+    {
+      id: "practical-sceptics",
+      name: "Practical Sceptics",
+      concern: 6,
+      efficacy: 7,
+      text: "You're moderately cautious about change, willing to question old rules case by case rather than defend or discard them outright. You lean towards trusting experts and institutions, though not uncritically, wanting to see some proof before taking claims at face value. On AI, this combination illustratively predicts a wait-and-see stance: open to being persuaded either way, and more responsive to credible evidence than to alarm or reassurance alone."
+    },
+    {
+      id: "optimistic-adopters",
+      name: "Optimistic Adopters",
+      concern: 2,
+      efficacy: 7,
+      text: "You're comfortable with fast change and sceptical that old rules and traditions deserve much deference just for having lasted. You also trust that experts and institutions generally know what they're doing. On AI, this combination illustratively predicts openness to new tools and confidence that the people building and overseeing them broadly have it handled."
+    },
+    {
+      id: "quiet-majority",
+      name: "Quiet Majority",
+      concern: 3,
+      efficacy: 2,
+      text: "You're reasonably comfortable with change and don't feel strongly that old rules deserve automatic protection. You're also not especially trusting of experts or institutions, though not actively hostile either: it's more that you haven't had reason to form a strong view. On AI, this combination illustratively predicts limited engagement either way, since the topic hasn't yet connected to anything that matters to you directly."
+    },
+    {
+      id: "guarded-traditionalists",
+      name: "Guarded Traditionalists",
+      concern: 5,
+      efficacy: 4,
+      text: "You sit in the middle on change, willing to accept some but wary of losing what's worked before, and you're cautious rather than trusting of experts and institutions by default. On AI, this combination illustratively predicts wariness of the technology itself alongside wariness of the people telling you to be scared of it, since neither change nor those managing it have earned much benefit of the doubt."
+    }
+  ];
+
+  var PLOT = { x0: 80, x1: 600, y0: 350, y1: 30 };
+  function plotX(v) { return PLOT.x0 + (v / 10) * (PLOT.x1 - PLOT.x0); }
+  function plotY(v) { return PLOT.y0 + (v / 10) * (PLOT.y1 - PLOT.y0); }
+
+  var form = document.getElementById("segmentQuiz");
+  var note = document.getElementById("quizNote");
+  var resultBox = document.getElementById("quizResult");
+  var resultName = document.getElementById("resultName");
+  var resultText = document.getElementById("resultText");
+  var dotsGroup = document.getElementById("scatterDots");
+  var retakeBtn = document.getElementById("retakeBtn");
+  var shareBtn = document.getElementById("shareResultBtn");
+
+  if (typeof posthog !== "undefined") posthog.capture("quiz_started", { quiz: "ai_attitudes_segments" });
+
+  function drawScatter(userConcern, userEfficacy) {
+    dotsGroup.innerHTML = "";
+    SEGMENTS.forEach(function (seg) {
+      var cx = plotX(seg.concern), cy = plotY(seg.efficacy);
+      var dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      dot.setAttribute("cx", cx);
+      dot.setAttribute("cy", cy);
+      dot.setAttribute("r", 5);
+      dot.setAttribute("fill", "#d8d6d1");
+      dotsGroup.appendChild(dot);
+      var label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      label.setAttribute("x", cx);
+      label.setAttribute("y", cy - 10);
+      label.setAttribute("text-anchor", "middle");
+      label.setAttribute("class", "sc-l");
+      label.textContent = seg.name;
+      dotsGroup.appendChild(label);
+    });
+    var ux = plotX(userConcern), uy = plotY(userEfficacy);
+    var userDot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    userDot.setAttribute("cx", ux);
+    userDot.setAttribute("cy", uy);
+    userDot.setAttribute("r", 8);
+    userDot.setAttribute("fill", "#7a1e49");
+    userDot.setAttribute("stroke", "#f5f4ef");
+    userDot.setAttribute("stroke-width", "2");
+    dotsGroup.appendChild(userDot);
+    var userLabel = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    userLabel.setAttribute("x", ux);
+    userLabel.setAttribute("y", uy - 14);
+    userLabel.setAttribute("text-anchor", "middle");
+    userLabel.setAttribute("class", "sc-l");
+    userLabel.setAttribute("font-weight", "600");
+    userLabel.setAttribute("fill", "#7a1e49");
+    userLabel.textContent = "You";
+    dotsGroup.appendChild(userLabel);
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var fieldsets = form.querySelectorAll("fieldset");
+    var concernRaw = 0, efficacyRaw = 0;
+    var missing = null;
+    var answers = {};
+
+    fieldsets.forEach(function (fs, idx) {
+      var checked = fs.querySelector("input:checked");
+      if (!checked) {
+        if (missing === null) missing = idx + 1;
+        return;
+      }
+      var axis = fs.getAttribute("data-axis");
+      var points = parseFloat(checked.value);
+      answers[checked.name] = points;
+      if (axis === "concern") concernRaw += points;
+      if (axis === "efficacy") efficacyRaw += points;
+    });
+
+    if (missing !== null) {
+      note.textContent = "Please answer every question, question " + missing + " is missing.";
+      return;
+    }
+    note.textContent = "";
+    var concern = (concernRaw / 15) * 10;
+    var efficacy = (efficacyRaw / 15) * 10;
+
+    var best = null, bestDist = Infinity;
+    SEGMENTS.forEach(function (seg) {
+      var d = Math.pow(seg.concern - concern, 2) + Math.pow(seg.efficacy - efficacy, 2);
+      if (d < bestDist) { bestDist = d; best = seg; }
+    });
+
+    if (typeof posthog !== "undefined") {
+      var eventProps = {
+        quiz: "ai_attitudes_segments",
+        segment: best.id,
+        concern: concern,
+        efficacy: efficacy
+      };
+      Object.keys(answers).forEach(function (key) { eventProps[key] = answers[key]; });
+      posthog.capture("quiz_completed", eventProps);
+    }
+
+    resultName.textContent = best.name;
+    resultText.innerHTML = "<p>" + best.text + "</p>";
+
+    drawScatter(concern, efficacy);
+    resultBox.classList.add("show");
+    resultBox.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  retakeBtn.addEventListener("click", function () {
+    form.reset();
+    resultBox.classList.remove("show");
+    note.textContent = "";
+    form.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  shareBtn.addEventListener("click", function () {
+    var url = "https://commonsignals.org/tools/segments/";
+    var text = "I'm \"" + resultName.textContent + "\" on Common Signals' AI attitudes quiz.";
+    if (navigator.share) {
+      navigator.share({ title: "Common Signals: AI attitudes quiz", text: text, url: url }).catch(function () {});
+      return;
+    }
+    if (navigator.clipboard) {
+      var original = shareBtn.textContent;
+      navigator.clipboard.writeText(text + " " + url).then(function () {
+        shareBtn.textContent = "Copied!";
+        setTimeout(function () { shareBtn.textContent = original; }, 2000);
+      }).catch(function () {
+        shareBtn.textContent = "Could not copy";
+        setTimeout(function () { shareBtn.textContent = original; }, 2000);
+      });
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

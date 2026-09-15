@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Research library: Common Signals</title>
+<meta name="description" content="A directory of existing research on public attitudes to AI, across both the existential-risk and present-day-harms conversations." />
+
+<meta property="og:title" content="Research library: Common Signals" />
+<meta property="og:description" content="A directory of existing research on public attitudes to AI, across both the existential-risk and present-day-harms conversations." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://commonsignals.org/research/library/" />
+<meta property="og:site_name" content="Common Signals" />
+<meta property="og:image" content="https://commonsignals.org/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Common Signals: helping AI communicators know which messages and messengers actually work." />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Research library: Common Signals" />
+<meta name="twitter:description" content="A directory of existing research on public attitudes to AI, across both the existential-risk and present-day-harms conversations." />
+<meta name="twitter:image" content="https://commonsignals.org/og-image.png" />
+
+<link rel="canonical" href="https://commonsignals.org/research/library/" />
+<meta name="robots" content="index, follow" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%237a1e49'/%3E%3Cpath d='M4 20 Q8 12 11 20 T18 20' stroke='%23f5f4ef' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M18 20 Q22 8 28 20' stroke='%23f5f4ef' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Research library",
+  "description": "A directory of existing research on public attitudes to AI, across both the existential-risk and present-day-harms conversations.",
+  "url": "https://commonsignals.org/research/library/",
+  "isPartOf": { "@type": "WebSite", "name": "Common Signals", "url": "https://commonsignals.org/" }
+}
+</script>
+<style>
+  .tool-main { max-width: 68rem; margin: 0 auto; padding: 0 1.5rem 4.5rem; }
+  .library-note {
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1rem 1.4rem;
+    color: var(--ink-soft);
+    margin: 1.6rem 0 2.2rem;
+  }
+  .library-controls {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--paper-2);
+    padding: 1.6rem 1.8rem;
+    margin: 0 0 2rem;
+  }
+  .library-search input[type="search"] {
+    width: 100%;
+    font-family: var(--sans);
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--paper);
+    color: var(--ink);
+    margin-bottom: 1.2rem;
+  }
+  .library-filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.2rem 1.6rem;
+  }
+  .library-filters fieldset { border: none; margin: 0; padding: 0; }
+  .library-filters legend {
+    font-family: var(--mono);
+    font-size: 0.9rem;
+    color: var(--ink-faint);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin: 0 0 0.5rem;
+    padding: 0;
+  }
+  .filter-check {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--ink);
+    margin: 0.3rem 0;
+    cursor: pointer;
+  }
+  .filter-check input { margin-right: 0.4rem; }
+  .filter-empty { color: var(--ink-faint); font-size: 0.9rem; margin: 0; }
+  .library-status-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 1.4rem 0 0;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--line);
+  }
+  .library-status-row .right { display: flex; align-items: center; gap: 1.2rem; }
+  #libraryCount { color: var(--ink-soft); font-family: var(--mono); font-size: 0.95rem; }
+  #libraryClear, #librarySort {
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    color: var(--teal-text);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+  }
+  #libraryClear:hover, #librarySort:hover { color: var(--teal); }
+  .library-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    margin: 2rem 0;
+  }
+  .library-card {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--paper-2);
+    padding: 1.4rem 1.7rem;
+    scroll-margin-top: 5.5rem;
+  }
+  .library-card[hidden] { display: none; }
+  .library-card:target { border-color: var(--signal); }
+  .library-card h3 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0 0 0.4rem;
+  }
+  .library-card h3 a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
+  .library-card h3 a:hover { color: var(--teal-text); border-color: var(--teal-text); }
+  .library-meta { font-family: var(--mono); font-size: 0.85rem; color: var(--ink-faint); margin: 0 0 0.7rem; }
+  .library-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.7rem; }
+  .library-tags .tag-pill { font-size: 0.85rem; padding: 0.2rem 0.7rem; }
+  .tag-pill.tag-teal { color: var(--teal-text); background: rgba(0, 139, 163, 0.14); }
+  .tag-pill.tag-neutral { color: var(--ink-soft); background: var(--paper-2); border: 1px solid var(--line); }
+  .tag-pill.tag-outline { color: var(--ink-soft); background: var(--paper); border: 1px solid var(--line); }
+  .library-summary { color: var(--ink-soft); font-size: 0.97rem; line-height: 1.65; margin: 0 0 0.7rem; }
+  .library-key { color: var(--ink); font-size: 0.95rem; margin: 0 0 0.9rem; }
+  .library-links { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; }
+  .library-links a {
+    font-family: var(--sans);
+    font-size: 0.88rem;
+    color: var(--teal-text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--teal-text);
+  }
+  .library-links a:hover { color: var(--teal); border-color: var(--teal); }
+  .library-empty { color: var(--ink-faint); }
+  .library-criteria { margin: 1rem 0 0; padding-left: 1.2rem; color: var(--ink-soft); }
+  .library-criteria li { margin-bottom: 0.4rem; }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a href="/" class="wordmark">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#7a1e49"/><path d="M4 20 Q8 12 11 20 T18 20" stroke="#f5f4ef" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M18 20 Q22 8 28 20" stroke="#f5f4ef" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
+      Common Signals
+    </a>
+    <ul class="nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/research">Research</a></li>
+      <li><a href="/tools">Tools</a></li>
+      <li><a href="/training">Training</a></li>
+      <li><a href="/workshops">Workshops</a></li>
+      <li><a href="/updates">Updates</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navDrawer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <a class="nav-cta" href="mailto:hello@commonsignals.org">Get in touch</a>
+  </div>
+  <div class="nav-drawer" id="navDrawer">
+    <ul>
+      <li><a href="/about">About</a></li>
+      <li><a href="/research">Research</a></li>
+      <li><a href="/tools">Tools</a></li>
+      <li><a href="/training">Training</a></li>
+      <li><a href="/workshops">Workshops</a></li>
+      <li><a href="/updates">Updates</a></li>
+      <li><a href="mailto:hello@commonsignals.org">Get in touch</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+  <div class="tool-main">
+
+  <div class="page-hero tool-eyebrow">
+    <h1>Research library.</h1>
+    <p class="sub">Existing research on public attitudes to AI, across both the existential-risk and present-day-harms conversations.</p>
+  </div>
+
+  <div class="library-note">
+    <p style="margin:0">Listing here is not an endorsement. These summaries describe what each study did and found; Common Signals does not rate, rank or assess them. We list research from both the existential-risk and present-day-harms conversations, on purpose.</p>
+  </div>
+
+  <div class="library-controls">
+    <div class="library-search">
+      <label for="librarySearch" class="sr-only">Search by title, organisation or summary</label>
+      <input type="search" id="librarySearch" placeholder="Search by title, organisation or summary" autocomplete="off" />
+    </div>
+    <div class="library-filters">
+      <fieldset>
+        <legend>Topic</legend>
+        <label class="filter-check"><input type="checkbox" name="topic" value="attitudes" /> attitudes</label>
+        <label class="filter-check"><input type="checkbox" name="topic" value="media" /> media</label>
+        <label class="filter-check"><input type="checkbox" name="topic" value="messaging" /> messaging</label>
+        <label class="filter-check"><input type="checkbox" name="topic" value="regulation" /> regulation</label>
+        <label class="filter-check"><input type="checkbox" name="topic" value="risk" /> risk</label>
+        <label class="filter-check"><input type="checkbox" name="topic" value="segmentation" /> segmentation</label>
+        <label class="filter-check"><input type="checkbox" name="topic" value="trust" /> trust</label>
+        <label class="filter-check"><input type="checkbox" name="topic" value="usage" /> usage</label>
+        <label class="filter-check"><input type="checkbox" name="topic" value="work" /> work</label>
+      </fieldset>
+      <fieldset>
+        <legend>Geography</legend>
+        <label class="filter-check"><input type="checkbox" name="geography" value="Global" /> Global</label>
+        <label class="filter-check"><input type="checkbox" name="geography" value="Multi-country" /> Multi-country</label>
+        <label class="filter-check"><input type="checkbox" name="geography" value="UK" /> UK</label>
+        <label class="filter-check"><input type="checkbox" name="geography" value="US" /> US</label>
+      </fieldset>
+      <fieldset>
+        <legend>Method</legend>
+        <label class="filter-check"><input type="checkbox" name="method" value="experiment" /> experiment</label>
+        <label class="filter-check"><input type="checkbox" name="method" value="poll" /> poll</label>
+        <label class="filter-check"><input type="checkbox" name="method" value="review" /> review</label>
+        <label class="filter-check"><input type="checkbox" name="method" value="segmentation" /> segmentation</label>
+        <label class="filter-check"><input type="checkbox" name="method" value="survey" /> survey</label>
+        <label class="filter-check"><input type="checkbox" name="method" value="tracker" /> tracker</label>
+      </fieldset>
+      <fieldset>
+        <legend>Type</legend>
+        <label class="filter-check"><input type="checkbox" name="type" value="paper" /> paper</label>
+        <label class="filter-check"><input type="checkbox" name="type" value="poll" /> poll</label>
+        <label class="filter-check"><input type="checkbox" name="type" value="report" /> report</label>
+        <label class="filter-check"><input type="checkbox" name="type" value="tracker" /> tracker</label>
+      </fieldset>
+      <fieldset>
+        <legend>Year</legend>
+        <label class="filter-check"><input type="checkbox" name="year" value="2026" /> 2026</label>
+        <label class="filter-check"><input type="checkbox" name="year" value="2025" /> 2025</label>
+        <label class="filter-check"><input type="checkbox" name="year" value="2024" /> 2024</label>
+        <label class="filter-check"><input type="checkbox" name="year" value="2023" /> 2023</label>
+      </fieldset>
+    </div>
+    <div class="library-status-row">
+      <span id="libraryCount"></span>
+      <div class="right">
+        <button type="button" id="librarySort" data-order="desc">Sort: newest first</button>
+        <button type="button" id="libraryClear">Clear filters</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="library-list" id="libraryList">
+      <article class="library-card" id="usc-ai-opinion-tracker-w4" data-geography="US" data-method="tracker" data-type="tracker" data-year="2026" data-topics="attitudes" data-search="ai public opinion tracker wave 4 university of south carolina college of information and communications fourth wave of a repeated us tracker on public attitudes to ai, published as a findings report.">
+        <h3><a href="https://sc.edu/study/colleges_schools/cic/docs/pdfs/wave4_ai_public_opinion_tracker.pdf" target="_blank" rel="noopener">AI Public Opinion Tracker wave 4</a></h3>
+        <p class="library-meta">University of South Carolina College of Information and Communications &middot; 2026 &middot; US adults &middot; fieldwork Winter 2025 to 2026</p>
+        <div class="library-tags"><span class="tag-pill">tracker</span><span class="tag-pill tag-teal">US</span><span class="tag-pill tag-outline">tracker</span></div>
+        <p class="library-summary">Fourth wave of a repeated US tracker on public attitudes to AI, published as a findings report.</p>
+        
+        <div class="library-links"><a href="https://sc.edu/study/colleges_schools/cic/docs/pdfs/wave4_ai_public_opinion_tracker.pdf" target="_blank" rel="noopener">Report</a><a href="https://sc.edu/study/colleges_schools/cic/docs/pdfs/wave4_ai_public_opinion_tracker.pdf" target="_blank" rel="noopener">PDF</a><a href="#usc-ai-opinion-tracker-w4">Link to this entry</a></div>
+      </article>
+      <article class="library-card" id="stanford-ai-index-2026-public-opinion" data-geography="Global" data-method="review" data-type="report" data-year="2026" data-topics="attitudes trust" data-search="ai index report 2026: public opinion chapter stanford institute for human-centered ai the ai index's annual public opinion chapter drawing together the major international surveys. reports the global share seeing more benefits than drawbacks from ai rose from 55% in 2024 to 59% in 2025 while the share saying ai makes them nervous rose to 52%.">
+        <h3><a href="https://hai.stanford.edu/ai-index/2026-ai-index-report/public-opinion" target="_blank" rel="noopener">AI Index Report 2026: Public opinion chapter</a></h3>
+        <p class="library-meta">Stanford Institute for Human-Centered AI &middot; 2026 &middot; Synthesis of Ipsos and Pew and other global polling &middot; fieldwork 2025</p>
+        <div class="library-tags"><span class="tag-pill tag-neutral">review</span><span class="tag-pill tag-teal">Global</span><span class="tag-pill tag-outline">report</span></div>
+        <p class="library-summary">The AI Index's annual public opinion chapter drawing together the major international surveys. Reports the global share seeing more benefits than drawbacks from AI rose from 55% in 2024 to 59% in 2025 while the share saying AI makes them nervous rose to 52%.</p>
+        <p class="library-key"><strong>Key finding:</strong> 59% globally see more benefits than drawbacks, up from 55% in 2024</p>
+        <div class="library-links"><a href="https://hai.stanford.edu/ai-index/2026-ai-index-report/public-opinion" target="_blank" rel="noopener">Report</a><a href="#stanford-ai-index-2026-public-opinion">Link to this entry</a></div>
+      </article>
+      <article class="library-card" id="ofcom-adults-media-2026" data-geography="UK" data-method="tracker" data-type="report" data-year="2026" data-topics="usage trust media" data-search="adults' media use and attitudes 2026 ofcom ofcom's annual uk media literacy tracker with a growing ai section. reports 54% of uk adults now use ai tools, up from 31% in 2024, while trust in ai-generated content has not risen alongside use.">
+        <h3><a href="https://www.ofcom.org.uk/media-use-and-attitudes/media-habits-adults/passive-social-media-use-ai-companionship-and-online-side-hustles-uk-adults-media-and-online-lives-revealed" target="_blank" rel="noopener">Adults' Media Use and Attitudes 2026</a></h3>
+        <p class="library-meta">Ofcom &middot; 2026 &middot; UK adults &middot; fieldwork 2025 to 2026</p>
+        <div class="library-tags"><span class="tag-pill">tracker</span><span class="tag-pill tag-teal">UK</span><span class="tag-pill tag-outline">report</span></div>
+        <p class="library-summary">Ofcom's annual UK media literacy tracker with a growing AI section. Reports 54% of UK adults now use AI tools, up from 31% in 2024, while trust in AI-generated content has not risen alongside use.</p>
+        <p class="library-key"><strong>Key finding:</strong> 54% of UK adults use AI tools, up from 31% in 2024</p>
+        <div class="library-links"><a href="https://www.ofcom.org.uk/media-use-and-attitudes/media-habits-adults/passive-social-media-use-ai-companionship-and-online-side-hustles-uk-adults-media-and-online-lives-revealed" target="_blank" rel="noopener">Report</a><a href="https://www.ofcom.org.uk/siteassets/resources/documents/research-and-data/media-literacy-research/adults/adults-media-use-and-attitudes-2026/adults-media-use-and-attitudes-2026-report.pdf?v=415430" target="_blank" rel="noopener">PDF</a><a href="#ofcom-adults-media-2026">Link to this entry</a></div>
+      </article>
+      <article class="library-card" id="data-for-progress-ai-2026" data-geography="US" data-method="poll" data-type="poll" data-year="2026" data-topics="attitudes usage" data-search="public opinion on ai varies widely by age gender race and frequency of use data for progress polling analysis of how american attitudes to ai split by demographic group and by frequency of use, with usage emerging as a major dividing line.">
+        <h3><a href="https://www.dataforprogress.org/blog/2026/2/27/public-opinion-on-artificial-intelligence-varies-widely-by-age-gender-race-and-frequency-of-use" target="_blank" rel="noopener">Public opinion on AI varies widely by age gender race and frequency of use</a></h3>
+        <p class="library-meta">Data for Progress &middot; 2026 &middot; US adults &middot; fieldwork 2026</p>
+        <div class="library-tags"><span class="tag-pill">poll</span><span class="tag-pill tag-teal">US</span><span class="tag-pill tag-outline">poll</span></div>
+        <p class="library-summary">Polling analysis of how American attitudes to AI split by demographic group and by frequency of use, with usage emerging as a major dividing line.</p>
+        
+        <div class="library-links"><a href="https://www.dataforprogress.org/blog/2026/2/27/public-opinion-on-artificial-intelligence-varies-widely-by-age-gender-race-and-frequency-of-use" target="_blank" rel="noopener">Report</a><a href="#data-for-progress-ai-2026">Link to this entry</a></div>
+      </article>
+      <article class="library-card" id="seismic-razors-edge-2025" data-geography="Multi-country" data-method="segmentation" data-type="report" data-year="2025" data-topics="segmentation attitudes risk" data-search="on the razor's edge: ai vs. everything we care about seismic foundation segmentation study identifying five groups of the public closest to civic action on ai and how ai fits into wider hopes and fears. reports women twice as likely as men to worry about ai and 60% worried about ai's effect on relationships.">
+        <h3><a href="https://report2025.seismic.org/" target="_blank" rel="noopener">On the razor's edge: AI vs. everything we care about</a></h3>
+        <p class="library-meta">Seismic Foundation &middot; 2025 &middot; n&gt;10000 across US UK France Germany Poland &middot; fieldwork 2025</p>
+        <div class="library-tags"><span class="tag-pill tag-neutral">segmentation</span><span class="tag-pill tag-teal">Multi-country</span><span class="tag-pill tag-outline">report</span></div>
+        <p class="library-summary">Segmentation study identifying five groups of the public closest to civic action on AI and how AI fits into wider hopes and fears. Reports women twice as likely as men to worry about AI and 60% worried about AI's effect on relationships.</p>
+        <p class="library-key"><strong>Key finding:</strong> Women twice as likely as men to worry about AI</p>
+        <div class="library-links"><a href="https://report2025.seismic.org/" target="_blank" rel="noopener">Report</a><a href="#seismic-razors-edge-2025">Link to this entry</a></div>
+      </article>
+      <article class="library-card" id="pew-us-ai-2025" data-geography="US" data-method="survey" data-type="report" data-year="2025" data-topics="attitudes risk" data-search="how americans view ai and its impact on people and society pew research center pew's us survey on the increased use of ai in daily life. reports that 50% of americans are more concerned than excited, up from 37% in 2021.">
+        <h3><a href="https://www.pewresearch.org/science/2025/09/17/how-americans-view-ai-and-its-impact-on-people-and-society/" target="_blank" rel="noopener">How Americans view AI and its impact on people and society</a></h3>
+        <p class="library-meta">Pew Research Center &middot; 2025 &middot; US adults &middot; fieldwork 2025</p>
+        <div class="library-tags"><span class="tag-pill">survey</span><span class="tag-pill tag-teal">US</span><span class="tag-pill tag-outline">report</span></div>
+        <p class="library-summary">Pew's US survey on the increased use of AI in daily life. Reports that 50% of Americans are more concerned than excited, up from 37% in 2021.</p>
+        <p class="library-key"><strong>Key finding:</strong> 50% more concerned than excited, up from 37% in 2021</p>
+        <div class="library-links"><a href="https://www.pewresearch.org/science/2025/09/17/how-americans-view-ai-and-its-impact-on-people-and-society/" target="_blank" rel="noopener">Report</a><a href="#pew-us-ai-2025">Link to this entry</a></div>
+      </article>
+      <article class="library-card" id="pew-global-ai-2025" data-geography="Multi-country" data-method="survey" data-type="report" data-year="2025" data-topics="attitudes trust regulation" data-search="how people around the world view ai pew research center pew's cross-national comparison of concern and excitement about ai, awareness levels and trust in institutions to regulate it, across 25 countries including the uk and canada.">
+        <h3><a href="https://www.pewresearch.org/global/2025/10/15/how-people-around-the-world-view-ai/" target="_blank" rel="noopener">How people around the world view AI</a></h3>
+        <p class="library-meta">Pew Research Center &middot; 2025 &middot; 25 countries &middot; fieldwork 2025</p>
+        <div class="library-tags"><span class="tag-pill">survey</span><span class="tag-pill tag-teal">Multi-country</span><span class="tag-pill tag-outline">report</span></div>
+        <p class="library-summary">Pew's cross-national comparison of concern and excitement about AI, awareness levels and trust in institutions to regulate it, across 25 countries including the UK and Canada.</p>
+        
+        <div class="library-links"><a href="https://www.pewresearch.org/global/2025/10/15/how-people-around-the-world-view-ai/" target="_blank" rel="noopener">Report</a><a href="#pew-global-ai-2025">Link to this entry</a></div>
+      </article>
+      <article class="library-card" id="kpmg-melbourne-trust-ai-2025" data-geography="Global" data-method="survey" data-type="report" data-year="2025" data-topics="trust usage attitudes" data-search="trust attitudes and use of artificial intelligence: a global study 2025 kpmg and university of melbourne the largest global study of public trust in ai. reports 66% use ai with some regularity while 46% are willing to trust it, and that trust fell and worry rose as adoption grew since the 2022 study.">
+        <h3><a href="https://kpmg.com/xx/en/our-insights/ai-and-technology/trust-attitudes-and-use-of-ai.html" target="_blank" rel="noopener">Trust attitudes and use of artificial intelligence: A global study 2025</a></h3>
+        <p class="library-meta">KPMG and University of Melbourne &middot; 2025 &middot; n&gt;48000 across 47 countries &middot; fieldwork Nov 2024 to Jan 2025</p>
+        <div class="library-tags"><span class="tag-pill">survey</span><span class="tag-pill tag-teal">Global</span><span class="tag-pill tag-outline">report</span></div>
+        <p class="library-summary">The largest global study of public trust in AI. Reports 66% use AI with some regularity while 46% are willing to trust it, and that trust fell and worry rose as adoption grew since the 2022 study.</p>
+        <p class="library-key"><strong>Key finding:</strong> 66% use AI regularly, 46% willing to trust it</p>
+        <div class="library-links"><a href="https://kpmg.com/xx/en/our-insights/ai-and-technology/trust-attitudes-and-use-of-ai.html" target="_blank" rel="noopener">Report</a><a href="https://assets.kpmg.com/content/dam/kpmgsites/xx/pdf/2025/05/trust-attitudes-and-use-of-ai-global-report.pdf" target="_blank" rel="noopener">PDF</a><a href="#kpmg-melbourne-trust-ai-2025">Link to this entry</a></div>
+      </article>
+      <article class="library-card" id="ipsos-tbi-uk-ai-2025" data-geography="UK" data-method="survey" data-type="report" data-year="2025" data-topics="attitudes trust" data-search="what the uk thinks about ai ipsos with the tony blair institute for global change joint survey on uk public attitudes to ai, framed around building trust to support adoption. finds many people in the uk remain cautious about ai.">
+        <h3><a href="https://www.ipsos.com/en-uk/what-uk-thinks-about-ai" target="_blank" rel="noopener">What the UK thinks about AI</a></h3>
+        <p class="library-meta">Ipsos with the Tony Blair Institute for Global Change &middot; 2025 &middot; UK adults &middot; fieldwork 2025</p>
+        <div class="library-tags"><span class="tag-pill">survey</span><span class="tag-pill tag-teal">UK</span><span class="tag-pill tag-outline">report</span></div>
+        <p class="library-summary">Joint survey on UK public attitudes to AI, framed around building trust to support adoption. Finds many people in the UK remain cautious about AI.</p>
+        
+        <div class="library-links"><a href="https://www.ipsos.com/en-uk/what-uk-thinks-about-ai" target="_blank" rel="noopener">Report</a><a href="#ipsos-tbi-uk-ai-2025">Link to this entry</a></div>
+      </article>
+      <article class="library-card" id="edelman-trust-ai-flash-2025" data-geography="Multi-country" data-method="survey" data-type="report" data-year="2025" data-topics="trust work" data-search="flash poll: trust and artificial intelligence at a crossroads edelman trust institute trust barometer flash poll on trust in ai across five markets. reports trust in ai at 72% in china against 32% in the us, and that hands-on use is associated with higher trust.">
+        <h3><a href="https://www.edelman.com/trust/2025/trust-barometer/flash-poll-trust-artifical-intelligence" target="_blank" rel="noopener">Flash poll: Trust and artificial intelligence at a crossroads</a></h3>
+        <p class="library-meta">Edelman Trust Institute &middot; 2025 &middot; n=5000 across 5 countries &middot; fieldwork 17 to 27 Oct 2025</p>
+        <div class="library-tags"><span class="tag-pill">survey</span><span class="tag-pill tag-teal">Multi-country</span><span class="tag-pill tag-outline">report</span></div>
+        <p class="library-summary">Trust Barometer flash poll on trust in AI across five markets. Reports trust in AI at 72% in China against 32% in the US, and that hands-on use is associated with higher trust.</p>
+        <p class="library-key"><strong>Key finding:</strong> Trust in AI: 72% in China, 32% in the US</p>
+        <div class="library-links"><a href="https://www.edelman.com/trust/2025/trust-barometer/flash-poll-trust-artifical-intelligence" target="_blank" rel="noopener">Report</a><a href="#edelman-trust-ai-flash-2025">Link to this entry</a></div>
+      </article>
+      <article class="library-card" id="arxiv-2511-06525-reframing-ai-risk" data-geography="US" data-method="experiment" data-type="paper" data-year="2025" data-topics="messaging risk" data-search="from catastrophic to concrete: reframing ai risk communication for public mobilization arxiv preprint 2511.06525 communications study on how framing ai risk as concrete and near-term rather than catastrophic and abstract affects public willingness to act.">
+        <h3><a href="https://arxiv.org/abs/2511.06525" target="_blank" rel="noopener">From catastrophic to concrete: Reframing AI risk communication for public mobilization</a></h3>
+        <p class="library-meta">arXiv preprint 2511.06525 &middot; 2025 &middot; Research paper &middot; fieldwork 2025</p>
+        <div class="library-tags"><span class="tag-pill tag-neutral">experiment</span><span class="tag-pill tag-teal">US</span><span class="tag-pill tag-outline">paper</span></div>
+        <p class="library-summary">Communications study on how framing AI risk as concrete and near-term rather than catastrophic and abstract affects public willingness to act.</p>
+        
+        <div class="library-links"><a href="https://arxiv.org/abs/2511.06525" target="_blank" rel="noopener">Report</a><a href="#arxiv-2511-06525-reframing-ai-risk">Link to this entry</a></div>
+      </article>
+      <article class="library-card" id="ada-turing-2025" data-geography="UK" data-method="tracker" data-type="tracker" data-year="2025" data-topics="attitudes regulation trust" data-search="how do people feel about ai? wave two ada lovelace institute and the alan turing institute second wave of the nationally representative uk survey, repeating the 2022 questions to track change, with new material on regulation. a companion data site publishes the tables.">
+        <h3><a href="https://www.turing.ac.uk/news/publications/understanding-public-attitudes-ai-second-survey" target="_blank" rel="noopener">How do people feel about AI? Wave two</a></h3>
+        <p class="library-meta">Ada Lovelace Institute and The Alan Turing Institute &middot; 2025 &middot; n=3513 UK adults; 62% response rate &middot; fieldwork 25 Oct to 24 Nov 2024</p>
+        <div class="library-tags"><span class="tag-pill">tracker</span><span class="tag-pill tag-teal">UK</span><span class="tag-pill tag-outline">tracker</span></div>
+        <p class="library-summary">Second wave of the nationally representative UK survey, repeating the 2022 questions to track change, with new material on regulation. A companion data site publishes the tables.</p>
+        <p class="library-key"><strong>Key finding:</strong> Nearly nine in ten UK adults support independent regulation of AI</p>
+        <div class="library-links"><a href="https://www.turing.ac.uk/news/publications/understanding-public-attitudes-ai-second-survey" target="_blank" rel="noopener">Report</a><a href="https://www.turing.ac.uk/sites/default/files/2025-09/how-do-people-feel-about-ai-2025_the-alan-turing-institute_ada-lovelace-institute.pdf" target="_blank" rel="noopener">PDF</a><a href="#ada-turing-2025">Link to this entry</a></div>
+      </article>
+      <article class="library-card" id="public-first-state-of-ai-2024" data-geography="Multi-country" data-method="poll" data-type="poll" data-year="2024" data-topics="attitudes regulation work" data-search="what does the public think about ai? (state of ai polling) public first public first's uk and us polling on ai, published as an interactive site and polling tables. reports 73% of uk adults would support ai diagnosis if double-checked by a human doctor.">
+        <h3><a href="https://ai.publicfirst.co.uk/" target="_blank" rel="noopener">What does the public think about AI? (State of AI polling)</a></h3>
+        <p class="library-meta">Public First &middot; 2024 &middot; Four US and UK polls; UK wave n=1010 &middot; fieldwork 2 to 8 May 2024 (UK wave)</p>
+        <div class="library-tags"><span class="tag-pill">poll</span><span class="tag-pill tag-teal">Multi-country</span><span class="tag-pill tag-outline">poll</span></div>
+        <p class="library-summary">Public First's UK and US polling on AI, published as an interactive site and polling tables. Reports 73% of UK adults would support AI diagnosis if double-checked by a human doctor.</p>
+        <p class="library-key"><strong>Key finding:</strong> 73% of UK adults would support AI diagnosis if double-checked by a doctor</p>
+        <div class="library-links"><a href="https://ai.publicfirst.co.uk/" target="_blank" rel="noopener">Report</a><a href="#public-first-state-of-ai-2024">Link to this entry</a></div>
+      </article>
+      <article class="library-card" id="dsit-padai-tracker-w4" data-geography="UK" data-method="tracker" data-type="tracker" data-year="2024" data-topics="attitudes trust regulation" data-search="public attitudes to data and ai: tracker survey wave 4 department for science innovation and technology (responsible technology adoption unit) the uk government's annual tracker of public attitudes to data and ai, designed to monitor change over time. datasets are deposited with the uk data service (study 8946).">
+        <h3><a href="https://www.gov.uk/government/publications/public-attitudes-to-data-and-ai-tracker-survey-wave-4/public-attitudes-to-data-and-ai-tracker-survey-wave-4-report" target="_blank" rel="noopener">Public attitudes to data and AI: Tracker survey wave 4</a></h3>
+        <p class="library-meta">Department for Science Innovation and Technology (Responsible Technology Adoption Unit) &middot; 2024 &middot; UK adults; annual since Dec 2021 &middot; fieldwork 2024</p>
+        <div class="library-tags"><span class="tag-pill">tracker</span><span class="tag-pill tag-teal">UK</span><span class="tag-pill tag-outline">tracker</span></div>
+        <p class="library-summary">The UK government's annual tracker of public attitudes to data and AI, designed to monitor change over time. Datasets are deposited with the UK Data Service (study 8946).</p>
+        
+        <div class="library-links"><a href="https://www.gov.uk/government/publications/public-attitudes-to-data-and-ai-tracker-survey-wave-4/public-attitudes-to-data-and-ai-tracker-survey-wave-4-report" target="_blank" rel="noopener">Report</a><a href="#dsit-padai-tracker-w4">Link to this entry</a></div>
+      </article>
+      <article class="library-card" id="aipi-regulation-vs-self-regulation-2024" data-geography="US" data-method="poll" data-type="poll" data-year="2024" data-topics="regulation risk" data-search="voters prefer ai regulation that mandates safety measures over industry self-regulation ai policy institute one of aipi's recurring us voter polls on ai regulation. reports around 80% preferring mandated safety standards for the most advanced models over self-regulation, and a 2:1 margin against open-sourcing powerful models.">
+        <h3><a href="https://theaipi.org/april-voters-prefer-ai-regulation-over-self-regulation/" target="_blank" rel="noopener">Voters prefer AI regulation that mandates safety measures over industry self-regulation</a></h3>
+        <p class="library-meta">AI Policy Institute &middot; 2024 &middot; US registered voters &middot; fieldwork 2024</p>
+        <div class="library-tags"><span class="tag-pill">poll</span><span class="tag-pill tag-teal">US</span><span class="tag-pill tag-outline">poll</span></div>
+        <p class="library-summary">One of AIPI's recurring US voter polls on AI regulation. Reports around 80% preferring mandated safety standards for the most advanced models over self-regulation, and a 2:1 margin against open-sourcing powerful models.</p>
+        <p class="library-key"><strong>Key finding:</strong> About 80% of US voters prefer mandated safety standards over self-regulation</p>
+        <div class="library-links"><a href="https://theaipi.org/april-voters-prefer-ai-regulation-over-self-regulation/" target="_blank" rel="noopener">Report</a><a href="#aipi-regulation-vs-self-regulation-2024">Link to this entry</a></div>
+      </article>
+      <article class="library-card" id="cltr-extreme-risks-poll-2023" data-geography="UK" data-method="poll" data-type="poll" data-year="2023" data-topics="risk regulation" data-search="poll: public demand for government to address extreme risks from ai centre for long-term resilience uk polling commissioned by cltr on whether the public wants government to address extreme risks from ai.">
+        <h3><a href="https://www.longtermresilience.org/new-poll-shows-high-public-demand-for-the-government-to-address-extreme-risks-from-ai/" target="_blank" rel="noopener">Poll: public demand for government to address extreme risks from AI</a></h3>
+        <p class="library-meta">Centre for Long-Term Resilience &middot; 2023 &middot; UK adults &middot; fieldwork 2023</p>
+        <div class="library-tags"><span class="tag-pill">poll</span><span class="tag-pill tag-teal">UK</span><span class="tag-pill tag-outline">poll</span></div>
+        <p class="library-summary">UK polling commissioned by CLTR on whether the public wants government to address extreme risks from AI.</p>
+        
+        <div class="library-links"><a href="https://www.longtermresilience.org/new-poll-shows-high-public-demand-for-the-government-to-address-extreme-risks-from-ai/" target="_blank" rel="noopener">Report</a><a href="#cltr-extreme-risks-poll-2023">Link to this entry</a></div>
+      </article>
+      <article class="library-card" id="ada-turing-2023" data-geography="UK" data-method="survey" data-type="report" data-year="2023" data-topics="attitudes regulation trust" data-search="how do people feel about ai? wave one ada lovelace institute and the alan turing institute the first nationally representative uk survey of awareness, experience and attitudes across specific uses of ai. reports clear perceived benefits for health, science and security uses, and concern about ai replacing professional judgement.">
+        <h3><a href="https://www.turing.ac.uk/news/publications/understanding-public-attitudes-ai-first-survey" target="_blank" rel="noopener">How do people feel about AI? Wave one</a></h3>
+        <p class="library-meta">Ada Lovelace Institute and The Alan Turing Institute &middot; 2023 &middot; n&gt;4000 British adults &middot; fieldwork Late 2022</p>
+        <div class="library-tags"><span class="tag-pill">survey</span><span class="tag-pill tag-teal">UK</span><span class="tag-pill tag-outline">report</span></div>
+        <p class="library-summary">The first nationally representative UK survey of awareness, experience and attitudes across specific uses of AI. Reports clear perceived benefits for health, science and security uses, and concern about AI replacing professional judgement.</p>
+        <p class="library-key"><strong>Key finding:</strong> 64% worried workplaces would rely too heavily on AI in recruitment</p>
+        <div class="library-links"><a href="https://www.turing.ac.uk/news/publications/understanding-public-attitudes-ai-first-survey" target="_blank" rel="noopener">Report</a><a href="https://www.adalovelaceinstitute.org/wp-content/uploads/2023/06/Ada-Lovelace-Institute-The-Alan-Turing-Institute-How-do-people-feel-about-AI.pdf" target="_blank" rel="noopener">PDF</a><a href="#ada-turing-2023">Link to this entry</a></div>
+      </article>
+  </div>
+
+  <div class="tool-card soft" style="margin-top:2.5rem">
+    <h2>Suggest a study.</h2>
+    <p>We're looking for research that meets all three:</p>
+    <ul class="library-criteria">
+      <li>Primary research on public attitudes to AI, not commentary or a summary of other work.</li>
+      <li>A public report or dataset we can link to directly.</li>
+      <li>A verifiable link: the primary source, not press coverage of it.</li>
+    </ul>
+    <p>We don't list opinion pieces, vendor marketing dressed as research, or think-pieces without underlying data.</p>
+    <p style="margin-bottom:0"><a class="btn btn-primary" href="mailto:hello@commonsignals.org">Suggest a study</a></p>
+  </div>
+
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-subscribe">
+      <h3>Want to stay up to date?</h3>
+      <form id="subscribeForm" class="subscribe-box" novalidate>
+        <div class="subscribe-row">
+          <label for="subscribeEmail" class="sr-only">Email address</label>
+          <input type="email" name="email" id="subscribeEmail" placeholder="Enter your email" required autocomplete="email" />
+          <button type="submit" class="btn btn-primary subscribe-submit">Subscribe <span aria-hidden="true">&#8599;</span></button>
+        </div>
+        <div class="hp-field" aria-hidden="true">
+          <label for="subscribeWebsite">Leave this field blank</label>
+          <input type="text" id="subscribeWebsite" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+        <p class="subscribe-note">Stay up to speed with our research on public understanding of AI. Roughly monthly.</p>
+        <p class="subscribe-status" id="subscribeStatus" role="status" aria-live="polite"></p>
+      </form>
+      <div class="social-links">
+        <a href="https://www.youtube.com/@commonsignals" target="_blank" rel="noopener" aria-label="Common Signals on YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2.5" y="5" width="19" height="14" rx="4"/>
+            <path d="M10 9 L15.5 12 L10 15 Z" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/commonsignals" target="_blank" rel="noopener" aria-label="Common Signals on LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <text x="12" y="16.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="10.5" fill="currentColor" stroke="none">in</text>
+          </svg>
+        </a>
+        <a href="https://commonsignalsorg.substack.com/" target="_blank" rel="noopener" aria-label="Common Signals on Substack">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <text x="12" y="16.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="10.5" fill="currentColor" stroke="none">S</text>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/about">About</a></li>
+        <li><a href="/research">Research</a></li>
+        <li><a href="/tools">Tools</a></li>
+      </ul>
+      <ul>
+        <li><a href="/training">Training</a></li>
+        <li><a href="/workshops">Workshops</a></li>
+        <li><a href="/updates">Updates</a></li>
+      </ul>
+    </nav>
+    <p class="copyright">&copy; 2026 Common Signals &middot; <a href="mailto:hello@commonsignals.org">hello@commonsignals.org</a></p>
+  </div>
+</footer>
+
+<script src="/main.js" defer></script>
+<script>
+(function () {
+  const list = document.getElementById("libraryList");
+  const cards = Array.from(list.querySelectorAll(".library-card"));
+  const search = document.getElementById("librarySearch");
+  const countEl = document.getElementById("libraryCount");
+  const clearBtn = document.getElementById("libraryClear");
+  const sortBtn = document.getElementById("librarySort");
+  const checkboxes = Array.from(document.querySelectorAll(".library-filters input[type=checkbox]"));
+
+  function selected(name) {
+    return checkboxes.filter((c) => c.name === name && c.checked).map((c) => c.value);
+  }
+
+  function apply() {
+    const q = search.value.trim().toLowerCase();
+    const topic = selected("topic");
+    const geography = selected("geography");
+    const method = selected("method");
+    const type = selected("type");
+    const year = selected("year");
+    let shown = 0;
+    cards.forEach((card) => {
+      const cardTopics = (card.dataset.topics || "").split(" ").filter(Boolean);
+      const matches =
+        (!q || card.dataset.search.includes(q)) &&
+        (geography.length === 0 || geography.includes(card.dataset.geography)) &&
+        (method.length === 0 || method.includes(card.dataset.method)) &&
+        (type.length === 0 || type.includes(card.dataset.type)) &&
+        (year.length === 0 || year.includes(card.dataset.year)) &&
+        (topic.length === 0 || topic.some((t) => cardTopics.includes(t)));
+      card.hidden = !matches;
+      if (matches) shown++;
+    });
+    countEl.textContent = shown + " of " + cards.length + (cards.length === 1 ? " study" : " studies");
+  }
+
+  function sortCards() {
+    const order = sortBtn.dataset.order;
+    const sorted = cards.slice().sort((a, b) => {
+      const ay = parseInt(a.dataset.year, 10) || 0;
+      const by = parseInt(b.dataset.year, 10) || 0;
+      return order === "asc" ? ay - by : by - ay;
+    });
+    sorted.forEach((card) => list.appendChild(card));
+  }
+
+  search.addEventListener("input", apply);
+  checkboxes.forEach((c) => c.addEventListener("change", apply));
+  clearBtn.addEventListener("click", () => {
+    search.value = "";
+    checkboxes.forEach((c) => (c.checked = false));
+    apply();
+  });
+  sortBtn.addEventListener("click", () => {
+    const next = sortBtn.dataset.order === "desc" ? "asc" : "desc";
+    sortBtn.dataset.order = next;
+    sortBtn.textContent = "Sort: " + (next === "desc" ? "newest first" : "oldest first");
+    sortCards();
+  });
+
+  apply();
+})();
+</script>
+
+</body>
+</html>

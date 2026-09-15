@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Comment analyser: Common Signals</title>
+<meta name="description" content="Upload a comment export or paste a Hacker News link and get a coded analysis of how a post landed: stance, frames, engagement and the charts to show it." />
+
+<meta property="og:title" content="Comment analyser: Common Signals" />
+<meta property="og:description" content="Paste a Hacker News link or upload a comment export, and get a coded read of how a post landed." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://commonsignals.org/tools/comment-analyser/" />
+<meta property="og:site_name" content="Common Signals" />
+<meta property="og:image" content="https://commonsignals.org/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Common Signals: helping AI communicators know which messages and messengers actually work." />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Comment analyser: Common Signals" />
+<meta name="twitter:description" content="Paste a Hacker News link or upload a comment export, and get a coded read of how a post landed." />
+<meta name="twitter:image" content="https://commonsignals.org/og-image.png" />
+
+<link rel="canonical" href="https://commonsignals.org/tools/comment-analyser/" />
+<meta name="robots" content="index, follow" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%237a1e49'/%3E%3Cpath d='M4 20 Q8 12 11 20 T18 20' stroke='%23f5f4ef' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M18 20 Q22 8 28 20' stroke='%23f5f4ef' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Comment analyser",
+  "description": "Upload a comment export or paste a Hacker News link and get a coded analysis of how a post landed: stance, frames, engagement and the charts to show it.",
+  "url": "https://commonsignals.org/tools/comment-analyser/",
+  "isPartOf": { "@type": "WebSite", "name": "Common Signals", "url": "https://commonsignals.org/" }
+}
+</script>
+<style>
+  .tool-main { max-width: 64rem; margin: 0 auto; padding: 0 1.5rem 4.5rem; }
+  .tool-eyebrow { margin: 2.4rem 0 0; }
+  .tool-card {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--paper-2);
+    padding: 1.8rem;
+    margin: 0 0 1.8rem;
+  }
+  .tool-card.soft { background: var(--signal-soft); border-color: transparent; }
+  .tool-card h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.35rem;
+    margin: 0 0 1rem;
+    letter-spacing: -0.005em;
+  }
+  .tool-card > p { color: var(--ink-soft); margin: 0 0 0.5rem; }
+  .tool-label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 1rem;
+    color: var(--ink-faint);
+    letter-spacing: 0.02em;
+    margin: 1.1rem 0 0.5rem;
+  }
+  .tool-card input[type="text"],
+  .tool-card input[type="url"],
+  .tool-card textarea {
+    width: 100%;
+    font-family: var(--sans);
+    font-size: 1rem;
+    padding: 0.85rem 1.1rem;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .tool-card input::placeholder, .tool-card textarea::placeholder { color: var(--ink-faint); }
+  .tool-card input:focus, .tool-card textarea:focus { outline: none; border-color: var(--signal); }
+  .tool-card textarea { min-height: 140px; font-family: var(--mono); font-size: 1rem; }
+  .tool-drop {
+    border: 2px dashed var(--line);
+    border-radius: 10px;
+    padding: 1.6rem;
+    text-align: center;
+    color: var(--ink-faint);
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  .tool-drop.on { border-color: var(--signal); color: var(--ink); }
+  .tool-card details { margin-top: 1rem; }
+  .tool-card summary {
+    cursor: pointer;
+    font-family: var(--mono);
+    font-size: 1rem;
+    color: var(--ink-faint);
+  }
+  .tool-btn-row { margin-top: 1.2rem; display: flex; flex-wrap: wrap; gap: 0.8rem; }
+  .tool-btn-row .btn { cursor: pointer; border: 1px solid var(--ink); }
+  .tool-btn-row .btn:disabled { opacity: 0.45; cursor: default; }
+  .tool-status {
+    font-family: var(--mono);
+    font-size: 1rem;
+    color: var(--ink-faint);
+    margin-top: 0.9rem;
+    white-space: pre-wrap;
+  }
+  .tool-bullets { margin: 0; padding-left: 1.2rem; color: var(--ink); }
+  .tool-bullets li { margin: 0 0 0.6rem; line-height: 1.6; }
+  .tool-bullets li:last-child { margin-bottom: 0; }
+  .tool-chart { margin: 1.4rem 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  .tool-table-wrap { overflow-x: auto; }
+  .tool-card table { width: 100%; border-collapse: collapse; font-size: 1rem; }
+  .tool-card th, .tool-card td {
+    text-align: left;
+    padding: 0.7rem 0.6rem;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  .tool-card th {
+    font-family: var(--mono);
+    font-size: 1rem;
+    color: var(--ink-faint);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .tool-card td { color: var(--ink-soft); }
+  .tool-caveat {
+    border-left: 2px solid var(--signal);
+    padding-left: 1.2rem;
+    color: var(--ink-soft);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .hide { display: none; }
+  .tool-note { color: var(--ink-faint); font-family: var(--mono); font-size: 1rem; margin: 2rem 0 0; }
+  .tool-note a { color: var(--teal-text); text-decoration: none; border-bottom: 1px solid var(--teal-text); }
+  .tool-note a:hover { color: var(--teal); border-color: var(--teal); }
+  @media (max-width: 560px) {
+    .tool-btn-row .btn { width: 100%; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a href="/" class="wordmark">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#7a1e49"/><path d="M4 20 Q8 12 11 20 T18 20" stroke="#f5f4ef" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M18 20 Q22 8 28 20" stroke="#f5f4ef" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
+      Common Signals
+    </a>
+    <ul class="nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/research">Research</a></li>
+      <li><a href="/tools">Tools</a></li>
+      <li><a href="/training">Training</a></li>
+      <li><a href="/workshops">Workshops</a></li>
+      <li><a href="/updates">Updates</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navDrawer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <a class="nav-cta" href="mailto:hello@commonsignals.org">Get in touch</a>
+  </div>
+  <div class="nav-drawer" id="navDrawer">
+    <ul>
+      <li><a href="/about">About</a></li>
+      <li><a href="/research">Research</a></li>
+      <li><a href="/tools">Tools</a></li>
+      <li><a href="/training">Training</a></li>
+      <li><a href="/workshops">Workshops</a></li>
+      <li><a href="/updates">Updates</a></li>
+      <li><a href="mailto:hello@commonsignals.org">Get in touch</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="page-hero">
+    <p class="label tool-eyebrow">Tools / Comment analyser</p>
+    <h1>How did that post actually land?</h1>
+    <p class="sub">Paste a Hacker News link, or upload a comment export from any platform, and get a coded read of the reaction: who agreed, which frames they used, what carried the engagement, and the charts to show it. Same method as our published analyses, run on your thread.</p>
+  </div>
+
+  <div class="tool-main">
+    <div class="tool-card">
+      <h2>1. Get the comments in</h2>
+      <label class="tool-label" for="url">A link, for platforms with an open route</label>
+      <input type="url" id="url" placeholder="https://news.ycombinator.com/item?id=... (Reddit and YouTube need the worker, below)">
+      <label class="tool-label">Or an export file (TSV or CSV: id, parent_id, text, engagement, created_at; coded files may also carry stance, frame, format_reaction, emotion)</label>
+      <div class="tool-drop" id="drop">Drop a file here, or click to choose<input type="file" id="file" accept=".tsv,.csv,.txt" class="hide"></div>
+      <details><summary>Optional: worker endpoint and access code (for Reddit, YouTube and AI coding)</summary>
+        <label class="tool-label" for="worker">Worker URL</label><input type="url" id="worker" placeholder="https://comment-analyser.your-account.workers.dev" value="https://comment-analyser.ben-d00.workers.dev">
+        <label class="tool-label" for="code">Access code</label><input type="text" id="code" placeholder="shared with collaborators, not public">
+      </details>
+      <div class="tool-btn-row">
+        <button class="btn btn-primary" id="go">Load</button>
+      </div>
+      <div class="tool-status" id="s1"></div>
+    </div>
+
+    <div class="tool-card hide" id="codePanel">
+      <h2>2. Code the comments</h2>
+      <p>This file is not coded yet. Coding needs a frame list drafted from the thread and approved by a person; that is the one step we never automate away. Edit the draft below, then send batches to the worker, or download a batch pack and code with the Common Signals skill.</p>
+      <label class="tool-label" for="frames">Frame list (one per line: key | one-line definition)</label>
+      <textarea id="frames"></textarea>
+      <div class="tool-btn-row">
+        <button class="btn btn-primary" id="draftFrames">Draft frames from a sample (worker)</button>
+        <button class="btn btn-primary" id="runCode">Approve and code (worker)</button>
+        <button class="btn btn-ghost" id="pack">Download batch pack</button>
+      </div>
+      <div class="tool-status" id="s2"></div>
+    </div>
+
+    <div id="report" class="hide">
+      <div class="tool-card soft">
+        <ul class="tool-bullets" id="bullets"></ul>
+        <p class="tool-status" id="bases"></p>
+      </div>
+      <div id="charts"></div>
+      <div class="tool-card">
+        <h2>Most-engaged comments</h2>
+        <div class="tool-table-wrap">
+          <table id="topTable"><thead><tr><th>Engagement</th><th>Stance</th><th>Frame</th><th>Comment</th></tr></thead><tbody></tbody></table>
+        </div>
+      </div>
+      <div class="tool-card hide" id="framesCard">
+        <h2>Frames</h2>
+        <div class="tool-table-wrap">
+          <table id="framesTable"><thead><tr><th>Frame</th><th>Share of comments</th><th>Share of engagement</th><th>Most-engaged example</th></tr></thead><tbody></tbody></table>
+        </div>
+      </div>
+      <div class="tool-card">
+        <p class="tool-caveat">What this can and can't tell you. Comment threads are self-selected and unrepresentative of any population. Engagement measures salience, not persuasion. One artefact tests one message, one messenger and one format at once, so nothing here separates them. Treat every finding as a hypothesis for a segmented message test, which is what our research programme exists to run.</p>
+      </div>
+      <div class="tool-btn-row">
+        <button class="btn btn-primary" id="dlJson">Download analysis.json</button>
+        <button class="btn btn-ghost" id="dlSvg">Download charts (SVG)</button>
+        <button class="btn btn-ghost" id="dlTsv">Download coded table</button>
+      </div>
+    </div>
+
+    <p class="tool-note">Method and code are open: the same analysis runs in our published research. <a href="/research">Read the analyses</a> &middot; <a href="mailto:hello@commonsignals.org">Get in touch</a></p>
+  </div>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-subscribe">
+      <h3>Want to stay up to date?</h3>
+      <form class="subscribe-box" novalidate>
+        <div class="subscribe-row">
+          <label for="toolSubscribeEmail" class="sr-only">Email address</label>
+          <input type="email" name="email" id="toolSubscribeEmail" placeholder="Enter your email" required autocomplete="email" />
+          <button type="submit" class="btn btn-primary subscribe-submit">Subscribe <span aria-hidden="true">&#8599;</span></button>
+        </div>
+        <div class="hp-field" aria-hidden="true">
+          <label for="toolSubscribeWebsite">Leave this field blank</label>
+          <input type="text" id="toolSubscribeWebsite" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+        <p class="subscribe-note">Stay up to speed with our research on public understanding of AI. Roughly monthly.</p>
+        <p class="subscribe-status" role="status" aria-live="polite"></p>
+      </form>
+      <div class="social-links">
+        <a href="https://www.youtube.com/@commonsignals" target="_blank" rel="noopener" aria-label="Common Signals on YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2.5" y="5" width="19" height="14" rx="4"/>
+            <path d="M10 9 L15.5 12 L10 15 Z" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/commonsignals" target="_blank" rel="noopener" aria-label="Common Signals on LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <text x="12" y="16.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="10.5" fill="currentColor" stroke="none">in</text>
+          </svg>
+        </a>
+        <a href="https://commonsignalsorg.substack.com/" target="_blank" rel="noopener" aria-label="Common Signals on Substack">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <text x="12" y="16.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="10.5" fill="currentColor" stroke="none">S</text>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/about">About</a></li>
+        <li><a href="/research">Research</a></li>
+        <li><a href="/tools">Tools</a></li>
+      </ul>
+      <ul>
+        <li><a href="/training">Training</a></li>
+        <li><a href="/workshops">Workshops</a></li>
+        <li><a href="/updates">Updates</a></li>
+      </ul>
+    </nav>
+    <p class="copyright">&copy; 2026 Common Signals &middot; <a href="mailto:hello@commonsignals.org">hello@commonsignals.org</a></p>
+  </div>
+</footer>
+
+<script src="/main.js" defer></script>
+
+<script>
+// Common Signals comment analyser: pure functions, no DOM. Mirrors scripts/analyse.py and scripts/charts.py.
+(function (root) {
+  const POSITION = ["agree", "disagree", "mixed"];
+  const PAPER = "#f5f4ef", INK = "#232019", MUTED = "#635f54", LINE = "rgba(35,32,25,0.2)", ACC = "#7a1e49";
+
+  function parseTSV(text) {
+    const sep = text.indexOf("\t") >= 0 ? "\t" : ",";
+    const rows = splitRecords(text.replace(/\r\n/g, "\n").replace(/\r/g, "\n"), sep);
+    if (!rows.length) return [];
+    const head = rows[0];
+    return rows.slice(1).map(cells => {
+      const r = {};
+      head.forEach((h, i) => r[h.trim()] = (cells[i] || "").replace(/\\n/g, "\n").replace(/\\t/g, "\t"));
+      return r;
+    });
+  }
+  // Splits `text` into records (rows of fields). Handles RFC4180-style quoted
+  // fields that may themselves contain the separator or real newlines ("" for
+  // a literal quote), as well as plain unquoted fields with \n/\t left as
+  // literal escapes (parseTSV unescapes those afterward). A field is only
+  // treated as quoted when the quote is its first character.
+  function splitRecords(text, sep) {
+    const records = []; let row = []; let cur = "", q = false;
+    for (let i = 0; i < text.length; i++) {
+      const c = text[i];
+      if (q) {
+        if (c === '"') { if (text[i + 1] === '"') { cur += '"'; i++; } else q = false; }
+        else cur += c;
+      } else if (c === '"' && cur === "") { q = true; }
+      else if (c === sep) { row.push(cur); cur = ""; }
+      else if (c === "\n") { row.push(cur); records.push(row); row = []; cur = ""; }
+      else cur += c;
+    }
+    if (cur !== "" || row.length) { row.push(cur); records.push(row); }
+    return records.filter(r => r.length > 1 || r[0] !== "");
+  }
+  const share = (counter, base) => { const o = {}; for (const k in counter) o[k] = [base ? Math.round(1000 * counter[k] / base) / 10 : 0, counter[k]]; return o; };
+  const count = (rows, key) => rows.reduce((c, r) => { const k = r[key] || ""; c[k] = (c[k] || 0) + 1; return c; }, {});
+
+  function analyse(rows, opts) {
+    opts = opts || {}; const useEng = opts.engagement !== false;
+    rows.forEach(r => { const e = parseFloat(r.engagement); r._eng = isFinite(e) ? Math.max(Math.round(e), 0) : 0; });
+    const withText = rows.filter(r => (r.text || "").trim() && !/^(deleted|removed|empty)/.test(r.flags || ""));
+    const coded = withText.some(r => r.stance);
+    const positioned = withText.filter(r => POSITION.includes(r.stance));
+    const totalEng = useEng ? withText.reduce((s, r) => s + r._eng, 0) : 0;
+    const A = { bases: { rows_in_file: rows.length, with_text_coded: withText.length, readable_position: positioned.length, engagement_available: useEng, total_engagement: totalEng, coded } };
+    if (useEng) {
+      const ranked = withText.slice().sort((a, b) => b._eng - a._eng);
+      const top10 = ranked.slice(0, 10).reduce((s, r) => s + r._eng, 0);
+      A.engagement_concentration = { top10_share: totalEng ? Math.round(1000 * top10 / totalEng) / 10 : 0, zero_engagement_share: withText.length ? Math.round(1000 * withText.filter(r => r._eng === 0).length / withText.length) / 10 : 0 };
+      A.top_comments = ranked.slice(0, 15).map(r => ({ id: r.id, engagement: r._eng, stance: r.stance || "", frame: r.frame || "", is_reply: !!(r.parent_id || "").trim(), text: (r.text || "").slice(0, 300) }));
+    }
+    if (!coded) return A;
+    A.stance_all = share(count(withText, "stance"), withText.length);
+    A.stance_positioned = share(count(positioned, "stance"), positioned.length);
+    if (useEng && totalEng) { const w = {}; positioned.forEach(r => w[r.stance] = (w[r.stance] || 0) + r._eng); const t = Object.values(w).reduce((a, b) => a + b, 0); A.stance_positioned_weighted = {}; for (const k in w) A.stance_positioned_weighted[k] = Math.round(1000 * w[k] / t) / 10; }
+    const fc = count(withText, "frame"); A.frames = share(fc, withText.length);
+    if (useEng && totalEng) { const fw = {}; withText.forEach(r => fw[r.frame || ""] = (fw[r.frame || ""] || 0) + r._eng); A.frames_engagement_share = {}; for (const k in fw) A.frames_engagement_share[k] = Math.round(1000 * fw[k] / totalEng) / 10; }
+    const sbf = {}; positioned.forEach(r => { const f = r.frame || ""; sbf[f] = sbf[f] || {}; sbf[f][r.stance] = (sbf[f][r.stance] || 0) + 1; });
+    A.stance_by_frame = {}; for (const f in sbf) { const t = Object.values(sbf[f]).reduce((a, b) => a + b, 0); A.stance_by_frame[f] = {}; POSITION.forEach(s => A.stance_by_frame[f][s] = Math.round(1000 * (sbf[f][s] || 0) / t) / 10); }
+    const sc = withText.filter(r => r.stance === "disagree" || r.stance === "mixed"); A.disagree_mixed_by_frame = share(count(sc, "frame"), sc.length);
+    A.format_reaction = share(count(withText, "format_reaction"), withText.length);
+    const flags = Object.keys(rows[0] || {}).filter(k => k.startsWith("m_")); A.mention_flags = {};
+    flags.forEach(fl => { const hits = withText.filter(r => /^(1|true)/i.test(r[fl] || "")); A.mention_flags[fl] = { share: withText.length ? Math.round(1000 * hits.length / withText.length) / 10 : 0, count: hits.length, stance: share(count(hits, "stance"), hits.length) }; });
+    if (useEng) { A.top_by_frame = {}; for (const f in fc) { const best = withText.filter(r => (r.frame || "") === f).sort((a, b) => b._eng - a._eng)[0]; if (best) A.top_by_frame[f] = { engagement: best._eng, stance: best.stance, text: (best.text || "").slice(0, 300) }; } }
+    return A;
+  }
+
+  // ---- charts (return SVG strings) ----
+  const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  const STYLE = `<style>.t{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:12px;fill:${MUTED}}.n{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:13px;font-weight:600;fill:${INK}}.l{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:14px;fill:${INK}}.q{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:13px;fill:${INK}}.h{font-family:"Lora",Georgia,serif;font-size:17px;font-weight:600;fill:${INK}}.ax{stroke:${LINE};stroke-width:1}</style>`;
+  const wrap = (w, h, body, label) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="100%" role="img" aria-label="${esc(label)}">${STYLE}<rect width="${w}" height="${h}" fill="${PAPER}"/>${body}</svg>`;
+  const fmt = n => Number(n).toLocaleString("en-GB");
+
+  function chartFunnel(A, onPage) {
+    const b = A.bases; const steps = [];
+    if (onPage) steps.push(["comments on the artefact", onPage]);
+    steps.push(["rows retrieved", b.rows_in_file], ["contain text" + (b.coded ? ", coded" : ""), b.with_text_coded]);
+    if (b.coded) steps.push(["take a readable position (base for stance %)", b.readable_position]);
+    const mx = steps[0][1] || 1; let body = `<text class="h" x="32" y="40">What was coded</text>`; let y = 80;
+    steps.forEach((s, i) => { const w = Math.round(480 * s[1] / mx); const op = [0.25, 0.25, 0.45, 1][Math.min(i, 3)]; body += `<rect x="32" y="${y}" width="${w}" height="30" fill="${ACC}" opacity="${op}"/><text class="n" x="${42 + w}" y="${y + 21}">${fmt(s[1])}</text><text class="t" x="40" y="${y + 21}" fill="${op >= 0.45 ? PAPER : INK}">${esc(s[0])}</text>`; y += 44; });
+    body += `<text class="t" x="32" y="${y + 20}">Stance % use the readable-position base. Frame and format shares use the coded base.</text>`;
+    return wrap(720, y + 40, body, "Funnel from retrieved to coded to positioned");
+  }
+  function chartStance(A) {
+    const sp = A.stance_positioned; const base = A.bases.readable_position; const order = [["agree", "Agree"], ["disagree", "Disagree"], ["mixed", "Mixed"]];
+    let body = `<text class="h" x="32" y="40">Did commenters accept the central claim?</text><text class="t" x="32" y="60">Of the ${fmt(base)} comments that take a readable position</text><line class="ax" x1="200" y1="80" x2="200" y2="${80 + 40 * order.length + 10}"/>`; let y = 90;
+    order.forEach((o, i) => { const pct = (sp[o[0]] || [0])[0]; const w = Math.round(460 * pct / 100); body += `<text class="l" x="188" y="${y + 16}" text-anchor="end">${o[1]}</text><rect x="200" y="${y}" width="${w}" height="24" fill="${ACC}" opacity="${[1, 0.7, 0.5][i]}"/><text class="n" x="${208 + w}" y="${y + 17}">${pct}%</text>`; y += 40; });
+    let cap = ""; if (A.stance_positioned_weighted) cap = `Weighted by engagement, ${A.stance_positioned_weighted.agree || 0}% of engagement sits with comments that agree.`;
+    body += `<text class="t" x="32" y="${y + 24}">${esc(cap)}</text>`;
+    return wrap(720, y + 44, body, "Stance distribution");
+  }
+  function chartTop(A) {
+    const tc = (A.top_comments || []).slice(0, 12); if (!tc.length) return ""; const mx = tc[0].engagement || 1;
+    let body = `<text class="h" x="32" y="40">Engagement concentrates in a handful of comments</text><text class="t" x="32" y="60">Most-engaged comments. Bar length is engagement; ${fmt(mx)} = full width.</text>`; let y = 84;
+    tc.forEach(c => { let q = c.text.replace(/\n/g, " "); if (q.length > 85) q = q.slice(0, 82) + "..."; const op = c.stance === "agree" ? 1 : (c.stance ? 0.35 : 0.6); const w = Math.max(Math.round(300 * c.engagement / mx), 2); body += `<text class="q" x="32" y="${y + 15}">"${esc(q)}"${c.is_reply ? " (reply)" : ""}</text><rect x="400" y="${y + 4}" width="${w}" height="16" fill="${ACC}" opacity="${op}"/><text class="n" x="32" y="${y + 30}">${fmt(c.engagement)}</text>`; y += 36; });
+    if (A.bases.coded) body += `<rect x="32" y="${y + 8}" width="10" height="10" fill="${ACC}"/><text class="t" x="48" y="${y + 17}">agrees</text><rect x="130" y="${y + 8}" width="10" height="10" fill="${ACC}" opacity="0.35"/><text class="t" x="146" y="${y + 17}">disagrees or mixed</text>`;
+    return wrap(720, y + 36, body, "Most-engaged comments ranked");
+  }
+  function chartFrames(A) {
+    if (!A.frames) return ""; const fe = A.frames_engagement_share; const items = Object.entries(A.frames).filter(([k]) => k && k !== "other").sort((a, b) => b[1][0] - a[1][0]).slice(0, 12);
+    let body = `<text class="h" x="32" y="40">Share of comments versus share of engagement, by frame</text><text class="t" x="32" y="60">Base: ${fmt(A.bases.with_text_coded)} coded comments${fe ? ", engagement-weighted where shown" : ""}</text><line class="ax" x1="230" y1="80" x2="230" y2="${80 + (fe ? 34 : 22) * items.length + 10}"/>`; let y = 90;
+    items.forEach(([k, v]) => { const pct = v[0]; const w1 = Math.round(440 * pct / 100); body += `<text class="l" x="218" y="${y + 12}" text-anchor="end">${esc(k.replace(/_/g, " "))}</text><rect x="230" y="${y}" width="${w1}" height="10" fill="${ACC}" opacity="0.45"/><text class="t" x="${238 + w1}" y="${y + 9}">${pct}% of comments</text>`; if (fe) { const e = fe[k] || 0; const w2 = Math.round(440 * e / 100); body += `<rect x="230" y="${y + 12}" width="${w2}" height="10" fill="${ACC}"/><text class="t" x="${238 + w2}" y="${y + 21}">${e}% of engagement</text>`; y += 34; } else y += 22; });
+    return wrap(720, y + 20, body, "Comments versus engagement by frame");
+  }
+  function chartStanceByFrame(A) {
+    const sbf = A.stance_by_frame; if (!sbf) return ""; const cols = [["agree", "Agree"], ["disagree", "Disagree"], ["mixed", "Mixed"]];
+    const rows = Object.entries(sbf).sort((a, b) => ((A.frames[b[0]] || [0])[0]) - ((A.frames[a[0]] || [0])[0])).slice(0, 12);
+    const x0 = 230, y0 = 96, cw = 120, rh = 30; let body = `<text class="h" x="32" y="40">Stance within each frame</text><text class="t" x="32" y="60">Cell value is the share of that frame's positioned comments. A frame shaded across every column is used by both sides.</text>`;
+    cols.forEach((c, j) => body += `<text class="t" x="${x0 + j * cw + cw / 2}" y="${y0 - 10}" text-anchor="middle">${c[1]}</text>`); let y = y0;
+    rows.forEach(([k, d]) => { body += `<text class="l" x="${x0 - 12}" y="${y + 20}" text-anchor="end">${esc(k.replace(/_/g, " "))}</text>`; cols.forEach((c, j) => { const v = d[c[0]] || 0; const op = (0.08 + 0.92 * v / 100).toFixed(2); body += `<rect x="${x0 + j * cw}" y="${y}" width="${cw - 4}" height="${rh - 4}" fill="${ACC}" opacity="${op}"/><text class="n" x="${x0 + j * cw + cw / 2 - 2}" y="${y + 19}" text-anchor="middle" fill="${v >= 50 ? PAPER : INK}">${v}%</text>`; }); y += rh; });
+    return wrap(720, y + 30, body, "Stance by frame heatmap");
+  }
+
+  function summaryBullets(A) {
+    const b = A.bases, out = [];
+    if (b.coded) {
+      const sp = A.stance_positioned || {}; out.push(`Of ${fmt(b.readable_position)} comments taking a position, ${(sp.agree || [0])[0]}% agree, ${(sp.disagree || [0])[0]}% disagree and ${(sp.mixed || [0])[0]}% are mixed.`);
+      if (A.stance_positioned_weighted) out.push(`Weighted by engagement, ${A.stance_positioned_weighted.agree || 0}% of engagement sits with comments that agree.`);
+      const fr = Object.entries(A.frames || {}).filter(([k]) => k && k !== "other" && k !== "general_agreement").sort((a, b) => b[1][0] - a[1][0])[0]; if (fr) out.push(`The most common frame is "${fr[0].replace(/_/g, " ")}", used in ${fr[1][0]}% of comments${A.frames_engagement_share ? ` and carrying ${A.frames_engagement_share[fr[0]] || 0}% of engagement` : ""}.`);
+      const bridge = Object.entries(A.stance_by_frame || {}).filter(([k, d]) => !["other","general_agreement","format_only",""].includes(k) && (A.frames[k] || [0])[1] >= 20 && d.agree >= 25 && d.disagree >= 25); if (bridge.length) out.push(`Used by both sides (at least a quarter agree and a quarter disagree): ${bridge.map(([k]) => k.replace(/_/g, " ")).join(", ")}.`);
+      const im = (A.format_reaction || {}).imitates; if (im) out.push(`${im[0]}% of comments imitate the artefact's format, the strongest uptake signal a format can get.`);
+    }
+    if (A.engagement_concentration) out.push(`The ten most-engaged comments hold ${A.engagement_concentration.top10_share}% of all engagement; ${A.engagement_concentration.zero_engagement_share}% of comments have none.`);
+    return out;
+  }
+
+  const api = { parseTSV, analyse, chartFunnel, chartStance, chartTop, chartFrames, chartStanceByFrame, summaryBullets };
+  if (typeof module !== "undefined" && module.exports) module.exports = api; else root.CSAnalyser = api;
+})(typeof window !== "undefined" ? window : globalThis);
+
+</script>
+<script>
+(function(){
+  const CS = window.CSAnalyser; const $ = id => document.getElementById(id);
+  let rows = null, A = null, svgs = {}, onPage = null;
+  const DEFAULT_FRAMES = ["general_agreement | agrees without a distinct argument","fatalism | it is too late or nothing can be done","blame_people | the companies, billionaires or leaders are responsible","capability_scepticism | today's AI is too flawed for the claim to be real","present_harms | jobs, bias, surveillance, environment, children","how_to_act | asks what to do or names an action","scifi | reaches for a film or book","format_only | about the delivery, not the argument","other | anything else"];
+
+  // input handling
+  const drop = $("drop"), file = $("file");
+  drop.onclick = () => file.click();
+  drop.ondragover = e => { e.preventDefault(); drop.classList.add("on"); };
+  drop.ondragleave = () => drop.classList.remove("on");
+  drop.ondrop = e => { e.preventDefault(); drop.classList.remove("on"); if (e.dataTransfer.files[0]) readFile(e.dataTransfer.files[0]); };
+  file.onchange = () => file.files[0] && readFile(file.files[0]);
+  function readFile(f) { const r = new FileReader(); r.onload = () => { rows = CS.parseTSV(r.result); $("s1").textContent = `Loaded ${rows.length} rows from ${f.name}.`; render(); }; r.readAsText(f); }
+
+  $("go").onclick = async () => {
+    const url = $("url").value.trim(); if (!url) { $("s1").textContent = "Paste a link or drop a file."; return; }
+    try {
+      if (/news\.ycombinator\.com|hn\.algolia/.test(url)) rows = await fetchHN(url);
+      else if (/reddit\.com|youtube\.com|youtu\.be/.test(url)) rows = await viaWorker("/fetch", { url });
+      else throw new Error("Instagram, TikTok, X, LinkedIn and Facebook do not allow fetching from a website. Export the comments (see the Common Signals skill) and upload the file.");
+      $("s1").textContent = `Retrieved ${rows.length} comments${onPage ? ` of ${onPage} on the page` : ""}.`; render();
+    } catch (e) { $("s1").textContent = "Could not load: " + e.message; }
+  };
+
+  async function fetchHN(url) {
+    const m = url.match(/id=(\d+)/) || url.match(/items\/(\d+)/); if (!m) throw new Error("no Hacker News item id in that link");
+    const j = await (await fetch("https://hn.algolia.com/api/v1/items/" + m[1])).json(); const out = [];
+    (function walk(n, depth) { (n.children || []).forEach(c => { const t = (c.text || "").replace(/<p>/g, "\n").replace(/<[^>]+>/g, ""); out.push({ id: String(c.id), parent_id: depth ? String(n.id) : "", author_hash: "", text: t, engagement: "", created_at: c.created_at || "", reply_count: (c.children || []).length, depth, platform: "hackernews", flags: t.trim() ? "" : "empty" }); walk(c, depth + 1); }); })(j, 0);
+    onPage = null; $("s1").textContent = `${j.title || "thread"}: ${j.points || "?"} points.`; return out;
+  }
+  async function viaWorker(path, body) {
+    const w = $("worker").value.trim(); if (!w) throw new Error("this needs the worker endpoint; open the optional section and add it");
+    const r = await fetch(w.replace(/\/$/, "") + path, { method: "POST", headers: { "Content-Type": "application/json", "X-Access-Code": $("code").value.trim() }, body: JSON.stringify(body) });
+    if (!r.ok) throw new Error(`worker returned ${r.status}: ${await r.text()}`);
+    const j = await r.json(); if (j.on_page) onPage = j.on_page; return j.rows || j;
+  }
+
+  // coding panel
+  $("draftFrames").onclick = async () => {
+    try { $("s2").textContent = "Drafting frames from a sample of the thread..."; const sample = sampleRows(200); const j = await viaWorker("/frames", { sample }); $("frames").value = j.frames.map(f => `${f.key} | ${f.definition}`).join("\n"); $("s2").textContent = "Draft ready. Edit, then approve and code."; } catch (e) { $("s2").textContent = e.message; }
+  };
+  $("runCode").onclick = async () => {
+    const frames = parseFrames(); if (frames.length < 3) { $("s2").textContent = "Give the coder at least three frames."; return; }
+    const todo = rows.filter(r => (r.text || "").trim()); const byId = Object.fromEntries(rows.map(r => [r.id, r])); const B = 40; let done = 0;
+    try {
+      for (let i = 0; i < todo.length; i += B) {
+        const batch = todo.slice(i, i + B).map(r => ({ id: r.id, text: r.text, parent_text: r.parent_id && byId[r.parent_id] ? byId[r.parent_id].text.slice(0, 300) : "" }));
+        const j = await viaWorker("/code", { frames, batch }); (j.coded || []).forEach(c => Object.assign(byId[c.id] || {}, c)); done += batch.length; $("s2").textContent = `Coded ${done} of ${todo.length}...`;
+      }
+      $("s2").textContent = `Coded ${done} comments.`; render();
+    } catch (e) { $("s2").textContent = "Stopped: " + e.message; }
+  };
+  $("pack").onclick = () => {
+    const frames = parseFrames(); const todo = rows.filter(r => (r.text || "").trim()); const byId = Object.fromEntries(rows.map(r => [r.id, r]));
+    const jsonl = todo.map(r => JSON.stringify({ id: r.id, text: r.text, parent_text: r.parent_id && byId[r.parent_id] ? byId[r.parent_id].text.slice(0, 300) : "" })).join("\n");
+    const codebook = "# Codebook\n\nFixed dimensions: stance (agree|disagree|mixed|unclear|na), format_reaction (praise|mock|condescended|imitates|none), emotion (fear|resignation|anger|humour|hope|neutral).\n\nFrames:\n" + frames.map(f => `- ${f.key}: ${f.definition}`).join("\n") + "\n\nOutput one JSON object per id with keys id, stance, frame, format_reaction, emotion.";
+    download("batch.jsonl", jsonl); download("codebook.md", codebook); $("s2").textContent = "Batch pack downloaded. Code it with the Common Signals skill or scripts, then upload the coded file here.";
+  };
+  function parseFrames() { return $("frames").value.split("\n").map(l => l.trim()).filter(Boolean).map(l => { const [k, ...d] = l.split("|"); return { key: k.trim(), definition: d.join("|").trim() }; }).filter(f => f.key); }
+  function sampleRows(n) { const t = rows.filter(r => (r.text || "").trim()); const top = t.slice().sort((a, b) => (parseFloat(b.engagement) || 0) - (parseFloat(a.engagement) || 0)).slice(0, 50); const rest = t.slice().sort(() => Math.random() - .5).slice(0, n - 50); return top.concat(rest).map(r => ({ id: r.id, text: r.text.slice(0, 500), engagement: r.engagement })); }
+
+  // render
+  function render() {
+    const useEng = rows.some(r => parseFloat(r.engagement) > 0);
+    A = CS.analyse(rows, { engagement: useEng });
+    $("report").classList.remove("hide"); $("codePanel").classList.toggle("hide", A.bases.coded); if (!A.bases.coded && !$("frames").value) $("frames").value = DEFAULT_FRAMES.join("\n");
+    $("bullets").innerHTML = CS.summaryBullets(A).map(b => `<li>${b}</li>`).join("") || "<li>Load a coded file, or code this one, to see stance and frames.</li>";
+    $("bases").textContent = `Bases: ${A.bases.rows_in_file} rows, ${A.bases.with_text_coded} with text${A.bases.coded ? `, ${A.bases.readable_position} with a readable position` : " (not yet coded)"}${useEng ? "" : ". No per-comment engagement on this platform, so nothing here is engagement-weighted."}`;
+    svgs = { "chart-funnel.svg": CS.chartFunnel(A, onPage), "chart-top-comments.svg": CS.chartTop(A) };
+    if (A.bases.coded) Object.assign(svgs, { "chart-stance.svg": CS.chartStance(A), "chart-frames.svg": CS.chartFrames(A), "chart-stance-by-frame.svg": CS.chartStanceByFrame(A) });
+    $("charts").innerHTML = ["chart-funnel.svg", "chart-stance.svg", "chart-frames.svg", "chart-stance-by-frame.svg", "chart-top-comments.svg"].filter(k => svgs[k]).map(k => `<div class="tool-chart">${svgs[k]}</div>`).join("");
+    const tb = $("topTable").querySelector("tbody"); tb.innerHTML = (A.top_comments || []).map(c => `<tr><td>${c.engagement.toLocaleString("en-GB")}</td><td>${c.stance || ""}</td><td>${(c.frame || "").replace(/_/g, " ")}</td><td>${esc(c.text)}${c.is_reply ? " <span class=\"tool-status\">(reply)</span>" : ""}</td></tr>`).join("");
+    $("framesCard").classList.toggle("hide", !A.frames);
+    if (A.frames) $("framesTable").querySelector("tbody").innerHTML = Object.entries(A.frames).sort((a, b) => b[1][0] - a[1][0]).map(([k, v]) => `<tr><td>${k.replace(/_/g, " ")}</td><td>${v[0]}% (${v[1]})</td><td>${A.frames_engagement_share ? (A.frames_engagement_share[k] || 0) + "%" : ""}</td><td>${A.top_by_frame && A.top_by_frame[k] ? esc(A.top_by_frame[k].text.slice(0, 140)) : ""}</td></tr>`).join("");
+  }
+  const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  function download(name, text, type) { const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([text], { type: type || "text/plain" })); a.download = name; a.click(); }
+  $("dlJson").onclick = () => download("analysis.json", JSON.stringify(A, null, 2), "application/json");
+  $("dlSvg").onclick = () => Object.entries(svgs).forEach(([n, s]) => download(n, s, "image/svg+xml"));
+  $("dlTsv").onclick = () => { const cols = Object.keys(rows[0]).filter(k => !k.startsWith("_")); download("coded.tsv", [cols.join("\t")].concat(rows.map(r => cols.map(c => String(r[c] ?? "").replace(/\t/g, "\\t").replace(/\n/g, "\\n")).join("\t"))).join("\n")); };
+})();
+</script>
+</body>
+</html>

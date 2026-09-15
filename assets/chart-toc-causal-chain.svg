@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 980" width="600" height="980" role="img" aria-label="The causal chain from activities to impact: activities lead to outputs, which lead to communicator outcomes, which lead to public outcomes, which lead to a durable social mandate for AI governance, each step carrying an assumption"><style>
+.t{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:12px;fill:#635f54}
+.n{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:13px;font-weight:600;fill:#232019}
+.h{font-family:"Lora",Georgia,serif;font-size:17px;font-weight:600;fill:#232019}
+.as{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:11.5px;font-style:italic;fill:#635f54}
+.bracket-l{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:12px;font-weight:600;fill:#7a1e49;letter-spacing:.01em}
+.bx1{fill:#7a1e49;fill-opacity:0.1;stroke:#7a1e49;stroke-width:1.4}
+.bx2{fill:#f5f4ef;stroke:#635f54;stroke-width:1.2}
+.sub{fill:#eae8e1;stroke:#d8d6d1;stroke-width:1}
+.ar1{stroke:#7a1e49;stroke-width:1.6;fill:none;marker-end:url(#tcc-a1)}
+.ar2{stroke:#635f54;stroke-width:1.6;fill:none;marker-end:url(#tcc-a2)}
+.bk{stroke:#7a1e49;stroke-width:1.4;fill:none}
+.bkd{stroke:#635f54;stroke-width:1.4;fill:none;stroke-dasharray:4 3}
+</style>
+<defs>
+<marker id="tcc-a1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7a1e49"/></marker>
+<marker id="tcc-a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#635f54"/></marker>
+</defs>
+<rect width="600" height="980" fill="#f5f4ef"/>
+<text class="h" x="100" y="30">The causal chain</text>
+
+<path class="bk" d="M65 50 L55 50 L55 510 L65 510"/>
+<text class="bracket-l" x="38" y="280" text-anchor="middle" transform="rotate(-90 38 280)">What we control and influence</text>
+
+<path class="bkd" d="M65 575 L55 575 L55 955 L65 955"/>
+<text class="bracket-l" x="38" y="765" text-anchor="middle" transform="rotate(-90 38 765)" fill="#635f54">What we contribute to</text>
+
+<rect class="bx1" x="100" y="50" width="480" height="115" rx="8"/>
+<text class="n" x="340" y="82" text-anchor="middle">1. Activities: generate the evidence</text>
+<text class="t" x="340" y="106" text-anchor="middle">Segmentation, message testing, comment analysis,</text>
+<text class="t" x="340" y="124" text-anchor="middle">messenger map, training</text>
+
+<path class="ar1" d="M340 167 L340 211"/>
+<text class="as" x="340" y="193" text-anchor="middle">measured effects predict real-campaign effects</text>
+
+<rect class="bx1" x="100" y="215" width="480" height="115" rx="8"/>
+<text class="n" x="340" y="247" text-anchor="middle">2. Outputs: publish and give it away</text>
+<text class="t" x="340" y="271" text-anchor="middle">Published segments, tested frames, guides,</text>
+<text class="t" x="340" y="289" text-anchor="middle">trained messengers, impact report</text>
+
+<path class="ar1" d="M340 332 L340 376"/>
+<text class="as" x="340" y="358" text-anchor="middle">evidence seen as credible by both sides</text>
+
+<rect class="bx1" x="100" y="380" width="480" height="130" rx="8"/>
+<text class="n" x="340" y="412" text-anchor="middle">3. Communicator outcomes</text>
+<text class="t" x="340" y="430" text-anchor="middle">(our proximate outcome)</text>
+<text class="t" x="340" y="454" text-anchor="middle">Communicators change what they say and who says it</text>
+
+<path class="ar1" d="M340 512 L340 571"/>
+<text class="as" x="340" y="538" text-anchor="middle">communicators act on evidence, not instinct</text>
+<text class="as" x="340" y="554" text-anchor="middle">(the assumption the whole model rests on)</text>
+
+<rect class="bx2" x="100" y="575" width="480" height="215" rx="8"/>
+<text class="n" x="340" y="607" text-anchor="middle">4. Public outcomes</text>
+<text class="t" x="340" y="627" text-anchor="middle">Concern becomes commitment</text>
+<rect class="sub" x="110" y="650" width="150" height="110" rx="6"/>
+<text class="t" x="185" y="695" text-anchor="middle">Cross-societal</text>
+<text class="t" x="185" y="713" text-anchor="middle">concern</text>
+<rect class="sub" x="270" y="650" width="150" height="110" rx="6"/>
+<text class="t" x="345" y="695" text-anchor="middle">Polarisation</text>
+<text class="t" x="345" y="713" text-anchor="middle">avoided</text>
+<rect class="sub" x="430" y="650" width="150" height="110" rx="6"/>
+<text class="t" x="505" y="695" text-anchor="middle">Concern turned</text>
+<text class="t" x="505" y="713" text-anchor="middle">into action</text>
+
+<path class="ar2" d="M340 792 L340 836"/>
+<text class="as" x="340" y="817" text-anchor="middle">better communication moves attitudes at scale</text>
+
+<rect class="bx2" x="100" y="840" width="480" height="115" rx="8"/>
+<text class="n" x="340" y="872" text-anchor="middle">5. Impact: a durable social mandate for AI governance</text>
+<text class="t" x="340" y="896" text-anchor="middle">Hard-to-reverse rules, and a social licence</text>
+<text class="t" x="340" y="914" text-anchor="middle">conditional on safety</text>
+</svg>

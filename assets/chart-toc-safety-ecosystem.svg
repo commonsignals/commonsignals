@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360" role="img" aria-label="Two models compared: a prescriptive model where experts dictate rules to passive users, versus a collaborative ecosystem where researchers, regulators, industry and the public actively co-create safety measures through networked feedback"><style>
+.t{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:11.5px;fill:#635f54}
+.n{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:12.5px;font-weight:600;fill:#232019}
+.h{font-family:"Lora",Georgia,serif;font-size:17px;font-weight:600;fill:#232019}
+.p{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:13px;font-weight:600;fill:#7a1e49;letter-spacing:.02em;text-transform:uppercase}
+.bx{fill:#f5f4ef;stroke:#635f54;stroke-width:1.2}
+.hub{fill:#f5f4ef;stroke:#7a1e49;stroke-width:1.6}
+.ar{stroke:#635f54;stroke-width:1.6;fill:none;marker-end:url(#tece-a)}
+.dr{stroke:#7a1e49;stroke-width:1.4;fill:none;stroke-dasharray:3 3;marker-end:url(#tece-b);marker-start:url(#tece-b)}
+.div{stroke:#d8d6d1;stroke-width:1}
+</style>
+<defs>
+<marker id="tece-a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#635f54"/></marker>
+<marker id="tece-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7a1e49"/></marker>
+</defs>
+<rect width="720" height="360" fill="#f5f4ef"/>
+<text class="h" x="32" y="34">Two models of AI safety</text>
+
+<text class="p" x="175" y="66" text-anchor="middle">Prescriptive model</text>
+<rect class="bx" x="90" y="82" width="170" height="56" rx="8"/>
+<text class="n" x="175" y="115" text-anchor="middle">AI safety experts</text>
+<path class="ar" d="M175 140 L175 186"/>
+<rect class="bx" x="80" y="188" width="190" height="82" rx="8"/>
+<text class="n" x="175" y="216" text-anchor="middle">Society &amp; AI users</text>
+<text class="t" x="175" y="236" text-anchor="middle">Passive recipients</text>
+<text class="t" x="175" y="252" text-anchor="middle">of rules handed down</text>
+
+<line class="div" x1="340" y1="50" x2="340" y2="330"/>
+
+<text class="p" x="530" y="66" text-anchor="middle">Collaborative ecosystem</text>
+<rect class="bx" x="445" y="82" width="170" height="56" rx="8"/>
+<text class="n" x="530" y="107" text-anchor="middle">Regulatory bodies &amp;</text>
+<text class="n" x="530" y="123" text-anchor="middle">safety institutes</text>
+
+<rect class="bx" x="368" y="176" width="150" height="60" rx="8"/>
+<text class="n" x="443" y="200" text-anchor="middle">AI safety researchers</text>
+<text class="n" x="443" y="216" text-anchor="middle">&amp; ethicists</text>
+
+<rect class="bx" x="562" y="176" width="150" height="60" rx="8"/>
+<text class="n" x="637" y="200" text-anchor="middle">AI industry &amp;</text>
+<text class="n" x="637" y="216" text-anchor="middle">tech developers</text>
+
+<rect class="hub" x="445" y="270" width="170" height="82" rx="8"/>
+<text class="n" x="530" y="296" text-anchor="middle">Society &amp; AI users</text>
+<text class="t" x="530" y="316" text-anchor="middle">Active stakeholders</text>
+<text class="t" x="530" y="332" text-anchor="middle">in value alignment</text>
+
+<path class="dr" d="M530 268 L530 140"/>
+<path class="dr" d="M495 274 L448 224"/>
+<path class="dr" d="M565 274 L612 224"/>
+</svg>

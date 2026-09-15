@@ -1,0 +1,1076 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI messenger map: Common Signals</title>
+<meta name="description" content="A directory of people and organisations explaining AI risk to the public, across both the existential-risk and present-day-harms conversations." />
+
+<meta property="og:title" content="AI messenger map: Common Signals" />
+<meta property="og:description" content="A directory of people and organisations explaining AI risk to the public, across both the existential-risk and present-day-harms conversations." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://commonsignals.org/tools/messengers/" />
+<meta property="og:site_name" content="Common Signals" />
+<meta property="og:image" content="https://commonsignals.org/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Common Signals: helping AI communicators know which messages and messengers actually work." />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AI messenger map: Common Signals" />
+<meta name="twitter:description" content="A directory of people and organisations explaining AI risk to the public, across both the existential-risk and present-day-harms conversations." />
+<meta name="twitter:image" content="https://commonsignals.org/og-image.png" />
+
+<link rel="canonical" href="https://commonsignals.org/tools/messengers/" />
+<meta name="robots" content="index, follow" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%237a1e49'/%3E%3Cpath d='M4 20 Q8 12 11 20 T18 20' stroke='%23f5f4ef' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M18 20 Q22 8 28 20' stroke='%23f5f4ef' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "AI messenger map",
+  "description": "A directory of people and organisations explaining AI risk to the public, across both the existential-risk and present-day-harms conversations.",
+  "url": "https://commonsignals.org/tools/messengers/",
+  "isPartOf": { "@type": "WebSite", "name": "Common Signals", "url": "https://commonsignals.org/" }
+}
+</script>
+<style>
+  .tool-main { max-width: 64rem; margin: 0 auto; padding: 0 1.5rem 4.5rem; }
+  .messenger-note {
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1rem 1.4rem;
+    color: var(--ink-soft);
+    margin: 1.6rem 0 2.2rem;
+  }
+  .messenger-controls {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--paper-2);
+    padding: 1.6rem 1.8rem;
+    margin: 0 0 2rem;
+  }
+  .messenger-search input[type="search"] {
+    width: 100%;
+    font-family: var(--sans);
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--paper);
+    color: var(--ink);
+    margin-bottom: 1.2rem;
+  }
+  .messenger-filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.2rem 1.6rem;
+  }
+  .messenger-filters fieldset { border: none; margin: 0; padding: 0; }
+  .messenger-filters legend {
+    font-family: var(--mono);
+    font-size: 0.9rem;
+    color: var(--ink-faint);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin: 0 0 0.5rem;
+    padding: 0;
+  }
+  .filter-check {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--ink);
+    margin: 0.3rem 0;
+    cursor: pointer;
+  }
+  .filter-check input { margin-right: 0.4rem; }
+  .filter-empty { color: var(--ink-faint); font-size: 0.9rem; margin: 0; }
+  .messenger-status-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 1.4rem 0 0;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--line);
+  }
+  #messengerCount { color: var(--ink-soft); font-family: var(--mono); font-size: 0.95rem; }
+  #messengerClear {
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    color: var(--teal-text);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+  }
+  #messengerClear:hover { color: var(--teal); }
+  .messenger-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.4rem;
+    margin: 2rem 0;
+  }
+  .messenger-card {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--paper-2);
+    padding: 1.4rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .messenger-card[hidden] { display: none; }
+  .messenger-card h3 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin: 0 0 0.7rem;
+  }
+  .messenger-card h3 a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
+  .messenger-card h3 a:hover { color: var(--teal-text); border-color: var(--teal-text); }
+  .messenger-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.7rem; }
+  .messenger-tags .tag-pill { font-size: 0.85rem; padding: 0.2rem 0.7rem; }
+  .tag-pill.tag-teal { color: var(--teal-text); background: rgba(0, 139, 163, 0.14); }
+  .tag-pill.tag-neutral { color: var(--ink-soft); background: var(--paper-2); }
+  .tag-pill.tag-outline { color: var(--ink-soft); background: var(--paper); border: 1px solid var(--line); }
+  .messenger-region { font-family: var(--mono); font-size: 0.85rem; color: var(--ink-faint); margin: 0 0 0.7rem; }
+  .messenger-bio { color: var(--ink-soft); font-size: 0.95rem; line-height: 1.6; margin: 0 0 1rem; flex-grow: 1; }
+  .messenger-links { display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem; }
+  .messenger-links a {
+    font-family: var(--sans);
+    font-size: 0.88rem;
+    color: var(--teal-text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--teal-text);
+  }
+  .messenger-links a:hover { color: var(--teal); border-color: var(--teal); }
+  .messenger-empty { color: var(--ink-faint); grid-column: 1 / -1; }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a href="/" class="wordmark">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#7a1e49"/><path d="M4 20 Q8 12 11 20 T18 20" stroke="#f5f4ef" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M18 20 Q22 8 28 20" stroke="#f5f4ef" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
+      Common Signals
+    </a>
+    <ul class="nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/research">Research</a></li>
+      <li><a href="/tools">Tools</a></li>
+      <li><a href="/training">Training</a></li>
+      <li><a href="/workshops">Workshops</a></li>
+      <li><a href="/updates">Updates</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navDrawer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <a class="nav-cta" href="mailto:hello@commonsignals.org">Get in touch</a>
+  </div>
+  <div class="nav-drawer" id="navDrawer">
+    <ul>
+      <li><a href="/about">About</a></li>
+      <li><a href="/research">Research</a></li>
+      <li><a href="/tools">Tools</a></li>
+      <li><a href="/training">Training</a></li>
+      <li><a href="/workshops">Workshops</a></li>
+      <li><a href="/updates">Updates</a></li>
+      <li><a href="mailto:hello@commonsignals.org">Get in touch</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+  <div class="tool-main">
+
+  <div class="page-hero tool-eyebrow">
+    <h1>AI messenger map.</h1>
+    <p class="sub">A directory of people and organisations explaining AI risk to the public, across both the existential-risk and present-day-harms conversations.</p>
+  </div>
+
+  <div class="messenger-note">
+    <p style="margin:0">Listing here is not an endorsement. These bios describe what each person or organisation does; Common Signals does not rate, rank or assess them.</p>
+  </div>
+
+  <div class="tool-card soft" style="margin-top:2.5rem">
+    <h2>Suggest a messenger.</h2>
+    <p>We're looking for people and organisations who: speak to a public audience (not just other researchers or industry insiders), publish roughly monthly (or more often) on AI risk, have verifiable links (a website or social profile we can check). We don't list lab communications accounts, vendors selling AI products or services, or academics who only publish for other researchers.</p>
+    <p style="margin-bottom:0"><a class="btn btn-primary" href="mailto:hello@commonsignals.org">Suggest a messenger</a></p>
+  </div>
+
+  <div class="messenger-controls">
+    <div class="messenger-search">
+      <label for="messengerSearch" class="sr-only">Search by name or bio</label>
+      <input type="search" id="messengerSearch" placeholder="Search by name or bio" autocomplete="off" />
+    </div>
+    <div class="messenger-filters">
+      <fieldset>
+        <legend>Focus</legend>
+        <label class="filter-check"><input type="checkbox" name="focus" value="both" /> Both</label>
+        <label class="filter-check"><input type="checkbox" name="focus" value="existential-risk" /> <a href="/glossary#existential-risk-x-risk">existential risk</a></label>
+        <label class="filter-check"><input type="checkbox" name="focus" value="present-harms" /> present harms</label>
+      </fieldset>
+      <fieldset>
+        <legend>Type</legend>
+        <label class="filter-check"><input type="checkbox" name="type" value="individual" /> individual</label>
+        <label class="filter-check"><input type="checkbox" name="type" value="organisation" /> organisation</label>
+      </fieldset>
+      <fieldset>
+        <legend>Region</legend>
+        <label class="filter-check"><input type="checkbox" name="region" value="Argentina" /> Argentina</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="Australia" /> Australia</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="Belgium" /> Belgium</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="Brazil" /> Brazil</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="Canada" /> Canada</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="Chile" /> Chile</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="Denmark" /> Denmark</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="France" /> France</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="Germany" /> Germany</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="Global" /> Global</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="India" /> India</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="Ireland" /> Ireland</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="Israel" /> Israel</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="Italy" /> Italy</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="Kenya" /> Kenya</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="Mexico" /> Mexico</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="Netherlands" /> Netherlands</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="New Zealand" /> New Zealand</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="Nigeria" /> Nigeria</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="Singapore" /> Singapore</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="South Africa" /> South Africa</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="Spain" /> Spain</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="Sweden" /> Sweden</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="Taiwan" /> Taiwan</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="Uganda" /> Uganda</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="United Kingdom" /> United Kingdom</label>
+        <label class="filter-check"><input type="checkbox" name="region" value="United States" /> United States</label>
+      </fieldset>
+      <fieldset>
+        <legend>Channel</legend>
+        <label class="filter-check"><input type="checkbox" name="channel" value="bluesky" /> Bluesky</label>
+        <label class="filter-check"><input type="checkbox" name="channel" value="instagram" /> Instagram</label>
+        <label class="filter-check"><input type="checkbox" name="channel" value="linkedin" /> LinkedIn</label>
+        <label class="filter-check"><input type="checkbox" name="channel" value="newsletter" /> Newsletter</label>
+        <label class="filter-check"><input type="checkbox" name="channel" value="podcast" /> Podcast</label>
+        <label class="filter-check"><input type="checkbox" name="channel" value="substack" /> Substack</label>
+        <label class="filter-check"><input type="checkbox" name="channel" value="tiktok" /> TikTok</label>
+        <label class="filter-check"><input type="checkbox" name="channel" value="x" /> X</label>
+        <label class="filter-check"><input type="checkbox" name="channel" value="youtube" /> YouTube</label>
+      </fieldset>
+    </div>
+    <div class="messenger-status-row">
+      <span id="messengerCount"></span>
+      <button type="button" id="messengerClear">Clear filters</button>
+    </div>
+  </div>
+
+  <div class="messenger-grid" id="messengerGrid">
+      <article class="messenger-card" data-type="organisation" data-focus="existential-risk" data-region="United States" data-channels="x" data-search="nate soares / machine intelligence research institute berkeley nonprofit founded in 2000 that argues building superintelligence with current methods would most likely cause human extinction. its president nate soares co-wrote the 2025 book if anyone builds it, everyone dies and calls for a global moratorium on superintelligence development.">
+        <h3><a href="https://intelligence.org/" target="_blank" rel="noopener">Nate Soares / Machine Intelligence Research Institute</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">United States</p>
+        <p class="messenger-bio">Berkeley nonprofit founded in 2000 that argues building <a href="/glossary#superintelligence">superintelligence</a> with current methods would most likely cause human extinction. Its president Nate Soares co-wrote the 2025 book If Anyone Builds It, Everyone Dies and calls for a global moratorium on superintelligence development.</p>
+        <div class="messenger-links"><a href="https://intelligence.org/" target="_blank" rel="noopener">Website</a><a href="https://x.com/MIRIBerkeley" target="_blank" rel="noopener">X</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="existential-risk" data-region="Canada" data-channels="x" data-search="geoffrey hinton british-canadian computer scientist and university of toronto professor emeritus whose neural network research earned the 2024 nobel prize in physics. since leaving google in 2023 he has spoken publicly about a meaningful chance that advanced ai could lead to human extinction.">
+        <h3><a href="https://www.cs.toronto.edu/~hinton/" target="_blank" rel="noopener">Geoffrey Hinton</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">Canada</p>
+        <p class="messenger-bio">British-Canadian computer scientist and University of Toronto professor emeritus whose neural network research earned the 2024 Nobel Prize in Physics. Since leaving Google in 2023 he has spoken publicly about a meaningful chance that advanced AI could lead to human extinction.</p>
+        <div class="messenger-links"><a href="https://www.cs.toronto.edu/~hinton/" target="_blank" rel="noopener">Website</a><a href="https://x.com/geoffreyhinton" target="_blank" rel="noopener">X</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="existential-risk" data-region="Canada" data-channels="x bluesky linkedin" data-search="yoshua bengio turing award winner and université de montréal professor who chairs the international ai safety report and founded the nonprofit lawzero in 2025. he argues that frontier ai could pose catastrophic risks and advocates safe-by-design, non-agentic systems.">
+        <h3><a href="https://yoshuabengio.org/en" target="_blank" rel="noopener">Yoshua Bengio</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">Canada</p>
+        <p class="messenger-bio">Turing Award winner and Université de Montréal professor who chairs the <a href="/glossary#international-ai-safety-report">International AI Safety Report</a> and founded the nonprofit LawZero in 2025. He argues that <a href="/glossary#frontier-model">frontier AI</a> could pose catastrophic risks and advocates safe-by-design, non-agentic systems.</p>
+        <div class="messenger-links"><a href="https://yoshuabengio.org/en" target="_blank" rel="noopener">Website</a><a href="https://x.com/Yoshua_Bengio" target="_blank" rel="noopener">X</a><a href="https://bsky.app/profile/yoshuabengio.bsky.social" target="_blank" rel="noopener">Bluesky</a><a href="https://linkedin.com/in/yoshuabengio" target="_blank" rel="noopener">LinkedIn</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="existential-risk" data-region="United States" data-channels="linkedin" data-search="stuart russell british-born uc berkeley professor, co-author of the standard ai textbook and author of human compatible. he directs the center for human-compatible ai and argues that unchecked development of superhuman ai poses a serious risk of loss of human control.">
+        <h3><a href="https://people.eecs.berkeley.edu/~russell/" target="_blank" rel="noopener">Stuart Russell</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">United States</p>
+        <p class="messenger-bio">British-born UC Berkeley professor, co-author of the standard AI textbook and author of Human Compatible. He directs the Center for Human-Compatible AI and argues that unchecked development of superhuman AI poses a serious risk of loss of human control.</p>
+        <div class="messenger-links"><a href="https://people.eecs.berkeley.edu/~russell/" target="_blank" rel="noopener">Website</a><a href="https://www.linkedin.com/company/humancompatibleai" target="_blank" rel="noopener">LinkedIn</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="existential-risk" data-region="United Kingdom" data-channels="youtube tiktok instagram x bluesky linkedin newsletter" data-search="controlai uk not-for-profit campaigning to prevent extinction risk from superintelligent ai. it briefs parliamentarians and runs public campaigns calling for a ban on superintelligence development.">
+        <h3><a href="https://controlai.org/" target="_blank" rel="noopener">ControlAI</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">United Kingdom</p>
+        <p class="messenger-bio">UK not-for-profit campaigning to prevent extinction risk from superintelligent AI. It briefs parliamentarians and runs public campaigns calling for a ban on superintelligence development.</p>
+        <div class="messenger-links"><a href="https://controlai.org/" target="_blank" rel="noopener">Website</a><a href="https://www.youtube.com/@ControlAI" target="_blank" rel="noopener">YouTube</a><a href="https://www.tiktok.com/@ctrl.ai" target="_blank" rel="noopener">TikTok</a><a href="https://www.instagram.com/ai_ctrl/" target="_blank" rel="noopener">Instagram</a><a href="https://x.com/ControlAI" target="_blank" rel="noopener">X</a><a href="https://bsky.app/profile/controlai.com" target="_blank" rel="noopener">Bluesky</a><a href="https://www.linkedin.com/company/controlartificialintelligence/" target="_blank" rel="noopener">LinkedIn</a><a href="https://controlai.news/" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="existential-risk" data-region="Global" data-channels="youtube tiktok instagram x bluesky linkedin newsletter" data-search="pauseai volunteer-led movement founded in the netherlands in 2023 that campaigns for an international pause on training the most powerful ai systems until they can be made safe. it runs protests, lobbying and local chapters, including a uk chapter and a separate pauseai us.">
+        <h3><a href="https://pauseai.info/" target="_blank" rel="noopener">PauseAI</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">Global</p>
+        <p class="messenger-bio">Volunteer-led movement founded in the Netherlands in 2023 that campaigns for an international pause on training the most powerful AI systems until they can be made safe. It runs protests, lobbying and local chapters, including a UK chapter and a separate PauseAI US.</p>
+        <div class="messenger-links"><a href="https://pauseai.info/" target="_blank" rel="noopener">Website</a><a href="https://www.youtube.com/@PauseAI" target="_blank" rel="noopener">YouTube</a><a href="https://www.tiktok.com/@pauseai" target="_blank" rel="noopener">TikTok</a><a href="https://www.instagram.com/pause_ai" target="_blank" rel="noopener">Instagram</a><a href="https://twitter.com/PauseAI" target="_blank" rel="noopener">X</a><a href="https://bsky.app/profile/pauseai.bsky.social" target="_blank" rel="noopener">Bluesky</a><a href="https://www.linkedin.com/company/pauseai" target="_blank" rel="noopener">LinkedIn</a><a href="https://pauseai.substack.com" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="existential-risk" data-region="United States" data-channels="youtube x linkedin podcast newsletter" data-search="future of life institute nonprofit founded in 2014 that works to steer transformative technologies away from extreme large-scale risks, with a focus on ai, biotechnology and nuclear weapons. it organised the 2023 open letter calling for a pause on giant ai experiments and funds policy work, grants and public education.">
+        <h3><a href="https://futureoflife.org/" target="_blank" rel="noopener">Future of Life Institute</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">United States</p>
+        <p class="messenger-bio">Nonprofit founded in 2014 that works to steer transformative technologies away from extreme large-scale risks, with a focus on AI, biotechnology and nuclear weapons. It organised the 2023 open letter calling for a pause on giant AI experiments and funds policy work, grants and public education.</p>
+        <div class="messenger-links"><a href="https://futureoflife.org/" target="_blank" rel="noopener">Website</a><a href="https://www.youtube.com/channel/UC-rCCy3FQ-GItDimSR9lhzw" target="_blank" rel="noopener">YouTube</a><a href="https://twitter.com/FLI_org" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/future-of-life-institute/" target="_blank" rel="noopener">LinkedIn</a><a href="https://podcast.futureoflife.org/" target="_blank" rel="noopener">Podcast</a><a href="https://newsletter.futureoflife.org/" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="existential-risk" data-region="United Kingdom" data-channels="x linkedin substack" data-search="connor leahy ai researcher who co-founded eleutherai and the london ai safety company conjecture in 2022. in 2026 he stepped down as conjecture chief executive to become us director of controlai, and is a frequent media voice warning of extinction risk from superintelligence.">
+        <h3><a href="https://www.conjecture.dev/" target="_blank" rel="noopener">Connor Leahy</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">United Kingdom</p>
+        <p class="messenger-bio">AI researcher who co-founded EleutherAI and the London <a href="/glossary#ai-safety">AI safety</a> company Conjecture in 2022. In 2026 he stepped down as Conjecture chief executive to become US director of ControlAI, and is a frequent media voice warning of extinction risk from superintelligence.</p>
+        <div class="messenger-links"><a href="https://www.conjecture.dev/" target="_blank" rel="noopener">Website</a><a href="https://x.com/NPCollapse" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/in/connor-j-leahy/" target="_blank" rel="noopener">LinkedIn</a><a href="https://substack.com/@npcollapse" target="_blank" rel="noopener">Substack</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="existential-risk" data-region="United Kingdom" data-channels="youtube x" data-search="rob miles uk science communicator whose robert miles ai safety youtube channel explains alignment problems and existential risk to a general audience. he also appears on computerphile and works on the aisafety.info explainer project.">
+        <h3><a href="https://www.youtube.com/channel/UCLB7AzTwc6VFZrBsO2ucBMg" target="_blank" rel="noopener">Rob Miles</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">United Kingdom</p>
+        <p class="messenger-bio">UK science communicator whose Robert Miles AI Safety YouTube channel explains <a href="/glossary#alignment">alignment</a> problems and existential risk to a general audience. He also appears on Computerphile and works on the aisafety.info explainer project.</p>
+        <div class="messenger-links"><a href="https://www.youtube.com/channel/UCLB7AzTwc6VFZrBsO2ucBMg" target="_blank" rel="noopener">Website</a><a href="https://www.youtube.com/channel/UCLB7AzTwc6VFZrBsO2ucBMg" target="_blank" rel="noopener">YouTube</a><a href="https://x.com/robertskmiles" target="_blank" rel="noopener">X</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="existential-risk" data-region="United Kingdom" data-channels="youtube tiktok instagram x podcast newsletter" data-search="80,000 hours london nonprofit that provides careers advice aimed at the world's most pressing problems, and rates risks from advanced ai as its top priority. its long-form podcast with rob wiblin features many of the field's leading researchers and policy figures.">
+        <h3><a href="https://80000hours.org/" target="_blank" rel="noopener">80,000 Hours</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">United Kingdom</p>
+        <p class="messenger-bio">London nonprofit that provides careers advice aimed at the world's most pressing problems, and rates risks from advanced AI as its top priority. Its long-form podcast with Rob Wiblin features many of the field's leading researchers and policy figures.</p>
+        <div class="messenger-links"><a href="https://80000hours.org/" target="_blank" rel="noopener">Website</a><a href="https://www.youtube.com/user/eightythousandhours" target="_blank" rel="noopener">YouTube</a><a href="https://www.tiktok.com/@80000hours" target="_blank" rel="noopener">TikTok</a><a href="https://www.instagram.com/80000hoursofficial/" target="_blank" rel="noopener">Instagram</a><a href="https://twitter.com/80000hours" target="_blank" rel="noopener">X</a><a href="https://80000hours.org/podcast/" target="_blank" rel="noopener">Podcast</a><a href="https://80000hours.org/newsletter/" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="existential-risk" data-region="United States" data-channels="youtube x linkedin podcast newsletter" data-search="center for ai safety san francisco nonprofit led by dan hendrycks that works to reduce societal-scale risks from ai through research, field-building and advocacy. it coordinated the 2023 statement, signed by many leading researchers, that ai extinction risk should be a global priority alongside pandemics and nuclear war.">
+        <h3><a href="https://safe.ai/" target="_blank" rel="noopener">Center for AI Safety</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">United States</p>
+        <p class="messenger-bio">San Francisco nonprofit led by Dan Hendrycks that works to reduce societal-scale risks from AI through research, field-building and advocacy. It coordinated the 2023 statement, signed by many leading researchers, that AI extinction risk should be a global priority alongside pandemics and nuclear war.</p>
+        <div class="messenger-links"><a href="https://safe.ai/" target="_blank" rel="noopener">Website</a><a href="https://www.youtube.com/channel/UCY_K5gXsXHtuiP8mj3BiWxA" target="_blank" rel="noopener">YouTube</a><a href="https://x.com/cais" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/center-for-ai-safety/" target="_blank" rel="noopener">LinkedIn</a><a href="https://podcasts.apple.com/us/podcast/ai-safety-newsletter/id1702875110" target="_blank" rel="noopener">Podcast</a><a href="https://newsletter.safe.ai/" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="present-harms" data-region="United Kingdom" data-channels="youtube bluesky linkedin newsletter" data-search="ada lovelace institute independent london research institute, established by the nuffield foundation, working to ensure data and ai serve people and society. publishes research and policy analysis on ai regulation, public attitudes, algorithmic accountability and the use of ai in public services.">
+        <h3><a href="https://www.adalovelaceinstitute.org/" target="_blank" rel="noopener">Ada Lovelace Institute</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">United Kingdom</p>
+        <p class="messenger-bio">Independent London research institute, established by the Nuffield Foundation, working to ensure data and AI serve people and society. Publishes research and policy analysis on AI regulation, public attitudes, algorithmic accountability and the use of AI in public services.</p>
+        <div class="messenger-links"><a href="https://www.adalovelaceinstitute.org/" target="_blank" rel="noopener">Website</a><a href="https://www.youtube.com/channel/UCCfNBV-PFn-R5x1yok0QRGg" target="_blank" rel="noopener">YouTube</a><a href="https://bsky.app/profile/adalovelaceinst.bsky.social" target="_blank" rel="noopener">Bluesky</a><a href="https://www.linkedin.com/company/ada-lovelace-institute" target="_blank" rel="noopener">LinkedIn</a><a href="https://adalovelaceinstitute.org/newsletter-subscribe" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="present-harms" data-region="United Kingdom" data-channels="bluesky linkedin newsletter" data-search="connected by data uk campaign, led by jeni tennison, working to give communities a powerful say in decisions about data and ai. runs public participation projects, policy advocacy and the people's panel on ai, focused on collective rather than purely individual data rights.">
+        <h3><a href="https://connectedbydata.org/" target="_blank" rel="noopener">Connected by Data</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">United Kingdom</p>
+        <p class="messenger-bio">UK campaign, led by Jeni Tennison, working to give communities a powerful say in decisions about data and AI. Runs public participation projects, policy advocacy and the People's Panel on AI, focused on collective rather than purely individual data rights.</p>
+        <div class="messenger-links"><a href="https://connectedbydata.org/" target="_blank" rel="noopener">Website</a><a href="https://bsky.app/profile/connectedbydata.org" target="_blank" rel="noopener">Bluesky</a><a href="https://www.linkedin.com/company/connectedbydata" target="_blank" rel="noopener">LinkedIn</a><a href="https://connectedbydata.us21.list-manage.com/subscribe?u=7c03d6a429375c9cc2eef194f&amp;id=3c200de804" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="present-harms" data-region="United States" data-channels="youtube tiktok instagram x linkedin newsletter" data-search="joy buolamwini / algorithmic justice league computer scientist and founder of the algorithmic justice league, whose gender shades research exposed racial and gender bias in commercial facial analysis systems. author of unmasking ai and featured in the documentary coded bias.">
+        <h3><a href="https://www.ajl.org/" target="_blank" rel="noopener">Joy Buolamwini / Algorithmic Justice League</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">United States</p>
+        <p class="messenger-bio">Computer scientist and founder of the Algorithmic Justice League, whose Gender Shades research exposed racial and gender bias in commercial facial analysis systems. Author of Unmasking AI and featured in the documentary Coded Bias.</p>
+        <div class="messenger-links"><a href="https://www.ajl.org/" target="_blank" rel="noopener">Website</a><a href="https://www.youtube.com/@AJLunited" target="_blank" rel="noopener">YouTube</a><a href="https://tiktok.com/@ajlunited" target="_blank" rel="noopener">TikTok</a><a href="https://www.instagram.com/poetofcode/" target="_blank" rel="noopener">Instagram</a><a href="https://twitter.com/jovialjoy" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/in/buolamwini/" target="_blank" rel="noopener">LinkedIn</a><a href="https://poetofcode.substack.com/" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="present-harms" data-region="United States" data-channels="x bluesky linkedin" data-search="timnit gebru / dair institute computer scientist who co-led google's ethical ai team before her contested departure in 2020, then founded the distributed ai research institute. dair conducts community-rooted research on ai harms, including labour exploitation, surveillance and the concentration of power in large technology firms.">
+        <h3><a href="https://dair-institute.org/" target="_blank" rel="noopener">Timnit Gebru / DAIR Institute</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">United States</p>
+        <p class="messenger-bio">Computer scientist who co-led Google's Ethical AI team before her contested departure in 2020, then founded the Distributed AI Research Institute. DAIR conducts community-rooted research on AI harms, including labour exploitation, surveillance and the concentration of power in large technology firms.</p>
+        <div class="messenger-links"><a href="https://dair-institute.org/" target="_blank" rel="noopener">Website</a><a href="https://x.com/timnitGebru" target="_blank" rel="noopener">X</a><a href="https://bsky.app/profile/timnitgebru.bsky.social" target="_blank" rel="noopener">Bluesky</a><a href="https://www.linkedin.com/in/timnit-gebru-7b3b407/" target="_blank" rel="noopener">LinkedIn</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="present-harms" data-region="United States" data-channels="x bluesky podcast" data-search="emily m. bender professor of computational linguistics at the university of washington and co-author of the stochastic parrots paper on large language model risks. co-hosts the mystery ai hype theater 3000 podcast with alex hanna and co-wrote the ai con.">
+        <h3><a href="https://dair-institute.org/maiht3k/" target="_blank" rel="noopener">Emily M. Bender</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">United States</p>
+        <p class="messenger-bio">Professor of computational linguistics at the University of Washington and co-author of the stochastic parrots paper on large language model risks. Co-hosts the Mystery AI Hype Theater 3000 podcast with Alex Hanna and co-wrote The AI Con.</p>
+        <div class="messenger-links"><a href="https://dair-institute.org/maiht3k/" target="_blank" rel="noopener">Website</a><a href="https://x.com/emilymbender" target="_blank" rel="noopener">X</a><a href="https://bsky.app/profile/emilymbender.bsky.social" target="_blank" rel="noopener">Bluesky</a><a href="https://podcasts.apple.com/us/podcast/mystery-ai-hype-theater-3000/id1690426042" target="_blank" rel="noopener">Podcast</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="present-harms" data-region="United States" data-channels="x substack newsletter" data-search="gary marcus cognitive scientist, emeritus professor at nyu and founder of two ai companies, known for sustained criticism of large language model reliability and industry hype. writes the marcus on ai newsletter and testified to the us senate on ai oversight in 2023.">
+        <h3><a href="https://garymarcus.substack.com/" target="_blank" rel="noopener">Gary Marcus</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">United States</p>
+        <p class="messenger-bio">Cognitive scientist, emeritus professor at NYU and founder of two AI companies, known for sustained criticism of large language model reliability and industry hype. Writes the Marcus on AI newsletter and testified to the US Senate on AI oversight in 2023.</p>
+        <div class="messenger-links"><a href="https://garymarcus.substack.com/" target="_blank" rel="noopener">Website</a><a href="https://x.com/garymarcus" target="_blank" rel="noopener">X</a><a href="https://garymarcus.substack.com/" target="_blank" rel="noopener">Substack</a><a href="https://garymarcus.substack.com/subscribe" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="present-harms" data-region="United States" data-channels="x bluesky linkedin" data-search="karen hao journalist who has covered ai for mit technology review, the wall street journal and the atlantic. her 2025 book empire of ai examines openai and the global labour, resource and power costs of the ai industry.">
+        <h3><a href="https://karendhao.com/" target="_blank" rel="noopener">Karen Hao</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">United States</p>
+        <p class="messenger-bio">Journalist who has covered AI for MIT Technology Review, the Wall Street Journal and The Atlantic. Her 2025 book Empire of AI examines OpenAI and the global labour, resource and power costs of the AI industry.</p>
+        <div class="messenger-links"><a href="https://karendhao.com/" target="_blank" rel="noopener">Website</a><a href="https://twitter.com/_KarenHao" target="_blank" rel="noopener">X</a><a href="https://bsky.app/profile/karenhao.bsky.social" target="_blank" rel="noopener">Bluesky</a><a href="https://www.linkedin.com/in/karendhao/" target="_blank" rel="noopener">LinkedIn</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="present-harms" data-region="United States" data-channels="x bluesky linkedin" data-search="ai now institute new york policy research institute, co-directed by amba kak and sarah myers west, studying the social and economic effects of ai. its work focuses on industry concentration, competition, labour and the power of large technology companies over ai development.">
+        <h3><a href="https://ainowinstitute.org/" target="_blank" rel="noopener">AI Now Institute</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">United States</p>
+        <p class="messenger-bio">New York policy research institute, co-directed by Amba Kak and Sarah Myers West, studying the social and economic effects of AI. Its work focuses on industry concentration, competition, labour and the power of large technology companies over AI development.</p>
+        <div class="messenger-links"><a href="https://ainowinstitute.org/" target="_blank" rel="noopener">Website</a><a href="https://x.com/AINowInstitute/" target="_blank" rel="noopener">X</a><a href="https://bsky.app/profile/ainowinstitute.bsky.social" target="_blank" rel="noopener">Bluesky</a><a href="https://www.linkedin.com/company/ai-now-institute/" target="_blank" rel="noopener">LinkedIn</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="present-harms" data-region="United Kingdom" data-channels="substack podcast newsletter" data-search="carole cadwalladr british investigative journalist who exposed the cambridge analytica scandal for the observer and the guardian. now writes the how to survive the broligarchy newsletter and podcast on the political power of technology billionaires, disinformation and threats to democracy.">
+        <h3><a href="https://broligarchy.substack.com/" target="_blank" rel="noopener">Carole Cadwalladr</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">United Kingdom</p>
+        <p class="messenger-bio">British investigative journalist who exposed the Cambridge Analytica scandal for The Observer and The Guardian. Now writes the How to Survive the Broligarchy newsletter and podcast on the political power of technology billionaires, disinformation and threats to democracy.</p>
+        <div class="messenger-links"><a href="https://broligarchy.substack.com/" target="_blank" rel="noopener">Website</a><a href="https://broligarchy.substack.com/" target="_blank" rel="noopener">Substack</a><a href="https://broligarchy.substack.com/podcast" target="_blank" rel="noopener">Podcast</a><a href="https://broligarchy.substack.com/subscribe" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="present-harms" data-region="United Kingdom" data-channels="instagram x linkedin podcast" data-search="5rights foundation uk charity founded by baroness beeban kidron working for children's rights in the digital environment. it shaped the age appropriate design code and has published a children and ai design code setting out how ai systems should address foreseeable risks to children.">
+        <h3><a href="https://5rightsfoundation.com/" target="_blank" rel="noopener">5Rights Foundation</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">United Kingdom</p>
+        <p class="messenger-bio">UK charity founded by Baroness Beeban Kidron working for children's rights in the digital environment. It shaped the Age Appropriate Design Code and has published a Children and AI Design Code setting out how AI systems should address foreseeable risks to children.</p>
+        <div class="messenger-links"><a href="https://5rightsfoundation.com/" target="_blank" rel="noopener">Website</a><a href="https://www.instagram.com/5rightsfound/" target="_blank" rel="noopener">Instagram</a><a href="https://x.com/5rightsfound" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/5rights/" target="_blank" rel="noopener">LinkedIn</a><a href="https://open.spotify.com/show/4LXwiKpA8fUZtA3U3biAYq" target="_blank" rel="noopener">Podcast</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="present-harms" data-region="United Kingdom" data-channels="x bluesky linkedin newsletter" data-search="rachel coldicutt / careful industries technology researcher and former chief executive of doteveryone, now leading the careful industries research studio. her work covers responsible technology, digital identity and community tech, and she writes the just enough internet newsletter.">
+        <h3><a href="https://www.careful.industries/" target="_blank" rel="noopener">Rachel Coldicutt / Careful Industries</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">United Kingdom</p>
+        <p class="messenger-bio">Technology researcher and former chief executive of Doteveryone, now leading the Careful Industries research studio. Her work covers responsible technology, digital identity and community tech, and she writes the Just Enough Internet newsletter.</p>
+        <div class="messenger-links"><a href="https://www.careful.industries/" target="_blank" rel="noopener">Website</a><a href="https://twitter.com/rachelcoldicutt" target="_blank" rel="noopener">X</a><a href="https://bsky.app/profile/rachelcoldicutt.bsky.social" target="_blank" rel="noopener">Bluesky</a><a href="https://www.linkedin.com/in/rachelcoldicutt/" target="_blank" rel="noopener">LinkedIn</a><a href="https://buttondown.email/justenoughinternet" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="existential-risk" data-region="United States" data-channels="x substack newsletter" data-search="ai futures project (daniel kokotajlo) nonprofit forecasting group led by former openai researcher daniel kokotajlo, best known for the ai 2027 scenario published in april 2025. it sets out concrete, dated predictions of how superhuman ai could arrive and what might follow.">
+        <h3><a href="https://ai-2027.com" target="_blank" rel="noopener">AI Futures Project (Daniel Kokotajlo)</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">United States</p>
+        <p class="messenger-bio">Nonprofit forecasting group led by former OpenAI researcher Daniel Kokotajlo, best known for the AI 2027 scenario published in April 2025. It sets out concrete, dated predictions of how superhuman AI could arrive and what might follow.</p>
+        <div class="messenger-links"><a href="https://ai-2027.com" target="_blank" rel="noopener">Website</a><a href="https://x.com/AI_Futures_" target="_blank" rel="noopener">X</a><a href="https://blog.ai-futures.org" target="_blank" rel="noopener">Substack</a><a href="https://blog.ai-futures.org" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="existential-risk" data-region="Netherlands" data-channels="youtube x linkedin substack newsletter" data-search="existential risk observatory amsterdam foundation founded by otto barten that works to reduce existential risk by raising public awareness and informing debate. it runs events, media outreach and policy work, with unaligned ai as its leading concern.">
+        <h3><a href="https://www.existentialriskobservatory.org" target="_blank" rel="noopener">Existential Risk Observatory</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">Netherlands</p>
+        <p class="messenger-bio">Amsterdam foundation founded by Otto Barten that works to reduce existential risk by raising public awareness and informing debate. It runs events, media outreach and policy work, with unaligned AI as its leading concern.</p>
+        <div class="messenger-links"><a href="https://www.existentialriskobservatory.org" target="_blank" rel="noopener">Website</a><a href="https://www.youtube.com/@existentialriskobservatory" target="_blank" rel="noopener">YouTube</a><a href="https://x.com/xrobservatory" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/existential-risk-observatory" target="_blank" rel="noopener">LinkedIn</a><a href="https://xriskobservatory.substack.com" target="_blank" rel="noopener">Substack</a><a href="https://xriskobservatory.substack.com" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="existential-risk" data-region="Australia" data-channels="x newsletter" data-search="australians for ai safety coalition of experts and citizens administered by the charity good ancestors, campaigning for safe ai governance in australia. it coordinates open letters, expert testimony, media engagement and election campaigns calling for a national ai safety institute.">
+        <h3><a href="https://www.australiansforaisafety.com.au" target="_blank" rel="noopener">Australians for AI Safety</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">Australia</p>
+        <p class="messenger-bio">Coalition of experts and citizens administered by the charity Good Ancestors, campaigning for safe AI governance in Australia. It coordinates open letters, expert testimony, media engagement and election campaigns calling for a national <a href="/glossary#ai-security-institute-uk">AI Safety Institute</a>.</p>
+        <div class="messenger-links"><a href="https://www.australiansforaisafety.com.au" target="_blank" rel="noopener">Website</a><a href="https://x.com/AusAISafety" target="_blank" rel="noopener">X</a><a href="https://www.australiansforaisafety.com.au" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="existential-risk" data-region="United States" data-channels="youtube x linkedin substack podcast newsletter" data-search="center for humane technology (tristan harris) san francisco nonprofit co-founded by tristan harris, known for the social dilemma and the ai dilemma talks. it reaches mainstream audiences through the your undivided attention podcast, public talks and policy advocacy on ai and social media harms.">
+        <h3><a href="https://www.humanetech.com" target="_blank" rel="noopener">Center for Humane Technology (Tristan Harris)</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">United States</p>
+        <p class="messenger-bio">San Francisco nonprofit co-founded by Tristan Harris, known for The Social Dilemma and the AI Dilemma talks. It reaches mainstream audiences through the Your Undivided Attention podcast, public talks and policy advocacy on AI and social media harms.</p>
+        <div class="messenger-links"><a href="https://www.humanetech.com" target="_blank" rel="noopener">Website</a><a href="https://www.youtube.com/channel/UCFECM-p3CF81Tp_l2sJsiyg" target="_blank" rel="noopener">YouTube</a><a href="https://x.com/HumaneTech_" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/the-center-for-humane-technology" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.humanetech.com/substack" target="_blank" rel="noopener">Substack</a><a href="https://www.humanetech.com/podcast" target="_blank" rel="noopener">Podcast</a><a href="https://www.humanetech.com/substack" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="existential-risk" data-region="United States" data-channels="youtube substack podcast newsletter" data-search="doom debates (liron shapira) podcast and substack run by entrepreneur liron shapira, who debates guests across the spectrum on whether ai could cause human extinction. its stated aim is to raise mainstream awareness of agi risk and build infrastructure for public debate.">
+        <h3><a href="https://lironshapira.substack.com" target="_blank" rel="noopener">Doom Debates (Liron Shapira)</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">United States</p>
+        <p class="messenger-bio">Podcast and Substack run by entrepreneur Liron Shapira, who debates guests across the spectrum on whether AI could cause human extinction. Its stated aim is to raise mainstream awareness of <a href="/glossary#artificial-general-intelligence-agi">AGI</a> risk and build infrastructure for public debate.</p>
+        <div class="messenger-links"><a href="https://lironshapira.substack.com" target="_blank" rel="noopener">Website</a><a href="https://www.youtube.com/@DoomDebates" target="_blank" rel="noopener">YouTube</a><a href="https://lironshapira.substack.com" target="_blank" rel="noopener">Substack</a><a href="https://podcasts.apple.com/us/podcast/doom-debates/id1751366208" target="_blank" rel="noopener">Podcast</a><a href="https://lironshapira.substack.com" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="existential-risk" data-region="United States" data-channels="youtube x" data-search="stop ai oakland grassroots group using non-violent civil disobedience, including protests and blockades at openai, to demand a permanent global ban on frontier ai development. it frames advanced ai as a direct extinction threat and addresses a general audience.">
+        <h3><a href="https://www.stopai.info" target="_blank" rel="noopener">Stop AI</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">United States</p>
+        <p class="messenger-bio">Oakland grassroots group using non-violent civil disobedience, including protests and blockades at OpenAI, to demand a permanent global ban on frontier AI development. It frames advanced AI as a direct extinction threat and addresses a general audience.</p>
+        <div class="messenger-links"><a href="https://www.stopai.info" target="_blank" rel="noopener">Website</a><a href="https://www.youtube.com/@stopai_info" target="_blank" rel="noopener">YouTube</a><a href="https://x.com/stopai_info" target="_blank" rel="noopener">X</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="existential-risk" data-region="United States" data-channels="youtube tiktok instagram x linkedin substack newsletter" data-search="pauseai us (holly elmore) grassroots nonprofit founded and led by holly elmore, organisationally separate from pauseai global. it mobilises citizens to lobby lawmakers, stages protests and local events, and campaigns for an international treaty pausing frontier ai development.">
+        <h3><a href="https://pauseai-us.org" target="_blank" rel="noopener">PauseAI US (Holly Elmore)</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">United States</p>
+        <p class="messenger-bio">Grassroots nonprofit founded and led by Holly Elmore, organisationally separate from PauseAI Global. It mobilises citizens to lobby lawmakers, stages protests and local events, and campaigns for an international treaty pausing frontier AI development.</p>
+        <div class="messenger-links"><a href="https://pauseai-us.org" target="_blank" rel="noopener">Website</a><a href="https://www.youtube.com/@PauseAIUS" target="_blank" rel="noopener">YouTube</a><a href="https://www.tiktok.com/@pauseai.us" target="_blank" rel="noopener">TikTok</a><a href="https://www.instagram.com/pauseaius/" target="_blank" rel="noopener">Instagram</a><a href="https://x.com/PauseAIUS" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/pauseai-us/" target="_blank" rel="noopener">LinkedIn</a><a href="https://pauseaius.substack.com/" target="_blank" rel="noopener">Substack</a><a href="https://pauseaius.substack.com/" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="existential-risk" data-region="Global" data-channels="x" data-search="aisafety.info volunteer-maintained explainer site answering common questions about existential risk from advanced ai in plain language. founded by rob miles and run by a global team under the nonprofit ashgro, it aims to inform newcomers rather than campaign.">
+        <h3><a href="https://aisafety.info" target="_blank" rel="noopener">AISafety.info</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">Global</p>
+        <p class="messenger-bio">Volunteer-maintained explainer site answering common questions about existential risk from advanced AI in plain language. Founded by Rob Miles and run by a global team under the nonprofit Ashgro, it aims to inform newcomers rather than campaign.</p>
+        <div class="messenger-links"><a href="https://aisafety.info" target="_blank" rel="noopener">Website</a><a href="https://x.com/stampyai" target="_blank" rel="noopener">X</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="existential-risk" data-region="United States" data-channels="youtube x linkedin podcast" data-search="the cognitive revolution (nathan labenz) weekly podcast hosted by nathan labenz interviewing ai builders and researchers about near-term transformative ai. labenz, a former openai red-teamer, regularly raises catastrophic-risk concerns for a broad, non-specialist audience.">
+        <h3><a href="https://www.cognitiverevolution.ai" target="_blank" rel="noopener">The Cognitive Revolution (Nathan Labenz)</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">United States</p>
+        <p class="messenger-bio">Weekly podcast hosted by Nathan Labenz interviewing AI builders and researchers about near-term transformative AI. Labenz, a former OpenAI red-teamer, regularly raises catastrophic-risk concerns for a broad, non-specialist audience.</p>
+        <div class="messenger-links"><a href="https://www.cognitiverevolution.ai" target="_blank" rel="noopener">Website</a><a href="https://www.youtube.com/@CognitiveRevolutionAI" target="_blank" rel="noopener">YouTube</a><a href="https://twitter.com/labenz" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/in/nathanlabenz/" target="_blank" rel="noopener">LinkedIn</a><a href="https://open.spotify.com/show/6yHyok3M3BjqzR0VB5MSyk" target="_blank" rel="noopener">Podcast</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="present-harms" data-region="Germany" data-channels="youtube instagram bluesky linkedin newsletter" data-search="algorithmwatch non-profit research and advocacy organisation based in berlin and zurich. it investigates automated decision-making systems and their effects on justice, human rights, democracy and sustainability, and campaigns for stronger accountability across europe.">
+        <h3><a href="https://algorithmwatch.org/en/" target="_blank" rel="noopener">AlgorithmWatch</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">Germany</p>
+        <p class="messenger-bio">Non-profit research and advocacy organisation based in Berlin and Zurich. It investigates automated decision-making systems and their effects on justice, human rights, democracy and sustainability, and campaigns for stronger accountability across Europe.</p>
+        <div class="messenger-links"><a href="https://algorithmwatch.org/en/" target="_blank" rel="noopener">Website</a><a href="https://www.youtube.com/channel/UCOhGvpEH0oLlpqZDDpDo67Q" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/algorithmwatch/" target="_blank" rel="noopener">Instagram</a><a href="https://bsky.app/profile/algorithmwatch.org" target="_blank" rel="noopener">Bluesky</a><a href="https://www.linkedin.com/company/algorithmwatch/" target="_blank" rel="noopener">LinkedIn</a><a href="https://algorithmwatch.org/en/newsletter/" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="present-harms" data-region="Global" data-channels="youtube instagram x bluesky linkedin newsletter" data-search="access now international digital rights organisation defending the rights of people and communities at risk online. it runs a digital security helpline, campaigns against surveillance, internet shutdowns and harmful ai, and convenes the annual rightscon summit.">
+        <h3><a href="https://www.accessnow.org/" target="_blank" rel="noopener">Access Now</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">Global</p>
+        <p class="messenger-bio">International digital rights organisation defending the rights of people and communities at risk online. It runs a digital security helpline, campaigns against surveillance, internet shutdowns and harmful AI, and convenes the annual RightsCon summit.</p>
+        <div class="messenger-links"><a href="https://www.accessnow.org/" target="_blank" rel="noopener">Website</a><a href="https://www.youtube.com/user/accessorg" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/accessnow/" target="_blank" rel="noopener">Instagram</a><a href="https://twitter.com/accessnow" target="_blank" rel="noopener">X</a><a href="https://bsky.app/profile/accessnow.org" target="_blank" rel="noopener">Bluesky</a><a href="https://www.linkedin.com/company/access-now" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.accessnow.org/" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="present-harms" data-region="Global" data-channels="youtube tiktok instagram x bluesky linkedin" data-search="amnesty tech the technology and human rights programme of amnesty international. it investigates spyware, surveillance, algorithmic discrimination in public services and the accountability of major platforms, publishing research aimed at both policymakers and the general public.">
+        <h3><a href="https://www.amnesty.org/en/tech/" target="_blank" rel="noopener">Amnesty Tech</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">Global</p>
+        <p class="messenger-bio">The technology and human rights programme of Amnesty International. It investigates spyware, surveillance, algorithmic discrimination in public services and the accountability of major platforms, publishing research aimed at both policymakers and the general public.</p>
+        <div class="messenger-links"><a href="https://www.amnesty.org/en/tech/" target="_blank" rel="noopener">Website</a><a href="https://www.youtube.com/user/AmnestyInternational" target="_blank" rel="noopener">YouTube</a><a href="https://www.tiktok.com/@amnesty" target="_blank" rel="noopener">TikTok</a><a href="https://instagram.com/amnesty" target="_blank" rel="noopener">Instagram</a><a href="https://twitter.com/AmnestyTech" target="_blank" rel="noopener">X</a><a href="https://bsky.app/profile/amnesty.org" target="_blank" rel="noopener">Bluesky</a><a href="https://www.linkedin.com/company/amnesty-international/" target="_blank" rel="noopener">LinkedIn</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="present-harms" data-region="United Kingdom" data-channels="bluesky podcast newsletter" data-search="cory doctorow canadian-born author, journalist and activist based between london and los angeles, and a special advisor to the electronic frontier foundation. his recent books, including enshittification and the internet con, examine platform power, monopoly and the decline of digital services.">
+        <h3><a href="https://pluralistic.net/" target="_blank" rel="noopener">Cory Doctorow</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">United Kingdom</p>
+        <p class="messenger-bio">Canadian-born author, journalist and activist based between London and Los Angeles, and a special advisor to the Electronic Frontier Foundation. His recent books, including Enshittification and The Internet Con, examine platform power, monopoly and the decline of digital services.</p>
+        <div class="messenger-links"><a href="https://pluralistic.net/" target="_blank" rel="noopener">Website</a><a href="https://bsky.app/profile/doctorow.pluralistic.net" target="_blank" rel="noopener">Bluesky</a><a href="https://craphound.com/feeds/doctorow_podcast" target="_blank" rel="noopener">Podcast</a><a href="https://pluralistic.net/plura-list" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="present-harms" data-region="Canada" data-channels="youtube tiktok instagram bluesky linkedin podcast newsletter" data-search="paris marx (tech won't save us) canadian technology critic who hosts the weekly podcast tech won't save us and writes the newsletter disconnect. their work covers data centres, ai hype, platform power and the politics of silicon valley, and their book hyperscale examines the costs of data centre expansion.">
+        <h3><a href="https://disconnect.blog/" target="_blank" rel="noopener">Paris Marx (Tech Won't Save Us)</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">Canada</p>
+        <p class="messenger-bio">Canadian technology critic who hosts the weekly podcast Tech Won't Save Us and writes the newsletter Disconnect. Their work covers data centres, AI hype, platform power and the politics of Silicon Valley, and their book Hyperscale examines the costs of data centre expansion.</p>
+        <div class="messenger-links"><a href="https://disconnect.blog/" target="_blank" rel="noopener">Website</a><a href="https://www.youtube.com/@techwontsaveus" target="_blank" rel="noopener">YouTube</a><a href="https://www.tiktok.com/@techwontsaveus" target="_blank" rel="noopener">TikTok</a><a href="https://www.instagram.com/parismarx" target="_blank" rel="noopener">Instagram</a><a href="https://bsky.app/profile/parismarx.com" target="_blank" rel="noopener">Bluesky</a><a href="https://www.linkedin.com/in/parismarx" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.techwontsave.us/" target="_blank" rel="noopener">Podcast</a><a href="https://disconnect.blog/" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="present-harms" data-region="United Kingdom" data-channels="bluesky newsletter" data-search="foxglove uk non-profit that uses litigation and campaigning to challenge misuse of technology by governments and large tech firms. its work includes cases on algorithmic decision-making in public services, palantir's nhs contracts, data centre job claims and ai scraping of publishers' content.">
+        <h3><a href="https://www.foxglove.org.uk/" target="_blank" rel="noopener">Foxglove</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">United Kingdom</p>
+        <p class="messenger-bio">UK non-profit that uses litigation and campaigning to challenge <a href="/glossary#misuse-and-misalignment">misuse</a> of technology by governments and large tech firms. Its work includes cases on algorithmic decision-making in public services, Palantir's NHS contracts, data centre job claims and AI scraping of publishers' content.</p>
+        <div class="messenger-links"><a href="https://www.foxglove.org.uk/" target="_blank" rel="noopener">Website</a><a href="https://bsky.app/profile/foxglovelegal.bsky.social" target="_blank" rel="noopener">Bluesky</a><a href="https://www.foxglove.org.uk/campaigns/join-us/" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="present-harms" data-region="United States" data-channels="x bluesky" data-search="meredith whittaker president of the signal foundation and co-founder of the ai now institute. a former google researcher who helped organise the 2018 walkouts, she speaks widely on surveillance, the concentration of power in the ai industry and the privacy risks of agentic ai.">
+        <h3><a href="https://signal.org/" target="_blank" rel="noopener">Meredith Whittaker</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">United States</p>
+        <p class="messenger-bio">President of the Signal Foundation and co-founder of the AI Now Institute. A former Google researcher who helped organise the 2018 walkouts, she speaks widely on surveillance, the concentration of power in the AI industry and the privacy risks of <a href="/glossary#ai-agent">agentic AI</a>.</p>
+        <div class="messenger-links"><a href="https://signal.org/" target="_blank" rel="noopener">Website</a><a href="https://x.com/mer__edith" target="_blank" rel="noopener">X</a><a href="https://bsky.app/profile/meredithmeredith.bsky.social" target="_blank" rel="noopener">Bluesky</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="present-harms" data-region="Canada" data-channels="x linkedin" data-search="sasha luccioni montreal ai researcher known for measuring the energy use and carbon emissions of machine learning models. formerly ai and climate lead at hugging face, she co-founded sustainable ai group and was named to the time 100 ai list and bbc 100 women in 2024.">
+        <h3><a href="https://www.sashaluccioni.com/" target="_blank" rel="noopener">Sasha Luccioni</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">Canada</p>
+        <p class="messenger-bio">Montreal AI researcher known for measuring the energy use and carbon emissions of machine learning models. Formerly AI and climate lead at Hugging Face, she co-founded Sustainable AI Group and was named to the TIME 100 AI list and BBC 100 Women in 2024.</p>
+        <div class="messenger-links"><a href="https://www.sashaluccioni.com/" target="_blank" rel="noopener">Website</a><a href="https://twitter.com/SashaMTL" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/in/sashaluccioniphd/" target="_blank" rel="noopener">LinkedIn</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="present-harms" data-region="Ireland" data-channels="bluesky linkedin" data-search="abeba birhane (ai accountability lab) ethiopian-born cognitive scientist who founded and leads the ai accountability lab at trinity college dublin. her research audits large datasets and models for bias and harm, and she argues publicly for justice-oriented accountability rather than industry self-regulation.">
+        <h3><a href="https://aial.ie/" target="_blank" rel="noopener">Abeba Birhane (AI Accountability Lab)</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">Ireland</p>
+        <p class="messenger-bio">Ethiopian-born cognitive scientist who founded and leads the AI Accountability Lab at Trinity College Dublin. Her research audits large datasets and models for bias and harm, and she argues publicly for justice-oriented accountability rather than industry self-regulation.</p>
+        <div class="messenger-links"><a href="https://aial.ie/" target="_blank" rel="noopener">Website</a><a href="https://bsky.app/profile/aial.ie" target="_blank" rel="noopener">Bluesky</a><a href="https://ie.linkedin.com/in/abeba-birhane-214b8426" target="_blank" rel="noopener">LinkedIn</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="both" data-region="United States" data-channels="youtube instagram x bluesky linkedin podcast newsletter" data-search="casey newton (platformer / hard fork) writes the platformer newsletter on ai and social platforms and co-hosts the new york times podcast hard fork with kevin roose. weekly episodes cover ai safety, model behaviour, regulation and job displacement for a mainstream audience.">
+        <h3><a href="https://www.platformer.news/" target="_blank" rel="noopener">Casey Newton (Platformer / Hard Fork)</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-neutral">Both</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">United States</p>
+        <p class="messenger-bio">Writes the Platformer newsletter on AI and social platforms and co-hosts the New York Times podcast Hard Fork with Kevin Roose. Weekly episodes cover AI safety, model behaviour, regulation and job displacement for a mainstream audience.</p>
+        <div class="messenger-links"><a href="https://www.platformer.news/" target="_blank" rel="noopener">Website</a><a href="https://www.youtube.com/@caseynewton" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/crumbler" target="_blank" rel="noopener">Instagram</a><a href="https://x.com/platformer" target="_blank" rel="noopener">X</a><a href="https://bsky.app/profile/caseynewton.bsky.social" target="_blank" rel="noopener">Bluesky</a><a href="https://www.linkedin.com/in/caseynewton1" target="_blank" rel="noopener">LinkedIn</a><a href="https://podcasts.apple.com/us/podcast/hard-fork/id1528594034" target="_blank" rel="noopener">Podcast</a><a href="https://www.platformer.news/" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="existential-risk" data-region="Israel" data-channels="youtube instagram x" data-search="yuval noah harari historian and author of sapiens and nexus, a 2024 book on information networks and ai. he argues in global media, talks and broadcast interviews that ai is the first technology able to make decisions and generate ideas independently, posing civilisational risks.">
+        <h3><a href="https://www.ynharari.com/" target="_blank" rel="noopener">Yuval Noah Harari</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">Israel</p>
+        <p class="messenger-bio">Historian and author of Sapiens and Nexus, a 2024 book on information networks and AI. He argues in global media, talks and broadcast interviews that AI is the first technology able to make decisions and generate ideas independently, posing civilisational risks.</p>
+        <div class="messenger-links"><a href="https://www.ynharari.com/" target="_blank" rel="noopener">Website</a><a href="https://www.youtube.com/user/YuvalNoahHarari" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/yuval_noah_harari" target="_blank" rel="noopener">Instagram</a><a href="https://twitter.com/harari_yuval" target="_blank" rel="noopener">X</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="both" data-region="United Kingdom" data-channels="youtube newsletter" data-search="ai explained anonymous uk youtuber whose channel covers the arrival of smarter-than-human ai, with close readings of frontier model releases and safety papers. he created the simple bench reasoning benchmark and runs the ai insiders patreon community.">
+        <h3><a href="https://www.youtube.com/@aiexplained-official" target="_blank" rel="noopener">AI Explained</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-neutral">Both</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">United Kingdom</p>
+        <p class="messenger-bio">Anonymous UK YouTuber whose channel covers the arrival of smarter-than-human AI, with close readings of frontier model releases and safety papers. He created the Simple Bench reasoning benchmark and runs the AI Insiders Patreon community.</p>
+        <div class="messenger-links"><a href="https://www.youtube.com/@aiexplained-official" target="_blank" rel="noopener">Website</a><a href="https://www.youtube.com/@aiexplained-official" target="_blank" rel="noopener">YouTube</a><a href="https://www.patreon.com/AIExplained" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="present-harms" data-region="United States" data-channels="youtube tiktok instagram x podcast newsletter" data-search="adam conover comedian and creator of adam ruins everything who hosts the factually! podcast and a large youtube channel. recent episodes on ai hype, ai safety, labour and data centres frame ai as a present-day harm to workers and the internet.">
+        <h3><a href="https://www.adamconover.net/" target="_blank" rel="noopener">Adam Conover</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">United States</p>
+        <p class="messenger-bio">Comedian and creator of Adam Ruins Everything who hosts the Factually! podcast and a large YouTube channel. Recent episodes on AI hype, AI safety, labour and data centres frame AI as a present-day harm to workers and the internet.</p>
+        <div class="messenger-links"><a href="https://www.adamconover.net/" target="_blank" rel="noopener">Website</a><a href="https://www.youtube.com/@AdamConover" target="_blank" rel="noopener">YouTube</a><a href="https://www.tiktok.com/@adamconover" target="_blank" rel="noopener">TikTok</a><a href="https://www.instagram.com/adamconover" target="_blank" rel="noopener">Instagram</a><a href="https://twitter.com/adamconover" target="_blank" rel="noopener">X</a><a href="https://headgum.com/factually-with-adam-conover" target="_blank" rel="noopener">Podcast</a><a href="https://www.adamconover.net/" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="both" data-region="Australia" data-channels="x linkedin newsletter" data-search="toby walsh scientia professor of ai at unsw sydney and author of popular books including faking it and the shortest history of ai. he appears regularly on abc, sbs, bbc and cnn discussing autonomous weapons, deepfakes and regulation.">
+        <h3><a href="https://tobywalsh.ai/" target="_blank" rel="noopener">Toby Walsh</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-neutral">Both</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">Australia</p>
+        <p class="messenger-bio">Scientia Professor of AI at UNSW Sydney and author of popular books including Faking It and The Shortest History of AI. He appears regularly on ABC, SBS, BBC and CNN discussing autonomous weapons, deepfakes and regulation.</p>
+        <div class="messenger-links"><a href="https://tobywalsh.ai/" target="_blank" rel="noopener">Website</a><a href="https://twitter.com/TobyWalsh" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/in/airockstar/" target="_blank" rel="noopener">LinkedIn</a><a href="https://tobywalsh.ai/" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="existential-risk" data-region="France" data-channels="" data-search="cesia (centre pour la sécurité de l'ia / french center for ai safety) cesia is a french nonprofit, spun out of the effisciences ai safety unit, that produces technical distillation and public-education materials on catastrophic ai risk, including the ai safety atlas. it also engages in eu ai act evaluation and policy work, run by executive director charbel-raphaël segerie.">
+        <h3><a href="https://cesia.org/en/" target="_blank" rel="noopener">CeSIA (Centre pour la Sécurité de l'IA / French Center for AI Safety)</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">France</p>
+        <p class="messenger-bio">CeSIA is a French nonprofit, spun out of the EffiSciences AI Safety Unit, that produces technical distillation and public-education materials on catastrophic AI risk, including the AI Safety Atlas. It also engages in <a href="/glossary#eu-ai-act">EU AI Act</a> evaluation and policy work, run by executive director Charbel-Raphaël Segerie.</p>
+        <div class="messenger-links"><a href="https://cesia.org/en/" target="_blank" rel="noopener">Website</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="existential-risk" data-region="France" data-channels="instagram x" data-search="pause ia pause ia is a french grassroots association campaigning for a pause or strict regulation of advanced ai development, organizing public demonstrations and press appearances. it runs an active instagram and x presence alongside a french-language press page on its own site.">
+        <h3><a href="https://pauseia.fr/fr" target="_blank" rel="noopener">Pause IA</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">France</p>
+        <p class="messenger-bio">Pause IA is a French grassroots association campaigning for a pause or strict regulation of advanced AI development, organizing public demonstrations and press appearances. It runs an active Instagram and X presence alongside a French-language press page on its own site.</p>
+        <div class="messenger-links"><a href="https://pauseia.fr/fr" target="_blank" rel="noopener">Website</a><a href="https://instagram.com/pause_ia" target="_blank" rel="noopener">Instagram</a><a href="https://x.com/pause_ia" target="_blank" rel="noopener">X</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="existential-risk" data-region="Sweden" data-channels="" data-search="pauseai sweden pauseai sweden is the swedish national chapter of the pauseai movement, campaigning publicly for a slowdown of frontier ai development pending adequate safety guarantees. it was announced as a new national chapter alongside the australian chapter.">
+        <h3><a href="https://pauseai.se/about" target="_blank" rel="noopener">PauseAI Sweden</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill">existential risk</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">Sweden</p>
+        <p class="messenger-bio">PauseAI Sweden is the Swedish national chapter of the PauseAI movement, campaigning publicly for a slowdown of frontier AI development pending adequate safety guarantees. It was announced as a new national chapter alongside the Australian chapter.</p>
+        <div class="messenger-links"><a href="https://pauseai.se/about" target="_blank" rel="noopener">Website</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="present-harms" data-region="Denmark" data-channels="linkedin" data-search="gry hasselbalch gry hasselbalch is a danish data ethics researcher and co-founder of the danish think tank dataetisk tænkehandletank (dataethics.eu), writing and speaking publicly on ai, data and human rights. she publishes regularly through her own site and dataethics.eu, and speaks at public and industry events on ai's societal effects.">
+        <h3><a href="https://gryhasselbalch.com/" target="_blank" rel="noopener">Gry Hasselbalch</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">Denmark</p>
+        <p class="messenger-bio">Gry Hasselbalch is a Danish data ethics researcher and co-founder of the Danish think tank Dataetisk Tænkehandletank (DataEthics.eu), writing and speaking publicly on AI, data and human rights. She publishes regularly through her own site and DataEthics.eu, and speaks at public and industry events on AI's societal effects.</p>
+        <div class="messenger-links"><a href="https://gryhasselbalch.com/" target="_blank" rel="noopener">Website</a><a href="https://linkedin.com/in/gryhasselbalch" target="_blank" rel="noopener">LinkedIn</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="both" data-region="Belgium" data-channels="substack newsletter" data-search="risto uuk (the eu ai act newsletter) risto uuk, a future of life institute policy researcher based in brussels, writes the eu ai act newsletter, a long-running substack that explains eu ai act developments in plain language to a broad following. the newsletter covers both ai act compliance and broader ai safety and governance debates.">
+        <h3><a href="https://ristouuk.com/" target="_blank" rel="noopener">Risto Uuk (The EU AI Act Newsletter)</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-neutral">Both</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">Belgium</p>
+        <p class="messenger-bio">Risto Uuk, a Future of Life Institute policy researcher based in Brussels, writes The EU AI Act Newsletter, a long-running Substack that explains EU AI Act developments in plain language to a broad following. The newsletter covers both AI Act compliance and broader AI safety and governance debates.</p>
+        <div class="messenger-links"><a href="https://ristouuk.com/" target="_blank" rel="noopener">Website</a><a href="https://artificialintelligenceact.substack.com" target="_blank" rel="noopener">Substack</a><a href="https://artificialintelligenceact.substack.com" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="present-harms" data-region="Belgium" data-channels="newsletter" data-search="european digital rights (edri) edri is a brussels-based network of digital rights ngos that publishes the edri-gram, a regular newsletter and press output covering ai act implementation and algorithmic surveillance in the eu. it is a frequent public and press commentator on eu ai regulation.">
+        <h3><a href="https://edri.org/" target="_blank" rel="noopener">European Digital Rights (EDRi)</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">Belgium</p>
+        <p class="messenger-bio">EDRi is a Brussels-based network of digital rights NGOs that publishes the EDRi-gram, a regular newsletter and press output covering AI Act implementation and algorithmic surveillance in the EU. It is a frequent public and press commentator on EU AI regulation.</p>
+        <div class="messenger-links"><a href="https://edri.org/" target="_blank" rel="noopener">Website</a><a href="https://edri.org/take-action/edri-gram/" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="both" data-region="Italy" data-channels="x" data-search="luciano floridi luciano floridi is an italian philosopher of information and ai ethics, director of the digital ethics center, who writes and comments frequently for general-audience press and gives public talks on ai's societal and ethical implications. he maintains an active x presence and has authored several public-facing books on ai ethics.">
+        <h3><a href="https://dec.yale.edu/profile/luciano-floridi" target="_blank" rel="noopener">Luciano Floridi</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-neutral">Both</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">Italy</p>
+        <p class="messenger-bio">Luciano Floridi is an Italian philosopher of information and AI ethics, director of the Digital Ethics Center, who writes and comments frequently for general-audience press and gives public talks on AI's societal and ethical implications. He maintains an active X presence and has authored several public-facing books on AI ethics.</p>
+        <div class="messenger-links"><a href="https://dec.yale.edu/profile/luciano-floridi" target="_blank" rel="noopener">Website</a><a href="https://x.com/Floridi" target="_blank" rel="noopener">X</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="both" data-region="Spain" data-channels="x substack newsletter" data-search="alberto romero (the algorithmic bridge) alberto romero is a spanish writer who publishes the algorithmic bridge, a long-running substack newsletter explaining ai developments and risks to a general audience without commercial ties to ai vendors. the newsletter has built a large following in substack's technology category and posts on a close-to-weekly cadence.">
+        <h3><a href="https://www.thealgorithmicbridge.com/" target="_blank" rel="noopener">Alberto Romero (The Algorithmic Bridge)</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-neutral">Both</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">Spain</p>
+        <p class="messenger-bio">Alberto Romero is a Spanish writer who publishes The Algorithmic Bridge, a long-running Substack newsletter explaining AI developments and risks to a general audience without commercial ties to AI vendors. The newsletter has built a large following in Substack's technology category and posts on a close-to-weekly cadence.</p>
+        <div class="messenger-links"><a href="https://www.thealgorithmicbridge.com/" target="_blank" rel="noopener">Website</a><a href="https://x.com/Alber_RomGar" target="_blank" rel="noopener">X</a><a href="https://www.thealgorithmicbridge.com/" target="_blank" rel="noopener">Substack</a><a href="https://www.thealgorithmicbridge.com/" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="present-harms" data-region="India" data-channels="substack newsletter" data-search="internet freedom foundation internet freedom foundation is an indian digital rights nonprofit that publishes public explainers, a substack newsletter and press commentary on ai regulation, surveillance and platform governance in india. it regularly covers artificial intelligence issues on its own site.">
+        <h3><a href="https://internetfreedom.in/" target="_blank" rel="noopener">Internet Freedom Foundation</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">India</p>
+        <p class="messenger-bio">Internet Freedom Foundation is an Indian digital rights nonprofit that publishes public explainers, a Substack newsletter and press commentary on AI regulation, surveillance and platform governance in India. It regularly covers artificial intelligence issues on its own site.</p>
+        <div class="messenger-links"><a href="https://internetfreedom.in/" target="_blank" rel="noopener">Website</a><a href="https://internetfreedom.substack.com" target="_blank" rel="noopener">Substack</a><a href="https://internetfreedom.substack.com" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="present-harms" data-region="India" data-channels="x" data-search="tarunabh khaitan tarunabh khaitan is an oxford-based indian legal scholar who writes regularly for general-audience indian outlets and the public law blog law and other things on constitutional and regulatory issues, including ai governance. he is active on x commenting on indian legal and policy developments.">
+        <h3><a href="https://lawandotherthings.com/author/tarunabh-khaitan/" target="_blank" rel="noopener">Tarunabh Khaitan</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">India</p>
+        <p class="messenger-bio">Tarunabh Khaitan is an Oxford-based Indian legal scholar who writes regularly for general-audience Indian outlets and the public law blog Law and Other Things on constitutional and regulatory issues, including AI governance. He is active on X commenting on Indian legal and policy developments.</p>
+        <div class="messenger-links"><a href="https://lawandotherthings.com/author/tarunabh-khaitan/" target="_blank" rel="noopener">Website</a><a href="https://x.com/tarunkhaitan" target="_blank" rel="noopener">X</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="present-harms" data-region="India" data-channels="" data-search="digital empowerment foundation digital empowerment foundation is an indian nonprofit, led by founder-director osama manzar, working on digital literacy and inclusion that increasingly covers generative ai's effects on rural and marginalised communities. manzar speaks and writes regularly at public forums and in indian and international press on ai access and labour impacts.">
+        <h3><a href="https://defindia.org/" target="_blank" rel="noopener">Digital Empowerment Foundation</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">India</p>
+        <p class="messenger-bio">Digital Empowerment Foundation is an Indian nonprofit, led by founder-director Osama Manzar, working on digital literacy and inclusion that increasingly covers generative AI's effects on rural and marginalised communities. Manzar speaks and writes regularly at public forums and in Indian and international press on AI access and labour impacts.</p>
+        <div class="messenger-links"><a href="https://defindia.org/" target="_blank" rel="noopener">Website</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="both" data-region="Singapore" data-channels="linkedin" data-search="simon chesterman simon chesterman is a singapore-based law professor at nus's ai governance centre who writes public-facing commentary on ai governance and ethics for outlets such as just security and speaks at international forums including ai for good. he maintains a personal website collecting his public writing on ai and law.">
+        <h3><a href="https://www.simonchesterman.com/" target="_blank" rel="noopener">Simon Chesterman</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-neutral">Both</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">Singapore</p>
+        <p class="messenger-bio">Simon Chesterman is a Singapore-based law professor at NUS's AI Governance Centre who writes public-facing commentary on AI governance and ethics for outlets such as Just Security and speaks at international forums including AI for Good. He maintains a personal website collecting his public writing on AI and law.</p>
+        <div class="messenger-links"><a href="https://www.simonchesterman.com/" target="_blank" rel="noopener">Website</a><a href="https://linkedin.com/in/simonchesterman" target="_blank" rel="noopener">LinkedIn</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="present-harms" data-region="New Zealand" data-channels="x" data-search="ai forum new zealand ai forum new zealand is a nonprofit multi-stakeholder body that publishes regular news, reports and public commentary on ai adoption, workforce impacts and governance in new zealand. it maintains an active news page and x account.">
+        <h3><a href="https://aiforum.org.nz/" target="_blank" rel="noopener">AI Forum New Zealand</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">New Zealand</p>
+        <p class="messenger-bio">AI Forum New Zealand is a nonprofit multi-stakeholder body that publishes regular news, reports and public commentary on AI adoption, workforce impacts and governance in New Zealand. It maintains an active news page and X account.</p>
+        <div class="messenger-links"><a href="https://aiforum.org.nz/" target="_blank" rel="noopener">Website</a><a href="https://x.com/aiforumnz" target="_blank" rel="noopener">X</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="both" data-region="Taiwan" data-channels="substack newsletter" data-search="audrey tang audrey tang, taiwan's former digital minister, writes and speaks internationally on ai, democracy and civic technology, publishing regularly through a substack and frequent public talks and interviews. her work explicitly bridges ai-safety and present-harms framings, focusing on participatory and accountable ai governance.">
+        <h3><a href="https://audreyt.substack.com/" target="_blank" rel="noopener">Audrey Tang</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-neutral">Both</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">Taiwan</p>
+        <p class="messenger-bio">Audrey Tang, Taiwan's former digital minister, writes and speaks internationally on AI, democracy and civic technology, publishing regularly through a Substack and frequent public talks and interviews. Her work explicitly bridges AI-safety and present-harms framings, focusing on participatory and accountable AI governance.</p>
+        <div class="messenger-links"><a href="https://audreyt.substack.com/" target="_blank" rel="noopener">Website</a><a href="https://audreyt.substack.com/" target="_blank" rel="noopener">Substack</a><a href="https://audreyt.substack.com/" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="present-harms" data-region="South Africa" data-channels="" data-search="research ict africa research ict africa is a cape town-based think tank publishing policy research and public commentary on data governance, ai regulation and digital equality across african countries. it is cited as a civil-society reference body by unesco's ai ethics network.">
+        <h3><a href="https://researchictafrica.net/" target="_blank" rel="noopener">Research ICT Africa</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">South Africa</p>
+        <p class="messenger-bio">Research ICT Africa is a Cape Town-based think tank publishing policy research and public commentary on data governance, AI regulation and digital equality across African countries. It is cited as a civil-society reference body by UNESCO's AI ethics network.</p>
+        <div class="messenger-links"><a href="https://researchictafrica.net/" target="_blank" rel="noopener">Website</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="present-harms" data-region="Nigeria" data-channels="x newsletter" data-search="paradigm initiative paradigm initiative is a pan-african digital rights organisation based in nigeria that publishes a regular newsletter, policy briefs and press commentary on digital rights issues, including ai's effects on privacy and civic space across africa. it maintains an active x presence.">
+        <h3><a href="https://paradigmhq.org/" target="_blank" rel="noopener">Paradigm Initiative</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">Nigeria</p>
+        <p class="messenger-bio">Paradigm Initiative is a pan-African digital rights organisation based in Nigeria that publishes a regular newsletter, policy briefs and press commentary on digital rights issues, including AI's effects on privacy and civic space across Africa. It maintains an active X presence.</p>
+        <div class="messenger-links"><a href="https://paradigmhq.org/" target="_blank" rel="noopener">Website</a><a href="https://x.com/ParadigmHQ" target="_blank" rel="noopener">X</a><a href="https://paradigmhq.org/category/newsletter/" target="_blank" rel="noopener">Newsletter</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="present-harms" data-region="Uganda" data-channels="x" data-search="pollicy pollicy is a kampala-based feminist civic technology organisation, led by neema iyer, working on data governance, ai and its effects on gender and public discourse in east africa. it hosts public events, including sessions on ai and journalism, and is active on x.">
+        <h3><a href="https://pollicy.org/" target="_blank" rel="noopener">Pollicy</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">Uganda</p>
+        <p class="messenger-bio">Pollicy is a Kampala-based feminist civic technology organisation, led by Neema Iyer, working on data governance, AI and its effects on gender and public discourse in East Africa. It hosts public events, including sessions on AI and journalism, and is active on X.</p>
+        <div class="messenger-links"><a href="https://pollicy.org/" target="_blank" rel="noopener">Website</a><a href="https://x.com/PollicyOrg" target="_blank" rel="noopener">X</a></div>
+      </article>
+      <article class="messenger-card" data-type="individual" data-focus="present-harms" data-region="Kenya" data-channels="x" data-search="nanjala nyabola nanjala nyabola is a kenyan writer and political analyst who publishes regularly in general-audience outlets on technology, politics and digital rights in africa, including ai-related surveillance and disinformation. she is an active public commentator on x.">
+        <h3>Nanjala Nyabola</h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">individual</span>
+        </div>
+        <p class="messenger-region">Kenya</p>
+        <p class="messenger-bio">Nanjala Nyabola is a Kenyan writer and political analyst who publishes regularly in general-audience outlets on technology, politics and digital rights in Africa, including AI-related surveillance and disinformation. She is an active public commentator on X.</p>
+        <div class="messenger-links"><a href="https://x.com/Nanjala1" target="_blank" rel="noopener">X</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="present-harms" data-region="Chile" data-channels="x" data-search="derechos digitales derechos digitales is a chile-based latin american digital rights organisation publishing policy analysis and public commentary on ai regulation and data protection across the region. it is a recognised civil-society partner of bodies such as privacy international and unesco's ai ethics network.">
+        <h3><a href="https://www.derechosdigitales.org/" target="_blank" rel="noopener">Derechos Digitales</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">Chile</p>
+        <p class="messenger-bio">Derechos Digitales is a Chile-based Latin American digital rights organisation publishing policy analysis and public commentary on AI regulation and data protection across the region. It is a recognised civil-society partner of bodies such as Privacy International and UNESCO's AI ethics network.</p>
+        <div class="messenger-links"><a href="https://www.derechosdigitales.org/" target="_blank" rel="noopener">Website</a><a href="https://x.com/derechosdigital" target="_blank" rel="noopener">X</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="present-harms" data-region="Brazil" data-channels="" data-search="coding rights coding rights is a brazilian feminist digital-rights organisation, founded and led by joana varon, that produces public-facing research, art and advocacy on ai, surveillance and gender in latin america. varon speaks and is interviewed regularly about digital technology and human rights.">
+        <h3><a href="https://codingrights.org/en/" target="_blank" rel="noopener">Coding Rights</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">Brazil</p>
+        <p class="messenger-bio">Coding Rights is a Brazilian feminist digital-rights organisation, founded and led by Joana Varon, that produces public-facing research, art and advocacy on AI, surveillance and gender in Latin America. Varon speaks and is interviewed regularly about digital technology and human rights.</p>
+        <div class="messenger-links"><a href="https://codingrights.org/en/" target="_blank" rel="noopener">Website</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="present-harms" data-region="Mexico" data-channels="x" data-search="r3d (red en defensa de los derechos digitales) r3d is a mexican digital rights organisation that publishes blog posts, reports and public commentary on surveillance, data protection and emerging ai regulation in mexico. it maintains an active blog and x account with regular output.">
+        <h3><a href="https://r3d.mx/" target="_blank" rel="noopener">R3D (Red en Defensa de los Derechos Digitales)</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">Mexico</p>
+        <p class="messenger-bio">R3D is a Mexican digital rights organisation that publishes blog posts, reports and public commentary on surveillance, data protection and emerging AI regulation in Mexico. It maintains an active blog and X account with regular output.</p>
+        <div class="messenger-links"><a href="https://r3d.mx/" target="_blank" rel="noopener">Website</a><a href="https://x.com/R3Dmx" target="_blank" rel="noopener">X</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="present-harms" data-region="Argentina" data-channels="x" data-search="fundación vía libre fundación vía libre is an argentine digital-rights organisation that runs a dedicated unit on ai applied to security and publishes public articles on ai's civil-liberties implications. it maintains an active english- and spanish-language site and x account.">
+        <h3><a href="https://www.vialibre.org.ar/en/home/" target="_blank" rel="noopener">Fundación Vía Libre</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-teal">present harms</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">Argentina</p>
+        <p class="messenger-bio">Fundación Vía Libre is an Argentine digital-rights organisation that runs a dedicated unit on AI applied to security and publishes public articles on AI's civil-liberties implications. It maintains an active English- and Spanish-language site and X account.</p>
+        <div class="messenger-links"><a href="https://www.vialibre.org.ar/en/home/" target="_blank" rel="noopener">Website</a><a href="https://x.com/FViaLibre" target="_blank" rel="noopener">X</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="both" data-region="Global" data-channels="x" data-search="partnership on ai partnership on ai is a multi-stakeholder nonprofit that publishes a public blog and press statements on responsible ai development, spanning both frontier-risk and present-harms framings such as labour and generative-media provenance. it posts to its blog and x account on a regular, sub-monthly cadence.">
+        <h3><a href="https://partnershiponai.org/" target="_blank" rel="noopener">Partnership on AI</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-neutral">Both</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">Global</p>
+        <p class="messenger-bio">Partnership on AI is a multi-stakeholder nonprofit that publishes a public blog and press statements on responsible AI development, spanning both frontier-risk and present-harms framings such as labour and generative-media provenance. It posts to its blog and X account on a regular, sub-monthly cadence.</p>
+        <div class="messenger-links"><a href="https://partnershiponai.org/" target="_blank" rel="noopener">Website</a><a href="https://x.com/PartnershipAI" target="_blank" rel="noopener">X</a></div>
+      </article>
+      <article class="messenger-card" data-type="organisation" data-focus="both" data-region="Global" data-channels="" data-search="ieee spectrum (ai coverage) ieee spectrum is ieee's general-audience engineering magazine, running a dedicated, frequently updated ai section covering both catastrophic-risk and present-harms angles such as jobs, security and governance. it is ieee's public-facing publication rather than a policy-only channel.">
+        <h3><a href="https://spectrum.ieee.org/topic/artificial-intelligence/" target="_blank" rel="noopener">IEEE Spectrum (AI coverage)</a></h3>
+        <div class="messenger-tags">
+          <span class="tag-pill tag-neutral">Both</span>
+          <span class="tag-pill tag-outline">organisation</span>
+        </div>
+        <p class="messenger-region">Global</p>
+        <p class="messenger-bio">IEEE Spectrum is IEEE's general-audience engineering magazine, running a dedicated, frequently updated AI section covering both catastrophic-risk and present-harms angles such as jobs, security and governance. It is IEEE's public-facing publication rather than a policy-only channel.</p>
+        <div class="messenger-links"><a href="https://spectrum.ieee.org/topic/artificial-intelligence/" target="_blank" rel="noopener">Website</a></div>
+      </article>
+  </div>
+
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-subscribe">
+      <h3>Want to stay up to date?</h3>
+      <form id="subscribeForm" class="subscribe-box" novalidate>
+        <div class="subscribe-row">
+          <label for="subscribeEmail" class="sr-only">Email address</label>
+          <input type="email" name="email" id="subscribeEmail" placeholder="Enter your email" required autocomplete="email" />
+          <button type="submit" class="btn btn-primary subscribe-submit">Subscribe <span aria-hidden="true">&#8599;</span></button>
+        </div>
+        <div class="hp-field" aria-hidden="true">
+          <label for="subscribeWebsite">Leave this field blank</label>
+          <input type="text" id="subscribeWebsite" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+        <p class="subscribe-note">Stay up to speed with our research on public understanding of AI. Roughly monthly.</p>
+        <p class="subscribe-status" id="subscribeStatus" role="status" aria-live="polite"></p>
+      </form>
+      <div class="social-links">
+        <a href="https://www.youtube.com/@commonsignals" target="_blank" rel="noopener" aria-label="Common Signals on YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2.5" y="5" width="19" height="14" rx="4"/>
+            <path d="M10 9 L15.5 12 L10 15 Z" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/commonsignals" target="_blank" rel="noopener" aria-label="Common Signals on LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <text x="12" y="16.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="10.5" fill="currentColor" stroke="none">in</text>
+          </svg>
+        </a>
+        <a href="https://commonsignalsorg.substack.com/" target="_blank" rel="noopener" aria-label="Common Signals on Substack">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <text x="12" y="16.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="10.5" fill="currentColor" stroke="none">S</text>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/about">About</a></li>
+        <li><a href="/research">Research</a></li>
+        <li><a href="/tools">Tools</a></li>
+      </ul>
+      <ul>
+        <li><a href="/training">Training</a></li>
+        <li><a href="/workshops">Workshops</a></li>
+        <li><a href="/updates">Updates</a></li>
+      </ul>
+    </nav>
+    <p class="copyright">&copy; 2026 Common Signals &middot; <a href="mailto:hello@commonsignals.org">hello@commonsignals.org</a></p>
+  </div>
+</footer>
+
+<script src="/main.js" defer></script>
+<script>
+(function () {
+  const grid = document.getElementById("messengerGrid");
+  const cards = Array.from(grid.querySelectorAll(".messenger-card"));
+  const search = document.getElementById("messengerSearch");
+  const countEl = document.getElementById("messengerCount");
+  const clearBtn = document.getElementById("messengerClear");
+  const checkboxes = Array.from(document.querySelectorAll(".messenger-filters input[type=checkbox]"));
+
+  function selected(name) {
+    return checkboxes.filter((c) => c.name === name && c.checked).map((c) => c.value);
+  }
+
+  function apply() {
+    const q = search.value.trim().toLowerCase();
+    const focus = selected("focus");
+    const type = selected("type");
+    const region = selected("region");
+    const channel = selected("channel");
+    let shown = 0;
+    cards.forEach((card) => {
+      const cardChannels = (card.dataset.channels || "").split(" ").filter(Boolean);
+      const matches =
+        (!q || card.dataset.search.includes(q)) &&
+        (focus.length === 0 || focus.includes(card.dataset.focus)) &&
+        (type.length === 0 || type.includes(card.dataset.type)) &&
+        (region.length === 0 || region.includes(card.dataset.region)) &&
+        channel.every((c) => cardChannels.includes(c));
+      card.hidden = !matches;
+      if (matches) shown++;
+    });
+    countEl.textContent = shown + " of " + cards.length + (cards.length === 1 ? " messenger" : " messengers");
+  }
+
+  search.addEventListener("input", apply);
+  checkboxes.forEach((c) => c.addEventListener("change", apply));
+  clearBtn.addEventListener("click", () => {
+    search.value = "";
+    checkboxes.forEach((c) => (c.checked = false));
+    apply();
+  });
+
+  apply();
+})();
+</script>
+
+</body>
+</html>

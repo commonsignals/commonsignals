@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Common Signals">
+  <rect width="200" height="200" rx="43.75" fill="#7a1e49"/>
+  <path d="M25 125 Q50 75 68.75 125 T112.5 125" stroke="#f5f4ef" stroke-width="12.5" fill="none" stroke-linecap="round"/>
+  <path d="M112.5 125 Q137.5 50 175 125" stroke="#f5f4ef" stroke-width="15" fill="none" stroke-linecap="round"/>
+</svg>

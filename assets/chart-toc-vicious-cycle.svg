@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="720" height="300" role="img" aria-label="A vicious cycle: weak social mandate leads to weak governance, companies not incentivised, and passive public behaviour, which loops back to a weak mandate"><style>
+.t{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:12px;fill:#635f54}
+.n{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:13px;font-weight:600;fill:#232019}
+.h{font-family:"Lora",Georgia,serif;font-size:17px;font-weight:600;fill:#232019}
+.bx{fill:#f5f4ef;stroke:#635f54;stroke-width:1.2}
+.ar{stroke:#635f54;stroke-width:1.6;fill:none;marker-end:url(#tocvc-a)}
+</style>
+<defs><marker id="tocvc-a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#635f54"/></marker></defs>
+<rect width="720" height="300" fill="#f5f4ef"/>
+<text class="h" x="32" y="36">We are in a vicious cycle</text>
+
+<rect class="bx" x="40" y="88" width="150" height="96" rx="8"/>
+<text class="n" x="115" y="114" text-anchor="middle">Weak social</text>
+<text class="n" x="115" y="130" text-anchor="middle">mandate</text>
+<text class="t" x="115" y="150" text-anchor="middle">A minority see AI</text>
+<text class="t" x="115" y="164" text-anchor="middle">as a priority issue</text>
+
+<rect class="bx" x="210" y="88" width="150" height="96" rx="8"/>
+<text class="n" x="285" y="114" text-anchor="middle">Weak</text>
+<text class="n" x="285" y="130" text-anchor="middle">governance</text>
+<text class="t" x="285" y="150" text-anchor="middle">No mandate to hold</text>
+<text class="t" x="285" y="164" text-anchor="middle">the line on rules</text>
+
+<rect class="bx" x="380" y="88" width="150" height="96" rx="8"/>
+<text class="n" x="455" y="114" text-anchor="middle">Companies not</text>
+<text class="n" x="455" y="130" text-anchor="middle">incentivised</text>
+<text class="t" x="455" y="150" text-anchor="middle">No pressure to trade</text>
+<text class="t" x="455" y="164" text-anchor="middle">capability for safety</text>
+
+<rect class="bx" x="550" y="88" width="150" height="96" rx="8"/>
+<text class="n" x="625" y="114" text-anchor="middle">Passive public</text>
+<text class="n" x="625" y="130" text-anchor="middle">behaviour</text>
+<text class="t" x="625" y="150" text-anchor="middle">People adopt tools</text>
+<text class="t" x="625" y="164" text-anchor="middle">without questioning</text>
+
+<path class="ar" d="M192 136 L208 136"/>
+<path class="ar" d="M362 136 L378 136"/>
+<path class="ar" d="M532 136 L548 136"/>
+<path class="ar" d="M625 186 C 625 250, 115 250, 115 186" />
+<text class="t" x="370" y="256" text-anchor="middle">Each stage feeds the next</text>
+</svg>
