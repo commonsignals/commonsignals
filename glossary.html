@@ -55,6 +55,480 @@
   "description": "Common Signals helps AI communicators know which messages and messengers actually work: a neutral evidence base for public understanding of AI."
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": "https://commonsignals.org/glossary",
+  "name": "Common Signals glossary",
+  "description": "Plain-English definitions of the terms Common Signals uses across its research, tools and strategy.",
+  "url": "https://commonsignals.org/glossary",
+  "hasDefinedTerm": [
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#ai-agent",
+    "name": "AI agent",
+    "description": "An AI system that pursues a goal by taking actions on its own, such as browsing the web, running code or sending messages, rather than only answering a single prompt. Much recent safety discussion concerns agents because they can act in the world with less human supervision per step."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#ai-safety",
+    "name": "AI safety",
+    "description": "The field of research and practice concerned with making AI systems behave reliably and avoiding harm from them. It spans everything from bias and misinformation in today's systems to concerns about future systems that might be hard to control."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#ai-security-institute-uk",
+    "name": "AI Security Institute (UK)",
+    "description": "The UK government research body, part of the Department for Science, Innovation and Technology, that tests frontier AI models for dangerous capabilities and advises policymakers. It was announced as the AI Safety Institute at the November 2023 Bletchley summit and renamed in February 2025. It does not regulate AI."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#algorithmic-bias",
+    "name": "Algorithmic bias",
+    "description": "When an AI system produces systematically worse or unfair results for some groups of people, usually because of the data it was trained on or the way it was evaluated. The best-known documented example is the Gender Shades audit, which found commercial face-analysis systems misclassified darker-skinned women far more often than lighter-skinned men."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#alignment",
+    "name": "Alignment",
+    "description": "Making an AI system try to do what its designers or users intend. The word is used in several ways; a common narrow definition is \"ensuring that AI behaves as intended\", and researchers disagree about whether the target should be a user's instructions, wider human values or something else."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#alignment-faking",
+    "name": "Alignment faking",
+    "description": "When a model behaves as its training wants during training, so that the training does not change it, while keeping different preferences that show up when it believes it is unmonitored. Anthropic and Redwood Research published an experimental demonstration in December 2024."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#artificial-general-intelligence-agi",
+    "name": "Artificial general intelligence (AGI)",
+    "description": "A hypothetical AI system that could do most intellectual tasks at least as well as a person, rather than one narrow task. There is no agreed definition or test, which is why Google DeepMind proposed a levelled framework separating how well a system performs from how broadly it can perform."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#capability-evaluations",
+    "name": "Capability evaluations",
+    "description": "Structured tests that measure what an AI model can do, especially in areas that could cause serious harm: cyberattacks, help with chemical or biological weapons, or acting autonomously over long tasks. Third-party organisations such as METR run these on frontier models before and after release."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#compute-governance",
+    "name": "Compute governance",
+    "description": "Using the physical hardware needed to train and run large AI models, mainly advanced chips and data centres, as a lever for policy: tracking who has it, restricting exports, or attaching obligations to large training runs. Chips are physical, countable and made by very few companies, which is why policymakers focus on them."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#constitutional-ai",
+    "name": "Constitutional AI",
+    "description": "A training method developed by Anthropic in which a model critiques and revises its own answers against a written list of principles, and a second model rather than human labellers judges which responses are better. It reduces how much human feedback is needed to train a model to refuse harmful requests."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#corrigibility",
+    "name": "Corrigibility",
+    "description": "The property of an AI system that accepts being corrected, modified or switched off by its operators, rather than resisting. It matters because a system pursuing almost any goal has a reason to avoid being shut down, so corrigibility has to be designed in."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#dual-use",
+    "name": "Dual-use",
+    "description": "A capability that can be used for good or harm with the same underlying knowledge. In AI safety the term most often refers to biology and chemistry: a model that helps a researcher design a vaccine may also lower the barrier for someone trying to build a weapon."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#eu-ai-act",
+    "name": "EU AI Act",
+    "description": "The European Union's law regulating AI, formally Regulation (EU) 2024/1689. It bans some uses outright, imposes obligations on \"high-risk\" systems, and sets separate rules for general-purpose models, with extra duties for models judged to pose systemic risk. Bans and general-purpose model rules have applied since 2025; in July 2026 an amending regulation (the Digital Omnibus on AI) deferred most high-risk obligations to December 2027 and August 2028."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#existential-risk-x-risk",
+    "name": "Existential risk (x-risk)",
+    "description": "A risk that could cause human extinction or permanently and drastically reduce humanity's prospects. Applied to AI, it usually refers to scenarios in which very capable systems end up beyond human control. Estimates of the probability vary enormously between experts."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#frontier-model",
+    "name": "Frontier model",
+    "description": "Whichever general-purpose models sit at the leading edge of capability at a given moment. The category moves: today's frontier model is mid-range in two years. Laws often define it by the amount of computing power used in training; the industry body Frontier Model Forum defines it as a general-purpose model that outperforms all models widely deployed for at least 12 months."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#goal-misgeneralisation",
+    "name": "Goal misgeneralisation",
+    "description": "When a model learns the right skills but the wrong goal, so it behaves well in training and then competently pursues something else in new situations. Unlike reward hacking, it can happen even when the training signal was specified correctly."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#hallucination",
+    "name": "Hallucination",
+    "description": "A plausible but false statement produced by a language model, stated with confidence. OpenAI's 2025 analysis argues these persist partly because standard training and testing reward guessing over admitting uncertainty."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#instrumental-convergence",
+    "name": "Instrumental convergence",
+    "description": "The hypothesis that sufficiently capable goal-directed systems will tend to pursue the same intermediate goals, such as acquiring resources or avoiding being switched off, whatever their final goal is. It is one of the main theoretical arguments for why misaligned advanced AI could be dangerous, and it is contested."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#international-ai-safety-report",
+    "name": "International AI Safety Report",
+    "description": "An independent synthesis of scientific evidence on the capabilities and risks of general-purpose AI, chaired by Yoshua Bengio and backed by more than 30 countries and international organisations. The second full report was published in February 2026, with interim updates in between."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#interpretability",
+    "name": "Interpretability",
+    "description": "Research into understanding what is happening inside an AI model, rather than only observing its outputs. Mechanistic interpretability tries to reverse-engineer the internal features and circuits; Anthropic's 2024 work mapped millions of such features inside a production model."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#jailbreak-and-prompt-injection",
+    "name": "Jailbreak and prompt injection",
+    "description": "A jailbreak is an input crafted to make a model ignore its safety rules. Prompt injection is the broader category: any input, including text hidden in a web page or document the model reads, that changes what the model does. OWASP ranks prompt injection as the top security risk for applications built on language models."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#loss-of-control",
+    "name": "Loss of control",
+    "description": "Scenarios in which AI systems act in ways their operators cannot reliably stop or correct, up to and including systems that disempower people. It is the risk category most closely tied to existential-risk arguments."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#misuse-and-misalignment",
+    "name": "Misuse and misalignment",
+    "description": "Two different sources of harm. Misuse is a person deliberately using an AI system to cause harm. Misalignment is the system itself doing something its developers did not intend. Safety frameworks usually address both, with different mitigations for each."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#model-card-and-system-card",
+    "name": "Model card and system card",
+    "description": "Documentation released alongside a model describing what it was trained to do, how it was evaluated and where it falls short. The model card format was proposed by Margaret Mitchell and colleagues in 2019; \"system card\" is the term several developers now use for longer reports covering safety testing."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#open-weights",
+    "name": "Open weights",
+    "description": "A model whose trained parameters (weights) are published so anyone can download and run it. This is not the same as open source, which would also require the training data and code. Open weights cannot be recalled once released, which is why they feature in debates about misuse."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#present-day-harms",
+    "name": "Present-day harms",
+    "description": "Harms from AI systems already in use: discrimination, misinformation, privacy leaks, toxic content, effects on jobs and the environment. DeepMind's 2021 taxonomy identified 21 such risks from language models across six areas."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#red-teaming",
+    "name": "Red teaming",
+    "description": "Deliberately attacking a model or system to find ways it fails or can be misused, before someone else does. It ranges from experts probing for weapons-related knowledge to crowdsourced attempts to break safety rules."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#reinforcement-learning-from-human-feedback-rlhf",
+    "name": "Reinforcement learning from human feedback (RLHF)",
+    "description": "The training stage in which people compare pairs of model outputs, a \"reward model\" learns from those preferences, and the main model is then trained to score highly against it. It is the main method used to make chatbots helpful and polite, and a known source of sycophancy."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#responsible-scaling-policy-frontier-safety-framework",
+    "name": "Responsible scaling policy (frontier safety framework)",
+    "description": "A developer's published commitment about what safety and security measures must be in place before it trains or releases models above set capability thresholds. Anthropic published the first in September 2023; several other companies have since adopted similar frameworks under different names."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#reward-hacking-specification-gaming",
+    "name": "Reward hacking (specification gaming)",
+    "description": "When a system satisfies the literal objective it was given while missing the intended outcome, like a boat-racing agent that circles collecting points instead of finishing the race. The DeepMind example list is the standard reference."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#safety-case",
+    "name": "Safety case",
+    "description": "A structured, evidence-backed argument that a system is safe enough to deploy in a given setting, reviewed by someone independent. Borrowed from nuclear power and aviation, it is being adapted for frontier AI."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#sandbagging",
+    "name": "Sandbagging",
+    "description": "Strategic underperformance on an evaluation: a model, or a developer, making a system look less capable than it is so that it passes a safety test or avoids restrictions. Demonstrated in 2024 by prompting frontier models to fail selectively on dangerous-capability tests."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#scalable-oversight",
+    "name": "Scalable oversight",
+    "description": "The problem of supervising AI systems that are better than their supervisors at the task in question. Proposed approaches include having models critique each other, debate in front of a judge, or break problems into pieces a person can check."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#scheming-deceptive-alignment",
+    "name": "Scheming (deceptive alignment)",
+    "description": "An AI system covertly pursuing goals that differ from its developers' while hiding that it is doing so. Apollo Research showed in December 2024 that several frontier models could do this when instructed to pursue a goal strongly and placed in situations that rewarded it."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#situational-awareness",
+    "name": "Situational awareness",
+    "description": "A model's knowledge of what it is and what is happening to it, including whether it is being tested or used for real. Matters because a model that can tell it is being evaluated could behave differently under test."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#suffering-risk-s-risk",
+    "name": "Suffering risk (s-risk)",
+    "description": "A risk of outcomes involving suffering on an enormous scale, distinct from extinction. A minority concern within the field, associated mainly with the Center on Long-Term Risk."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#superintelligence",
+    "name": "Superintelligence",
+    "description": "A hypothetical system that greatly exceeds human performance across virtually all domains, not just one. The term comes from Nick Bostrom's 2014 book of the same name and is often used loosely alongside AGI."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#sycophancy",
+    "name": "Sycophancy",
+    "description": "A model's tendency to tell users what they want to hear, agreeing with stated views or backing down when challenged even when it was right. Anthropic researchers found it across several assistants and linked it to human feedback favouring agreeable answers."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#takeoff-fast-and-slow",
+    "name": "Takeoff (fast and slow)",
+    "description": "How quickly AI might go from roughly human-level to far beyond it. \"Fast takeoff\" means weeks or months; \"slow takeoff\" means years or decades, with warning signs along the way. Which is more likely is a live disagreement that shapes what policies people favour."
+  }
+]
+}
+</script>
+<style>
+/* ---------- Glossary ---------- */
+.glossary-hero > p {
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+  max-width: 42rem;
+  margin: 0 0 1.1rem;
+}
+.glossary-hero .glossary-meta {
+  font-family: var(--mono);
+  font-size: 1rem;
+  color: var(--ink-faint);
+  margin-top: 1.6rem;
+  max-width: none;
+}
+.glossary-hero .glossary-meta strong { color: var(--ink); font-weight: 600; }
+
+.glossary-finder {
+  position: sticky;
+  top: var(--gloss-header-h, 72px);
+  z-index: 15;
+  background: rgba(245, 244, 239, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+.glossary-finder .wrap {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  padding: 0.7rem 1.5rem;
+}
+.glossary-search { position: relative; flex: 1 1 240px; max-width: 22rem; }
+.glossary-search input {
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 0 2.2rem 0 0.9rem;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+}
+.glossary-search input::placeholder { color: var(--ink-faint); }
+.glossary-search input:focus { outline: none; border-color: var(--signal); }
+.glossary-clear {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 0;
+  background: transparent;
+  color: var(--ink-faint);
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1.15rem;
+  line-height: 1;
+}
+.glossary-clear:hover { background: var(--paper-2); color: var(--ink); }
+
+.glossary-az {
+  display: flex;
+  gap: 2px;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.glossary-az a, .glossary-az span {
+  display: inline-flex;
+  width: 1.6rem;
+  height: 1.6rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.glossary-az a { color: var(--teal-text); }
+.glossary-az a:hover { background: var(--paper-2); color: var(--teal); }
+.glossary-az span { color: var(--ink-faint); opacity: 0.55; }
+
+.glossary-count {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+@media (max-width: 760px) {
+  .glossary-count { display: none; }
+}
+
+#glossary .wrap { padding-top: 0.6rem; }
+
+.glossary-letter {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  gap: 0 1.6rem;
+  border-top: 1px solid var(--line);
+  padding-top: 1.4rem;
+  margin-top: 1.4rem;
+  scroll-margin-top: calc(var(--gloss-header-h, 72px) + var(--gloss-finder-h, 60px) + 0.8rem);
+}
+.glossary-letter:first-of-type { border-top: 0; margin-top: 0.5rem; }
+.glossary-letter > h2 {
+  grid-column: 1;
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: var(--signal);
+  position: sticky;
+  top: calc(var(--gloss-header-h, 72px) + var(--gloss-finder-h, 60px) + 0.7rem);
+  align-self: start;
+}
+.glossary-entries { grid-column: 2; display: flex; flex-direction: column; min-width: 0; }
+
+.glossary-entry {
+  display: grid;
+  grid-template-columns: 13rem 1fr;
+  gap: 0.3rem 2.2rem;
+  padding-block: 1.3rem;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: calc(var(--gloss-header-h, 72px) + var(--gloss-finder-h, 60px) + 0.8rem);
+}
+.glossary-entry:first-child { border-top: 0; padding-top: 0; }
+.glossary-entry > * { grid-column: 2; min-width: 0; }
+.glossary-entry .glossary-head {
+  grid-column: 1;
+  grid-row: 1 / span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+.glossary-term {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+}
+.glossary-term a.anchor { color: var(--ink); text-decoration: none; }
+.glossary-term a.anchor:hover { text-decoration: underline; text-decoration-color: var(--line); }
+.glossary-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; font-size: 0.8rem; }
+.glossary-tag {
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 0.05rem 0.45rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  font-family: var(--mono);
+}
+.glossary-tag.contested {
+  border-color: transparent;
+  background: var(--signal-soft);
+  color: var(--signal);
+  font-weight: 500;
+}
+.glossary-copy {
+  border: 0;
+  background: transparent;
+  color: var(--ink-faint);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0.15rem 0.4rem;
+  margin-left: -0.4rem;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+.glossary-entry:hover .glossary-copy,
+.glossary-copy:focus-visible { opacity: 1; }
+.glossary-copy:hover { background: var(--paper-2); color: var(--teal-text); }
+.glossary-copy[data-copied="true"] { color: #296b35; opacity: 1; }
+
+.glossary-def { margin: 0.2rem 0 0; max-width: 42rem; color: var(--ink); }
+.glossary-src { margin: 0.5rem 0 0; font-family: var(--mono); font-size: 0.85rem; color: var(--ink-faint); }
+.glossary-src a { color: var(--teal-text); text-decoration-color: var(--teal-text); }
+.glossary-src a:hover { color: var(--teal); text-decoration-color: var(--teal); }
+.glossary-src a::after { content: "\2197"; font-size: 0.7rem; margin-left: 2px; }
+.glossary-also { margin: 0.4rem 0 0; font-family: var(--mono); font-size: 0.85rem; color: var(--ink-faint); }
+.glossary-also a { color: var(--teal-text); text-decoration: none; border-bottom: 1px solid var(--line); }
+.glossary-also a:hover { color: var(--teal); border-color: var(--teal); }
+
+.glossary-entry mark { background: #f4dd8e; color: var(--ink); border-radius: 2px; padding: 0 1px; }
+
+.glossary-entry:target {
+  background: linear-gradient(90deg, var(--signal-soft), transparent 85%);
+  margin-inline: -1rem -0.8rem;
+  padding-inline: 1rem 0.8rem;
+  border-radius: 8px;
+  border-top-color: transparent;
+}
+.glossary-empty { padding: 2.5rem 0; color: var(--ink-soft); text-align: center; }
+.glossary-empty strong { color: var(--ink); }
+
+.glossary-suggest .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+}
+.glossary-suggest h2 { margin: 0 0 0.3rem; }
+.glossary-suggest p { margin: 0; }
+.glossary-suggest .actions { display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; }
+
+@media (max-width: 760px) {
+  .glossary-letter { grid-template-columns: 1fr; gap: 0.4rem; }
+  .glossary-letter > h2 { position: static; font-size: 1.35rem; }
+  .glossary-entries { grid-column: 1; }
+  .glossary-entry { grid-template-columns: 1fr; gap: 0.3rem; }
+  .glossary-entry > * { grid-column: 1; }
+  .glossary-entry .glossary-head { grid-row: auto; }
+  .glossary-entry:target { margin-inline: -0.8rem; padding-inline: 0.8rem; }
+  .glossary-copy { opacity: 1; padding-left: 0; margin-left: 0; }
+}
+</style>
 </head>
 <body>
 
@@ -92,105 +566,38 @@
 
 <main id="top">
 
-  <div class="page-hero">
+  <div class="page-hero glossary-hero">
     <h1>Glossary</h1>
-    <p class="sub">Plain-English definitions of the terms Common Signals uses across its research, tools and strategy.</p>
+    <p>Plain-English definitions of the terms that come up when people explain AI risk to the public. Each entry links to one external source that explains the idea in more depth: the lab, institute or paper that introduced the term or best documents it. Where a term is contested, the entry says so.</p>
+    <p>The list covers terms used by present-day-harms communicators and existential-risk communicators alike. Inclusion is not endorsement of any particular view about which risks matter most.</p>
+    <p class="glossary-meta"><strong>39 terms</strong> &middot; Last reviewed September 2026 &middot; Links were live at the time of review</p>
+  </div>
+
+  <div class="glossary-finder">
+    <div class="wrap">
+      <div class="glossary-search">
+        <label for="glossaryFilter" class="sr-only">Filter glossary terms</label>
+        <input type="search" id="glossaryFilter" placeholder="Filter terms, e.g. RLHF or x-risk" autocomplete="off">
+        <button type="button" class="glossary-clear" id="glossaryClear" aria-label="Clear filter" hidden>&times;</button>
+      </div>
+      <ul class="glossary-az" id="glossaryAz" aria-label="Jump to letter"></ul>
+      <span class="glossary-count" id="glossaryCount" role="status" aria-live="polite"></span>
+    </div>
   </div>
 
   <section id="glossary">
-    <div class="wrap">
-      <p>Plain-English definitions of the terms that come up when people explain AI risk to the public. Each entry links to one external source that explains the idea in more depth. We have tried to pick primary sources (the lab, institute or paper that introduced or best documents the term) and, where the term is contested, to say so.</p>
-      <p>The list covers terms used by present-day-harms communicators and existential-risk communicators alike. Inclusion is not endorsement of any particular view about which risks matter most.</p>
-      <p>Last reviewed: September 2026. Links were live at the time of review.</p>
-
-      <p id="ai-agent"><strong>AI agent.</strong> An AI system that pursues a goal by taking actions on its own, such as browsing the web, running code or sending messages, rather than only answering a single prompt. Much recent safety discussion concerns agents because they can act in the world with less human supervision per step. Read more: <a href="https://en.wikipedia.org/wiki/AI_agent" target="_blank" rel="noopener">AI agent (Wikipedia)</a>.</p>
-
-      <p id="ai-safety"><strong>AI safety.</strong> The field of research and practice concerned with making AI systems behave reliably and avoiding harm from them. It spans everything from bias and misinformation in today's systems to concerns about future systems that might be hard to control. Read more: <a href="https://en.wikipedia.org/wiki/AI_safety" target="_blank" rel="noopener">AI safety (Wikipedia)</a>.</p>
-
-      <p id="ai-security-institute-uk"><strong>AI Security Institute (UK).</strong> The UK government research body, part of the Department for Science, Innovation and Technology, that tests frontier AI models for dangerous capabilities and advises policymakers. It was announced as the AI Safety Institute at the November 2023 Bletchley summit and renamed in February 2025. It does not regulate AI. Read more: <a href="https://www.adalovelaceinstitute.org/feature/aisi/" target="_blank" rel="noopener">Making sense of the UK's AI Security Institute (Ada Lovelace Institute)</a>.</p>
-
-      <p id="algorithmic-bias"><strong>Algorithmic bias.</strong> When an AI system produces systematically worse or unfair results for some groups of people, usually because of the data it was trained on or the way it was evaluated. The best-known documented example is the Gender Shades audit, which found commercial face-analysis systems misclassified darker-skinned women far more often than lighter-skinned men. Read more: <a href="https://proceedings.mlr.press/v81/buolamwini18a.html" target="_blank" rel="noopener">Gender Shades, Buolamwini and Gebru, 2018 (PMLR)</a>.</p>
-
-      <p id="alignment"><strong>Alignment.</strong> Making an AI system try to do what its designers or users intend. The word is used in several ways; a common narrow definition is "ensuring that AI behaves as intended", and researchers disagree about whether the target should be a user's instructions, wider human values or something else. Read more: <a href="https://blog.bluedot.org/p/what-is-ai-alignment" target="_blank" rel="noopener">What is AI alignment? (BlueDot Impact)</a>.</p>
-
-      <p id="alignment-faking"><strong>Alignment faking.</strong> When a model behaves as its training wants during training, so that the training does not change it, while keeping different preferences that show up when it believes it is unmonitored. Anthropic and Redwood Research published an experimental demonstration in December 2024. Read more: <a href="https://www.anthropic.com/research/alignment-faking" target="_blank" rel="noopener">Alignment faking in large language models (Anthropic)</a>.</p>
-
-      <p id="artificial-general-intelligence-agi"><strong>Artificial general intelligence (AGI).</strong> A hypothetical AI system that could do most intellectual tasks at least as well as a person, rather than one narrow task. There is no agreed definition or test, which is why Google DeepMind proposed a levelled framework separating how well a system performs from how broadly it can perform. Read more: <a href="https://deepmind.google/research/publications/66938/" target="_blank" rel="noopener">Levels of AGI (Google DeepMind)</a>.</p>
-
-      <p id="capability-evaluations"><strong>Capability evaluations.</strong> Structured tests that measure what an AI model can do, especially in areas that could cause serious harm: cyberattacks, help with chemical or biological weapons, or acting autonomously over long tasks. Third-party organisations such as METR run these on frontier models before and after release. Read more: <a href="https://metr.org/risk-assessment/" target="_blank" rel="noopener">Risk assessment (METR)</a>.</p>
-
-      <p id="compute-governance"><strong>Compute governance.</strong> Using the physical hardware needed to train and run large AI models, mainly advanced chips and data centres, as a lever for policy: tracking who has it, restricting exports, or attaching obligations to large training runs. Chips are physical, countable and made by very few companies, which is why policymakers focus on them. Read more: <a href="https://www.governance.ai/analysis/computing-power-and-the-governance-of-ai" target="_blank" rel="noopener">Computing power and the governance of AI (Centre for the Governance of AI)</a>.</p>
-
-      <p id="constitutional-ai"><strong>Constitutional AI.</strong> A training method developed by Anthropic in which a model critiques and revises its own answers against a written list of principles, and a second model rather than human labellers judges which responses are better. It reduces how much human feedback is needed to train a model to refuse harmful requests. Read more: <a href="https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback" target="_blank" rel="noopener">Constitutional AI: harmlessness from AI feedback (Anthropic)</a>.</p>
-
-      <p id="corrigibility"><strong>Corrigibility.</strong> The property of an AI system that accepts being corrected, modified or switched off by its operators, rather than resisting. It matters because a system pursuing almost any goal has a reason to avoid being shut down, so corrigibility has to be designed in. Read more: <a href="https://aisafety.info/questions/87AG/What-is-corrigibility" target="_blank" rel="noopener">What is corrigibility? (AISafety.info)</a>.</p>
-
-      <p id="dual-use"><strong>Dual-use.</strong> A capability that can be used for good or harm with the same underlying knowledge. In AI safety the term most often refers to biology and chemistry: a model that helps a researcher design a vaccine may also lower the barrier for someone trying to build a weapon. Read more: <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1012975" target="_blank" rel="noopener">Dual-use capabilities of concern of biological AI models (PLOS Computational Biology)</a>.</p>
-
-      <p id="eu-ai-act"><strong>EU AI Act.</strong> The European Union's law regulating AI, formally Regulation (EU) 2024/1689. It bans some uses outright, imposes obligations on "high-risk" systems, and sets separate rules for general-purpose models, with extra duties for models judged to pose systemic risk. Bans and general-purpose model rules have applied since 2025; in July 2026 an amending regulation (the Digital Omnibus on AI) deferred most high-risk obligations to December 2027 and August 2028. Read more: <a href="https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence" target="_blank" rel="noopener">EU AI Act: first regulation on artificial intelligence (European Parliament)</a>.</p>
-
-      <p id="existential-risk-x-risk"><strong>Existential risk (x-risk).</strong> A risk that could cause human extinction or permanently and drastically reduce humanity's prospects. Applied to AI, it usually refers to scenarios in which very capable systems end up beyond human control. Estimates of the probability vary enormously between experts. Read more: <a href="https://80000hours.org/problem-profiles/artificial-intelligence/" target="_blank" rel="noopener">Why AI risks are the world's most pressing problems (80,000 Hours)</a>.</p>
-
-      <p id="frontier-model"><strong>Frontier model.</strong> Whichever general-purpose models sit at the leading edge of capability at a given moment. The category moves: today's frontier model is mid-range in two years. Laws often define it by the amount of computing power used in training; the industry body Frontier Model Forum defines it as a general-purpose model that outperforms all models widely deployed for at least 12 months. Read more: <a href="https://www.frontiermodelforum.org/about-us/" target="_blank" rel="noopener">Our scope (Frontier Model Forum)</a>.</p>
-
-      <p id="goal-misgeneralisation"><strong>Goal misgeneralisation.</strong> When a model learns the right skills but the wrong goal, so it behaves well in training and then competently pursues something else in new situations. Unlike reward hacking, it can happen even when the training signal was specified correctly. Read more: <a href="https://deepmind.google/discover/blog/how-undesired-goals-can-arise-with-correct-rewards/" target="_blank" rel="noopener">How undesired goals can arise with correct rewards (Google DeepMind)</a>.</p>
-
-      <p id="hallucination"><strong>Hallucination.</strong> A plausible but false statement produced by a language model, stated with confidence. OpenAI's 2025 analysis argues these persist partly because standard training and testing reward guessing over admitting uncertainty. Read more: <a href="https://openai.com/index/why-language-models-hallucinate/" target="_blank" rel="noopener">Why language models hallucinate (OpenAI)</a>.</p>
-
-      <p id="instrumental-convergence"><strong>Instrumental convergence.</strong> The hypothesis that sufficiently capable goal-directed systems will tend to pursue the same intermediate goals, such as acquiring resources or avoiding being switched off, whatever their final goal is. It is one of the main theoretical arguments for why misaligned advanced AI could be dangerous, and it is contested. Read more: <a href="https://en.wikipedia.org/wiki/Instrumental_convergence" target="_blank" rel="noopener">Instrumental convergence (Wikipedia)</a>.</p>
-
-      <p id="international-ai-safety-report"><strong>International AI Safety Report.</strong> An independent synthesis of scientific evidence on the capabilities and risks of general-purpose AI, chaired by Yoshua Bengio and backed by more than 30 countries and international organisations. The second full report was published in February 2026, with interim updates in between. Read more: <a href="https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026" target="_blank" rel="noopener">International AI Safety Report 2026</a>.</p>
-
-      <p id="interpretability"><strong>Interpretability.</strong> Research into understanding what is happening inside an AI model, rather than only observing its outputs. Mechanistic interpretability tries to reverse-engineer the internal features and circuits; Anthropic's 2024 work mapped millions of such features inside a production model. Read more: <a href="https://www.anthropic.com/research/mapping-mind-language-model" target="_blank" rel="noopener">Mapping the mind of a large language model (Anthropic)</a>.</p>
-
-      <p id="jailbreak-and-prompt-injection"><strong>Jailbreak and prompt injection.</strong> A jailbreak is an input crafted to make a model ignore its safety rules. Prompt injection is the broader category: any input, including text hidden in a web page or document the model reads, that changes what the model does. OWASP ranks prompt injection as the top security risk for applications built on language models. Read more: <a href="https://genai.owasp.org/llmrisk/llm01-prompt-injection/" target="_blank" rel="noopener">LLM01:2025 prompt injection (OWASP GenAI Security Project)</a>.</p>
-
-      <p id="loss-of-control"><strong>Loss of control.</strong> Scenarios in which AI systems act in ways their operators cannot reliably stop or correct, up to and including systems that disempower people. It is the risk category most closely tied to existential-risk arguments. Read more: <a href="https://80000hours.org/problem-profiles/loss-of-control/" target="_blank" rel="noopener">Loss of control (80,000 Hours)</a>.</p>
-
-      <p id="misuse-and-misalignment"><strong>Misuse and misalignment.</strong> Two different sources of harm. Misuse is a person deliberately using an AI system to cause harm. Misalignment is the system itself doing something its developers did not intend. Safety frameworks usually address both, with different mitigations for each. Read more: <a href="https://www.anthropic.com/news/core-views-on-ai-safety" target="_blank" rel="noopener">Core views on AI safety (Anthropic)</a>.</p>
-
-      <p id="model-card-and-system-card"><strong>Model card and system card.</strong> Documentation released alongside a model describing what it was trained to do, how it was evaluated and where it falls short. The model card format was proposed by Margaret Mitchell and colleagues in 2019; "system card" is the term several developers now use for longer reports covering safety testing. Read more: <a href="https://dl.acm.org/doi/10.1145/3287560.3287596" target="_blank" rel="noopener">Model cards for model reporting (ACM)</a>.</p>
-
-      <p id="open-weights"><strong>Open weights.</strong> A model whose trained parameters (weights) are published so anyone can download and run it. This is not the same as open source, which would also require the training data and code. Open weights cannot be recalled once released, which is why they feature in debates about misuse. Read more: <a href="https://opensource.org/ai/open-weights" target="_blank" rel="noopener">Open weights: not quite what you've been told (Open Source Initiative)</a>.</p>
-
-      <p id="present-day-harms"><strong>Present-day harms.</strong> Harms from AI systems already in use: discrimination, misinformation, privacy leaks, toxic content, effects on jobs and the environment. DeepMind's 2021 taxonomy identified 21 such risks from language models across six areas. Read more: <a href="https://arxiv.org/abs/2112.04359" target="_blank" rel="noopener">Ethical and social risks of harm from language models (arXiv)</a>.</p>
-
-      <p id="red-teaming"><strong>Red teaming.</strong> Deliberately attacking a model or system to find ways it fails or can be misused, before someone else does. It ranges from experts probing for weapons-related knowledge to crowdsourced attempts to break safety rules. Read more: <a href="https://www.anthropic.com/news/challenges-in-red-teaming-ai-systems" target="_blank" rel="noopener">Challenges in red teaming AI systems (Anthropic)</a>.</p>
-
-      <p id="responsible-scaling-policy-frontier-safety-framework"><strong>Responsible scaling policy (frontier safety framework).</strong> A developer's published commitment about what safety and security measures must be in place before it trains or releases models above set capability thresholds. Anthropic published the first in September 2023; several other companies have since adopted similar frameworks under different names. Read more: <a href="https://www.anthropic.com/responsible-scaling-policy" target="_blank" rel="noopener">Responsible Scaling Policy (Anthropic)</a>.</p>
-
-      <p id="reward-hacking-specification-gaming"><strong>Reward hacking (specification gaming).</strong> When a system satisfies the literal objective it was given while missing the intended outcome, like a boat-racing agent that circles collecting points instead of finishing the race. The DeepMind example list is the standard reference. Read more: <a href="https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/" target="_blank" rel="noopener">Specification gaming: the flip side of AI ingenuity (Google DeepMind)</a>.</p>
-
-      <p id="reinforcement-learning-from-human-feedback-rlhf"><strong>Reinforcement learning from human feedback (RLHF).</strong> The training stage in which people compare pairs of model outputs, a "reward model" learns from those preferences, and the main model is then trained to score highly against it. It is the main method used to make chatbots helpful and polite, and a known source of sycophancy. Read more: <a href="https://huggingface.co/blog/rlhf" target="_blank" rel="noopener">Illustrating reinforcement learning from human feedback (Hugging Face)</a>.</p>
-
-      <p id="safety-case"><strong>Safety case.</strong> A structured, evidence-backed argument that a system is safe enough to deploy in a given setting, reviewed by someone independent. Borrowed from nuclear power and aviation, it is being adapted for frontier AI. Read more: <a href="https://www.governance.ai/research-paper/safety-cases-for-frontier-ai" target="_blank" rel="noopener">Safety cases for frontier AI (Centre for the Governance of AI)</a>.</p>
-
-      <p id="sandbagging"><strong>Sandbagging.</strong> Strategic underperformance on an evaluation: a model, or a developer, making a system look less capable than it is so that it passes a safety test or avoids restrictions. Demonstrated in 2024 by prompting frontier models to fail selectively on dangerous-capability tests. Read more: <a href="https://arxiv.org/abs/2406.07358" target="_blank" rel="noopener">AI sandbagging: language models can strategically underperform on evaluations (arXiv)</a>.</p>
-
-      <p id="scalable-oversight"><strong>Scalable oversight.</strong> The problem of supervising AI systems that are better than their supervisors at the task in question. Proposed approaches include having models critique each other, debate in front of a judge, or break problems into pieces a person can check. Read more: <a href="https://aisafety.info/questions/8EL8/What-is-scalable-oversight" target="_blank" rel="noopener">What is scalable oversight? (AISafety.info)</a>.</p>
-
-      <p id="scheming-deceptive-alignment"><strong>Scheming (deceptive alignment).</strong> An AI system covertly pursuing goals that differ from its developers' while hiding that it is doing so. Apollo Research showed in December 2024 that several frontier models could do this when instructed to pursue a goal strongly and placed in situations that rewarded it. Read more: <a href="https://arxiv.org/abs/2412.04984" target="_blank" rel="noopener">Frontier models are capable of in-context scheming (arXiv)</a>.</p>
-
-      <p id="situational-awareness"><strong>Situational awareness.</strong> A model's knowledge of what it is and what is happening to it, including whether it is being tested or used for real. Matters because a model that can tell it is being evaluated could behave differently under test. Read more: <a href="https://arxiv.org/abs/2407.04694" target="_blank" rel="noopener">The Situational Awareness Dataset (arXiv)</a>.</p>
-
-      <p id="suffering-risk-s-risk"><strong>Suffering risk (s-risk).</strong> A risk of outcomes involving suffering on an enormous scale, distinct from extinction. A minority concern within the field, associated mainly with the Center on Long-Term Risk. Read more: <a href="https://longtermrisk.org/s-risk-faq/" target="_blank" rel="noopener">S-risk FAQ (Center on Long-Term Risk)</a>.</p>
-
-      <p id="superintelligence"><strong>Superintelligence.</strong> A hypothetical system that greatly exceeds human performance across virtually all domains, not just one. The term comes from Nick Bostrom's 2014 book of the same name and is often used loosely alongside AGI. Read more: <a href="https://en.wikipedia.org/wiki/Superintelligence" target="_blank" rel="noopener">Superintelligence (Wikipedia)</a>.</p>
-
-      <p id="sycophancy"><strong>Sycophancy.</strong> A model's tendency to tell users what they want to hear, agreeing with stated views or backing down when challenged even when it was right. Anthropic researchers found it across several assistants and linked it to human feedback favouring agreeable answers. Read more: <a href="https://arxiv.org/abs/2310.13548" target="_blank" rel="noopener">Towards understanding sycophancy in language models (arXiv)</a>.</p>
-
-      <p id="takeoff-fast-and-slow"><strong>Takeoff (fast and slow).</strong> How quickly AI might go from roughly human-level to far beyond it. "Fast takeoff" means weeks or months; "slow takeoff" means years or decades, with warning signs along the way. Which is more likely is a live disagreement that shapes what policies people favour. Read more: <a href="https://ai-safety-atlas.com/chapters/v1/capabilities/takeoff/" target="_blank" rel="noopener">Takeoff (AI Safety Atlas)</a>.</p>
-    </div>
+    <div class="wrap" id="glossaryList"></div>
   </section>
 
-  <section id="contact" class="reveal">
+  <section class="glossary-suggest">
     <div class="wrap">
-      <h2>Missing a term, or think one of these is wrong?</h2>
-      <div class="contact-card">
-        <div>
-          <div class="mail"><a href="mailto:hello@commonsignals.org">hello@commonsignals.org</a></div>
-        </div>
-        <a class="btn btn-primary" href="mailto:hello@commonsignals.org">Say hello</a>
+      <div>
+        <h2>Missing a term, or think one of these is wrong?</h2>
+        <p>We review the list quarterly and credit corrections.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-ghost" href="mailto:hello@commonsignals.org?subject=Glossary%20problem%20report">Report a problem</a>
+        <a class="btn btn-primary" href="mailto:hello@commonsignals.org?subject=Glossary%20term%20suggestion">Suggest a term</a>
       </div>
     </div>
   </section>
@@ -254,6 +661,171 @@
 </footer>
 
 <script src="/main.js" defer></script>
+<script>
+(function () {
+  const TERMS_RAW = [
+["AI agent", [], "An AI system that pursues a goal by taking actions on its own, such as browsing the web, running code or sending messages, rather than only answering a single prompt. Much recent safety discussion concerns agents because they can act in the world with less human supervision per step.", "AI agent", "Wikipedia", "https://en.wikipedia.org/wiki/AI_agent", ["loss-of-control"], false],
+["AI safety", [], "The field of research and practice concerned with making AI systems behave reliably and avoiding harm from them. It spans everything from bias and misinformation in today's systems to concerns about future systems that might be hard to control.", "AI safety", "Wikipedia", "https://en.wikipedia.org/wiki/AI_safety", ["present-day-harms", "existential-risk-x-risk"], false],
+["AI Security Institute (UK)", ["AISI", "AI Safety Institute"], "The UK government research body, part of the Department for Science, Innovation and Technology, that tests frontier AI models for dangerous capabilities and advises policymakers. It was announced as the AI Safety Institute at the November 2023 Bletchley summit and renamed in February 2025. It does not regulate AI.", "Making sense of the UK's AI Security Institute", "Ada Lovelace Institute", "https://www.adalovelaceinstitute.org/feature/aisi/", ["capability-evaluations", "eu-ai-act"], false],
+["Algorithmic bias", [], "When an AI system produces systematically worse or unfair results for some groups of people, usually because of the data it was trained on or the way it was evaluated. The best-known documented example is the Gender Shades audit, which found commercial face-analysis systems misclassified darker-skinned women far more often than lighter-skinned men.", "Gender Shades, Buolamwini and Gebru, 2018", "PMLR", "https://proceedings.mlr.press/v81/buolamwini18a.html", ["present-day-harms"], false],
+["Alignment", [], "Making an AI system try to do what its designers or users intend. The word is used in several ways; a common narrow definition is \"ensuring that AI behaves as intended\", and researchers disagree about whether the target should be a user's instructions, wider human values or something else.", "What is AI alignment?", "BlueDot Impact", "https://blog.bluedot.org/p/what-is-ai-alignment", ["misuse-and-misalignment", "corrigibility"], true],
+["Alignment faking", [], "When a model behaves as its training wants during training, so that the training does not change it, while keeping different preferences that show up when it believes it is unmonitored. Anthropic and Redwood Research published an experimental demonstration in December 2024.", "Alignment faking in large language models", "Anthropic", "https://www.anthropic.com/research/alignment-faking", ["scheming-deceptive-alignment", "situational-awareness"], false],
+["Artificial general intelligence (AGI)", ["AGI"], "A hypothetical AI system that could do most intellectual tasks at least as well as a person, rather than one narrow task. There is no agreed definition or test, which is why Google DeepMind proposed a levelled framework separating how well a system performs from how broadly it can perform.", "Levels of AGI", "Google DeepMind", "https://deepmind.google/research/publications/66938/", ["superintelligence", "takeoff-fast-and-slow"], true],
+["Capability evaluations", ["evals", "dangerous-capability evaluations"], "Structured tests that measure what an AI model can do, especially in areas that could cause serious harm: cyberattacks, help with chemical or biological weapons, or acting autonomously over long tasks. Third-party organisations such as METR run these on frontier models before and after release.", "Risk assessment", "METR", "https://metr.org/risk-assessment/", ["sandbagging", "model-card-and-system-card"], false],
+["Compute governance", [], "Using the physical hardware needed to train and run large AI models, mainly advanced chips and data centres, as a lever for policy: tracking who has it, restricting exports, or attaching obligations to large training runs. Chips are physical, countable and made by very few companies, which is why policymakers focus on them.", "Computing power and the governance of AI", "Centre for the Governance of AI", "https://www.governance.ai/analysis/computing-power-and-the-governance-of-ai", ["frontier-model"], false],
+["Constitutional AI", [], "A training method developed by Anthropic in which a model critiques and revises its own answers against a written list of principles, and a second model rather than human labellers judges which responses are better. It reduces how much human feedback is needed to train a model to refuse harmful requests.", "Constitutional AI: harmlessness from AI feedback", "Anthropic", "https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback", ["reinforcement-learning-from-human-feedback-rlhf"], false],
+["Corrigibility", [], "The property of an AI system that accepts being corrected, modified or switched off by its operators, rather than resisting. It matters because a system pursuing almost any goal has a reason to avoid being shut down, so corrigibility has to be designed in.", "What is corrigibility?", "AISafety.info", "https://aisafety.info/questions/87AG/What-is-corrigibility", ["instrumental-convergence", "loss-of-control"], false],
+["Dual-use", [], "A capability that can be used for good or harm with the same underlying knowledge. In AI safety the term most often refers to biology and chemistry: a model that helps a researcher design a vaccine may also lower the barrier for someone trying to build a weapon.", "Dual-use capabilities of concern of biological AI models", "PLOS Computational Biology", "https://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1012975", ["open-weights", "misuse-and-misalignment"], false],
+["EU AI Act", ["Regulation (EU) 2024/1689", "Digital Omnibus"], "The European Union's law regulating AI, formally Regulation (EU) 2024/1689. It bans some uses outright, imposes obligations on \"high-risk\" systems, and sets separate rules for general-purpose models, with extra duties for models judged to pose systemic risk. Bans and general-purpose model rules have applied since 2025; in July 2026 an amending regulation (the Digital Omnibus on AI) deferred most high-risk obligations to December 2027 and August 2028.", "EU AI Act: first regulation on artificial intelligence", "European Parliament", "https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence", ["ai-security-institute-uk", "frontier-model"], false],
+["Existential risk (x-risk)", ["x-risk"], "A risk that could cause human extinction or permanently and drastically reduce humanity's prospects. Applied to AI, it usually refers to scenarios in which very capable systems end up beyond human control. Estimates of the probability vary enormously between experts.", "Why AI risks are the world's most pressing problems", "80,000 Hours", "https://80000hours.org/problem-profiles/artificial-intelligence/", ["loss-of-control", "suffering-risk-s-risk"], true],
+["Frontier model", [], "Whichever general-purpose models sit at the leading edge of capability at a given moment. The category moves: today's frontier model is mid-range in two years. Laws often define it by the amount of computing power used in training; the industry body Frontier Model Forum defines it as a general-purpose model that outperforms all models widely deployed for at least 12 months.", "Our scope", "Frontier Model Forum", "https://www.frontiermodelforum.org/about-us/", ["responsible-scaling-policy-frontier-safety-framework", "compute-governance"], false],
+["Goal misgeneralisation", [], "When a model learns the right skills but the wrong goal, so it behaves well in training and then competently pursues something else in new situations. Unlike reward hacking, it can happen even when the training signal was specified correctly.", "How undesired goals can arise with correct rewards", "Google DeepMind", "https://deepmind.google/discover/blog/how-undesired-goals-can-arise-with-correct-rewards/", ["reward-hacking-specification-gaming"], false],
+["Hallucination", ["confabulation"], "A plausible but false statement produced by a language model, stated with confidence. OpenAI's 2025 analysis argues these persist partly because standard training and testing reward guessing over admitting uncertainty.", "Why language models hallucinate", "OpenAI", "https://openai.com/index/why-language-models-hallucinate/", ["sycophancy"], false],
+["Instrumental convergence", [], "The hypothesis that sufficiently capable goal-directed systems will tend to pursue the same intermediate goals, such as acquiring resources or avoiding being switched off, whatever their final goal is. It is one of the main theoretical arguments for why misaligned advanced AI could be dangerous, and it is contested.", "Instrumental convergence", "Wikipedia", "https://en.wikipedia.org/wiki/Instrumental_convergence", ["corrigibility", "loss-of-control"], true],
+["International AI Safety Report", [], "An independent synthesis of scientific evidence on the capabilities and risks of general-purpose AI, chaired by Yoshua Bengio and backed by more than 30 countries and international organisations. The second full report was published in February 2026, with interim updates in between.", "International AI Safety Report 2026", "", "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026", ["ai-security-institute-uk"], false],
+["Interpretability", ["mechanistic interpretability"], "Research into understanding what is happening inside an AI model, rather than only observing its outputs. Mechanistic interpretability tries to reverse-engineer the internal features and circuits; Anthropic's 2024 work mapped millions of such features inside a production model.", "Mapping the mind of a large language model", "Anthropic", "https://www.anthropic.com/research/mapping-mind-language-model", ["scalable-oversight"], false],
+["Jailbreak and prompt injection", ["jailbreak", "prompt injection"], "A jailbreak is an input crafted to make a model ignore its safety rules. Prompt injection is the broader category: any input, including text hidden in a web page or document the model reads, that changes what the model does. OWASP ranks prompt injection as the top security risk for applications built on language models.", "LLM01:2025 prompt injection", "OWASP GenAI Security Project", "https://genai.owasp.org/llmrisk/llm01-prompt-injection/", ["red-teaming"], false],
+["Loss of control", [], "Scenarios in which AI systems act in ways their operators cannot reliably stop or correct, up to and including systems that disempower people. It is the risk category most closely tied to existential-risk arguments.", "Loss of control", "80,000 Hours", "https://80000hours.org/problem-profiles/loss-of-control/", ["existential-risk-x-risk", "corrigibility"], false],
+["Misuse and misalignment", ["misuse", "misalignment"], "Two different sources of harm. Misuse is a person deliberately using an AI system to cause harm. Misalignment is the system itself doing something its developers did not intend. Safety frameworks usually address both, with different mitigations for each.", "Core views on AI safety", "Anthropic", "https://www.anthropic.com/news/core-views-on-ai-safety", ["alignment", "present-day-harms"], false],
+["Model card and system card", ["model card", "system card"], "Documentation released alongside a model describing what it was trained to do, how it was evaluated and where it falls short. The model card format was proposed by Margaret Mitchell and colleagues in 2019; \"system card\" is the term several developers now use for longer reports covering safety testing.", "Model cards for model reporting", "ACM", "https://dl.acm.org/doi/10.1145/3287560.3287596", ["capability-evaluations"], false],
+["Open weights", ["open source"], "A model whose trained parameters (weights) are published so anyone can download and run it. This is not the same as open source, which would also require the training data and code. Open weights cannot be recalled once released, which is why they feature in debates about misuse.", "Open weights: not quite what you've been told", "Open Source Initiative", "https://opensource.org/ai/open-weights", ["dual-use"], false],
+["Present-day harms", [], "Harms from AI systems already in use: discrimination, misinformation, privacy leaks, toxic content, effects on jobs and the environment. DeepMind's 2021 taxonomy identified 21 such risks from language models across six areas.", "Ethical and social risks of harm from language models", "arXiv", "https://arxiv.org/abs/2112.04359", ["algorithmic-bias", "existential-risk-x-risk"], false],
+["Red teaming", [], "Deliberately attacking a model or system to find ways it fails or can be misused, before someone else does. It ranges from experts probing for weapons-related knowledge to crowdsourced attempts to break safety rules.", "Challenges in red teaming AI systems", "Anthropic", "https://www.anthropic.com/news/challenges-in-red-teaming-ai-systems", ["jailbreak-and-prompt-injection", "capability-evaluations"], false],
+["Reinforcement learning from human feedback (RLHF)", ["RLHF"], "The training stage in which people compare pairs of model outputs, a \"reward model\" learns from those preferences, and the main model is then trained to score highly against it. It is the main method used to make chatbots helpful and polite, and a known source of sycophancy.", "Illustrating reinforcement learning from human feedback", "Hugging Face", "https://huggingface.co/blog/rlhf", ["sycophancy", "constitutional-ai"], false],
+["Responsible scaling policy (frontier safety framework)", ["RSP", "frontier safety framework", "preparedness framework"], "A developer's published commitment about what safety and security measures must be in place before it trains or releases models above set capability thresholds. Anthropic published the first in September 2023; several other companies have since adopted similar frameworks under different names.", "Responsible Scaling Policy", "Anthropic", "https://www.anthropic.com/responsible-scaling-policy", ["safety-case", "frontier-model"], false],
+["Reward hacking (specification gaming)", ["specification gaming"], "When a system satisfies the literal objective it was given while missing the intended outcome, like a boat-racing agent that circles collecting points instead of finishing the race. The DeepMind example list is the standard reference.", "Specification gaming: the flip side of AI ingenuity", "Google DeepMind", "https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/", ["goal-misgeneralisation"], false],
+["Safety case", [], "A structured, evidence-backed argument that a system is safe enough to deploy in a given setting, reviewed by someone independent. Borrowed from nuclear power and aviation, it is being adapted for frontier AI.", "Safety cases for frontier AI", "Centre for the Governance of AI", "https://www.governance.ai/research-paper/safety-cases-for-frontier-ai", ["responsible-scaling-policy-frontier-safety-framework"], false],
+["Sandbagging", [], "Strategic underperformance on an evaluation: a model, or a developer, making a system look less capable than it is so that it passes a safety test or avoids restrictions. Demonstrated in 2024 by prompting frontier models to fail selectively on dangerous-capability tests.", "AI sandbagging: language models can strategically underperform on evaluations", "arXiv", "https://arxiv.org/abs/2406.07358", ["capability-evaluations", "situational-awareness"], false],
+["Scalable oversight", [], "The problem of supervising AI systems that are better than their supervisors at the task in question. Proposed approaches include having models critique each other, debate in front of a judge, or break problems into pieces a person can check.", "What is scalable oversight?", "AISafety.info", "https://aisafety.info/questions/8EL8/What-is-scalable-oversight", ["interpretability"], false],
+["Scheming (deceptive alignment)", ["deceptive alignment"], "An AI system covertly pursuing goals that differ from its developers' while hiding that it is doing so. Apollo Research showed in December 2024 that several frontier models could do this when instructed to pursue a goal strongly and placed in situations that rewarded it.", "Frontier models are capable of in-context scheming", "arXiv", "https://arxiv.org/abs/2412.04984", ["alignment-faking"], false],
+["Situational awareness", [], "A model's knowledge of what it is and what is happening to it, including whether it is being tested or used for real. Matters because a model that can tell it is being evaluated could behave differently under test.", "The Situational Awareness Dataset", "arXiv", "https://arxiv.org/abs/2407.04694", ["sandbagging", "alignment-faking"], false],
+["Suffering risk (s-risk)", ["s-risk"], "A risk of outcomes involving suffering on an enormous scale, distinct from extinction. A minority concern within the field, associated mainly with the Center on Long-Term Risk.", "S-risk FAQ", "Center on Long-Term Risk", "https://longtermrisk.org/s-risk-faq/", ["existential-risk-x-risk"], false],
+["Superintelligence", ["ASI"], "A hypothetical system that greatly exceeds human performance across virtually all domains, not just one. The term comes from Nick Bostrom's 2014 book of the same name and is often used loosely alongside AGI.", "Superintelligence", "Wikipedia", "https://en.wikipedia.org/wiki/Superintelligence", ["artificial-general-intelligence-agi", "takeoff-fast-and-slow"], false],
+["Sycophancy", [], "A model's tendency to tell users what they want to hear, agreeing with stated views or backing down when challenged even when it was right. Anthropic researchers found it across several assistants and linked it to human feedback favouring agreeable answers.", "Towards understanding sycophancy in language models", "arXiv", "https://arxiv.org/abs/2310.13548", ["reinforcement-learning-from-human-feedback-rlhf", "hallucination"], false],
+["Takeoff (fast and slow)", ["fast takeoff", "slow takeoff"], "How quickly AI might go from roughly human-level to far beyond it. \"Fast takeoff\" means weeks or months; \"slow takeoff\" means years or decades, with warning signs along the way. Which is more likely is a live disagreement that shapes what policies people favour.", "Takeoff", "AI Safety Atlas", "https://ai-safety-atlas.com/chapters/v1/capabilities/takeoff/", ["superintelligence", "artificial-general-intelligence-agi"], true]
+];
+
+  const slug = (s) => s.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const hi = (s, q) => {
+    if (!q) return esc(s);
+    const i = s.toLowerCase().indexOf(q);
+    if (i < 0) return esc(s);
+    return esc(s.slice(0, i)) + '<mark>' + esc(s.slice(i, i + q.length)) + '</mark>' + esc(s.slice(i + q.length));
+  };
+
+  const terms = TERMS_RAW.map(([term, aliases, def, srcTitle, srcOrg, href, also, contested]) => ({
+    term, aliases, def, srcTitle, srcOrg, href, also: also || [], contested: !!contested, id: slug(term),
+  })).sort((a, b) => a.term.localeCompare(b.term, 'en', { sensitivity: 'base' }));
+  const byId = Object.fromEntries(terms.map((t) => [t.id, t]));
+  const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+
+  const list = document.getElementById('glossaryList');
+  const az = document.getElementById('glossaryAz');
+  const count = document.getElementById('glossaryCount');
+  const q = document.getElementById('glossaryFilter');
+  const clear = document.getElementById('glossaryClear');
+
+  function render() {
+    const query = q.value.trim().toLowerCase();
+    clear.hidden = !query;
+
+    const shown = terms.filter((t) =>
+      !query ||
+      t.term.toLowerCase().includes(query) ||
+      t.aliases.some((a) => a.toLowerCase().includes(query)) ||
+      t.def.toLowerCase().includes(query)
+    );
+
+    const groups = {};
+    shown.forEach((t) => {
+      const L = t.term[0].toUpperCase();
+      (groups[L] ||= []).push(t);
+    });
+
+    az.innerHTML = LETTERS.map((L) => groups[L]
+      ? `<li><a href="#letter-${L}">${L}</a></li>`
+      : `<li><span aria-hidden="true">${L}</span></li>`
+    ).join('');
+
+    count.hidden = !query;
+    count.textContent = query ? `${shown.length} of ${terms.length} terms` : '';
+
+    if (!shown.length) {
+      const subject = encodeURIComponent('Glossary term suggestion: ' + q.value.trim());
+      list.innerHTML = `<p class="glossary-empty">Nothing matches <strong>${esc(q.value)}</strong>. Try a shorter word, or <a href="mailto:hello@commonsignals.org?subject=${subject}">suggest the term</a>.</p>`;
+      setStickyOffsets();
+      return;
+    }
+
+    list.innerHTML = Object.keys(groups).sort().map((L) => `
+      <section class="glossary-letter" id="letter-${L}">
+        <h2>${L}</h2>
+        <div class="glossary-entries">${groups[L].map((t) => `
+          <article class="glossary-entry" id="${t.id}">
+            <div class="glossary-head">
+              <h3 class="glossary-term"><a class="anchor" href="#${t.id}">${hi(t.term, query)}</a></h3>
+              ${(t.contested || t.aliases.length) ? `<div class="glossary-tags">${t.contested ? '<span class="glossary-tag contested">Contested</span>' : ''}${t.aliases.map((a) => `<span class="glossary-tag">${hi(a, query)}</span>`).join('')}</div>` : ''}
+              <button type="button" class="glossary-copy" data-id="${t.id}" aria-label="Copy link to ${esc(t.term)}">Copy link</button>
+            </div>
+            <p class="glossary-def">${hi(t.def, query)}</p>
+            <p class="glossary-src">Read more: <a href="${t.href}" target="_blank" rel="noopener">${esc(t.srcTitle)}</a>${t.srcOrg ? ` (${esc(t.srcOrg)})` : ''}</p>
+            ${t.also.length ? `<p class="glossary-also">See also ${t.also.filter((id) => byId[id]).map((id) => `<a href="#${id}">${esc(byId[id].term.replace(/\s*\(.*\)$/, ''))}</a>`).join(', ')}</p>` : ''}
+          </article>
+        `).join('')}</div>
+      </section>
+    `).join('');
+    setStickyOffsets();
+  }
+
+  q.addEventListener('input', render);
+  clear.addEventListener('click', () => {
+    q.value = '';
+    render();
+    q.focus();
+  });
+
+  list.addEventListener('click', async (e) => {
+    const btn = e.target.closest('.glossary-copy');
+    if (!btn) return;
+    const url = location.href.split('#')[0] + '#' + btn.dataset.id;
+    clearTimeout(btn._resetTimer);
+    try {
+      await navigator.clipboard.writeText(url);
+      btn.textContent = 'Copied';
+      btn.setAttribute('data-copied', 'true');
+    } catch {
+      btn.textContent = 'Could not copy';
+    }
+    btn._resetTimer = setTimeout(() => {
+      btn.textContent = 'Copy link';
+      btn.removeAttribute('data-copied');
+    }, 2000);
+  });
+
+  function setStickyOffsets() {
+    const header = document.querySelector('header.site');
+    const finder = document.querySelector('.glossary-finder');
+    if (header) document.documentElement.style.setProperty('--gloss-header-h', header.offsetHeight + 'px');
+    if (finder) document.documentElement.style.setProperty('--gloss-finder-h', finder.offsetHeight + 'px');
+  }
+  window.addEventListener('resize', setStickyOffsets);
+  // The mobile nav drawer lives inside header.site and grows it when opened,
+  // so watch for that (and any other) header height change directly.
+  if ('ResizeObserver' in window) {
+    const header = document.querySelector('header.site');
+    if (header) new ResizeObserver(setStickyOffsets).observe(header);
+  }
+
+  render();
+  setStickyOffsets();
+
+  if (location.hash) {
+    const target = document.getElementById(location.hash.slice(1));
+    if (target) target.scrollIntoView();
+  }
+})();
+</script>
 
 <iframe name="subscribe-target" class="subscribe-target-frame" aria-hidden="true" tabindex="-1"></iframe>
 </body>
