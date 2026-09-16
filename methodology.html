@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src="/analytics.js"></script>
+<title>Methodology: how we code comment threads: Common Signals</title>
+<meta name="description" content="How Common Signals acquires, codes and validates comment threads for its published studies: the pipeline, the codebook, the spot-check pass rates, and the limits, including the one study still missing a spot-check." />
+
+<meta property="og:title" content="Methodology: how we code comment threads" />
+<meta property="og:description" content="How Common Signals acquires, codes and validates comment threads for its published studies: the pipeline, the codebook, the spot-check pass rates, and the limits, including the one study still missing a spot-check." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://commonsignals.org/methodology" />
+<meta property="og:site_name" content="Common Signals" />
+<meta property="og:image" content="https://commonsignals.org/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Common Signals: helping AI communicators know which messages and messengers actually work." />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Methodology: how we code comment threads" />
+<meta name="twitter:description" content="How Common Signals acquires, codes and validates comment threads for its published studies: the pipeline, the codebook, the spot-check pass rates, and the limits, including the one study still missing a spot-check." />
+<meta name="twitter:image" content="https://commonsignals.org/og-image.png" />
+
+<link rel="canonical" href="https://commonsignals.org/methodology" />
+<meta name="robots" content="index, follow" />
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Methodology: how we code comment threads",
+  "description": "How Common Signals acquires, codes and validates comment threads for its published studies: the pipeline, the codebook, the spot-check pass rates, and the limits, including the one study still missing a spot-check.",
+  "datePublished": "2026-09-16",
+  "dateModified": "2026-09-16",
+  "url": "https://commonsignals.org/methodology",
+  "author": { "@type": "Organization", "name": "Common Signals", "url": "https://commonsignals.org/" },
+  "publisher": { "@type": "Organization", "name": "Common Signals", "url": "https://commonsignals.org/", "logo": { "@type": "ImageObject", "url": "https://commonsignals.org/og-image.png" } },
+  "isPartOf": { "@type": "WebSite", "name": "Common Signals", "url": "https://commonsignals.org/" }
+}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a href="/" class="wordmark">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#7a1e49"/><path d="M4 20 Q8 12 11 20 T18 20" stroke="#f5f4ef" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M18 20 Q22 8 28 20" stroke="#f5f4ef" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
+      Common Signals
+    </a>
+    <ul class="nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/research">Research</a></li>
+      <li><a href="/tools">Tools</a></li>
+      <li><a href="/training">Training</a></li>
+      <li><a href="/workshops">Workshops</a></li>
+      <li><a href="/updates">Updates</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navDrawer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <a class="nav-cta" href="mailto:hello@commonsignals.org">Get in touch</a>
+  </div>
+  <div class="nav-drawer" id="navDrawer">
+    <ul>
+      <li><a href="/about">About</a></li>
+      <li><a href="/research">Research</a></li>
+      <li><a href="/tools">Tools</a></li>
+      <li><a href="/training">Training</a></li>
+      <li><a href="/workshops">Workshops</a></li>
+      <li><a href="/updates">Updates</a></li>
+      <li><a href="mailto:hello@commonsignals.org">Get in touch</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="article-hero">
+    <p class="article-eyebrow">Last updated: 16 September 2026</p>
+    <div class="tag-row">
+      <span class="tag-pill">Method</span>
+      <span class="tag-pill">Public opinion</span>
+    </div>
+    <h1>Methodology</h1>
+    <p class="article-dek">How we acquire, code and validate the comment threads behind every published study, and where the method is thinnest, including the one study still missing a spot-check.</p>
+    <button type="button" class="share-copy">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M9 17H7a5 5 0 1 1 0-10h2"/>
+        <path d="M15 7h2a5 5 0 1 1 0 10h-2"/>
+        <line x1="8" y1="12" x2="16" y2="12"/>
+      </svg>
+      <span class="share-copy-label" aria-live="polite">Copy link</span>
+    </button>
+  </div>
+
+  <div class="article-shell">
+    <aside class="article-toc" aria-label="Table of contents">
+      <p class="toc-heading">Contents</p>
+      <ul>
+        <li><a href="#what-these-studies-are">What these studies are</a></li>
+        <li><a href="#the-pipeline">The pipeline</a></li>
+        <li><a href="#the-studies-so-far">The studies so far</a></li>
+        <li><a href="#known-limitations">Known limitations</a></li>
+        <li><a href="#data-and-contact">Data and contact</a></li>
+      </ul>
+    </aside>
+
+    <article class="article-body">
+
+      <div class="article-box">
+        <h3>Disclosure</h3>
+        <p>An LLM was used to structure and review this article, with the first and then final edit of the article made by a human.</p>
+      </div>
+
+      <p>This page documents the method behind the Common Signals comment analyses, currently the Soares reel study, the Dwarkesh Cotra episode study, the Amanpour Khlaaf segment study and the METR report before/after study. It exists so that the work can be checked, criticised and replicated. Where the method has weaknesses, they are stated here rather than smoothed over.</p>
+
+      <h2 id="what-these-studies-are">What these studies are, and are not</h2>
+      <p>Each study codes the full comment thread under one piece of AI communication and reports how the message was received: who accepted its central claim, which frames commenters used, how they reacted to the format and messenger, and what emotional register dominated.</p>
+      <p>They are hypothesis generation, not findings about the public. A comment thread is a self-selected sample of one audience under one artefact, ranked by a platform's algorithm. Nothing in these pieces supports a claim about what any population believes. Their output is a set of specific, falsifiable hypotheses for the segmented message testing that Common Signals exists to run.</p>
+      <p>The METR report study is a partial exception to "one artefact": it compares the same Reddit ecosystem's reaction to OpenAI's own account of the incident against its reaction to the independent investigation six weeks later, so it can say something about a shift, not just a snapshot. It is described separately below.</p>
+
+      <h2 id="the-pipeline">The pipeline</h2>
+
+      <h3 id="1-acquisition">1. Acquisition</h3>
+      <p>Comments are retrieved by the most complete route each platform allows: platform APIs called from a logged-in browser session (Instagram), a yt-dlp comment export (YouTube, complete with threading and like counts), or a page capture where nothing better is available. Every study reports the number retrieved against the platform's on-page count and explains the gap.</p>
+      <p>Before anything leaves the collection environment, author identifiers are replaced with salted SHA-256 hashes and the salt is discarded, so the mapping cannot be reversed. @handles inside comment text are replaced with @user. Quotes in the published articles are reproduced verbatim, spelling intact; they are public comments and can be found by searching the platform, but we never publish usernames.</p>
+
+      <h3 id="2-codebook">2. Codebook</h3>
+      <p>Three dimensions are fixed across every study, with identical categories: stance towards the artefact's central claim (agree, disagree, mixed, unclear, na), reaction to the format (praise, mock, condescended, imitates, none), and emotional register (fear, resignation, anger, humour, hope, neutral), plus a small set of 0/1 mention flags.</p>
+      <p>The frame list is drafted fresh for each artefact from a sample of 150 random comments plus the 50 most engaged, merged into 10 to 16 frames, each with a definition and a verbatim example from the thread. The artefact's central claim is stated explicitly, and stance is coded against it; when the artefact argues against a prior narrative, as the Khlaaf interview does, agree means accepting that reframing, and the codebook says so.</p>
+      <p>The frame list is reviewed and approved by a human before any coding starts. Each study's full codebook is published alongside its dataset.</p>
+      <p>The METR report study departs from this in one respect: its frame list (17 frames) was drafted from its own two-thread corpus rather than the standard 150+50 sample from a single artefact, because the study spans nine separate threads across two time periods rather than one comment section. Its stance and format categories still follow the shared scheme.</p>
+
+      <h3 id="3-coding">3. Coding</h3>
+      <p>Coding is done by a large language model (Claude), in parallel batches of roughly 190 comments, each coder reading the full codebook and, for replies, the parent comment's text. This is the method's biggest limitation and it is worth being precise about.</p>
+      <p>It is a single pass by a single model. There is no second coder and therefore no inter-rater reliability statistic. LLM coding has known failure modes: drift from the codebook over a long batch, over-use of residual categories, difficulty with irony and with comments that fit two frames, and a tendency to impose coherence on ambiguous text. We mitigate mechanically (validation that every coded value is from the allowed set and every comment is coded exactly once) and by review: a random 40-comment sample from each study is checked by a human against the codebook, and the agreement rate is published per study. Where a high-engagement comment materially affects engagement-weighted results, its codes are individually reviewed, and any correction is noted. Spot-check agreement has run 37 to 38 out of 40 across the three video-platform studies, which is why percentages are reported as accurate to a few points, never to decimals.</p>
+      <p>The METR report study has not had a spot-check hit rate published or logged. Until one is run, treat its reliability as consistent with the rest of the series in method but unverified in practice.</p>
+      <p>A standing invitation: the codebooks and coded datasets are published, and we would welcome anyone re-coding a sample and telling us where the codes are wrong. That is the fastest way this method improves.</p>
+
+      <h3 id="4-analysis">4. Analysis</h3>
+      <p>Every figure is computed from the merged coded table by published scripts: stance shares on stated bases, engagement-weighted shares, frame distributions, disagreement broken down by frame, emotion by stance, mention flags, engagement concentration, and top comments per frame. Every quote in an article is matched verbatim against the dataset before publication.</p>
+      <p>Two definitional notes, for anyone comparing across studies. First, the stance base: the reel study reported stance out of all comments with any readable content including unclear (1,224), while the later studies report stance out of comments taking a clear position, excluding unclear (618 and 191). The articles state their base wherever a percentage appears, but the bases are not identical across the series and cross-study comparisons should use the underlying datasets. Second, engagement weighting: likes measure salience under a ranking algorithm, not persuasion, and in every thread so far the top ten comments carry half or more of all likes, so weighted figures describe what the algorithm surfaced.</p>
+      <p>The METR report study breaks the second convention: Reddit page captures carried vote counts on only one of its nine threads, so almost all of its figures are shares of comments, not shares of what most readers saw, and engagement-weighted results are not available as a check the way they are for the other three studies.</p>
+
+      <h2 id="the-studies-so-far">The studies so far</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Study</th><th>Platform and route</th><th>Counted on page</th><th>Retrieved</th><th>Coded (with text)</th><th>Clear position</th><th>Spot-check</th></tr></thead>
+          <tbody>
+            <tr><td><a href="/ai-risk-reel-analysis">Soares reel</a>, August 2026</td><td>Instagram, comment API via logged-in session</td><td>1,703</td><td>1,666 (98%)</td><td>1,534</td><td>1,224 incl. unclear</td><td>37/40</td></tr>
+            <tr><td><a href="/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh">Dwarkesh Cotra episode</a>, September 2026</td><td>YouTube, page capture</td><td>1,569</td><td>1,249 (80%)</td><td>1,245</td><td>618 excl. unclear</td><td>37/40</td></tr>
+            <tr><td><a href="/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf">Amanpour Khlaaf segment</a>, September 2026</td><td>YouTube, yt-dlp export</td><td>283</td><td>283 (100%)</td><td>283</td><td>191 excl. unclear</td><td>38/40</td></tr>
+            <tr><td><a href="/openai-and-shut">METR report, Reddit, before/after</a> (31 July and 26 Aug to 3 Sept 2026)</td><td>Reddit, page captures across 9 threads (1 baseline, 8 comparison)</td><td>not published per thread</td><td>694</td><td>692</td><td>not published as a single base; reported as % accepting/rejecting/mixed by period</td><td>not published</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The Dwarkesh study's shortfall is unexpanded reply threads in the page capture, which also lost threading, so that dataset leans towards top-level comments; its article says so. The reel's shortfall is deleted or hidden comments. The METR report study isn't really commensurable with the other three rows: it's nine threads across two time periods rather than one thread under one artefact, most of its threads carry no vote data at all, and its published article doesn't state a single retrieved-per-thread or spot-check figure the way the others do.</p>
+
+      <h2 id="known-limitations">Known limitations, in order of importance</h2>
+      <p>Comment threads are not samples of anyone. Commenters self-select, platforms rank, and the silent majority who watched and moved on are invisible.</p>
+      <p>The coding is single-pass and machine-led. Until a second, independent coding of a full study exists, agreement rates from 40-comment spot-checks are the only reliability evidence, and they are thin. For the METR report study, even that thin evidence doesn't yet exist: no spot-check has been published or logged, and it should be run before that study's findings are treated as equivalent in reliability to the other three.</p>
+      <p>Cross-study comparisons are across different audiences, different platforms and different central claims at once. The series can suggest that framing changes reception; it cannot isolate framing from audience. The METR report study's before/after design is the exception that can say something about change over time within one platform, but it compares one subreddit against eight, not a matched panel, so its exact percentages should be read as directional too.</p>
+      <p>Where an artefact could not be watched directly, its argument was reconstructed from the transcript or from what commenters echoed, and the study says so.</p>
+      <p>The moves recommended in the articles' closing sections are largely consistent with established communication research, including the fear-appeals literature, which finds that threat messaging helps or backfires conditional on perceived efficacy rather than being reliably one or the other. The contribution of these studies is not those principles but the specific, comparable evidence of how AI-risk framings are received, which the field currently lacks.</p>
+
+      <h2 id="data-and-contact">Data and contact</h2>
+      <p>Each study's codebook and coded dataset are published with this page. Errors, re-codings and methodological criticism are actively wanted: <a href="mailto:hello@commonsignals.org">hello@commonsignals.org</a>.</p>
+
+    </article>
+  </div>
+
+  <section id="article-subscribe" class="reveal">
+    <div class="wrap">
+      <h2>Want more analysis like this?</h2>
+      <form class="subscribe-box" action="https://commonsignalsorg.substack.com/api/v1/free" method="POST" target="subscribe-target" novalidate>
+        <div class="subscribe-row">
+          <label for="articleSubscribeEmail" class="sr-only">Email address</label>
+          <input type="email" name="email" id="articleSubscribeEmail" placeholder="Enter your email" required autocomplete="email" />
+          <button type="submit" class="btn btn-primary subscribe-submit">Subscribe <span aria-hidden="true">&#8599;</span></button>
+        </div>
+        <div class="hp-field" aria-hidden="true">
+          <label for="articleSubscribeWebsite">Leave this field blank</label>
+          <input type="text" id="articleSubscribeWebsite" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+        <p class="subscribe-note">Stay up to speed with our research on public understanding of AI. Roughly monthly.</p>
+        <p class="subscribe-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <section id="contact" class="reveal">
+    <div class="wrap">
+      <h2>Have data, a collaborator, or funding to offer?</h2>
+      <div class="contact-card">
+        <div>
+          <div class="mail"><a href="mailto:hello@commonsignals.org">hello@commonsignals.org</a></div>
+        </div>
+        <a class="btn btn-primary" href="mailto:hello@commonsignals.org">Say hello</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-subscribe">
+      <h3>Want to stay up to date?</h3>
+      <form id="subscribeForm" class="subscribe-box" action="https://commonsignalsorg.substack.com/api/v1/free" method="POST" target="subscribe-target" novalidate>
+        <div class="subscribe-row">
+          <label for="subscribeEmail" class="sr-only">Email address</label>
+          <input type="email" name="email" id="subscribeEmail" placeholder="Enter your email" required autocomplete="email" />
+          <button type="submit" class="btn btn-primary subscribe-submit">Subscribe <span aria-hidden="true">&#8599;</span></button>
+        </div>
+        <div class="hp-field" aria-hidden="true">
+          <label for="subscribeWebsite">Leave this field blank</label>
+          <input type="text" id="subscribeWebsite" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+        <p class="subscribe-note">Stay up to speed with our research on public understanding of AI. Roughly monthly.</p>
+        <p class="subscribe-status" id="subscribeStatus" role="status" aria-live="polite"></p>
+      </form>
+      <div class="social-links">
+        <a href="https://www.youtube.com/@commonsignals" target="_blank" rel="noopener" aria-label="Common Signals on YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2.5" y="5" width="19" height="14" rx="4"/>
+            <path d="M10 9 L15.5 12 L10 15 Z" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/commonsignals" target="_blank" rel="noopener" aria-label="Common Signals on LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <text x="12" y="16.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="10.5" fill="currentColor" stroke="none">in</text>
+          </svg>
+        </a>
+        <a href="https://commonsignalsorg.substack.com/" target="_blank" rel="noopener" aria-label="Common Signals on Substack">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <path d="M9 7 L9 17 L12 14.3 L15 17 L15 7 Z" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/about">About</a></li>
+        <li><a href="/research">Research</a></li>
+        <li><a href="/tools">Tools</a></li>
+        <li><a href="/theory-of-change">Theory of change</a></li>
+        <li><a href="/glossary">Glossary</a></li>
+      </ul>
+      <ul>
+        <li><a href="/training">Training</a></li>
+        <li><a href="/workshops">Workshops</a></li>
+        <li><a href="/updates">Updates</a></li>
+      </ul>
+    </nav>
+    <p class="copyright">&copy; 2026 Common Signals &middot; <a href="mailto:hello@commonsignals.org">hello@commonsignals.org</a></p>
+  </div>
+</footer>
+
+<script src="/main.js" defer></script>
+
+<iframe name="subscribe-target" class="subscribe-target-frame" aria-hidden="true" tabindex="-1"></iframe>
+</body>
+</html>
