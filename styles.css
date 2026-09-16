@@ -1089,6 +1089,49 @@ footer.site .copyright a:hover { color: var(--teal); border-color: var(--teal); 
   margin: 0 0 1rem;
 }
 .article-box p:last-child { margin-bottom: 0; }
+
+/* ---------- FAQ ---------- */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-top: 1.8rem;
+}
+.faq-item {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0 1.6rem;
+}
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  padding: 1.2rem 0;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  flex: none;
+  font-family: var(--mono);
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--signal);
+  transition: transform 0.15s ease;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item p {
+  margin: 0 0 1.4rem;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
 .article-box figure { margin: 1.4rem 0 0; }
 
 .placeholder {
