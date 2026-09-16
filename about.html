@@ -147,7 +147,19 @@
   <div class="wrap">
     <div class="foot-subscribe">
       <h3>Want to stay up to date?</h3>
-      <iframe class="subscribe-embed" src="https://commonsignalsorg.substack.com/embed" width="100%" height="460" style="border:1px solid var(--line); background:var(--paper-2);" frameborder="0" scrolling="no" title="Subscribe to Common Signals on Substack"></iframe>
+      <form id="subscribeForm" class="subscribe-box" action="https://commonsignalsorg.substack.com/api/v1/free" method="POST" target="subscribe-target" novalidate>
+        <div class="subscribe-row">
+          <label for="subscribeEmail" class="sr-only">Email address</label>
+          <input type="email" name="email" id="subscribeEmail" placeholder="Enter your email" required autocomplete="email" />
+          <button type="submit" class="btn btn-primary subscribe-submit">Subscribe <span aria-hidden="true">&#8599;</span></button>
+        </div>
+        <div class="hp-field" aria-hidden="true">
+          <label for="subscribeWebsite">Leave this field blank</label>
+          <input type="text" id="subscribeWebsite" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+        <p class="subscribe-note">Stay up to speed with our research on public understanding of AI. Roughly monthly.</p>
+        <p class="subscribe-status" id="subscribeStatus" role="status" aria-live="polite"></p>
+      </form>
       <div class="social-links">
         <a href="https://www.youtube.com/@commonsignals" target="_blank" rel="noopener" aria-label="Common Signals on YouTube">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -189,5 +201,6 @@
 
 <script src="/main.js" defer></script>
 
+<iframe name="subscribe-target" class="subscribe-target-frame" aria-hidden="true" tabindex="-1"></iframe>
 </body>
 </html>

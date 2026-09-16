@@ -528,5 +528,6 @@
   $("dlTsv").onclick = () => { const cols = Object.keys(rows[0]).filter(k => !k.startsWith("_")); download("coded.tsv", [cols.join("\t")].concat(rows.map(r => cols.map(c => String(r[c] ?? "").replace(/\t/g, "\\t").replace(/\n/g, "\\n")).join("\t"))).join("\n")); };
 })();
 </script>
+<iframe name="subscribe-target" class="subscribe-target-frame" aria-hidden="true" tabindex="-1"></iframe>
 </body>
 </html>

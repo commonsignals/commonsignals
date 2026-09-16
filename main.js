@@ -36,6 +36,40 @@ document.querySelectorAll('.nav-links a, .nav-drawer a').forEach((a) => {
   }
 });
 
+// Submits to Substack via a real form POST targeting a hidden iframe, since
+// a scripted fetch() is blocked by CORS and a server-side proxy is blocked
+// by Substack's Cloudflare bot challenge. The response lands in a
+// cross-origin iframe we can't read, so success/error here is optimistic,
+// not confirmed -- Substack's own confirmation email is the real signal.
+document.querySelectorAll('.subscribe-box').forEach((subscribeForm) => {
+  const emailInput = subscribeForm.querySelector('input[type="email"]');
+  const websiteInput = subscribeForm.querySelector('.hp-field input');
+  const statusEl = subscribeForm.querySelector('.subscribe-status');
+  const submitBtn = subscribeForm.querySelector('.subscribe-submit');
+  if (!emailInput || !statusEl || !submitBtn) return;
+
+  subscribeForm.addEventListener('submit', (e) => {
+    statusEl.removeAttribute('data-state');
+
+    if (websiteInput && websiteInput.value) {
+      e.preventDefault();
+      statusEl.textContent = "You're on the list. Thanks!";
+      statusEl.setAttribute('data-state', 'ok');
+      subscribeForm.reset();
+      return;
+    }
+
+    statusEl.textContent = 'Submitting...';
+    submitBtn.disabled = true;
+    setTimeout(() => {
+      statusEl.textContent = 'Thanks! Check your inbox to confirm your subscription.';
+      statusEl.setAttribute('data-state', 'ok');
+      submitBtn.disabled = false;
+      subscribeForm.reset();
+    }, 1200);
+  });
+});
+
 const tocLinks = document.querySelectorAll('.article-toc a');
 if (tocLinks.length && 'IntersectionObserver' in window) {
   const headings = Array.from(tocLinks)

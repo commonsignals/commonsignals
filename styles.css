@@ -675,7 +675,8 @@ blockquote cite {
 .subscribe-status[data-state="ok"] { color: #296b35; }
 .subscribe-status[data-state="error"] { color: var(--signal); }
 .hp-field,
-.sr-only {
+.sr-only,
+.subscribe-target-frame {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -683,6 +684,7 @@ blockquote cite {
   clip: rect(0 0 0 0);
   white-space: nowrap;
 }
+.subscribe-target-frame { border: 0; }
 
 /* ---------- Updates list ---------- */
 .updates-list {
