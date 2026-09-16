@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Common Signals">
+<title>Common Signals</title>
+<rect width="32" height="32" rx="7" fill="#7a1e49"/>
+<path d="M4 20 Q8 12 11 20 T18 20" stroke="#f5f4ef" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M18 20 Q22 8 28 20" stroke="#f5f4ef" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+</svg>
