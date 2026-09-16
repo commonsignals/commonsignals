@@ -1092,16 +1092,13 @@ footer.site .copyright a:hover { color: var(--teal); border-color: var(--teal); 
 
 /* ---------- FAQ ---------- */
 .faq-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
   margin-top: 1.8rem;
 }
 .faq-item {
-  background: var(--paper-2);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 0 1.6rem;
+  border-bottom: 1px solid var(--line);
+}
+.faq-list .faq-item:first-child {
+  border-top: 1px solid var(--line);
 }
 .faq-item summary {
   display: flex;
@@ -1128,7 +1125,7 @@ footer.site .copyright a:hover { color: var(--teal); border-color: var(--teal); 
 }
 .faq-item[open] summary::after { transform: rotate(45deg); }
 .faq-item p {
-  margin: 0 0 1.4rem;
+  margin: 0 0 2.2rem;
   color: var(--ink-soft);
   line-height: 1.7;
 }
