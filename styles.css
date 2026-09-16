@@ -860,6 +860,10 @@ footer.site .foot-subscribe .subscribe-box {
 footer.site nav {
   display: flex;
   gap: 3rem;
+  align-self: flex-start;
+}
+footer.site nav ul {
+  align-content: start;
 }
 footer.site nav ul {
   list-style: none;
