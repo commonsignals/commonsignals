@@ -1090,6 +1090,25 @@ footer.site .copyright a:hover { color: var(--teal); border-color: var(--teal); 
 }
 .article-box p:last-child { margin-bottom: 0; }
 
+.article-disclosure {
+  margin-top: 2.6rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--line);
+}
+.article-disclosure h3 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--ink-faint);
+  margin: 0 0 0.5rem;
+}
+.article-disclosure p {
+  color: var(--ink-faint);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
 /* ---------- FAQ ---------- */
 .faq-list {
   margin-top: 1.8rem;
