@@ -4,10 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <script src="/analytics.js"></script>
-<title>Glossary: Common Signals</title>
+<title>AI Safety Glossary: Common Signals</title>
 <meta name="description" content="Plain-English definitions of the terms Common Signals uses across its research, tools and strategy." />
 
-<meta property="og:title" content="Glossary: Common Signals" />
+<meta property="og:title" content="AI Safety Glossary: Common Signals" />
 <meta property="og:description" content="Plain-English definitions of the terms Common Signals uses across its research, tools and strategy." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://commonsignals.org/glossary" />
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="Common Signals: helping AI communicators know which messages and messengers actually work." />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Glossary: Common Signals" />
+<meta name="twitter:title" content="AI Safety Glossary: Common Signals" />
 <meta name="twitter:description" content="Plain-English definitions of the terms Common Signals uses across its research, tools and strategy." />
 <meta name="twitter:image" content="https://commonsignals.org/og-image.png" />
 
@@ -38,7 +38,7 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Glossary",
+  "name": "AI Safety Glossary",
   "description": "Plain-English definitions of the terms Common Signals uses across its research, tools and strategy.",
   "url": "https://commonsignals.org/glossary",
   "isPartOf": { "@type": "WebSite", "name": "Common Signals", "url": "https://commonsignals.org/" }
@@ -60,7 +60,7 @@
   "@context": "https://schema.org",
   "@type": "DefinedTermSet",
   "@id": "https://commonsignals.org/glossary",
-  "name": "Common Signals glossary",
+  "name": "Common Signals AI Safety Glossary",
   "description": "Plain-English definitions of the terms Common Signals uses across its research, tools and strategy.",
   "url": "https://commonsignals.org/glossary",
   "hasDefinedTerm": [
@@ -567,7 +567,7 @@
 <main id="top">
 
   <div class="page-hero glossary-hero">
-    <h1>Glossary</h1>
+    <h1>AI Safety Glossary</h1>
     <p>Plain-English definitions of the terms that come up when people explain AI risk to the public. Each entry links to one external source that explains the idea in more depth: the lab, institute or paper that introduced the term or best documents it. Where a term is contested, the entry says so.</p>
     <p>The list covers terms used by present-day-harms communicators and existential-risk communicators alike. Inclusion is not endorsement of any particular view about which risks matter most.</p>
     <p class="glossary-meta"><strong>39 terms</strong> &middot; Last reviewed September 2026 &middot; Links were live at the time of review</p>
@@ -596,8 +596,8 @@
         <p>We review the list quarterly and credit corrections.</p>
       </div>
       <div class="actions">
-        <a class="btn btn-ghost" href="mailto:hello@commonsignals.org?subject=Glossary%20problem%20report">Report a problem</a>
-        <a class="btn btn-primary" href="mailto:hello@commonsignals.org?subject=Glossary%20term%20suggestion">Suggest a term</a>
+        <a class="btn btn-ghost" href="mailto:hello@commonsignals.org?subject=AI%20Safety%20Glossary%20problem%20report">Report a problem</a>
+        <a class="btn btn-primary" href="mailto:hello@commonsignals.org?subject=AI%20Safety%20Glossary%20term%20suggestion">Suggest a term</a>
       </div>
     </div>
   </section>
@@ -752,7 +752,7 @@
     count.textContent = query ? `${shown.length} of ${terms.length} terms` : '';
 
     if (!shown.length) {
-      const subject = encodeURIComponent('Glossary term suggestion: ' + q.value.trim());
+      const subject = encodeURIComponent('AI Safety Glossary term suggestion: ' + q.value.trim());
       list.innerHTML = `<p class="glossary-empty">Nothing matches <strong>${esc(q.value)}</strong>. Try a shorter word, or <a href="mailto:hello@commonsignals.org?subject=${subject}">suggest the term</a>.</p>`;
       setStickyOffsets();
       return;
