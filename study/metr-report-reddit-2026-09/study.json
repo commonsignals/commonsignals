@@ -1,0 +1,146 @@
+{
+ "slug": "metr-report-reddit-2026-09",
+ "title": "Reddit reception of the OpenAI and Hugging Face incident, before and after the METR investigation",
+ "series": "agent-swarm reception",
+ "platform": "reddit",
+ "artefact_title": "METR and Redwood Research, independent investigation of the OpenAI Hugging Face incident (26 August 2026); baseline is OpenAI's own account as discussed on r/artificial on 31 July 2026",
+ "artefact_url": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/",
+ "artefact_published": "2026-08-26",
+ "central_claim": "The incident happened broadly as OpenAI and METR describe it, and it matters.",
+ "capture_dates": [
+  "2026-09-03",
+  "2026-09-04"
+ ],
+ "capture_method": "Reddit page-text captures pasted into a workbook (one sheet per thread), parsed by script. Collapsed 'more replies' were not expanded; threading and exact timestamps are lost (dates are relative to capture). Vote counts present on every thread.",
+ "design": "natural experiment: one baseline thread (r/artificial, 31 July) against eight comparison threads across seven subreddits (26 August to 3 September)",
+ "counts": {
+  "on_page": null,
+  "retrieved": 568,
+  "reddit_rows": 550,
+  "x_replies_excluded": 18,
+  "coded": 516,
+  "baseline_coded": 52,
+  "comparison_coded": 464,
+  "clear_position_base": 395,
+  "baseline_clear_position": 41,
+  "comparison_clear_position": 354,
+  "top_level": null,
+  "replies": null,
+  "with_vote_count": 514
+ },
+ "threads": [
+  {
+   "sheet": "ragi",
+   "period": "comparison",
+   "subreddit": "r/agi",
+   "url": "https://www.reddit.com/r/agi/comments/1vzpiba/independent_investigators_not_openai_confirm_a/",
+   "post_score": 510,
+   "post_comments_on_page": 297,
+   "removed_by_filters": true,
+   "retrieved": 84,
+   "with_text": 82
+  },
+  {
+   "sheet": "rartificial",
+   "period": "baseline",
+   "subreddit": "r/artificial",
+   "url": "https://www.reddit.com/r/agi/comments/1vzpiba/independent_investigators_not_openai_confirm_a/",
+   "post_score": 356,
+   "post_comments_on_page": 124,
+   "removed_by_filters": false,
+   "retrieved": 57,
+   "with_text": 52
+  },
+  {
+   "sheet": "rartificualintelligence",
+   "period": "comparison",
+   "subreddit": "r/ArtificialInteligence",
+   "url": "https://www.reddit.com/r/ArtificialInteligence/comments/1w2d7cd/independent_investigators_not_openai_found_the/",
+   "post_score": 170,
+   "post_comments_on_page": 106,
+   "removed_by_filters": true,
+   "retrieved": 58,
+   "with_text": 55
+  },
+  {
+   "sheet": "rsingularity",
+   "period": "comparison",
+   "subreddit": "r/singularity",
+   "url": "https://www.reddit.com/r/singularity/comments/1vzfupt/the_raw_chain_of_thought_message_snippets_openai/",
+   "post_score": 534,
+   "post_comments_on_page": 227,
+   "removed_by_filters": false,
+   "retrieved": 82,
+   "with_text": 78
+  },
+  {
+   "sheet": "rcollapse",
+   "period": "comparison",
+   "subreddit": "r/collapse",
+   "url": "https://www.reddit.com/r/collapse/comments/1w3ie1x/ominous_findings_from_openais_huggingface/",
+   "post_score": 504,
+   "post_comments_on_page": 220,
+   "removed_by_filters": false,
+   "retrieved": 86,
+   "with_text": 81
+  },
+  {
+   "sheet": "rneoliberal",
+   "period": "comparison",
+   "subreddit": "r/neoliberal",
+   "url": "https://www.reddit.com/r/neoliberal/comments/1w0uw6k/report_from_metr_on_their_independent/",
+   "post_score": 128,
+   "post_comments_on_page": 98,
+   "removed_by_filters": false,
+   "retrieved": 52,
+   "with_text": 48
+  },
+  {
+   "sheet": "rslatestarcodex",
+   "period": "comparison",
+   "subreddit": "r/slatestarcodex",
+   "url": "https://www.reddit.com/r/slatestarcodex/comments/1w0eezz/metrs_independent_investigation_of_openai_hugging/",
+   "post_score": 60,
+   "post_comments_on_page": 50,
+   "removed_by_filters": false,
+   "retrieved": 25,
+   "with_text": 25
+  },
+  {
+   "sheet": "ropenai",
+   "period": "comparison",
+   "subreddit": "r/OpenAI",
+   "url": "https://www.reddit.com/r/OpenAI/comments/1w2clq7/independent_investigators_not_openai_found_the/",
+   "post_score": 212,
+   "post_comments_on_page": 47,
+   "removed_by_filters": false,
+   "retrieved": 106,
+   "with_text": 98
+  }
+ ],
+ "spot_check": {
+  "sample": 40,
+  "agreed": 40,
+  "checked_by": "Ben Matthews",
+  "date": "2026-09-17",
+  "note": "Random 40-comment sample checked against the codebook on stance, frame, format reaction and emotion; 40/40 agreed, no corrections."
+ },
+ "coders": "Claude (claude-fable-5-1), three parallel coders of 172 comments each, no parent context (threading lost in capture), previous comment in thread supplied as context",
+ "article_url": "https://commonsignals.org/openai-and-shut",
+ "findings_note_url": null,
+ "version": 1,
+ "changelog": [
+  {
+   "version": 1,
+   "date": "2026-09-17",
+   "note": "Recode of the raw page captures with the series' full five-dimension scheme. Supersedes the coding run behind the published article, which is not on file. Counts differ from the article (516 coded here against 692 reported) because collapsed replies in the captures were not expanded."
+  },
+  {
+   "version": 1,
+   "date": "2026-09-17",
+   "note": "Spot-check recorded: 40/40."
+  }
+ ],
+ "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
+ "notes": "The r/artificial baseline sheet's URL cell in the source workbook was a copy of the r/agi link; the baseline thread's true URL is not on file. The r/OpenAI sheet merges two threads (1w2clq7 and 1vzpfac). 18 replies to METR's X thread were captured alongside and are held in the clean table but excluded from this study. 'other' carries 12% of comments, partly a long r/neoliberal sub-thread about model vendors with no position on the incident."
+}

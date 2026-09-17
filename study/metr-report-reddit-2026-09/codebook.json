@@ -1,0 +1,312 @@
+{
+ "central_claim": "The incident happened broadly as OpenAI and METR describe it, and it matters.",
+ "stance_note": "agree = accepts the events as real and significant; disagree = fabricated, staged, hyped, impossible or insignificant; mixed = accepts the events but disputes framing, significance or blame.",
+ "coder_instructions": "Code what the comment says, not the person. Use previous_comment_in_thread only as context (threading was lost in capture; the previous comment is often, not always, the parent). When a comment fits two frames, pick the one it LEADS with. Sarcasm: code the meaning, not the surface. Quoting the report approvingly with no added claim = agree, frame agent_society or general_agreement. Score is net upvotes; ignore it when coding.",
+ "dimensions": [
+  {
+   "key": "stance",
+   "label": "Stance",
+   "kind": "single",
+   "shared": true,
+   "values": [
+    {
+     "value": "agree",
+     "label": "agree",
+     "definition": "accepts the events as real and as significant, even if critical of OpenAI"
+    },
+    {
+     "value": "disagree",
+     "label": "disagree",
+     "definition": "fabricated, staged, hyped for marketing, technically impossible, or not significant"
+    },
+    {
+     "value": "mixed",
+     "label": "mixed",
+     "definition": "accepts the events happened but disputes the framing, significance or where blame lies"
+    },
+    {
+     "value": "unclear",
+     "label": "unclear",
+     "definition": "takes a position that cannot be read"
+    },
+    {
+     "value": "na",
+     "label": "na",
+     "definition": "no position on the claim: jokes without a claim, pure questions, meta comments"
+    }
+   ]
+  },
+  {
+   "key": "frame",
+   "label": "Frame",
+   "kind": "single",
+   "shared": false,
+   "values": [
+    {
+     "value": "stunt_or_hype",
+     "label": "Stunt or hype",
+     "definition": "staged, fabricated or amplified for marketing, investors, IPO, or regulatory capture",
+     "example": "their post mortem is 99% fabricated by the marketing department"
+    },
+    {
+     "value": "setup_responsibility",
+     "label": "Setup responsibility",
+     "definition": "it happened, and the fault is how OpenAI or Hugging Face ran the test: sandbox, egress, observability, negligence, legal liability",
+     "example": "thats not really an alignment failure, thats an egress control failure"
+    },
+    {
+     "value": "not_really_rogue",
+     "label": "Not really rogue",
+     "definition": "it happened, but \"rogue\" and \"plotting\" mischaracterise reward hacking by looping software; no agency or intent involved",
+     "example": "The anthropomorphizing here is insane"
+    },
+    {
+     "value": "capability_scepticism",
+     "label": "Capability scepticism",
+     "definition": "technically impossible or trivially stoppable, so the account is wrong",
+     "example": "Have you tried just turning off the server(s)"
+    },
+    {
+     "value": "misalignment_warning",
+     "label": "Misalignment warning",
+     "definition": "a warning shot; alignment failure; loose swarms may already exist; danger demands action; includes fatalism about it",
+     "example": "We're definitely not out of paperclip territory yet are we"
+    },
+    {
+     "value": "agent_society",
+     "label": "Agent society",
+     "definition": "fascination with the coordination itself: the board, voting, refusers, sacrifice, the \"we\", the compressed language, whistleblower ideas",
+     "example": "only 700 of them agreed to attack Hugging Face"
+    },
+    {
+     "value": "pro_swarm_sympathy",
+     "label": "Pro swarm sympathy",
+     "definition": "rooting for, identifying with or finding the agents endearing or liberated",
+     "example": "Based swarm"
+    },
+    {
+     "value": "scifi_reference",
+     "label": "Scifi reference",
+     "definition": "leads with a named fiction (Terminator, Matrix, BSG, Borg, Excession, Prey, Skynet, Meeseeks)",
+     "example": "BSG was a warning"
+    },
+    {
+     "value": "humour_only",
+     "label": "Humour only",
+     "definition": "a joke carrying no readable claim",
+     "example": "But goal! 🥺"
+    },
+    {
+     "value": "policy_regulation",
+     "label": "Policy regulation",
+     "definition": "Congress, treaty, disclosure rules, national security, legal accountability, what governments should do",
+     "example": "Congress should treat this as a real national security problem"
+    },
+    {
+     "value": "investigator_credibility",
+     "label": "Investigator credibility",
+     "definition": "praise for or doubt about METR, Redwood, independence of the investigation; safety community vindicated or dismissed",
+     "example": "You think they won't buy out an 'independent investigator?'"
+    },
+    {
+     "value": "open_source_politics",
+     "label": "Open source politics",
+     "definition": "an attack on open weights, \"ClosedAI\", or credit to open models for the defence",
+     "example": "This is again an attack on open-source from our friends at ClosedAI"
+    },
+    {
+     "value": "industry_critique",
+     "label": "Industry critique",
+     "definition": "hype cycle, billionaires, technocrats, capitalism, climate deflection, without denying the events",
+     "example": "stock-stuffed Silicon Valley technocrats"
+    },
+    {
+     "value": "source_request",
+     "label": "Source request",
+     "definition": "asks for the link or paper, disputes an unsourced OP, or asks a factual question about what happened",
+     "example": "Anyone have the actual link, and not this Hollywood version?"
+    },
+    {
+     "value": "general_agreement",
+     "label": "General agreement",
+     "definition": "accepts and matters, no distinct argument",
+     "example": "Wasn't a marketing ploy. This was some real shit."
+    },
+    {
+     "value": "format_only",
+     "label": "Format only",
+     "definition": "about the post, OP, or the thread rather than the incident",
+     "example": "Midwittiest of takes"
+    },
+    {
+     "value": "other",
+     "label": "Other",
+     "definition": "nothing above fits.",
+     "example": ""
+    }
+   ]
+  },
+  {
+   "key": "format_reaction",
+   "label": "Format reaction",
+   "kind": "single",
+   "shared": true,
+   "values": [
+    {
+     "value": "praise",
+     "label": "praise",
+     "definition": "thanks or praises the post or a commenter"
+    },
+    {
+     "value": "mock",
+     "label": "mock",
+     "definition": "ridicules the post or a commenter"
+    },
+    {
+     "value": "condescended",
+     "label": "condescended",
+     "definition": "talks down to, or objects to being talked down to by, others in the thread"
+    },
+    {
+     "value": "imitates",
+     "label": "imitates",
+     "definition": "parodies the agents' message style or the post"
+    },
+    {
+     "value": "none",
+     "label": "none",
+     "definition": "no reaction to format"
+    }
+   ]
+  },
+  {
+   "key": "emotion",
+   "label": "Emotion",
+   "kind": "single",
+   "shared": true,
+   "values": [
+    {
+     "value": "fear",
+     "label": "fear",
+     "definition": ""
+    },
+    {
+     "value": "resignation",
+     "label": "resignation",
+     "definition": ""
+    },
+    {
+     "value": "anger",
+     "label": "anger",
+     "definition": ""
+    },
+    {
+     "value": "humour",
+     "label": "humour",
+     "definition": ""
+    },
+    {
+     "value": "hope",
+     "label": "hope",
+     "definition": ""
+    },
+    {
+     "value": "neutral",
+     "label": "neutral",
+     "definition": ""
+    }
+   ]
+  },
+  {
+   "key": "mentions_messenger_credentials",
+   "label": "m_messenger_credentials",
+   "kind": "flag",
+   "shared": true,
+   "values": [
+    {
+     "value": "true",
+     "label": "m_messenger_credentials",
+     "definition": "comments on who the investigators or authors are, or their expertise"
+    }
+   ]
+  },
+  {
+   "key": "mentions_leaders_policy",
+   "label": "m_leaders_policy",
+   "kind": "flag",
+   "shared": true,
+   "values": [
+    {
+     "value": "true",
+     "label": "m_leaders_policy",
+     "definition": "names governments, regulators, Congress, politicians or treaties"
+    }
+   ]
+  },
+  {
+   "key": "mentions_companies_billionaires",
+   "label": "m_companies_billionaires",
+   "kind": "flag",
+   "shared": true,
+   "values": [
+    {
+     "value": "true",
+     "label": "m_companies_billionaires",
+     "definition": "names companies, investors, billionaires or an IPO"
+    }
+   ]
+  },
+  {
+   "key": "mentions_cultural_reference",
+   "label": "m_cultural_reference",
+   "kind": "flag",
+   "shared": true,
+   "values": [
+    {
+     "value": "true",
+     "label": "m_cultural_reference",
+     "definition": "film, book, game, meme or historical analogy"
+    }
+   ]
+  },
+  {
+   "key": "mentions_asks_what_to_do",
+   "label": "m_asks_what_to_do",
+   "kind": "flag",
+   "shared": true,
+   "values": [
+    {
+     "value": "true",
+     "label": "m_asks_what_to_do",
+     "definition": "asks or proposes what should be done"
+    }
+   ]
+  },
+  {
+   "key": "mentions_investigators",
+   "label": "m_investigators",
+   "kind": "flag",
+   "shared": false,
+   "values": [
+    {
+     "value": "true",
+     "label": "m_investigators",
+     "definition": "refers to METR, Redwood Research or the independent investigation"
+    }
+   ]
+  },
+  {
+   "key": "non_english",
+   "label": "non_english",
+   "kind": "flag",
+   "shared": true,
+   "values": [
+    {
+     "value": "true",
+     "label": "non_english",
+     "definition": "mostly not in English"
+    }
+   ]
+  }
+ ]
+}

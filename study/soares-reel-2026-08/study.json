@@ -1,0 +1,49 @@
+{
+ "slug": "soares-reel-2026-08",
+ "title": "Instagram comments on Nate Soares's reel \"We stop AI. You help?\"",
+ "series": "agent-swarm reception",
+ "platform": "instagram",
+ "artefact_title": "Nate Soares (@nateasoares) - \"We stop AI. You help?\"",
+ "artefact_url": "https://www.instagram.com/reel/DboGRisxC2E/",
+ "artefact_published": "2026-08-04",
+ "central_claim": "AI poses a serious existential danger to humanity, and this is worth taking seriously and acting on.",
+ "capture_dates": [
+  "2026-08-29",
+  "2026-09-17"
+ ],
+ "capture_method": "Page-text capture of the comment section, pasted into a workbook (no like counts included in this method, unlike the original capture). Threading was not captured either; parent_id and depth are present in comments.csv for shape consistency with the other studies in this series but are blank on every row. Second capture; the first (29 August, via a logged-in browser session against Instagram's own comment API, 1,666 of 1,703 comments with like counts) underpins the published article.",
+ "counts": {
+  "on_page_at_second_capture": 2715,
+  "retrieved": 2136,
+  "coded": 2136,
+  "empty_or_stub": 275,
+  "clear_position_base": 1271,
+  "authors": 2084,
+  "likes_available": false
+ },
+ "spot_check": {
+  "sample": 40,
+  "agreed": 40,
+  "checked_by": "Ben Matthews",
+  "date": "2026-09-17",
+  "note": "Random 40-comment sample checked against the codebook on stance, frame, format reaction and emotion; 40/40 agreed, no corrections."
+ },
+ "coders": "Claude (claude-sonnet-5), twelve parallel coders of about 156 comments each",
+ "article_url": "https://commonsignals.org/ai-risk-reel-analysis",
+ "findings_note_url": null,
+ "version": 2,
+ "changelog": [
+  {
+   "version": 1,
+   "date": "2026-08-29",
+   "note": "Logged-in API capture, 1,666 of 1,703 comments, coded with like counts available. Article published from it."
+  },
+  {
+   "version": 2,
+   "date": "2026-09-17",
+   "note": "Page-text recapture (2,136 of 2,715 comments then live; likely under-counts unexpanded reply threads, the same limitation seen in the METR Reddit capture) recoded against an 18-frame list. No like counts available in this capture, so engagement-weighted findings from v1 cannot be reproduced or updated. Supersedes v1 for stance/frame shares only."
+  }
+ ],
+ "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
+ "notes": "Unlike the other three studies in this series, this recode has no engagement (like-count) data at all, so like-weighted findings from the original article stand uncorrected pending a future capture that can reach Instagram's comment API. 'other' and off-topic political tangents carry a meaningful share of comments, consistent with the original note's observation that comment threads run wide of the topic."
+}

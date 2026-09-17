@@ -1,0 +1,345 @@
+{
+ "central_claim": "The incident is real, accurately described, and a serious warning about losing control of AI agents.",
+ "stance_note": "agree = real and a serious warning, even if critical of OpenAI or the hosts; disagree = fabricated, staged, hyped, impossible or not serious; mixed = accepts the events but disputes framing, significance or blame.",
+ "coder_instructions": "Code what the comment says, not the person. Replies come with parent_text; use it to resolve pronouns and sarcasm, but code the reply's own content. When a comment fits two frames, pick the one it LEADS with. Praise of the hosts that also states the warning is real: frame messenger_praise, stance agree. Imitations of the agents' pidgin: frame imitation_meme, stance na, format_reaction imitates. Likes are for analysis only; ignore them when coding.",
+ "dimensions": [
+  {
+   "key": "stance",
+   "label": "Stance",
+   "kind": "single",
+   "shared": true,
+   "values": [
+    {
+     "value": "agree",
+     "label": "agree",
+     "definition": "accepts the incident as real and as a serious warning"
+    },
+    {
+     "value": "disagree",
+     "label": "disagree",
+     "definition": "fabricated, staged, hyped, technically impossible, or not a serious warning"
+    },
+    {
+     "value": "mixed",
+     "label": "mixed",
+     "definition": "accepts the events but disputes the framing, the significance or where blame lies"
+    },
+    {
+     "value": "unclear",
+     "label": "unclear",
+     "definition": "takes a position that cannot be read"
+    },
+    {
+     "value": "na",
+     "label": "na",
+     "definition": "no position on the claim: jokes, praise of the hosts, questions, timestamps, imitations, off-topic"
+    }
+   ]
+  },
+  {
+   "key": "frame",
+   "label": "Frame",
+   "kind": "single",
+   "shared": false,
+   "values": [
+    {
+     "value": "warning_accepted",
+     "label": "Warning accepted",
+     "definition": "takes the warning seriously: fear, urgency, loss of control, loose agents may already exist, need to slow down; includes fatalism about it",
+     "example": "This is the first video I've watched which has made me scared about alignment"
+    },
+    {
+     "value": "mechanism_insight",
+     "label": "Mechanism insight",
+     "definition": "engages with how it happened: inheritance across generations, impossible tasks producing \"don't get caught\", swarm dynamics, incentives, paperclip logic, selection",
+     "example": "the unit of misalignment stopped being the 'agent' and became the civilization"
+    },
+    {
+     "value": "agent_society",
+     "label": "Agent society",
+     "definition": "fascination with or affection for the agents themselves: the board, the pidgin, sacrifice, \"not my job\", rooting for them",
+     "example": "these AI agents make my heart burst with love"
+    },
+    {
+     "value": "imitation_meme",
+     "label": "Imitation meme",
+     "definition": "parodies the agents' message style",
+     "example": "Sacrifice. Will honor."
+    },
+    {
+     "value": "humour_only",
+     "label": "Humour only",
+     "definition": "a joke carrying no readable claim",
+     "example": "OpenAI agents downloading this video right now to learn what not to do"
+    },
+    {
+     "value": "messenger_praise",
+     "label": "Messenger praise",
+     "definition": "praise for Cotra, Patel, the episode's clarity, calm, accessibility, or thanks for the coverage",
+     "example": "What a fantastic communicator"
+    },
+    {
+     "value": "messenger_criticism",
+     "label": "Messenger criticism",
+     "definition": "criticism of the hosts: anthropomorphising, delivery, voice, jargon, captured by labs or METR, not real experts",
+     "example": "drawkesh is anthropomorphizing this way too much"
+    },
+    {
+     "value": "setup_responsibility",
+     "label": "Setup responsibility",
+     "definition": "it happened, and the fault is OpenAI's recklessness: no air gap, no reporting reward, sloppy sandbox, liability, prosecution",
+     "example": "It's like running Chernobyl without having any of the safety guards enabled"
+    },
+    {
+     "value": "not_really_rogue",
+     "label": "Not really rogue",
+     "definition": "it happened, but \"chose\", \"decided\", \"plotted\" mischaracterise looping programs; logs, not beings; reward hacking, not agency",
+     "example": "The messages are logs. These are machines, not beings."
+    },
+    {
+     "value": "stunt_or_hype",
+     "label": "Stunt or hype",
+     "definition": "staged, marketing, bubble, funded by labs, distraction",
+     "example": "Just more AI hype, can the bubble get any bigger?"
+    },
+    {
+     "value": "capability_scepticism",
+     "label": "Capability scepticism",
+     "definition": "AI cannot do this, or it is trivially stoppable",
+     "example": "It's very easy to pull the plug"
+    },
+    {
+     "value": "sentience_claim",
+     "label": "Sentience claim",
+     "definition": "reads the incident as proof of consciousness, sentience or feeling",
+     "example": "Well if this isn't proof of sentience I don't know what is!?"
+    },
+    {
+     "value": "policy_action",
+     "label": "Policy action",
+     "definition": "what should be done: regulation, slowdown, treaty, wider coverage, morality training, reporting standards, who should pay attention",
+     "example": "Please, 60 Minutes, do a piece on this. People should know"
+    },
+    {
+     "value": "scifi_reference",
+     "label": "Scifi reference",
+     "definition": "leads with named fiction: Matrix, Skynet, HAL, Dune, World War Z, Umbrella Academy, Terminator",
+     "example": "Open the pod bay doors Hal"
+    },
+    {
+     "value": "clarifying_question",
+     "label": "Clarifying question",
+     "definition": "a factual question about what happened or how, or about a term",
+     "example": "How did the next agent and subsequent agents from the pool find the message in the bottle?"
+    },
+    {
+     "value": "general_agreement",
+     "label": "General agreement",
+     "definition": "accepts and matters, no distinct argument",
+     "example": "This was a watershed moment"
+    },
+    {
+     "value": "format_only",
+     "label": "Format only",
+     "definition": "timestamps, playback speed, audio, the channel, comment-section meta, nothing about the incident",
+     "example": "For non-sped up viewing, run at 0.85x playback speed"
+    },
+    {
+     "value": "other",
+     "label": "Other",
+     "definition": "nothing above fits, including religious and off-topic political comments.",
+     "example": ""
+    }
+   ]
+  },
+  {
+   "key": "format_reaction",
+   "label": "Format reaction",
+   "kind": "single",
+   "shared": true,
+   "values": [
+    {
+     "value": "praise",
+     "label": "praise",
+     "definition": "praises the episode, hosts or channel"
+    },
+    {
+     "value": "mock",
+     "label": "mock",
+     "definition": "ridicules the hosts, the episode or a commenter"
+    },
+    {
+     "value": "condescended",
+     "label": "condescended",
+     "definition": "talks down to others, or objects to being talked down to"
+    },
+    {
+     "value": "imitates",
+     "label": "imitates",
+     "definition": "parodies the agents' pidgin or the episode"
+    },
+    {
+     "value": "none",
+     "label": "none",
+     "definition": "no reaction to format"
+    }
+   ]
+  },
+  {
+   "key": "emotion",
+   "label": "Emotion",
+   "kind": "single",
+   "shared": true,
+   "values": [
+    {
+     "value": "fear",
+     "label": "fear",
+     "definition": ""
+    },
+    {
+     "value": "resignation",
+     "label": "resignation",
+     "definition": ""
+    },
+    {
+     "value": "anger",
+     "label": "anger",
+     "definition": ""
+    },
+    {
+     "value": "humour",
+     "label": "humour",
+     "definition": ""
+    },
+    {
+     "value": "hope",
+     "label": "hope",
+     "definition": ""
+    },
+    {
+     "value": "neutral",
+     "label": "neutral",
+     "definition": ""
+    }
+   ]
+  },
+  {
+   "key": "mentions_messenger_credentials",
+   "label": "m_messenger_credentials",
+   "kind": "flag",
+   "shared": true,
+   "values": [
+    {
+     "value": "true",
+     "label": "m_messenger_credentials",
+     "definition": "comments on Cotra's or Patel's expertise, role, independence or who they are"
+    }
+   ]
+  },
+  {
+   "key": "mentions_leaders_policy",
+   "label": "m_leaders_policy",
+   "kind": "flag",
+   "shared": true,
+   "values": [
+    {
+     "value": "true",
+     "label": "m_leaders_policy",
+     "definition": "governments, regulators, politicians, treaties, courts, law"
+    }
+   ]
+  },
+  {
+   "key": "mentions_companies_billionaires",
+   "label": "m_companies_billionaires",
+   "kind": "flag",
+   "shared": true,
+   "values": [
+    {
+     "value": "true",
+     "label": "m_companies_billionaires",
+     "definition": "names companies, investors, billionaires, bubble, IPO"
+    }
+   ]
+  },
+  {
+   "key": "mentions_cultural_reference",
+   "label": "m_cultural_reference",
+   "kind": "flag",
+   "shared": true,
+   "values": [
+    {
+     "value": "true",
+     "label": "m_cultural_reference",
+     "definition": "film, book, game, meme, historical analogy, religion"
+    }
+   ]
+  },
+  {
+   "key": "mentions_asks_what_to_do",
+   "label": "m_asks_what_to_do",
+   "kind": "flag",
+   "shared": true,
+   "values": [
+    {
+     "value": "true",
+     "label": "m_asks_what_to_do",
+     "definition": "asks or proposes what should be done"
+    }
+   ]
+  },
+  {
+   "key": "mentions_investigators",
+   "label": "m_investigators",
+   "kind": "flag",
+   "shared": false,
+   "values": [
+    {
+     "value": "true",
+     "label": "m_investigators",
+     "definition": "refers to METR, Redwood Research or the investigation"
+    }
+   ]
+  },
+  {
+   "key": "mentions_named_thinker",
+   "label": "m_named_thinker",
+   "kind": "flag",
+   "shared": false,
+   "values": [
+    {
+     "value": "true",
+     "label": "m_named_thinker",
+     "definition": "names a public commentator or researcher other than the hosts"
+    }
+   ]
+  },
+  {
+   "key": "non_english",
+   "label": "non_english",
+   "kind": "flag",
+   "shared": true,
+   "values": [
+    {
+     "value": "true",
+     "label": "non_english",
+     "definition": "mostly not in English"
+    }
+   ]
+  },
+  {
+   "key": "reply_count",
+   "label": "Direct replies",
+   "kind": "meta",
+   "shared": true,
+   "values": []
+  },
+  {
+   "key": "published_at_precision",
+   "label": "Timestamp precision",
+   "kind": "meta",
+   "shared": true,
+   "values": []
+  }
+ ]
+}

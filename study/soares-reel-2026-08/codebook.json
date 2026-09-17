@@ -1,0 +1,251 @@
+{
+ "central_claim": "AI poses a serious existential danger to humanity, and this is worth taking seriously and acting on.",
+ "stance_note": "agree = accepts AI is a serious existential danger worth acting on; disagree = rejects it as incapable, hype or fearmongering; mixed = accepts part, rejects or reframes part (e.g. blames companies, not AI).",
+ "coder_instructions": "Code what the comment says, not the person. Comments are often written in the video's own simplified register; do not mark unclear just because the grammar is broken. When a comment fits two frames, pick the one it leads with. No like counts were available for this capture; do not infer or estimate them.",
+ "dimensions": [
+  {
+   "key": "stance",
+   "label": "Stance",
+   "kind": "single",
+   "shared": true,
+   "values": [
+    {
+     "value": "agree",
+     "label": "Agree",
+     "definition": "accepts AI is a serious existential danger worth acting on"
+    },
+    {
+     "value": "disagree",
+     "label": "Disagree",
+     "definition": "rejects the claim: not capable, hype, fearmongering"
+    },
+    {
+     "value": "mixed",
+     "label": "Mixed",
+     "definition": "accepts part, rejects or reframes part"
+    },
+    {
+     "value": "na",
+     "label": "Na",
+     "definition": "on topic but no readable position"
+    },
+    {
+     "value": "unclear",
+     "label": "Unclear",
+     "definition": "genuinely cannot be told either way; used sparingly"
+    }
+   ]
+  },
+  {
+   "key": "frame",
+   "label": "Frame",
+   "kind": "single",
+   "shared": false,
+   "values": [
+    {
+     "value": "warning_accepted",
+     "label": "Warning accepted",
+     "definition": "straightforwardly agrees AI is dangerous and this is a real warning"
+    },
+    {
+     "value": "capability_scepticism",
+     "label": "Capability scepticism",
+     "definition": "AI isn't actually that smart or capable; doubts the premise on technical grounds"
+    },
+    {
+     "value": "stunt_or_hype",
+     "label": "Stunt or hype",
+     "definition": "dismisses the video, incident or field as marketing, fearmongering or hype without a specific capability argument"
+    },
+    {
+     "value": "accountability_frame",
+     "label": "Accountability frame",
+     "definition": "the real danger is the people, companies or billionaires controlling AI, not the AI itself"
+    },
+    {
+     "value": "not_really_programmed",
+     "label": "Not really programmed",
+     "definition": "technical pushback that AI is just software or code, not sentient, only does what it's told"
+    },
+    {
+     "value": "imitation_meme",
+     "label": "Imitation meme",
+     "definition": "writes in the video's own simplified caveman register as a joke or homage, no other stated position"
+    },
+    {
+     "value": "format_criticism",
+     "label": "Format criticism",
+     "definition": "criticises the simplified delivery as condescending, dumbed-down or patronising"
+    },
+    {
+     "value": "format_praise",
+     "label": "Format praise",
+     "definition": "praises the simplified delivery as helpful, clear or well-explained"
+    },
+    {
+     "value": "scifi_reference",
+     "label": "Scifi reference",
+     "definition": "leads with a reference to a film, book, game or fictional AI"
+    },
+    {
+     "value": "direct_action",
+     "label": "Direct action",
+     "definition": "calls for direct or physical action against AI or its infrastructure"
+    },
+    {
+     "value": "policy_regulation",
+     "label": "Policy regulation",
+     "definition": "calls for legislative, regulatory or political action"
+    },
+    {
+     "value": "resignation_fatalism",
+     "label": "Resignation fatalism",
+     "definition": "nothing can be done, it's already too late, doomed regardless"
+    },
+    {
+     "value": "near_term_harm",
+     "label": "Near term harm",
+     "definition": "centres a present-day harm (water, energy, jobs) rather than the existential claim"
+    },
+    {
+     "value": "sentience_question",
+     "label": "Sentience question",
+     "definition": "asks or argues about whether AI is conscious, sentient or deserves moral consideration"
+    },
+    {
+     "value": "messenger_credibility",
+     "label": "Messenger credibility",
+     "definition": "comments on Soares, MIRI, the book, or his credibility specifically"
+    },
+    {
+     "value": "general_agreement",
+     "label": "General agreement",
+     "definition": "short agreement or praise with no further elaboration"
+    },
+    {
+     "value": "humour_only",
+     "label": "Humour only",
+     "definition": "a joke, meme or reaction with no other content and no stance-bearing frame"
+    },
+    {
+     "value": "other",
+     "label": "Other",
+     "definition": "doesn't fit any of the above; off-topic tangents"
+    }
+   ]
+  },
+  {
+   "key": "format_reaction",
+   "label": "Format reaction",
+   "kind": "single",
+   "shared": true,
+   "values": [
+    {
+     "value": "none",
+     "label": "None",
+     "definition": "no reaction to the simplified-English format"
+    },
+    {
+     "value": "imitates",
+     "label": "Imitates",
+     "definition": "writes in the same simplified register"
+    },
+    {
+     "value": "mock",
+     "label": "Mock",
+     "definition": "mocks or ridicules the format"
+    },
+    {
+     "value": "condescended",
+     "label": "Condescended",
+     "definition": "treats the format as insulting or patronising"
+    },
+    {
+     "value": "praise",
+     "label": "Praise",
+     "definition": "praises the format as effective or helpful"
+    }
+   ]
+  },
+  {
+   "key": "emotion",
+   "label": "Emotion",
+   "kind": "single",
+   "shared": true,
+   "values": [
+    {
+     "value": "neutral",
+     "label": "Neutral",
+     "definition": ""
+    },
+    {
+     "value": "fear",
+     "label": "Fear",
+     "definition": ""
+    },
+    {
+     "value": "anger",
+     "label": "Anger",
+     "definition": ""
+    },
+    {
+     "value": "resignation",
+     "label": "Resignation",
+     "definition": ""
+    },
+    {
+     "value": "humour",
+     "label": "Humour",
+     "definition": ""
+    },
+    {
+     "value": "hope",
+     "label": "Hope",
+     "definition": ""
+    }
+   ]
+  },
+  {
+   "key": "mentions_messenger_credentials",
+   "label": "Mentions messenger credentials",
+   "kind": "flag",
+   "shared": true
+  },
+  {
+   "key": "mentions_leaders_policy",
+   "label": "Mentions leaders or policy",
+   "kind": "flag",
+   "shared": true
+  },
+  {
+   "key": "mentions_companies_billionaires",
+   "label": "Mentions companies or billionaires",
+   "kind": "flag",
+   "shared": true
+  },
+  {
+   "key": "mentions_cultural_reference",
+   "label": "Mentions cultural reference",
+   "kind": "flag",
+   "shared": true
+  },
+  {
+   "key": "mentions_asks_what_to_do",
+   "label": "Mentions asks what to do",
+   "kind": "flag",
+   "shared": true
+  },
+  {
+   "key": "mentions_near_term_harm",
+   "label": "Mentions near-term harm",
+   "kind": "flag",
+   "shared": false
+  },
+  {
+   "key": "non_english",
+   "label": "Non-English",
+   "kind": "flag",
+   "shared": true
+  }
+ ]
+}

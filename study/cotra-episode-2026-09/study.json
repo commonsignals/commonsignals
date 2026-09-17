@@ -1,0 +1,51 @@
+{
+ "slug": "cotra-episode-2026-09",
+ "title": "YouTube comments on the Dwarkesh Podcast episode with Ajeya Cotra, \"This might be the clearest warning shot we ever get\"",
+ "series": "agent-swarm reception",
+ "platform": "youtube",
+ "artefact_title": "Ajeya Cotra – \"This might be the clearest warning shot we ever get\" (Dwarkesh Podcast)",
+ "artefact_url": "https://www.youtube.com/watch?v=X50zezLFWWI",
+ "artefact_published": "2026-09-01",
+ "central_claim": "The incident is real, accurately described, and a serious warning about losing control of AI agents.",
+ "capture_dates": [
+  "2026-09-17"
+ ],
+ "capture_method": "yt-dlp --write-comments, complete export with threading, like counts and timestamps (approximate for older comments). Second capture; the first (8 September, page capture, 1,249 comments) is not on file.",
+ "counts": {
+  "on_page": 2999,
+  "retrieved": 2999,
+  "coded": 2999,
+  "clear_position_base": 1590,
+  "top_level": 1963,
+  "replies": 1036,
+  "authors": 2074,
+  "total_likes": 13766,
+  "views_at_capture": 1145249,
+  "video_likes_at_capture": 14073
+ },
+ "spot_check": {
+  "sample": 40,
+  "agreed": 40,
+  "checked_by": "Ben Matthews",
+  "date": "2026-09-17",
+  "note": "Random 40-comment sample (with parent text for replies) checked against the codebook on stance, frame, format reaction and emotion; 40/40 agreed, no corrections."
+ },
+ "coders": "Claude (claude-fable-5-1), sixteen parallel coders of about 188 comments each, parent comment text supplied for replies",
+ "article_url": "https://commonsignals.org/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh",
+ "findings_note_url": null,
+ "version": 2,
+ "changelog": [
+  {
+   "version": 1,
+   "date": "2026-09-08",
+   "note": "Page capture, 1,249 of 1,569 comments, coded with an earlier frame list; article published from it. Files not archived."
+  },
+  {
+   "version": 2,
+   "date": "2026-09-17",
+   "note": "Complete yt-dlp capture (2,999 comments) recoded against a redrafted 18-frame list with the series' full five-dimension scheme. Supersedes v1."
+  }
+ ],
+ "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
+ "notes": "'other' carries 13% of comments, mostly long off-topic reply chains (European politics, transhumanism and religion, commenter-on-commenter arguments) with no position on the incident. Frame-level comparison with v1 is directional only; stance, format reaction and emotion use the fixed series categories and are comparable."
+}
