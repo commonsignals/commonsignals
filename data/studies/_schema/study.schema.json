@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://commonsignals.org/data/studies/_schema/study.schema.json",
+  "title": "Common Signals study metadata",
+  "description": "The study.json contract described in /data/studies/README.md. Required fields are listed here; studies may and do carry additional fields beyond these, which this schema deliberately does not forbid.",
+  "type": "object",
+  "required": [
+    "slug", "title", "series", "platform",
+    "artefact_title", "artefact_url", "artefact_published",
+    "central_claim", "capture_dates", "capture_method",
+    "counts", "spot_check", "coders",
+    "article_url", "findings_note_url",
+    "version", "changelog", "licence", "notes"
+  ],
+  "properties": {
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "title": { "type": "string" },
+    "series": { "type": "string" },
+    "platform": { "type": "string" },
+    "artefact_title": { "type": "string" },
+    "artefact_url": { "type": "string", "format": "uri" },
+    "artefact_published": { "type": "string" },
+    "central_claim": { "type": "string" },
+    "capture_dates": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "capture_method": { "type": "string" },
+    "counts": {
+      "type": "object",
+      "description": "retrieved, coded and clear_position_base are required and must be integers. Every other key is study-specific and optional.",
+      "required": ["retrieved", "coded", "clear_position_base"],
+      "properties": {
+        "retrieved": { "type": "integer", "minimum": 0 },
+        "coded": { "type": "integer", "minimum": 0 },
+        "clear_position_base": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "spot_check": {
+      "type": ["object", "null"],
+      "required": ["sample", "agreed", "checked_by", "note"],
+      "properties": {
+        "sample": { "type": ["integer", "null"] },
+        "agreed": { "type": ["integer", "null"] },
+        "checked_by": { "type": ["string", "null"] },
+        "date": { "type": ["string", "null"] },
+        "note": { "type": ["string", "null"] }
+      }
+    },
+    "coders": { "type": "string" },
+    "article_url": { "type": ["string", "null"] },
+    "findings_note_url": { "type": ["string", "null"] },
+    "version": { "type": "integer", "minimum": 1 },
+    "changelog": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["version", "date", "note"],
+        "properties": {
+          "version": { "type": "integer" },
+          "date": { "type": "string" },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "licence": { "type": "string" },
+    "notes": { "type": "string" }
+  }
+}

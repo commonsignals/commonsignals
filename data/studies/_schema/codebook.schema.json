@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://commonsignals.org/data/studies/_schema/codebook.schema.json",
+  "title": "Common Signals study codebook",
+  "description": "The codebook.json contract described in /data/studies/README.md.",
+  "type": "object",
+  "required": ["central_claim", "stance_note", "coder_instructions", "dimensions"],
+  "properties": {
+    "central_claim": { "type": "string" },
+    "stance_note": {
+      "type": "string",
+      "description": "Defines what each stance value means for this study, as value = definition clauses, e.g. 'agree = accepts AI is a serious existential danger worth acting on'."
+    },
+    "coder_instructions": { "type": "string" },
+    "dimensions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["key", "label", "kind", "shared"],
+        "properties": {
+          "key": { "type": "string" },
+          "label": { "type": "string" },
+          "kind": { "type": "string", "enum": ["single", "flag", "group"] },
+          "shared": { "type": "boolean" },
+          "values": {
+            "type": "array",
+            "description": "Required for kind single and group. Flag dimensions on file do not carry a values array.",
+            "items": {
+              "type": "object",
+              "required": ["value", "label", "definition"],
+              "properties": {
+                "value": { "type": "string" },
+                "label": { "type": "string" },
+                "definition": { "type": "string" },
+                "example": { "type": "string" }
+              }
+            }
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": { "kind": { "enum": ["single", "group"] } }
+            },
+            "then": { "required": ["values"] }
+          }
+        ]
+      }
+    }
+  }
+}

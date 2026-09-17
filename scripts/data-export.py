@@ -3,10 +3,12 @@
 
 Usage:
     python3 scripts/data-export.py validate [slug]
+    python3 scripts/data-export.py index
     python3 scripts/data-export.py export <input_csv> <input_codebook_md> <slug>
 
-`validate` checks every study folder under the given root (or just one, if a
-slug is passed) against the series contract described in the Phase 1 spec.
+`validate` checks every study folder under /data/studies/ (or just one, if a
+slug is passed) against the contract described in /data/studies/README.md.
+`index` regenerates /data/studies/index.json from each study's study.json.
 `export` is not implemented yet -- all studies currently on file arrived
 already in contract shape.
 """
@@ -15,12 +17,29 @@ import json
 import sys
 from pathlib import Path
 
-STUDIES_ROOT = Path(__file__).resolve().parent.parent / "study"
+STUDIES_ROOT = Path(__file__).resolve().parent.parent / "data" / "studies"
 
 # Row-level checks that get a stub-row exemption: rows whose `coder` marks
 # them as an intentionally-uncoded empty stub (e.g. a GIF/sticker-only reply
 # the platform never exposed text for) are allowed to have empty text.
 STUB_CODER_VALUE = "not_coded_empty_stub"
+
+# Required top-level fields per the schemas under _schema/. Kept in sync with
+# those files by hand; this script has no dependency on a JSON Schema
+# library, so it checks presence natively rather than interpreting the
+# schema documents directly.
+STUDY_REQUIRED = [
+    "slug", "title", "series", "platform",
+    "artefact_title", "artefact_url", "artefact_published",
+    "central_claim", "capture_dates", "capture_method",
+    "counts", "spot_check", "coders",
+    "article_url", "findings_note_url",
+    "version", "changelog", "licence", "notes",
+]
+COUNTS_REQUIRED = ["retrieved", "coded", "clear_position_base"]
+SPOT_CHECK_REQUIRED = ["sample", "agreed", "checked_by", "note"]
+CODEBOOK_REQUIRED = ["central_claim", "stance_note", "coder_instructions", "dimensions"]
+DIMENSION_REQUIRED = ["key", "label", "kind", "shared"]
 
 
 def load_study(folder: Path):
@@ -38,6 +57,27 @@ def validate_study(folder: Path):
 
     study, codebook, rows = load_study(folder)
     columns = rows[0].keys() if rows else []
+
+    # schema shape: required fields present in study.json and codebook.json
+    for key in STUDY_REQUIRED:
+        if key not in study:
+            failures.append((None, f"study.json missing required field {key!r}"))
+    for key in COUNTS_REQUIRED:
+        if key not in study.get("counts", {}):
+            failures.append((None, f"study.json counts missing required field {key!r}"))
+    if study.get("spot_check") is not None:
+        for key in SPOT_CHECK_REQUIRED:
+            if key not in study["spot_check"]:
+                failures.append((None, f"study.json spot_check missing required field {key!r}"))
+    for key in CODEBOOK_REQUIRED:
+        if key not in codebook:
+            failures.append((None, f"codebook.json missing required field {key!r}"))
+    for dim in codebook.get("dimensions", []):
+        for key in DIMENSION_REQUIRED:
+            if key not in dim:
+                failures.append((None, f"codebook.json dimension {dim.get('key','?')!r} missing required field {key!r}"))
+        if dim.get("kind") in ("single", "group") and "values" not in dim:
+            failures.append((None, f"codebook.json dimension {dim.get('key','?')!r} is kind={dim.get('kind')!r} but has no values array"))
 
     single_dims = {d["key"]: d for d in codebook["dimensions"] if d["kind"] == "single"}
     flag_dims = {d["key"] for d in codebook["dimensions"] if d["kind"] == "flag"}
@@ -156,12 +196,16 @@ def validate_study(folder: Path):
     return slug, failures, notes
 
 
+def study_slugs(root: Path):
+    return sorted(p.name for p in root.iterdir() if p.is_dir() and not p.name.startswith("_"))
+
+
 def cmd_validate(args):
     root = STUDIES_ROOT
     if args:
         slugs = [args[0]]
     else:
-        slugs = sorted(p.name for p in root.iterdir() if p.is_dir())
+        slugs = study_slugs(root)
 
     any_failures = False
     for slug in slugs:
@@ -187,17 +231,45 @@ def cmd_validate(args):
     sys.exit(1 if any_failures else 0)
 
 
+def cmd_index(args):
+    root = STUDIES_ROOT
+    studies = []
+    for slug in study_slugs(root):
+        s = json.loads((root / slug / "study.json").read_text())
+        studies.append({
+            "slug": s["slug"],
+            "title": s["title"],
+            "platform": s["platform"],
+            "series": s["series"],
+            "article_url": s["article_url"],
+            "counts": {k: s["counts"][k] for k in COUNTS_REQUIRED},
+            "version": s["version"],
+            "licence": s["licence"],
+        })
+    index = {
+        "$schema": "https://commonsignals.org/data/studies/_schema/index.schema.json",
+        "series": studies[0]["series"] if studies else None,
+        "generated_note": "Generated from each study's study.json by scripts/data-export.py index. Regenerate rather than hand-edit.",
+        "studies": studies,
+    }
+    out = root / "index.json"
+    out.write_text(json.dumps(index, indent=2, ensure_ascii=False) + "\n")
+    print(f"wrote {out} ({len(studies)} studies)")
+
+
 def cmd_export(args):
     print("export is not implemented yet: all studies on file arrived already in contract shape.")
     sys.exit(2)
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2 or sys.argv[1] not in ("validate", "export"):
+    if len(sys.argv) < 2 or sys.argv[1] not in ("validate", "index", "export"):
         print(__doc__)
         sys.exit(2)
     subcommand, rest = sys.argv[1], sys.argv[2:]
     if subcommand == "validate":
         cmd_validate(rest)
+    elif subcommand == "index":
+        cmd_index(rest)
     else:
         cmd_export(rest)

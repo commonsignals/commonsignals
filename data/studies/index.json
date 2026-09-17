@@ -1,0 +1,49 @@
+{
+  "$schema": "https://commonsignals.org/data/studies/_schema/index.schema.json",
+  "series": "agent-swarm reception",
+  "generated_note": "Generated from each study's study.json by scripts/data-export.py index. Regenerate rather than hand-edit.",
+  "studies": [
+    {
+      "slug": "cotra-episode-2026-09",
+      "title": "YouTube comments on the Dwarkesh Podcast episode with Ajeya Cotra, \"This might be the clearest warning shot we ever get\"",
+      "platform": "youtube",
+      "series": "agent-swarm reception",
+      "article_url": "https://commonsignals.org/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh",
+      "counts": {
+        "retrieved": 2999,
+        "coded": 2999,
+        "clear_position_base": 1590
+      },
+      "version": 2,
+      "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')"
+    },
+    {
+      "slug": "metr-report-reddit-2026-09",
+      "title": "Reddit reception of the OpenAI and Hugging Face incident, before and after the METR investigation",
+      "platform": "reddit",
+      "series": "agent-swarm reception",
+      "article_url": "https://commonsignals.org/openai-and-shut",
+      "counts": {
+        "retrieved": 568,
+        "coded": 516,
+        "clear_position_base": 395
+      },
+      "version": 1,
+      "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')"
+    },
+    {
+      "slug": "soares-reel-2026-08",
+      "title": "Instagram comments on Nate Soares's reel \"We stop AI. You help?\"",
+      "platform": "instagram",
+      "series": "agent-swarm reception",
+      "article_url": "https://commonsignals.org/ai-risk-reel-analysis",
+      "counts": {
+        "retrieved": 2136,
+        "coded": 2136,
+        "clear_position_base": 1271
+      },
+      "version": 2,
+      "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')"
+    }
+  ]
+}
