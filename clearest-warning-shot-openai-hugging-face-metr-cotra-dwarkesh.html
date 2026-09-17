@@ -114,7 +114,7 @@
       <span class="tag-pill">Case study</span>
     </div>
     <h1>The clearest warning shot: how did the OpenAI agent-swarm story land with the audience most likely to believe it?</h1>
-    <p class="article-dek">We assessed 1,245 YouTube comments on <a href="https://www.youtube.com/watch?v=X50zezLFWWI" target="_blank" rel="noopener">the Dwarkesh Podcast's interview with METR's Ajeya Cotra</a> about <a href="/openai-and-shut">the OpenAI agent-swarm incident</a>, and found an audience that accepts the danger, jokes about it at scale, praises the messenger, and still has nowhere to put its fear.</p>
+    <p class="article-dek">We assessed 2,999 YouTube comments on <a href="https://www.youtube.com/watch?v=X50zezLFWWI" target="_blank" rel="noopener">the Dwarkesh Podcast's interview with METR's Ajeya Cotra</a> about <a href="/openai-and-shut">the OpenAI agent-swarm incident</a>, and found an audience that accepts the danger, jokes about it at scale, praises the messenger, and still has nowhere to put its fear.</p>
     <button type="button" class="share-copy">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M9 17H7a5 5 0 1 1 0-10h2"/>
@@ -152,17 +152,11 @@
 
       <h2 id="tldr">TL;DR</h2>
       <ul class="arrow-list">
-        <li>Of the 618 comments taking a clear position:
-          <ul class="arrow-list">
-            <li>59% accept that the incident is a warning about losing control of <a href="/glossary#ai-agent">AI agents</a></li>
-            <li>24% accept it but relocate the blame</li>
-            <li>17% reject it.</li>
-          </ul>
-        </li>
-        <li>Fear is the dominant emotion among believers (35% of agree comments), the reverse of <a href="/ai-risk-reel-analysis">what we found under Nate Soares's Instagram reel</a>.</li>
-        <li>Comments that disagree were about trust: 53% called the story hype, marketing or staged.</li>
-        <li>13% of comments praise the messenger with her calm, non-sensational expert delivery.</li>
-        <li>Six comments in 1,245 ask what viewers should do about the dangers of AI.</li>
+        <li>Of the 1,590 comments taking a readable position, 70% accept that the incident is a serious warning, 20% accept it but relocate the blame, and 10% reject it.</li>
+        <li>Fear still outweighs resignation among believers by a wide margin (32% against 11%, though neutral reactions are now the largest single group at 38%), the reverse of <a href="/ai-risk-reel-analysis">what we found under Nate Soares's Instagram reel</a>.</li>
+        <li>Capability scepticism is smaller but has not vanished: 13% of rejections say AI cannot do this. Most disagreement is still about trust: 66% of it calls the story hype, marketing or staged. <!-- TODO(ben): decide if the capability-scepticism share is a real shift or an artefact of the redrafted frame list; see findings note --></li>
+        <li>8.3% of comments praise the messenger with her calm, non-sensational expert delivery.</li>
+        <li>260 comments in 2,999 ask or propose some action (up sharply from the original count; the flag definition looks broader this time, not necessarily a behavioural shift — see findings note before quoting this number).</li>
       </ul>
 
       <h2 id="introduction">The clearest warning shot</h2>
@@ -181,25 +175,24 @@
 
       <div class="article-box">
         <h3>Method</h3>
-        <p>From a page capture supplied on 8 September we recovered 1,249 of the 1,569 counted comments; the gap is mostly unexpanded reply threads, so the dataset leans towards top-level comments.</p>
-        <p>1,245 contain text and were coded on stance towards the episode's central claim, dominant frame, reaction to the format, emotional register and six mention flags, against a codebook drafted from the thread and approved before coding.</p>
-        <p>618 take a clear position, and stance percentages use that base; frame and format shares use the coded base. A 40-comment spot-check found 37 codes defensible.</p>
+        <p>From a complete yt-dlp export taken 17 September we retrieved and coded all 2,999 comments on the video (1,963 top-level, 1,036 replies), against a redrafted 18-frame codebook drafted from the 50 most-liked and 150 random comments and approved before coding. 1,590 take a readable position, and stance percentages use that base; frame and format shares use the full coded base. Sixteen parallel model coders, each shown the parent comment's text for replies. A random 40-comment spot-check, with parent text shown for replies, agreed on all 40.</p>
         <p>Two sentences of limits: this is the Dwarkesh Podcast's audience, AI-literate, self-selected and, like YouTube commenters generally, skewed male, and nothing here describes the wider public. Comments also measure the thread, not the viewing: we cannot know how much of the 2h20m episode any commenter watched, and likes measure salience, not persuasion.</p>
         <figure>
           <img src="/assets/chart-cotra-funnel.svg" alt="Funnel of comments from retrieved to coded to positioned: 1,249 retrieved, 1,245 coded, 618 with a clear position" />
           <figcaption>What was coded. Stance percentages use the 618 base; frame and format shares use the 1,245 base.</figcaption>
         </figure>
+        <p>Recoded 17 September 2026 from a complete comment export after the original page-capture coding run was found not to be archived; see the September 2026 findings note for the full method and caveats, including two open questions about frame definitions that should be resolved before these figures are treated as final.</p>
       </div>
 
       <h2 id="the-numbers">The numbers</h2>
-      <p>Of the 618 positioned comments, 59% agree, 24% are mixed and 17% disagree. Another 393 coded comments are on topic but take no position, and they matter: they are mostly jokes, and they carry 44% of all the likes in the thread.</p>
+      <p>Of the 1,590 positioned comments, 70% agree, 20% are mixed and 10% disagree. Another 1,368 coded comments are on topic but take no position; they carry 59% of all the likes in the thread.</p>
 
       <figure>
         <img src="/assets/chart-cotra-stance.svg" alt="Stance distribution: 59 percent agree, 24 percent mixed, 17 percent disagree" />
         <figcaption>Of 618 comments with a clear position.</figcaption>
       </figure>
 
-      <p>Weighted by likes, agreement carries 33% and outright disagreement 1.3%.</p>
+      <p>Weighted by likes among positioned comments, agreement carries 89%, mixed 10% and outright disagreement under 2%.</p>
 
       <h2 id="the-joke-did-the-distribution">Humour aided distribution</h2>
       <p>The most-liked comment in the thread, at 1,100 likes, is "Oh my God! There is a shared message board… We've found other YouTube users!".</p>
@@ -219,7 +212,7 @@
       <p>Under the reel, the people who accepted the argument despaired. Here they are frightened, and specifically by mechanism.</p>
       <p>Fear is the top emotion among agree comments at 35%; resignation is 11%.</p>
       <blockquote>"What honestly freaks me out isn't swarm scale but inheritance... impossible tasks turned persistence into desperation -&gt; shared state turned desperation into culture -&gt; and each wiped out generation left institutions for a smarter successor."<cite>YouTube comment, 329 likes</cite></blockquote>
-      <p>What it did not give anyone was something to do: six comments ask, and the nearest thing to an action the thread proposes is coverage ("Please, 60 Minutes, do a piece on this. People should know", 94 likes).</p>
+      <p>What it did not give anyone was something to do: 260 comments ask or propose some action, and the nearest thing to an action the thread proposes is coverage ("Please, 60 Minutes, do a piece on this. People should know", 94 likes). <!-- TODO(ben): "what it did not give anyone was something to do" sits oddly next to 260 comments now proposing action; see findings note on the broadened flag definition before deciding how to reframe this --></p>
 
       <p>Had resignation led among the agreeing comments, as it did under the reel, the claim that a concrete mechanism changes the emotional register would fail.</p>
 
@@ -252,10 +245,10 @@
 
       <h2 id="the-messenger-finally-showed-up-and-it-worked">The messenger</h2>
       <p>Soares's reel carried no visible credentials and 1.1% of its commenters mentioned who he was. This episode put a named researcher from a named independent investigation on camera for two hours.</p>
-      <p>13% of comments praise the presentation, and 5% mention METR, the investigation or the participants' expertise.</p>
-      <blockquote>"What a fantastic communicator, I love it when researchers are able to articulate their intensive knowledge in an simple manner that the general audience can understand."<cite>YouTube comment, 383 likes</cite></blockquote>
-      <blockquote>"Ajeya's incredibly intelligent and well thought out. I love that she's not sensationalistic."<cite>YouTube comment, 161 likes</cite></blockquote>
-      <blockquote>"So happy you're getting independent experts and doing thoughtful deep dives here."<cite>YouTube comment, 241 likes</cite></blockquote>
+      <p>8.3% of comments praise the presentation, and 4.5% mention METR, the investigation or the participants' expertise.</p>
+      <blockquote>"What a fantastic communicator, I love it when researchers are able to articulate their intensive knowledge in an simple manner that the general audience can understand."<cite>YouTube comment, 890 likes</cite></blockquote>
+      <blockquote>"Ajeya's incredibly intelligent and well thought out. I love that she's not sensationalistic."<cite>YouTube comment, 230 likes</cite></blockquote>
+      <blockquote>"So happy you're getting independent experts and doing thoughtful deep dives here."<cite>YouTube comment, 268 likes</cite></blockquote>
       <p>The audience noticed the things messenger research says matter: expertise, independence, and calm.</p>
       <p>The trust sceptics attacked exactly the same attributes, which is the strongest sign in the thread that messenger credibility is now the contested ground.</p>
 

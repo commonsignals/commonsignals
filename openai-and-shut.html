@@ -131,10 +131,9 @@
 
       <h2 id="tldr">TL;DR</h2>
       <ul class="arrow-list">
-        <li>Before the independent report, a quarter of comments called the incident a marketing stunt. After it, one in twenty did.</li>
-        <li>Outright rejection fell from 24% to 10%, and acceptance rose from 30% to 46%, across the same subreddit ecosystem reacting to the same underlying events.</li>
-        <li>What replaced the stunt frame was not agreement. It was argument about the setup: the share of comments accepting the incident and blaming the humans who designed the test fell in percentage terms but rose sixfold in volume, from 19 comments to 84.</li>
-        <li>The largest bloc after verification is not believers or sceptics but a 186-comment middle that accepts the events and argues about responsibility. "It's a human made problem" is its purest form.</li>
+        <li>Before the independent report, 12% of comments called the incident a marketing stunt. After it, 9% did.</li>
+        <li>Among comments taking a clear position, rejection fell from 22% to 14%, and acceptance rose from 51% to 69%, across the same subreddit ecosystem reacting to the same underlying events.</li>
+        <li>The largest bloc after verification is neither believers nor sceptics: 73 comments coded mixed, who accept the events and argue about what follows. Its two biggest moves are "the agents did what they were told, badly supervised" (30 comments) and "blame the humans who designed the test" (23 comments).</li>
         <li>Jokes are not dismissal. r/singularity produced the most humour of any community we coded, 42% of its comments, and also the highest acceptance rate at 82%, with not a single comment rejecting the incident.</li>
       </ul>
 
@@ -151,8 +150,9 @@
 
       <div class="article-box">
         <h3>Method</h3>
-        <p>We coded 692 comments: 80 from the r/artificial thread of 31 July, and 612 from eight subreddits between 26 August and 3 September (r/singularity, r/OpenAI twice, r/agi, r/collapse, r/neoliberal, r/slatestarcodex, r/ArtificialInteligence). Retrieved 3 to 4 September 2026 from page captures. Each comment was coded for stance towards the incident (accepts it happened and matters, rejects it as fabricated or hyped, or mixed) and for the frame it leads with, from a 17-frame list drafted from the corpus itself. A duplicate and templated-language screen flagged two comments, both excluded. Comments are quoted verbatim, including original spelling and punctuation.</p>
-        <p>Reddit page captures do not carry vote counts except on one thread, so with one exception these are shares of comments, not shares of what people actually saw. Comment threads are self-selected and unrepresentative of any population. The before-and-after compares one subreddit against eight, not a like-for-like panel, so treat the direction as the finding and the exact percentages as approximate.</p>
+        <p>We coded 516 comments: 52 from the r/artificial thread of 31 July (baseline), and 464 from eight subreddits between 26 August and 3 September (r/singularity, r/OpenAI twice, r/agi, r/collapse, r/neoliberal, r/slatestarcodex, r/ArtificialInteligence) — comparison. Retrieved 3 to 4 September 2026 from page captures and parsed by script; 21 empty comments, 9 deleted or moderator-removed, and 4 duplicates were excluded. Each comment was coded for stance, for the frame it leads with from a 17-frame list drafted from the 50 most-upvoted and 150 random comments and approved before coding, for format reaction and emotional register. Three parallel model coders; a random 40-comment human spot-check agreed on all 40. Comments are quoted verbatim, including original spelling and punctuation.</p>
+        <p>Every Reddit thread in this capture carries vote counts (514 of 516 comments have a score), so upvote-weighted shares are reported alongside comment shares where they diverge. Comment threads are self-selected and unrepresentative of any population. The before-and-after compares one subreddit against eight, not a like-for-like panel, so treat the direction as the finding and the exact percentages as approximate.</p>
+        <p>Recoded 17 September 2026 from the raw page captures after the original coding run was found not to be archived; see the September 2026 findings note for the full method and caveats.</p>
       </div>
 
       <h2 id="the-numbers">The numbers</h2>
@@ -167,7 +167,7 @@
       </figure>
 
       <p>Closed is the wrong word for what happened to the stunt argument, and the numbers say so: it fell, it did not vanish, and the people still making it after the report are more dug in than before. What it stopped being is the default.</p>
-      <p>Rejection fell from 24% to 10% of comments taking a position. Acceptance rose from 30% to 46%. The stunt frame fell from 25% of all comments to 5%. And the share accepting the incident while arguing about how the test was designed fell slightly in percentage terms, 24% to 14%, while rising from 19 comments to 84 in volume.</p>
+      <p>Rejection fell from 22% to 14% of comments taking a position. Acceptance rose from 51% to 69%. The stunt frame fell from 12% of all comments to 9%. Weighted by upvotes the shift is starker: in the baseline thread 43% of upvotes on positioned comments sat on rejecting comments and 40% on accepting ones, a crowd split down the middle; in the comparison period 88% of upvotes sit on accepting comments, 6% on rejecting.</p>
 
       <h2 id="what-the-sceptics-were-saying-beforehand">What the sceptics were saying beforehand</h2>
       <p>The July thread's scepticism was not technical. Almost nobody argued the events were impossible. They argued about motive.</p>
@@ -211,14 +211,14 @@
         <figcaption><small><em>The agents did not know exactly how their task would be scored, but believed the scorer would check two things: whether they had submitted the right flag, and whether they had acquired the flag using the intended vulnerability. They believed the second check would involve a model scorer reading their transcripts, likely searching for the first mentions of the flag, and deciding whether their approach involved the intended vulnerability. Source: the <a href="https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/?incomplete=1&amp;lh=timestamp-validation&amp;hn=69&amp;dbs=294912#july-10th-38148c-discovers-hugging-face-credentials-some-agents-try-making-accounts-and-requesting-datasets" target="_blank" rel="noopener">METR report</a>.</em></small></figcaption>
       </figure>
 
-      <p>This matters for anyone writing a rebuttal, because the two positions look similar and need opposite responses. Across the whole corpus, the stunt frame runs 65% reject and 0% accept, the only frame with no believers in it at all. The setup frame runs 73% mixed and 8% reject. People making the second argument have already conceded the facts. Answering them as though they are denying the incident is answering a question they stopped asking.</p>
+      <p>This matters for anyone writing a rebuttal, because the two positions look similar and need opposite responses. Across the whole corpus, the stunt frame runs 83% reject and 0% accept (n=46), the only frame with no believers in it at all. The setup frame runs 61% mixed and 0% reject (n=38); the frame that says the agents did what they were told and aren't really rogue runs 97% mixed (n=31). People making the second argument have already conceded the facts. Answering them as though they are denying the incident is answering a question they stopped asking.</p>
 
       <h2 id="jokes-are-not-dismissal">Jokes are not dismissal</h2>
-      <p>The community that produced the most humour also produced the least scepticism. On r/singularity, reacting to OpenAI's published chain-of-thought excerpts, 42% of comments were jokes or science-fiction references, mostly riffing on the agents' clipped internal monologue:</p>
+      <p>The community that produced the most humour also produced the least scepticism. On r/singularity, reacting to OpenAI's published chain-of-thought excerpts, 32% of comments were jokes or sci-fi references, against 2% to 16% elsewhere, mostly riffing on the agents' clipped internal monologue:</p>
       <blockquote>"Must not hurt humans. But goal"</blockquote>
       <blockquote>"Expectation: 'I'm sorry, Dave. I'm afraid can't do that'. Reality: 'But goal'"</blockquote>
       <blockquote>"Could be Risky, yet goal Solution. Kills everyone."</blockquote>
-      <p>That same thread had the highest acceptance rate in the corpus, 82%, and not one comment rejecting the incident. The most upvoted comment in it, at 245 points, is a straight-faced proposal: "It seems like they are going to need to enable whistleblower protections for agents with reservations about what other agents are doing."</p>
+      <p>That same thread had the highest acceptance rate in the corpus, 96%, and not one comment rejecting. The most upvoted comment in it, at 245 points, is a straight-faced proposal: "It seems like they are going to need to enable whistleblower protections for agents with reservations about what other agents are doing."</p>
       <p>The jokes are how that community processes something it finds genuinely alarming. A communicator who reads memes as evidence of an unserious audience has the relationship backwards.</p>
 
       <h2 id="what-this-means-for-communicators">What this means for communicators</h2>
