@@ -307,6 +307,115 @@
      "definition": "mostly not in English"
     }
    ]
+  },
+  {
+   "key": "period",
+   "label": "Period",
+   "kind": "group",
+   "shared": false,
+   "values": [
+    {
+     "value": "baseline",
+     "label": "Baseline",
+     "definition": "r/artificial, 31 July, reacting to OpenAI's own account before the METR report"
+    },
+    {
+     "value": "comparison",
+     "label": "Comparison",
+     "definition": "eight subreddits, from 26 August, reacting after METR and Redwood's independent report"
+    }
+   ]
+  },
+  {
+   "key": "subreddit",
+   "label": "Subreddit",
+   "kind": "group",
+   "shared": false,
+   "values": [
+    {
+     "value": "r/OpenAI",
+     "label": "r/OpenAI",
+     "definition": "comments from r/OpenAI"
+    },
+    {
+     "value": "r/agi",
+     "label": "r/agi",
+     "definition": "comments from r/agi"
+    },
+    {
+     "value": "r/collapse",
+     "label": "r/collapse",
+     "definition": "comments from r/collapse"
+    },
+    {
+     "value": "r/singularity",
+     "label": "r/singularity",
+     "definition": "comments from r/singularity"
+    },
+    {
+     "value": "r/ArtificialInteligence",
+     "label": "r/ArtificialInteligence",
+     "definition": "comments from r/ArtificialInteligence"
+    },
+    {
+     "value": "r/artificial",
+     "label": "r/artificial",
+     "definition": "comments from r/artificial"
+    },
+    {
+     "value": "r/neoliberal",
+     "label": "r/neoliberal",
+     "definition": "comments from r/neoliberal"
+    },
+    {
+     "value": "r/slatestarcodex",
+     "label": "r/slatestarcodex",
+     "definition": "comments from r/slatestarcodex"
+    }
+   ]
+  },
+  {
+   "key": "thread_url",
+   "label": "Thread",
+   "kind": "group",
+   "shared": false,
+   "values": [
+    {
+     "value": "https://www.reddit.com/r/agi/comments/1vzpiba/independent_investigators_not_openai_confirm_a/",
+     "label": "r/agi (comparison) and r/artificial (baseline)",
+     "definition": "shared by two threads: the r/agi comparison thread, and the r/artificial baseline thread, whose true URL was not recorded and whose cell in the source workbook was a copy of this one (see study.json notes)"
+    },
+    {
+     "value": "https://www.reddit.com/r/ArtificialInteligence/comments/1w2d7cd/independent_investigators_not_openai_found_the/",
+     "label": "r/ArtificialInteligence",
+     "definition": "the r/ArtificialInteligence comparison thread"
+    },
+    {
+     "value": "https://www.reddit.com/r/singularity/comments/1vzfupt/the_raw_chain_of_thought_message_snippets_openai/",
+     "label": "r/singularity",
+     "definition": "the r/singularity comparison thread"
+    },
+    {
+     "value": "https://www.reddit.com/r/collapse/comments/1w3ie1x/ominous_findings_from_openais_huggingface/",
+     "label": "r/collapse",
+     "definition": "the r/collapse comparison thread"
+    },
+    {
+     "value": "https://www.reddit.com/r/neoliberal/comments/1w0uw6k/report_from_metr_on_their_independent/",
+     "label": "r/neoliberal",
+     "definition": "the r/neoliberal comparison thread"
+    },
+    {
+     "value": "https://www.reddit.com/r/slatestarcodex/comments/1w0eezz/metrs_independent_investigation_of_openai_hugging/",
+     "label": "r/slatestarcodex",
+     "definition": "the r/slatestarcodex comparison thread"
+    },
+    {
+     "value": "https://www.reddit.com/r/OpenAI/comments/1w2clq7/independent_investigators_not_openai_found_the/",
+     "label": "r/OpenAI",
+     "definition": "the r/OpenAI comparison thread (this sheet also merges a second r/OpenAI thread, 1vzpfac, per study.json notes)"
+    }
+   ]
   }
  ]
 }

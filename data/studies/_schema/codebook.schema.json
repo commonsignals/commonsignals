@@ -21,11 +21,11 @@
         "properties": {
           "key": { "type": "string" },
           "label": { "type": "string" },
-          "kind": { "type": "string", "enum": ["single", "flag", "group"] },
+          "kind": { "type": "string", "enum": ["single", "flag", "group", "meta"] },
           "shared": { "type": "boolean" },
           "values": {
             "type": "array",
-            "description": "Required for kind single and group. Flag dimensions on file do not carry a values array.",
+            "description": "Required for kind single and group. Flag dimensions on file do not carry a values array. Meta dimensions (a plain count or caption column, not a facet) never do.",
             "items": {
               "type": "object",
               "required": ["value", "label", "definition"],

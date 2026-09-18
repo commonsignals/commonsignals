@@ -54,9 +54,9 @@ Required fields:
 - `dimensions`: array. Each dimension is:
   - `key`: matches a comments.csv column name.
   - `label`: display name.
-  - `kind`: `"single"` (one value from a fixed list, like stance or frame), `"flag"` (boolean, a comments.csv column named `mentions_<thing>` or a bare flag like `non_english`), or `"group"` (a study-specific grouping column, like METR's `period` or `subreddit`).
+  - `kind`: `"single"` (one value from a fixed list, like stance or frame), `"flag"` (boolean, a comments.csv column named `mentions_<thing>` or a bare flag like `non_english`), `"group"` (a study-specific grouping column, like METR's `period` or `subreddit`), or `"meta"` (a plain descriptive column, like a reply count or a timestamp-precision caption, that is not a facet and carries no allowed-value list).
   - `shared`: true if the same values apply across every study in the series (stance, format_reaction, emotion), false if they are study-specific (frame always is; flag and group dimensions usually are).
-  - `values`: array of `{value, label, definition, example}`, the allowed values for `single` and `group` dimensions. Flag dimensions on file do not carry a `values` array at all (there is only one meaningful value, `true`); this contract does not require one.
+  - `values`: array of `{value, label, definition, example}`, the allowed values for `single` and `group` dimensions. Flag and meta dimensions do not carry a `values` array; this contract does not require one for either.
 
 ## comments.csv
 

@@ -40,6 +40,7 @@ COUNTS_REQUIRED = ["retrieved", "coded", "clear_position_base"]
 SPOT_CHECK_REQUIRED = ["sample", "agreed", "checked_by", "note"]
 CODEBOOK_REQUIRED = ["central_claim", "stance_note", "coder_instructions", "dimensions"]
 DIMENSION_REQUIRED = ["key", "label", "kind", "shared"]
+DIMENSION_KINDS = {"single", "flag", "group", "meta"}
 
 
 def load_study(folder: Path):
@@ -76,12 +77,16 @@ def validate_study(folder: Path):
         for key in DIMENSION_REQUIRED:
             if key not in dim:
                 failures.append((None, f"codebook.json dimension {dim.get('key','?')!r} missing required field {key!r}"))
+        if dim.get("kind") not in DIMENSION_KINDS:
+            failures.append((None, f"codebook.json dimension {dim.get('key','?')!r} has kind={dim.get('kind')!r}, not one of {sorted(DIMENSION_KINDS)}"))
         if dim.get("kind") in ("single", "group") and "values" not in dim:
             failures.append((None, f"codebook.json dimension {dim.get('key','?')!r} is kind={dim.get('kind')!r} but has no values array"))
 
-    single_dims = {d["key"]: d for d in codebook["dimensions"] if d["kind"] == "single"}
+    # single and group dimensions both carry an allowed-value list that CSV
+    # columns get checked against; meta dimensions are descriptive only.
+    valued_dims = {d["key"]: d for d in codebook["dimensions"] if d["kind"] in ("single", "group")}
     flag_dims = {d["key"] for d in codebook["dimensions"] if d["kind"] == "flag"}
-    allowed = {k: {v["value"] for v in d.get("values", [])} for k, d in single_dims.items()}
+    allowed = {k: {v["value"] for v in d.get("values", [])} for k, d in valued_dims.items()}
 
     # id uniqueness
     ids = [r["id"] for r in rows]
