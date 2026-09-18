@@ -4,13 +4,13 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <script src="/analytics.js"></script>
-<title>YouTube comments on the Amanpour and Company Khlaaf segment: Common Signals</title>
-<meta name="description" content="Browse and filter 322 coded YouTube comments behind the Amanpour and Company / Heidy Khlaaf article: stance, frame and emotion, comment by comment." />
+<title>Reddit reception of the OpenAI and Hugging Face incident, before and after the METR investigation: Common Signals</title>
+<meta name="description" content="Search and filter all 516 coded Reddit comments behind 'OpenAI and Shut' article: stance, frame, emotion and engagement, comment by comment." />
 
-<meta property="og:title" content="YouTube comments on the Amanpour and Company segment: data explorer" />
-<meta property="og:description" content="Browse and filter 322 coded YouTube comments behind the Amanpour and Company / Heidy Khlaaf article: stance, frame and emotion, comment by comment." />
+<meta property="og:title" content="Reddit reception of the OpenAI/Hugging Face incident: data explorer" />
+<meta property="og:description" content="Search and filter all 516 coded Reddit comments behind 'OpenAI and Shut' article: stance, frame, emotion and engagement, comment by comment." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://commonsignals.org/data/studies/amanpour-segment-2026-09/" />
+<meta property="og:url" content="https://commonsignals.org/data/metr-report-reddit-2026-09/" />
 <meta property="og:site_name" content="Common Signals" />
 <meta property="og:image" content="https://commonsignals.org/og-image.png" />
 <meta property="og:image:width" content="1200" />
@@ -18,11 +18,11 @@
 <meta property="og:image:alt" content="Common Signals: helping AI communicators know which messages and messengers actually work." />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="YouTube comments on the Amanpour and Company segment: data explorer" />
-<meta name="twitter:description" content="Browse and filter 322 coded YouTube comments behind the Amanpour and Company / Heidy Khlaaf article: stance, frame and emotion, comment by comment." />
+<meta name="twitter:title" content="Reddit reception of the OpenAI/Hugging Face incident: data explorer" />
+<meta name="twitter:description" content="Search and filter all 516 coded Reddit comments behind 'OpenAI and Shut' article: stance, frame, emotion and engagement, comment by comment." />
 <meta name="twitter:image" content="https://commonsignals.org/og-image.png" />
 
-<link rel="canonical" href="https://commonsignals.org/data/studies/amanpour-segment-2026-09/" />
+<link rel="canonical" href="https://commonsignals.org/data/metr-report-reddit-2026-09/" />
 <meta name="robots" content="index, follow" />
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -34,14 +34,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="/styles.css" />
-<link rel="stylesheet" href="/data/explorer.css" />
+<link rel="stylesheet" href="/data/assets/explorer.css" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Dataset",
-  "name": "YouTube comments on the Amanpour and Company Khlaaf segment",
-  "description": "322 coded YouTube comments on the Amanpour and Company interview with Heidy Khlaaf about the OpenAI agent-swarm incident.",
-  "url": "https://commonsignals.org/data/studies/amanpour-segment-2026-09/",
+  "name": "Reddit reception of the OpenAI and Hugging Face incident, before and after the METR investigation",
+  "description": "Search and filter all 516 coded Reddit comments behind 'OpenAI and Shut' article: stance, frame, emotion and engagement, comment by comment.",
+  "url": "https://commonsignals.org/data/metr-report-reddit-2026-09/",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "isPartOf": { "@type": "WebSite", "name": "Common Signals", "url": "https://commonsignals.org/" }
 }
@@ -83,33 +83,44 @@
 
 <main id="top">
 
-  <div class="page-hero exp-hero" id="expHero">
-    <a class="back-link" href="/data/">&larr; All studies</a>
-    <h1>Loading study&hellip;</h1>
-    <p id="expMeta" class="meta"></p>
+  <div class="page-hero study-hero">
+    <h1 id="studyTitle">Loading study&hellip;</h1>
+    <p id="studyMeta" class="meta"></p>
   </div>
 
-  <div class="exp-finder">
-    <div class="wrap">
-      <div class="exp-finder-row">
-        <div class="exp-search">
-          <label for="expSearch" class="sr-only">Filter comments by text</label>
-          <input type="search" id="expSearch" placeholder="Filter comment text" autocomplete="off">
-          <button type="button" class="exp-clear" id="expClear" aria-label="Clear filter" hidden>&times;</button>
-        </div>
-        <span class="exp-count" id="expCount" role="status" aria-live="polite"></span>
+  <div class="study-layout wrap">
+    <aside class="study-sidebar" aria-label="Search and filters">
+      <div class="study-search">
+        <label for="expSearch">Search comment text</label>
+        <input type="search" id="expSearch" placeholder="Search comment text" autocomplete="off">
       </div>
-      <div class="exp-facets" id="expFacets"></div>
+      <div class="study-facets" id="expFacets"></div>
+    </aside>
+
+    <div class="study-main">
+      <div class="study-toolbar">
+        <span class="study-count" id="expCount" role="status" aria-live="polite"></span>
+        <div class="study-toggle" role="group" aria-label="View">
+          <button type="button" id="viewComments" aria-pressed="true">Comments</button>
+          <button type="button" id="viewQuotes" aria-pressed="false">Quotes</button>
+        </div>
+        <p class="study-quotes-note" id="quotesNote" hidden></p>
+        <label class="study-sort">Sort
+          <select id="expSort">
+            <option value="thread">Thread order</option>
+            <option value="likes">Likes (most first)</option>
+            <option value="date">Date (newest first)</option>
+          </select>
+        </label>
+        <button type="button" class="btn btn-ghost" id="expExport">Export CSV</button>
+      </div>
+      <div id="expList"></div>
     </div>
   </div>
 
-  <section id="data-explorer">
-    <div class="wrap" id="expList"></div>
-  </section>
-
-  <section class="exp-contract-note">
+  <section class="study-contract-note">
     <div class="wrap">
-      <p>This is one of four studies in the "agent-swarm reception" series. Full data contract, licence and the other studies: <a href="/data/">/data/</a>. Raw files for this study: <a href="study.json">study.json</a>, <a href="codebook.json">codebook.json</a>, <a href="comments.csv">comments.csv</a>. Companion article: <a href="https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf">'A problem they created'</a>.</p>
+      <p>Full data contract, licence and the other studies in this series: <a href="/data/studies/README.md">/data/studies/README.md</a>. Raw files for this study: <a href="/data/studies/metr-report-reddit-2026-09/study.json">study.json</a>, <a href="/data/studies/metr-report-reddit-2026-09/codebook.json">codebook.json</a>, <a href="/data/studies/metr-report-reddit-2026-09/comments.csv">comments.csv</a>. Codebook: <a href="/data/metr-report-reddit-2026-09/codebook/">/data/metr-report-reddit-2026-09/codebook/</a>. Companion article: <a id="articleLink" href="#" hidden>read it here</a>.</p>
     </div>
   </section>
 
@@ -172,7 +183,8 @@
 </footer>
 
 <script src="/main.js" defer></script>
-<script src="/data/explorer.js" defer></script>
+<script src="/data/assets/core.js"></script>
+<script src="/data/assets/explorer.js"></script>
 
 <iframe name="subscribe-target" class="subscribe-target-frame" aria-hidden="true" tabindex="-1"></iframe>
 </body>

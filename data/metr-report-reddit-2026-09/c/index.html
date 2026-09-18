@@ -4,26 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <script src="/analytics.js"></script>
-<title>YouTube comments on the Dwarkesh Podcast episode with Ajeya Cotra: Common Signals</title>
-<meta name="description" content="Search and filter all 2,999 coded YouTube comments behind 'The clearest warning shot' article: stance, frame, emotion and engagement, comment by comment." />
-
-<meta property="og:title" content="YouTube comments on the Dwarkesh/Cotra episode: data explorer" />
-<meta property="og:description" content="Search and filter all 2,999 coded YouTube comments behind 'The clearest warning shot' article: stance, frame, emotion and engagement, comment by comment." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://commonsignals.org/data/cotra-episode-2026-09/" />
-<meta property="og:site_name" content="Common Signals" />
-<meta property="og:image" content="https://commonsignals.org/og-image.png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Common Signals: helping AI communicators know which messages and messengers actually work." />
-
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="YouTube comments on the Dwarkesh/Cotra episode: data explorer" />
-<meta name="twitter:description" content="Search and filter all 2,999 coded YouTube comments behind 'The clearest warning shot' article: stance, frame, emotion and engagement, comment by comment." />
-<meta name="twitter:image" content="https://commonsignals.org/og-image.png" />
-
-<link rel="canonical" href="https://commonsignals.org/data/cotra-episode-2026-09/" />
-<meta name="robots" content="index, follow" />
+<title>Comment: Common Signals data explorer</title>
+<meta name="description" content="One coded comment from the Reddit reception of the OpenAI and Hugging Face incident, before and after the METR investigation dataset: full text, stance, frame and every code it carries, with definitions." />
+<meta name="robots" content="noindex, follow" />
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -35,17 +18,6 @@
 
 <link rel="stylesheet" href="/styles.css" />
 <link rel="stylesheet" href="/data/assets/explorer.css" />
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Dataset",
-  "name": "YouTube comments on the Dwarkesh Podcast episode with Ajeya Cotra",
-  "description": "2,999 coded YouTube comments on the Dwarkesh Podcast's interview with METR's Ajeya Cotra about the OpenAI agent-swarm incident.",
-  "url": "https://commonsignals.org/data/cotra-episode-2026-09/",
-  "license": "https://creativecommons.org/licenses/by/4.0/",
-  "isPartOf": { "@type": "WebSite", "name": "Common Signals", "url": "https://commonsignals.org/" }
-}
-</script>
 </head>
 <body>
 
@@ -84,45 +56,16 @@
 <main id="top">
 
   <div class="page-hero study-hero">
-    <h1 id="studyTitle">Loading study&hellip;</h1>
-    <p id="studyMeta" class="meta"></p>
+    <p><a class="back-link" id="backLink" href="../">&larr; Back to comments</a></p>
+    <h1 id="cmtTitle">Loading comment&hellip;</h1>
   </div>
 
-  <div class="study-layout wrap">
-    <aside class="study-sidebar" aria-label="Search and filters">
-      <div class="study-search">
-        <label for="expSearch">Search comment text</label>
-        <input type="search" id="expSearch" placeholder="Search comment text" autocomplete="off">
-      </div>
-      <div class="study-facets" id="expFacets"></div>
-    </aside>
-
-    <div class="study-main">
-      <div class="study-toolbar">
-        <span class="study-count" id="expCount" role="status" aria-live="polite"></span>
-        <div class="study-toggle" role="group" aria-label="View">
-          <button type="button" id="viewComments" aria-pressed="true">Comments</button>
-          <button type="button" id="viewQuotes" aria-pressed="false">Quotes</button>
-        </div>
-        <p class="study-quotes-note" id="quotesNote" hidden></p>
-        <label class="study-sort">Sort
-          <select id="expSort">
-            <option value="thread">Thread order</option>
-            <option value="likes">Likes (most first)</option>
-            <option value="date">Date (newest first)</option>
-          </select>
-        </label>
-        <button type="button" class="btn btn-ghost" id="expExport">Export CSV</button>
-      </div>
-      <div id="expList"></div>
-    </div>
+  <div class="study-detail-layout wrap">
+    <article class="study-detail-main" id="cmtMain">
+      <p class="study-empty">Loading&hellip;</p>
+    </article>
+    <aside class="study-codes-panel" id="cmtCodesPanel" aria-label="Codes and definitions"></aside>
   </div>
-
-  <section class="study-contract-note">
-    <div class="wrap">
-      <p>Full data contract, licence and the other studies in this series: <a href="/data/studies/README.md">/data/studies/README.md</a>. Raw files for this study: <a href="/data/studies/cotra-episode-2026-09/study.json">study.json</a>, <a href="/data/studies/cotra-episode-2026-09/codebook.json">codebook.json</a>, <a href="/data/studies/cotra-episode-2026-09/comments.csv">comments.csv</a>. Codebook: <a href="/data/cotra-episode-2026-09/codebook/">/data/cotra-episode-2026-09/codebook/</a>. Companion article: <a id="articleLink" href="#" hidden>read it here</a>.</p>
-    </div>
-  </section>
 
 </main>
 
@@ -184,7 +127,7 @@
 
 <script src="/main.js" defer></script>
 <script src="/data/assets/core.js"></script>
-<script src="/data/assets/explorer.js"></script>
+<script src="/data/assets/comment.js"></script>
 
 <iframe name="subscribe-target" class="subscribe-target-frame" aria-hidden="true" tabindex="-1"></iframe>
 </body>

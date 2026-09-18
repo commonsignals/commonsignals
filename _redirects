@@ -1,6 +1,12 @@
-# cotra's explorer moved from /data/studies/<slug>/ to /data/<slug>/.
-/data/studies/cotra-episode-2026-09   /data/cotra-episode-2026-09/   301
-/data/studies/cotra-episode-2026-09/  /data/cotra-episode-2026-09/   301
+# Every study's explorer moved from /data/studies/<slug>/ to /data/<slug>/.
+/data/studies/cotra-episode-2026-09      /data/cotra-episode-2026-09/      301
+/data/studies/cotra-episode-2026-09/     /data/cotra-episode-2026-09/      301
+/data/studies/amanpour-segment-2026-09   /data/amanpour-segment-2026-09/   301
+/data/studies/amanpour-segment-2026-09/  /data/amanpour-segment-2026-09/   301
+/data/studies/metr-report-reddit-2026-09   /data/metr-report-reddit-2026-09/   301
+/data/studies/metr-report-reddit-2026-09/  /data/metr-report-reddit-2026-09/   301
+/data/studies/soares-reel-2026-08        /data/soares-reel-2026-08/        301
+/data/studies/soares-reel-2026-08/       /data/soares-reel-2026-08/        301
 
 # Comment detail pages (/data/<slug>/c/<id>) are served by
 # functions/data/[slug]/c/[id].js, not a rule here: Cloudflare's own static

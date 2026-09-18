@@ -4,26 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <script src="/analytics.js"></script>
-<title>Instagram comments on Nate Soares's reel "We stop AI. You help?": Common Signals</title>
-<meta name="description" content="Browse and filter 2,136 coded Instagram comments behind the Soares reel analysis: stance, frame and emotion, comment by comment. No like counts available for this capture." />
-
-<meta property="og:title" content="Instagram comments on Nate Soares's reel: data explorer" />
-<meta property="og:description" content="Browse and filter 2,136 coded Instagram comments behind the Soares reel analysis: stance, frame and emotion, comment by comment. No like counts available for this capture." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://commonsignals.org/data/studies/soares-reel-2026-08/" />
-<meta property="og:site_name" content="Common Signals" />
-<meta property="og:image" content="https://commonsignals.org/og-image.png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Common Signals: helping AI communicators know which messages and messengers actually work." />
-
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Instagram comments on Nate Soares's reel: data explorer" />
-<meta name="twitter:description" content="Browse and filter 2,136 coded Instagram comments behind the Soares reel analysis: stance, frame and emotion, comment by comment. No like counts available for this capture." />
-<meta name="twitter:image" content="https://commonsignals.org/og-image.png" />
-
-<link rel="canonical" href="https://commonsignals.org/data/studies/soares-reel-2026-08/" />
-<meta name="robots" content="index, follow" />
+<title>Comment: Common Signals data explorer</title>
+<meta name="description" content="One coded comment from the Instagram comments on Nate Soares's reel &quot;We stop AI. You help?&quot; dataset: full text, stance, frame and every code it carries, with definitions." />
+<meta name="robots" content="noindex, follow" />
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -34,18 +17,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="/styles.css" />
-<link rel="stylesheet" href="/data/explorer.css" />
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Dataset",
-  "name": "Instagram comments on Nate Soares's reel \"We stop AI. You help?\"",
-  "description": "2,136 coded Instagram comments on Nate Soares's reel about AI risk.",
-  "url": "https://commonsignals.org/data/studies/soares-reel-2026-08/",
-  "license": "https://creativecommons.org/licenses/by/4.0/",
-  "isPartOf": { "@type": "WebSite", "name": "Common Signals", "url": "https://commonsignals.org/" }
-}
-</script>
+<link rel="stylesheet" href="/data/assets/explorer.css" />
 </head>
 <body>
 
@@ -83,35 +55,17 @@
 
 <main id="top">
 
-  <div class="page-hero exp-hero" id="expHero">
-    <a class="back-link" href="/data/">&larr; All studies</a>
-    <h1>Loading study&hellip;</h1>
-    <p id="expMeta" class="meta"></p>
+  <div class="page-hero study-hero">
+    <p><a class="back-link" id="backLink" href="../">&larr; Back to comments</a></p>
+    <h1 id="cmtTitle">Loading comment&hellip;</h1>
   </div>
 
-  <div class="exp-finder">
-    <div class="wrap">
-      <div class="exp-finder-row">
-        <div class="exp-search">
-          <label for="expSearch" class="sr-only">Filter comments by text</label>
-          <input type="search" id="expSearch" placeholder="Filter comment text" autocomplete="off">
-          <button type="button" class="exp-clear" id="expClear" aria-label="Clear filter" hidden>&times;</button>
-        </div>
-        <span class="exp-count" id="expCount" role="status" aria-live="polite"></span>
-      </div>
-      <div class="exp-facets" id="expFacets"></div>
-    </div>
+  <div class="study-detail-layout wrap">
+    <article class="study-detail-main" id="cmtMain">
+      <p class="study-empty">Loading&hellip;</p>
+    </article>
+    <aside class="study-codes-panel" id="cmtCodesPanel" aria-label="Codes and definitions"></aside>
   </div>
-
-  <section id="data-explorer">
-    <div class="wrap" id="expList"></div>
-  </section>
-
-  <section class="exp-contract-note">
-    <div class="wrap">
-      <p>This is one of three studies in the "agent-swarm reception" series. Full data contract, licence and the other studies: <a href="/data/">/data/</a>. Raw files for this study: <a href="study.json">study.json</a>, <a href="codebook.json">codebook.json</a>, <a href="comments.csv">comments.csv</a>. Companion article: <a href="https://commonsignals.org/ai-risk-reel-analysis">the Soares reel analysis</a>.</p>
-    </div>
-  </section>
 
 </main>
 
@@ -172,7 +126,8 @@
 </footer>
 
 <script src="/main.js" defer></script>
-<script src="/data/explorer.js" defer></script>
+<script src="/data/assets/core.js"></script>
+<script src="/data/assets/comment.js"></script>
 
 <iframe name="subscribe-target" class="subscribe-target-frame" aria-hidden="true" tabindex="-1"></iframe>
 </body>

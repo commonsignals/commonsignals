@@ -68,7 +68,14 @@
     const chipsHTML = codes.map((c) => CS.chipHTML(c.dim, c.value)).join('');
 
     const likes = CS.likesLabel(row.likes);
-    const threadNote = row.parent_id ? 'reply' : 'top level';
+    // Some studies' capture method lost threading entirely, so parent_id and
+    // depth are present but blank on every row (see the contract README);
+    // guessing "top level" from an empty parent_id would misreport that as
+    // real data rather than as not captured.
+    const hasThreading = comments.some((c) => c.parent_id || c.depth);
+    const depthHTML = hasThreading
+      ? `Depth <strong>${CS.esc(row.depth)}</strong> (${row.parent_id ? 'reply' : 'top level'})`
+      : `Depth <strong>not recorded</strong> for this study's capture method`;
     const permalink = location.origin + location.pathname;
 
     mainEl.innerHTML = `
@@ -77,7 +84,7 @@
       <p class="comment-facts">
         ${likes ? `<strong>${CS.esc(likes)}</strong> &middot; ` : ''}
         Published <strong>${CS.esc(CS.formatDate(row.published_at))}</strong> &middot;
-        Depth <strong>${CS.esc(row.depth)}</strong> (${threadNote})
+        ${depthHTML}
       </p>
       <div class="comment-codes">${chipsHTML}</div>
       <p class="permalink">Permalink: <a href="${CS.esc(permalink)}">${CS.esc(permalink)}</a></p>

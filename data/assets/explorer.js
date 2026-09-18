@@ -261,6 +261,13 @@
     qInput.value = state.q;
     sortSelect.value = state.sort;
 
+    const hasLikes = comments.some((c) => c.likes !== null && c.likes !== undefined);
+    if (!hasLikes) {
+      const likesOption = sortSelect.querySelector('option[value="likes"]');
+      if (likesOption) likesOption.remove();
+      if (state.sort === 'likes') { state.sort = 'thread'; sortSelect.value = 'thread'; }
+    }
+
     function render() {
       syncURL(state, allDims);
 
