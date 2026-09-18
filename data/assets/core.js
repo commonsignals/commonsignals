@@ -62,6 +62,15 @@ window.CS = window.CS || {};
     return d.toLocaleDateString('en-GB', { year: 'numeric', month: 'short', day: 'numeric' });
   };
 
+  // "September 2026", matching the month-and-year precision the site's own
+  // article citations use (never a specific day).
+  CS.formatMonthYear = function formatMonthYear(iso) {
+    if (!iso) return '';
+    const d = new Date(iso);
+    if (isNaN(d)) return iso;
+    return d.toLocaleDateString('en-GB', { year: 'numeric', month: 'long' });
+  };
+
   CS.likesLabel = function likesLabel(n) {
     if (n === null || n === undefined) return null;
     return n === 1 ? '1 like' : `${n.toLocaleString()} likes`;
@@ -80,6 +89,20 @@ window.CS = window.CS || {};
     if (!definition) return `<span class="${cls}">${CS.esc(label)}</span>`;
     const tipId = 'tip' + (tipCounter++);
     return `<span class="${cls}" tabindex="0" aria-describedby="${tipId}">${CS.esc(label)}<span class="code-chip-tip" role="tooltip" id="${tipId}">${CS.esc(definition)}</span></span>`;
+  };
+
+  // A <details> block, closed by default (per contract, one click to expand,
+  // not buried), listing a study's version history from study.json's
+  // changelog (oldest first, as stored). Used on both a study's own explorer
+  // page and its card on /data/, so a revised study's history (a recode, a
+  // superseded run) is visible in both places without opening study.json.
+  CS.changelogHTML = function changelogHTML(changelog, version) {
+    if (!changelog || !changelog.length) return '';
+    const items = changelog.map((c) =>
+      `<li><strong>v${CS.esc(c.version)}</strong>, ${CS.esc(CS.formatDate(c.date))}: ${CS.esc(c.note)}</li>`
+    ).join('');
+    const label = version ? `Changelog (version ${CS.esc(version)})` : 'Changelog';
+    return `<details class="study-changelog"><summary>${label}</summary><ul>${items}</ul></details>`;
   };
 
   CS.fetchErrorHTML = function fetchErrorHTML(err, slug) {

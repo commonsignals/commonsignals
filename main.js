@@ -86,22 +86,30 @@ if (tocLinks.length && 'IntersectionObserver' in window) {
   headings.forEach((h) => tocIO.observe(h));
 }
 
-document.querySelectorAll('.share-copy').forEach((btn) => {
+// Delegated (not querySelectorAll'd once at load) because comment.js inserts
+// a .share-copy citation button into the page after this script has run.
+// Copies location.href by default; a button with data-copy-text copies that
+// text instead. The "copied" label is derived from the button's own default
+// label ("Copy X" -> "X copied") rather than hard-coded, so this works for
+// any future .share-copy button without editing this file again.
+document.addEventListener('click', async (e) => {
+  const btn = e.target.closest('.share-copy');
+  if (!btn) return;
   const label = btn.querySelector('.share-copy-label');
-  const defaultText = label ? label.textContent : '';
-  let resetTimer;
-  btn.addEventListener('click', async () => {
-    clearTimeout(resetTimer);
-    try {
-      await navigator.clipboard.writeText(location.href);
-      if (label) label.textContent = 'Link copied';
-      btn.setAttribute('data-copied', 'true');
-    } catch {
-      if (label) label.textContent = 'Could not copy link';
-    }
-    resetTimer = setTimeout(() => {
-      if (label) label.textContent = defaultText;
-      btn.removeAttribute('data-copied');
-    }, 2000);
-  });
+  if (label && btn.dataset.defaultLabel === undefined) btn.dataset.defaultLabel = label.textContent;
+  const defaultText = btn.dataset.defaultLabel || '';
+  const copiedSubject = defaultText.replace(/^Copy /, '');
+  const copiedLabel = copiedSubject ? copiedSubject.charAt(0).toUpperCase() + copiedSubject.slice(1) + ' copied' : 'Copied';
+  clearTimeout(btn._resetTimer);
+  try {
+    await navigator.clipboard.writeText(btn.dataset.copyText || location.href);
+    if (label) label.textContent = copiedLabel;
+    btn.setAttribute('data-copied', 'true');
+  } catch {
+    if (label) label.textContent = 'Could not copy';
+  }
+  btn._resetTimer = setTimeout(() => {
+    if (label) label.textContent = defaultText;
+    btn.removeAttribute('data-copied');
+  }, 2000);
 });

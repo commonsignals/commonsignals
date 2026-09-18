@@ -237,6 +237,9 @@
     const metaEl = document.getElementById('studyMeta');
     if (metaEl) {
       metaEl.innerHTML = `<strong>${study.counts.coded.toLocaleString()}</strong> comments coded &middot; <strong>${study.counts.clear_position_base.toLocaleString()}</strong> take a clear position &middot; ${CS.esc(study.platform)}`;
+      if ((study.changelog || []).length) {
+        metaEl.insertAdjacentHTML('afterend', CS.changelogHTML(study.changelog, study.version));
+      }
     }
     document.querySelectorAll('[data-study-slug]').forEach((el) => { el.textContent = slug; });
     document.querySelectorAll('a[data-study-link]').forEach((el) => {

@@ -45,7 +45,7 @@
    "key": "format_reaction",
    "label": "Format reaction",
    "kind": "single",
-   "shared": false,
+   "shared": true,
    "values": [
     {"value": "none", "label": "None", "definition": "no distinct reaction to the thread as a piece of writing, beyond the content argument itself"},
     {"value": "mock", "label": "Mock", "definition": "mocks or ridicules the thread, Coxon, or the situation, rather than engaging its content"},

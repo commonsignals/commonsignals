@@ -4,13 +4,13 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <script src="/analytics.js"></script>
-<title>Data: Common Signals</title>
-<meta name="description" content="Browse and filter the coded comment datasets behind Common Signals' reception studies: every comment, its stance, frame and emotion, published under CC BY 4.0." />
+<title>Compare: Common Signals</title>
+<meta name="description" content="Stance, emotion and format reaction compared across every reception study, on each study's own base. Frame is not compared: the categories differ by study." />
 
-<meta property="og:title" content="Data: Common Signals" />
-<meta property="og:description" content="Browse and filter the coded comment datasets behind Common Signals' reception studies: every comment, its stance, frame and emotion, published under CC BY 4.0." />
+<meta property="og:title" content="Compare: Common Signals" />
+<meta property="og:description" content="Stance, emotion and format reaction compared across every reception study, on each study's own base." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://commonsignals.org/data/" />
+<meta property="og:url" content="https://commonsignals.org/data/compare/" />
 <meta property="og:site_name" content="Common Signals" />
 <meta property="og:image" content="https://commonsignals.org/og-image.png" />
 <meta property="og:image:width" content="1200" />
@@ -18,11 +18,11 @@
 <meta property="og:image:alt" content="Common Signals: helping AI communicators know which messages and messengers actually work." />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Data: Common Signals" />
-<meta name="twitter:description" content="Browse and filter the coded comment datasets behind Common Signals' reception studies: every comment, its stance, frame and emotion, published under CC BY 4.0." />
+<meta name="twitter:title" content="Compare: Common Signals" />
+<meta name="twitter:description" content="Stance, emotion and format reaction compared across every reception study, on each study's own base." />
 <meta name="twitter:image" content="https://commonsignals.org/og-image.png" />
 
-<link rel="canonical" href="https://commonsignals.org/data/" />
+<link rel="canonical" href="https://commonsignals.org/data/compare/" />
 <meta name="robots" content="index, follow" />
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -39,9 +39,9 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Data",
-  "description": "Browse and filter the coded comment datasets behind Common Signals' reception studies.",
-  "url": "https://commonsignals.org/data/",
+  "name": "Compare",
+  "description": "Stance, emotion and format reaction compared across every reception study, on each study's own base.",
+  "url": "https://commonsignals.org/data/compare/",
   "isPartOf": { "@type": "WebSite", "name": "Common Signals", "url": "https://commonsignals.org/" }
 }
 </script>
@@ -83,17 +83,17 @@
 <main id="top">
 
   <div class="page-hero">
-    <h1>Data</h1>
-    <p class="sub">Every coded comment behind our reception studies, browsable and filterable, comment by comment. The same data the articles are built from, published under CC BY 4.0.</p>
+    <p><a class="back-link" href="/data/">&larr; Back to data</a></p>
+    <h1>Compare</h1>
+    <p class="sub">Stance, emotion and format reaction, compared across every study on each study's own base. Loaded from the same data.json files the explorer pages use.</p>
   </div>
 
-  <section id="data-index">
+  <section id="compare-root" class="reveal">
     <div class="wrap">
-      <div class="study-cards" id="studyCards">
-        <p>Loading studies&hellip;</p>
-      </div>
-      <div class="study-contract-note">
-        <p>Each study is coded on stance, frame, format reaction and emotion against its own codebook, plus a handful of flags for what a comment mentions. Stance and emotion use mostly the same categories across the five studies; frame and format reaction are study-specific. Comment text is verbatim; author identities are hashed, not published. Full contract, JSON schemas and licensing: <a href="/data/studies/README.md">/data/studies/README.md</a>. The coding and compilation are CC BY 4.0; comment text remains its authors'.</p>
+      <p class="study-empty" id="cmpLoading">Loading studies&hellip;</p>
+      <div id="cmpDimensions"></div>
+      <div class="cmp-frame-note">
+        <p><strong>Frame is not compared here.</strong> Each study's frame list is drafted fresh from that artefact and its own comments, so the categories are not the same list under different names: they are genuinely different categories from study to study (Coxon's 17 frames, for one, do not appear anywhere else in the series). A shared chart would imply a comparability that does not exist. See each study's own <a href="/data/studies/README.md">codebook</a> for its frame breakdown.</p>
       </div>
     </div>
   </section>
@@ -158,49 +158,7 @@
 
 <script src="/main.js" defer></script>
 <script src="/data/assets/core.js"></script>
-<script>
-(function () {
-  function esc(s) {
-    return String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-  }
-  const PLATFORM_LABEL = { reddit: 'Reddit', youtube: 'YouTube', instagram: 'Instagram', x: 'X' };
-
-  async function init() {
-    const el = document.getElementById('studyCards');
-    let data;
-    try {
-      data = await fetch('/data/studies/index.json', { cache: 'no-cache' }).then((r) => {
-        if (!r.ok) throw new Error('index.json ' + r.status);
-        return r.json();
-      });
-    } catch (err) {
-      el.innerHTML = `<p>Could not load the studies index (${esc(err.message)}). Try <a href="/data/studies/index.json">index.json</a> directly.</p>`;
-      return;
-    }
-
-    el.innerHTML = data.studies.map((s) => `
-      <article class="study-card">
-        <p class="platform">${esc(PLATFORM_LABEL[s.platform] || s.platform)}</p>
-        <h2>${esc(s.title)}</h2>
-        <div class="facts">
-          <div><span class="k">Coded</span><span class="v">${s.counts.coded.toLocaleString()}</span></div>
-          <div><span class="k">Positioned</span><span class="v">${s.counts.clear_position_base.toLocaleString()}</span></div>
-        </div>
-        <div class="actions">
-          <a class="btn btn-primary" href="/data/${esc(s.slug)}/">Explore comments</a>
-          ${s.article_url ? `<a class="btn btn-ghost" href="${esc(s.article_url)}">Read the article</a>` : ''}
-        </div>
-        <p class="raw-links">
-          <a href="/data/studies/${esc(s.slug)}/study.json">study.json</a><span>&middot;</span><a href="/data/${esc(s.slug)}/codebook/">codebook</a><span>&middot;</span><a href="/data/studies/${esc(s.slug)}/comments.csv">comments.csv</a>
-        </p>
-        ${CS.changelogHTML(s.changelog, s.version)}
-      </article>
-    `).join('');
-  }
-
-  init();
-})();
-</script>
+<script src="/data/assets/compare.js"></script>
 
 <iframe name="subscribe-target" class="subscribe-target-frame" aria-hidden="true" tabindex="-1"></iframe>
 </body>

@@ -18,7 +18,19 @@
         "clear_position_base": 220
       },
       "version": 2,
-      "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')"
+      "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
+      "changelog": [
+        {
+          "version": 1,
+          "date": "2026-09-16",
+          "note": "Second-capture coding run behind the published article (322 comments, two parallel coders, 14 frames plus other). Not archived as a row-level file; described only in the article's method section and the project findings note."
+        },
+        {
+          "version": 2,
+          "date": "2026-09-18",
+          "note": "Row-level recode from the raw yt-dlp export, since coded_full.json was never archived. Frame list redrafted from the article's own documented frames and quotes, aimed at reproducing the published figures rather than an independent fresh read. Reproduces the published article's structural counts exactly (322 rows, 232/90 top-level/reply split, 1,048 likes, 237 authors) and lands close on most headline figures (disagree's like share exact at 1.6%; hype-or-staged, regulation and hostile-dismissal within a point of the published shares). Runs higher on agree share (72.7% vs 67.7% published) and lower on mixed (8.6% vs 14.3%), and under-counts explicit messenger-credential mentions (3 of 322 here vs 7 published) despite a targeted check against the article's own quoted examples. Ben Matthews spot-checked a random 40-comment sample and approved proceeding, 40/40."
+        }
+      ]
     },
     {
       "slug": "cotra-episode-2026-09",
@@ -32,7 +44,19 @@
         "clear_position_base": 1590
       },
       "version": 2,
-      "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')"
+      "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
+      "changelog": [
+        {
+          "version": 1,
+          "date": "2026-09-08",
+          "note": "Page capture, 1,249 of 1,569 comments, coded with an earlier frame list; article published from it. Files not archived."
+        },
+        {
+          "version": 2,
+          "date": "2026-09-17",
+          "note": "Complete yt-dlp capture (2,999 comments) recoded against a redrafted 18-frame list with the series' full five-dimension scheme. Supersedes v1."
+        }
+      ]
     },
     {
       "slug": "coxon-resignation-2026-09",
@@ -46,7 +70,14 @@
         "clear_position_base": 1840
       },
       "version": 1,
-      "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')"
+      "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
+      "changelog": [
+        {
+          "version": 1,
+          "date": "2026-09-18",
+          "note": "Initial import: 2,480 rows from the coded TSV export, transformed into contract shape (columns renamed to the mentions_<thing> convention, coder/spot_checked/correction_note columns added, parent_id/depth blanked since they do not resolve within this sample, reply_count and reposts kept as study-specific extra columns after correction_note, matching Cotra's reply_count precedent)."
+        }
+      ]
     },
     {
       "slug": "metr-report-reddit-2026-09",
@@ -60,7 +91,19 @@
         "clear_position_base": 395
       },
       "version": 1,
-      "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')"
+      "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
+      "changelog": [
+        {
+          "version": 1,
+          "date": "2026-09-17",
+          "note": "Recode of the raw page captures with the series' full five-dimension scheme. Supersedes the coding run behind the published article, which is not on file. Counts differ from the article (516 coded here against 692 reported) because collapsed replies in the captures were not expanded."
+        },
+        {
+          "version": 1,
+          "date": "2026-09-17",
+          "note": "Spot-check recorded: 40/40."
+        }
+      ]
     },
     {
       "slug": "soares-reel-2026-08",
@@ -74,7 +117,19 @@
         "clear_position_base": 1271
       },
       "version": 2,
-      "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')"
+      "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
+      "changelog": [
+        {
+          "version": 1,
+          "date": "2026-08-29",
+          "note": "Logged-in API capture, 1,666 of 1,703 comments, coded with like counts available. Article published from it."
+        },
+        {
+          "version": 2,
+          "date": "2026-09-17",
+          "note": "Page-text recapture (2,136 of 2,715 comments then live; likely under-counts unexpanded reply threads, the same limitation seen in the METR Reddit capture) recoded against an 18-frame list. No like counts available in this capture, so engagement-weighted findings from v1 cannot be reproduced or updated. Supersedes v1 for stance/frame shares only."
+        }
+      ]
     }
   ]
 }

@@ -1,6 +1,6 @@
-/* Shared styles for /data/<slug>/, /data/<slug>/c/ and /data/<slug>/codebook/.
-   Namespaced under .study-* / .code-chip so nothing here can collide with
-   the older /data/explorer.css still used by other studies' pages. */
+/* Shared styles for /data/<slug>/, /data/<slug>/c/, /data/<slug>/codebook/,
+   /data/ (study cards) and /data/compare/. Namespaced under .study-* /
+   .code-chip / .cmp-* so nothing here collides with the site's own styles.css. */
 
 .study-hero .meta {
   font-family: var(--mono);
@@ -19,6 +19,31 @@
   border-bottom: 1px solid var(--teal-text);
 }
 .study-hero .back-link:hover { color: var(--teal); border-color: var(--teal); }
+
+/* Changelog <details>, used both in a study's own hero (after .meta) and on
+   its /data/ index card (after .raw-links): one shared style for both. */
+.study-changelog {
+  margin: 0.6rem 0 0;
+  font-size: 0.85rem;
+}
+.study-changelog summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  cursor: pointer;
+  color: var(--teal-text);
+  list-style: none;
+}
+.study-changelog summary::-webkit-details-marker { display: none; }
+.study-changelog summary::after {
+  content: "+";
+  font-family: var(--mono);
+  color: var(--signal);
+  transition: transform 0.15s ease;
+}
+.study-changelog[open] summary::after { transform: rotate(45deg); }
+.study-changelog ul { margin: 0.5rem 0 0; padding: 0 0 0 1.1rem; color: var(--ink-soft); }
+.study-changelog li { margin: 0 0 0.4rem; }
 
 /* ---------- Explorer layout: sidebar + main ---------- */
 .study-layout {
@@ -347,15 +372,44 @@
 }
 .study-detail-main .permalink a { color: var(--teal-text); word-break: break-all; }
 
-.study-slot {
-  border: 1px dashed var(--line);
+.citation-block {
+  border: 1px solid var(--line);
   border-radius: 10px;
+  background: var(--paper-2);
   padding: 1.1rem 1.3rem;
-  margin-bottom: 1rem;
-  color: var(--ink-faint);
-  font-family: var(--mono);
-  font-size: 0.85rem;
+  margin-bottom: 2rem;
 }
+.citation-block .share-copy { margin-top: 0; }
+.citation-preview {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--ink-faint);
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  margin: 0.8rem 0 0;
+}
+
+.similar-heading {
+  font-family: var(--sans);
+  font-size: 1.1rem;
+  margin: 0 0 1rem;
+}
+.similar-list {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.similar-list li {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+}
+.similar-excerpt { margin: 0 0 0.6rem; color: var(--ink-soft); }
+.similar-list .comment-codes { margin: 0 0 0.6rem; overflow-x: hidden; }
+.similar-list a { font-size: 0.85rem; color: var(--teal-text); }
 
 .study-codes-panel {
   position: sticky;
@@ -506,9 +560,58 @@
 .study-contract-note a { color: var(--teal-text); text-decoration-color: var(--teal-text); }
 .study-contract-note a:hover { color: var(--teal); text-decoration-color: var(--teal); }
 
+/* ---------- Compare view (/data/compare/) ---------- */
+.cmp-dimension { margin: 0 0 3rem; }
+.cmp-dimension h2 { font-size: 1.4rem; margin: 0 0 0.5rem; }
+.cmp-dimension-intro { color: var(--ink-soft); max-width: 62ch; margin: 0 0 1.6rem; }
+.cmp-study-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.4rem;
+}
+.cmp-study-block {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper-2);
+  padding: 1.2rem 1.4rem;
+}
+.cmp-study-block h3 { font-size: 1rem; margin: 0 0 1rem; }
+.cmp-study-block h3 a { color: var(--ink); text-decoration-color: var(--line); }
+.cmp-study-block h3 a:hover { color: var(--teal-text); text-decoration-color: var(--teal-text); }
+.cmp-bar-row {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr auto;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 0.55rem;
+  font-size: 0.85rem;
+}
+.cmp-bar-label { color: var(--ink-soft); overflow-wrap: break-word; }
+.cmp-bar-track {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  height: 0.85rem;
+  overflow: hidden;
+}
+.cmp-bar-fill { background: var(--signal); height: 100%; }
+.cmp-bar-pct { font-family: var(--mono); font-size: 0.8rem; color: var(--ink); white-space: nowrap; }
+.cmp-bar-n { color: var(--ink-faint); }
+.cmp-base-note { font-size: 0.8rem; color: var(--ink-faint); margin: 0.8rem 0 0; }
+.cmp-frame-note {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper-2);
+  padding: 1.2rem 1.4rem;
+  margin: 2rem 0;
+  color: var(--ink-soft);
+}
+.cmp-frame-note p { margin: 0; }
+
 @media (max-width: 860px) {
   .study-layout { grid-template-columns: 1fr; }
   .study-sidebar { position: static; }
   .study-detail-layout { grid-template-columns: 1fr; }
   .study-codes-panel { position: static; }
+  .cmp-bar-row { grid-template-columns: 5.5rem 1fr auto; }
 }

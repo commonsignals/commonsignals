@@ -257,6 +257,7 @@ def cmd_index(args):
             "counts": {k: s["counts"][k] for k in COUNTS_REQUIRED},
             "version": s["version"],
             "licence": s["licence"],
+            "changelog": s["changelog"],
         })
     index = {
         "$schema": "https://commonsignals.org/data/studies/_schema/index.schema.json",
@@ -291,6 +292,57 @@ def typed_row(row: dict, flag_keys: set) -> dict:
     return out
 
 
+def compute_similar(comments: list, codebook: dict, top_n: int = 5) -> None:
+    """Rank, for each non-stub comment, up to top_n other non-stub comments in
+    the SAME study by shared codes (single-kind dimension values, and flag-kind
+    dimensions both hold true), weighting a shared code by 1/its frequency in
+    this study, so a code nearly every comment carries (format_reaction=none,
+    say) counts for almost nothing next to one only a handful share. Mutates
+    each comment dict in place, adding similar_ids. Comparing across studies
+    would be meaningless (frame vocabularies do not overlap), so this is
+    always called once per study, over that study's own comments only.
+    """
+    single_keys = [d["key"] for d in codebook["dimensions"] if d["kind"] == "single"]
+    flag_keys = [d["key"] for d in codebook["dimensions"] if d["kind"] == "flag"]
+
+    def codes_for(row):
+        codes = {(k, row[k]) for k in single_keys if row.get(k)}
+        codes.update((k, True) for k in flag_keys if row.get(k) is True)
+        return codes
+
+    live = [r for r in comments if r.get("coder") != STUB_CODER_VALUE]
+    codes_by_id = {r["id"]: codes_for(r) for r in live}
+
+    freq = {}
+    for codes in codes_by_id.values():
+        for code in codes:
+            freq[code] = freq.get(code, 0) + 1
+    weight = {code: 1.0 / count for code, count in freq.items()}
+
+    by_code = {}
+    for r in live:
+        for code in codes_by_id[r["id"]]:
+            by_code.setdefault(code, []).append(r["id"])
+
+    similar = {}
+    for r in live:
+        rid = r["id"]
+        own_codes = codes_by_id[rid]
+        candidates = set()
+        for code in own_codes:
+            candidates.update(by_code[code])
+        candidates.discard(rid)
+        scored = []
+        for cid in candidates:
+            shared = own_codes & codes_by_id[cid]
+            scored.append((sum(weight[c] for c in shared), len(shared), cid))
+        scored.sort(key=lambda t: (-t[0], -t[1], t[2]))
+        similar[rid] = [cid for _, _, cid in scored[:top_n]]
+
+    for r in comments:
+        r["similar_ids"] = similar.get(r["id"], [])
+
+
 def cmd_build(args):
     root = STUDIES_ROOT
     slugs = [args[0]] if args else study_slugs(root)
@@ -321,6 +373,7 @@ def cmd_build(args):
         study, codebook, rows = load_study(folder)
         flag_keys = {d["key"] for d in codebook["dimensions"] if d["kind"] == "flag"}
         comments = [typed_row(r, flag_keys) for r in rows]
+        compute_similar(comments, codebook)
         payload = {"study": study, "codebook": codebook, "comments": comments}
 
         out_dir = data_root / slug
