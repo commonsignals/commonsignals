@@ -1,0 +1,128 @@
+{
+ "central_claim": "Neither OpenAI nor Anthropic is acting responsibly with frontier AI, and both are racing toward dangerous self-improving superintelligence.",
+ "stance_note": "agree = accepts that neither OpenAI nor Anthropic is acting responsibly and that racing toward self-improving superintelligence is a danger worth resigning over; disagree = rejects this, on any grounds (capability scepticism, geopolitics, IPO cynicism, or defending the labs); mixed = accepts part of the danger claim while rejecting or reframing another part, for example disputing that resigning was the right response.",
+ "coder_instructions": "Code the reply as posted; quote-tweets, the parent tweet's text and prior replies in the thread are not supplied as context. Comments with no readable position (jokes, one-liners, pure reactions to format) are stance na; genuinely ambiguous attempts at a position are unclear, used sparingly. When a comment fits two frames, pick the one it leads with. Rows with no text (GIF, image or sticker-only replies the platform exposed no text for) are marked coder=not_coded_empty_stub, with placeholder codes (stance na, frame format_only, format_reaction none, emotion neutral) rather than left blank.",
+ "dimensions": [
+  {
+   "key": "stance",
+   "label": "Stance",
+   "kind": "single",
+   "shared": true,
+   "values": [
+    {"value": "agree", "label": "Agree", "definition": "accepts that neither company is acting responsibly and the danger described is real"},
+    {"value": "disagree", "label": "Disagree", "definition": "rejects this, on any grounds"},
+    {"value": "mixed", "label": "Mixed", "definition": "accepts part, rejects or reframes part"},
+    {"value": "na", "label": "Na", "definition": "on topic but no readable position"},
+    {"value": "unclear", "label": "Unclear", "definition": "genuinely cannot be told either way; used sparingly"}
+   ]
+  },
+  {
+   "key": "frame",
+   "label": "Frame",
+   "kind": "single",
+   "shared": false,
+   "values": [
+    {"value": "capability_scepticism", "label": "Capability scepticism", "definition": "doubts current or near-term AI can do what Coxon describes", "example": "We aren't going to die out because a token prediction model gained sentience. Get a grip."},
+    {"value": "china_race", "label": "China race", "definition": "argues unilateral restraint just hands the advantage to China or another geopolitical rival"},
+    {"value": "format_only", "label": "Format only", "definition": "reacts only to the thread's tone, length or format rather than its content", "example": "Well this was a pleasant read right before bed."},
+    {"value": "general_agreement", "label": "General agreement", "definition": "endorsement without a distinct argument"},
+    {"value": "technical_argument", "label": "Technical argument", "definition": "makes a substantive technical claim about how the danger would or wouldn't unfold", "example": "Imagine the next big war isn't kinetic, it doesn't involve bombs or guns. It doesn't even involve people - it's between AI models."},
+    {"value": "blame_people", "label": "Blame people", "definition": "accepts the danger is real but locates the fault in human greed, elitism or the desire for control rather than the technology itself", "example": "This is exactly why AI needs to be people-owned, not controlled by a handful of billionaires."},
+    {"value": "how_to_act", "label": "How to act", "definition": "asks or proposes what an ordinary person, or anyone, should actually do in response", "example": "Can someone explain what we non-tech non-billionaire non-bunker owning people are supposed to do with this information?"},
+    {"value": "scifi", "label": "Scifi", "definition": "frames the claim through film, book, game or other fiction"},
+    {"value": "hypocrisy_critique", "label": "Hypocrisy critique", "definition": "argues that quitting is the wrong response if Coxon genuinely believes what he says", "example": "if you really believe this you stay on the job and sabotage the progress, what does resigning do?"},
+    {"value": "messenger_authenticity", "label": "Messenger authenticity", "definition": "questions or defends whether Coxon's resignation and stated motives are genuine, as opposed to arguing about the danger claim itself", "example": "Be real bro you did it for the Aella incentive and aura farming points."},
+    {"value": "ipo_marketing_cynicism", "label": "Ipo marketing cynicism", "definition": "reads the whole thread as promotional and timed to Anthropic's pending IPO", "example": "okay so buy the IPO?"},
+    {"value": "fatalism", "label": "Fatalism", "definition": "accepts the danger but responds with resignation or nihilism rather than a call to act", "example": "oh, so we're fucking fucked"},
+    {"value": "conspiracy_other_target", "label": "Conspiracy or other target", "definition": "reframes the thread as a paid, staged or PR operation for Anthropic, OpenAI or another party, rather than a sincere resignation", "example": "wait bro this is the latest round of Anthropic PR lol can't believe I didn't see it at first."},
+    {"value": "religion_spiritual", "label": "Religion or spiritual", "definition": "frames the danger, or Coxon's role, in religious or spiritual terms", "example": "If AI apocalypse is our downfall then that is gods will."},
+    {"value": "present_harms", "label": "Present harms", "definition": "argues the more pressing danger is nearer-term harm, such as jobs or economic disruption, rather than existential risk", "example": "either we think this technology kills us all, or we think it takes all of our jobs"},
+    {"value": "benefits", "label": "Benefits", "definition": "argues AI's benefits outweigh the risk described, or that stopping or slowing development is the real danger", "example": "We will not throw away a utopian paradise for a small chance of it not working."},
+    {"value": "other", "label": "Other", "definition": "doesn't fit any of the above, including off-topic tangents and undifferentiated hostility"}
+   ]
+  },
+  {
+   "key": "format_reaction",
+   "label": "Format reaction",
+   "kind": "single",
+   "shared": false,
+   "values": [
+    {"value": "none", "label": "None", "definition": "no distinct reaction to the thread as a piece of writing, beyond the content argument itself"},
+    {"value": "mock", "label": "Mock", "definition": "mocks or ridicules the thread, Coxon, or the situation, rather than engaging its content"},
+    {"value": "condescended", "label": "Condescended", "definition": "responds with a condescending or patronising tone toward Coxon"},
+    {"value": "imitates", "label": "Imitates", "definition": "imitates or parodies Coxon's writing style or voice"},
+    {"value": "praise", "label": "Praise", "definition": "praises Coxon, the thread, or the decision to write and post it, as a piece of communication"}
+   ]
+  },
+  {
+   "key": "emotion",
+   "label": "Emotion",
+   "kind": "single",
+   "shared": true,
+   "values": [
+    {"value": "neutral", "label": "Neutral", "definition": "dominant emotional register: neutral"},
+    {"value": "fear", "label": "Fear", "definition": "dominant emotional register: fear"},
+    {"value": "anger", "label": "Anger", "definition": "dominant emotional register: anger"},
+    {"value": "resignation", "label": "Resignation", "definition": "dominant emotional register: resignation"},
+    {"value": "humour", "label": "Humour", "definition": "dominant emotional register: humour"},
+    {"value": "hope", "label": "Hope", "definition": "dominant emotional register: hope"}
+   ]
+  },
+  {
+   "key": "mentions_messenger_credentials",
+   "label": "mentions_messenger_credentials",
+   "kind": "flag",
+   "shared": true,
+   "values": [{"value": "true", "label": "mentions_messenger_credentials", "definition": "names Coxon's own career history, credentials, or trustworthiness as the messenger, attacking or defending them"}]
+  },
+  {
+   "key": "mentions_leaders_policy",
+   "label": "mentions_leaders_policy",
+   "kind": "flag",
+   "shared": true,
+   "values": [{"value": "true", "label": "mentions_leaders_policy", "definition": "governments, regulators, politicians, treaties, courts, law"}]
+  },
+  {
+   "key": "mentions_companies_billionaires",
+   "label": "mentions_companies_billionaires",
+   "kind": "flag",
+   "shared": true,
+   "values": [{"value": "true", "label": "mentions_companies_billionaires", "definition": "names companies, investors, billionaires, bubble, IPO"}]
+  },
+  {
+   "key": "mentions_cultural_reference",
+   "label": "mentions_cultural_reference",
+   "kind": "flag",
+   "shared": true,
+   "values": [{"value": "true", "label": "mentions_cultural_reference", "definition": "references any film, book, game or fictional AI/robot"}]
+  },
+  {
+   "key": "mentions_asks_what_to_do",
+   "label": "mentions_asks_what_to_do",
+   "kind": "flag",
+   "shared": true,
+   "values": [{"value": "true", "label": "mentions_asks_what_to_do", "definition": "asks or proposes what should be done"}]
+  },
+  {
+   "key": "mentions_china",
+   "label": "mentions_china",
+   "kind": "flag",
+   "shared": false,
+   "values": [{"value": "true", "label": "mentions_china", "definition": "mentions China, or geopolitical AI-race dynamics, specifically"}]
+  },
+  {
+   "key": "mentions_ipo",
+   "label": "mentions_ipo",
+   "kind": "flag",
+   "shared": false,
+   "values": [{"value": "true", "label": "mentions_ipo", "definition": "specifically invokes Anthropic's pending IPO, or reads the thread as promotional or timed to it (narrower than mentions_companies_billionaires, which covers company and investor mentions generally)"}]
+  },
+  {
+   "key": "non_english",
+   "label": "non_english",
+   "kind": "flag",
+   "shared": true,
+   "values": [{"value": "true", "label": "non_english", "definition": "mostly not in English"}]
+  }
+ ]
+}

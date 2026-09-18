@@ -1,6 +1,6 @@
 # The studies data contract
 
-This describes the shape every study folder under `/data/studies/` follows. It reflects what the three studies on file (`metr-report-reddit-2026-09`, `cotra-episode-2026-09`, `soares-reel-2026-08`) actually contain, not just the original design, so a couple of things below are deliberate adjustments from that first draft. They are called out as they come up.
+This describes the shape every study folder under `/data/studies/` follows. It reflects what the studies on file (`metr-report-reddit-2026-09`, `cotra-episode-2026-09`, `soares-reel-2026-08`, `amanpour-segment-2026-09`, `coxon-resignation-2026-09`) actually contain, not just the original design, so a couple of things below are deliberate adjustments from that first draft. They are called out as they come up.
 
 ## Layout
 
@@ -28,7 +28,7 @@ Required fields:
 
 - `slug`: string, matches the folder name.
 - `title`: string.
-- `series`: string. All three studies on file share `"agent-swarm reception"`.
+- `series`: string. Four studies on file share `"agent-swarm reception"`; `coxon-resignation-2026-09` is `"resignation reception"`, since it reacts to a different artefact (Coxon's own resignation) rather than the OpenAI/Hugging Face incident the other four are all about. `/data/studies/index.json`'s top-level `series` is therefore a list of every distinct value on file, not a single string.
 - `platform`: string, for example `"reddit"`, `"youtube"`, `"instagram"`.
 - `artefact_title`, `artefact_url`, `artefact_published`: the thing being reacted to (the article, video or post) and when it went up.
 - `central_claim`: the statement stance is coded against. Say what counts as agreeing with it, either here or in the codebook's `stance_note`.
@@ -41,7 +41,7 @@ Required fields:
 - `findings_note_url`: nullable.
 - `version`: integer, starts at 1.
 - `changelog`: array of `{version, date, note}`, oldest first.
-- `licence`: string. All three studies on file use `"CC BY 4.0 (coding and compilation; comment text remains its authors')"`. The licence covers the coding and compilation; comment text remains its authors'.
+- `licence`: string. All studies on file use `"CC BY 4.0 (coding and compilation; comment text remains its authors')"`. The licence covers the coding and compilation; comment text remains its authors'.
 - `notes`: free text for anything that does not fit elsewhere (known gaps, caveats, things a reader should know before quoting a number).
 
 ## codebook.json
@@ -64,7 +64,7 @@ Columns, in this order, where they exist:
 
 `id, parent_id, depth, author_hash, published_at, published_at_precision, likes, text, stance, frame, format_reaction, emotion`, then one column per mention flag named `mentions_<thing>` (plus any bare flags like `non_english`), then `coder, spot_checked, correction_note`. A study may append its own group columns after these (METR has `period, subreddit, thread_url`); each must be declared in `codebook.json` as a `group` dimension.
 
-Rules, and the exceptions actually seen in the three studies on file:
+Rules, and the exceptions actually seen in the studies on file:
 
 - `id` is unique within the file.
 - `parent_id` is empty or resolves to an `id` in the same file. `depth` is `0` when `parent_id` is empty; the contract does not assume `depth` equals the parent's depth plus one, because platforms with a flat reply UI (confirmed for YouTube) give every reply depth 1 regardless of which comment in the thread it replies to.

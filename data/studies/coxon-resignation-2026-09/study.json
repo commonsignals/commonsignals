@@ -1,0 +1,43 @@
+{
+ "slug": "coxon-resignation-2026-09",
+ "title": "X replies to Jacob Coxon's Anthropic resignation thread",
+ "series": "resignation reception",
+ "platform": "x",
+ "artefact_title": "Jacob Coxon's seven-tweet resignation thread on X",
+ "artefact_url": "https://x.com/hilbertspaess/status/2097476196791709843",
+ "artefact_published": "2026-09-09",
+ "central_claim": "Neither OpenAI nor Anthropic is acting responsibly with frontier AI, and both are racing toward dangerous self-improving superintelligence.",
+ "capture_dates": [
+  "2026-09-18"
+ ],
+ "capture_method": "X gives no API or export route, so every reply was retrieved through a signed-in browser session reading the on-page feed directly, across all four sort views the platform offers. Each view independently stops rendering new items after a few hundred, regardless of how many replies the post has, so the 25,219 replies across all seven posts were never fully reachable: 2,639 items were retrieved and 2,480 remained after excluding promoted content and Coxon's own thread posts. Coverage per post ranged from 2.6% (the root post, with 20,553 replies) to 93% (the smallest follow-up post, with 250 replies). Because coverage is such a sparse, sort-view-selected slice of each post's replies, a reply's parent_id almost never resolves to another row in this same file (0 of 1,946 non-blank parent_id values do); threading is therefore not preserved at all, and comments.csv leaves parent_id and depth blank on every row, the same convention used for METR and Soares.",
+ "counts": {
+  "retrieved": 2639,
+  "coded": 2480,
+  "clear_position_base": 1840,
+  "empty_or_stub": 89,
+  "authors": 2238,
+  "total_likes": 335314,
+  "likes_present": 2339
+ },
+ "spot_check": {
+  "sample": 40,
+  "agreed": 38,
+  "checked_by": "Ben Matthews",
+  "date": "2026-09-18",
+  "note": "Random 40-reply sample checked against the codebook on stance, frame, format reaction and emotion before publication; 38/40 agreed. Which specific rows were sampled was not recorded at row level, so comments.csv's spot_checked column is false throughout; this field is the only record of the check."
+ },
+ "coders": "Claude (claude-sonnet-5), parallel batches of about 190 (2,391 replies carrying text)",
+ "article_url": "https://commonsignals.org/coxon-resignation-x-analysis",
+ "findings_note_url": null,
+ "version": 1,
+ "changelog": [
+  {
+   "version": 1,
+   "date": "2026-09-18",
+   "note": "Initial import: 2,480 rows from the coded TSV export, transformed into contract shape (columns renamed to the mentions_<thing> convention, coder/spot_checked/correction_note columns added, parent_id/depth blanked since they do not resolve within this sample, reply_count and reposts kept as study-specific extra columns after correction_note, matching Cotra's reply_count precedent)."
+  }
+ ],
+ "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
+ "notes": "The first study in this series not about the OpenAI/Hugging Face agent-swarm incident: Coxon's thread is about his own resignation, a different artefact entirely, so this study's series is 'resignation reception' rather than 'agent-swarm reception'. format_reaction uses a study-specific vocabulary (mock/condescended/imitates/praise/none, reactions to Coxon and the thread as a piece of writing) rather than the interview-reaction vocabulary used elsewhere in the series, since there is no interview format here to react to; marked shared:false in codebook.json accordingly. 89 rows have no text (GIF/image/sticker-only replies the platform exposed no text for) and are marked coder=not_coded_empty_stub with placeholder codes (stance na, frame format_only, format_reaction none, emotion neutral), per the contract's stub exemption; they still carry real likes/reposts/reply_count/timestamp data, unlike some stub rows in other studies."
+}

@@ -260,8 +260,8 @@ def cmd_index(args):
         })
     index = {
         "$schema": "https://commonsignals.org/data/studies/_schema/index.schema.json",
-        "series": studies[0]["series"] if studies else None,
-        "generated_note": "Generated from each study's study.json by scripts/data-export.py index. Regenerate rather than hand-edit.",
+        "series": sorted({s["series"] for s in studies}),
+        "generated_note": "Generated from each study's study.json by scripts/data-export.py index. Regenerate rather than hand-edit. 'series' is every distinct series value on file, not one sitewide series; each study's own series is under studies[].series.",
         "studies": studies,
     }
     out = root / "index.json"

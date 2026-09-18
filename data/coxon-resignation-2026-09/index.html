@@ -4,13 +4,13 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <script src="/analytics.js"></script>
-<title>Data: Common Signals</title>
-<meta name="description" content="Browse and filter the coded comment datasets behind Common Signals' reception studies: every comment, its stance, frame and emotion, published under CC BY 4.0." />
+<title>X replies to Jacob Coxon's Anthropic resignation thread: Common Signals</title>
+<meta name="description" content="Search and filter all 2,480 coded X replies behind '&ldquo;Neither company is acting responsibly&rdquo;' article: stance, frame, emotion and engagement, comment by comment." />
 
-<meta property="og:title" content="Data: Common Signals" />
-<meta property="og:description" content="Browse and filter the coded comment datasets behind Common Signals' reception studies: every comment, its stance, frame and emotion, published under CC BY 4.0." />
+<meta property="og:title" content="X replies to the Coxon resignation thread: data explorer" />
+<meta property="og:description" content="Search and filter all 2,480 coded X replies behind '&ldquo;Neither company is acting responsibly&rdquo;' article: stance, frame, emotion and engagement, comment by comment." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://commonsignals.org/data/" />
+<meta property="og:url" content="https://commonsignals.org/data/coxon-resignation-2026-09/" />
 <meta property="og:site_name" content="Common Signals" />
 <meta property="og:image" content="https://commonsignals.org/og-image.png" />
 <meta property="og:image:width" content="1200" />
@@ -18,11 +18,11 @@
 <meta property="og:image:alt" content="Common Signals: helping AI communicators know which messages and messengers actually work." />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Data: Common Signals" />
-<meta name="twitter:description" content="Browse and filter the coded comment datasets behind Common Signals' reception studies: every comment, its stance, frame and emotion, published under CC BY 4.0." />
+<meta name="twitter:title" content="X replies to the Coxon resignation thread: data explorer" />
+<meta name="twitter:description" content="Search and filter all 2,480 coded X replies behind '&ldquo;Neither company is acting responsibly&rdquo;' article: stance, frame, emotion and engagement, comment by comment." />
 <meta name="twitter:image" content="https://commonsignals.org/og-image.png" />
 
-<link rel="canonical" href="https://commonsignals.org/data/" />
+<link rel="canonical" href="https://commonsignals.org/data/coxon-resignation-2026-09/" />
 <meta name="robots" content="index, follow" />
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -38,10 +38,11 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Data",
-  "description": "Browse and filter the coded comment datasets behind Common Signals' reception studies.",
-  "url": "https://commonsignals.org/data/",
+  "@type": "Dataset",
+  "name": "X replies to Jacob Coxon's Anthropic resignation thread",
+  "description": "Search and filter all 2,480 coded X replies behind '“Neither company is acting responsibly”' article: stance, frame, emotion and engagement, comment by comment.",
+  "url": "https://commonsignals.org/data/coxon-resignation-2026-09/",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
   "isPartOf": { "@type": "WebSite", "name": "Common Signals", "url": "https://commonsignals.org/" }
 }
 </script>
@@ -82,19 +83,44 @@
 
 <main id="top">
 
-  <div class="page-hero">
-    <h1>Data</h1>
-    <p class="sub">Every coded comment behind our reception studies, browsable and filterable, comment by comment. The same data the articles are built from, published under CC BY 4.0.</p>
+  <div class="page-hero study-hero">
+    <h1 id="studyTitle">Loading study&hellip;</h1>
+    <p id="studyMeta" class="meta"></p>
   </div>
 
-  <section id="data-index">
+  <div class="study-layout wrap">
+    <aside class="study-sidebar" aria-label="Search and filters">
+      <div class="study-search">
+        <label for="expSearch">Search comment text</label>
+        <input type="search" id="expSearch" placeholder="Search comment text" autocomplete="off">
+      </div>
+      <div class="study-facets" id="expFacets"></div>
+    </aside>
+
+    <div class="study-main">
+      <div class="study-toolbar">
+        <span class="study-count" id="expCount" role="status" aria-live="polite"></span>
+        <div class="study-toggle" role="group" aria-label="View">
+          <button type="button" id="viewComments" aria-pressed="true">Comments</button>
+          <button type="button" id="viewQuotes" aria-pressed="false">Quotes</button>
+        </div>
+        <p class="study-quotes-note" id="quotesNote" hidden></p>
+        <label class="study-sort">Sort
+          <select id="expSort">
+            <option value="thread">Thread order</option>
+            <option value="likes">Likes (most first)</option>
+            <option value="date">Date (newest first)</option>
+          </select>
+        </label>
+        <button type="button" class="btn btn-ghost" id="expExport">Export CSV</button>
+      </div>
+      <div id="expList"></div>
+    </div>
+  </div>
+
+  <section class="study-contract-note">
     <div class="wrap">
-      <div class="study-cards" id="studyCards">
-        <p>Loading studies&hellip;</p>
-      </div>
-      <div class="study-contract-note">
-        <p>Each study is coded on stance, frame, format reaction and emotion against its own codebook, plus a handful of flags for what a comment mentions. Stance and emotion use mostly the same categories across the five studies; frame and format reaction are study-specific. Comment text is verbatim; author identities are hashed, not published. Full contract, JSON schemas and licensing: <a href="/data/studies/README.md">/data/studies/README.md</a>. The coding and compilation are CC BY 4.0; comment text remains its authors'.</p>
-      </div>
+      <p>Full data contract, licence and the other studies in this series: <a href="/data/studies/README.md">/data/studies/README.md</a>. Raw files for this study: <a href="/data/studies/coxon-resignation-2026-09/study.json">study.json</a>, <a href="/data/studies/coxon-resignation-2026-09/codebook.json">codebook.json</a>, <a href="/data/studies/coxon-resignation-2026-09/comments.csv">comments.csv</a>. Codebook: <a href="/data/coxon-resignation-2026-09/codebook/">/data/coxon-resignation-2026-09/codebook/</a>. Companion article: <a id="articleLink" href="#" hidden>read it here</a>.</p>
     </div>
   </section>
 
@@ -157,48 +183,8 @@
 </footer>
 
 <script src="/main.js" defer></script>
-<script>
-(function () {
-  function esc(s) {
-    return String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-  }
-  const PLATFORM_LABEL = { reddit: 'Reddit', youtube: 'YouTube', instagram: 'Instagram', x: 'X' };
-
-  async function init() {
-    const el = document.getElementById('studyCards');
-    let data;
-    try {
-      data = await fetch('/data/studies/index.json', { cache: 'no-cache' }).then((r) => {
-        if (!r.ok) throw new Error('index.json ' + r.status);
-        return r.json();
-      });
-    } catch (err) {
-      el.innerHTML = `<p>Could not load the studies index (${esc(err.message)}). Try <a href="/data/studies/index.json">index.json</a> directly.</p>`;
-      return;
-    }
-
-    el.innerHTML = data.studies.map((s) => `
-      <article class="study-card">
-        <p class="platform">${esc(PLATFORM_LABEL[s.platform] || s.platform)}</p>
-        <h2>${esc(s.title)}</h2>
-        <div class="facts">
-          <div><span class="k">Coded</span><span class="v">${s.counts.coded.toLocaleString()}</span></div>
-          <div><span class="k">Positioned</span><span class="v">${s.counts.clear_position_base.toLocaleString()}</span></div>
-        </div>
-        <div class="actions">
-          <a class="btn btn-primary" href="/data/${esc(s.slug)}/">Explore comments</a>
-          ${s.article_url ? `<a class="btn btn-ghost" href="${esc(s.article_url)}">Read the article</a>` : ''}
-        </div>
-        <p class="raw-links">
-          <a href="/data/studies/${esc(s.slug)}/study.json">study.json</a><span>&middot;</span><a href="/data/${esc(s.slug)}/codebook/">codebook</a><span>&middot;</span><a href="/data/studies/${esc(s.slug)}/comments.csv">comments.csv</a>
-        </p>
-      </article>
-    `).join('');
-  }
-
-  init();
-})();
-</script>
+<script src="/data/assets/core.js"></script>
+<script src="/data/assets/explorer.js"></script>
 
 <iframe name="subscribe-target" class="subscribe-target-frame" aria-hidden="true" tabindex="-1"></iframe>
 </body>

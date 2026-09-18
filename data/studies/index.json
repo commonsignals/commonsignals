@@ -1,7 +1,10 @@
 {
   "$schema": "https://commonsignals.org/data/studies/_schema/index.schema.json",
-  "series": "agent-swarm reception",
-  "generated_note": "Generated from each study's study.json by scripts/data-export.py index. Regenerate rather than hand-edit.",
+  "series": [
+    "agent-swarm reception",
+    "resignation reception"
+  ],
+  "generated_note": "Generated from each study's study.json by scripts/data-export.py index. Regenerate rather than hand-edit. 'series' is every distinct series value on file, not one sitewide series; each study's own series is under studies[].series.",
   "studies": [
     {
       "slug": "amanpour-segment-2026-09",
@@ -29,6 +32,20 @@
         "clear_position_base": 1590
       },
       "version": 2,
+      "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')"
+    },
+    {
+      "slug": "coxon-resignation-2026-09",
+      "title": "X replies to Jacob Coxon's Anthropic resignation thread",
+      "platform": "x",
+      "series": "resignation reception",
+      "article_url": "https://commonsignals.org/coxon-resignation-x-analysis",
+      "counts": {
+        "retrieved": 2639,
+        "coded": 2480,
+        "clear_position_base": 1840
+      },
+      "version": 1,
       "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')"
     },
     {

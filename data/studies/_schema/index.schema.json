@@ -6,7 +6,7 @@
   "type": "object",
   "required": ["series", "studies"],
   "properties": {
-    "series": { "type": "string" },
+    "series": { "type": "array", "items": { "type": "string" }, "description": "Every distinct series value across studies on file, not one sitewide series. Each study's own series is studies[].series." },
     "studies": {
       "type": "array",
       "items": {
