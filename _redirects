@@ -1,0 +1,9 @@
+# cotra's explorer moved from /data/studies/<slug>/ to /data/<slug>/.
+/data/studies/cotra-episode-2026-09   /data/cotra-episode-2026-09/   301
+/data/studies/cotra-episode-2026-09/  /data/cotra-episode-2026-09/   301
+
+# Comment detail pages (/data/<slug>/c/<id>) are served by
+# functions/data/[slug]/c/[id].js, not a rule here: Cloudflare's own static
+# routing finds /data/<slug>/c/ already exists as a directory (it has an
+# index.html) and 308s straight to it before a placeholder rule here would
+# ever get a chance to run.

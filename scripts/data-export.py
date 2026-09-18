@@ -4,11 +4,18 @@
 Usage:
     python3 scripts/data-export.py validate [slug]
     python3 scripts/data-export.py index
+    python3 scripts/data-export.py build [slug]
     python3 scripts/data-export.py export <input_csv> <input_codebook_md> <slug>
 
 `validate` checks every study folder under /data/studies/ (or just one, if a
 slug is passed) against the contract described in /data/studies/README.md.
 `index` regenerates /data/studies/index.json from each study's study.json.
+`build` validates first (aborting on any failure), then writes
+/data/<slug>/data.json for each study (or just one): study.json and
+codebook.json verbatim, plus every comments.csv row as an object with flag
+columns as real JSON booleans and `likes` as a number or null. This is what
+the explorer UI under /data/<slug>/ fetches; nothing here pre-aggregates
+facet counts, which the UI computes itself from the loaded array.
 `export` is not implemented yet -- all studies currently on file arrived
 already in contract shape.
 """
@@ -267,8 +274,64 @@ def cmd_export(args):
     sys.exit(2)
 
 
+# Fixed contract column that is boolean-shaped (see README's comments.csv
+# rules) but, unlike mentions_*/non_english, is not declared as a `flag`
+# dimension in codebook.json -- it is part of every study's CSV shape
+# regardless of that study's coding scheme.
+ALWAYS_BOOL_COLUMNS = {"spot_checked"}
+
+
+def typed_row(row: dict, flag_keys: set) -> dict:
+    out = dict(row)
+    for key in flag_keys | ALWAYS_BOOL_COLUMNS:
+        if key in out:
+            out[key] = out[key] == "true"
+    if "likes" in out:
+        out["likes"] = int(out["likes"]) if out["likes"].strip() != "" else None
+    return out
+
+
+def cmd_build(args):
+    root = STUDIES_ROOT
+    slugs = [args[0]] if args else study_slugs(root)
+
+    any_failures = False
+    for slug in slugs:
+        folder = root / slug
+        if not folder.is_dir():
+            print(f"{slug}: FAIL - no such study folder under {root}")
+            any_failures = True
+            continue
+        _, failures, _ = validate_study(folder)
+        if failures:
+            print(f"=== {slug} ===")
+            for row_id, msg in failures:
+                label = f"[{row_id}] " if row_id else ""
+                print(f"  FAIL {label}{msg}")
+            print(f"  {len(failures)} failure(s)")
+            any_failures = True
+
+    if any_failures:
+        print("\nbuild aborted: fix the validation failures above first.")
+        sys.exit(1)
+
+    data_root = root.parent  # /data
+    for slug in slugs:
+        folder = root / slug
+        study, codebook, rows = load_study(folder)
+        flag_keys = {d["key"] for d in codebook["dimensions"] if d["kind"] == "flag"}
+        comments = [typed_row(r, flag_keys) for r in rows]
+        payload = {"study": study, "codebook": codebook, "comments": comments}
+
+        out_dir = data_root / slug
+        out_dir.mkdir(parents=True, exist_ok=True)
+        out_path = out_dir / "data.json"
+        out_path.write_text(json.dumps(payload, ensure_ascii=False) + "\n")
+        print(f"wrote {out_path} ({len(comments)} comments)")
+
+
 if __name__ == "__main__":
-    if len(sys.argv) < 2 or sys.argv[1] not in ("validate", "index", "export"):
+    if len(sys.argv) < 2 or sys.argv[1] not in ("validate", "index", "build", "export"):
         print(__doc__)
         sys.exit(2)
     subcommand, rest = sys.argv[1], sys.argv[2:]
@@ -276,5 +339,7 @@ if __name__ == "__main__":
         cmd_validate(rest)
     elif subcommand == "index":
         cmd_index(rest)
+    elif subcommand == "build":
+        cmd_build(rest)
     else:
         cmd_export(rest)

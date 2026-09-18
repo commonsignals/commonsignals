@@ -1,0 +1,432 @@
+/* Shared styles for /data/<slug>/, /data/<slug>/c/ and /data/<slug>/codebook/.
+   Namespaced under .study-* / .code-chip so nothing here can collide with
+   the older /data/explorer.css still used by other studies' pages. */
+
+.study-hero .meta {
+  font-family: var(--mono);
+  font-size: 1rem;
+  color: var(--ink-faint);
+  margin-top: 1.2rem;
+}
+.study-hero .meta strong { color: var(--ink); font-weight: 600; }
+.study-hero .back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  color: var(--teal-text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--teal-text);
+}
+.study-hero .back-link:hover { color: var(--teal); border-color: var(--teal); }
+
+/* ---------- Explorer layout: sidebar + main ---------- */
+.study-layout {
+  display: grid;
+  grid-template-columns: 17rem 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+/* Grid items default to min-width:auto, which refuses to shrink below their
+   content's own preferred size -- and .study-comment .text's max-width:62ch
+   is a large preferred size. Without this, the 1fr track (and so the whole
+   page) blows out past the viewport on narrow screens instead of wrapping
+   text into the width it's actually given. */
+.study-sidebar,
+.study-main {
+  min-width: 0;
+}
+.study-sidebar {
+  position: sticky;
+  top: calc(var(--study-header-h, 72px) + 1.5rem);
+}
+.study-search { margin-bottom: 1.6rem; }
+.study-search label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.4rem;
+}
+.study-search input {
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 0 0.9rem;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+}
+.study-search input::placeholder { color: var(--ink-faint); }
+.study-search input:focus-visible { outline: 2px solid var(--signal); outline-offset: 1px; }
+
+.study-facets { display: flex; flex-direction: column; }
+.study-facet { border-bottom: 1px solid var(--line); }
+.study-facet summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 0;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+.study-facet summary:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; }
+.study-facet summary::-webkit-details-marker { display: none; }
+.study-facet summary::after {
+  content: "+";
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--signal);
+  transition: transform 0.15s ease;
+}
+.study-facet[open] summary::after { transform: rotate(45deg); }
+.study-facet-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.2rem 0 0.9rem;
+}
+.study-facet-options label {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+.study-facet-options input { margin: 0; flex: none; }
+.study-facet-options input:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; }
+.study-facet-options .n { font-family: var(--mono); font-size: 0.8rem; color: var(--ink-faint); }
+.study-facet-options label.zero { opacity: 0.45; }
+
+/* ---------- Toolbar ---------- */
+.study-toolbar {
+  position: sticky;
+  top: var(--study-header-h, 72px);
+  z-index: 15;
+  background: rgba(245, 244, 239, 0.94);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.8rem 0 1rem;
+  margin-bottom: 1rem;
+}
+.study-count {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.study-toggle { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+.study-toggle button {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  border: 0;
+  background: transparent;
+  color: var(--ink-soft);
+  padding: 0.45rem 1rem;
+  cursor: pointer;
+}
+.study-toggle button[aria-pressed="true"] { background: var(--signal); color: var(--paper); }
+.study-toggle button:disabled { color: var(--ink-faint); cursor: not-allowed; }
+.study-toggle button:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; }
+.study-quotes-note {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--ink-faint);
+  flex-basis: 100%;
+  margin: -0.4rem 0 0;
+}
+.study-sort {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.study-sort select {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.35rem 0.6rem;
+}
+.study-sort select:focus-visible { outline: 2px solid var(--signal); outline-offset: 1px; }
+.study-toolbar .btn-ghost { margin-left: auto; padding: 0.5rem 0; font-size: 0.9rem; }
+
+/* ---------- Results: comments view ---------- */
+.study-comment {
+  border-top: 1px solid var(--line);
+  padding-block: 1.2rem;
+  /* Contains .code-chip-tip: it's absolutely positioned and stays in the
+     layout box (just invisible) when closed, so near a narrow viewport's
+     edge it can inflate document.scrollWidth and cause page-wide horizontal
+     scroll even though nothing is visibly overflowing. Scoped to each row
+     rather than the sticky sidebar/toolbar ancestors, whose overflow-y
+     would otherwise need forcing to auto too (risking their sticky
+     positioning). */
+  overflow-x: hidden;
+}
+.study-comment:first-child { border-top: 0; padding-top: 0; }
+.study-comment .text {
+  margin: 0 0 0.7rem;
+  color: var(--ink);
+  max-width: 62ch;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+.study-comment mark { background: #f4dd8e; color: var(--ink); border-radius: 2px; padding: 0 1px; }
+.study-comment-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--ink-faint);
+}
+.study-comment-meta .likes { white-space: nowrap; }
+.study-comment-meta .view-link {
+  color: var(--teal-text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--teal-text);
+  margin-left: auto;
+}
+.study-comment-meta .view-link:hover { color: var(--teal); border-color: var(--teal); }
+
+.study-empty { padding: 2.5rem 0; color: var(--ink-soft); }
+.study-empty a { color: var(--teal-text); }
+
+/* ---------- Results: quotes view ---------- */
+.study-quote-group h3 {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  margin: 1.8rem 0 0.8rem;
+}
+.study-quote-group:first-child h3 { margin-top: 0; }
+.study-quotes-list { list-style: none; margin: 0; padding: 0; }
+.study-quotes-list li {
+  border-left: 3px solid var(--line);
+  padding: 0.2rem 0 0.2rem 1rem;
+  margin-bottom: 0.9rem;
+  font-style: italic;
+  color: var(--ink);
+  max-width: 62ch;
+}
+.study-quotes-list .likes {
+  display: block;
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  margin-top: 0.25rem;
+}
+
+/* ---------- Chips (neutral: colour never carries meaning) ---------- */
+.code-chip {
+  position: relative;
+  display: inline-block;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 0.12rem 0.55rem;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  background: var(--paper-2);
+  cursor: default;
+}
+.code-chip[tabindex]:hover,
+.code-chip[tabindex]:focus {
+  color: var(--ink);
+  outline: 2px solid var(--signal);
+  outline-offset: 1px;
+}
+.code-chip-tip {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 7px);
+  z-index: 30;
+  width: max-content;
+  max-width: 20rem;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  transition: opacity 0.12s ease, transform 0.12s ease;
+  pointer-events: none;
+}
+.code-chip:hover .code-chip-tip,
+.code-chip:focus .code-chip-tip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ---------- Comment detail page ---------- */
+.study-detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 20rem;
+  gap: 2.5rem;
+  align-items: start;
+  padding-bottom: 3rem;
+}
+/* See .study-sidebar/.study-main's min-width comment: same grid-blowout fix
+   for .comment-text's max-width:62ch. */
+.study-detail-main,
+.study-codes-panel {
+  min-width: 0;
+}
+.study-detail-main .parent-quote {
+  border-left: 3px solid var(--line);
+  padding: 0.9rem 0 0.9rem 1.2rem;
+  margin: 0 0 1.6rem;
+  color: var(--ink-soft);
+}
+.study-detail-main .parent-quote .label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  margin-bottom: 0.4rem;
+}
+.study-detail-main .parent-quote p { margin: 0 0 0.5rem; font-style: italic; }
+.study-detail-main .parent-quote a { color: var(--teal-text); font-family: var(--mono); font-size: 0.85rem; }
+.study-detail-main .comment-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--ink);
+  max-width: 62ch;
+  overflow-wrap: break-word;
+  margin: 0 0 1.2rem;
+}
+.study-detail-main .comment-facts {
+  font-family: var(--mono);
+  font-size: 0.88rem;
+  color: var(--ink-faint);
+  margin: 0 0 1.4rem;
+}
+.study-detail-main .comment-facts strong { color: var(--ink); font-weight: 600; }
+.study-detail-main .comment-codes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.6rem;
+  /* See .study-comment's overflow-x comment: contains .code-chip-tip so a
+     chip near a narrow viewport's edge can't inflate page scrollWidth. */
+  overflow-x: hidden;
+}
+.study-detail-main .permalink {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  margin: 0 0 2rem;
+}
+.study-detail-main .permalink a { color: var(--teal-text); word-break: break-all; }
+
+.study-slot {
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  padding: 1.1rem 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--ink-faint);
+  font-family: var(--mono);
+  font-size: 0.85rem;
+}
+
+.study-codes-panel {
+  position: sticky;
+  top: calc(var(--study-header-h, 72px) + 1.5rem);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper-2);
+  padding: 1.4rem 1.5rem;
+}
+.study-codes-panel h2 {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  margin: 0 0 1rem;
+}
+.study-codes-panel dt {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--ink);
+  margin: 1rem 0 0.2rem;
+}
+.study-codes-panel dt:first-child { margin-top: 0; }
+.study-codes-panel dd {
+  margin: 0;
+  font-size: 0.87rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+/* ---------- Codebook page ---------- */
+.study-codebook .claim-block {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.5rem 1.7rem;
+  margin: 0 0 2rem;
+}
+.study-codebook .claim-block h2 { margin-top: 0; font-size: 1rem; font-family: var(--mono); color: var(--ink-faint); }
+.study-codebook .claim-block p.claim { font-family: var(--serif); font-size: 1.3rem; line-height: 1.4; }
+.study-dim { border-top: 1px solid var(--line); padding: 1.6rem 0; }
+.study-dim:first-of-type { border-top: 0; }
+.study-dim h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  margin: 0 0 1rem;
+}
+.study-dim .shared-tag {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--teal-text);
+  border: 1px solid var(--teal-text);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+}
+.study-dim .shared-tag.not-shared { color: var(--ink-faint); border-color: var(--line); }
+.study-dim-values { display: grid; gap: 1rem; }
+.study-dim-value dt { font-family: var(--sans); font-weight: 600; color: var(--ink); }
+.study-dim-value dd { margin: 0.2rem 0 0; color: var(--ink-soft); font-size: 0.95rem; }
+.study-dim-value dd .example { display: block; margin-top: 0.3rem; color: var(--ink-faint); font-style: italic; }
+.study-dim-note { color: var(--ink-faint); font-size: 0.9rem; }
+.study-download { font-family: var(--mono); font-size: 0.9rem; }
+
+@media (max-width: 860px) {
+  .study-layout { grid-template-columns: 1fr; }
+  .study-sidebar { position: static; }
+  .study-detail-layout { grid-template-columns: 1fr; }
+  .study-codes-panel { position: static; }
+}
