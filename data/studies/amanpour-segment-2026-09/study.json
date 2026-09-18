@@ -1,0 +1,50 @@
+{
+ "slug": "amanpour-segment-2026-09",
+ "title": "YouTube comments on the Amanpour and Company Khlaaf segment",
+ "series": "agent-swarm reception",
+ "platform": "youtube",
+ "artefact_title": "\"What Really Happened When OpenAI Bots Escaped a Cybersecurity Test?\" (Amanpour and Company, PBS)",
+ "artefact_url": "https://www.youtube.com/watch?v=Rwv8zfGyvP8",
+ "artefact_published": "2026-09-03",
+ "central_claim": "The real story of the OpenAI agent-swarm incident is corporate negligence and hype, not a machine going rogue.",
+ "capture_dates": [
+  "2026-09-13",
+  "2026-09-16"
+ ],
+ "capture_method": "Complete yt-dlp export (--write-comments --extractor-args \"youtube:max_comments=999999,all,999999,all\"), full threading, like counts and timestamps. Second capture; the first (13 September) underpins the published article's headline numbers, which this recode targets rather than supersedes.",
+ "counts": {
+  "on_page_at_second_capture": 322,
+  "retrieved": 322,
+  "coded": 322,
+  "top_level": 232,
+  "replies": 90,
+  "authors": 237,
+  "total_likes": 1048,
+  "clear_position_base": 220
+ },
+ "spot_check": {
+  "sample": 40,
+  "agreed": 40,
+  "checked_by": "Ben Matthews",
+  "date": "2026-09-18",
+  "note": "Random 40-comment sample (with parent text for replies) checked against the codebook on stance, frame, format reaction and emotion; 40/40 agreed, no corrections."
+ },
+ "coders": "Claude (claude-sonnet-5), two parallel coders of 161 comments each",
+ "article_url": "https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf",
+ "findings_note_url": null,
+ "version": 2,
+ "changelog": [
+  {
+   "version": 1,
+   "date": "2026-09-16",
+   "note": "Second-capture coding run behind the published article (322 comments, two parallel coders, 14 frames plus other). Not archived as a row-level file; described only in the article's method section and the project findings note."
+  },
+  {
+   "version": 2,
+   "date": "2026-09-18",
+   "note": "Row-level recode from the raw yt-dlp export, since coded_full.json was never archived. Frame list redrafted from the article's own documented frames and quotes, aimed at reproducing the published figures rather than an independent fresh read. Reproduces the published article's structural counts exactly (322 rows, 232/90 top-level/reply split, 1,048 likes, 237 authors) and lands close on most headline figures (disagree's like share exact at 1.6%; hype-or-staged, regulation and hostile-dismissal within a point of the published shares). Runs higher on agree share (72.7% vs 67.7% published) and lower on mixed (8.6% vs 14.3%), and under-counts explicit messenger-credential mentions (3 of 322 here vs 7 published) despite a targeted check against the article's own quoted examples. Ben Matthews spot-checked a random 40-comment sample and approved proceeding, 40/40."
+  }
+ ],
+ "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
+ "notes": "Unlike the Soares, Cotra and METR recodes in this series, the published article and findings note for this study are already accurate and current (verified against each other line by line before this recode began); this dataset is a best-effort reconstruction of the missing row-level file, not a correction. Where this recode's shares diverge from the published article (see changelog v2), that is expected drift from a redrafted codebook and should not be read as the published figures being wrong."
+}

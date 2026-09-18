@@ -4,6 +4,20 @@
   "generated_note": "Generated from each study's study.json by scripts/data-export.py index. Regenerate rather than hand-edit.",
   "studies": [
     {
+      "slug": "amanpour-segment-2026-09",
+      "title": "YouTube comments on the Amanpour and Company Khlaaf segment",
+      "platform": "youtube",
+      "series": "agent-swarm reception",
+      "article_url": "https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf",
+      "counts": {
+        "retrieved": 322,
+        "coded": 322,
+        "clear_position_base": 220
+      },
+      "version": 2,
+      "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')"
+    },
+    {
       "slug": "cotra-episode-2026-09",
       "title": "YouTube comments on the Dwarkesh Podcast episode with Ajeya Cotra, \"This might be the clearest warning shot we ever get\"",
       "platform": "youtube",

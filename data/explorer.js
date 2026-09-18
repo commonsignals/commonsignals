@@ -100,9 +100,9 @@
     let study, codebook, rows;
     try {
       [study, codebook, rows] = await Promise.all([
-        fetch(base + 'study.json').then((r) => { if (!r.ok) throw new Error('study.json ' + r.status); return r.json(); }),
-        fetch(base + 'codebook.json').then((r) => { if (!r.ok) throw new Error('codebook.json ' + r.status); return r.json(); }),
-        fetch(base + 'comments.csv').then((r) => { if (!r.ok) throw new Error('comments.csv ' + r.status); return r.text(); }).then(parseCSV),
+        fetch(base + 'study.json', { cache: 'no-cache' }).then((r) => { if (!r.ok) throw new Error('study.json ' + r.status); return r.json(); }),
+        fetch(base + 'codebook.json', { cache: 'no-cache' }).then((r) => { if (!r.ok) throw new Error('codebook.json ' + r.status); return r.json(); }),
+        fetch(base + 'comments.csv', { cache: 'no-cache' }).then((r) => { if (!r.ok) throw new Error('comments.csv ' + r.status); return r.text(); }).then(parseCSV),
       ]);
     } catch (err) {
       listEl.innerHTML = `<p class="exp-empty">Could not load this study's data (${esc(err.message)}). Try the raw files directly: <a href="${base}study.json">study.json</a>, <a href="${base}comments.csv">comments.csv</a>.</p>`;
@@ -240,7 +240,13 @@
     }
     let vals = (dim.values || []).map((v) => v.value);
     if (CANONICAL_ORDER[dim.key]) {
-      vals = CANONICAL_ORDER[dim.key].filter((v) => vals.includes(v));
+      // Order the values this study shares with the series' canonical set
+      // first, but never drop a value just because it's not in that set --
+      // a study can legitimately carry its own extra values here (e.g. a
+      // format_reaction option specific to one platform).
+      const known = CANONICAL_ORDER[dim.key].filter((v) => vals.includes(v));
+      const extra = vals.filter((v) => !CANONICAL_ORDER[dim.key].includes(v));
+      vals = known.concat(extra);
     }
     return vals.map((value) => ({ value, label: labelFor(dim, value) }));
   }
