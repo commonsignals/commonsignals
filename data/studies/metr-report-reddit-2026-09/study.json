@@ -139,6 +139,11 @@
    "version": 1,
    "date": "2026-09-17",
    "note": "Spot-check recorded: 40/40."
+  },
+  {
+   "version": 1,
+   "date": "2026-09-23",
+   "note": "The article now reports this dataset's counts (516 coded, 395 positioned). The discrepancy noted on 17 September no longer applies."
   }
  ],
  "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
