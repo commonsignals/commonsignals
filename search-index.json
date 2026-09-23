@@ -125,6 +125,16 @@
 "d": "A directory of existing research on public attitudes to AI, across both the existential-risk and present-day-harms conversations."
 },
 {
+"t": "scripts/404-head.html",
+"u": "/scripts/404-head",
+"d": ""
+},
+{
+"t": "scripts/404-main.html",
+"u": "/scripts/404-main",
+"d": ""
+},
+{
 "t": "Creating a social mandate for AI governance",
 "u": "/theory-of-change",
 "d": "Why AI governance needs a public mandate to be durable, and how Common Signals plans to help build one."
