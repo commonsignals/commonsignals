@@ -84,7 +84,7 @@
       "title": "Reddit reception of the OpenAI and Hugging Face incident, before and after the METR investigation",
       "platform": "reddit",
       "series": "agent-swarm reception",
-      "article_url": "https://commonsignals.org/openai-and-shut",
+      "article_url": "https://commonsignals.org/openai-and-shut-metr-hugging-face",
       "counts": {
         "retrieved": 568,
         "coded": 516,
@@ -110,7 +110,7 @@
       "title": "Instagram comments on Nate Soares's reel \"We stop AI. You help?\"",
       "platform": "instagram",
       "series": "agent-swarm reception",
-      "article_url": "https://commonsignals.org/ai-risk-reel-analysis",
+      "article_url": "https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri",
       "counts": {
         "retrieved": 2136,
         "coded": 2136,

@@ -1,8 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240" width="720" height="240" role="img" aria-label="Funnel of comments from retrieved to coded to positioned"><style>
-.t{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:12px;fill:#635f54}
-.n{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:13px;font-weight:600;fill:#232019}
-.l{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:14px;fill:#232019}
-.q{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:13px;fill:#232019}
-.h{font-family:"Lora",Georgia,serif;font-size:17px;font-weight:600;fill:#232019}
-.ax{stroke:#d8d6d1;stroke-width:1}
-</style><rect width="720" height="240" fill="#f5f4ef"/><text class="h" x="32" y="40">What was coded</text><rect x="32" y="80" width="480" height="34" fill="#7a1e49" opacity="0.45"/><text class="n" x="522" y="102">2,999</text><text class="t" x="40" y="102" fill="#232019">retrieved and coded (complete yt-dlp export)</text><rect x="32" y="140" width="254" height="34" fill="#7a1e49" opacity="1.0"/><text class="n" x="296" y="162">1,590</text><text class="t" x="40" y="162" fill="#f5f4ef">take a readable position (base for stance %)</text><text class="t" x="32" y="216">Stance % use the readable-position base. Frame and format shares use the coded base.</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 296" width="720" height="296" role="img" aria-label="Funnel of comments from retrieved to coded to positioned">
+<style>
+.t{font-family:"Space Mono",ui-monospace,Menlo,monospace;font-size:12px;fill:#5C5E64}
+.n{font-family:"Space Mono",ui-monospace,Menlo,monospace;font-size:13px;font-weight:700;fill:#17181C}
+.l{font-family:"Hanken Grotesk",system-ui,sans-serif;font-size:14px;fill:#17181C}
+.q{font-family:"Hanken Grotesk",system-ui,sans-serif;font-size:13px;fill:#17181C}
+.h{font-family:"Hanken Grotesk",system-ui,sans-serif;font-size:16px;font-weight:600;fill:#17181C}
+.ax{stroke:#DBDBD3;stroke-width:1}
+</style>
+<rect width="720" height="296" fill="#F4F4EF"/>
+<text class="h" x="32" y="40">What was coded</text>
+<rect x="32" y="80" width="480" height="30" fill="#2A2AD6" opacity="0.25"/>
+<text class="n" x="522" y="101">1,569</text>
+<text class="t" x="40" y="101" style="fill:#17181C">comments on the video</text>
+<rect x="32" y="124" width="382" height="30" fill="#2A2AD6" opacity="0.25"/>
+<text class="n" x="424" y="145">1,249</text>
+<text class="t" x="40" y="145" style="fill:#17181C">rows retrieved</text>
+<rect x="32" y="168" width="380" height="30" fill="#2A2AD6" opacity="0.45"/>
+<text class="n" x="422" y="189">1,245</text>
+<text class="t" x="40" y="189" style="fill:#F4F4EF">contain text, coded</text>
+<rect x="32" y="212" width="189" height="30" fill="#2A2AD6" opacity="1.0"/>
+<text class="n" x="231" y="233">618</text>
+<text class="t" x="263" y="233" style="fill:#17181C">take a readable position (base for stance %)</text>
+<text class="t" x="32" y="276">Stance % use the readable-position base. Frame and format shares use the coded base.</text>
+</svg>

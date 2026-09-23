@@ -13,3 +13,11 @@
 # routing finds /data/<slug>/c/ already exists as a directory (it has an
 # index.html) and 308s straight to it before a placeholder rule here would
 # ever get a chance to run.
+
+# Renamed article routes (September 2026).
+/openai-and-shut                /openai-and-shut-metr-hugging-face        301
+/openai-and-shut/               /openai-and-shut-metr-hugging-face        301
+/openai-and-shut.html           /openai-and-shut-metr-hugging-face        301
+/ai-risk-reel-analysis          /ai-risk-reel-analysis-nate-soares-miri   301
+/ai-risk-reel-analysis/         /ai-risk-reel-analysis-nate-soares-miri   301
+/ai-risk-reel-analysis.html     /ai-risk-reel-analysis-nate-soares-miri   301
