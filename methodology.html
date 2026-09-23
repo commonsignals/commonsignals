@@ -4,11 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <script src="/analytics.js"></script>
-<title>Methodology: how we code comment threads: Common Signals</title>
-<meta name="description" content="How Common Signals acquires, codes and validates comment threads for its published studies: the pipeline, the codebook, the spot-check pass rates, and the limits, including the one study still missing a spot-check." />
+<title>Methodology: Common Signals</title>
+<meta name="description" content="Common Signals studies how the people who see messages about AI respond to them. Our theory of change explains how this work fits our wider aims. This page describes the method our studies share, so anyone can check, criticise or repeat the work. Each study publishes its own figures, codebook and dataset." />
 
-<meta property="og:title" content="Methodology: how we code comment threads" />
-<meta property="og:description" content="How Common Signals acquires, codes and validates comment threads for its published studies: the pipeline, the codebook, the spot-check pass rates, and the limits, including the one study still missing a spot-check." />
+<meta property="og:title" content="Methodology" />
+<meta property="og:description" content="Common Signals studies how the people who see messages about AI respond to them. Our theory of change explains how this work fits our wider aims. This page describes the method our studies share, so anyone can check, criticise or repeat the work. Each study publishes its own figures, codebook and dataset." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://commonsignals.org/methodology" />
 <meta property="og:site_name" content="Common Signals" />
@@ -18,8 +18,8 @@
 <meta property="og:image:alt" content="Common Signals: helping AI communicators know which messages and messengers actually work." />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Methodology: how we code comment threads" />
-<meta name="twitter:description" content="How Common Signals acquires, codes and validates comment threads for its published studies: the pipeline, the codebook, the spot-check pass rates, and the limits, including the one study still missing a spot-check." />
+<meta name="twitter:title" content="Methodology" />
+<meta name="twitter:description" content="Common Signals studies how the people who see messages about AI respond to them. Our theory of change explains how this work fits our wider aims. This page describes the method our studies share, so anyone can check, criticise or repeat the work. Each study publishes its own figures, codebook and dataset." />
 <meta name="twitter:image" content="https://commonsignals.org/og-image.png" />
 
 <link rel="canonical" href="https://commonsignals.org/methodology" />
@@ -38,10 +38,10 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Methodology: how we code comment threads",
-  "description": "How Common Signals acquires, codes and validates comment threads for its published studies: the pipeline, the codebook, the spot-check pass rates, and the limits, including the one study still missing a spot-check.",
+  "headline": "Methodology",
+  "description": "Common Signals studies how the people who see messages about AI respond to them. Our theory of change explains how this work fits our wider aims. This page describes the method our studies share, so anyone can check, criticise or repeat the work. Each study publishes its own figures, codebook and dataset.",
   "datePublished": "2026-09-16",
-  "dateModified": "2026-09-16",
+  "dateModified": "2026-09-23",
   "url": "https://commonsignals.org/methodology",
   "author": { "@type": "Organization", "name": "Common Signals", "url": "https://commonsignals.org/" },
   "publisher": { "@type": "Organization", "name": "Common Signals", "url": "https://commonsignals.org/", "logo": { "@type": "ImageObject", "url": "https://commonsignals.org/og-image.png" } },
@@ -86,13 +86,13 @@
 <main id="top">
 
   <div class="article-hero">
-    <p class="article-eyebrow">Last updated: 16 September 2026</p>
+    <p class="article-eyebrow">Last updated: 23 September 2026</p>
     <div class="tag-row">
       <span class="tag-pill">Method</span>
       <span class="tag-pill">Public opinion</span>
     </div>
     <h1>Methodology</h1>
-    <p class="article-dek">How we acquire, code and validate the comment threads behind every published study, and where the method is thinnest, including the one study still missing a spot-check.</p>
+    <p class="article-dek">Common Signals studies how the people who see messages about AI respond to them. Our <a href="/theory-of-change">theory of change</a> explains how this work fits our wider aims. This page describes the method our studies share, so anyone can check, criticise or repeat the work. Each study publishes its own figures, codebook and dataset.</p>
     <button type="button" class="share-copy">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M9 17H7a5 5 0 1 1 0-10h2"/>
@@ -107,70 +107,115 @@
     <aside class="article-toc" aria-label="Table of contents">
       <p class="toc-heading">Contents</p>
       <ul>
-        <li><a href="#what-these-studies-are">What these studies are</a></li>
-        <li><a href="#the-pipeline">The pipeline</a></li>
-        <li><a href="#the-studies-so-far">The studies so far</a></li>
-        <li><a href="#known-limitations">Known limitations</a></li>
+        <li><a href="#what-our-studies-can-and-cant-tell-you">What our studies can and can't tell you</a></li>
+        <li><a href="#how-a-study-works">How a study works</a></li>
+        <li><a href="#limitations">Limitations</a></li>
+        <li><a href="#what-were-adding">What we're adding</a></li>
         <li><a href="#data-and-contact">Data and contact</a></li>
+        <li><a href="#references">References</a></li>
       </ul>
     </aside>
 
     <article class="article-body">
 
-      <p>This page documents the method behind the Common Signals comment analyses, currently the Soares reel study, the Dwarkesh Cotra episode study, the Amanpour Khlaaf segment study and the METR report before/after study. It exists so that the work can be checked, criticised and replicated. Where the method has weaknesses, they are stated here rather than smoothed over.</p>
+      <h2 id="what-our-studies-can-and-cant-tell-you">What our studies can and can't tell you</h2>
+      <p>Each study takes one piece of AI communication, such as a video, post, report or thread, and codes the comments people left under it. We report who accepted its central claim, which frames they used, how they reacted to the format and the messenger, and their emotional register.</p>
+      <p>Comment threads are self-selected samples, not samples of the public. Commenters choose to comment, platforms decide which comments get seen, and the people who watched and moved on leave no trace. A study describes one audience's reaction to one piece of communication. We use the results to generate specific, testable hypotheses for message testing with representative samples, which is the work Common Signals exists to do.</p>
+      <p>Some studies compare two moments, for example reactions before and after an independent party checked a claim. These natural experiments can say something about change. The audience usually changes along with the evidence, though, so we treat the direction as the finding and the exact figures as approximate.</p>
 
-      <h2 id="what-these-studies-are">What these studies are, and are not</h2>
-      <p>Each study codes the full comment thread under one piece of AI communication and reports how the message was received: who accepted its central claim, which frames commenters used, how they reacted to the format and messenger, and what emotional register dominated.</p>
-      <p>They are hypothesis generation, not findings about the public. A comment thread is a self-selected sample of one audience under one artefact, ranked by a platform's algorithm. Nothing in these pieces supports a claim about what any population believes. Their output is a set of specific, falsifiable hypotheses for the segmented message testing that Common Signals exists to run.</p>
-      <p>The METR report study is a partial exception to "one artefact": it compares the same Reddit ecosystem's reaction to OpenAI's own account of the incident against its reaction to the independent investigation six weeks later, so it can say something about a shift, not just a snapshot. It is described separately below.</p>
+      <h2 id="how-a-study-works">How a study works</h2>
 
-      <h2 id="the-pipeline">The pipeline</h2>
+      <h3 id="1-collecting-comments">1. Collecting comments</h3>
+      <p>We use the most complete route each platform allows, and report how many comments we retrieved against the platform's own count.</p>
+      <ul class="arrow-list">
+        <li>YouTube: a full comment export with threading and like counts.</li>
+        <li>Instagram: the platform's comment API, called from a logged-in browser session.</li>
+        <li>Reddit: page captures. Collapsed replies aren't always expanded, so deep threads can be under-sampled.</li>
+        <li>X: we don't use X's paid API. We read the reply feed in a signed-in browser across every sort order. Each view stops loading after a few hundred replies, so on large threads we see only the slice X's ranking shows.</li>
+      </ul>
+      <p>We remove ads and the author's own posts before coding. Before any data leaves the collection environment, usernames are replaced with salted one-way hashes, and @handles inside comments become @user. We quote comments word for word, spelling included, and never publish usernames, in line with research ethics guidance on social media data from Townsend and Wallace (2016).</p>
 
-      <h3 id="1-acquisition">1. Acquisition</h3>
-      <p>Comments are retrieved by the most complete route each platform allows: platform APIs called from a logged-in browser session (Instagram), a yt-dlp comment export (YouTube, complete with threading and like counts), or a page capture where nothing better is available. Every study reports the number retrieved against the platform's on-page count and explains the gap.</p>
-      <p>Before anything leaves the collection environment, author identifiers are replaced with salted SHA-256 hashes and the salt is discarded, so the mapping cannot be reversed. @handles inside comment text are replaced with @user. Quotes in the published articles are reproduced verbatim, spelling intact; they are public comments and can be found by searching the platform, but we never publish usernames.</p>
-
-      <h3 id="2-codebook">2. Codebook</h3>
-      <p>Three dimensions are fixed across every study, with identical categories: stance towards the artefact's central claim (agree, disagree, mixed, unclear, na), reaction to the format (praise, mock, condescended, imitates, none), and emotional register (fear, resignation, anger, humour, hope, neutral), plus a small set of 0/1 mention flags.</p>
-      <p>The frame list is drafted fresh for each artefact from a sample of 150 random comments plus the 50 most engaged, merged into 10 to 16 frames, each with a definition and a verbatim example from the thread. The artefact's central claim is stated explicitly, and stance is coded against it; when the artefact argues against a prior narrative, as the Khlaaf interview does, agree means accepting that reframing, and the codebook says so.</p>
-      <p>The frame list is reviewed and approved by a human before any coding starts. Each study's full codebook is published alongside its dataset.</p>
-      <p>The METR report study departs from this in one respect: its frame list (17 frames) was drafted from its own two-thread corpus rather than the standard 150+50 sample from a single artefact, because the study spans nine separate threads across two time periods rather than one comment section. Its stance and format categories still follow the shared scheme.</p>
+      <h3 id="2-building-the-codebook">2. Building the codebook</h3>
+      <p>Every comment is coded on the same five dimensions:</p>
+      <ul class="arrow-list">
+        <li>stance towards the piece's central claim: agree, disagree, mixed, unclear or not applicable</li>
+        <li>frame: the main way the commenter makes sense of the issue</li>
+        <li>reaction to the format: praise, mockery, feeling talked down to, imitation, or none</li>
+        <li>emotional register: fear, resignation, anger, humour, hope or neutral</li>
+        <li>a few yes/no flags, such as whether the comment mentions the messenger or asks what to do</li>
+      </ul>
+      <p>Stance, format and emotion use the same categories in every study, so they can be compared across the series. Frames are drafted for each piece from 150 random comments plus the 50 most engaged. We follow <a href="https://doi.org/10.1111/j.1460-2466.1993.tb01304.x" target="_blank" rel="noopener">Robert Entman's (1993) definition of a frame</a>: the aspects of an issue a message selects and emphasises to define the problem, its cause and what should be done about it. Each frame gets a definition and a verbatim example.</p>
+      <p>We write down the central claim that stance is coded against. If a piece argues against an earlier account, agree means accepting its reframing. A person approves the frame list before any coding starts.</p>
 
       <h3 id="3-coding">3. Coding</h3>
-      <p>Coding is done by a large language model (Claude), in parallel batches of roughly 190 comments, each coder reading the full codebook and, for replies, the parent comment's text. This is the method's biggest limitation and it is worth being precise about.</p>
-      <p>It is a single pass by a single model. There is no second coder and therefore no inter-rater reliability statistic. LLM coding has known failure modes: drift from the codebook over a long batch, over-use of residual categories, difficulty with irony and with comments that fit two frames, and a tendency to impose coherence on ambiguous text. We mitigate mechanically (validation that every coded value is from the allowed set and every comment is coded exactly once) and by review: a random 40-comment sample from each study is checked by a human against the codebook, and the agreement rate is published per study. Where a high-engagement comment materially affects engagement-weighted results, its codes are individually reviewed, and any correction is noted. Spot-check agreement has run 37 to 38 out of 40 across the three video-platform studies, which is why percentages are reported as accurate to a few points, never to decimals.</p>
-      <p>The METR report study has not had a spot-check hit rate published or logged. Until one is run, treat its reliability as consistent with the rest of the series in method but unverified in practice.</p>
-      <p>A standing invitation: the codebooks and coded datasets are published, and we would welcome anyone re-coding a sample and telling us where the codes are wrong. That is the fastest way this method improves.</p>
+      <p><a href="https://www.anthropic.com/claude" target="_blank" rel="noopener">Claude</a>, a large language model made by Anthropic, codes every comment in parallel batches against the written codebook. For replies, it also sees the comment being replied to. Language models can <a href="https://doi.org/10.1073/pnas.2305016120" target="_blank" rel="noopener">match or beat trained crowd workers on annotation tasks like this</a> (Gilardi, Alizadeh and Kubli, 2023). They can also drift from the codebook over long batches, overuse catch-all categories and misread irony.</p>
+      <p>We check the output in two ways. Software confirms that every code comes from the allowed list and that every comment is coded exactly once. A person then spot-checks a random sample of 40 comments against the codebook, and each study publishes the result. Where a heavily liked comment affects the engagement-weighted results, we review its codes individually and note any correction.</p>
+      <p>A 40-comment check is thin evidence. That's why we report percentages as whole numbers and treat them as accurate to within a few points.</p>
 
       <h3 id="4-analysis">4. Analysis</h3>
-      <p>Every figure is computed from the merged coded table by published scripts: stance shares on stated bases, engagement-weighted shares, frame distributions, disagreement broken down by frame, emotion by stance, mention flags, engagement concentration, and top comments per frame. Every quote in an article is matched verbatim against the dataset before publication.</p>
-      <p>Two definitional notes, for anyone comparing across studies. First, the stance base: the reel study reported stance out of all comments with any readable content including unclear (1,224), while the later studies report stance out of comments taking a clear position, excluding unclear (618 and 223). The articles state their base wherever a percentage appears, but the bases are not identical across the series and cross-study comparisons should use the underlying datasets. Second, engagement weighting: likes measure salience under a ranking algorithm, not persuasion, and in every thread so far the top ten comments carry half or more of all likes, so weighted figures describe what the algorithm surfaced.</p>
-      <p>The METR report study breaks the second convention: Reddit page captures carried vote counts on only one of its nine threads, so almost all of its figures are shares of comments, not shares of what most readers saw, and engagement-weighted results are not available as a check the way they are for the other three studies.</p>
+      <p>Scripts compute every figure from the coded dataset. Each study states the base for its stance percentages, usually the comments taking a readable position. Every quote in an article is matched word for word against the dataset before publication.</p>
+      <p>We report two kinds of share. Comment shares count each comment once, whether it got no likes or thousands. Engagement-weighted shares weight each comment by its likes or upvotes. Likes show what the platform surfaced and people noticed, not what changed anyone's mind, and a handful of comments usually hold most of them. So we report both.</p>
 
-      <h2 id="the-studies-so-far">The studies so far</h2>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Study</th><th>Platform and route</th><th>Counted on page</th><th>Retrieved</th><th>Coded (with text)</th><th>Clear position</th><th>Spot-check</th></tr></thead>
-          <tbody>
-            <tr><td><a href="/ai-risk-reel-analysis-nate-soares-miri">Soares reel</a>, August 2026</td><td>Instagram, comment API via logged-in session</td><td>1,703</td><td>1,666 (98%)</td><td>1,534</td><td>1,224 incl. unclear</td><td>37/40</td></tr>
-            <tr><td><a href="/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh">Dwarkesh Cotra episode</a>, September 2026</td><td>YouTube, page capture</td><td>1,569</td><td>1,249 (80%)</td><td>1,245</td><td>618 excl. unclear</td><td>37/40</td></tr>
-            <tr><td><a href="/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf">Amanpour Khlaaf segment</a>, September 2026</td><td>YouTube, yt-dlp export (second capture, 16 September)</td><td>322</td><td>322 (100%)</td><td>322</td><td>223 excl. unclear</td><td>38/40 (first capture)</td></tr>
-            <tr><td><a href="/openai-and-shut-metr-hugging-face">METR report, Reddit, before/after</a> (31 July and 26 Aug to 3 Sept 2026)</td><td>Reddit, page captures across 9 threads (1 baseline, 8 comparison)</td><td>not published per thread</td><td>550</td><td>516</td><td>395 excl. unclear (41 before, 354 after)</td><td>40/40</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p>The Dwarkesh study's shortfall is unexpanded reply threads in the page capture, which also lost threading, so that dataset leans towards top-level comments; its article says so. The reel's shortfall is deleted or hidden comments. The METR report study isn't really commensurable with the other three rows: it's nine threads across two time periods rather than one thread under one artefact, most of its threads carry no vote data at all, and its published article doesn't state a single retrieved-per-thread or spot-check figure the way the others do.</p>
+      <h2 id="limitations">Limitations</h2>
+      <p>In order of importance:</p>
+      <ul class="ask-list">
+        <li>
+          <span class="n">1</span>
+          <div>
+            <p>The sample is self-selected and ranked by the platform, as described above.</p>
+          </div>
+        </li>
+        <li>
+          <span class="n">2</span>
+          <div>
+            <p>Coding is done by one model and checked by one person on a small sample. There is no second independent coder yet, so no inter-rater reliability figure.</p>
+          </div>
+        </li>
+        <li>
+          <span class="n">3</span>
+          <div>
+            <p>Comparing studies changes several things at once: audience, platform, messenger and message. The series can suggest that framing affects reception. It can't separate framing from audience.</p>
+          </div>
+        </li>
+        <li>
+          <span class="n">4</span>
+          <div>
+            <p>Silence is weak evidence. A comment that doesn't mention a risk, a messenger or a policy hasn't said it doesn't matter. Mention flags show what people chose to raise.</p>
+          </div>
+        </li>
+        <li>
+          <span class="n">5</span>
+          <div>
+            <p>Where we couldn't watch a piece directly, we reconstructed its argument from the transcript or from what commenters repeated, and the study says so.</p>
+          </div>
+        </li>
+      </ul>
+      <p>Our closing advice sometimes draws on established research, such as <a href="https://doi.org/10.1080/03637759209376276" target="_blank" rel="noopener">Kim Witte's (1992) work on fear appeals</a>, which finds that threat messages persuade when people believe they can act and backfire when they can't. Communication researchers call that belief efficacy. We cite that research where we use it. What our studies add is comparable evidence of how specific AI messages are received.</p>
 
-      <h2 id="known-limitations">Known limitations, in order of importance</h2>
-      <p>Comment threads are not samples of anyone. Commenters self-select, platforms rank, and the silent majority who watched and moved on are invisible.</p>
-      <p>The coding is single-pass and machine-led. Until a second, independent coding of a full study exists, agreement rates from 40-comment spot-checks are the only reliability evidence, and they are thin. For the METR report study, even that thin evidence doesn't yet exist: no spot-check has been published or logged, and it should be run before that study's findings are treated as equivalent in reliability to the other three.</p>
-      <p>Cross-study comparisons are across different audiences, different platforms and different central claims at once. The series can suggest that framing changes reception; it cannot isolate framing from audience. The METR report study's before/after design is the exception that can say something about change over time within one platform, but it compares one subreddit against eight, not a matched panel, so its exact percentages should be read as directional too.</p>
-      <p>Where an artefact could not be watched directly, its argument was reconstructed from the transcript or from what commenters echoed, and the study says so.</p>
-      <p>The moves recommended in the articles' closing sections are largely consistent with established communication research, including the fear-appeals literature, which finds that threat messaging helps or backfires conditional on perceived efficacy rather than being reliably one or the other. The contribution of these studies is not those principles but the specific, comparable evidence of how AI-risk framings are received, which the field currently lacks.</p>
+      <h2 id="what-were-adding">What we're adding</h2>
+      <p>Several of these changes follow the method used by the <a href="https://aidialoguereport.org/findings/" target="_blank" rel="noopener">AI Dialogue Report</a>.</p>
+      <ul class="arrow-list">
+        <li>More than one coder. Models from different developers make different mistakes. We plan to code each comment with more than one model, accept the codes they agree on and send disagreements to an arbiter, which also gives us an agreement figure to publish.</li>
+        <li>Quote-backed codes. Each code will cite the words in the comment that support it, and software will check the words are there.</li>
+        <li>A larger human benchmark. A bigger hand-coded sample will let us report precision and recall for each category, and correct published shares for the measured error rate using the <a href="https://doi.org/10.1093/oxfordjournals.aje.a112510" target="_blank" rel="noopener">Rogan-Gladen method</a> (Rogan and Gladen, 1978).</li>
+        <li>Corrections for multiple comparisons. When we compare many groups, such as stance across every frame, some differences will look real by chance. We will report only those that survive a <a href="https://doi.org/10.1111/j.2517-6161.1995.tb02031.x" target="_blank" rel="noopener">Benjamini-Hochberg false discovery rate correction</a> (Benjamini and Hochberg, 1995).</li>
+        <li>Shared categories where good taxonomies exist. Where commenters name specific AI risks, we will code them against the <a href="https://arxiv.org/abs/2408.12622" target="_blank" rel="noopener">MIT AI Risk Repository</a> (Slattery et al., 2025), alongside the frames drawn from each thread.</li>
+        <li>A closer human read. In every study, a person will read the 100 most-liked comments and every comment coded mixed.</li>
+      </ul>
 
       <h2 id="data-and-contact">Data and contact</h2>
-      <p>Each study's codebook and coded dataset are published with this page, and browsable comment by comment at <a href="/data/">/data/</a>. Errors, re-codings and methodological criticism are actively wanted: <a href="mailto:hello@commonsignals.org">hello@commonsignals.org</a>.</p>
-      <p>Takedown policy: if a comment's author asks for it to be removed, that row's text is replaced with a removal marker while its codes (stance, frame and the rest) are kept, so published counts and article figures stay reconciled with the dataset rather than drifting out of sync afterwards. This is a policy statement, not a request form; removal requests go to the same address above.</p>
+      <p>Each study's codebook and coded dataset are published with it. Terms used here are defined in our <a href="/glossary">glossary</a>. We want to hear about errors, recoding and criticism of the method: <a href="mailto:hello@commonsignals.org">hello@commonsignals.org</a>.</p>
+
+      <h2 id="references">References</h2>
+      <ul class="arrow-list">
+        <li>Benjamini, Y. and Hochberg, Y. (1995). <a href="https://doi.org/10.1111/j.2517-6161.1995.tb02031.x" target="_blank" rel="noopener">Controlling the false discovery rate: a practical and powerful approach to multiple testing</a>. Journal of the Royal Statistical Society, Series B 57(1), 289-300.</li>
+        <li>Entman, R. M. (1993). <a href="https://doi.org/10.1111/j.1460-2466.1993.tb01304.x" target="_blank" rel="noopener">Framing: toward clarification of a fractured paradigm</a>. Journal of Communication 43(4), 51-58.</li>
+        <li>Gilardi, F., Alizadeh, M. and Kubli, M. (2023). <a href="https://doi.org/10.1073/pnas.2305016120" target="_blank" rel="noopener">ChatGPT outperforms crowd workers for text-annotation tasks</a>. Proceedings of the National Academy of Sciences 120(30), e2305016120.</li>
+        <li>Rogan, W. J. and Gladen, B. (1978). <a href="https://doi.org/10.1093/oxfordjournals.aje.a112510" target="_blank" rel="noopener">Estimating prevalence from the results of a screening test</a>. American Journal of Epidemiology 107(1), 71-76.</li>
+        <li>Slattery, P. et al. (2025). <a href="https://arxiv.org/abs/2408.12622" target="_blank" rel="noopener">The AI Risk Repository: a comprehensive meta-review, database, and taxonomy of risks from artificial intelligence</a>. arXiv:2408.12622.</li>
+        <li>Townsend, L. and Wallace, C. (2016). Social media research: a guide to ethics. University of Aberdeen.</li>
+        <li>Witte, K. (1992). <a href="https://doi.org/10.1080/03637759209376276" target="_blank" rel="noopener">Putting the fear back into fear appeals: the extended parallel process model</a>. Communication Monographs 59(4), 329-347.</li>
+      </ul>
 
       <div class="article-disclosure">
         <h3>Disclosure</h3>
