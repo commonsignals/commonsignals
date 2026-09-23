@@ -1,0 +1,82 @@
+<main id="top">
+
+  <div class="article-hero">
+    <p class="article-eyebrow">Error 404</p>
+    <h1>Page not found</h1>
+    <p class="article-dek">We couldn't find a page at <span class="nf-path" id="nfPath">this address</span>. It may have moved or been renamed. Search the site below, or go back to the home page.</p>
+    <p><a class="btn btn-primary" href="/">Return to the home page</a></p>
+  </div>
+
+  <div class="article-shell nf-shell">
+    <article class="article-body">
+      <form class="nf-search" role="search" action="/sitemap" onsubmit="return false">
+        <label for="nfQuery">Search Common Signals</label>
+        <input type="search" id="nfQuery" name="q" placeholder="Try a topic, platform or person, e.g. Reddit or Soares" autocomplete="off">
+      </form>
+      <p class="nf-status" id="nfStatus" role="status" aria-live="polite"></p>
+      <ul class="nf-results" id="nfResults"></ul>
+      <p>You can also browse every page in the <a href="/sitemap">sitemap</a>.</p>
+    </article>
+  </div>
+
+</main>
+
+<script>
+(function () {
+  var input = document.getElementById('nfQuery');
+  var list = document.getElementById('nfResults');
+  var status = document.getElementById('nfStatus');
+  var STOP = { html: 1, index: 1, the: 1, and: 1, of: 1, a: 1, to: 1, in: 1, on: 1, www: 1, com: 1, org: 1 };
+  var pages = [];
+
+  function words(s) {
+    return s.toLowerCase().split(/[^a-z0-9]+/).filter(function (w) { return w && !STOP[w]; });
+  }
+
+  // Show the missing address and turn it into a starting query.
+  var path = decodeURIComponent(location.pathname);
+  if (path && path !== '/') {
+    document.getElementById('nfPath').textContent = path;
+    input.value = words(path).filter(function (w) { return !/^\d+$/.test(w); }).join(' ');
+  }
+
+  function render() {
+    var q = words(input.value);
+    list.textContent = '';
+    if (!q.length) { status.textContent = ''; return; }
+    var hits = pages.map(function (p) {
+      var t = p.t.toLowerCase(), u = p.u.toLowerCase(), d = p.d.toLowerCase(), score = 0;
+      q.forEach(function (w) {
+        if (t.indexOf(w) > -1) score += 3;
+        if (u.indexOf(w) > -1) score += 2;
+        if (d.indexOf(w) > -1) score += 1;
+      });
+      return { p: p, score: score };
+    }).filter(function (h) { return h.score > 0; })
+      .sort(function (a, b) { return b.score - a.score; })
+      .slice(0, 8);
+    status.textContent = hits.length
+      ? hits.length + (hits.length === 1 ? ' page matches.' : ' pages match.')
+      : 'Nothing matches that. Try another word, or browse the sitemap.';
+    hits.forEach(function (h) {
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = h.p.u;
+      a.textContent = h.p.t;
+      li.appendChild(a);
+      if (h.p.d) {
+        var d = document.createElement('p');
+        d.textContent = h.p.d;
+        li.appendChild(d);
+      }
+      list.appendChild(li);
+    });
+  }
+
+  fetch('/search-index.json')
+    .then(function (r) { return r.json(); })
+    .then(function (data) { pages = data; render(); })
+    .catch(function () { status.textContent = 'Search is unavailable right now. Browse the sitemap instead.'; });
+  input.addEventListener('input', render);
+})();
+</script>
