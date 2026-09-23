@@ -1,1 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 268" width="820" height="268" role="img" aria-label="Composition of the mixed bloc"><style>.t{font-family:"Space Mono",ui-monospace,Menlo,monospace;font-size:12px;fill:#5C5E64}.n{font-family:"Space Mono",ui-monospace,Menlo,monospace;font-size:13px;font-weight:700;fill:#17181C}.l{font-family:"Hanken Grotesk",system-ui,sans-serif;font-size:14px;fill:#17181C}.s{font-family:"Hanken Grotesk",system-ui,sans-serif;font-size:13px;font-weight:600;fill:#17181C}.h{font-family:"Hanken Grotesk",system-ui,sans-serif;font-size:17px;font-weight:600;fill:#17181C}.ax{stroke:#DBDBD3;stroke-width:1}</style><rect width="820" height="268" fill="#F4F4EF"/><text class="h" x="32" y="36">What the mixed majority actually believes</text><text class="t" x="32" y="56">The 73 comments coded mixed after the report, by the frame they lead with. None of them dispute that the incident happened.</text><text class="l" x="366" y="101" text-anchor="end">What they were told, badly supervised</text><rect x="380" y="84" width="360" height="22" fill="#2A2AD6" opacity="0.75"/><text class="n" x="750" y="101">30</text><text class="l" x="366" y="133" text-anchor="end">Blame the humans who designed the test</text><rect x="380" y="116" width="276" height="22" fill="#2A2AD6" opacity="0.75"/><text class="n" x="666" y="133">23</text><text class="l" x="366" y="165" text-anchor="end">Still call it staged or exaggerated</text><rect x="380" y="148" width="96" height="22" fill="#2A2AD6" opacity="0.75"/><text class="n" x="486" y="165">8</text><text class="l" x="366" y="197" text-anchor="end">Question the investigators' independence</text><rect x="380" y="180" width="48" height="22" fill="#2A2AD6" opacity="0.75"/><text class="n" x="438" y="197">4</text><text class="l" x="366" y="229" text-anchor="end">Other</text><rect x="380" y="212" width="96" height="22" fill="#2A2AD6" opacity="0.75"/><text class="n" x="486" y="229">8</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 268" width="820" height="268" role="img" aria-label="Composition of the middle group">
+<style>.t{font-family:"Space Mono",ui-monospace,Menlo,monospace;font-size:12px;fill:#5C5E64}.n{font-family:"Space Mono",ui-monospace,Menlo,monospace;font-size:13px;font-weight:700;fill:#17181C}.l{font-family:"Hanken Grotesk",system-ui,sans-serif;font-size:14px;fill:#17181C}.h{font-family:"Hanken Grotesk",system-ui,sans-serif;font-size:17px;font-weight:600;fill:#17181C}</style>
+<rect width="820" height="268" fill="#F4F4EF"/>
+<text class="h" x="32" y="36">What the middle group believes</text>
+<text class="t" x="32" y="56">The 62 comments coded mixed after the report, by the frame they lead with.</text>
+<text class="l" x="366" y="101" text-anchor="end">It happened, but it isn&#x27;t really rogue</text>
+<rect x="380" y="84" width="348" height="22" fill="#2A2AD6" opacity="0.75"/>
+<text class="n" x="738" y="101">29</text>
+<text class="l" x="366" y="133" text-anchor="end">Blame how the test was set up</text>
+<rect x="380" y="116" width="156" height="22" fill="#2A2AD6" opacity="0.75"/>
+<text class="n" x="546" y="133">13</text>
+<text class="l" x="366" y="165" text-anchor="end">Still call it staged or hyped</text>
+<rect x="380" y="148" width="96" height="22" fill="#2A2AD6" opacity="0.75"/>
+<text class="n" x="486" y="165">8</text>
+<text class="l" x="366" y="197" text-anchor="end">Discuss the investigators&#x27; credibility</text>
+<rect x="380" y="180" width="48" height="22" fill="#2A2AD6" opacity="0.75"/>
+<text class="n" x="438" y="197">4</text>
+<text class="l" x="366" y="229" text-anchor="end">Other</text>
+<rect x="380" y="212" width="96" height="22" fill="#2A2AD6" opacity="0.75"/>
+<text class="n" x="486" y="229">8</text>
+</svg>

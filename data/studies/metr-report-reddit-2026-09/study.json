@@ -126,7 +126,7 @@
   "note": "Random 40-comment sample checked against the codebook on stance, frame, format reaction and emotion; 40/40 agreed, no corrections."
  },
  "coders": "Claude (claude-fable-5-1), three parallel coders of 172 comments each, no parent context (threading lost in capture), previous comment in thread supplied as context",
- "article_url": "https://commonsignals.org/openai-and-shut",
+ "article_url": "https://commonsignals.org/openai-and-shut-metr-hugging-face",
  "findings_note_url": null,
  "version": 1,
  "changelog": [
