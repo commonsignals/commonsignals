@@ -1,0 +1,167 @@
+[
+{
+"t": "About",
+"u": "/about",
+"d": "Common Signals is an independent, neutral research initiative building the evidence base for public understanding of AI."
+},
+{
+"t": "How Instagram received Nate Soares's caveman-speak explainer of AI risk",
+"u": "/ai-risk-reel-analysis-nate-soares-miri",
+"d": "We coded 1,534 Instagram comments on a one-minute reel by Nate Soares of the Machine Intelligence Research Institute (MIRI). Most commenters accepted the argument. Many said it was already too late, and almost nobody asked what to do."
+},
+{
+"t": "\"Please honor commit\": how the OpenAI agent-swarm story landed with the audience most likely to believe it",
+"u": "/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh",
+"d": "We coded 1,245 YouTube comments on the Dwarkesh Podcast's interview with METR's Ajeya Cotra about the OpenAI agent-swarm incident. The audience accepted the danger, joked about it, praised the messenger, and had no idea what to do next."
+},
+{
+"t": "\"Neither company is acting responsibly\": how X received Jacob Coxon's resignation from Anthropic",
+"u": "/coxon-resignation-x-analysis",
+"d": "We coded 2,480 replies to a former Anthropic researcher's resignation thread on X. The audience split almost evenly, and the most-liked reply didn't engage with his argument at all."
+},
+{
+"t": "Codebook: YouTube comments on the Amanpour and Company Khlaaf segment",
+"u": "/data/amanpour-segment-2026-09/codebook/",
+"d": "The full coding scheme behind the YouTube comments on the Amanpour and Company Khlaaf segment dataset: central claim, stance note, and every dimension and value with its definition and example."
+},
+{
+"t": "YouTube comments on the Amanpour and Company Khlaaf segment",
+"u": "/data/amanpour-segment-2026-09/",
+"d": "Search and filter all 322 coded YouTube comments behind the 'A problem they created' article: stance, frame, emotion and engagement, comment by comment."
+},
+{
+"t": "Compare",
+"u": "/data/compare/",
+"d": "Stance, emotion and format reaction compared across every reception study, on each study's own base. Frame is not compared: the categories differ by study."
+},
+{
+"t": "Codebook: YouTube comments on the Dwarkesh Podcast episode with Ajeya Cotra",
+"u": "/data/cotra-episode-2026-09/codebook/",
+"d": "The full coding scheme behind the Dwarkesh/Cotra comment dataset: central claim, stance note, and every dimension and value with its definition and example."
+},
+{
+"t": "YouTube comments on the Dwarkesh Podcast episode with Ajeya Cotra",
+"u": "/data/cotra-episode-2026-09/",
+"d": "Search and filter all 2,999 coded YouTube comments behind the 'Please honor commit' article: stance, frame, emotion and engagement, comment by comment."
+},
+{
+"t": "Codebook: X replies to Jacob Coxon's Anthropic resignation thread",
+"u": "/data/coxon-resignation-2026-09/codebook/",
+"d": "The full coding scheme behind the Coxon resignation X-replies dataset: central claim, stance note, and every dimension and value with its definition and example."
+},
+{
+"t": "X replies to Jacob Coxon's Anthropic resignation thread",
+"u": "/data/coxon-resignation-2026-09/",
+"d": "Search and filter all 2,480 coded X replies behind the 'Neither company is acting responsibly' article: stance, frame, emotion and engagement, comment by comment."
+},
+{
+"t": "Data",
+"u": "/data/",
+"d": "Browse and filter the coded comment datasets behind Common Signals' reception studies: every comment, its stance, frame and emotion, published under CC BY 4.0."
+},
+{
+"t": "Codebook: Reddit reception of the OpenAI and Hugging Face incident, before and after the METR investigation",
+"u": "/data/metr-report-reddit-2026-09/codebook/",
+"d": "The full coding scheme behind the Reddit reception of the OpenAI and Hugging Face incident, before and after the METR investigation dataset: central claim, stance note, and every dimension and value with its definition and example."
+},
+{
+"t": "Reddit reception of the OpenAI and Hugging Face incident, before and after the METR investigation",
+"u": "/data/metr-report-reddit-2026-09/",
+"d": "Search and filter all 516 coded Reddit comments behind the 'OpenAI and shut?' article: stance, frame, emotion and engagement, comment by comment."
+},
+{
+"t": "Codebook: Instagram comments on Nate Soares's reel \"We stop AI. You help?\"",
+"u": "/data/soares-reel-2026-08/codebook/",
+"d": "The full coding scheme behind the Instagram comments on Nate Soares's reel \"We stop AI. You help?\" dataset: central claim, stance note, and every dimension and value with its definition and example."
+},
+{
+"t": "Instagram comments on Nate Soares's reel \"We stop AI. You help?\"",
+"u": "/data/soares-reel-2026-08/",
+"d": "Search and filter all 2,136 coded Instagram comments behind the Soares reel article: stance, frame, emotion and engagement, comment by comment."
+},
+{
+"t": "Findings so far: what four comment-thread studies say about explaining AI risk",
+"u": "/findings",
+"d": "Four studies, 3,617 coded comments across three platforms, and nine patterns that hold across at least two of the four, each stated as a hypothesis with the base it was measured on."
+},
+{
+"t": "AI Safety Glossary",
+"u": "/glossary",
+"d": "Plain-English definitions of the terms Common Signals uses across its research, tools and strategy."
+},
+{
+"t": "Home",
+"u": "/",
+"d": "Common Signals helps AI communicators know which messages actually work: research, tools, training and workshops for anyone talking about AI."
+},
+{
+"t": "Methodology",
+"u": "/methodology",
+"d": "Common Signals studies how the people who see messages about AI respond to them. Our theory of change explains how this work fits our wider aims. This page describes the method our studies share, so anyone can check, criticise or repeat the work. Each study publishes its own figures, codebook and dataset."
+},
+{
+"t": "OpenAI and shut? What an independent report did to the marketing-stunt argument",
+"u": "/openai-and-shut-metr-hugging-face",
+"d": "We compared Reddit comments on the OpenAI and Hugging Face incident before and after METR and Redwood Research published an independent investigation. Afterwards, fewer people called it a stunt and more accepted it happened. The ones still calling it a stunt got harder to shift."
+},
+{
+"t": "Privacy policy",
+"u": "/privacy",
+"d": "How Common Signals collects, uses and shares personal data on commonsignals.org, including data from our newsletter, analytics and the public comment data we code for research."
+},
+{
+"t": "\"A problem they created\": how a news audience received the accountability version of the OpenAI and Hugging Face incident",
+"u": "/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf",
+"d": "We coded 322 YouTube comments on Amanpour and Company's interview with Heidy Khlaaf, who argues the \"rogue AI\" story is the wrong one. Most of the audience agreed with her, got angrier as the thread aged, and asked for regulation without being prompted."
+},
+{
+"t": "Research",
+"u": "/research",
+"d": "Common Signals runs values-segmented research testing which messages and messengers shift public understanding of AI, and publishes the findings openly."
+},
+{
+"t": "Research library",
+"u": "/research/library/",
+"d": "A directory of existing research on public attitudes to AI, across both the existential-risk and present-day-harms conversations."
+},
+{
+"t": "Creating a social mandate for AI governance",
+"u": "/theory-of-change",
+"d": "Why AI governance needs a public mandate to be durable, and how Common Signals plans to help build one."
+},
+{
+"t": "Tools",
+"u": "/tools",
+"d": "A free, open toolkit for anyone communicating about AI: an AI messenger map, a comment analyser, and message guides built from tested evidence."
+},
+{
+"t": "Comment analyser",
+"u": "/tools/comment-analyser/",
+"d": "Upload a comment export or paste a Hacker News link and get a coded analysis of how a post landed: stance, frames, engagement and the charts to show it."
+},
+{
+"t": "AI messenger map",
+"u": "/tools/messengers/",
+"d": "A directory of people and organisations explaining AI risk to the public, across both the existential-risk and present-day-harms conversations."
+},
+{
+"t": "AI attitudes segment calculator (concept demo)",
+"u": "/tools/segments/",
+"d": "A working demo of a values-based segmentation quiz, the method behind Britain Talks Climate, applied to AI. The segments are illustrative placeholders, not real research findings."
+},
+{
+"t": "Training",
+"u": "/training",
+"d": "Common Signals is building a messenger-training programme grounded in evidence about who audiences actually trust to talk about AI."
+},
+{
+"t": "Updates",
+"u": "/updates",
+"d": "Pilot progress, methods and findings from Common Signals."
+},
+{
+"t": "Workshops",
+"u": "/workshops",
+"d": "Hands-on workshops from Common Signals help organisations apply tested evidence to their own AI messaging and materials."
+}
+]

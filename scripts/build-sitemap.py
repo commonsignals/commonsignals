@@ -1,8 +1,10 @@
-"""Build sitemap.xml and sitemap.html from the site's HTML pages.
+"""Build sitemap.xml, sitemap.html, search-index.json and 404.html from the site's pages.
 
 Run from the repo root: python3 scripts/build-sitemap.py
-Pages marked noindex (the per-comment templates under data/*/c/) are left out.
+Pages marked noindex (the per-comment templates under data/*/c/, and 404.html
+itself) are left out. The 404 page searches search-index.json in the browser.
 """
+import json
 import html
 import re
 import subprocess
@@ -46,7 +48,9 @@ def pages():
         dirty = git("status", "--porcelain", "--", f)
         lastmod = TODAY if dirty else (git("log", "-1", "--format=%cs", "--", f) or TODAY)
         pub = re.search(r'"datePublished": "([^"]+)"', s)
-        out.append(dict(file=f, url=url, title=title, lastmod=lastmod, published=pub.group(1) if pub else ""))
+        desc = re.search(r'<meta name="description" content="([^"]*)"', s)
+        out.append(dict(file=f, url=url, title=title, lastmod=lastmod, published=pub.group(1) if pub else "",
+                        description=html.unescape(desc.group(1)) if desc else ""))
     return out
 
 
@@ -85,18 +89,24 @@ def write_xml(all_pages):
         encoding="utf-8")
 
 
-def write_html(groups):
+def template(title, desc, path):
+    """Header and footer from the privacy page, with this page's head tags."""
     tpl = (ROOT / "privacy.html").read_text(encoding="utf-8")
     head, rest = tpl.split('<main id="top">', 1)
     foot = rest.split("</main>", 1)[1]
-    desc = "Every page on commonsignals.org, grouped by section."
-    head = re.sub(r"<title>.*?</title>", "<title>Sitemap: Common Signals</title>", head)
-    for pat, val in [(r'(name="description" content=")[^"]*', desc), (r'(og:title" content=")[^"]*', "Sitemap: Common Signals"),
-                     (r'(og:description" content=")[^"]*', desc), (r'(og:url" content=")[^"]*', SITE + "/sitemap"),
-                     (r'(twitter:title" content=")[^"]*', "Sitemap: Common Signals"),
-                     (r'(twitter:description" content=")[^"]*', desc), (r'(rel="canonical" href=")[^"]*', SITE + "/sitemap")]:
+    head = re.sub(r"<title>.*?</title>", f"<title>{title}: Common Signals</title>", head)
+    for pat, val in [(r'(name="description" content=")[^"]*', desc), (r'(og:title" content=")[^"]*', f"{title}: Common Signals"),
+                     (r'(og:description" content=")[^"]*', desc), (r'(og:url" content=")[^"]*', SITE + path),
+                     (r'(twitter:title" content=")[^"]*', f"{title}: Common Signals"),
+                     (r'(twitter:description" content=")[^"]*', desc), (r'(rel="canonical" href=")[^"]*', SITE + path)]:
         head = re.sub(pat, lambda m: m.group(1) + val, head, count=1)
     head = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', "", head, flags=re.S)
+    return head, foot
+
+
+def write_html(groups):
+    desc = "Every page on commonsignals.org, grouped by section."
+    head, foot = template("Sitemap", desc, "/sitemap")
     slug = lambda s: re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
     toc = "\n".join(f'        <li><a href="#{slug(n)}">{html.escape(n)}</a></li>' for n, items in groups if items)
     body = []
@@ -133,8 +143,28 @@ def write_html(groups):
     (ROOT / "sitemap.html").write_text(head + main + foot, encoding="utf-8")
 
 
+def write_search_index(all_pages):
+    rows = [{"t": p["title"], "u": p["url"].replace(SITE, "") or "/", "d": p["description"]}
+            for p in all_pages if p["file"] not in ("sitemap.html",)]
+    (ROOT / "search-index.json").write_text(json.dumps(rows, ensure_ascii=False, indent=0) + "\n", encoding="utf-8")
+
+
+def write_404():
+    desc = "We couldn't find a page at this address."
+    head, foot = template("Page not found", desc, "/404")
+    # A 404 has no canonical address and should never be indexed.
+    head = re.sub(r'<link rel="canonical"[^>]*>\n', "", head)
+    head = re.sub(r'<meta property="og:url"[^>]*>\n', "", head)
+    head = head.replace('<meta name="robots" content="index, follow" />', '<meta name="robots" content="noindex" />')
+    head = head.replace("</head>", (ROOT / "scripts" / "404-head.html").read_text(encoding="utf-8") + "</head>")
+    main = (ROOT / "scripts" / "404-main.html").read_text(encoding="utf-8")
+    (ROOT / "404.html").write_text(head + main + foot, encoding="utf-8")
+
+
 if __name__ == "__main__":
     write_html(group(pages()))      # first pass creates sitemap.html so it lists itself
     all_pages = pages()
     write_html(group(all_pages))
     write_xml(all_pages)
+    write_search_index(all_pages)
+    write_404()
