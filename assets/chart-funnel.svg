@@ -15,19 +15,19 @@
   <g transform="translate(32,88)">
     <rect class="bar softer" x="0" y="0" width="480" height="30"/>
     <text class="n" x="490" y="21">1,703</text>
-    <text class="t" x="8" y="21" fill="#232019">comments on the reel</text>
+    <text class="t" x="8" y="21" style="fill:#232019">comments on the reel</text>
 
     <rect class="bar softer" x="0" y="44" width="470" height="30"/>
     <text class="n" x="480" y="65">1,666</text>
-    <text class="t" x="8" y="65" fill="#232019">retrieved (the rest deleted or hidden)</text>
+    <text class="t" x="8" y="65" style="fill:#232019">retrieved (the rest deleted or hidden)</text>
 
     <rect class="bar soft" x="0" y="88" width="432" height="30"/>
     <text class="n" x="442" y="109">1,534</text>
-    <text class="t" x="8" y="109" fill="#f5f4ef">contain text, coded on four dimensions</text>
+    <text class="t" x="8" y="109" style="fill:#232019">contain text, coded on four dimensions</text>
 
     <rect class="bar" x="0" y="132" width="345" height="30"/>
     <text class="n" x="355" y="153">1,224</text>
-    <text class="t" x="8" y="153" fill="#f5f4ef">take a readable position (base for stance %)</text>
+    <text class="t" x="8" y="153" style="fill:#f5f4ef">take a readable position (base for stance %)</text>
   </g>
 
   <text class="t" x="32" y="278">Stance % use the 1,224 base. Frame and format shares use the 1,534 base.</text>
