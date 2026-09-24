@@ -31,29 +31,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="/styles.css?v=20260924b" />
+<link rel="stylesheet" href="/styles.css?v=20260925" />
 <style>
   .article-shell.nf-shell { grid-template-columns: minmax(0, 46rem); }
   .nf-search { margin: 1.6rem 0 0.6rem; max-width: 32rem; }
   .nf-search label { display: block; font-weight: 600; margin-bottom: 0.4rem; color: var(--ink); }
-  .nf-search input {
-    width: 100%;
-    height: 2.75rem;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    background: var(--paper);
-    color: var(--ink);
-    padding: 0 0.9rem;
-    font-family: var(--sans);
-    font-size: 1rem;
-  }
-  .nf-search input::placeholder { color: var(--ink-faint); }
-  .nf-search input:focus { outline: none; border-color: var(--signal); }
-  .nf-status { color: var(--ink-faint); font-size: 0.95rem; margin: 0.4rem 0 1rem; }
-  .nf-results { list-style: none; margin: 0 0 2rem; padding: 0; max-width: 40rem; }
-  .nf-results li { padding: 0.8rem 0; border-bottom: 1px solid var(--line); }
-  .nf-results a { font-weight: 600; }
-  .nf-results p { margin: 0.25rem 0 0; color: var(--ink-soft); font-size: 0.95rem; line-height: 1.55; }
   .nf-path { font-family: var(--sans); background: var(--paper-2); padding: 0.1rem 0.35rem; border-radius: 4px; overflow-wrap: anywhere; }
 </style>
 </head>
@@ -74,10 +56,15 @@
       <li><a href="/updates">Updates</a></li>
       <li><a href="/donate">Donate</a></li>
     </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navDrawer">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    </button>
-    <a class="nav-cta" href="/contact">Contact</a>
+    <div class="nav-actions">
+      <button class="nav-search-toggle" id="searchToggle" type="button" aria-label="Search the site" aria-expanded="false" aria-controls="siteSearch">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><line x1="16" y1="16" x2="21" y2="21"/></svg>
+      </button>
+      <a class="nav-cta" href="/contact">Contact</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navDrawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
   </div>
   <div class="nav-drawer" id="navDrawer">
     <ul>
@@ -90,6 +77,16 @@
       <li><a href="/donate">Donate</a></li>
       <li><a href="/contact">Contact</a></li>
     </ul>
+  </div>
+  <div class="site-search" id="siteSearch" hidden>
+    <div class="wrap site-search-panel">
+      <form role="search" action="/sitemap">
+        <label for="siteSearchInput" class="sr-only">Search Common Signals</label>
+        <input type="search" class="search-input" id="siteSearchInput" name="q" placeholder="Search the site: try a topic, platform or person" autocomplete="off" enterkeyhint="go">
+      </form>
+      <p class="search-status" role="status" aria-live="polite"></p>
+      <ul class="search-results"></ul>
+    </div>
   </div>
 </header>
 
@@ -104,12 +101,12 @@
 
   <div class="article-shell nf-shell">
     <article class="article-body">
-      <form class="nf-search" role="search" action="/sitemap" onsubmit="return false">
+      <form class="nf-search" role="search" action="/sitemap">
         <label for="nfQuery">Search Common Signals</label>
-        <input type="search" id="nfQuery" name="q" placeholder="Try a topic, platform or person, e.g. Reddit or Soares" autocomplete="off">
+        <input type="search" class="search-input" id="nfQuery" name="q" placeholder="Try a topic, platform or person, e.g. Reddit or Soares" autocomplete="off">
       </form>
-      <p class="nf-status" id="nfStatus" role="status" aria-live="polite"></p>
-      <ul class="nf-results" id="nfResults"></ul>
+      <p class="search-status" id="nfStatus" role="status" aria-live="polite"></p>
+      <ul class="search-results" id="nfResults"></ul>
       <p>You can also browse every page in the <a href="/sitemap">sitemap</a>.</p>
     </article>
   </div>
@@ -117,63 +114,24 @@
 </main>
 
 <script>
-(function () {
+// main.js (deferred) defines CSSearch; deferred scripts run before DOMContentLoaded.
+document.addEventListener('DOMContentLoaded', function () {
   var input = document.getElementById('nfQuery');
-  var list = document.getElementById('nfResults');
-  var status = document.getElementById('nfStatus');
-  var STOP = { html: 1, index: 1, the: 1, and: 1, of: 1, a: 1, to: 1, in: 1, on: 1, www: 1, com: 1, org: 1 };
-  var pages = [];
-
-  function words(s) {
-    return s.toLowerCase().split(/[^a-z0-9]+/).filter(function (w) { return w && !STOP[w]; });
-  }
 
   // Show the missing address and turn it into a starting query.
   var path = decodeURIComponent(location.pathname);
   if (path && path !== '/') {
     document.getElementById('nfPath').textContent = path;
-    input.value = words(path).filter(function (w) { return !/^\d+$/.test(w); }).join(' ');
+    input.value = CSSearch.words(path).filter(function (w) { return !/^\d+$/.test(w); }).join(' ');
   }
 
-  function render() {
-    var q = words(input.value);
-    list.textContent = '';
-    if (!q.length) { status.textContent = ''; return; }
-    var hits = pages.map(function (p) {
-      var t = p.t.toLowerCase(), u = p.u.toLowerCase(), d = p.d.toLowerCase(), score = 0;
-      q.forEach(function (w) {
-        if (t.indexOf(w) > -1) score += 3;
-        if (u.indexOf(w) > -1) score += 2;
-        if (d.indexOf(w) > -1) score += 1;
-      });
-      return { p: p, score: score };
-    }).filter(function (h) { return h.score > 0; })
-      .sort(function (a, b) { return b.score - a.score; })
-      .slice(0, 8);
-    status.textContent = hits.length
-      ? hits.length + (hits.length === 1 ? ' page matches.' : ' pages match.')
-      : 'Nothing matches that. Try another word, or browse the sitemap.';
-    hits.forEach(function (h) {
-      var li = document.createElement('li');
-      var a = document.createElement('a');
-      a.href = h.p.u;
-      a.textContent = h.p.t;
-      li.appendChild(a);
-      if (h.p.d) {
-        var d = document.createElement('p');
-        d.textContent = h.p.d;
-        li.appendChild(d);
-      }
-      list.appendChild(li);
-    });
-  }
-
-  fetch('/search-index.json')
-    .then(function (r) { return r.json(); })
-    .then(function (data) { pages = data; render(); })
-    .catch(function () { status.textContent = 'Search is unavailable right now. Browse the sitemap instead.'; });
-  input.addEventListener('input', render);
-})();
+  CSSearch.bind({
+    input: input,
+    list: document.getElementById('nfResults'),
+    status: document.getElementById('nfStatus'),
+    eager: true
+  });
+});
 </script>
 
 
@@ -237,7 +195,7 @@
   </div>
 </footer>
 
-<script src="/main.js" defer></script>
+<script src="/main.js?v=20260925" defer></script>
 
 <iframe name="subscribe-target" class="subscribe-target-frame" aria-hidden="true" tabindex="-1"></iframe>
 </body>

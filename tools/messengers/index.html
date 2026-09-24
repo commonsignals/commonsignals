@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="/styles.css?v=20260924b" />
+<link rel="stylesheet" href="/styles.css?v=20260925" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -177,10 +177,15 @@
       <li><a href="/updates">Updates</a></li>
       <li><a href="/donate">Donate</a></li>
     </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navDrawer">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    </button>
-    <a class="nav-cta" href="/contact">Contact</a>
+    <div class="nav-actions">
+      <button class="nav-search-toggle" id="searchToggle" type="button" aria-label="Search the site" aria-expanded="false" aria-controls="siteSearch">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><line x1="16" y1="16" x2="21" y2="21"/></svg>
+      </button>
+      <a class="nav-cta" href="/contact">Contact</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navDrawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
   </div>
   <div class="nav-drawer" id="navDrawer">
     <ul>
@@ -193,6 +198,16 @@
       <li><a href="/donate">Donate</a></li>
       <li><a href="/contact">Contact</a></li>
     </ul>
+  </div>
+  <div class="site-search" id="siteSearch" hidden>
+    <div class="wrap site-search-panel">
+      <form role="search" action="/sitemap">
+        <label for="siteSearchInput" class="sr-only">Search Common Signals</label>
+        <input type="search" class="search-input" id="siteSearchInput" name="q" placeholder="Search the site: try a topic, platform or person" autocomplete="off" enterkeyhint="go">
+      </form>
+      <p class="search-status" role="status" aria-live="polite"></p>
+      <ul class="search-results"></ul>
+    </div>
   </div>
 </header>
 
@@ -1586,7 +1601,7 @@
   </div>
 </footer>
 
-<script src="/main.js" defer></script>
+<script src="/main.js?v=20260925" defer></script>
 <script>
 (function () {
   const grid = document.getElementById("messengerGrid");

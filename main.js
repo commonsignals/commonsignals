@@ -113,3 +113,115 @@ document.addEventListener('click', async (e) => {
     btn.removeAttribute('data-copied');
   }, 2000);
 });
+
+// Site search, shared by the header search panel and the 404 page. Pages
+// are scored against search-index.json (built by scripts/build-sitemap.py):
+// a word in the title counts 3, in the URL 2, in the description 1.
+window.CSSearch = (() => {
+  const STOP = { html: 1, index: 1, the: 1, and: 1, of: 1, a: 1, to: 1, in: 1, on: 1, www: 1, com: 1, org: 1 };
+  let indexPromise;
+
+  const words = (s) => s.toLowerCase().split(/[^a-z0-9]+/).filter((w) => w && !STOP[w]);
+
+  const load = () => {
+    indexPromise = indexPromise || fetch('/search-index.json').then((r) => {
+      if (!r.ok) throw new Error(r.status);
+      return r.json();
+    });
+    return indexPromise;
+  };
+
+  const find = (pages, query) => {
+    const q = words(query);
+    if (!q.length) return null;
+    return pages.map((p) => {
+      const t = p.t.toLowerCase(), u = p.u.toLowerCase(), d = p.d.toLowerCase();
+      let score = 0;
+      q.forEach((w) => {
+        if (t.indexOf(w) > -1) score += 3;
+        if (u.indexOf(w) > -1) score += 2;
+        if (d.indexOf(w) > -1) score += 1;
+      });
+      return { p, score };
+    }).filter((h) => h.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 8)
+      .map((h) => h.p);
+  };
+
+  // Wires an input to a results list and a status line. Enter opens the top
+  // result. Pass eager: true to load the index straight away rather than on
+  // first focus.
+  const bind = ({ input, list, status, eager }) => {
+    let pages = null;
+    let hits = [];
+    const render = () => {
+      list.textContent = '';
+      if (!pages) return;
+      const found = find(pages, input.value);
+      hits = found || [];
+      if (!found) { status.textContent = ''; return; }
+      status.textContent = hits.length
+        ? hits.length + (hits.length === 1 ? ' page matches.' : ' pages match.')
+        : 'Nothing matches that. Try another word, or browse the sitemap.';
+      hits.forEach((p) => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = p.u;
+        a.textContent = p.t;
+        li.appendChild(a);
+        if (p.d) {
+          const d = document.createElement('p');
+          d.textContent = p.d;
+          li.appendChild(d);
+        }
+        list.appendChild(li);
+      });
+    };
+    const start = () => load()
+      .then((data) => { pages = data; render(); })
+      .catch(() => { status.textContent = 'Search is unavailable right now. Browse the sitemap instead.'; });
+    input.addEventListener('input', render);
+    input.addEventListener('focus', start, { once: true });
+    input.form && input.form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (hits.length) window.location.href = hits[0].u;
+    });
+    if (eager) start();
+  };
+
+  return { words, bind };
+})();
+
+const searchToggle = document.getElementById('searchToggle');
+const siteSearch = document.getElementById('siteSearch');
+if (searchToggle && siteSearch) {
+  const searchInput = siteSearch.querySelector('input[type="search"]');
+  window.CSSearch.bind({
+    input: searchInput,
+    list: siteSearch.querySelector('.search-results'),
+    status: siteSearch.querySelector('.search-status'),
+  });
+
+  const setSearch = (open) => {
+    siteSearch.hidden = !open;
+    searchToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) {
+      if (navDrawer && navDrawer.classList.contains('open')) {
+        navDrawer.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navDrawer.inert = true;
+      }
+      searchInput.focus();
+    }
+  };
+
+  searchToggle.addEventListener('click', () => setSearch(siteSearch.hidden));
+  if (navToggle) navToggle.addEventListener('click', () => { if (!siteSearch.hidden) setSearch(false); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !siteSearch.hidden) { setSearch(false); searchToggle.focus(); }
+  });
+  document.addEventListener('click', (e) => {
+    if (!siteSearch.hidden && !e.target.closest('header.site')) setSearch(false);
+  });
+}
