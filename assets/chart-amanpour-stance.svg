@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 254" width="720" height="254" role="img" aria-label="Stance distribution">
 <style>
-.t{font-family:"Space Mono",ui-monospace,Menlo,monospace;font-size:12px;fill:#5C5E64}
-.n{font-family:"Space Mono",ui-monospace,Menlo,monospace;font-size:13px;font-weight:700;fill:#17181C}
-.l{font-family:"Hanken Grotesk",system-ui,sans-serif;font-size:14px;fill:#17181C}
-.q{font-family:"Hanken Grotesk",system-ui,sans-serif;font-size:13px;fill:#17181C}
-.h{font-family:"Hanken Grotesk",system-ui,sans-serif;font-size:16px;font-weight:600;fill:#17181C}
+.t{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:12px;fill:#5C5E64}
+.n{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:13px;font-weight:700;fill:#17181C}
+.l{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:14px;fill:#17181C}
+.q{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:13px;fill:#17181C}
+.h{font-family:"Lora",Georgia,serif;font-size:16px;font-weight:600;fill:#17181C}
 .ax{stroke:#DBDBD3;stroke-width:1}
 </style>
 <rect width="720" height="254" fill="#F4F4EF"/>

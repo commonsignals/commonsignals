@@ -63,8 +63,8 @@
   </g>
 
   <g transform="translate(32,490)">
-    <rect x="0" y="-9" width="10" height="10" fill="#7a1e49"/><text class="t" x="16" y="0">accepts the danger</text>
-    <rect x="150" y="-9" width="10" height="10" fill="#7a1e49" opacity="0.35"/><text class="t" x="166" y="0">rejects or objects</text>
-    <rect x="300" y="-9" width="10" height="10" fill="#232019"/><text class="t" x="316" y="0">names an action</text>
+    <rect x="0" y="-9" width="10" height="10" fill="#7a1e49"/><text class="t" x="16" y="0">Accepts the danger</text>
+    <rect x="150" y="-9" width="10" height="10" fill="#7a1e49" opacity="0.35"/><text class="t" x="166" y="0">Rejects or objects</text>
+    <rect x="300" y="-9" width="10" height="10" fill="#232019"/><text class="t" x="316" y="0">Names an action</text>
   </g>
 </svg>
