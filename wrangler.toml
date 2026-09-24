@@ -2,9 +2,12 @@ name = "commonsignals"
 pages_build_output_dir = "."
 compatibility_date = "2026-09-24"
 
-[[send_email]]
-name = "SEND_EMAIL"
-destination_address = "hello@commonsignals.org"
+# Pages' wrangler.toml validator rejects [[send_email]] outright ("Configuration
+# file for Pages projects does not support send_email"), even though `wrangler
+# pages dev` accepts it locally. The SEND_EMAIL binding functions/api/contact.js
+# needs must instead be added via the dashboard: Pages project > Settings >
+# Functions > Email bindings > add binding "SEND_EMAIL", destination address
+# hello@commonsignals.org, for both Production and Preview.
 
 [[d1_databases]]
 binding = "SURVEY_DB"
