@@ -6,15 +6,12 @@ compatibility_date = "2026-09-24"
 name = "SEND_EMAIL"
 destination_address = "hello@commonsignals.org"
 
-# Created by Ben with: npx wrangler d1 create commonsignals-survey
-# Then paste the returned database_id below.
 [[d1_databases]]
 binding = "SURVEY_DB"
 database_name = "commonsignals-survey"
-database_id = "REPLACE_WITH_D1_DATABASE_ID"
+database_id = "abbf1d32-76de-451c-93d1-80ce64a1fa73"
 
-# Created by Ben with: npx wrangler kv namespace create SURVEY_RATE_LIMIT
-# Then paste the returned id below. Used only to rate-limit /api/survey/save.
+# Used only to rate-limit /api/survey/save.
 [[kv_namespaces]]
 binding = "SURVEY_RATE_LIMIT"
-id = "REPLACE_WITH_KV_NAMESPACE_ID"
+id = "2c8144a9a0d74ba1977569583a25fb74"
