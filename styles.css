@@ -146,11 +146,11 @@ header.site .wrap {
     background: var(--paper-2);
     transition: max-height 0.25s ease;
   }
-  .nav-drawer.open { max-height: 20rem; }
+  .nav-drawer.open { max-height: 30rem; }
   .nav-drawer ul {
     list-style: none;
     margin: 0;
-    padding: 0.6rem 1.5rem 1.2rem;
+    padding: 0.6rem 1.5rem 2rem;
     display: grid;
     gap: 0.9rem;
   }
@@ -637,7 +637,9 @@ blockquote cite {
   gap: 0.8rem;
   flex-wrap: wrap;
 }
-.subscribe-row input[type="email"] {
+.subscribe-row input[type="email"],
+.subscribe-row input[type="text"],
+.subscribe-row textarea {
   flex: 1 1 16rem;
   font-family: var(--sans);
   font-size: 1rem;
@@ -647,11 +649,19 @@ blockquote cite {
   background: var(--paper);
   color: var(--ink);
 }
-.subscribe-row input[type="email"]::placeholder { color: var(--ink-faint); }
-.subscribe-row input[type="email"]:focus {
+.subscribe-row input[type="email"]::placeholder,
+.subscribe-row input[type="text"]::placeholder,
+.subscribe-row textarea::placeholder { color: var(--ink-faint); }
+.subscribe-row input[type="email"]:focus,
+.subscribe-row input[type="text"]:focus,
+.subscribe-row textarea:focus {
   outline: none;
   border-color: var(--signal);
 }
+.subscribe-row textarea { width: 100%; resize: vertical; min-height: 8rem; font-family: var(--sans); }
+.subscribe-row .field-row { display: flex; gap: 0.8rem; flex-wrap: wrap; width: 100%; }
+.subscribe-row .field-row input { flex: 1 1 12rem; }
+.contact-form-note { color: var(--ink-faint); font-size: 0.9rem; margin: 0.6rem 0 0; }
 .subscribe-submit {
   border: none;
   cursor: pointer;

@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /survey/
+Disallow: /api/
 
 Sitemap: https://commonsignals.org/sitemap.xml

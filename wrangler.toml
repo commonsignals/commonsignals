@@ -1,0 +1,17 @@
+name = "commonsignals"
+pages_build_output_dir = "."
+compatibility_date = "2026-09-24"
+
+[[send_email]]
+name = "SEND_EMAIL"
+destination_address = "hello@commonsignals.org"
+
+[[d1_databases]]
+binding = "SURVEY_DB"
+database_name = "commonsignals-survey"
+database_id = "abbf1d32-76de-451c-93d1-80ce64a1fa73"
+
+# Used only to rate-limit /api/survey/save.
+[[kv_namespaces]]
+binding = "SURVEY_RATE_LIMIT"
+id = "2c8144a9a0d74ba1977569583a25fb74"

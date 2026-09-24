@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SECTIONS = [
     ("Main pages", ["index.html", "about.html", "research.html", "findings.html", "tools.html",
                     "training.html", "workshops.html", "updates.html", "theory-of-change.html",
-                    "methodology.html", "glossary.html", "privacy.html", "sitemap.html"]),
+                    "methodology.html", "glossary.html", "privacy.html", "contact.html", "sitemap.html"]),
     ("Research articles", None),
     ("Data explorer", "data/"),
     ("Tools and library", ["research/library/index.html", "tools/comment-analyser/index.html",

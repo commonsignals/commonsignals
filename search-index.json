@@ -15,6 +15,11 @@
 "d": "We coded 1,245 YouTube comments on the Dwarkesh Podcast's interview with METR's Ajeya Cotra about the OpenAI agent-swarm incident. The audience accepted the danger, joked about it, praised the messenger, and had no idea what to do next."
 },
 {
+"t": "Contact",
+"u": "/contact",
+"d": "Get in touch with Common Signals: questions, data, partnerships, funding or criticism, all welcome."
+},
+{
 "t": "\"Neither company is acting responsibly\": how X received Jacob Coxon's resignation from Anthropic",
 "u": "/coxon-resignation-x-analysis",
 "d": "We coded 2,480 replies to a former Anthropic researcher's resignation thread on X. The audience split almost evenly, and the most-liked reply didn't engage with his argument at all."
