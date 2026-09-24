@@ -624,7 +624,8 @@
 
   function advance(dir) {
     const screen = screens[pointer];
-    if (screen && screen.item && screen.item.code === "F0") {
+    if (!screen) return; // already past the last screen and finishing
+    if (screen.item && screen.item.code === "F0") {
       const node = root.querySelector(".survey-message");
       if (node && node._onAdvance) node._onAdvance();
     }
@@ -667,7 +668,16 @@
     } catch (e) { /* best effort; localStorage keeps state for the next save */ }
   }
 
+  let finishing = false;
   async function finish() {
+    if (finishing) return;
+    finishing = true;
+    // Replace the last screen straight away so its Next button can't be
+    // pressed again while the final save and completion calls are in flight.
+    root.innerHTML = "";
+    root.appendChild(el("div", { class: "survey-done", "aria-live": "polite" }, [
+      el("p", {}, ["Saving your answers..."]),
+    ]));
     await saveState(true);
     let result = {};
     try {
