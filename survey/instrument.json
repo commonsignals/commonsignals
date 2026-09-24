@@ -1,0 +1,2484 @@
+{
+  "version": "0.1",
+  "source": "_incoming/survey/instrument-v0.1.md",
+  "modules": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L"
+  ],
+  "no_back_from": "F1",
+  "screenout_rules": [
+    {
+      "code": "B1",
+      "condition": "lt_18",
+      "redirect": "screenout"
+    },
+    {
+      "code": "A1",
+      "condition": "eq_disagree",
+      "redirect": "screenout"
+    }
+  ],
+  "items": [
+    {
+      "code": "A0",
+      "module": "A",
+      "type": "info",
+      "prompt": "Thank you for taking part in this survey about artificial intelligence. Artificial intelligence (AI) refers to computer systems that can perform tasks previously thought to need human intelligence, such as understanding language, making decisions and recognising complex patterns.\n\nThe survey takes about 15 minutes. There are no right or wrong answers. We want to know what you think, whatever your level of interest in the subject.",
+      "required": false,
+      "randomize": false,
+      "notes": "",
+      "country": null
+    },
+    {
+      "code": "A1",
+      "module": "A",
+      "type": "consent",
+      "prompt": "What is involved: you will answer questions about your views on a range of topics, read one short text, and answer questions about it.\n\nYour rights: taking part is voluntary. You can stop at any time by closing the window. Your answers are anonymous and no identifying information is collected beyond your panel ID, which is used only to arrange your payment and is deleted when the study closes.\n\nRisks and benefits: there are no anticipated risks beyond those of everyday life. Your answers help build a public, freely available picture of how people in {country_name} think about AI.\n\nData use: anonymised data will be published openly so that researchers, journalists and organisations can use it. No individual can be identified from the published data.\n\nWho is running the study: Common Signals, an independent, non-partisan research organisation. Questions can be sent to hello@commonsignals.org or via the panel messaging system.\n\nBy clicking \"I agree\" you confirm you are 18 or over and consent to take part.",
+      "country": {
+        "uk": {
+          "country_name": "the UK"
+        },
+        "us": {
+          "country_name": "the United States"
+        }
+      },
+      "options": [
+        {
+          "value": "agree",
+          "label": "I agree"
+        },
+        {
+          "value": "disagree",
+          "label": "I do not agree",
+          "terminate": true
+        }
+      ],
+      "notes": "Terminate screens to screen-out flow if disagree.",
+      "required": true,
+      "randomize": false
+    },
+    {
+      "code": "A2",
+      "module": "A",
+      "type": "hidden",
+      "prompt": "Your panel ID",
+      "notes": "Auto-filled from PROLIFIC_PID query parameter, not shown as a question on screen.",
+      "required": false,
+      "randomize": false,
+      "country": null
+    },
+    {
+      "code": "B1",
+      "module": "B",
+      "type": "numeric",
+      "prompt": "What is your age?",
+      "min": 18,
+      "max": 110,
+      "notes": "Terminate if under 18 (screen-out). Quota bands: 18-24, 25-34, 35-44, 45-54, 55-64, 65+.",
+      "screenout_if": {
+        "lt": 18
+      },
+      "required": true,
+      "randomize": false,
+      "country": null
+    },
+    {
+      "code": "B2",
+      "module": "B",
+      "type": "single",
+      "prompt": "How do you describe your gender?",
+      "options": [
+        {
+          "value": "man",
+          "label": "Man"
+        },
+        {
+          "value": "woman",
+          "label": "Woman"
+        },
+        {
+          "value": "other",
+          "label": "In another way"
+        },
+        {
+          "value": "pnts",
+          "label": "Prefer not to say"
+        }
+      ],
+      "required": true,
+      "randomize": false,
+      "notes": "",
+      "country": null
+    },
+    {
+      "code": "B3",
+      "module": "B",
+      "type": "single",
+      "prompt": {
+        "uk": "Where in the UK do you live?",
+        "us": "In which state do you live?"
+      },
+      "country": {
+        "uk": {
+          "options": [
+            {
+              "value": "East of England",
+              "label": "East of England"
+            },
+            {
+              "value": "East Midlands",
+              "label": "East Midlands"
+            },
+            {
+              "value": "London",
+              "label": "London"
+            },
+            {
+              "value": "North East",
+              "label": "North East"
+            },
+            {
+              "value": "North West",
+              "label": "North West"
+            },
+            {
+              "value": "Northern Ireland",
+              "label": "Northern Ireland"
+            },
+            {
+              "value": "Scotland",
+              "label": "Scotland"
+            },
+            {
+              "value": "South East",
+              "label": "South East"
+            },
+            {
+              "value": "South West",
+              "label": "South West"
+            },
+            {
+              "value": "Wales",
+              "label": "Wales"
+            },
+            {
+              "value": "West Midlands",
+              "label": "West Midlands"
+            },
+            {
+              "value": "Yorkshire and the Humber",
+              "label": "Yorkshire and the Humber"
+            }
+          ]
+        },
+        "us": {
+          "options": [
+            {
+              "value": "Alabama",
+              "label": "Alabama"
+            },
+            {
+              "value": "Alaska",
+              "label": "Alaska"
+            },
+            {
+              "value": "Arizona",
+              "label": "Arizona"
+            },
+            {
+              "value": "Arkansas",
+              "label": "Arkansas"
+            },
+            {
+              "value": "California",
+              "label": "California"
+            },
+            {
+              "value": "Colorado",
+              "label": "Colorado"
+            },
+            {
+              "value": "Connecticut",
+              "label": "Connecticut"
+            },
+            {
+              "value": "Delaware",
+              "label": "Delaware"
+            },
+            {
+              "value": "District of Columbia",
+              "label": "District of Columbia"
+            },
+            {
+              "value": "Florida",
+              "label": "Florida"
+            },
+            {
+              "value": "Georgia",
+              "label": "Georgia"
+            },
+            {
+              "value": "Hawaii",
+              "label": "Hawaii"
+            },
+            {
+              "value": "Idaho",
+              "label": "Idaho"
+            },
+            {
+              "value": "Illinois",
+              "label": "Illinois"
+            },
+            {
+              "value": "Indiana",
+              "label": "Indiana"
+            },
+            {
+              "value": "Iowa",
+              "label": "Iowa"
+            },
+            {
+              "value": "Kansas",
+              "label": "Kansas"
+            },
+            {
+              "value": "Kentucky",
+              "label": "Kentucky"
+            },
+            {
+              "value": "Louisiana",
+              "label": "Louisiana"
+            },
+            {
+              "value": "Maine",
+              "label": "Maine"
+            },
+            {
+              "value": "Maryland",
+              "label": "Maryland"
+            },
+            {
+              "value": "Massachusetts",
+              "label": "Massachusetts"
+            },
+            {
+              "value": "Michigan",
+              "label": "Michigan"
+            },
+            {
+              "value": "Minnesota",
+              "label": "Minnesota"
+            },
+            {
+              "value": "Mississippi",
+              "label": "Mississippi"
+            },
+            {
+              "value": "Missouri",
+              "label": "Missouri"
+            },
+            {
+              "value": "Montana",
+              "label": "Montana"
+            },
+            {
+              "value": "Nebraska",
+              "label": "Nebraska"
+            },
+            {
+              "value": "Nevada",
+              "label": "Nevada"
+            },
+            {
+              "value": "New Hampshire",
+              "label": "New Hampshire"
+            },
+            {
+              "value": "New Jersey",
+              "label": "New Jersey"
+            },
+            {
+              "value": "New Mexico",
+              "label": "New Mexico"
+            },
+            {
+              "value": "New York",
+              "label": "New York"
+            },
+            {
+              "value": "North Carolina",
+              "label": "North Carolina"
+            },
+            {
+              "value": "North Dakota",
+              "label": "North Dakota"
+            },
+            {
+              "value": "Ohio",
+              "label": "Ohio"
+            },
+            {
+              "value": "Oklahoma",
+              "label": "Oklahoma"
+            },
+            {
+              "value": "Oregon",
+              "label": "Oregon"
+            },
+            {
+              "value": "Pennsylvania",
+              "label": "Pennsylvania"
+            },
+            {
+              "value": "Rhode Island",
+              "label": "Rhode Island"
+            },
+            {
+              "value": "South Carolina",
+              "label": "South Carolina"
+            },
+            {
+              "value": "South Dakota",
+              "label": "South Dakota"
+            },
+            {
+              "value": "Tennessee",
+              "label": "Tennessee"
+            },
+            {
+              "value": "Texas",
+              "label": "Texas"
+            },
+            {
+              "value": "Utah",
+              "label": "Utah"
+            },
+            {
+              "value": "Vermont",
+              "label": "Vermont"
+            },
+            {
+              "value": "Virginia",
+              "label": "Virginia"
+            },
+            {
+              "value": "Washington",
+              "label": "Washington"
+            },
+            {
+              "value": "West Virginia",
+              "label": "West Virginia"
+            },
+            {
+              "value": "Wisconsin",
+              "label": "Wisconsin"
+            },
+            {
+              "value": "Wyoming",
+              "label": "Wyoming"
+            }
+          ],
+          "widget": "dropdown"
+        }
+      },
+      "notes": "US: recode to the four Census regions (Northeast, Midwest, South, West) and nine divisions for quotas and reporting.",
+      "required": true,
+      "randomize": false
+    },
+    {
+      "code": "B4",
+      "module": "B",
+      "type": "single",
+      "prompt": "Which of these best describes the area where you live?",
+      "options": [
+        {
+          "value": "city",
+          "label": "A large city"
+        },
+        {
+          "value": "suburb",
+          "label": "A suburb or the outskirts of a city"
+        },
+        {
+          "value": "town",
+          "label": "A town"
+        },
+        {
+          "value": "rural",
+          "label": "A village or rural area"
+        }
+      ],
+      "required": true,
+      "randomize": false,
+      "notes": "",
+      "country": null
+    },
+    {
+      "code": "B5",
+      "module": "B",
+      "type": "single",
+      "prompt": "What is the highest level of education you have completed?",
+      "country": {
+        "uk": {
+          "options": [
+            {
+              "value": "none",
+              "label": "No formal qualifications"
+            },
+            {
+              "value": "gcse",
+              "label": "GCSEs, O-levels or equivalent"
+            },
+            {
+              "value": "alevel",
+              "label": "A-levels, BTEC, Highers or equivalent"
+            },
+            {
+              "value": "vocational",
+              "label": "Vocational or trade qualification"
+            },
+            {
+              "value": "undergrad",
+              "label": "Undergraduate degree"
+            },
+            {
+              "value": "postgrad",
+              "label": "Postgraduate degree"
+            }
+          ]
+        },
+        "us": {
+          "options": [
+            {
+              "value": "less_hs",
+              "label": "Less than high school"
+            },
+            {
+              "value": "hs",
+              "label": "High school graduate or GED"
+            },
+            {
+              "value": "some_college",
+              "label": "Some college, no degree"
+            },
+            {
+              "value": "associate",
+              "label": "Associate degree"
+            },
+            {
+              "value": "bachelor",
+              "label": "Bachelor's degree"
+            },
+            {
+              "value": "graduate",
+              "label": "Graduate or professional degree"
+            }
+          ]
+        }
+      },
+      "notes": "Quotas on B1, B2, B3 and B5 are set to national census benchmarks. Close quota cells as they fill.",
+      "required": true,
+      "randomize": false
+    },
+    {
+      "code": "C1",
+      "module": "C",
+      "type": "grid",
+      "prompt": "How much do you agree or disagree with each of the following statements?",
+      "scale": [
+        "Strongly disagree",
+        "Somewhat disagree",
+        "Neither agree nor disagree",
+        "Somewhat agree",
+        "Strongly agree"
+      ],
+      "randomize": true,
+      "screens_of": 10,
+      "rows": [
+        {
+          "code": "C1_01",
+          "label": "Most people can be trusted.",
+          "notes": "Social trust"
+        },
+        {
+          "code": "C1_02",
+          "label": "People who run big institutions such as governments, large companies and the media generally have ordinary people's interests at heart.",
+          "notes": "Institutional trust"
+        },
+        {
+          "code": "C1_03",
+          "label": "The world is becoming a more dangerous place.",
+          "notes": "Threat perception"
+        },
+        {
+          "code": "C1_04",
+          "label": "The way things are going, my children's generation will have a worse life than mine.",
+          "notes": "Threat perception / decline"
+        },
+        {
+          "code": "C1_05",
+          "label": "New ideas and ways of doing things are usually better than the old ones.",
+          "notes": "Openness to change"
+        },
+        {
+          "code": "C1_06",
+          "label": "It is important to protect traditions and ways of life that have served us well.",
+          "notes": "Tradition"
+        },
+        {
+          "code": "C1_07",
+          "label": "Society works best when people respect authority and follow the rules.",
+          "notes": "Authority"
+        },
+        {
+          "code": "C1_08",
+          "label": "People should be free to live as they choose, as long as they do not harm others.",
+          "notes": "Autonomy"
+        },
+        {
+          "code": "C1_09",
+          "label": "The gap between the richest and everyone else is one of the biggest problems facing the country.",
+          "notes": "Fairness / equality"
+        },
+        {
+          "code": "C1_10",
+          "label": "People who work hard generally get what they deserve.",
+          "notes": "Meritocracy"
+        },
+        {
+          "code": "C1_11",
+          "label": "Ordinary people like me have little say in what the government does.",
+          "notes": "Political efficacy"
+        },
+        {
+          "code": "C1_12",
+          "label": "When I set my mind to something, I usually manage to make it happen.",
+          "notes": "Personal agency"
+        },
+        {
+          "code": "C1_13",
+          "label": "Scientific experts usually know better than the general public what is good for society.",
+          "notes": "Deference to expertise"
+        },
+        {
+          "code": "C1_14",
+          "label": "Big technology companies have too much power over our lives.",
+          "notes": "Corporate power"
+        },
+        {
+          "code": "C1_15",
+          "label": "Technological progress has done more good than harm over the past fifty years.",
+          "notes": "Tech optimism"
+        },
+        {
+          "code": "C1_16",
+          "label": "I feel a strong sense of belonging to my local community.",
+          "notes": "Local belonging"
+        },
+        {
+          "code": "C1_17",
+          "label": "I am proud to be {nationality}.",
+          "notes": "National identity"
+        },
+        {
+          "code": "C1_18",
+          "label": "We have a responsibility to the people who will live long after we are gone.",
+          "notes": "Long-term orientation"
+        },
+        {
+          "code": "C1_19",
+          "label": "Big changes in society usually end up benefiting people like me.",
+          "notes": "Change benefit / winners and losers"
+        },
+        {
+          "code": "C1_20",
+          "label": "I usually feel that I understand what is going on in the news.",
+          "notes": "Information confidence"
+        }
+      ],
+      "country": {
+        "uk": {
+          "row_fill": {
+            "C1_17": {
+              "nationality": "British"
+            }
+          }
+        },
+        "us": {
+          "row_fill": {
+            "C1_17": {
+              "nationality": "American"
+            }
+          }
+        }
+      },
+      "notes": "20 items is the minimum for a stable latent class solution. Pairs C1_05/06, C1_07/08, C1_09/10 are balanced in direction to limit acquiescence bias. Pretest for ceiling effects on C1_01 and C1_08.",
+      "required": true
+    },
+    {
+      "code": "C2",
+      "module": "C",
+      "type": "multi",
+      "max_selections": 3,
+      "prompt": "Which of the following are most important to you personally? Select up to three.",
+      "options": [
+        {
+          "value": "Security and safety",
+          "label": "Security and safety"
+        },
+        {
+          "value": "Freedom and independence",
+          "label": "Freedom and independence"
+        },
+        {
+          "value": "Fairness and equality",
+          "label": "Fairness and equality"
+        },
+        {
+          "value": "Family and community",
+          "label": "Family and community"
+        },
+        {
+          "value": "Tradition and faith",
+          "label": "Tradition and faith"
+        },
+        {
+          "value": "Achievement and success",
+          "label": "Achievement and success"
+        },
+        {
+          "value": "Care for others",
+          "label": "Care for others"
+        },
+        {
+          "value": "Enjoying life",
+          "label": "Enjoying life"
+        },
+        {
+          "value": "Protecting the natural world",
+          "label": "Protecting the natural world"
+        },
+        {
+          "value": "Knowledge and understanding",
+          "label": "Knowledge and understanding"
+        }
+      ],
+      "required": true,
+      "randomize": false,
+      "notes": "",
+      "country": null
+    },
+    {
+      "code": "C3",
+      "module": "C",
+      "type": "single",
+      "prompt": "In general, would you say you are someone who worries about the future a lot, a little, or hardly at all?",
+      "options": [
+        {
+          "value": "A lot",
+          "label": "A lot"
+        },
+        {
+          "value": "A fair amount",
+          "label": "A fair amount"
+        },
+        {
+          "value": "A little",
+          "label": "A little"
+        },
+        {
+          "value": "Hardly at all",
+          "label": "Hardly at all"
+        }
+      ],
+      "notes": "C2 and C3 feed the messaging guidance directly and are kept even if Module C's grid is replaced by a licensed battery.",
+      "required": true,
+      "randomize": false,
+      "country": null
+    },
+    {
+      "code": "D0",
+      "module": "D",
+      "type": "info_header",
+      "prompt": "The rest of the survey is about artificial intelligence.",
+      "required": false,
+      "randomize": false,
+      "notes": "",
+      "country": null
+    },
+    {
+      "code": "D1",
+      "module": "D",
+      "type": "single",
+      "prompt": "How often do you use AI tools, such as ChatGPT, Claude, Gemini, Copilot, image generators or AI assistants?",
+      "options": [
+        {
+          "value": "Never",
+          "label": "Never"
+        },
+        {
+          "value": "Less than once a month",
+          "label": "Less than once a month"
+        },
+        {
+          "value": "A few times a month",
+          "label": "A few times a month"
+        },
+        {
+          "value": "A few times a week",
+          "label": "A few times a week"
+        },
+        {
+          "value": "Daily or almost daily",
+          "label": "Daily or almost daily"
+        },
+        {
+          "value": "Several times a day",
+          "label": "Several times a day"
+        }
+      ],
+      "notes": "Kept verbatim from the source instrument.",
+      "required": true,
+      "randomize": false,
+      "country": null
+    },
+    {
+      "code": "D2",
+      "module": "D",
+      "type": "single",
+      "prompt": "Do you use AI tools in your work?",
+      "options": [
+        {
+          "value": "core",
+          "label": "Yes, they are a core part of my work"
+        },
+        {
+          "value": "sometimes",
+          "label": "Yes, sometimes"
+        },
+        {
+          "value": "employer_only",
+          "label": "No, but my employer or colleagues do"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "not_sure",
+          "label": "Not sure"
+        }
+      ],
+      "routing": {
+        "show_if": {
+          "code": "J1",
+          "in": [
+            "fulltime",
+            "parttime",
+            "selfemployed",
+            "student"
+          ]
+        }
+      },
+      "required": false,
+      "notes": "Ask if employed, self-employed or student, from J1; otherwise skip. J1 is asked later in Module J, so this routing is evaluated retrospectively at save time; the app asks D2 for everyone and the analysis plan drops it for non-workers if J1 says otherwise. Flagged as an open sequencing point below.",
+      "randomize": false,
+      "country": null
+    },
+    {
+      "code": "D3",
+      "module": "D",
+      "type": "single",
+      "prompt": "How would you describe your overall attitude towards artificial intelligence?",
+      "options": [
+        {
+          "value": "Very negative",
+          "label": "Very negative"
+        },
+        {
+          "value": "Somewhat negative",
+          "label": "Somewhat negative"
+        },
+        {
+          "value": "Neither positive nor negative",
+          "label": "Neither positive nor negative"
+        },
+        {
+          "value": "Somewhat positive",
+          "label": "Somewhat positive"
+        },
+        {
+          "value": "Very positive",
+          "label": "Very positive"
+        }
+      ],
+      "notes": "Kept verbatim from the source instrument.",
+      "required": true,
+      "randomize": false,
+      "country": null
+    },
+    {
+      "code": "D4",
+      "module": "D",
+      "type": "single",
+      "prompt": "How much do you feel you know about AI and how it works?",
+      "options": [
+        {
+          "value": "Nothing at all",
+          "label": "Nothing at all"
+        },
+        {
+          "value": "A little",
+          "label": "A little"
+        },
+        {
+          "value": "A fair amount",
+          "label": "A fair amount"
+        },
+        {
+          "value": "A great deal",
+          "label": "A great deal"
+        }
+      ],
+      "required": true,
+      "randomize": false,
+      "notes": "",
+      "country": null
+    },
+    {
+      "code": "D5",
+      "module": "D",
+      "type": "single",
+      "prompt": "How much have you heard or read about potential harms and risks from AI?",
+      "options": [
+        {
+          "value": "Nothing at all",
+          "label": "Nothing at all"
+        },
+        {
+          "value": "A little",
+          "label": "A little"
+        },
+        {
+          "value": "A fair amount",
+          "label": "A fair amount"
+        },
+        {
+          "value": "A great deal",
+          "label": "A great deal"
+        }
+      ],
+      "notes": "Kept verbatim from the source instrument.",
+      "required": true,
+      "randomize": false,
+      "country": null
+    },
+    {
+      "code": "D6",
+      "module": "D",
+      "type": "single",
+      "prompt": "How much have you heard or read about potential benefits from AI?",
+      "options": [
+        {
+          "value": "Nothing at all",
+          "label": "Nothing at all"
+        },
+        {
+          "value": "A little",
+          "label": "A little"
+        },
+        {
+          "value": "A fair amount",
+          "label": "A fair amount"
+        },
+        {
+          "value": "A great deal",
+          "label": "A great deal"
+        }
+      ],
+      "required": true,
+      "randomize": false,
+      "notes": "",
+      "country": null
+    },
+    {
+      "code": "D7",
+      "module": "D",
+      "type": "grid",
+      "prompt": "How much do you agree or disagree with the following statements?",
+      "scale": [
+        "Strongly disagree",
+        "Somewhat disagree",
+        "Neither agree nor disagree",
+        "Somewhat agree",
+        "Strongly agree"
+      ],
+      "randomize": true,
+      "rows": [
+        {
+          "code": "D7_01",
+          "label": "The development of AI will benefit society."
+        },
+        {
+          "code": "D7_02",
+          "label": "The development of AI will threaten society."
+        },
+        {
+          "code": "D7_03",
+          "label": "The benefits of AI outweigh its risks."
+        },
+        {
+          "code": "D7_04",
+          "label": "We should slow down the development of AI until we understand its consequences."
+        },
+        {
+          "code": "D7_05",
+          "label": "AI will make my own life better over the next ten years."
+        },
+        {
+          "code": "D7_06",
+          "label": "The people developing AI are careful about its effects on society."
+        }
+      ],
+      "notes": "D7_01 to D7_04 are carried over unchanged from the source instrument so results can be compared; asked pre-exposure as baseline.",
+      "required": true,
+      "country": null
+    },
+    {
+      "code": "D8",
+      "module": "D",
+      "type": "multi",
+      "max_selections": 2,
+      "prompt": "When you think about AI, which of these comes closest to how you feel? Select up to two.",
+      "options": [
+        {
+          "value": "Excited",
+          "label": "Excited"
+        },
+        {
+          "value": "Curious",
+          "label": "Curious"
+        },
+        {
+          "value": "Hopeful",
+          "label": "Hopeful"
+        },
+        {
+          "value": "Indifferent",
+          "label": "Indifferent"
+        },
+        {
+          "value": "Confused",
+          "label": "Confused"
+        },
+        {
+          "value": "Uneasy",
+          "label": "Uneasy"
+        },
+        {
+          "value": "Worried",
+          "label": "Worried"
+        },
+        {
+          "value": "Angry",
+          "label": "Angry"
+        },
+        {
+          "value": "Powerless",
+          "label": "Powerless"
+        }
+      ],
+      "notes": "Quick affect measure for everyone before message exposure; the fuller 0-10 emotion battery in F4 is exposure-specific.",
+      "required": true,
+      "randomize": false,
+      "country": null
+    },
+    {
+      "code": "E1",
+      "module": "E",
+      "type": "grid",
+      "prompt": "How concerned are you about each of the following? Please answer whether or not you have heard much about it before.",
+      "scale": [
+        "Not at all concerned",
+        "Slightly concerned",
+        "Somewhat concerned",
+        "Very concerned",
+        "Extremely concerned",
+        "Don't know enough to say"
+      ],
+      "randomize": true,
+      "rows": [
+        {
+          "code": "E1_01",
+          "label": "AI taking people's jobs",
+          "notes": "Present-day, economic"
+        },
+        {
+          "code": "E1_02",
+          "label": "Fake videos, images and news made with AI",
+          "notes": "Present-day, information"
+        },
+        {
+          "code": "E1_03",
+          "label": "AI systems treating some groups of people unfairly",
+          "notes": "Present-day, discrimination"
+        },
+        {
+          "code": "E1_04",
+          "label": "AI being used to watch and track people",
+          "notes": "Present-day, surveillance"
+        },
+        {
+          "code": "E1_05",
+          "label": "Children forming relationships with AI chatbots",
+          "notes": "Present-day, children"
+        },
+        {
+          "code": "E1_06",
+          "label": "A small number of companies controlling powerful AI",
+          "notes": "Structural, power"
+        },
+        {
+          "code": "E1_07",
+          "label": "AI being used in weapons and warfare",
+          "notes": "Security"
+        },
+        {
+          "code": "E1_08",
+          "label": "AI being used to help make dangerous weapons, such as bioweapons",
+          "notes": "Catastrophic misuse"
+        },
+        {
+          "code": "E1_09",
+          "label": "AI systems becoming more capable than humans and acting outside our control",
+          "notes": "Loss of control / extinction-level"
+        },
+        {
+          "code": "E1_10",
+          "label": "The energy and water used by AI data centres",
+          "notes": "Environment"
+        }
+      ],
+      "notes": "Balanced deliberately: five present-day harms, two structural/security items, two catastrophic-risk items, one environmental item. Wording avoids field jargon (alignment, x-risk, algorithmic bias); check every label against the Common Signals glossary before fielding.",
+      "required": true,
+      "country": null
+    },
+    {
+      "code": "E2",
+      "module": "E",
+      "type": "single",
+      "prompt": "And which one of these concerns you most?",
+      "options_from": "E1",
+      "extra_options": [
+        {
+          "value": "none",
+          "label": "None of these"
+        }
+      ],
+      "required": true,
+      "randomize": false,
+      "notes": "",
+      "country": null
+    },
+    {
+      "code": "E3",
+      "module": "E",
+      "type": "grid_dynamic",
+      "prompt": "For each of the following, when do you think it is likely to become a serious problem, if ever?",
+      "scale": [
+        "It's already happening",
+        "Within 1-5 years",
+        "Within 5-20 years",
+        "More than 20 years from now",
+        "Never",
+        "Don't know"
+      ],
+      "slot_codes": [
+        "E3_a",
+        "E3_b",
+        "E3_c"
+      ],
+      "source": "E1",
+      "notes": "Ask for three issues: the respondent's E2 choice; E1_09 (loss of control) if not already chosen; and one other drawn at random from the remaining E1 issues. The three selected issue codes and their shown order are recorded in timings.",
+      "required": true,
+      "randomize": false,
+      "country": null
+    },
+    {
+      "code": "E4",
+      "module": "E",
+      "type": "multi",
+      "max_selections": 2,
+      "prompt": "Who do you think should be mainly responsible for making sure AI is developed safely? Select up to two.",
+      "options": [
+        {
+          "value": "The companies developing AI",
+          "label": "The companies developing AI"
+        },
+        {
+          "value": "National government",
+          "label": "National government"
+        },
+        {
+          "value": "International bodies such as the UN",
+          "label": "International bodies such as the UN"
+        },
+        {
+          "value": "Independent regulators",
+          "label": "Independent regulators"
+        },
+        {
+          "value": "Scientists and researchers",
+          "label": "Scientists and researchers"
+        },
+        {
+          "value": "The courts",
+          "label": "The courts"
+        },
+        {
+          "value": "The public, through campaigning and voting",
+          "label": "The public, through campaigning and voting"
+        },
+        {
+          "value": "Nobody can control it",
+          "label": "Nobody can control it"
+        },
+        {
+          "value": "Don't know",
+          "label": "Don't know"
+        }
+      ],
+      "required": true,
+      "randomize": false,
+      "notes": "",
+      "country": null
+    },
+    {
+      "code": "E5",
+      "module": "E",
+      "type": "grid",
+      "prompt": "How much do you trust the following to tell the truth about the risks of AI?",
+      "scale": [
+        "Do not trust at all",
+        "Trust a little",
+        "Trust somewhat",
+        "Trust a great deal",
+        "Don't know"
+      ],
+      "rows": [
+        {
+          "code": "E5_01",
+          "label": "AI companies"
+        },
+        {
+          "code": "E5_02",
+          "label": {
+            "uk": "The UK government",
+            "us": "The federal government"
+          }
+        },
+        {
+          "code": "E5_03",
+          "label": "Independent scientists"
+        },
+        {
+          "code": "E5_04",
+          "label": "Campaign groups and charities"
+        }
+      ],
+      "required": true,
+      "randomize": false,
+      "notes": "",
+      "country": null
+    },
+    {
+      "code": "F0",
+      "module": "F",
+      "type": "message_exposure",
+      "prompt": "Next, you will read a short text about AI. Please read it closely, as we will ask you a few questions about it afterwards.",
+      "conditions": [
+        {
+          "n": 0,
+          "label": "Control"
+        },
+        {
+          "n": 1,
+          "label": "Present-day harms, personal frame"
+        },
+        {
+          "n": 2,
+          "label": "Present-day harms, systemic frame"
+        },
+        {
+          "n": 3,
+          "label": "Longer-term risk, expert frame"
+        },
+        {
+          "n": 4,
+          "label": "Longer-term risk, plain-speaking frame"
+        },
+        {
+          "n": 5,
+          "label": "Benefit-led with conditions"
+        },
+        {
+          "n": 6,
+          "label": "Bridging"
+        }
+      ],
+      "min_dwell_seconds": 20,
+      "notes": "Randomise each respondent with equal probability (1/7) to one condition, recorded as F0. Minimum dwell 20s before Next appears (F0_time records actual time on screen; skipped in test mode). Message text comes from /survey/messages/<country>.json, not from this file.",
+      "required": true,
+      "randomize": false,
+      "country": null
+    },
+    {
+      "code": "F1",
+      "module": "F",
+      "type": "single",
+      "prompt": "Which of these best describes what the text you just read was about?",
+      "options_source": "messages_comprehension",
+      "notes": "Six fixed options, the same six shown to everyone; one is correct per condition (see messages/<country>.json comprehension_answer). Respondents who fail are retained and flagged (comprehension_pass=0); never blocks progression.",
+      "no_back": true,
+      "required": true,
+      "randomize": false,
+      "country": null
+    },
+    {
+      "code": "F2",
+      "module": "F",
+      "type": "grid",
+      "prompt": "Thinking about the text you just read, how much do you agree or disagree with the following?",
+      "scale": [
+        "Strongly disagree",
+        "Somewhat disagree",
+        "Neither agree nor disagree",
+        "Somewhat agree",
+        "Strongly agree"
+      ],
+      "randomize": true,
+      "rows": [
+        {
+          "code": "F2_01",
+          "label": "It was easy to understand."
+        },
+        {
+          "code": "F2_02",
+          "label": "It was believable."
+        },
+        {
+          "code": "F2_03",
+          "label": "It told me something I did not already know."
+        },
+        {
+          "code": "F2_04",
+          "label": "It felt relevant to my own life."
+        },
+        {
+          "code": "F2_05",
+          "label": "It was trying to frighten me."
+        },
+        {
+          "code": "F2_06",
+          "label": "It made me want to find out more."
+        }
+      ],
+      "routing": {
+        "hide_if": {
+          "code": "F0",
+          "eq": 0
+        }
+      },
+      "notes": "Not asked in control condition (F0 = 0).",
+      "required": true,
+      "country": null
+    },
+    {
+      "code": "F3",
+      "module": "F",
+      "type": "single",
+      "prompt": "Who do you think wrote this text?",
+      "options": [
+        {
+          "value": "An AI company",
+          "label": "An AI company"
+        },
+        {
+          "value": "A campaign group or charity",
+          "label": "A campaign group or charity"
+        },
+        {
+          "value": "A journalist",
+          "label": "A journalist"
+        },
+        {
+          "value": "A scientist or academic",
+          "label": "A scientist or academic"
+        },
+        {
+          "value": "A government body",
+          "label": "A government body"
+        },
+        {
+          "value": "A political party",
+          "label": "A political party"
+        },
+        {
+          "value": "Someone else",
+          "label": "Someone else"
+        },
+        {
+          "value": "Don't know",
+          "label": "Don't know"
+        }
+      ],
+      "required": true,
+      "randomize": false,
+      "notes": "",
+      "country": null
+    },
+    {
+      "code": "F4",
+      "module": "F",
+      "type": "slider_grid",
+      "prompt": "When you read the text, how much did you feel each of the following, on a scale from 0 (not at all) to 10 (very strongly)?",
+      "min": 0,
+      "max": 10,
+      "randomize": true,
+      "rows": [
+        {
+          "code": "F4_01",
+          "label": "Anxious or fearful"
+        },
+        {
+          "code": "F4_02",
+          "label": "Angry"
+        },
+        {
+          "code": "F4_03",
+          "label": "Energised"
+        },
+        {
+          "code": "F4_04",
+          "label": "Hopeless or powerless"
+        },
+        {
+          "code": "F4_05",
+          "label": "Hopeful"
+        },
+        {
+          "code": "F4_06",
+          "label": "Sympathetic to those affected"
+        }
+      ],
+      "notes": "Asked in all conditions including control.",
+      "required": true,
+      "country": null
+    },
+    {
+      "code": "F5",
+      "module": "F",
+      "type": "single",
+      "prompt": "How concerned are you about AI overall?",
+      "options": [
+        {
+          "value": "Not at all concerned",
+          "label": "Not at all concerned"
+        },
+        {
+          "value": "Slightly concerned",
+          "label": "Slightly concerned"
+        },
+        {
+          "value": "Somewhat concerned",
+          "label": "Somewhat concerned"
+        },
+        {
+          "value": "Very concerned",
+          "label": "Very concerned"
+        },
+        {
+          "value": "Extremely concerned",
+          "label": "Extremely concerned"
+        }
+      ],
+      "notes": "Primary outcome measure; asked in every condition including control, in the same order (F5 to F8).",
+      "required": true,
+      "randomize": false,
+      "country": null
+    },
+    {
+      "code": "F6",
+      "module": "F",
+      "type": "single",
+      "prompt": {
+        "uk": "How much do you support or oppose the UK government introducing stronger rules on how AI is developed and used?",
+        "us": "How much do you support or oppose the federal government introducing stronger rules on how AI is developed and used?"
+      },
+      "options": [
+        {
+          "value": "Strongly oppose",
+          "label": "Strongly oppose"
+        },
+        {
+          "value": "Oppose",
+          "label": "Oppose"
+        },
+        {
+          "value": "Neither oppose nor support",
+          "label": "Neither oppose nor support"
+        },
+        {
+          "value": "Support",
+          "label": "Support"
+        },
+        {
+          "value": "Strongly support",
+          "label": "Strongly support"
+        }
+      ],
+      "notes": "Primary outcome measure.",
+      "required": true,
+      "randomize": false,
+      "country": null
+    },
+    {
+      "code": "F7",
+      "module": "F",
+      "type": "grid",
+      "prompt": "Would you support or oppose each of the following?",
+      "scale": [
+        "Strongly oppose",
+        "Oppose",
+        "Neither oppose nor support",
+        "Support",
+        "Strongly support",
+        "Don't know"
+      ],
+      "randomize": true,
+      "rows": [
+        {
+          "code": "F7_01",
+          "label": "Requiring AI companies to test their most powerful systems for safety before release, with results checked by an independent body"
+        },
+        {
+          "code": "F7_02",
+          "label": "Making it a criminal offence to create sexual or violent deepfakes of real people"
+        },
+        {
+          "code": "F7_03",
+          "label": "Banning AI chatbots designed as companions for children under 16"
+        },
+        {
+          "code": "F7_04",
+          "label": "Requiring companies to tell you when you are dealing with an AI rather than a person"
+        },
+        {
+          "code": "F7_05",
+          "label": "An international agreement limiting the development of the most powerful AI systems"
+        },
+        {
+          "code": "F7_06",
+          "label": "Giving workers a legal right to be consulted before AI is used to replace or monitor them"
+        }
+      ],
+      "notes": "Primary outcome measure.",
+      "required": true,
+      "country": null
+    },
+    {
+      "code": "F8",
+      "module": "F",
+      "type": "grid",
+      "prompt": "How willing would you be to do each of the following about AI in the next 12 months?",
+      "scale": [
+        "Not at all willing",
+        "Mostly unwilling",
+        "Undecided",
+        "Willing",
+        "Very willing"
+      ],
+      "rows": [
+        {
+          "code": "F8_01",
+          "label": "Share information about it on social media"
+        },
+        {
+          "code": "F8_02",
+          "label": "Sign a petition"
+        },
+        {
+          "code": "F8_03",
+          "label": {
+            "uk": "Contact your MP",
+            "us": "Contact your member of Congress"
+          }
+        },
+        {
+          "code": "F8_04",
+          "label": "Donate to an organisation working on it"
+        },
+        {
+          "code": "F8_05",
+          "label": "Talk to friends or family about it"
+        },
+        {
+          "code": "F8_06",
+          "label": "Change how you use AI tools yourself"
+        }
+      ],
+      "notes": "Primary outcome measure.",
+      "required": true,
+      "randomize": false,
+      "country": null
+    },
+    {
+      "code": "F9",
+      "module": "F",
+      "type": "single",
+      "prompt": "If a political party made addressing the risks of AI one of its main priorities, would that change how likely you would be to vote for them?",
+      "options": [
+        {
+          "value": "Much less likely",
+          "label": "Much less likely"
+        },
+        {
+          "value": "Somewhat less likely",
+          "label": "Somewhat less likely"
+        },
+        {
+          "value": "Would not affect my decision",
+          "label": "Would not affect my decision"
+        },
+        {
+          "value": "Somewhat more likely",
+          "label": "Somewhat more likely"
+        },
+        {
+          "value": "Much more likely",
+          "label": "Much more likely"
+        }
+      ],
+      "required": true,
+      "randomize": false,
+      "notes": "",
+      "country": null
+    },
+    {
+      "code": "F10",
+      "module": "F",
+      "type": "message",
+      "prompt": "Below is a link to an open letter calling for independent safety testing of powerful AI systems before they are released. If you would like to add your name, click the link, which opens in a new tab, then return here to finish the survey. Please finish the survey first so that your answers are saved.",
+      "required": false,
+      "notes": "OPEN DESIGN QUESTION: no neutral, real open letter has been identified yet that both perspectives in the field would accept, and the letter must not be hosted by or attributed to Common Signals. Per the instrument's own instruction (\"keep it if a neutral letter exists; otherwise drop it rather than fabricate one\"), F10 is implemented as disabled/hidden by default (link_url is null) until the research team supplies a real URL in this field. F10_click is recorded only if a link is present and clicked.",
+      "link_url": null,
+      "randomize": false,
+      "country": null
+    },
+    {
+      "code": "G1",
+      "module": "G",
+      "type": "grid",
+      "prompt": "How much would you trust each of the following to give you accurate information about AI?",
+      "scale": [
+        "Do not trust at all",
+        "Trust a little",
+        "Trust somewhat",
+        "Trust a great deal",
+        "Don't know"
+      ],
+      "randomize": true,
+      "screens_of": 8,
+      "rows": [
+        {
+          "code": "G1_01",
+          "label": "AI researchers and academics"
+        },
+        {
+          "code": "G1_02",
+          "label": "Leaders of AI companies"
+        },
+        {
+          "code": "G1_03",
+          "label": "Employees who have left AI companies to raise concerns"
+        },
+        {
+          "code": "G1_04",
+          "label": {
+            "uk": "The UK government",
+            "us": "The federal government"
+          }
+        },
+        {
+          "code": "G1_05",
+          "label": "Independent regulators"
+        },
+        {
+          "code": "G1_06",
+          "label": "National charities and campaign groups"
+        },
+        {
+          "code": "G1_07",
+          "label": "Trade unions"
+        },
+        {
+          "code": "G1_08",
+          "label": "Journalists and news organisations"
+        },
+        {
+          "code": "G1_09",
+          "label": "YouTubers, podcasters and online creators"
+        },
+        {
+          "code": "G1_10",
+          "label": "Well-known celebrities"
+        },
+        {
+          "code": "G1_11",
+          "label": "Religious leaders"
+        },
+        {
+          "code": "G1_12",
+          "label": "Doctors, nurses and teachers"
+        },
+        {
+          "code": "G1_13",
+          "label": "People who have been directly harmed by AI"
+        },
+        {
+          "code": "G1_14",
+          "label": "Military and security officials"
+        },
+        {
+          "code": "G1_15",
+          "label": {
+            "uk": "Your MP",
+            "us": "Your representatives in Congress"
+          }
+        },
+        {
+          "code": "G1_16",
+          "label": "Friends and family"
+        }
+      ],
+      "notes": "Extends the source instrument's 'who represents your views' item into a full trust battery; the source item's response set is preserved inside G1 so the two can be compared.",
+      "required": true,
+      "country": null
+    },
+    {
+      "code": "G2",
+      "module": "G",
+      "type": "grid_two_step",
+      "prompt": "Have you heard of each of the following? If so, how much do you trust what they say about AI?",
+      "step1_options": [
+        "Never heard of them",
+        "Heard of them"
+      ],
+      "step2_scale": [
+        "Do not trust at all",
+        "Trust a little",
+        "Trust somewhat",
+        "Trust a great deal"
+      ],
+      "randomize": true,
+      "rows": [
+        {
+          "code": "G2_01",
+          "label": null,
+          "notes": "PLACEHOLDER: named messenger list not yet frozen (Appendix 2 of the instrument). Populate name/type/perspective from the Common Signals messenger map at pre-registration."
+        },
+        {
+          "code": "G2_02",
+          "label": null,
+          "notes": "PLACEHOLDER: named messenger list not yet frozen (Appendix 2 of the instrument). Populate name/type/perspective from the Common Signals messenger map at pre-registration."
+        },
+        {
+          "code": "G2_03",
+          "label": null,
+          "notes": "PLACEHOLDER: named messenger list not yet frozen (Appendix 2 of the instrument). Populate name/type/perspective from the Common Signals messenger map at pre-registration."
+        },
+        {
+          "code": "G2_04",
+          "label": null,
+          "notes": "PLACEHOLDER: named messenger list not yet frozen (Appendix 2 of the instrument). Populate name/type/perspective from the Common Signals messenger map at pre-registration."
+        },
+        {
+          "code": "G2_05",
+          "label": null,
+          "notes": "PLACEHOLDER: named messenger list not yet frozen (Appendix 2 of the instrument). Populate name/type/perspective from the Common Signals messenger map at pre-registration."
+        },
+        {
+          "code": "G2_06",
+          "label": null,
+          "notes": "PLACEHOLDER: named messenger list not yet frozen (Appendix 2 of the instrument). Populate name/type/perspective from the Common Signals messenger map at pre-registration."
+        },
+        {
+          "code": "G2_07",
+          "label": null,
+          "notes": "PLACEHOLDER: named messenger list not yet frozen (Appendix 2 of the instrument). Populate name/type/perspective from the Common Signals messenger map at pre-registration."
+        },
+        {
+          "code": "G2_08",
+          "label": null,
+          "notes": "PLACEHOLDER: named messenger list not yet frozen (Appendix 2 of the instrument). Populate name/type/perspective from the Common Signals messenger map at pre-registration."
+        },
+        {
+          "code": "G2_09",
+          "label": null,
+          "notes": "PLACEHOLDER: named messenger list not yet frozen (Appendix 2 of the instrument). Populate name/type/perspective from the Common Signals messenger map at pre-registration."
+        },
+        {
+          "code": "G2_10",
+          "label": null,
+          "notes": "PLACEHOLDER: named messenger list not yet frozen (Appendix 2 of the instrument). Populate name/type/perspective from the Common Signals messenger map at pre-registration."
+        },
+        {
+          "code": "G2_11",
+          "label": null,
+          "notes": "PLACEHOLDER: named messenger list not yet frozen (Appendix 2 of the instrument). Populate name/type/perspective from the Common Signals messenger map at pre-registration."
+        },
+        {
+          "code": "G2_12",
+          "label": null,
+          "notes": "PLACEHOLDER: named messenger list not yet frozen (Appendix 2 of the instrument). Populate name/type/perspective from the Common Signals messenger map at pre-registration."
+        },
+        {
+          "code": "G2_13",
+          "label": null,
+          "notes": "PLACEHOLDER: named messenger list not yet frozen (Appendix 2 of the instrument). Populate name/type/perspective from the Common Signals messenger map at pre-registration."
+        },
+        {
+          "code": "G2_14",
+          "label": null,
+          "notes": "PLACEHOLDER: named messenger list not yet frozen (Appendix 2 of the instrument). Populate name/type/perspective from the Common Signals messenger map at pre-registration."
+        },
+        {
+          "code": "G2_15",
+          "label": null,
+          "notes": "PLACEHOLDER: named messenger list not yet frozen (Appendix 2 of the instrument). Populate name/type/perspective from the Common Signals messenger map at pre-registration."
+        }
+      ],
+      "notes": "OPEN DESIGN QUESTION: country-specific list of 12 to 15 named individuals and organisations, drawn from the Common Signals messenger map, balanced across present-day-harms / existential-risk / bridging and across institution / campaign group / journalist / creator, with two recognition anchors above 50% expected awareness. This list is not yet frozen (see Appendix 2), so `rows` is empty in this draft; populate from the messenger map at pre-registration and this is the item the instrument says to cut first (\"cut the named-messenger grid (G2) first\") if a pretest runs long, so the app must tolerate an empty G2 by skipping it entirely. Rows G2_01-G2_15 are placeholders pending the frozen messenger list; the app must skip this item entirely while any row has label=null.",
+      "required": true,
+      "country": null
+    },
+    {
+      "code": "G3",
+      "module": "G",
+      "type": "multi",
+      "prompt": "In the past month, where have you seen or heard anything about AI? Select all that apply.",
+      "options": [
+        {
+          "value": "TV or radio news",
+          "label": "TV or radio news"
+        },
+        {
+          "value": "Newspapers or news websites",
+          "label": "Newspapers or news websites"
+        },
+        {
+          "value": "Social media (Facebook, Instagram, TikTok, X, etc.)",
+          "label": "Social media (Facebook, Instagram, TikTok, X, etc.)"
+        },
+        {
+          "value": "YouTube",
+          "label": "YouTube"
+        },
+        {
+          "value": "Podcasts",
+          "label": "Podcasts"
+        },
+        {
+          "value": "Conversations with friends, family or colleagues",
+          "label": "Conversations with friends, family or colleagues"
+        },
+        {
+          "value": "At work",
+          "label": "At work"
+        },
+        {
+          "value": "From AI tools themselves",
+          "label": "From AI tools themselves"
+        },
+        {
+          "value": "Films, TV drama or books",
+          "label": "Films, TV drama or books"
+        },
+        {
+          "value": "Somewhere else",
+          "label": "Somewhere else"
+        },
+        {
+          "value": "I have not seen or heard anything about AI in the past month",
+          "label": "I have not seen or heard anything about AI in the past month"
+        }
+      ],
+      "exclusive_option": "I have not seen or heard anything about AI in the past month",
+      "required": true,
+      "randomize": false,
+      "notes": "",
+      "country": null
+    },
+    {
+      "code": "G4",
+      "module": "G",
+      "type": "text",
+      "prompt": "Is there anyone, a person or an organisation, whose views on AI you particularly trust? Please name them if so.",
+      "required": false,
+      "notes": "Coded post hoc against the messenger map; the main route for finding trusted voices the map has missed.",
+      "randomize": false,
+      "country": null
+    },
+    {
+      "code": "H1",
+      "module": "H",
+      "type": "multi",
+      "prompt": "In the last 12 months, have you done any of the following about any issue you care about, which might or might not include AI? Select all that apply.",
+      "options_template": [
+        "Signed a petition (online or in person)",
+        {
+          "uk": "Contacted your MP or local councillor",
+          "us": "Contacted your member of Congress or another elected official"
+        },
+        "Donated to a charity or campaign",
+        "Attended a protest, rally or demonstration",
+        "Shared political content on social media",
+        "Volunteered for a cause or organisation",
+        "Boycotted a product or company for ethical reasons"
+      ],
+      "extra_options": [
+        {
+          "value": "none",
+          "label": "None of these"
+        }
+      ],
+      "exclusive_option": "None of these",
+      "required": true,
+      "randomize": false,
+      "notes": "",
+      "country": null
+    },
+    {
+      "code": "H2",
+      "module": "H",
+      "type": "multi",
+      "prompt": "And have you done any of these specifically about AI in the last 12 months?",
+      "options_from": "H1_selected",
+      "extra_options": [
+        {
+          "value": "none",
+          "label": "None of these"
+        }
+      ],
+      "notes": "Same list as H1, shown only for items ticked in H1, plus 'None of these'.",
+      "required": true,
+      "randomize": false,
+      "country": null
+    },
+    {
+      "code": "I1",
+      "module": "I",
+      "type": "single",
+      "prompt": {
+        "uk": "If there were a general election tomorrow, which party would you vote for?",
+        "us": "Generally speaking, do you usually think of yourself as a Republican, a Democrat, an independent, or something else?"
+      },
+      "country": {
+        "uk": {
+          "options": [
+            {
+              "value": "Conservative",
+              "label": "Conservative"
+            },
+            {
+              "value": "Labour",
+              "label": "Labour"
+            },
+            {
+              "value": "Liberal Democrat",
+              "label": "Liberal Democrat"
+            },
+            {
+              "value": "Reform UK",
+              "label": "Reform UK"
+            },
+            {
+              "value": "Green Party",
+              "label": "Green Party"
+            },
+            {
+              "value": "Scottish National Party",
+              "label": "Scottish National Party"
+            },
+            {
+              "value": "Plaid Cymru",
+              "label": "Plaid Cymru"
+            },
+            {
+              "value": "Other",
+              "label": "Other"
+            },
+            {
+              "value": "Don't know",
+              "label": "Don't know"
+            },
+            {
+              "value": "Would not vote",
+              "label": "Would not vote"
+            }
+          ]
+        },
+        "us": {
+          "options": [
+            {
+              "value": "Republican",
+              "label": "Republican"
+            },
+            {
+              "value": "Democrat",
+              "label": "Democrat"
+            },
+            {
+              "value": "Independent",
+              "label": "Independent"
+            },
+            {
+              "value": "Something else",
+              "label": "Something else"
+            },
+            {
+              "value": "Don't know",
+              "label": "Don't know"
+            }
+          ]
+        }
+      },
+      "required": true,
+      "randomize": false,
+      "notes": ""
+    },
+    {
+      "code": "I1b",
+      "module": "I",
+      "type": "single",
+      "prompt": "Do you think of yourself as closer to the Republican Party or the Democratic Party?",
+      "options": [
+        {
+          "value": "Republican",
+          "label": "Republican"
+        },
+        {
+          "value": "Democratic",
+          "label": "Democratic"
+        },
+        {
+          "value": "Neither",
+          "label": "Neither"
+        }
+      ],
+      "country": {
+        "uk": {
+          "skip": true
+        }
+      },
+      "routing": {
+        "show_if": {
+          "code": "I1",
+          "in": [
+            "Independent",
+            "Something else"
+          ]
+        }
+      },
+      "required": false,
+      "notes": "US only. Asked only if I1 = Independent or Something else.",
+      "randomize": false
+    },
+    {
+      "code": "I2",
+      "module": "I",
+      "type": "single",
+      "prompt": {
+        "uk": "In the 2024 general election, did you vote, and if so for which party?",
+        "us": "In the 2024 presidential election, did you vote, and if so for whom?"
+      },
+      "country": {
+        "uk": {
+          "options": [
+            {
+              "value": "Conservative",
+              "label": "Conservative"
+            },
+            {
+              "value": "Labour",
+              "label": "Labour"
+            },
+            {
+              "value": "Liberal Democrat",
+              "label": "Liberal Democrat"
+            },
+            {
+              "value": "Reform UK",
+              "label": "Reform UK"
+            },
+            {
+              "value": "Green Party",
+              "label": "Green Party"
+            },
+            {
+              "value": "SNP",
+              "label": "SNP"
+            },
+            {
+              "value": "Plaid Cymru",
+              "label": "Plaid Cymru"
+            },
+            {
+              "value": "Other",
+              "label": "Other"
+            },
+            {
+              "value": "Did not vote",
+              "label": "Did not vote"
+            },
+            {
+              "value": "Not eligible",
+              "label": "Not eligible"
+            },
+            {
+              "value": "Prefer not to say",
+              "label": "Prefer not to say"
+            }
+          ]
+        },
+        "us": {
+          "options": [
+            {
+              "value": "Donald Trump",
+              "label": "Donald Trump"
+            },
+            {
+              "value": "Kamala Harris",
+              "label": "Kamala Harris"
+            },
+            {
+              "value": "Another candidate",
+              "label": "Another candidate"
+            },
+            {
+              "value": "Did not vote",
+              "label": "Did not vote"
+            },
+            {
+              "value": "Not eligible",
+              "label": "Not eligible"
+            },
+            {
+              "value": "Prefer not to say",
+              "label": "Prefer not to say"
+            }
+          ]
+        }
+      },
+      "required": true,
+      "randomize": false,
+      "notes": ""
+    },
+    {
+      "code": "I3",
+      "module": "I",
+      "type": "slider",
+      "prompt": "In politics, people sometimes talk about left and right. Where would you place yourself on a scale from 0 (left) to 10 (right)?",
+      "min": 0,
+      "max": 10,
+      "extra_options": [
+        {
+          "value": "dk",
+          "label": "Don't know"
+        }
+      ],
+      "required": true,
+      "randomize": false,
+      "notes": "",
+      "country": null
+    },
+    {
+      "code": "I4",
+      "module": "I",
+      "type": "single",
+      "prompt": "Which of the following best describes your religion, if any?",
+      "options": [
+        {
+          "value": "No religion",
+          "label": "No religion"
+        },
+        {
+          "value": "Christian",
+          "label": "Christian"
+        },
+        {
+          "value": "Muslim",
+          "label": "Muslim"
+        },
+        {
+          "value": "Hindu",
+          "label": "Hindu"
+        },
+        {
+          "value": "Jewish",
+          "label": "Jewish"
+        },
+        {
+          "value": "Sikh",
+          "label": "Sikh"
+        },
+        {
+          "value": "Buddhist",
+          "label": "Buddhist"
+        },
+        {
+          "value": "Another religion",
+          "label": "Another religion"
+        },
+        {
+          "value": "Prefer not to say",
+          "label": "Prefer not to say"
+        }
+      ],
+      "required": true,
+      "randomize": false,
+      "notes": "",
+      "country": null
+    },
+    {
+      "code": "I5",
+      "module": "I",
+      "type": "single",
+      "prompt": "Apart from weddings, funerals and similar occasions, how often do you attend religious services?",
+      "options": [
+        {
+          "value": "Never",
+          "label": "Never"
+        },
+        {
+          "value": "A few times a year",
+          "label": "A few times a year"
+        },
+        {
+          "value": "Monthly",
+          "label": "Monthly"
+        },
+        {
+          "value": "Weekly or more",
+          "label": "Weekly or more"
+        }
+      ],
+      "required": true,
+      "randomize": false,
+      "notes": "",
+      "country": null
+    },
+    {
+      "code": "J1",
+      "module": "J",
+      "type": "single",
+      "prompt": "Which of these best describes your current situation?",
+      "options": [
+        {
+          "value": "Working full-time",
+          "label": "Working full-time"
+        },
+        {
+          "value": "Working part-time",
+          "label": "Working part-time"
+        },
+        {
+          "value": "Self-employed",
+          "label": "Self-employed"
+        },
+        {
+          "value": "Unemployed and looking for work",
+          "label": "Unemployed and looking for work"
+        },
+        {
+          "value": "Student",
+          "label": "Student"
+        },
+        {
+          "value": "Retired",
+          "label": "Retired"
+        },
+        {
+          "value": "Looking after home or family",
+          "label": "Looking after home or family"
+        },
+        {
+          "value": "Unable to work",
+          "label": "Unable to work"
+        },
+        {
+          "value": "Other",
+          "label": "Other"
+        }
+      ],
+      "required": true,
+      "randomize": false,
+      "notes": "",
+      "country": null
+    },
+    {
+      "code": "J2",
+      "module": "J",
+      "type": "single",
+      "prompt": {
+        "uk": "Which of the following best describes the occupation of the main income earner in your household?",
+        "us": "What was your total household income before taxes last year?"
+      },
+      "country": {
+        "uk": {
+          "options": [
+            {
+              "value": "a",
+              "label": "Higher managerial or professional (e.g. doctor, lawyer, company director)"
+            },
+            {
+              "value": "b",
+              "label": "Intermediate managerial or professional (e.g. teacher, middle manager)"
+            },
+            {
+              "value": "c",
+              "label": "Supervisory, clerical or junior managerial (e.g. office worker, sales representative)"
+            },
+            {
+              "value": "d",
+              "label": "Skilled manual worker (e.g. plumber, electrician, carpenter)"
+            },
+            {
+              "value": "e",
+              "label": "Semi-skilled or unskilled manual worker (e.g. shop assistant, labourer)"
+            },
+            {
+              "value": "f",
+              "label": "Casual worker, state pensioner or unemployed"
+            }
+          ]
+        },
+        "us": {
+          "options": [
+            {
+              "value": "Under $25,000",
+              "label": "Under $25,000"
+            },
+            {
+              "value": "$25,000 to $49,999",
+              "label": "$25,000 to $49,999"
+            },
+            {
+              "value": "$50,000 to $74,999",
+              "label": "$50,000 to $74,999"
+            },
+            {
+              "value": "$75,000 to $99,999",
+              "label": "$75,000 to $99,999"
+            },
+            {
+              "value": "$100,000 to $149,999",
+              "label": "$100,000 to $149,999"
+            },
+            {
+              "value": "$150,000 or more",
+              "label": "$150,000 or more"
+            },
+            {
+              "value": "Prefer not to say",
+              "label": "Prefer not to say"
+            }
+          ]
+        }
+      },
+      "required": true,
+      "randomize": false,
+      "notes": ""
+    },
+    {
+      "code": "J3",
+      "module": "J",
+      "type": "single",
+      "prompt": "What is your ethnic group?",
+      "country": {
+        "uk": {
+          "options": [
+            {
+              "value": "White",
+              "label": "White"
+            },
+            {
+              "value": "Mixed or multiple ethnic groups",
+              "label": "Mixed or multiple ethnic groups"
+            },
+            {
+              "value": "Asian or Asian British",
+              "label": "Asian or Asian British"
+            },
+            {
+              "value": "Black, Black British, Caribbean or African",
+              "label": "Black, Black British, Caribbean or African"
+            },
+            {
+              "value": "Other ethnic group",
+              "label": "Other ethnic group"
+            },
+            {
+              "value": "Prefer not to say",
+              "label": "Prefer not to say"
+            }
+          ]
+        },
+        "us": {
+          "options": [
+            {
+              "value": "White",
+              "label": "White"
+            },
+            {
+              "value": "Black or African American",
+              "label": "Black or African American"
+            },
+            {
+              "value": "Asian",
+              "label": "Asian"
+            },
+            {
+              "value": "American Indian or Alaska Native",
+              "label": "American Indian or Alaska Native"
+            },
+            {
+              "value": "Native Hawaiian or Pacific Islander",
+              "label": "Native Hawaiian or Pacific Islander"
+            },
+            {
+              "value": "Another race",
+              "label": "Another race"
+            },
+            {
+              "value": "Two or more races",
+              "label": "Two or more races"
+            },
+            {
+              "value": "Prefer not to say",
+              "label": "Prefer not to say"
+            }
+          ],
+          "pre_question": "Are you of Hispanic or Latino origin?",
+          "pre_options": [
+            "Yes",
+            "No",
+            "Prefer not to say"
+          ]
+        }
+      },
+      "notes": "UK uses ONS 2021 census high-level categories. US asks Hispanic/Latino origin separately first, then race.",
+      "required": true,
+      "randomize": false
+    },
+    {
+      "code": "J4",
+      "module": "J",
+      "type": "single",
+      "prompt": "Are there any children under 18 living in your household?",
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        },
+        {
+          "value": "Prefer not to say",
+          "label": "Prefer not to say"
+        }
+      ],
+      "required": true,
+      "randomize": false,
+      "notes": "",
+      "country": null
+    },
+    {
+      "code": "J5",
+      "module": "J",
+      "type": "single",
+      "prompt": "Does your job, or the job you are training for, involve working with computers or technology most of the day?",
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        },
+        {
+          "value": "Not applicable",
+          "label": "Not applicable"
+        }
+      ],
+      "required": true,
+      "randomize": false,
+      "notes": "",
+      "country": null
+    },
+    {
+      "code": "K1",
+      "module": "K",
+      "type": "text",
+      "prompt": "In one or two sentences, how do you feel about the way AI is developing?",
+      "required": false,
+      "rows": 5,
+      "notes": "Optional but encouraged. Coded with the same five-dimension scheme Common Signals uses for comment-thread analysis, Claude as first coder, human spot-check on a random 10%.",
+      "randomize": false,
+      "country": null
+    },
+    {
+      "code": "K2",
+      "module": "K",
+      "type": "text",
+      "prompt": "If you could ask the people building AI one question, what would it be?",
+      "required": false,
+      "randomize": false,
+      "notes": "",
+      "country": null
+    },
+    {
+      "code": "L0",
+      "module": "L",
+      "type": "info",
+      "prompt": "Thank you. The text you read earlier was one of several short texts written for this study, each presenting a different way of talking about AI. Some respondents read a text unrelated to AI. The texts were written by the research team and drew on published sources; none was produced by or for an AI company, campaign group or political party. We are studying how different ways of explaining AI land with different people, so that those who talk about AI in public can do it more accurately and more fairly.\n\nResults will be published free at commonsignals.org. If you have any questions about the study, contact hello@commonsignals.org.",
+      "required": false,
+      "randomize": false,
+      "notes": "",
+      "country": null
+    },
+    {
+      "code": "L1",
+      "module": "L",
+      "type": "text",
+      "prompt": "Before you go, do you have any comments on this survey?",
+      "required": false,
+      "randomize": false,
+      "notes": "",
+      "country": null
+    }
+  ]
+}

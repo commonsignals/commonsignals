@@ -1,0 +1,58 @@
+[
+  {
+    "condition": 0,
+    "label": "Control",
+    "text": "The postal service has carried letters and parcels for centuries. Before it existed, sending a message meant paying a private courier or waiting for a traveller heading the right way. Governments realised that a shared, reliable network benefited everyone, so they began running post as a public service, with a single price to send a letter anywhere in the country.\n\nOver time the service added money transfers, savings accounts and parcel delivery, and became one of the largest employers in many countries. Post offices often served as the only public counter in small towns, handling pensions, licences and official paperwork alongside the mail.\n\nToday most letters have moved online, but parcel volumes have grown with online shopping. Postal workers still walk or drive the same routes each day, delivering to addresses that in many countries have barely changed in a hundred years.",
+    "comprehension_answer": "A passage about the history of the postal service, unrelated to AI",
+    "status": "final",
+    "word_count": 142
+  },
+  {
+    "condition": 1,
+    "label": "Present-day harms, personal frame",
+    "text": "Grace, 74, got a call from a voice that sounded exactly like her grandson. He said he needed money for a lawyer after a car accident, and begged her not to tell anyone. She sent 2,000 pounds within the hour. Her real grandson had never called. Scammers had used seconds of his voice, taken from a video he posted online, to generate the call with AI voice-cloning software.\n\nCases like this are rising fast as voice-cloning tools get cheaper. A short clip of your voice can now be copied well enough to fool people who love you.\n\nBanks could add simple checks, such as a family password for unusual requests, but most have not made this the default. Ask your bank what it does about AI voice scams.",
+    "comprehension_answer": "A personal story about someone harmed by an AI system",
+    "status": "draft",
+    "word_count": 128
+  },
+  {
+    "condition": 2,
+    "label": "Present-day harms, systemic frame",
+    "text": "AI voice-cloning scams like the one that cost Grace, 74, her savings are not bad luck. The tools that made it possible were released with no requirement to check who was using them, and no easy way for banks to verify a caller's voice is real.\n\nThe companies that build these tools know they can be misused. Researchers have shown for years how easily voice-cloning software can be abused, yet most tools ship with few safeguards, because adding them costs money and slows launches.\n\nRegulators in several countries are now discussing rules requiring companies to test AI tools for obvious harms before release, and to add safeguards such as watermarking AI-generated audio. Without such rules, the cost falls on people like Grace, not the companies that built the tool.",
+    "comprehension_answer": "A call for AI companies to be held accountable through regulation",
+    "status": "draft",
+    "word_count": 129
+  },
+  {
+    "condition": 3,
+    "label": "Longer-term risk, expert frame",
+    "text": "Several scientists who built today's most powerful AI systems have warned that future systems could become hard for anyone to reliably control. In surveys of AI researchers, a substantial share put the chance of extremely bad outcomes, including loss of human control, at more than one in ten.\n\nThe concern is not that computers will suddenly want to harm us, but that systems trained to pursue goals may find unexpected ways to achieve them once they are more capable than the people supervising them. Investment in building ever more capable systems rises each year, while the science of testing whether a system is safe lags behind.\n\nSome researchers want independent safety testing before the most powerful systems are released, similar to how new medicines are tested before reaching patients.",
+    "comprehension_answer": "Warnings from scientists about AI becoming too capable to control",
+    "status": "draft",
+    "word_count": 129
+  },
+  {
+    "condition": 4,
+    "label": "Longer-term risk, plain-speaking frame",
+    "text": "Here is the plain version: companies are racing to build AI more capable than any person, and nobody, including the people building it, fully understands how it decides what to do. We are building something we don't understand, as fast as possible, because whoever gets there first stands to make enormous money.\n\nEach new system is more capable than the last, and each is released before anyone outside the company has much chance to check it is safe. The people racing to build these systems admit the risk is real, and several have said publicly there is a meaningful chance things go badly wrong.\n\nA car company would not release a car nobody had tested the brakes on. That is close to what is happening with AI.",
+    "comprehension_answer": "Warnings from scientists about AI becoming too capable to control",
+    "status": "draft",
+    "word_count": 127
+  },
+  {
+    "condition": 5,
+    "label": "Benefit-led with conditions",
+    "text": "A hospital trial gave doctors an AI tool that reviews scans alongside them, flagging patterns easy to miss. In one study, the tool helped doctors catch early-stage cancers they would otherwise have found months later, when treatment is harder and less likely to work.\n\nBenefits like this are real, and arrive faster where AI tools have been carefully tested before doctors rely on them, with clear rules about who checks the tool's work and what happens when it errs. Where those checks are missing, tools have sometimes given confident but wrong advice, with nobody responsible.\n\nThe lesson is not to slow AI in medicine, but to make safety testing and accountability the condition for using it. Such rules do not stop benefits arriving. They make the benefits arrive safely.",
+    "comprehension_answer": "An argument that safety rules are what let AI's benefits arrive safely",
+    "status": "draft",
+    "word_count": 129
+  },
+  {
+    "condition": 6,
+    "label": "Bridging",
+    "text": "An AI voice-cloning scam and a scientist's warning about losing control of future AI can sound like different subjects. They are the same problem, seen at different distances: powerful systems released faster than anyone outside the company building them can properly check.\n\nThe scam that fools a grandmother and the AI system that might one day act in ways nobody intended both trace to the same choice: launch first, find out what goes wrong afterwards. Today that choice costs families their savings. Left unchecked, the same pattern applied to more capable systems is what worries the scientists building them.\n\nThe fix does not require choosing which harm matters more. Independent testing before release and clear accountability when something goes wrong would address both.",
+    "comprehension_answer": "An argument that a present-day harm and a longer-term risk are the same underlying problem",
+    "status": "draft",
+    "word_count": 123
+  }
+]

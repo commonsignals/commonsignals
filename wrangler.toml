@@ -5,3 +5,16 @@ compatibility_date = "2026-09-24"
 [[send_email]]
 name = "SEND_EMAIL"
 destination_address = "hello@commonsignals.org"
+
+# Created by Ben with: npx wrangler d1 create commonsignals-survey
+# Then paste the returned database_id below.
+[[d1_databases]]
+binding = "SURVEY_DB"
+database_name = "commonsignals-survey"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+# Created by Ben with: npx wrangler kv namespace create SURVEY_RATE_LIMIT
+# Then paste the returned id below. Used only to rate-limit /api/survey/save.
+[[kv_namespaces]]
+binding = "SURVEY_RATE_LIMIT"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
