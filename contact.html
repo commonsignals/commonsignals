@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="/styles.css" />
+<link rel="stylesheet" href="/styles.css?v=20260924" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -90,16 +90,20 @@
 
   <section id="contact-form" class="reveal">
     <div class="wrap">
-      <form id="contactForm" class="subscribe-box" novalidate>
-        <div class="subscribe-row">
-          <div class="field-row">
-            <label for="contactName" class="sr-only">Your name</label>
-            <input type="text" name="name" id="contactName" placeholder="Your name" required autocomplete="name" />
-            <label for="contactEmail" class="sr-only">Your email address</label>
-            <input type="email" name="email" id="contactEmail" placeholder="Your email address" required autocomplete="email" />
+      <form id="contactForm" class="subscribe-box contact-form" novalidate>
+        <div class="contact-fields">
+          <div class="contact-field">
+            <label for="contactName">Your name</label>
+            <input type="text" name="name" id="contactName" required autocomplete="name" />
           </div>
-          <label for="contactMessage" class="sr-only">Your message</label>
-          <textarea name="message" id="contactMessage" placeholder="What can we help with?" required></textarea>
+          <div class="contact-field">
+            <label for="contactEmail">Your email address</label>
+            <input type="email" name="email" id="contactEmail" required autocomplete="email" inputmode="email" />
+          </div>
+          <div class="contact-field contact-field-wide">
+            <label for="contactMessage">What can we help with?</label>
+            <textarea name="message" id="contactMessage" rows="6" required></textarea>
+          </div>
         </div>
         <div class="hp-field" aria-hidden="true">
           <label for="contactWebsite">Leave this field blank</label>
