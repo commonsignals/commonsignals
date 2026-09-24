@@ -17,7 +17,7 @@
 <text class="t" x="40" y="145" style="fill:#17181C">rows retrieved</text>
 <rect x="32" y="168" width="380" height="30" fill="#2A2AD6" opacity="0.45"/>
 <text class="n" x="422" y="189">1,245</text>
-<text class="t" x="40" y="189" style="fill:#F4F4EF">contain text, coded</text>
+<text class="t" x="40" y="189" style="fill:#17181C">contain text, coded</text>
 <rect x="32" y="212" width="189" height="30" fill="#2A2AD6" opacity="1.0"/>
 <text class="n" x="231" y="233">618</text>
 <text class="t" x="263" y="233" style="fill:#17181C">take a readable position (base for stance %)</text>

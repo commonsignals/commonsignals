@@ -1,8 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 296" width="720" height="296" role="img" aria-label="Funnel of comments from retrieved to coded to positioned"><style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 296" width="720" height="296" role="img" aria-label="Funnel of comments from retrieved to coded to positioned">
+<style>
 .t{font-family:"Space Mono",ui-monospace,Menlo,monospace;font-size:12px;fill:#5C5E64}
 .n{font-family:"Space Mono",ui-monospace,Menlo,monospace;font-size:13px;font-weight:700;fill:#17181C}
 .l{font-family:"Hanken Grotesk",system-ui,sans-serif;font-size:14px;fill:#17181C}
 .q{font-family:"Hanken Grotesk",system-ui,sans-serif;font-size:13px;fill:#17181C}
 .h{font-family:"Hanken Grotesk",system-ui,sans-serif;font-size:16px;font-weight:600;fill:#17181C}
 .ax{stroke:#DBDBD3;stroke-width:1}
-</style><rect width="720" height="296" fill="#F4F4EF"/><text class="h" x="32" y="40">What was coded</text><rect x="32" y="80" width="480" height="30" fill="#2A2AD6" opacity="0.25"/><text class="n" x="522" y="101">25,219</text><text class="t" x="40" y="101" fill="#17181C">comments on the artefact</text><rect x="32" y="124" width="47" height="30" fill="#2A2AD6" opacity="0.25"/><text class="n" x="89" y="145">2,480</text><text class="t" x="40" y="145" fill="#17181C">rows retrieved</text><rect x="32" y="168" width="45" height="30" fill="#2A2AD6" opacity="0.45"/><text class="n" x="87" y="189">2,391</text><text class="t" x="40" y="189" fill="#F4F4EF">contain text, coded</text><rect x="32" y="212" width="35" height="30" fill="#2A2AD6" opacity="1.0"/><text class="n" x="77" y="233">1,840</text><text class="t" x="40" y="233" fill="#F4F4EF">take a readable position (base for stance %)</text><text class="t" x="32" y="276">Stance % use the readable-position base. Frame and format shares use the coded base.</text></svg>
+</style>
+<rect width="720" height="296" fill="#F4F4EF"/>
+<text class="h" x="32" y="40">What was coded</text>
+<rect x="32" y="80" width="480" height="30" fill="#2A2AD6" opacity="0.25"/>
+<text class="n" x="522" y="101">25,219</text>
+<text class="t" x="40" y="101" style="fill:#17181C">comments on the artefact</text>
+<rect x="32" y="124" width="47" height="30" fill="#2A2AD6" opacity="0.25"/>
+<text class="n" x="89" y="145">2,480</text>
+<text class="t" x="137" y="145" style="fill:#17181C">rows retrieved</text>
+<rect x="32" y="168" width="45" height="30" fill="#2A2AD6" opacity="0.45"/>
+<text class="n" x="87" y="189">2,391</text>
+<text class="t" x="135" y="189" style="fill:#17181C">contain text, coded</text>
+<rect x="32" y="212" width="35" height="30" fill="#2A2AD6" opacity="1.0"/>
+<text class="n" x="77" y="233">1,840</text>
+<text class="t" x="125" y="233" style="fill:#17181C">take a readable position (base for stance %)</text>
+<text class="t" x="32" y="276">Stance % use the readable-position base. Frame and format shares use the coded base.</text>
+</svg>
