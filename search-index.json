@@ -80,6 +80,11 @@
 "d": "Search and filter all 2,136 coded Instagram comments behind the Soares reel article: stance, frame, emotion and engagement, comment by comment."
 },
 {
+"t": "Donate",
+"u": "/donate",
+"d": "Support Common Signals: independent, open research on how the public understands AI. Every finding, dataset and codebook is published free."
+},
+{
 "t": "Findings so far: what four comment-thread studies say about explaining AI risk",
 "u": "/findings",
 "d": "Four studies, 3,617 coded comments across three platforms, and nine patterns that hold across at least two of the four, each stated as a hypothesis with the base it was measured on."
