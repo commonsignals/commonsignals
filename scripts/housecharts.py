@@ -71,6 +71,34 @@ def wrap(text, size, width, serif=False):
     return lines + [cur] if cur else (lines or [""])
 
 
+QUOTE_LIMIT, QUOTE_MIN, QUOTE_MAX = 170, 60, 260
+
+
+def excerpt(text):
+    """A comment as a quote label: in full if short, else its opening whole sentences.
+
+    Never adds an ellipsis. A commenter's own "..." is not treated as a sentence end,
+    and a very short opening sentence takes the next one with it.
+    """
+    t = re.sub(r":[a-z0-9]+(?:-[a-z0-9]+)+:", "", text)  # platform emoji codes, e.g. :hand-purple-blue-peace:
+    t = re.sub(r"\s+", " ", t).strip()
+    if len(t) <= QUOTE_LIMIT:
+        return t
+    sents = re.split(r"(?<=[.!?])(?<!\.\.\.)\s+(?=[A-Z0-9\u201c\"'(])", t)
+    if len(sents) == 1:  # all-lowercase writing: fall back to any sentence break
+        sents = re.split(r"(?<=[.!?])(?<!\.\.\.)\s+", t)
+    out = ""
+    for sent in sents:
+        if not out:
+            out = sent
+            continue
+        room = QUOTE_MAX if len(out) < QUOTE_MIN else QUOTE_LIMIT
+        if len(out) + 1 + len(sent) > room:
+            break
+        out = f"{out} {sent}"
+    return out
+
+
 class Canvas:
     def __init__(self, model, mobile):
         self.m, self.s, self.parts = model, SIZES[mobile], []
@@ -186,30 +214,18 @@ def r_stance(c):
 
 def r_top(c, mobile):
     s, rows = c.s, c.m["rows"]
-    if mobile:
-        max_w = c.CW - 70
-        for r in rows:
-            for line in wrap(r["quote"], s["label"], c.CW)[:3]:
-                c.y += s["label"]
-                c.text(c.PAD, c.y, line, s["label"])
-                c.y += 3
+    size = s["label"] if mobile else 14
+    max_w = c.CW - 70
+    for r in rows:
+        for line in wrap(r["quote"], size, c.CW):
+            c.y += size
+            c.text(c.PAD, c.y, line, size)
             c.y += 4
-            w = max_w * r["frac"]
-            c.rect(c.PAD, c.y, w, 14, STANCE[r["key"]])
-            c.text(c.PAD + w + 8, c.y + 12, r["value"], s["num"], INK, 600)
-            c.y += 14 + 16
-    else:
-        qx, bx = c.PAD, c.PAD + 368
-        max_w = c.W - c.PAD - bx - 62
-        for r in rows:
-            q = wrap(r["quote"], 13, 350)[0]
-            q = q if len(q) == len(r["quote"]) else r["quote"]
-            c.text(qx, c.y + 14, q if len(q) <= 54 else q[:51].rstrip() + "...", 13)
-            c.text(qx, c.y + 30, r["value"], s["num"], INK, 600)
-            w = max_w * r["frac"]
-            c.rect(bx, c.y + 4, w, 16, STANCE[r["key"]])
-            c.y += 38
-        c.y += 4
+        c.y += 3
+        w = max_w * r["frac"]
+        c.rect(c.PAD, c.y, w, 14, STANCE[r["key"]])
+        c.text(c.PAD + w + 8, c.y + 12, r["value"], s["num"], INK, 600)
+        c.y += 14 + 16
     seen = []
     for r in rows:
         if r["key"] not in seen:
