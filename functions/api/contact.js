@@ -7,9 +7,9 @@
 //   1. Enable Email Routing for the commonsignals.org zone.
 //   2. Add hello@commonsignals.org as a destination address and verify it
 //      (click the link in the verification email Cloudflare sends).
-// The binding itself is declared in wrangler.toml ([[send_email]], name
-// "SEND_EMAIL", destination_address "hello@commonsignals.org") and needs no
-// secret. The FROM address below just needs to be on the same zone.
+//   3. Add the "SEND_EMAIL" email binding in the Pages dashboard (Settings >
+//      Bindings), not wrangler.toml: Pages rejects [[send_email]] there.
+// No secret is needed. The FROM address below just needs to be on the same zone.
 import { EmailMessage } from "cloudflare:email";
 
 const TO = "hello@commonsignals.org";
