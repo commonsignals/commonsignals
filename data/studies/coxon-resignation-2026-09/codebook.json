@@ -1,6 +1,6 @@
 {
- "central_claim": "Neither OpenAI nor Anthropic is acting responsibly with frontier AI, and both are racing toward dangerous self-improving superintelligence.",
- "stance_note": "agree = accepts that neither OpenAI nor Anthropic is acting responsibly and that racing toward self-improving superintelligence is a danger worth resigning over; disagree = rejects this, on any grounds (capability scepticism, geopolitics, IPO cynicism, or defending the labs); mixed = accepts part of the danger claim while rejecting or reframing another part, for example disputing that resigning was the right response.",
+ "central_claim": "Neither OpenAI nor Anthropic is acting responsibly with frontier AI, and both are racing towards dangerous self-improving superintelligence.",
+ "stance_note": "agree = accepts that neither OpenAI nor Anthropic is acting responsibly and that racing towards self-improving superintelligence is a danger worth resigning over; disagree = rejects this, on any grounds (capability scepticism, geopolitics, IPO cynicism, or defending the labs); mixed = accepts part of the danger claim while rejecting or reframing another part, for example disputing that resigning was the right response.",
  "coder_instructions": "Code the reply as posted; quote-tweets, the parent tweet's text and prior replies in the thread are not supplied as context. Comments with no readable position (jokes, one-liners, pure reactions to format) are stance na; genuinely ambiguous attempts at a position are unclear, used sparingly. When a comment fits two frames, pick the one it leads with. Rows with no text (GIF, image or sticker-only replies the platform exposed no text for) are marked coder=not_coded_empty_stub, with placeholder codes (stance na, frame format_only, format_reaction none, emotion neutral) rather than left blank.",
  "dimensions": [
   {
@@ -49,7 +49,7 @@
    "values": [
     {"value": "none", "label": "None", "definition": "no distinct reaction to the thread as a piece of writing, beyond the content argument itself"},
     {"value": "mock", "label": "Mock", "definition": "mocks or ridicules the thread, Coxon, or the situation, rather than engaging its content"},
-    {"value": "condescended", "label": "Condescended", "definition": "responds with a condescending or patronising tone toward Coxon"},
+    {"value": "condescended", "label": "Condescended", "definition": "responds with a condescending or patronising tone towards Coxon"},
     {"value": "imitates", "label": "Imitates", "definition": "imitates or parodies Coxon's writing style or voice"},
     {"value": "praise", "label": "Praise", "definition": "praises Coxon, the thread, or the decision to write and post it, as a piece of communication"}
    ]
