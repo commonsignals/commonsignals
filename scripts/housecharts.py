@@ -148,7 +148,34 @@ def bar_rows(c, rows, value_room):
 
 def r_funnel(c):
     rows = c.m["rows"]
-    bar_rows(c, [(r["label"], r["frac"], NEUTRAL_DARK, r["value"]) for r in rows], 70)
+    colour = STANCE.get(c.m.get("bar_colour"), NEUTRAL_DARK)
+    bar_rows(c, [(r["label"], r["frac"], colour, r["value"]) for r in rows], 70)
+
+
+def r_paired(c):
+    """Two measurements per row (e.g. before and after), light then dark, each labelled."""
+    s, rows = c.s, c.m["rows"]
+    a_name, b_name = c.m["series"]
+    c.legend([(NEUTRAL_LIGHT, a_name), (NEUTRAL_DARK, b_name)])
+    top = max(max(r["a"][1], r["b"][1]) for r in rows) or 1
+    max_w = c.CW - 120
+    for r in rows:
+        for line in wrap(r["label"], s["label"], c.CW):
+            c.y += s["label"]
+            c.text(c.PAD, c.y, line, s["label"], INK, 600)
+            c.y += 3
+        if r.get("note"):
+            c.y += s["small"]
+            c.text(c.PAD, c.y, r["note"], s["small"], MUTED)
+            c.y += 2
+        c.y += 6
+        for (txt, pct), colour, name in ((r["a"], NEUTRAL_LIGHT, a_name), (r["b"], NEUTRAL_DARK, b_name)):
+            w = max_w * pct / top
+            c.rect(c.PAD, c.y, w, 15, colour)
+            c.text(c.PAD + w + 8, c.y + 12.5, txt, s["num"], INK, 600)
+            c.text(c.PAD + w + 8 + len(txt) * s["num"] * 0.6 + 6, c.y + 12.5, name.lower(), s["small"], MUTED)
+            c.y += 15 + 5
+        c.y += 12
 
 
 def r_stance(c):
@@ -266,6 +293,8 @@ def render(model, mobile):
         r_frames(c, mobile)
     elif t == "sbf":
         r_sbf(c, mobile)
+    elif t == "paired":
+        r_paired(c)
     c.footer()
     return c.svg()
 
@@ -328,12 +357,14 @@ def _norm(x):
 def _lookup_stance(quote, comments):
     core = quote.strip().removesuffix("(reply)").strip().strip('"').strip()
     parts = [p for p in re.split(r"\.\.\.|…", core) if len(_norm(p)) > 6]
-    if not parts:
+    if parts:
+        hits = [r for r in comments if all(_norm(p) in _norm(r["text"]) for p in parts)]
+    else:  # very short quote: needs an exact match
+        hits = [r for r in comments if _norm(core) and _norm(r["text"]) == _norm(core)]
+    if not hits:
         return None
-    hits = [r for r in comments if all(_norm(p) in _norm(r["text"]) for p in parts)]
-    if len({h["stance"] for h in hits}) != 1:
-        return None
-    s = hits[0]["stance"]
+    # Duplicates (e.g. a reposted copy) can be coded differently; the chart shows the most-liked one.
+    s = max(hits, key=lambda r: int(r.get("likes") or 0))["stance"]
     return {"agree": "agree", "disagree": "disagree", "mixed": "mixed"}.get(s, "none")
 
 
