@@ -1267,6 +1267,7 @@ footer.site .copyright a:hover { color: var(--teal); border-color: var(--teal); 
 .article-body figure {
   margin: 1.8rem 0;
 }
+.article-body figure picture { display: block; }
 .article-body figure img {
   width: 100%;
   height: auto;
