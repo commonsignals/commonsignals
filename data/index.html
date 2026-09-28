@@ -34,7 +34,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="/styles.css?v=20260928b" />
-<link rel="stylesheet" href="/data/assets/explorer.css" />
+<link rel="stylesheet" href="/data/assets/explorer.css?v=20260928" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -101,7 +101,7 @@
 
   <div class="page-hero">
     <h1>Data</h1>
-    <p class="sub">Every coded comment behind our reception studies, browsable and filterable, comment by comment. The same data the articles are built from, published under CC BY 4.0.</p>
+    <p class="sub">Every coded comment behind our reception studies, browsable and filterable, published under CC BY 4.0.</p>
   </div>
 
   <section id="data-index">
@@ -201,8 +201,8 @@
 
     el.innerHTML = data.studies.map((s) => `
       <article class="study-card">
-        <p class="platform">${esc(PLATFORM_LABEL[s.platform] || s.platform)}</p>
         <h2>${esc(s.title)}</h2>
+        <p class="platform">${esc(PLATFORM_LABEL[s.platform] || s.platform)}</p>
         <div class="facts">
           <div><span class="k">Coded</span><span class="v">${s.counts.coded.toLocaleString()}</span></div>
           <div><span class="k">Positioned</span><span class="v">${s.counts.clear_position_base.toLocaleString()}</span></div>
