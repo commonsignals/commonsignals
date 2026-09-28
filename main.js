@@ -52,6 +52,223 @@ if (!/^\/glossary(\.html)?$/.test(window.location.pathname)) {
   });
 }
 
+// Glossary hover cards: desktop only (a fine pointer that can hover), and only
+// on pages that opt in with <body data-glossary-cards>. The card is a
+// disclosure panel rather than role="tooltip" because it holds a link, and
+// follows WCAG 2.1 SC 1.4.13: it can be hovered, dismissed with Escape, and
+// never closes on a timer while hovered or focused. Touch devices get no card;
+// their term links keep opening the glossary in a new tab, as above.
+if (document.body.hasAttribute('data-glossary-cards') &&
+    window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  const TERM_LINK = 'a[href^="/glossary#"], a[href^="https://commonsignals.org/glossary#"]';
+  const OPEN_DELAY = 300;
+  const GRACE = 200;
+  const GAP = 6;
+
+  const card = document.createElement('div');
+  card.id = 'glossary-card';
+  card.className = 'glossary-card';
+  card.setAttribute('role', 'group');
+  card.setAttribute('aria-labelledby', 'glossary-card-term');
+  card.hidden = true;
+  card.innerHTML = '<p class="glossary-card-term" id="glossary-card-term"></p>' +
+    '<p class="glossary-card-def"></p>' +
+    '<a class="glossary-card-link" target="_blank" rel="noopener">Full entry<span class="sr-only"> (opens in new tab)</span></a>';
+  document.body.appendChild(card);
+  const cardTerm = card.querySelector('.glossary-card-term');
+  const cardDef = card.querySelector('.glossary-card-def');
+  const cardLink = card.querySelector('.glossary-card-link');
+
+  document.querySelectorAll(TERM_LINK).forEach((a) => {
+    if (card.contains(a)) return;
+    a.setAttribute('aria-controls', card.id);
+    a.setAttribute('aria-expanded', 'false');
+  });
+
+  let terms = null;       // /glossary.json, fetched once per page view and keyed by id
+  let trigger = null;     // the link whose card is open
+  let pending = null;     // a link waiting out the open delay or the fetch
+  let suppressed = null;  // closed with Escape; stays shut until the pointer or focus leaves it
+  let hovering = false;
+  let openTimer;
+  let closeTimer;
+  const opened = new Set();
+
+  const termId = (a) => decodeURIComponent(a.getAttribute('href').split('#')[1] || '');
+  // The card's own "Full entry" link also points at /glossary#, so skip it.
+  const termLink = (el) => {
+    const a = el.closest ? el.closest(TERM_LINK) : null;
+    return a && !card.contains(a) ? a : null;
+  };
+
+  // A failed fetch resolves to no terms, so no card appears and links still work.
+  const loadTerms = () => {
+    terms = terms || fetch('/glossary.json')
+      .then((r) => {
+        if (!r.ok) throw new Error(r.status);
+        return r.json();
+      })
+      .then((rows) => Object.fromEntries(rows.map((t) => [t.id, t])))
+      .catch(() => ({}));
+    return terms;
+  };
+
+  // Below the link, or above it when there isn't room below, and kept inside
+  // the viewport horizontally. A link that wraps is measured by the line the
+  // card sits next to.
+  const place = (a) => {
+    const rects = a.getClientRects();
+    const first = rects[0];
+    const last = rects[rects.length - 1];
+    card.style.left = '0px';
+    card.style.top = '0px';
+    const { width, height } = card.getBoundingClientRect();
+    const below = last.bottom + GAP + height <= window.innerHeight || first.top - GAP - height < 0;
+    const line = below ? last : first;
+    const vw = document.documentElement.clientWidth;
+    const left = Math.min(Math.max(line.left, 8), vw - width - 8);
+    const top = below ? line.bottom + GAP : line.top - GAP - height;
+    card.dataset.placement = below ? 'below' : 'above';
+    card.style.left = `${Math.round(left + window.scrollX)}px`;
+    card.style.top = `${Math.round(top + window.scrollY)}px`;
+  };
+
+  const close = () => {
+    clearTimeout(openTimer);
+    clearTimeout(closeTimer);
+    pending = null;
+    if (!trigger) return;
+    trigger.setAttribute('aria-expanded', 'false');
+    trigger = null;
+    card.hidden = true;
+  };
+
+  const open = (a) => {
+    loadTerms().then((byId) => {
+      if (pending !== a) return;
+      pending = null;
+      const id = termId(a);
+      const t = byId[id];
+      if (!t) return;
+      if (trigger && trigger !== a) trigger.setAttribute('aria-expanded', 'false');
+      trigger = a;
+      cardTerm.textContent = t.term;
+      cardDef.textContent = t.definition;
+      cardLink.href = `/glossary#${id}`;
+      card.style.visibility = 'hidden';
+      card.hidden = false;
+      place(a);
+      card.style.visibility = '';
+      a.setAttribute('aria-expanded', 'true');
+      if (window.posthog && !opened.has(id)) {
+        opened.add(id);
+        window.posthog.capture('glossary_card_opened', { term: id, page: location.pathname });
+      }
+    });
+  };
+
+  const request = (a, delay) => {
+    clearTimeout(closeTimer);
+    if (a === trigger || a === pending) return;
+    clearTimeout(openTimer);
+    pending = a;
+    loadTerms();
+    openTimer = setTimeout(() => open(a), delay);
+  };
+
+  // Keyboard focus on the link or in the card keeps it open; a mouse click
+  // also focuses the link, so only :focus-visible counts.
+  const focusHolds = () => card.contains(document.activeElement) ||
+    (trigger && document.activeElement === trigger && trigger.matches(':focus-visible'));
+
+  const closeSoon = () => {
+    clearTimeout(closeTimer);
+    closeTimer = setTimeout(() => {
+      if (!hovering && !focusHolds()) close();
+    }, GRACE);
+  };
+
+  document.addEventListener('pointerover', (e) => {
+    if (e.pointerType === 'touch') return;
+    const a = termLink(e.target);
+    if (a) {
+      hovering = true;
+      if (a !== suppressed) request(a, OPEN_DELAY);
+    } else if (card.contains(e.target)) {
+      hovering = true;
+      clearTimeout(closeTimer);
+    }
+  });
+
+  document.addEventListener('pointerout', (e) => {
+    if (e.pointerType === 'touch') return;
+    const from = termLink(e.target) || (card.contains(e.target) ? card : null);
+    if (!from) return;
+    const to = e.relatedTarget;
+    if (to && (from.contains(to) || card.contains(to) || (trigger && trigger.contains(to)))) return;
+    hovering = false;
+    if (from === suppressed) suppressed = null;
+    if (pending) {
+      clearTimeout(openTimer);
+      pending = null;
+    }
+    if (trigger) closeSoon();
+  });
+
+  document.addEventListener('focusin', (e) => {
+    const a = termLink(e.target);
+    if (suppressed && a !== suppressed) suppressed = null;
+    if (a && a !== suppressed && a.matches(':focus-visible')) {
+      request(a, 0);
+    } else if (!a && !card.contains(e.target)) {
+      // Focus moved on before the data arrived: drop the waiting card too.
+      if (pending && !hovering) {
+        clearTimeout(openTimer);
+        pending = null;
+      }
+      if (trigger && !hovering) close();
+    }
+  });
+
+  // The next thing to Tab to after the link, skipping the card itself.
+  const nextFocusable = (from) => {
+    const all = Array.from(document.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]'))
+      .filter((el) => !card.contains(el) && el.tabIndex >= 0 && el.getClientRects().length);
+    return all[all.indexOf(from) + 1];
+  };
+
+  document.addEventListener('keydown', (e) => {
+    if (!trigger) return;
+    const a = trigger;
+    if (e.key === 'Escape') {
+      suppressed = a;
+      const focusInCard = card.contains(document.activeElement);
+      close();
+      if (focusInCard) a.focus();
+      return;
+    }
+    if (e.key !== 'Tab') return;
+    // The card sits at the end of <body>, so Tab is walked into and out of it
+    // by hand to keep it next to its link in the reading order.
+    if (!e.shiftKey && document.activeElement === a) {
+      e.preventDefault();
+      cardLink.focus();
+    } else if (e.shiftKey && document.activeElement === cardLink) {
+      e.preventDefault();
+      a.focus();
+    } else if (!e.shiftKey && document.activeElement === cardLink) {
+      const next = nextFocusable(a);
+      close();
+      if (next) {
+        e.preventDefault();
+        next.focus();
+      }
+    }
+  });
+
+  window.addEventListener('resize', close);
+}
+
 // Submits to Substack via a real form POST targeting a hidden iframe, since
 // a scripted fetch() is blocked by CORS and a server-side proxy is blocked
 // by Substack's Cloudflare bot challenge. The response lands in a

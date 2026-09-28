@@ -1155,6 +1155,45 @@ footer.site .copyright a:hover { color: var(--teal); border-color: var(--teal); 
 }
 .article-body a:hover { color: var(--teal); text-decoration-color: var(--teal); }
 
+/* ---------- Glossary hover cards (main.js; pages with data-glossary-cards) ---------- */
+@media (hover: hover) and (pointer: fine) {
+  body[data-glossary-cards] a[href^="/glossary#"]:not(.glossary-card-link),
+  body[data-glossary-cards] a[href^="https://commonsignals.org/glossary#"]:not(.glossary-card-link) {
+    text-decoration-style: dotted;
+    text-underline-offset: 0.2em;
+  }
+}
+.glossary-card {
+  position: absolute;
+  z-index: 30;
+  width: max-content;
+  max-width: min(320px, calc(100vw - 16px));
+  padding: 0.85rem 1rem 0.9rem;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 6px 24px rgba(35, 32, 25, 0.12);
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+.glossary-card[hidden] { display: none; }
+/* Bridges the gap to the link so the pointer never crosses dead space. */
+.glossary-card::before { content: ""; position: absolute; left: 0; right: 0; height: 8px; }
+.glossary-card[data-placement="below"]::before { bottom: 100%; }
+.glossary-card[data-placement="above"]::before { top: 100%; }
+.glossary-card-term {
+  margin: 0 0 0.3rem;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+.glossary-card-def { margin: 0 0 0.55rem; color: var(--ink-soft); }
+.glossary-card-link { color: var(--teal-text); font-weight: 500; text-decoration-color: var(--teal-text); }
+.glossary-card-link:hover { color: var(--teal); text-decoration-color: var(--teal); }
+
 .ig-embed {
   display: flex;
   justify-content: center;
