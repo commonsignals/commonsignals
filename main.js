@@ -73,7 +73,7 @@ if (document.body.hasAttribute('data-glossary-cards') &&
   card.hidden = true;
   card.innerHTML = '<p class="glossary-card-term" id="glossary-card-term"></p>' +
     '<p class="glossary-card-def"></p>' +
-    '<a class="glossary-card-link" target="_blank" rel="noopener">Full entry<span class="sr-only"> (opens in new tab)</span></a>';
+    '<a class="glossary-card-link" target="_blank" rel="noopener">Read glossary entry<span class="sr-only"> (opens in new tab)</span></a>';
   document.body.appendChild(card);
   const cardTerm = card.querySelector('.glossary-card-term');
   const cardDef = card.querySelector('.glossary-card-def');
@@ -95,7 +95,7 @@ if (document.body.hasAttribute('data-glossary-cards') &&
   const opened = new Set();
 
   const termId = (a) => decodeURIComponent(a.getAttribute('href').split('#')[1] || '');
-  // The card's own "Full entry" link also points at /glossary#, so skip it.
+  // The card's own "Read glossary entry" link also points at /glossary#, so skip it.
   const termLink = (el) => {
     const a = el.closest ? el.closest(TERM_LINK) : null;
     return a && !card.contains(a) ? a : null;
