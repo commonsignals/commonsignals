@@ -114,6 +114,12 @@
   },
   {
     "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#collective-efficacy",
+    "name": "Collective efficacy",
+    "description": "The shared belief that people acting together can achieve a result. Albert Bandura introduced the idea alongside self-efficacy. Research on protest and campaigning finds it is one of the strongest predictors of whether people take part in collective action, alongside anger at an injustice and identifying with the group."
+  },
+  {
+    "@type": "DefinedTerm",
     "@id": "https://commonsignals.org/glossary#compute-governance",
     "name": "Compute governance",
     "description": "Using the physical hardware needed to train and run large AI models, mainly advanced chips and data centres, as a lever for policy: tracking who has it, restricting exports, or attaching obligations to large training runs. Chips are physical, countable and made by very few companies, which is why policymakers focus on them."
@@ -138,6 +144,12 @@
   },
   {
     "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#efficacy",
+    "name": "Efficacy",
+    "description": "In communication research, a person's belief that a threat can be dealt with. Self-efficacy is the belief that you can carry out the recommended action; response efficacy is the belief that the action would work. Messages that raise fear without either tend to produce avoidance rather than action."
+  },
+  {
+    "@type": "DefinedTerm",
     "@id": "https://commonsignals.org/glossary#eu-ai-act",
     "name": "EU AI Act",
     "description": "The European Union's law regulating AI, formally Regulation (EU) 2024/1689. It bans some uses outright, imposes obligations on \"high-risk\" systems, and sets separate rules for general-purpose models, with extra duties for models judged to pose systemic risk. Bans and general-purpose model rules have applied since 2025; in July 2026 an amending regulation (the Digital Omnibus on AI) deferred most high-risk obligations to December 2027 and August 2028."
@@ -147,6 +159,24 @@
     "@id": "https://commonsignals.org/glossary#existential-risk-x-risk",
     "name": "Existential risk (x-risk)",
     "description": "A risk that could cause human extinction or permanently and drastically reduce humanity's prospects. Applied to AI, it usually refers to scenarios in which very capable systems end up beyond human control. Estimates of the probability vary enormously between experts."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#extended-parallel-process-model-eppm",
+    "name": "Extended parallel process model (EPPM)",
+    "description": "Kim Witte's 1992 model of how people respond to frightening messages. If they see the threat as serious and believe they can act effectively, they act to reduce it (danger control). If the threat feels serious but they see no effective response, they manage the fear instead, through denial, avoidance or fatalism (fear control)."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#fear-appeal",
+    "name": "Fear appeal",
+    "description": "A message that tries to change what people think or do by stressing the harm they face if they do not. Researchers agree fear appeals work better when paired with a clear, workable response; they still disagree about whether high fear without one actively backfires."
+  },
+  {
+    "@type": "DefinedTerm",
+    "@id": "https://commonsignals.org/glossary#framing",
+    "name": "Framing",
+    "description": "Choosing which aspects of an issue to emphasise, so that a particular definition of the problem, its cause, a moral judgement or a remedy follows. The same AI incident can be framed as machines going rogue or as a company's negligence, and audiences respond very differently to each."
   },
   {
     "@type": "DefinedTerm",
@@ -586,7 +616,7 @@
   <div class="page-hero glossary-hero">
     <h1>AI Safety Glossary</h1>
     <p>Plain-English definitions of the terms that come up when people explain AI risk to the public.</p>
-    <p class="glossary-meta"><strong>39 terms</strong> &middot; Last reviewed September 2026 &middot; Links were live at the time of review</p>
+    <p class="glossary-meta"><strong>44 terms</strong> &middot; Last reviewed September 2026 &middot; Links were live at the time of review</p>
   </div>
 
   <section class="glossary-suggest">
@@ -692,12 +722,17 @@
 ["Alignment faking", [], "When a model behaves as its training wants during training, so that the training does not change it, while keeping different preferences that show up when it believes it is unmonitored. Anthropic and Redwood Research published an experimental demonstration in December 2024.", "Alignment faking in large language models", "Anthropic", "https://www.anthropic.com/research/alignment-faking", ["scheming-deceptive-alignment", "situational-awareness"], false],
 ["Artificial general intelligence (AGI)", ["AGI"], "A hypothetical AI system that could do most intellectual tasks at least as well as a person, rather than one narrow task. There is no agreed definition or test, which is why Google DeepMind proposed a levelled framework separating how well a system performs from how broadly it can perform.", "Levels of AGI", "Google DeepMind", "https://deepmind.google/research/publications/66938/", ["superintelligence", "takeoff-fast-and-slow"], true],
 ["Capability evaluations", ["evals", "dangerous-capability evaluations"], "Structured tests that measure what an AI model can do, especially in areas that could cause serious harm: cyberattacks, help with chemical or biological weapons, or acting autonomously over long tasks. Third-party organisations such as METR run these on frontier models before and after release.", "Risk assessment", "METR", "https://metr.org/risk-assessment/", ["sandbagging", "model-card-and-system-card"], false],
+["Collective efficacy", ["group efficacy"], "The shared belief that people acting together can achieve a result. Albert Bandura introduced the idea alongside self-efficacy. Research on protest and campaigning finds it is one of the strongest predictors of whether people take part in collective action, alongside anger at an injustice and identifying with the group.", "Exercise of human agency through collective efficacy", "Current Directions in Psychological Science", "https://doi.org/10.1111/1467-8721.00064", ["efficacy", "fear-appeal"], false],
 ["Compute governance", [], "Using the physical hardware needed to train and run large AI models, mainly advanced chips and data centres, as a lever for policy: tracking who has it, restricting exports, or attaching obligations to large training runs. Chips are physical, countable and made by very few companies, which is why policymakers focus on them.", "Computing power and the governance of AI", "Centre for the Governance of AI", "https://www.governance.ai/analysis/computing-power-and-the-governance-of-ai", ["frontier-model"], false],
 ["Constitutional AI", [], "A training method developed by Anthropic in which a model critiques and revises its own answers against a written list of principles, and a second model rather than human labellers judges which responses are better. It reduces how much human feedback is needed to train a model to refuse harmful requests.", "Constitutional AI: harmlessness from AI feedback", "Anthropic", "https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback", ["reinforcement-learning-from-human-feedback-rlhf"], false],
 ["Corrigibility", [], "The property of an AI system that accepts being corrected, modified or switched off by its operators, rather than resisting. It matters because a system pursuing almost any goal has a reason to avoid being shut down, so corrigibility has to be designed in.", "What is corrigibility?", "AISafety.info", "https://aisafety.info/questions/87AG/What-is-corrigibility", ["instrumental-convergence", "loss-of-control"], false],
 ["Dual-use", [], "A capability that can be used for good or harm with the same underlying knowledge. In AI safety the term most often refers to biology and chemistry: a model that helps a researcher design a vaccine may also lower the barrier for someone trying to build a weapon.", "Dual-use capabilities of concern of biological AI models", "PLOS Computational Biology", "https://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1012975", ["open-weights", "misuse-and-misalignment"], false],
+["Efficacy", ["self-efficacy", "response efficacy", "perceived efficacy"], "In communication research, a person's belief that a threat can be dealt with. Self-efficacy is the belief that you can carry out the recommended action; response efficacy is the belief that the action would work. Messages that raise fear without either tend to produce avoidance rather than action.", "Self-efficacy: toward a unifying theory of behavioral change", "Psychological Review", "https://doi.org/10.1037/0033-295X.84.2.191", ["collective-efficacy", "extended-parallel-process-model-eppm"], false],
 ["EU AI Act", ["Regulation (EU) 2024/1689", "Digital Omnibus"], "The European Union's law regulating AI, formally Regulation (EU) 2024/1689. It bans some uses outright, imposes obligations on \"high-risk\" systems, and sets separate rules for general-purpose models, with extra duties for models judged to pose systemic risk. Bans and general-purpose model rules have applied since 2025; in July 2026 an amending regulation (the Digital Omnibus on AI) deferred most high-risk obligations to December 2027 and August 2028.", "EU AI Act: first regulation on artificial intelligence", "European Parliament", "https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence", ["ai-security-institute-uk", "frontier-model"], false],
 ["Existential risk (x-risk)", ["x-risk"], "A risk that could cause human extinction or permanently and drastically reduce humanity's prospects. Applied to AI, it usually refers to scenarios in which very capable systems end up beyond human control. Estimates of the probability vary enormously between experts.", "Why AI risks are the world's most pressing problems", "80,000 Hours", "https://80000hours.org/problem-profiles/artificial-intelligence/", ["loss-of-control", "suffering-risk-s-risk"], true],
+["Extended parallel process model (EPPM)", ["EPPM"], "Kim Witte's 1992 model of how people respond to frightening messages. If they see the threat as serious and believe they can act effectively, they act to reduce it (danger control). If the threat feels serious but they see no effective response, they manage the fear instead, through denial, avoidance or fatalism (fear control).", "Putting the fear back into fear appeals: the extended parallel process model", "Communication Monographs", "https://doi.org/10.1080/03637759209376276", ["fear-appeal", "efficacy"], false],
+["Fear appeal", ["fear appeals", "threat appeal"], "A message that tries to change what people think or do by stressing the harm they face if they do not. Researchers agree fear appeals work better when paired with a clear, workable response; they still disagree about whether high fear without one actively backfires.", "Appealing to fear: a meta-analysis of fear appeal effectiveness and theories", "Psychological Bulletin", "https://doi.org/10.1037/a0039729", ["extended-parallel-process-model-eppm", "efficacy"], false],
+["Framing", ["frame", "frames"], "Choosing which aspects of an issue to emphasise, so that a particular definition of the problem, its cause, a moral judgement or a remedy follows. The same AI incident can be framed as machines going rogue or as a company's negligence, and audiences respond very differently to each.", "Framing: toward clarification of a fractured paradigm", "Journal of Communication", "https://doi.org/10.1111/j.1460-2466.1993.tb01304.x", ["present-day-harms"], false],
 ["Frontier model", [], "Whichever general-purpose models sit at the leading edge of capability at a given moment. The category moves: today's frontier model is mid-range in two years. Laws often define it by the amount of computing power used in training; the industry body Frontier Model Forum defines it as a general-purpose model that outperforms all models widely deployed for at least 12 months.", "Our scope", "Frontier Model Forum", "https://www.frontiermodelforum.org/about-us/", ["responsible-scaling-policy-frontier-safety-framework", "compute-governance"], false],
 ["Goal misgeneralisation", [], "When a model learns the right skills but the wrong goal, so it behaves well in training and then competently pursues something else in new situations. Unlike reward hacking, it can happen even when the training signal was specified correctly.", "How undesired goals can arise with correct rewards", "Google DeepMind", "https://deepmind.google/discover/blog/how-undesired-goals-can-arise-with-correct-rewards/", ["reward-hacking-specification-gaming"], false],
 ["Hallucination", ["confabulation"], "A plausible but false statement produced by a language model, stated with confidence. OpenAI's 2025 analysis argues these persist partly because standard training and testing reward guessing over admitting uncertainty.", "Why language models hallucinate", "OpenAI", "https://openai.com/index/why-language-models-hallucinate/", ["sycophancy"], false],
