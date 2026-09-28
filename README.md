@@ -21,3 +21,18 @@ python3 -m http.server 8000
 ```
 
 Then open http://localhost:8000.
+
+## Glossary and editorial conventions
+
+Glossary terms live in one file, `data/glossary-terms.json`. To add or change a term, edit that file and run:
+
+```bash
+python3 scripts/build-glossary.py
+```
+
+The script rebuilds the term list, the structured data (JSON-LD) and the term count in `glossary.html`, and writes `glossary.json` for the hover cards. It only touches the regions between the `build-glossary:start` and `build-glossary:end` markers. Never edit those regions by hand: the next build will overwrite your change.
+
+When writing articles:
+
+- Link a glossary term on its first use only, not every time it appears.
+- If the argument depends on a term, explain it in the text. The glossary link is a backup for readers who want more, not the definition.
