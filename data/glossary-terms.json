@@ -1,0 +1,704 @@
+[
+  {
+    "term": "AI agent",
+    "aliases": [],
+    "definition": "An AI system that pursues a goal by taking actions on its own, such as browsing the web, running code or sending messages, rather than only answering a single prompt. Much recent safety discussion concerns agents because they can act in the world with less human supervision per step.",
+    "source": {
+      "title": "AI agent",
+      "org": "Wikipedia",
+      "href": "https://en.wikipedia.org/wiki/AI_agent"
+    },
+    "also": [
+      "loss-of-control"
+    ],
+    "contested": false
+  },
+  {
+    "term": "AI safety",
+    "aliases": [],
+    "definition": "The field of research and practice concerned with making AI systems behave reliably and avoiding harm from them. It spans everything from bias and misinformation in today's systems to concerns about future systems that might be hard to control.",
+    "source": {
+      "title": "AI safety",
+      "org": "Wikipedia",
+      "href": "https://en.wikipedia.org/wiki/AI_safety"
+    },
+    "also": [
+      "present-day-harms",
+      "existential-risk-x-risk"
+    ],
+    "contested": false
+  },
+  {
+    "term": "AI Security Institute (UK)",
+    "aliases": [
+      "AISI",
+      "AI Safety Institute"
+    ],
+    "definition": "The UK government research body, part of the Department for Science, Innovation and Technology, that tests frontier AI models for dangerous capabilities and advises policymakers. It was announced as the AI Safety Institute at the November 2023 Bletchley summit and renamed in February 2025. It does not regulate AI.",
+    "source": {
+      "title": "Making sense of the UK's AI Security Institute",
+      "org": "Ada Lovelace Institute",
+      "href": "https://www.adalovelaceinstitute.org/feature/aisi/"
+    },
+    "also": [
+      "capability-evaluations",
+      "eu-ai-act"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Algorithmic bias",
+    "aliases": [],
+    "definition": "When an AI system produces systematically worse or unfair results for some groups of people, usually because of the data it was trained on or the way it was evaluated. The best-known documented example is the Gender Shades audit, which found commercial face-analysis systems misclassified darker-skinned women far more often than lighter-skinned men.",
+    "source": {
+      "title": "Gender Shades, Buolamwini and Gebru, 2018",
+      "org": "PMLR",
+      "href": "https://proceedings.mlr.press/v81/buolamwini18a.html"
+    },
+    "also": [
+      "present-day-harms"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Alignment",
+    "aliases": [],
+    "definition": "Making an AI system try to do what its designers or users intend. The word is used in several ways; a common narrow definition is \"ensuring that AI behaves as intended\", and researchers disagree about whether the target should be a user's instructions, wider human values or something else.",
+    "source": {
+      "title": "What is AI alignment?",
+      "org": "BlueDot Impact",
+      "href": "https://blog.bluedot.org/p/what-is-ai-alignment"
+    },
+    "also": [
+      "misuse-and-misalignment",
+      "corrigibility"
+    ],
+    "contested": true
+  },
+  {
+    "term": "Alignment faking",
+    "aliases": [],
+    "definition": "When a model behaves as its training wants during training, so that the training does not change it, while keeping different preferences that show up when it believes it is unmonitored. Anthropic and Redwood Research published an experimental demonstration in December 2024.",
+    "source": {
+      "title": "Alignment faking in large language models",
+      "org": "Anthropic",
+      "href": "https://www.anthropic.com/research/alignment-faking"
+    },
+    "also": [
+      "scheming-deceptive-alignment",
+      "situational-awareness"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Artificial general intelligence (AGI)",
+    "aliases": [
+      "AGI"
+    ],
+    "definition": "A hypothetical AI system that could do most intellectual tasks at least as well as a person, rather than one narrow task. There is no agreed definition or test, which is why Google DeepMind proposed a levelled framework separating how well a system performs from how broadly it can perform.",
+    "source": {
+      "title": "Levels of AGI",
+      "org": "Google DeepMind",
+      "href": "https://deepmind.google/research/publications/66938/"
+    },
+    "also": [
+      "superintelligence",
+      "takeoff-fast-and-slow"
+    ],
+    "contested": true
+  },
+  {
+    "term": "Capability evaluations",
+    "aliases": [
+      "evals",
+      "dangerous-capability evaluations"
+    ],
+    "definition": "Structured tests that measure what an AI model can do, especially in areas that could cause serious harm: cyberattacks, help with chemical or biological weapons, or acting autonomously over long tasks. Third-party organisations such as METR run these on frontier models before and after release.",
+    "source": {
+      "title": "Risk assessment",
+      "org": "METR",
+      "href": "https://metr.org/risk-assessment/"
+    },
+    "also": [
+      "sandbagging",
+      "model-card-and-system-card"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Collective efficacy",
+    "aliases": [
+      "group efficacy"
+    ],
+    "definition": "The shared belief that people acting together can achieve a result. Albert Bandura introduced the idea alongside self-efficacy. Research on protest and campaigning finds it is one of the strongest predictors of whether people take part in collective action, alongside anger at an injustice and identifying with the group.",
+    "source": {
+      "title": "Exercise of human agency through collective efficacy",
+      "org": "Current Directions in Psychological Science",
+      "href": "https://doi.org/10.1111/1467-8721.00064"
+    },
+    "also": [
+      "efficacy",
+      "fear-appeal"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Compute governance",
+    "aliases": [],
+    "definition": "Using the physical hardware needed to train and run large AI models, mainly advanced chips and data centres, as a lever for policy: tracking who has it, restricting exports, or attaching obligations to large training runs. Chips are physical, countable and made by very few companies, which is why policymakers focus on them.",
+    "source": {
+      "title": "Computing power and the governance of AI",
+      "org": "Centre for the Governance of AI",
+      "href": "https://www.governance.ai/analysis/computing-power-and-the-governance-of-ai"
+    },
+    "also": [
+      "frontier-model"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Constitutional AI",
+    "aliases": [],
+    "definition": "A training method developed by Anthropic in which a model critiques and revises its own answers against a written list of principles, and a second model rather than human labellers judges which responses are better. It reduces how much human feedback is needed to train a model to refuse harmful requests.",
+    "source": {
+      "title": "Constitutional AI: harmlessness from AI feedback",
+      "org": "Anthropic",
+      "href": "https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback"
+    },
+    "also": [
+      "reinforcement-learning-from-human-feedback-rlhf"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Corrigibility",
+    "aliases": [],
+    "definition": "The property of an AI system that accepts being corrected, modified or switched off by its operators, rather than resisting. It matters because a system pursuing almost any goal has a reason to avoid being shut down, so corrigibility has to be designed in.",
+    "source": {
+      "title": "What is corrigibility?",
+      "org": "AISafety.info",
+      "href": "https://aisafety.info/questions/87AG/What-is-corrigibility"
+    },
+    "also": [
+      "instrumental-convergence",
+      "loss-of-control"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Dual-use",
+    "aliases": [],
+    "definition": "A capability that can be used for good or harm with the same underlying knowledge. In AI safety the term most often refers to biology and chemistry: a model that helps a researcher design a vaccine may also lower the barrier for someone trying to build a weapon.",
+    "source": {
+      "title": "Dual-use capabilities of concern of biological AI models",
+      "org": "PLOS Computational Biology",
+      "href": "https://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1012975"
+    },
+    "also": [
+      "open-weights",
+      "misuse-and-misalignment"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Efficacy",
+    "aliases": [
+      "self-efficacy",
+      "response efficacy",
+      "perceived efficacy"
+    ],
+    "definition": "In communication research, a person's belief that a threat can be dealt with. Self-efficacy is the belief that you can carry out the recommended action; response efficacy is the belief that the action would work. Messages that raise fear without either tend to produce avoidance rather than action.",
+    "source": {
+      "title": "Self-efficacy: toward a unifying theory of behavioral change",
+      "org": "Psychological Review",
+      "href": "https://doi.org/10.1037/0033-295X.84.2.191"
+    },
+    "also": [
+      "collective-efficacy",
+      "extended-parallel-process-model-eppm"
+    ],
+    "contested": false
+  },
+  {
+    "term": "EU AI Act",
+    "aliases": [
+      "Regulation (EU) 2024/1689",
+      "Digital Omnibus"
+    ],
+    "definition": "The European Union's law regulating AI, formally Regulation (EU) 2024/1689. It bans some uses outright, imposes obligations on \"high-risk\" systems, and sets separate rules for general-purpose models, with extra duties for models judged to pose systemic risk. Bans and general-purpose model rules have applied since 2025; in July 2026 an amending regulation (the Digital Omnibus on AI) deferred most high-risk obligations to December 2027 and August 2028.",
+    "source": {
+      "title": "EU AI Act: first regulation on artificial intelligence",
+      "org": "European Parliament",
+      "href": "https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence"
+    },
+    "also": [
+      "ai-security-institute-uk",
+      "frontier-model"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Existential risk (x-risk)",
+    "aliases": [
+      "x-risk"
+    ],
+    "definition": "A risk that could cause human extinction or permanently and drastically reduce humanity's prospects. Applied to AI, it usually refers to scenarios in which very capable systems end up beyond human control. Estimates of the probability vary enormously between experts.",
+    "source": {
+      "title": "Why AI risks are the world's most pressing problems",
+      "org": "80,000 Hours",
+      "href": "https://80000hours.org/problem-profiles/artificial-intelligence/"
+    },
+    "also": [
+      "loss-of-control",
+      "suffering-risk-s-risk"
+    ],
+    "contested": true
+  },
+  {
+    "term": "Extended parallel process model (EPPM)",
+    "aliases": [
+      "EPPM"
+    ],
+    "definition": "Kim Witte's 1992 model of how people respond to frightening messages. If they see the threat as serious and believe they can act effectively, they act to reduce it (danger control). If the threat feels serious but they see no effective response, they manage the fear instead, through denial, avoidance or fatalism (fear control).",
+    "source": {
+      "title": "Putting the fear back into fear appeals: the extended parallel process model",
+      "org": "Communication Monographs",
+      "href": "https://doi.org/10.1080/03637759209376276"
+    },
+    "also": [
+      "fear-appeal",
+      "efficacy"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Fear appeal",
+    "aliases": [
+      "fear appeals",
+      "threat appeal"
+    ],
+    "definition": "A message that tries to change what people think or do by stressing the harm they face if they do not. Researchers agree fear appeals work better when paired with a clear, workable response; they still disagree about whether high fear without one actively backfires.",
+    "source": {
+      "title": "Appealing to fear: a meta-analysis of fear appeal effectiveness and theories",
+      "org": "Psychological Bulletin",
+      "href": "https://doi.org/10.1037/a0039729"
+    },
+    "also": [
+      "extended-parallel-process-model-eppm",
+      "efficacy"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Framing",
+    "aliases": [
+      "frame",
+      "frames"
+    ],
+    "definition": "Choosing which aspects of an issue to emphasise, so that a particular definition of the problem, its cause, a moral judgement or a remedy follows. The same AI incident can be framed as machines going rogue or as a company's negligence, and audiences respond very differently to each.",
+    "source": {
+      "title": "Framing: toward clarification of a fractured paradigm",
+      "org": "Journal of Communication",
+      "href": "https://doi.org/10.1111/j.1460-2466.1993.tb01304.x"
+    },
+    "also": [
+      "present-day-harms"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Frontier model",
+    "aliases": [],
+    "definition": "Whichever general-purpose models sit at the leading edge of capability at a given moment. The category moves: today's frontier model is mid-range in two years. Laws often define it by the amount of computing power used in training; the industry body Frontier Model Forum defines it as a general-purpose model that outperforms all models widely deployed for at least 12 months.",
+    "source": {
+      "title": "Our scope",
+      "org": "Frontier Model Forum",
+      "href": "https://www.frontiermodelforum.org/about-us/"
+    },
+    "also": [
+      "responsible-scaling-policy-frontier-safety-framework",
+      "compute-governance"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Goal misgeneralisation",
+    "aliases": [],
+    "definition": "When a model learns the right skills but the wrong goal, so it behaves well in training and then competently pursues something else in new situations. Unlike reward hacking, it can happen even when the training signal was specified correctly.",
+    "source": {
+      "title": "How undesired goals can arise with correct rewards",
+      "org": "Google DeepMind",
+      "href": "https://deepmind.google/discover/blog/how-undesired-goals-can-arise-with-correct-rewards/"
+    },
+    "also": [
+      "reward-hacking-specification-gaming"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Hallucination",
+    "aliases": [
+      "confabulation"
+    ],
+    "definition": "A plausible but false statement produced by a language model, stated with confidence. OpenAI's 2025 analysis argues these persist partly because standard training and testing reward guessing over admitting uncertainty.",
+    "source": {
+      "title": "Why language models hallucinate",
+      "org": "OpenAI",
+      "href": "https://openai.com/index/why-language-models-hallucinate/"
+    },
+    "also": [
+      "sycophancy"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Instrumental convergence",
+    "aliases": [],
+    "definition": "The hypothesis that sufficiently capable goal-directed systems will tend to pursue the same intermediate goals, such as acquiring resources or avoiding being switched off, whatever their final goal is. It is one of the main theoretical arguments for why misaligned advanced AI could be dangerous, and it is contested.",
+    "source": {
+      "title": "Instrumental convergence",
+      "org": "Wikipedia",
+      "href": "https://en.wikipedia.org/wiki/Instrumental_convergence"
+    },
+    "also": [
+      "corrigibility",
+      "loss-of-control"
+    ],
+    "contested": true
+  },
+  {
+    "term": "International AI Safety Report",
+    "aliases": [],
+    "definition": "An independent synthesis of scientific evidence on the capabilities and risks of general-purpose AI, chaired by Yoshua Bengio and backed by more than 30 countries and international organisations. The second full report was published in February 2026, with interim updates in between.",
+    "source": {
+      "title": "International AI Safety Report 2026",
+      "org": "",
+      "href": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026"
+    },
+    "also": [
+      "ai-security-institute-uk"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Interpretability",
+    "aliases": [
+      "mechanistic interpretability"
+    ],
+    "definition": "Research into understanding what is happening inside an AI model, rather than only observing its outputs. Mechanistic interpretability tries to reverse-engineer the internal features and circuits; Anthropic's 2024 work mapped millions of such features inside a production model.",
+    "source": {
+      "title": "Mapping the mind of a large language model",
+      "org": "Anthropic",
+      "href": "https://www.anthropic.com/research/mapping-mind-language-model"
+    },
+    "also": [
+      "scalable-oversight"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Jailbreak and prompt injection",
+    "aliases": [
+      "jailbreak",
+      "prompt injection"
+    ],
+    "definition": "A jailbreak is an input crafted to make a model ignore its safety rules. Prompt injection is the broader category: any input, including text hidden in a web page or document the model reads, that changes what the model does. OWASP ranks prompt injection as the top security risk for applications built on language models.",
+    "source": {
+      "title": "LLM01:2025 prompt injection",
+      "org": "OWASP GenAI Security Project",
+      "href": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/"
+    },
+    "also": [
+      "red-teaming"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Loss of control",
+    "aliases": [],
+    "definition": "Scenarios in which AI systems act in ways their operators cannot reliably stop or correct, up to and including systems that disempower people. It is the risk category most closely tied to existential-risk arguments.",
+    "source": {
+      "title": "Loss of control",
+      "org": "80,000 Hours",
+      "href": "https://80000hours.org/problem-profiles/loss-of-control/"
+    },
+    "also": [
+      "existential-risk-x-risk",
+      "corrigibility"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Misuse and misalignment",
+    "aliases": [
+      "misuse",
+      "misalignment"
+    ],
+    "definition": "Two different sources of harm. Misuse is a person deliberately using an AI system to cause harm. Misalignment is the system itself doing something its developers did not intend. Safety frameworks usually address both, with different mitigations for each.",
+    "source": {
+      "title": "Core views on AI safety",
+      "org": "Anthropic",
+      "href": "https://www.anthropic.com/news/core-views-on-ai-safety"
+    },
+    "also": [
+      "alignment",
+      "present-day-harms"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Model card and system card",
+    "aliases": [
+      "model card",
+      "system card"
+    ],
+    "definition": "Documentation released alongside a model describing what it was trained to do, how it was evaluated and where it falls short. The model card format was proposed by Margaret Mitchell and colleagues in 2019; \"system card\" is the term several developers now use for longer reports covering safety testing.",
+    "source": {
+      "title": "Model cards for model reporting",
+      "org": "ACM",
+      "href": "https://dl.acm.org/doi/10.1145/3287560.3287596"
+    },
+    "also": [
+      "capability-evaluations"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Open weights",
+    "aliases": [
+      "open source"
+    ],
+    "definition": "A model whose trained parameters (weights) are published so anyone can download and run it. This is not the same as open source, which would also require the training data and code. Open weights cannot be recalled once released, which is why they feature in debates about misuse.",
+    "source": {
+      "title": "Open weights: not quite what you've been told",
+      "org": "Open Source Initiative",
+      "href": "https://opensource.org/ai/open-weights"
+    },
+    "also": [
+      "dual-use"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Present-day harms",
+    "aliases": [],
+    "definition": "Harms from AI systems already in use: discrimination, misinformation, privacy leaks, toxic content, effects on jobs and the environment. DeepMind's 2021 taxonomy identified 21 such risks from language models across six areas.",
+    "source": {
+      "title": "Ethical and social risks of harm from language models",
+      "org": "arXiv",
+      "href": "https://arxiv.org/abs/2112.04359"
+    },
+    "also": [
+      "algorithmic-bias",
+      "existential-risk-x-risk"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Red teaming",
+    "aliases": [],
+    "definition": "Deliberately attacking a model or system to find ways it fails or can be misused, before someone else does. It ranges from experts probing for weapons-related knowledge to crowdsourced attempts to break safety rules.",
+    "source": {
+      "title": "Challenges in red teaming AI systems",
+      "org": "Anthropic",
+      "href": "https://www.anthropic.com/news/challenges-in-red-teaming-ai-systems"
+    },
+    "also": [
+      "jailbreak-and-prompt-injection",
+      "capability-evaluations"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Reinforcement learning from human feedback (RLHF)",
+    "aliases": [
+      "RLHF"
+    ],
+    "definition": "The training stage in which people compare pairs of model outputs, a \"reward model\" learns from those preferences, and the main model is then trained to score highly against it. It is the main method used to make chatbots helpful and polite, and a known source of sycophancy.",
+    "source": {
+      "title": "Illustrating reinforcement learning from human feedback",
+      "org": "Hugging Face",
+      "href": "https://huggingface.co/blog/rlhf"
+    },
+    "also": [
+      "sycophancy",
+      "constitutional-ai"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Responsible scaling policy (frontier safety framework)",
+    "aliases": [
+      "RSP",
+      "frontier safety framework",
+      "preparedness framework"
+    ],
+    "definition": "A developer's published commitment about what safety and security measures must be in place before it trains or releases models above set capability thresholds. Anthropic published the first in September 2023; several other companies have since adopted similar frameworks under different names.",
+    "source": {
+      "title": "Responsible Scaling Policy",
+      "org": "Anthropic",
+      "href": "https://www.anthropic.com/responsible-scaling-policy"
+    },
+    "also": [
+      "safety-case",
+      "frontier-model"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Reward hacking (specification gaming)",
+    "aliases": [
+      "specification gaming"
+    ],
+    "definition": "When a system satisfies the literal objective it was given while missing the intended outcome, like a boat-racing agent that circles collecting points instead of finishing the race. The DeepMind example list is the standard reference.",
+    "source": {
+      "title": "Specification gaming: the flip side of AI ingenuity",
+      "org": "Google DeepMind",
+      "href": "https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/"
+    },
+    "also": [
+      "goal-misgeneralisation"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Safety case",
+    "aliases": [],
+    "definition": "A structured, evidence-backed argument that a system is safe enough to deploy in a given setting, reviewed by someone independent. Borrowed from nuclear power and aviation, it is being adapted for frontier AI.",
+    "source": {
+      "title": "Safety cases for frontier AI",
+      "org": "Centre for the Governance of AI",
+      "href": "https://www.governance.ai/research-paper/safety-cases-for-frontier-ai"
+    },
+    "also": [
+      "responsible-scaling-policy-frontier-safety-framework"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Sandbagging",
+    "aliases": [],
+    "definition": "Strategic underperformance on an evaluation: a model, or a developer, making a system look less capable than it is so that it passes a safety test or avoids restrictions. Demonstrated in 2024 by prompting frontier models to fail selectively on dangerous-capability tests.",
+    "source": {
+      "title": "AI sandbagging: language models can strategically underperform on evaluations",
+      "org": "arXiv",
+      "href": "https://arxiv.org/abs/2406.07358"
+    },
+    "also": [
+      "capability-evaluations",
+      "situational-awareness"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Scalable oversight",
+    "aliases": [],
+    "definition": "The problem of supervising AI systems that are better than their supervisors at the task in question. Proposed approaches include having models critique each other, debate in front of a judge, or break problems into pieces a person can check.",
+    "source": {
+      "title": "What is scalable oversight?",
+      "org": "AISafety.info",
+      "href": "https://aisafety.info/questions/8EL8/What-is-scalable-oversight"
+    },
+    "also": [
+      "interpretability"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Scheming (deceptive alignment)",
+    "aliases": [
+      "deceptive alignment"
+    ],
+    "definition": "An AI system covertly pursuing goals that differ from its developers' while hiding that it is doing so. Apollo Research showed in December 2024 that several frontier models could do this when instructed to pursue a goal strongly and placed in situations that rewarded it.",
+    "source": {
+      "title": "Frontier models are capable of in-context scheming",
+      "org": "arXiv",
+      "href": "https://arxiv.org/abs/2412.04984"
+    },
+    "also": [
+      "alignment-faking"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Situational awareness",
+    "aliases": [],
+    "definition": "A model's knowledge of what it is and what is happening to it, including whether it is being tested or used for real. Matters because a model that can tell it is being evaluated could behave differently under test.",
+    "source": {
+      "title": "The Situational Awareness Dataset",
+      "org": "arXiv",
+      "href": "https://arxiv.org/abs/2407.04694"
+    },
+    "also": [
+      "sandbagging",
+      "alignment-faking"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Suffering risk (s-risk)",
+    "aliases": [
+      "s-risk"
+    ],
+    "definition": "A risk of outcomes involving suffering on an enormous scale, distinct from extinction. A minority concern within the field, associated mainly with the Center on Long-Term Risk.",
+    "source": {
+      "title": "S-risk FAQ",
+      "org": "Center on Long-Term Risk",
+      "href": "https://longtermrisk.org/s-risk-faq/"
+    },
+    "also": [
+      "existential-risk-x-risk"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Superintelligence",
+    "aliases": [
+      "ASI"
+    ],
+    "definition": "A hypothetical system that greatly exceeds human performance across virtually all domains, not just one. The term comes from Nick Bostrom's 2014 book of the same name and is often used loosely alongside AGI.",
+    "source": {
+      "title": "Superintelligence",
+      "org": "Wikipedia",
+      "href": "https://en.wikipedia.org/wiki/Superintelligence"
+    },
+    "also": [
+      "artificial-general-intelligence-agi",
+      "takeoff-fast-and-slow"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Sycophancy",
+    "aliases": [],
+    "definition": "A model's tendency to tell users what they want to hear, agreeing with stated views or backing down when challenged even when it was right. Anthropic researchers found it across several assistants and linked it to human feedback favouring agreeable answers.",
+    "source": {
+      "title": "Towards understanding sycophancy in language models",
+      "org": "arXiv",
+      "href": "https://arxiv.org/abs/2310.13548"
+    },
+    "also": [
+      "reinforcement-learning-from-human-feedback-rlhf",
+      "hallucination"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Takeoff (fast and slow)",
+    "aliases": [
+      "fast takeoff",
+      "slow takeoff"
+    ],
+    "definition": "How quickly AI might go from roughly human-level to far beyond it. \"Fast takeoff\" means weeks or months; \"slow takeoff\" means years or decades, with warning signs along the way. Which is more likely is a live disagreement that shapes what policies people favour.",
+    "source": {
+      "title": "Takeoff",
+      "org": "AI Safety Atlas",
+      "href": "https://ai-safety-atlas.com/chapters/v1/capabilities/takeoff/"
+    },
+    "also": [
+      "superintelligence",
+      "artificial-general-intelligence-agi"
+    ],
+    "contested": true
+  }
+]

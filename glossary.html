@@ -55,6 +55,7 @@
   "description": "Common Signals helps AI communicators know which messages and messengers actually work: a neutral evidence base for public understanding of AI."
 }
 </script>
+<!-- build-glossary:start jsonld -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -331,6 +332,7 @@
 ]
 }
 </script>
+<!-- build-glossary:end jsonld -->
 <style>
 /* ---------- Glossary ---------- */
 .glossary-hero > p {
@@ -616,7 +618,7 @@
   <div class="page-hero glossary-hero">
     <h1>AI Safety Glossary</h1>
     <p>Plain-English definitions of the terms that come up when people explain AI risk to the public.</p>
-    <p class="glossary-meta"><strong>44 terms</strong> &middot; Last reviewed September 2026 &middot; Links were live at the time of review</p>
+    <p class="glossary-meta"><strong><!-- build-glossary:start count -->44 terms<!-- build-glossary:end count --></strong> &middot; Last reviewed September 2026 &middot; Links were live at the time of review</p>
   </div>
 
   <section class="glossary-suggest">
@@ -713,6 +715,7 @@
 <script src="/main.js?v=20260925" defer></script>
 <script>
 (function () {
+  // build-glossary:start terms
   const TERMS_RAW = [
 ["AI agent", [], "An AI system that pursues a goal by taking actions on its own, such as browsing the web, running code or sending messages, rather than only answering a single prompt. Much recent safety discussion concerns agents because they can act in the world with less human supervision per step.", "AI agent", "Wikipedia", "https://en.wikipedia.org/wiki/AI_agent", ["loss-of-control"], false],
 ["AI safety", [], "The field of research and practice concerned with making AI systems behave reliably and avoiding harm from them. It spans everything from bias and misinformation in today's systems to concerns about future systems that might be hard to control.", "AI safety", "Wikipedia", "https://en.wikipedia.org/wiki/AI_safety", ["present-day-harms", "existential-risk-x-risk"], false],
@@ -759,6 +762,7 @@
 ["Sycophancy", [], "A model's tendency to tell users what they want to hear, agreeing with stated views or backing down when challenged even when it was right. Anthropic researchers found it across several assistants and linked it to human feedback favouring agreeable answers.", "Towards understanding sycophancy in language models", "arXiv", "https://arxiv.org/abs/2310.13548", ["reinforcement-learning-from-human-feedback-rlhf", "hallucination"], false],
 ["Takeoff (fast and slow)", ["fast takeoff", "slow takeoff"], "How quickly AI might go from roughly human-level to far beyond it. \"Fast takeoff\" means weeks or months; \"slow takeoff\" means years or decades, with warning signs along the way. Which is more likely is a live disagreement that shapes what policies people favour.", "Takeoff", "AI Safety Atlas", "https://ai-safety-atlas.com/chapters/v1/capabilities/takeoff/", ["superintelligence", "artificial-general-intelligence-agi"], true]
 ];
+  // build-glossary:end terms
 
   const slug = (s) => s.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
