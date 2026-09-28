@@ -36,6 +36,22 @@ document.querySelectorAll('.nav-links a, .nav-drawer a').forEach((a) => {
   }
 });
 
+// Glossary term links open in a new tab so readers keep their place. Only
+// links with a #term anchor change; the plain /glossary nav link does not,
+// and the glossary page's own links are left alone.
+if (!/^\/glossary(\.html)?$/.test(window.location.pathname)) {
+  document.querySelectorAll('a[href^="/glossary#"], a[href^="https://commonsignals.org/glossary#"]').forEach((a) => {
+    a.target = '_blank';
+    a.rel = 'noopener';
+    if (!a.querySelector('.sr-only')) {
+      const note = document.createElement('span');
+      note.className = 'sr-only';
+      note.textContent = ' (opens in new tab)';
+      a.appendChild(note);
+    }
+  });
+}
+
 // Submits to Substack via a real form POST targeting a hidden iframe, since
 // a scripted fetch() is blocked by CORS and a server-side proxy is blocked
 // by Substack's Cloudflare bot challenge. The response lands in a
