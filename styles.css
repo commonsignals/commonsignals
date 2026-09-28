@@ -1157,10 +1157,20 @@ footer.site .copyright a:hover { color: var(--teal); border-color: var(--teal); 
 
 /* ---------- Glossary hover cards (main.js; pages with data-glossary-cards) ---------- */
 @media (hover: hover) and (pointer: fine) {
+  /* Dark text with a teal dotted underline, so a term reads as "defined here"
+     rather than as a link to another page (teal, solid underline). */
   body[data-glossary-cards] a[href^="/glossary#"]:not(.glossary-card-link),
   body[data-glossary-cards] a[href^="https://commonsignals.org/glossary#"]:not(.glossary-card-link) {
-    text-decoration-style: dotted;
-    text-underline-offset: 0.2em;
+    color: var(--ink);
+    text-decoration: underline dotted var(--teal-text);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.22em;
+  }
+  body[data-glossary-cards] a[href^="/glossary#"]:not(.glossary-card-link):hover,
+  body[data-glossary-cards] a[href^="https://commonsignals.org/glossary#"]:not(.glossary-card-link):hover {
+    color: var(--ink);
+    text-decoration-color: var(--teal);
+    cursor: help;
   }
 }
 .glossary-card {
