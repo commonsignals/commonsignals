@@ -30,7 +30,7 @@ STAGES = [
     dict(assume="evidence is seen as credible by both sides"),
     dict(head="3. Communicator outcomes", sub="Our proximate outcome",
          body="Communicators change what they say and who says it", group="control"),
-    dict(assume="communicators act on evidence, not instinct", note="The assumption the whole model rests on"),
+    dict(assume="communicators act on evidence"),
     dict(head="4. Public outcomes", body="Concern becomes commitment",
          pills=["Cross-societal concern", "Polarisation avoided", "Concern turned into action"], group="contrib"),
     dict(assume="better communication moves attitudes at scale"),
@@ -173,8 +173,8 @@ def build(W, phone):
 .body,.sub,.pilltext{{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:{s['body']}px;fill:{SOFT}}}
 .sub{{fill:{TEAL}}}
 .pilltext{{fill:{INK}}}
-.as{{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:{s['assume']}px;font-style:italic;fill:{SOFT}}}
-.ask{{font-style:normal;font-weight:600;fill:{TEAL}}}
+.as{{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:{s['assume']}px;fill:{SOFT}}}
+.ask{{font-weight:600;fill:{TEAL}}}
 .grp{{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:{s['group']}px;font-weight:600;fill:{TEAL}}}
 .box-control{{fill:{TINT};stroke:{TEAL};stroke-width:1.4}}
 .box-contrib{{fill:{PAPER};stroke:{TEAL2};stroke-width:1.4;stroke-dasharray:5 4}}

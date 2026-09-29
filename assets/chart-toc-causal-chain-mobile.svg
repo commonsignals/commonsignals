@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 1093" width="360" height="1093" role="img" aria-label="The causal chain from activities to impact: activities lead to outputs, which lead to communicator outcomes, which lead to public outcomes, which lead to a durable social mandate for AI governance, each step carrying an assumption"><style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 1056" width="360" height="1056" role="img" aria-label="The causal chain from activities to impact: activities lead to outputs, which lead to communicator outcomes, which lead to public outcomes, which lead to a durable social mandate for AI governance, each step carrying an assumption"><style>
 .title{font-family:"Lora",Georgia,serif;font-size:19px;font-weight:600;fill:#232019}
 .head{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:15px;font-weight:600;fill:#232019}
 .body,.sub,.pilltext{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:14px;fill:#5a564c}
 .sub{fill:#006375}
 .pilltext{fill:#232019}
-.as{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:14px;font-style:italic;fill:#5a564c}
-.ask{font-style:normal;font-weight:600;fill:#006375}
+.as{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:14px;fill:#5a564c}
+.ask{font-weight:600;fill:#006375}
 .grp{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:14px;font-weight:600;fill:#006375}
 .box-control{fill:#dde9e7;stroke:#006375;stroke-width:1.4}
 .box-contrib{fill:#f5f4ef;stroke:#008ba3;stroke-width:1.4;stroke-dasharray:5 4}
@@ -17,7 +17,7 @@
 <defs>
 <marker id="tcc-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#006375"/></marker>
 </defs>
-<rect width="360" height="1093" fill="#f5f4ef"/>
+<rect width="360" height="1056" fill="#f5f4ef"/>
 <text class="title" x="16" y="34">The causal chain</text>
 <text class="grp" x="16" y="66.0">What we control and influence</text>
 <rect class="box-control" x="16" y="78.0" width="328" height="115.8" rx="8"/>
@@ -40,26 +40,24 @@
 <text class="sub" x="180.0" y="479.5" text-anchor="middle">Our proximate outcome</text>
 <text class="body" x="180.0" y="499.8" text-anchor="middle">Communicators change what they say and</text>
 <text class="body" x="180.0" y="520.1" text-anchor="middle">who says it</text>
-<path class="arrow" d="M38 546.2500000000001 L38 625.1500000000001"/>
-<text class="as" x="54" y="568.9"><tspan class="ask">Assumption:</tspan> communicators act on</text>
-<text class="as" x="54" y="589.2">evidence, not instinct</text>
-<text class="as" x="54" y="609.5">The assumption the whole model rests on</text>
-<text class="grp" x="16" y="651.2">What we contribute to</text>
-<rect class="box-contrib" x="16" y="663.2" width="328" height="225.3" rx="8"/>
-<text class="head" x="180.0" y="693.9" text-anchor="middle">4. Public outcomes</text>
-<text class="body" x="180.0" y="716.2" text-anchor="middle">Concern becomes commitment</text>
-<rect class="pill" x="34" y="742.5" width="292" height="38" rx="6"/>
-<text class="pilltext" x="180.0" y="766.4" text-anchor="middle">Cross-societal concern</text>
-<rect class="pill" x="34" y="788.5" width="292" height="38" rx="6"/>
-<text class="pilltext" x="180.0" y="812.4" text-anchor="middle">Polarisation avoided</text>
-<rect class="pill" x="34" y="834.5" width="292" height="38" rx="6"/>
-<text class="pilltext" x="180.0" y="858.4" text-anchor="middle">Concern turned into action</text>
-<path class="arrow" d="M38 892.45 L38 951.0500000000001"/>
-<text class="as" x="54" y="915.1"><tspan class="ask">Assumption:</tspan> better communication moves</text>
-<text class="as" x="54" y="935.4">attitudes at scale</text>
-<rect class="box-contrib" x="16" y="957.1" width="328" height="115.8" rx="8"/>
-<text class="head" x="180.0" y="987.8" text-anchor="middle">5. Impact: a durable social</text>
-<text class="head" x="180.0" y="1008.1" text-anchor="middle">mandate for AI governance</text>
-<text class="body" x="180.0" y="1030.3" text-anchor="middle">Hard-to-reverse rules, and a social</text>
-<text class="body" x="180.0" y="1050.6" text-anchor="middle">licence conditional on safety</text>
+<path class="arrow" d="M38 546.2500000000001 L38 588.2500000000001"/>
+<text class="as" x="54" y="570.7"><tspan class="ask">Assumption:</tspan> communicators act on evidence</text>
+<text class="grp" x="16" y="614.3">What we contribute to</text>
+<rect class="box-contrib" x="16" y="626.3" width="328" height="225.3" rx="8"/>
+<text class="head" x="180.0" y="657.0" text-anchor="middle">4. Public outcomes</text>
+<text class="body" x="180.0" y="679.3" text-anchor="middle">Concern becomes commitment</text>
+<rect class="pill" x="34" y="705.6" width="292" height="38" rx="6"/>
+<text class="pilltext" x="180.0" y="729.5" text-anchor="middle">Cross-societal concern</text>
+<rect class="pill" x="34" y="751.6" width="292" height="38" rx="6"/>
+<text class="pilltext" x="180.0" y="775.5" text-anchor="middle">Polarisation avoided</text>
+<rect class="pill" x="34" y="797.6" width="292" height="38" rx="6"/>
+<text class="pilltext" x="180.0" y="821.5" text-anchor="middle">Concern turned into action</text>
+<path class="arrow" d="M38 855.5500000000001 L38 914.1500000000001"/>
+<text class="as" x="54" y="878.2"><tspan class="ask">Assumption:</tspan> better communication moves</text>
+<text class="as" x="54" y="898.5">attitudes at scale</text>
+<rect class="box-contrib" x="16" y="920.2" width="328" height="115.8" rx="8"/>
+<text class="head" x="180.0" y="950.9" text-anchor="middle">5. Impact: a durable social</text>
+<text class="head" x="180.0" y="971.2" text-anchor="middle">mandate for AI governance</text>
+<text class="body" x="180.0" y="993.4" text-anchor="middle">Hard-to-reverse rules, and a social</text>
+<text class="body" x="180.0" y="1013.7" text-anchor="middle">licence conditional on safety</text>
 </svg>
