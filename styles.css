@@ -543,6 +543,17 @@ blockquote cite {
   .services { grid-template-columns: 1fr; gap: 1.8rem; }
 }
 
+/* ---------- Team (About) ---------- */
+.team-member { max-width: 44rem; margin-top: 1.6rem; }
+.team-member h3 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  color: var(--ink);
+  margin: 0 0 0.8rem;
+}
+
 /* ---------- Vision / mission / values ---------- */
 .statements {
   display: grid;
