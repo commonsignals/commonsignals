@@ -134,7 +134,7 @@ header.site .wrap {
 
 .nav-drawer { display: none; }
 
-@media (max-width: 900px) {
+@media (max-width: 980px) {
   .nav-links { display: none; }
   .nav-cta { display: none; }
   .nav-toggle { display: flex; }
@@ -289,6 +289,7 @@ header.site .site-search .wrap { display: block; padding-top: 1rem; padding-bott
   max-width: 40rem;
   margin: 0;
 }
+.page-hero .sub + .sub { margin-top: 0.9rem; }
 .page-hero .actions {
   display: flex;
   gap: 1rem;
