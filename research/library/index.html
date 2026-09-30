@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <script data-cfasync="false" src="/analytics.js"></script>
 <title>Research library: Common Signals</title>
-<meta name="description" content="A directory of existing research on public attitudes to AI, across both the existential-risk and present-day-harms conversations." />
+<meta name="description" content="A directory of existing research on public attitudes to AI, and on how to frame and communicate AI risk, across both the existential-risk and present-day-harms conversations." />
 
 <meta property="og:title" content="Research library: Common Signals" />
-<meta property="og:description" content="A directory of existing research on public attitudes to AI, across both the existential-risk and present-day-harms conversations." />
+<meta property="og:description" content="A directory of existing research on public attitudes to AI, and on how to frame and communicate AI risk, across both the existential-risk and present-day-harms conversations." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://commonsignals.org/research/library/" />
 <meta property="og:site_name" content="Common Signals" />
@@ -19,7 +19,7 @@
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Research library: Common Signals" />
-<meta name="twitter:description" content="A directory of existing research on public attitudes to AI, across both the existential-risk and present-day-harms conversations." />
+<meta name="twitter:description" content="A directory of existing research on public attitudes to AI, and on how to frame and communicate AI risk, across both the existential-risk and present-day-harms conversations." />
 <meta name="twitter:image" content="https://commonsignals.org/og-image.png" />
 
 <link rel="canonical" href="https://commonsignals.org/research/library/" />
@@ -39,7 +39,7 @@
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Research library",
-  "description": "A directory of existing research on public attitudes to AI, across both the existential-risk and present-day-harms conversations.",
+  "description": "A directory of existing research on public attitudes to AI, and on how to frame and communicate AI risk, across both the existential-risk and present-day-harms conversations.",
   "url": "https://commonsignals.org/research/library/",
   "isPartOf": { "@type": "WebSite", "name": "Common Signals", "url": "https://commonsignals.org/" }
 }
@@ -133,6 +133,11 @@
     scroll-margin-top: 5.5rem;
   }
   .library-card[hidden] { display: none; }
+  .library-section { margin-top: 2.6rem; }
+  .library-section[hidden] { display: none; }
+  .library-section-head { margin: 0 0 0.4rem; }
+  .library-section-intro { color: var(--ink-soft); margin: 0; max-width: 42rem; }
+  .library-section .library-list { margin-top: 1.4rem; }
   .library-card:target { border-color: var(--signal); }
   .library-card h3 {
     font-family: var(--serif);
@@ -220,7 +225,7 @@
 
   <div class="page-hero tool-eyebrow">
     <h1>Research library.</h1>
-    <p class="sub">Existing research on public attitudes to AI, across both the existential-risk and present-day-harms conversations.</p>
+    <p class="sub">Existing research on public attitudes to AI, and on how to frame and communicate AI risk, across both the existential-risk and present-day-harms conversations.</p>
   </div>
 
   <div class="library-note">
@@ -255,6 +260,7 @@
       <fieldset>
         <legend>Method</legend>
         <label class="filter-check"><input type="checkbox" name="method" value="experiment" /> experiment</label>
+        <label class="filter-check"><input type="checkbox" name="method" value="interviews" /> interviews</label>
         <label class="filter-check"><input type="checkbox" name="method" value="poll" /> poll</label>
         <label class="filter-check"><input type="checkbox" name="method" value="review" /> review</label>
         <label class="filter-check"><input type="checkbox" name="method" value="segmentation" /> segmentation</label>
@@ -263,6 +269,7 @@
       </fieldset>
       <fieldset>
         <legend>Type</legend>
+        <label class="filter-check"><input type="checkbox" name="type" value="chapter" /> chapter</label>
         <label class="filter-check"><input type="checkbox" name="type" value="paper" /> paper</label>
         <label class="filter-check"><input type="checkbox" name="type" value="poll" /> poll</label>
         <label class="filter-check"><input type="checkbox" name="type" value="report" /> report</label>
@@ -274,6 +281,8 @@
         <label class="filter-check"><input type="checkbox" name="year" value="2025" /> 2025</label>
         <label class="filter-check"><input type="checkbox" name="year" value="2024" /> 2024</label>
         <label class="filter-check"><input type="checkbox" name="year" value="2023" /> 2023</label>
+        <label class="filter-check"><input type="checkbox" name="year" value="2004" /> 2004</label>
+        <label class="filter-check"><input type="checkbox" name="year" value="1987" /> 1987</label>
       </fieldset>
     </div>
     <div class="library-status-row">
@@ -285,7 +294,10 @@
     </div>
   </div>
 
-  <div class="library-list" id="libraryList">
+  <section class="library-section" id="public-attitudes" aria-labelledby="public-attitudes-heading">
+    <h2 class="library-section-head" id="public-attitudes-heading">Public attitudes: polls and trackers</h2>
+    <p class="library-section-intro">Polls, trackers and interview studies of what people think about AI.</p>
+    <div class="library-list" id="libraryList">
       <article class="library-card" id="usc-ai-opinion-tracker-w4" data-geography="US" data-method="tracker" data-type="tracker" data-year="2026" data-topics="attitudes" data-search="ai public opinion tracker wave 4 university of south carolina college of information and communications fourth wave of a repeated us tracker on public attitudes to ai, published as a findings report.">
         <h3><a href="https://sc.edu/study/colleges_schools/cic/docs/pdfs/wave4_ai_public_opinion_tracker.pdf" target="_blank" rel="noopener">AI Public Opinion Tracker wave 4</a></h3>
         <p class="library-meta">University of South Carolina College of Information and Communications &middot; 2026 &middot; US adults &middot; fieldwork Winter 2025 to 2026</p>
@@ -317,6 +329,14 @@
         <p class="library-summary">Polling analysis of how American attitudes to AI split by demographic group and by frequency of use, with usage emerging as a major dividing line.</p>
         
         <div class="library-links"><a href="https://www.dataforprogress.org/blog/2026/2/27/public-opinion-on-artificial-intelligence-varies-widely-by-age-gender-race-and-frequency-of-use" target="_blank" rel="noopener">Report</a><a href="#data-for-progress-ai-2026">Link to this entry</a></div>
+      </article>
+      <article class="library-card" id="anthropic-81k-interviews-2026" data-geography="Global" data-method="interviews" data-type="report" data-year="2026" data-topics="attitudes risk usage" data-search="what 81,000 people want from ai anthropic ai-led interviews with 80,508 claude.ai users in 159 countries; existential risk is the least-raised of 13 concerns. an interview study of claude users, not a representative poll.">
+        <h3><a href="https://www.anthropic.com/features/81k-interviews" target="_blank" rel="noopener">What 81,000 people want from AI</a></h3>
+        <p class="library-meta">Anthropic &middot; 2026 &middot; n=80,508 Claude.ai users in 159 countries; not a representative sample &middot; interviews December 2025</p>
+        <div class="library-tags"><span class="tag-pill tag-neutral">interviews</span><span class="tag-pill tag-teal">Global</span><span class="tag-pill tag-outline">report</span></div>
+        <p class="library-summary">AI-led interviews with 80,508 Claude.ai users in 159 countries; existential risk is the least-raised of 13 concerns. An interview study of Claude users, not a representative poll.</p>
+
+        <div class="library-links"><a href="https://www.anthropic.com/features/81k-interviews" target="_blank" rel="noopener">Report</a><a href="https://www.anthropic.com/features/81k-interviews#:~:text=WHAT%20PEOPLE%20WORRY%20ABOUT" target="_blank" rel="noopener">What people worry about</a><a href="#anthropic-81k-interviews-2026">Link to this entry</a></div>
       </article>
       <article class="library-card" id="seismic-razors-edge-2025" data-geography="Multi-country" data-method="segmentation" data-type="report" data-year="2025" data-topics="segmentation attitudes risk" data-search="on the razor's edge: ai vs. everything we care about seismic foundation segmentation study identifying five groups of the public closest to civic action on ai and how ai fits into wider hopes and fears. reports women twice as likely as men to worry about ai and 60% worried about ai's effect on relationships.">
         <h3><a href="https://report2025.seismic.org/" target="_blank" rel="noopener">On the razor's edge: AI vs. everything we care about</a></h3>
@@ -366,14 +386,6 @@
         <p class="library-key"><strong>Key finding:</strong> Trust in AI: 72% in China, 32% in the US</p>
         <div class="library-links"><a href="https://www.edelman.com/trust/2025/trust-barometer/flash-poll-trust-artifical-intelligence" target="_blank" rel="noopener">Report</a><a href="#edelman-trust-ai-flash-2025">Link to this entry</a></div>
       </article>
-      <article class="library-card" id="arxiv-2511-06525-reframing-ai-risk" data-geography="US" data-method="experiment" data-type="paper" data-year="2025" data-topics="messaging risk" data-search="from catastrophic to concrete: reframing ai risk communication for public mobilization arxiv preprint 2511.06525 communications study on how framing ai risk as concrete and near-term rather than catastrophic and abstract affects public willingness to act.">
-        <h3><a href="https://arxiv.org/abs/2511.06525" target="_blank" rel="noopener">From catastrophic to concrete: Reframing AI risk communication for public mobilization</a></h3>
-        <p class="library-meta">arXiv preprint 2511.06525 &middot; 2025 &middot; Research paper &middot; fieldwork 2025</p>
-        <div class="library-tags"><span class="tag-pill tag-neutral">experiment</span><span class="tag-pill tag-teal">US</span><span class="tag-pill tag-outline">paper</span></div>
-        <p class="library-summary">Communications study on how framing AI risk as concrete and near-term rather than catastrophic and abstract affects public willingness to act.</p>
-        
-        <div class="library-links"><a href="https://arxiv.org/abs/2511.06525" target="_blank" rel="noopener">Report</a><a href="#arxiv-2511-06525-reframing-ai-risk">Link to this entry</a></div>
-      </article>
       <article class="library-card" id="ada-turing-2025" data-geography="UK" data-method="tracker" data-type="tracker" data-year="2025" data-topics="attitudes regulation trust" data-search="how do people feel about ai? wave two ada lovelace institute and the alan turing institute second wave of the nationally representative uk survey, repeating the 2022 questions to track change, with new material on regulation. a companion data site publishes the tables.">
         <h3><a href="https://www.turing.ac.uk/news/publications/understanding-public-attitudes-ai-second-survey" target="_blank" rel="noopener">How do people feel about AI? Wave two</a></h3>
         <p class="library-meta">Ada Lovelace Institute and The Alan Turing Institute &middot; 2025 &middot; n=3513 UK adults; 62% response rate &middot; fieldwork 25 Oct to 24 Nov 2024</p>
@@ -381,6 +393,14 @@
         <p class="library-summary">Second wave of the nationally representative UK survey, repeating the 2022 questions to track change, with new material on regulation. A companion data site publishes the tables.</p>
         <p class="library-key"><strong>Key finding:</strong> Nearly nine in ten UK adults support independent regulation of AI</p>
         <div class="library-links"><a href="https://www.turing.ac.uk/news/publications/understanding-public-attitudes-ai-second-survey" target="_blank" rel="noopener">Report</a><a href="https://www.turing.ac.uk/sites/default/files/2025-09/how-do-people-feel-about-ai-2025_the-alan-turing-institute_ada-lovelace-institute.pdf" target="_blank" rel="noopener">PDF</a><a href="#ada-turing-2025">Link to this entry</a></div>
+      </article>
+      <article class="library-card" id="arxiv-2503-05815-american-attitudes-ai" data-geography="US" data-method="survey" data-type="paper" data-year="2025" data-topics="attitudes risk trust" data-search="trust, experience, and innovation: key factors shaping american attitudes about ai risa palm, justin kingsland and toby bolsen, arxiv preprint 2503.05815 us survey fielded during an election year in which election manipulation came out as respondents&#x27; top ai concern.">
+        <h3><a href="https://arxiv.org/abs/2503.05815" target="_blank" rel="noopener">Trust, experience, and innovation: Key factors shaping American attitudes about AI</a></h3>
+        <p class="library-meta">Risa Palm, Justin Kingsland and Toby Bolsen, arXiv preprint 2503.05815 &middot; 2025 &middot; n=1,330 US adults, non-probability panel matched to census benchmarks &middot; fieldwork May 2024</p>
+        <div class="library-tags"><span class="tag-pill">survey</span><span class="tag-pill tag-teal">US</span><span class="tag-pill tag-outline">paper</span></div>
+        <p class="library-summary">US survey fielded during an election year in which election manipulation came out as respondents&#x27; top AI concern.</p>
+
+        <div class="library-links"><a href="https://doi.org/10.48550/arXiv.2503.05815" target="_blank" rel="noopener">Report</a><a href="#arxiv-2503-05815-american-attitudes-ai">Link to this entry</a></div>
       </article>
       <article class="library-card" id="public-first-state-of-ai-2024" data-geography="Multi-country" data-method="poll" data-type="poll" data-year="2024" data-topics="attitudes regulation work" data-search="what does the public think about ai? (state of ai polling) public first public first's uk and us polling on ai, published as an interactive site and polling tables. reports 73% of uk adults would support ai diagnosis if double-checked by a human doctor.">
         <h3><a href="https://ai.publicfirst.co.uk/" target="_blank" rel="noopener">What does the public think about AI? (State of AI polling)</a></h3>
@@ -422,14 +442,62 @@
         <p class="library-key"><strong>Key finding:</strong> 64% worried workplaces would rely too heavily on AI in recruitment</p>
         <div class="library-links"><a href="https://www.turing.ac.uk/news/publications/understanding-public-attitudes-ai-first-survey" target="_blank" rel="noopener">Report</a><a href="https://www.adalovelaceinstitute.org/wp-content/uploads/2023/06/Ada-Lovelace-Institute-The-Alan-Turing-Institute-How-do-people-feel-about-AI.pdf" target="_blank" rel="noopener">PDF</a><a href="#ada-turing-2023">Link to this entry</a></div>
       </article>
-  </div>
+    </div>
+  </section>
+
+  <section class="library-section" id="framing-and-risk-communication" aria-labelledby="framing-heading">
+    <h2 class="library-section-head" id="framing-heading">Framing and risk communication</h2>
+    <p class="library-section-intro">Research on how framing, messengers and risk perception shape the way people respond to messages about AI.</p>
+    <div class="library-list" id="libraryListFraming">
+      <article class="library-card" id="arxiv-2511-06525-reframing-ai-risk" data-geography="US" data-method="experiment" data-type="paper" data-year="2025" data-topics="messaging risk" data-search="from catastrophic to concrete: reframing ai risk communication for public mobilization arxiv preprint 2511.06525 communications study on how framing ai risk as concrete and near-term rather than catastrophic and abstract affects public willingness to act.">
+        <h3><a href="https://arxiv.org/abs/2511.06525" target="_blank" rel="noopener">From catastrophic to concrete: Reframing AI risk communication for public mobilization</a></h3>
+        <p class="library-meta">arXiv preprint 2511.06525 &middot; 2025 &middot; Research paper &middot; fieldwork 2025</p>
+        <div class="library-tags"><span class="tag-pill tag-neutral">experiment</span><span class="tag-pill tag-teal">US</span><span class="tag-pill tag-outline">paper</span></div>
+        <p class="library-summary">Communications study on how framing AI risk as concrete and near-term rather than catastrophic and abstract affects public willingness to act.</p>
+        
+        <div class="library-links"><a href="https://arxiv.org/abs/2511.06525" target="_blank" rel="noopener">Report</a><a href="#arxiv-2511-06525-reframing-ai-risk">Link to this entry</a></div>
+      </article>
+      <article class="library-card" id="abendroth-dias-2025-ai-regulation-risk" data-geography="Multi-country" data-method="experiment" data-type="chapter" data-year="2025" data-topics="messaging regulation risk" data-search="what&#x27;s risk got to do with it? public attitudes toward ai regulation in the european union and united states kulani abendroth-dias, oxford intersections: ai in society (oxford university press) survey experiment in the eu and us: framing ai risk as disinformation or online child safety moved conservatives' support for regulation more than liberals'.">
+        <h3><a href="https://doi.org/10.1093/9780198945215.003.0083" target="_blank" rel="noopener">What&#x27;s risk got to do with it? Public attitudes toward AI regulation in the European Union and United States</a></h3>
+        <p class="library-meta">Kulani Abendroth-Dias, Oxford Intersections: AI in Society (Oxford University Press) &middot; 2025 &middot; 65 expert interviews and a survey experiment with 1,310 participants, EU and US</p>
+        <div class="library-tags"><span class="tag-pill tag-neutral">experiment</span><span class="tag-pill tag-teal">Multi-country</span><span class="tag-pill tag-outline">chapter</span></div>
+        <p class="library-summary">Survey experiment in the EU and US: framing AI risk as disinformation or online child safety moved conservatives' support for regulation more than liberals'.</p>
+
+        <div class="library-links"><a href="https://doi.org/10.1093/9780198945215.003.0083" target="_blank" rel="noopener">Chapter</a><a href="#abendroth-dias-2025-ai-regulation-risk">Link to this entry</a></div>
+      </article>
+      <article class="library-card" id="choi-2023-temporal-framing-ai" data-geography="" data-method="experiment" data-type="paper" data-year="2023" data-topics="media messaging risk" data-search="temporal framing in balanced news coverage of artificial intelligence and public attitudes sukyoung choi, mass communication and society 27(2), 384-405 near-future framing of ai risk.">
+        <h3><a href="https://doi.org/10.1080/15205436.2023.2248974" target="_blank" rel="noopener">Temporal framing in balanced news coverage of artificial intelligence and public attitudes</a></h3>
+        <p class="library-meta">Sukyoung Choi, Mass Communication and Society 27(2), 384-405 &middot; 2023 &middot; Online experiment</p>
+        <div class="library-tags"><span class="tag-pill tag-neutral">experiment</span><span class="tag-pill tag-outline">paper</span></div>
+        <p class="library-summary">Near-future framing of AI risk.</p>
+
+        <div class="library-links"><a href="https://doi.org/10.1080/15205436.2023.2248974" target="_blank" rel="noopener">Paper</a><a href="#choi-2023-temporal-framing-ai">Link to this entry</a></div>
+      </article>
+      <article class="library-card" id="slovic-2004-risk-as-feelings" data-geography="" data-method="review" data-type="paper" data-year="2004" data-topics="risk" data-search="risk as analysis and risk as feelings: some thoughts about affect, reason, risk, and rationality paul slovic, melissa l. finucane, ellen peters and donald g. macgregor, risk analysis 24(2), 311-322 people judge risk by feeling as much as by analysis: a fast, intuitive system driven by affect runs alongside deliberate reasoning, and each depends on the other.">
+        <h3><a href="https://doi.org/10.1111/j.0272-4332.2004.00433.x" target="_blank" rel="noopener">Risk as analysis and risk as feelings: Some thoughts about affect, reason, risk, and rationality</a></h3>
+        <p class="library-meta">Paul Slovic, Melissa L. Finucane, Ellen Peters and Donald G. MacGregor, Risk Analysis 24(2), 311-322 &middot; 2004 &middot; Review article</p>
+        <div class="library-tags"><span class="tag-pill tag-neutral">review</span><span class="tag-pill tag-outline">paper</span></div>
+        <p class="library-summary">People judge risk by feeling as much as by analysis: a fast, intuitive system driven by affect runs alongside deliberate reasoning, and each depends on the other.</p>
+
+        <div class="library-links"><a href="https://doi.org/10.1111/j.0272-4332.2004.00433.x" target="_blank" rel="noopener">Paper</a><a href="#slovic-2004-risk-as-feelings">Link to this entry</a></div>
+      </article>
+      <article class="library-card" id="slovic-1987-perception-of-risk" data-geography="" data-method="review" data-type="paper" data-year="1987" data-topics="risk" data-search="perception of risk paul slovic, science 236(4799), 280-285 foundational review of research on how people judge hazardous activities and technologies, written to help experts and policymakers understand public responses and communicate risk.">
+        <h3><a href="https://doi.org/10.1126/science.3563507" target="_blank" rel="noopener">Perception of risk</a></h3>
+        <p class="library-meta">Paul Slovic, Science 236(4799), 280-285 &middot; 1987 &middot; Research article</p>
+        <div class="library-tags"><span class="tag-pill tag-neutral">review</span><span class="tag-pill tag-outline">paper</span></div>
+        <p class="library-summary">Foundational review of research on how people judge hazardous activities and technologies, written to help experts and policymakers understand public responses and communicate risk.</p>
+
+        <div class="library-links"><a href="https://doi.org/10.1126/science.3563507" target="_blank" rel="noopener">Paper</a><a href="#slovic-1987-perception-of-risk">Link to this entry</a></div>
+      </article>
+    </div>
+  </section>
 
   <div class="tool-card soft" style="margin-top:2.5rem">
     <h2>Suggest a study.</h2>
     <p>We're looking for research that meets all three:</p>
     <ul class="library-criteria">
-      <li>Primary research on public attitudes to AI, not commentary or a summary of other work.</li>
-      <li>A public report or dataset we can link to directly.</li>
+      <li>Research on public attitudes to AI, or on framing and risk communication: primary studies or foundational reviews, not commentary.</li>
+      <li>A report, dataset or published paper we can link to directly.</li>
       <li>A verifiable link: the primary source, not press coverage of it.</li>
     </ul>
     <p>We don't list opinion pieces, vendor marketing dressed as research, or think-pieces without underlying data.</p>
@@ -503,8 +571,9 @@
 <script src="/main.js?v=20260928c" defer></script>
 <script>
 (function () {
-  const list = document.getElementById("libraryList");
-  const cards = Array.from(list.querySelectorAll(".library-card"));
+  const lists = Array.from(document.querySelectorAll(".library-list"));
+  const sections = Array.from(document.querySelectorAll(".library-section"));
+  const cards = Array.from(document.querySelectorAll(".library-list .library-card"));
   const search = document.getElementById("librarySearch");
   const countEl = document.getElementById("libraryCount");
   const clearBtn = document.getElementById("libraryClear");
@@ -535,17 +604,22 @@
       card.hidden = !matches;
       if (matches) shown++;
     });
+    sections.forEach((section) => {
+      section.hidden = !section.querySelector(".library-card:not([hidden])");
+    });
     countEl.textContent = shown + " of " + cards.length + (cards.length === 1 ? " study" : " studies");
   }
 
   function sortCards() {
     const order = sortBtn.dataset.order;
-    const sorted = cards.slice().sort((a, b) => {
-      const ay = parseInt(a.dataset.year, 10) || 0;
-      const by = parseInt(b.dataset.year, 10) || 0;
-      return order === "asc" ? ay - by : by - ay;
+    lists.forEach((list) => {
+      const sorted = Array.from(list.querySelectorAll(".library-card")).sort((a, b) => {
+        const ay = parseInt(a.dataset.year, 10) || 0;
+        const by = parseInt(b.dataset.year, 10) || 0;
+        return order === "asc" ? ay - by : by - ay;
+      });
+      sorted.forEach((card) => list.appendChild(card));
     });
-    sorted.forEach((card) => list.appendChild(card));
   }
 
   search.addEventListener("input", apply);

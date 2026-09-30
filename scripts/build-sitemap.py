@@ -11,7 +11,7 @@ import subprocess
 from pathlib import Path
 
 SITE = "https://commonsignals.org"
-TODAY = "2026-09-29"
+TODAY = "2026-09-30"
 ROOT = Path(__file__).resolve().parent.parent
 
 SECTIONS = [
