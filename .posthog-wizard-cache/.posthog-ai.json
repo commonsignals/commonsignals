@@ -1,0 +1,5 @@
+{
+  "provider": "manual-capture",
+  "package": "not-applicable-no-llm-sdk",
+  "otel_init_file": "not-applicable-no-llm-callsite"
+}
