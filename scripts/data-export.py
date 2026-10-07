@@ -379,7 +379,9 @@ def cmd_build(args):
         out_dir = data_root / slug
         out_dir.mkdir(parents=True, exist_ok=True)
         out_path = out_dir / "data.json"
-        out_path.write_text(json.dumps(payload, ensure_ascii=False) + "\n")
+        # Compact separators: the largest study is close to Cloudflare Pages'
+        # 25 MiB per-file limit, and the spaces add about 5% for nothing.
+        out_path.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + "\n")
         print(f"wrote {out_path} ({len(comments)} comments)")
 
 

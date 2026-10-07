@@ -1,6 +1,7 @@
 {
   "$schema": "https://commonsignals.org/data/studies/_schema/index.schema.json",
   "series": [
+    "DOAC AI debate reception",
     "agent-swarm reception",
     "resignation reception"
   ],
@@ -76,6 +77,111 @@
           "version": 1,
           "date": "2026-09-18",
           "note": "Initial import: 2,480 rows from the coded TSV export, transformed into contract shape (columns renamed to the mentions_<thing> convention, coder/spot_checked/correction_note columns added, parent_id/depth blanked since they do not resolve within this sample, reply_count and reposts kept as study-specific extra columns after correction_note, matching Cotra's reply_count precedent)."
+        }
+      ]
+    },
+    {
+      "slug": "doac-clip-facebook-2026-09",
+      "title": "Facebook comments on the Diary of a CEO clip of Nate Soares",
+      "platform": "facebook",
+      "series": "DOAC AI debate reception",
+      "article_url": null,
+      "counts": {
+        "retrieved": 2075,
+        "coded": 2075,
+        "clear_position_base": 1366
+      },
+      "version": 1,
+      "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
+      "changelog": [
+        {
+          "version": 1,
+          "date": "2026-10-07",
+          "note": "First release. A first pass under codebook v1 fell just short of the 90% reliability bar on stance (88.2%) and frame (88.8%). Codebook v2 defined unclear against na and added tie-breaks for debater_verdict and other; every row coded unclear, other or debater_verdict across the five DOAC studies (14,993 of 26,019) was recoded blind under it."
+        }
+      ]
+    },
+    {
+      "slug": "doac-clip-instagram-2026-09",
+      "title": "Instagram comments on the Diary of a CEO clip of Nate Soares",
+      "platform": "instagram",
+      "series": "DOAC AI debate reception",
+      "article_url": null,
+      "counts": {
+        "retrieved": 77,
+        "coded": 77,
+        "clear_position_base": 38
+      },
+      "version": 1,
+      "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
+      "changelog": [
+        {
+          "version": 1,
+          "date": "2026-10-07",
+          "note": "First release. A first pass under codebook v1 fell just short of the 90% reliability bar on stance (88.2%) and frame (88.8%). Codebook v2 defined unclear against na and added tie-breaks for debater_verdict and other; every row coded unclear, other or debater_verdict across the five DOAC studies (14,993 of 26,019) was recoded blind under it."
+        }
+      ]
+    },
+    {
+      "slug": "doac-clip-shorts-2026-09",
+      "title": "YouTube Shorts comments on the Diary of a CEO clip of Nate Soares",
+      "platform": "youtube_shorts",
+      "series": "DOAC AI debate reception",
+      "article_url": null,
+      "counts": {
+        "retrieved": 261,
+        "coded": 261,
+        "clear_position_base": 171
+      },
+      "version": 1,
+      "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
+      "changelog": [
+        {
+          "version": 1,
+          "date": "2026-10-07",
+          "note": "First release. A first pass under codebook v1 fell just short of the 90% reliability bar on stance (88.2%) and frame (88.8%). Codebook v2 defined unclear against na and added tie-breaks for debater_verdict and other; every row coded unclear, other or debater_verdict across the five DOAC studies (14,993 of 26,019) was recoded blind under it."
+        }
+      ]
+    },
+    {
+      "slug": "doac-clip-tiktok-2026-09",
+      "title": "TikTok comments on the Diary of a CEO clip of Nate Soares",
+      "platform": "tiktok",
+      "series": "DOAC AI debate reception",
+      "article_url": null,
+      "counts": {
+        "retrieved": 50,
+        "coded": 50,
+        "clear_position_base": 27
+      },
+      "version": 1,
+      "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
+      "changelog": [
+        {
+          "version": 1,
+          "date": "2026-10-07",
+          "note": "First release. A first pass under codebook v1 fell just short of the 90% reliability bar on stance (88.2%) and frame (88.8%). Codebook v2 defined unclear against na and added tie-breaks for debater_verdict and other; every row coded unclear, other or debater_verdict across the five DOAC studies (14,993 of 26,019) was recoded blind under it."
+        }
+      ]
+    },
+    {
+      "slug": "doac-debate-youtube-2026-09",
+      "title": "YouTube comments on the Diary of a CEO AI debate episode",
+      "platform": "youtube",
+      "series": "DOAC AI debate reception",
+      "article_url": null,
+      "counts": {
+        "retrieved": 23794,
+        "coded": 23794,
+        "clear_position_base": 15928
+      },
+      "version": 1,
+      "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
+      "changelog": [
+        {
+          "version": 1,
+          "date": "2026-10-07",
+          "note": "First release. A first pass under codebook v1 fell just short of the 90% reliability bar on stance (88.2%) and frame (88.8%). Codebook v2 defined unclear against na and added tie-breaks for debater_verdict and other; every row coded unclear, other or debater_verdict across the five DOAC studies (14,993 of 26,019) was recoded blind under it."
         }
       ]
     },

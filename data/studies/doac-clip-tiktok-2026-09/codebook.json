@@ -1,0 +1,275 @@
+{
+ "central_claim": "Advanced AI could become impossible for humans to control and poses a serious risk, up to human extinction, that justifies slowing or stopping development.",
+ "stance_note": "agree = accepts the risk case, sides with Soares or Yampolskiy, or attacks McAfee; disagree = rejects it (AI is a tool, hype or fearmongering), sides with McAfee, or attacks Soares or Yampolskiy; mixed = explicitly holds both positions.",
+ "coder_instructions": "- Code what the comment says, not who wrote it.\n- Replies come with their parent's text in `parent_text`. Use it to understand what the reply is responding to, but code the reply itself.\n- When a comment fits two frames, pick the one it leads with, except where the frame tie-breaks below say otherwise.\n- Siding with a debater counts as stance. Praising Soares or Yampolskiy, or attacking the sceptic, is `agree`; praising the sceptic or attacking Soares or Yampolskiy is `disagree`. Commenters refer to Andrew McAfee as \"the bald guy\", \"let me finish guy\" or \"the 0% guy\". Ed Zitron is on neither side: praise or criticism of him alone is `na` unless the comment also takes a position on the claim.\n- Comments purely about the format, adverts, the host or production are `na` with frame `format_only`.\n- Use only the allowed values below. Output one JSON object per line, one per input id, and nothing else.\n\nTelling unclear from na and from a side:\n\n- `na`: the comment does not engage with AI or AI risk at all. Examples: tags, emoji, greetings, \"great episode\", comments about the host, adverts, production or guest requests, praise or criticism of Ed Zitron alone, and jokes or chat with no bearing on AI.\n- `unclear`: the comment is about AI, AI risk or the debate's argument, but you cannot tell whether it accepts or rejects the central claim. Examples: neutral questions (\"how would it get power?\"), observations about AI with no evaluation, sarcasm whose target you cannot identify.\n- `agree` or `disagree`: the position on the central claim, or the side taken under the siding rule above, can be read from the comment, using `parent_text` only to resolve what the reply refers to. Tone, alarm or a joke alone is not a position: if you would have to guess, use `unclear`.\n- `mixed`: the comment explicitly holds both positions (for example, the risk is real but the extinction claims are overblown).\n\n- **`debater_verdict` against an argument frame.** Use `debater_verdict` only when judging the panellists is the substance of the comment: who won, who was rude, who interrupted, who talked too much, insults or praise with no argument about AI. If the comment also makes an argument that fits another frame (for example, that we could unplug AI, that AI is hype, that it is too late, that greedy companies are the danger), code that frame instead, however the comment opens. Stance still follows the siding rule, and the `m_risk_debater` and `m_sceptic_debater` flags record that a debater was named.\n- **`other` is a last resort.** Before coding `other`, check that no listed frame fits:\n  - A comment that agrees with the risk case and adds nothing else is `general_agreement`, however short.\n  - A comment about the podcast, host, adverts, production or guest requests is `format_only`.\n  - A comment that dismisses the risk without a reason (\"nonsense\", \"fearmongering\") is `capability_scepticism`.\n  - Use `other` only for comments that fit none of these or any other frame.",
+ "dimensions": [
+  {
+   "key": "stance",
+   "label": "Stance",
+   "kind": "single",
+   "shared": true,
+   "values": [
+    {
+     "value": "agree",
+     "label": "Agree",
+     "definition": "accepts the risk case, or sides with Soares or Yampolskiy, or attacks McAfee"
+    },
+    {
+     "value": "disagree",
+     "label": "Disagree",
+     "definition": "rejects the risk case, or sides with McAfee, or attacks Soares or Yampolskiy"
+    },
+    {
+     "value": "mixed",
+     "label": "Mixed",
+     "definition": "explicitly holds both positions"
+    },
+    {
+     "value": "unclear",
+     "label": "Unclear",
+     "definition": "about AI or the debate, but the position cannot be read"
+    },
+    {
+     "value": "na",
+     "label": "Na",
+     "definition": "does not engage with AI or AI risk (format, host, adverts, tags, emoji, off topic)"
+    }
+   ]
+  },
+  {
+   "key": "frame",
+   "label": "Frame",
+   "kind": "single",
+   "shared": false,
+   "values": [
+    {
+     "value": "general_agreement",
+     "label": "General agreement",
+     "definition": "Agrees with the risk case without giving a further reason",
+     "example": "This really is the whole argument in one sentence."
+    },
+    {
+     "value": "debater_verdict",
+     "label": "Debater verdict",
+     "definition": "Judges the panellists (who won, who was rude, who talked too much) more than the argument",
+     "example": "Pretty sure AI is already smarter than the bald guy"
+    },
+    {
+     "value": "fatalism",
+     "label": "Fatalism",
+     "definition": "Doom, too late, resignation, grief for the future",
+     "example": "We're all doomed...there's no other way of putting it."
+    },
+    {
+     "value": "scifi",
+     "label": "Scifi",
+     "definition": "Reads the risk through a film, TV or book story",
+     "example": "Strong 'Don't Look Up' vibes with this interview."
+    },
+    {
+     "value": "blame_people",
+     "label": "Blame people",
+     "definition": "The danger is the humans who control or misuse AI (greed, power, bad actors), not AI itself",
+     "example": "the main risk is people with such enormous power going rogue"
+    },
+    {
+     "value": "human_mirror",
+     "label": "Human mirror",
+     "definition": "AI is dangerous because it is trained on and copies human nature",
+     "example": "you design an artificial mind based on humans and it acts like humans"
+    },
+    {
+     "value": "capability_scepticism",
+     "label": "Capability scepticism",
+     "definition": "AI is just a tool or LLM, it is hype, the fear is scaremongering",
+     "example": "AI is so dumb. What are you talking about"
+    },
+    {
+     "value": "unplug",
+     "label": "Unplug",
+     "definition": "We can switch it off, cut power or destroy data centres, or rebuttals that we cannot",
+     "example": "Can't we just unplug it ?"
+    },
+    {
+     "value": "takeover_scenarios",
+     "label": "Takeover scenarios",
+     "definition": "Speculation about how AI would harm or outwit us: hiding, replicating, sabotage, competing for resources",
+     "example": "We won't be seen as cattle more like weeds"
+    },
+    {
+     "value": "policy_leaders",
+     "label": "Policy leaders",
+     "definition": "Regulation, slowing down, prosecuting executives, political leaders, international race",
+     "example": "Roman should speak to congress"
+    },
+    {
+     "value": "present_harms",
+     "label": "Present harms",
+     "definition": "Harms happening now: jobs, education, dependence, misuse today",
+     "example": "we stopped paying attention to what's happening now"
+    },
+    {
+     "value": "benefits",
+     "label": "Benefits",
+     "definition": "AI's upside, or that the risk is worth taking",
+     "example": "I would love to use AI to discover a cure"
+    },
+    {
+     "value": "religion_spiritual",
+     "label": "Religion spiritual",
+     "definition": "Religious or spiritual reading",
+     "example": "No one here wants to consider Revelation ch 13?"
+    },
+    {
+     "value": "conspiracy_other_target",
+     "label": "Conspiracy other target",
+     "definition": "Conspiracy theories aimed at groups or institutions",
+     "example": "Scare mongering, just like covid, fals flag incoming"
+    },
+    {
+     "value": "format_only",
+     "label": "Format only",
+     "definition": "About the podcast itself: format, adverts, guests requested",
+     "example": "Thumbs down for all these advertisement breaks."
+    },
+    {
+     "value": "other",
+     "label": "Other",
+     "definition": "Fits none of the above",
+     "example": ""
+    }
+   ]
+  },
+  {
+   "key": "format_reaction",
+   "label": "Format reaction",
+   "kind": "single",
+   "shared": true,
+   "values": [
+    {
+     "value": "praise",
+     "label": "Praise",
+     "definition": "praises the debate or clip itself"
+    },
+    {
+     "value": "mock",
+     "label": "Mock",
+     "definition": "mocks the debate or clip"
+    },
+    {
+     "value": "condescended",
+     "label": "Condescended",
+     "definition": "feels talked down to by the debate or clip"
+    },
+    {
+     "value": "imitates",
+     "label": "Imitates",
+     "definition": "imitates or parodies the delivery"
+    },
+    {
+     "value": "none",
+     "label": "None",
+     "definition": "no reaction to the delivery"
+    }
+   ]
+  },
+  {
+   "key": "emotion",
+   "label": "Emotion",
+   "kind": "single",
+   "shared": true,
+   "values": [
+    {
+     "value": "fear",
+     "label": "Fear",
+     "definition": ""
+    },
+    {
+     "value": "resignation",
+     "label": "Resignation",
+     "definition": ""
+    },
+    {
+     "value": "anger",
+     "label": "Anger",
+     "definition": ""
+    },
+    {
+     "value": "humour",
+     "label": "Humour",
+     "definition": ""
+    },
+    {
+     "value": "hope",
+     "label": "Hope",
+     "definition": ""
+    },
+    {
+     "value": "neutral",
+     "label": "Neutral",
+     "definition": ""
+    }
+   ]
+  },
+  {
+   "key": "mentions_messenger_credentials",
+   "label": "Mentions a speaker's expertise or track record",
+   "kind": "flag",
+   "shared": true
+  },
+  {
+   "key": "mentions_leaders_policy",
+   "label": "Mentions governments, politicians, regulation or law",
+   "kind": "flag",
+   "shared": true
+  },
+  {
+   "key": "mentions_companies_billionaires",
+   "label": "Mentions AI companies, executives or billionaires",
+   "kind": "flag",
+   "shared": true
+  },
+  {
+   "key": "mentions_cultural_reference",
+   "label": "Mentions a film, TV show, book or meme",
+   "kind": "flag",
+   "shared": true
+  },
+  {
+   "key": "mentions_asks_what_to_do",
+   "label": "Asks what people or society can do",
+   "kind": "flag",
+   "shared": true
+  },
+  {
+   "key": "mentions_risk_debater",
+   "label": "Names or refers to Soares or Yampolskiy",
+   "kind": "flag",
+   "shared": false
+  },
+  {
+   "key": "mentions_sceptic_debater",
+   "label": "Names or refers to McAfee",
+   "kind": "flag",
+   "shared": false
+  },
+  {
+   "key": "mentions_china_other_nations",
+   "label": "Mentions China or competition between countries",
+   "kind": "flag",
+   "shared": false
+  },
+  {
+   "key": "mentions_incident",
+   "label": "Refers to the OpenAI agent-swarm or Hugging Face incident",
+   "kind": "flag",
+   "shared": false
+  },
+  {
+   "key": "non_english",
+   "label": "Written mainly in a language other than English",
+   "kind": "flag",
+   "shared": true
+  }
+ ]
+}

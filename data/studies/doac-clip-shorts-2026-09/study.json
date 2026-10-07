@@ -1,0 +1,45 @@
+{
+ "slug": "doac-clip-shorts-2026-09",
+ "title": "YouTube Shorts comments on the Diary of a CEO clip of Nate Soares",
+ "series": "DOAC AI debate reception",
+ "platform": "youtube_shorts",
+ "artefact_title": "\"WILL AI LEAD US TO EXTINCTION?\" (The Diary of a CEO, YouTube Shorts)",
+ "artefact_url": "https://www.youtube.com/watch?v=7a6BfbZiDV4",
+ "artefact_published": "2026-09-17",
+ "central_claim": "Advanced AI could become impossible for humans to control and poses a serious risk, up to human extinction, that justifies slowing or stopping development.",
+ "capture_dates": [
+  "2026-10-04"
+ ],
+ "capture_method": "Complete yt-dlp export of the Shorts clip's comments (--write-comments), with threading, like counts and author hashes. Replies have depth 1. Publication dates are yt-dlp's approximation from the relative time shown at capture.",
+ "counts": {
+  "retrieved": 261,
+  "coded": 261,
+  "coded_by_coders": 256,
+  "not_sent_to_coders": 5,
+  "top_level": 203,
+  "replies": 58,
+  "authors": 223,
+  "clear_position_base": 171,
+  "total_likes": 543
+ },
+ "spot_check": {
+  "sample": 347,
+  "agreed": 317,
+  "checked_by": "Claude (claude-opus-5-5), independent blind second coding",
+  "date": "2026-10-07",
+  "note": "Pooled across the five DOAC studies: a random 347-row sample was coded a second time, blind, under codebook v2. Agreement: stance 317/347 (91.4%, kappa 0.87), frame 309/347 (89.0%, kappa 0.87), emotion 85.9%, format reaction 97.4%, mention flags 98.8%. Rows in the sample are marked spot_checked."
+ },
+ "coders": "Claude (claude-opus-5-5), parallel coders of about 190 comments each; rows first coded unclear, other or debater_verdict were recoded blind under codebook v2",
+ "article_url": null,
+ "findings_note_url": null,
+ "version": 1,
+ "changelog": [
+  {
+   "version": 1,
+   "date": "2026-10-07",
+   "note": "First release. A first pass under codebook v1 fell just short of the 90% reliability bar on stance (88.2%) and frame (88.8%). Codebook v2 defined unclear against na and added tie-breaks for debater_verdict and other; every row coded unclear, other or debater_verdict across the five DOAC studies (14,993 of 26,019) was recoded blind under it."
+  }
+ ],
+ "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
+ "notes": "Rows flagged cta_keyword, emoji_only, no_text or featured_messenger were not sent to coders and carry stance na, frame other, emotion neutral and every flag false; exclude them from frame shares. debater_verdict is inflated by pile-on reply threads about Andrew McAfee: under the codebook, attacking the sceptic counts as agree, so one thread can add over a hundred agree rows. Weight by thread or report top-level comments separately before quoting agree or frame shares."
+}

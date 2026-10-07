@@ -110,7 +110,7 @@
         <p>Loading studies&hellip;</p>
       </div>
       <div class="study-contract-note">
-        <p>Each study is coded on stance, frame, format reaction and emotion against its own codebook, plus a handful of flags for what a comment mentions. Stance and emotion use mostly the same categories across the five studies; frame and format reaction are study-specific. Comment text is verbatim; author identities are hashed, not published. Full contract, JSON schemas and licensing: <a href="/data/studies/README.md">/data/studies/README.md</a>. The coding and compilation are CC BY 4.0; comment text remains its authors'.</p>
+        <p>Each study is coded on stance, frame, format reaction and emotion against its own codebook, plus a handful of flags for what a comment mentions. Stance and emotion use mostly the same categories across studies; frame and format reaction are study-specific. Comment text is verbatim; author identities are hashed, not published. Full contract, JSON schemas and licensing: <a href="/data/studies/README.md">/data/studies/README.md</a>. The coding and compilation are CC BY 4.0; comment text remains its authors'.</p>
       </div>
     </div>
   </section>
@@ -185,7 +185,7 @@
   function esc(s) {
     return String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   }
-  const PLATFORM_LABEL = { reddit: 'Reddit', youtube: 'YouTube', instagram: 'Instagram', x: 'X' };
+  const PLATFORM_LABEL = { reddit: 'Reddit', youtube: 'YouTube', youtube_shorts: 'YouTube Shorts', instagram: 'Instagram', facebook: 'Facebook', tiktok: 'TikTok', x: 'X' };
 
   async function init() {
     const el = document.getElementById('studyCards');
