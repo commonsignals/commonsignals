@@ -32,7 +32,7 @@
   "note": "Pooled across the five DOAC studies: a random 347-row sample was coded a second time, blind, under codebook v2. Agreement: stance 317/347 (91.4%, kappa 0.87), frame 309/347 (89.0%, kappa 0.87), emotion 85.9%, format reaction 97.4%, mention flags 98.8%. Rows in the sample are marked spot_checked."
  },
  "coders": "Claude (claude-opus-5-5), parallel coders of about 190 comments each; rows first coded unclear, other or debater_verdict were recoded blind under codebook v2",
- "article_url": null,
+ "article_url": "https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis",
  "findings_note_url": null,
  "version": 2,
  "changelog": [

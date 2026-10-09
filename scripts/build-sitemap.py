@@ -4,6 +4,7 @@ Run from the repo root: python3 scripts/build-sitemap.py
 Pages marked noindex (the per-comment templates under data/*/c/, and 404.html
 itself) are left out. The 404 page searches search-index.json in the browser.
 """
+import datetime
 import json
 import html
 import re
@@ -11,7 +12,7 @@ import subprocess
 from pathlib import Path
 
 SITE = "https://commonsignals.org"
-TODAY = "2026-09-30"
+TODAY = datetime.date.today().isoformat()
 ROOT = Path(__file__).resolve().parent.parent
 
 SECTIONS = [
@@ -121,7 +122,7 @@ def write_html(groups):
     main = f'''<main id="top">
 
   <div class="article-hero">
-    <p class="article-eyebrow">Last updated: {int(TODAY[8:])} September 2026</p>
+    <p class="article-eyebrow">Last updated: {datetime.date.fromisoformat(TODAY).strftime('%-d %B %Y')}</p>
     <h1>Sitemap</h1>
     <p class="article-dek">{desc} A machine-readable version is at <a href="/sitemap.xml">sitemap.xml</a>.</p>
   </div>

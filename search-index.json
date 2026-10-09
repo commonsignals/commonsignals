@@ -10,6 +10,11 @@
 "d": "We coded 1,534 Instagram comments on a one-minute reel by Nate Soares of the Machine Intelligence Research Institute (MIRI). Most commenters accepted the argument. Many said it was already too late, and almost nobody asked what to do."
 },
 {
+"t": "\"Can't we just unplug it?\": What 26,257 comments made of the Diary of a CEO AI debate",
+"u": "/cant-we-just-unplug-it-doac-ai-debate-comment-analysis",
+"d": "We coded 26,019 comments on one AI risk debate and one clip from it, posted on five platforms."
+},
+{
 "t": "\"Please honor commit\": how the OpenAI agent-swarm story landed with the audience most likely to believe it",
 "u": "/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh",
 "d": "We coded 1,245 YouTube comments on the Dwarkesh Podcast's interview with METR's Ajeya Cotra about the OpenAI agent-swarm incident. The audience accepted the danger, joked about it, praised the messenger, and had no idea what to do next."
@@ -58,6 +63,56 @@
 "t": "X replies to Jacob Coxon's Anthropic resignation thread",
 "u": "/data/coxon-resignation-2026-09/",
 "d": "Search and filter all 2,480 coded X replies behind the 'Neither company is acting responsibly' article: stance, frame, emotion and engagement, comment by comment."
+},
+{
+"t": "Codebook: Facebook comments on a 21-minute Diary of a CEO cut of the AI debate",
+"u": "/data/doac-clip-facebook-2026-09/codebook/",
+"d": "The full coding scheme behind the Facebook comments on a 21-minute Diary of a CEO cut of the AI debate dataset: central claim, stance note, and every dimension and value with its definition and example."
+},
+{
+"t": "Facebook comments on a 21-minute Diary of a CEO cut of the AI debate",
+"u": "/data/doac-clip-facebook-2026-09/",
+"d": "Search and filter all 2,075 coded Facebook comments on a 21-minute Diary of a CEO cut of the AI debate: stance, frame, emotion and engagement, comment by comment."
+},
+{
+"t": "Codebook: Instagram comments on a two-minute Diary of a CEO clip of Nate Soares",
+"u": "/data/doac-clip-instagram-2026-09/codebook/",
+"d": "The full coding scheme behind the Instagram comments on a two-minute Diary of a CEO clip of Nate Soares dataset: central claim, stance note, and every dimension and value with its definition and example."
+},
+{
+"t": "Instagram comments on a two-minute Diary of a CEO clip of Nate Soares",
+"u": "/data/doac-clip-instagram-2026-09/",
+"d": "Search and filter all 77 coded Instagram comments on the Instagram clip of the Diary of a CEO AI debate: stance, frame, emotion and engagement, comment by comment."
+},
+{
+"t": "Codebook: YouTube Shorts comments on the Diary of a CEO trailer for its AI debate",
+"u": "/data/doac-clip-shorts-2026-09/codebook/",
+"d": "The full coding scheme behind the YouTube Shorts comments on the Diary of a CEO trailer for its AI debate dataset: central claim, stance note, and every dimension and value with its definition and example."
+},
+{
+"t": "YouTube Shorts comments on the Diary of a CEO trailer for its AI debate",
+"u": "/data/doac-clip-shorts-2026-09/",
+"d": "Search and filter all 261 coded YouTube Shorts comments on the Diary of a CEO trailer for its AI debate: stance, frame, emotion and engagement, comment by comment."
+},
+{
+"t": "Codebook: TikTok comments on a two-minute Diary of a CEO clip of Nate Soares",
+"u": "/data/doac-clip-tiktok-2026-09/codebook/",
+"d": "The full coding scheme behind the TikTok comments on a two-minute Diary of a CEO clip of Nate Soares dataset: central claim, stance note, and every dimension and value with its definition and example."
+},
+{
+"t": "TikTok comments on a two-minute Diary of a CEO clip of Nate Soares",
+"u": "/data/doac-clip-tiktok-2026-09/",
+"d": "Search and filter all 50 coded TikTok comments on the TikTok clip of the Diary of a CEO AI debate: stance, frame, emotion and engagement, comment by comment."
+},
+{
+"t": "Codebook: YouTube comments on the Diary of a CEO AI debate episode",
+"u": "/data/doac-debate-youtube-2026-09/codebook/",
+"d": "The full coding scheme behind the YouTube comments on the Diary of a CEO AI debate episode dataset: central claim, stance note, and every dimension and value with its definition and example."
+},
+{
+"t": "YouTube comments on the Diary of a CEO AI debate episode",
+"u": "/data/doac-debate-youtube-2026-09/",
+"d": "Search and filter all 23,794 coded YouTube comments on the full episode of the Diary of a CEO AI debate: stance, frame, emotion and engagement, comment by comment."
 },
 {
 "t": "Data",
@@ -152,7 +207,7 @@
 {
 "t": "Tools",
 "u": "/tools",
-"d": "A free, open toolkit for anyone communicating about AI: an AI messenger map, a comment analyser, and message guides built from tested evidence."
+"d": "A free, open toolkit for anyone communicating about AI: an AI safety messenger map, a comment analyser, and message guides built from tested evidence."
 },
 {
 "t": "Comment analyser",
@@ -160,7 +215,7 @@
 "d": "Upload a comment export or paste a Hacker News link and get a coded analysis of how a post landed: stance, frames, engagement and the charts to show it."
 },
 {
-"t": "AI messenger map",
+"t": "AI safety messenger map",
 "u": "/tools/messengers/",
 "d": "A directory of people and organisations explaining AI risk to the public, across both the existential-risk and present-day-harms conversations."
 },
