@@ -107,6 +107,43 @@
     .article-body figure.chart .chart-desktop { display: none; }
     .article-body figure.chart .chart-mobile { display: block; }
   }
+
+  /* Stat pull quotes: one key figure, pulled out at a turning point in the argument */
+  .article-body .stat-pull {
+    display: grid;
+    grid-template-columns: minmax(8.5rem, auto) 1fr;
+    gap: 0.4rem 1.4rem;
+    align-items: baseline;
+    margin: 2.2rem 0;
+    padding: 1.3rem 0 1.2rem;
+    border-top: 3px solid var(--signal);
+    border-bottom: 1px solid var(--line);
+  }
+  .article-body .stat-pull p { margin: 0; }
+  .article-body .stat-pull-figure {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 2.9rem;
+    line-height: 1;
+    color: var(--signal);
+    font-variant-numeric: lining-nums proportional-nums;
+  }
+  .article-body .stat-pull-text {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    line-height: 1.45;
+    color: var(--ink);
+  }
+  .article-body .stat-pull-source {
+    grid-column: 2;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    color: var(--ink-faint);
+  }
+  @media (max-width: 640px) {
+    .article-body .stat-pull { grid-template-columns: 1fr; }
+    .article-body .stat-pull-source { grid-column: 1; }
+  }
 </style>
 </head>
 <body>
@@ -276,6 +313,12 @@
 
       <p>Disagreement had one main source. Nearly half of disagreeing comments (46.6%) doubt AI can do what the debate describes or call the risk hype. Conspiracy theories account for 9.1%, the view that the danger is the people in charge for 8.0%, and arguments for AI's benefits for 7.4%. The tone was hostile on both sides: a quarter of all comments (24.2%) are angry and a fifth (19.7%) are jokes, against 8.8% that are fearful.</p>
 
+      <aside class="stat-pull" aria-label="Key figure">
+        <p class="stat-pull-figure">30.6%</p>
+        <p class="stat-pull-text">of comments on the full episode refer to Andrew McAfee. Only 8.7% mention Soares or Yampolskiy.</p>
+        <p class="stat-pull-source">YouTube, full episode: 23,589 coded comments</p>
+      </aside>
+
       <p>2.9% of comments referred to the OpenAI <a href="https://commonsignals.org/glossary#ai-agent">agent-swarm</a> incident the panel discussed. We studied reactions to that incident directly in our <a href="https://commonsignals.org/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh">Cotra</a>, <a href="https://commonsignals.org/openai-and-shut-metr-hugging-face">METR</a> and <a href="https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf">Amanpour</a> studies.</p>
 
       <h2 id="youtube-shorts-the-trailer">YouTube Shorts: the trailer</h2>
@@ -300,6 +343,12 @@
       <p>Of 256 coded comments, 171 take a readable position: 48.5% agree, 40.4% disagree and 11.1% are mixed. Weighted by likes, the disagreeing side leads, 56.9% to 32.4%. At 261 comments this is a small thread, so treat the shares as indicative.</p>
 
       <p>The objections were mostly not about whether AI is capable. The two most-liked comments, at 78 and 58 likes, both say the real danger is people. One is more worried about "someone in silicon valley committing an atrocity using ai than an ai going 'rogue'". Comments that put the danger on the people who control AI make up 13.7% of the thread and hold 40.9% of its likes. Among disagreeing comments capability scepticism still leads (36.2%), but conspiracy theories are more common here than anywhere else in the study (18.8%), ahead of blaming people (11.6%) and AI's benefits (10.1%).</p>
+
+      <aside class="stat-pull" aria-label="Key figure">
+        <p class="stat-pull-figure">40.9%</p>
+        <p class="stat-pull-text">of the likes under the Shorts trailer went to comments saying the people who control AI are the danger. Those comments are 13.7% of the thread.</p>
+        <p class="stat-pull-source">YouTube Shorts: 256 coded comments</p>
+      </aside>
 
       <p>Some of this may come from the trailer itself. It gives one panellist the point that the debate spends "a lot of oxygen discussing something that might happen while ignoring what's actually happening", and another the line "I think we should talk about the fact that Amazon, Microsoft, Google are helping power these hacks." Commenters who blamed people or pointed to present harms may have been taking up arguments the trailer made, not rejecting Soares's. Comments alone cannot settle that, so we offer it as a hypothesis.</p>
 
@@ -329,6 +378,12 @@
       <p>Facebook's commenters argued with the scenario. The largest frame is whether AI could simply be switched off (18.6%), and most of those comments (270 of 385) side with the risk case, saying it could not be or that it should be done now. Speculation about how a takeover would happen accounts for 12.7% and film and TV comparisons for 10.8%; 13.0% of all comments mention a film, show or book.</p>
 
       <p>The most-liked comment, at 913 likes, suggests the end of civilisation might come "from us training it too well on human nature". Comments making that point, that AI is dangerous because it learns from us, are 7.2% of the thread and hold 19.5% of its likes, more than any other frame.</p>
+
+      <aside class="stat-pull" aria-label="Key figure">
+        <p class="stat-pull-figure">19.5%</p>
+        <p class="stat-pull-text">of Facebook likes went to comments saying AI is dangerous because it learns from us. No other frame drew more.</p>
+        <p class="stat-pull-source">Facebook, 21-minute cut: 2,072 coded comments</p>
+      </aside>
 
       <p>Facebook was the most fearful and resigned audience in the study. Among agreeing comments, 22.5% are fearful and 14.5% resigned, against 14.9% and 5.8% on the full episode. Disagreement was rare and narrow: half of it (50.3%) doubts AI's capability, and 26.9% says it could just be unplugged.</p>
 
@@ -401,6 +456,12 @@
         <li>Where people pushed back on the Shorts trailer, the most-liked objection was that the people with power are the danger. That objection holds half of the <a href="https://commonsignals.org/glossary#framing">bridging</a> argument: the misuse people already worry about and the loss of control Soares describes share a cause in who controls the technology.</li>
         <li>The agreeing audience is frightened and has nothing to do. Fear or resignation runs through 22.3% of agreeing comments, and almost nobody asks what could be done. On Witte's account, that is the pattern that leads to fatalism.</li>
       </ul>
+
+      <aside class="stat-pull" aria-label="Key figure">
+        <p class="stat-pull-figure">0.3%</p>
+        <p class="stat-pull-text">of comments on the full episode asked what anyone could do about AI risk. On Facebook, 0.5% did.</p>
+        <p class="stat-pull-source">YouTube and Facebook: 25,661 coded comments</p>
+      </aside>
 
       <h2 id="how-to-use-this">How to use this</h2>
 
