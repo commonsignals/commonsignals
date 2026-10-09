@@ -1,16 +1,16 @@
 {
  "slug": "doac-clip-shorts-2026-09",
- "title": "YouTube Shorts comments on the Diary of a CEO clip of Nate Soares",
+ "title": "YouTube Shorts comments on the Diary of a CEO trailer for its AI debate",
  "series": "DOAC AI debate reception",
  "platform": "youtube_shorts",
- "artefact_title": "\"WILL AI LEAD US TO EXTINCTION?\" (The Diary of a CEO, YouTube Shorts)",
+ "artefact_title": "WILL AI LEAD US TO EXTINCTION? (Diary of a CEO, YouTube Short, 1:44, a trailer for the full debate)",
  "artefact_url": "https://www.youtube.com/watch?v=7a6BfbZiDV4",
  "artefact_published": "2026-09-17",
  "central_claim": "Advanced AI could become impossible for humans to control and poses a serious risk, up to human extinction, that justifies slowing or stopping development.",
  "capture_dates": [
   "2026-10-04"
  ],
- "capture_method": "Complete yt-dlp export of the Shorts clip's comments (--write-comments), with threading, like counts and author hashes. Replies have depth 1. Publication dates are yt-dlp's approximation from the relative time shown at capture.",
+ "capture_method": "Complete yt-dlp export of the Short's comments (--write-comments), with threading, like counts and author hashes. Replies have depth 1. Publication dates are yt-dlp's approximation from the relative time shown at capture.",
  "counts": {
   "retrieved": 261,
   "coded": 261,
@@ -32,14 +32,19 @@
  "coders": "Claude (claude-opus-5-5), parallel coders of about 190 comments each; rows first coded unclear, other or debater_verdict were recoded blind under codebook v2",
  "article_url": null,
  "findings_note_url": null,
- "version": 1,
+ "version": 2,
  "changelog": [
   {
    "version": 1,
    "date": "2026-10-07",
    "note": "First release. A first pass under codebook v1 fell just short of the 90% reliability bar on stance (88.2%) and frame (88.8%). Codebook v2 defined unclear against na and added tie-breaks for debater_verdict and other; every row coded unclear, other or debater_verdict across the five DOAC studies (14,993 of 26,019) was recoded blind under it."
+  },
+  {
+   "version": 2,
+   "date": "2026-10-09",
+   "note": "Corrected the artefact. Version 1 described this post as the 104-second Diary of a CEO clip of Nate Soares, posted to four platforms. Checking the transcript and frames showed it is a trailer for the full debate, a montage of the host and all four panellists in which Soares has one line, and a different video from the TikTok, Instagram and Facebook posts. Title, artefact_title and notes updated; the comments and their codes are unchanged."
   }
  ],
  "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
- "notes": "Rows flagged cta_keyword, emoji_only, no_text or featured_messenger were not sent to coders and carry stance na, frame other, emotion neutral and every flag false; exclude them from frame shares. debater_verdict is inflated by pile-on reply threads about Andrew McAfee: under the codebook, attacking the sceptic counts as agree, so one thread can add over a hundred agree rows. Weight by thread or report top-level comments separately before quoting agree or frame shares."
+ "notes": "Rows flagged cta_keyword, emoji_only, no_text or featured_messenger were not sent to coders and carry stance na, frame other, emotion neutral and every flag false; exclude them from frame shares. debater_verdict is inflated by pile-on reply threads about Andrew McAfee: under the codebook, attacking the sceptic counts as agree, so one thread can add over a hundred agree rows. Weight by thread or report top-level comments separately before quoting agree or frame shares. Verified on 9 October 2026 from the auto-generated transcript and a frame every 10 seconds: this Short is a 104-second trailer for the full debate, a fast montage of the host and all four panellists, not a clip of Nate Soares. Soares appears in the opening wide shot of the panel and has one line, at about 22 seconds (\"If we make stuff that is smarter than us, then the world's going to be shaped by them\"). The cut includes a panellist on present harms and one blaming Amazon, Microsoft and Google for powering the hacks discussed in the episode. Speakers matched to a frame: the host, Steven Bartlett; Andrew McAfee; and Roman Yampolskiy. Its last panellist line is McAfee's, followed by the host's closing line. It is a different video from the TikTok and Instagram posts (a two-minute Soares clip) and the Facebook post (a 21-minute cut of the debate). Published on 17 September 2026 at 20:00 UTC."
 }

@@ -134,7 +134,7 @@
     },
     {
       "slug": "doac-clip-shorts-2026-09",
-      "title": "YouTube Shorts comments on the Diary of a CEO clip of Nate Soares",
+      "title": "YouTube Shorts comments on the Diary of a CEO trailer for its AI debate",
       "platform": "youtube_shorts",
       "series": "DOAC AI debate reception",
       "article_url": null,
@@ -143,13 +143,18 @@
         "coded": 261,
         "clear_position_base": 171
       },
-      "version": 1,
+      "version": 2,
       "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
       "changelog": [
         {
           "version": 1,
           "date": "2026-10-07",
           "note": "First release. A first pass under codebook v1 fell just short of the 90% reliability bar on stance (88.2%) and frame (88.8%). Codebook v2 defined unclear against na and added tie-breaks for debater_verdict and other; every row coded unclear, other or debater_verdict across the five DOAC studies (14,993 of 26,019) was recoded blind under it."
+        },
+        {
+          "version": 2,
+          "date": "2026-10-09",
+          "note": "Corrected the artefact. Version 1 described this post as the 104-second Diary of a CEO clip of Nate Soares, posted to four platforms. Checking the transcript and frames showed it is a trailer for the full debate, a montage of the host and all four panellists in which Soares has one line, and a different video from the TikTok, Instagram and Facebook posts. Title, artefact_title and notes updated; the comments and their codes are unchanged."
         }
       ]
     },
