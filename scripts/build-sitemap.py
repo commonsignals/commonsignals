@@ -11,7 +11,7 @@ import subprocess
 from pathlib import Path
 
 SITE = "https://commonsignals.org"
-TODAY = __import__("datetime").date.today().isoformat()
+TODAY = "2026-09-30"
 ROOT = Path(__file__).resolve().parent.parent
 
 SECTIONS = [
@@ -121,7 +121,7 @@ def write_html(groups):
     main = f'''<main id="top">
 
   <div class="article-hero">
-    <p class="article-eyebrow">Last updated: {int(TODAY[8:])} {__import__("datetime").date.fromisoformat(TODAY).strftime("%B %Y")}</p>
+    <p class="article-eyebrow">Last updated: {int(TODAY[8:])} September 2026</p>
     <h1>Sitemap</h1>
     <p class="article-dek">{desc} A machine-readable version is at <a href="/sitemap.xml">sitemap.xml</a>.</p>
   </div>
