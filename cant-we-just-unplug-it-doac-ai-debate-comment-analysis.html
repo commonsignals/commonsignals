@@ -190,7 +190,6 @@
       <ul>
         <li><a href="#tl-dr">TL;DR</a></li>
         <li><a href="#introduction">Introduction</a></li>
-        <li><a href="#method">Method</a></li>
         <li><a href="#the-numbers">The numbers</a></li>
         <li><a href="#youtube-the-full-episode">YouTube: the full episode</a></li>
         <li><a href="#youtube-shorts-the-trailer">YouTube Shorts: the trailer</a></li>
@@ -202,6 +201,7 @@
         <li><a href="#how-to-use-this">How to use this</a></li>
         <li><a href="#future-research">Future research</a></li>
         <li><a href="#data-and-citation">Data and citation</a></li>
+        <li><a href="#method">Method</a></li>
         <li><a href="#correction">Correction</a></li>
         <li><a href="#related-research">Related research</a></li>
       </ul>
@@ -232,26 +232,6 @@
       <p>The show also cut the debate down for social platforms, and the cuts are different videos. On 17 September it posted a 104-second trailer to YouTube Shorts, titled "WILL AI LEAD US TO EXTINCTION?": a fast montage of the host and all four panellists, in which Soares has a single line. The same day it posted a two-minute clip of Soares to TikTok and Instagram, captioned "Could AI become too smart for us to control?". The Instagram caption invited people to comment "debate" to have the full episode sent to them. Four days later, on 21 September, it posted a 21-minute cut of the debate to Facebook, titled "The REAL Reason AI Is Already Out Of Control".</p>
 
       <p>That lets us see how one debate was received in four forms, from the full episode down to a trailer. It does not let us compare platforms cleanly, because each short-form platform carried a different cut. An earlier version of this article treated the short posts as one clip; the correction note at the end explains what changed. This is the sixth artefact we have studied, after <a href="https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri">a Soares reel on Instagram</a>, <a href="https://commonsignals.org/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh">Ajeya Cotra on the Dwarkesh Podcast</a>, a Reddit <a href="https://en.wikipedia.org/wiki/Natural_experiment" target="_blank" rel="noopener">natural experiment</a> around <a href="https://commonsignals.org/openai-and-shut-metr-hugging-face">METR's agent-swarm report</a>, <a href="https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf">Heidy Khlaaf on Amanpour and Company</a> and <a href="https://commonsignals.org/coxon-resignation-x-analysis">Jacob Coxon's resignation thread on X</a>. It is the first with a mainstream podcast audience rather than an AI-literate one, and the first to include Facebook and TikTok. Every study is listed on our <a href="https://commonsignals.org/research">research page</a>.</p>
-
-      <h2 id="method">Method</h2>
-
-      <p>We collected every public comment we could retrieve from the five posts between 2 and 5 October 2026, 15 to 18 days after the episode was published and 13 to 14 days after the Facebook cut went up. Each post's length and post date come from the platform's own player or metadata.</p>
-
-      <div class="table-wrap"><table><thead><tr><th>Platform</th><th>Post</th><th>Shown on page</th><th>Retrieved</th><th>Route</th></tr></thead><tbody><tr><td>YouTube, full episode</td><td><a href="https://www.youtube.com/watch?v=OhOmLqR5nN4" target="_blank" rel="noopener">watch?v=OhOmLqR5nN4</a></td><td>23,829</td><td>23,794</td><td>yt-dlp, full download</td></tr><tr><td>YouTube Shorts, 1:44 trailer</td><td><a href="https://www.youtube.com/shorts/7a6BfbZiDV4" target="_blank" rel="noopener">shorts/7a6BfbZiDV4</a></td><td>259</td><td>261</td><td>yt-dlp, full download</td></tr><tr><td>Facebook, 21:31 cut</td><td><a href="https://www.facebook.com/watch/?v=2538854556526162" target="_blank" rel="noopener">watch/?v=2538854556526162</a></td><td>6,700</td><td>2,075</td><td>Browser extraction, capped</td></tr><tr><td>TikTok, 2:08 Soares clip</td><td><a href="https://www.tiktok.com/@steven/video/7686455385967955222" target="_blank" rel="noopener">@steven/video/7686455385967955222</a></td><td>53</td><td>50</td><td>Browser extraction</td></tr><tr><td>Instagram, 2:09 Soares clip</td><td><a href="https://www.instagram.com/p/DdZq24zMeVi/" target="_blank" rel="noopener">p/DdZq24zMeVi</a></td><td>85</td><td>77</td><td>Manual copy from a logged-in session</td></tr></tbody></table></div>
-
-      <p>Usernames were replaced with salted hashes and @mentions with a placeholder before analysis, so no commenter can be identified from the dataset. On Facebook, where replies tag the person being answered by name, those names were removed too.</p>
-
-      <p>The Facebook collection was capped. Expanding all 6,700 comments froze the page at around 3,500, so we collected the first 877 top-level comments and all 1,198 of their replies. Facebook orders even its "All comments" view by relevance, so this is the most prominent part of the thread, not a random sample of it. TikTok and Instagram fall below the threshold at which frame shares are stable, so we report them descriptively, without percentages. The Instagram copy carried no like counts.</p>
-
-      <p>We excluded 238 comments from coding: 13 Instagram comments that only said "debate" or "DM" in response to the caption's offer, comments with no words in them, and Nate Soares's own comment on the Instagram clip. Replies to Soares stay in.</p>
-
-      <p>As in every study in this series, commenters are a <a href="https://commonsignals.org/methodology#what-our-studies-can-and-cant-tell-you">self-selected sample</a>: people who chose to respond, not a cross-section of viewers. Likes, which we use for <a href="https://commonsignals.org/methodology#4-analysis">engagement-weighted</a> shares, measure what caught attention, not what people believe.</p>
-
-      <p>Claude (<a href="https://www.anthropic.com" target="_blank" rel="noopener">Anthropic</a>) coded every remaining comment against a fixed <a href="https://commonsignals.org/methodology#2-building-the-codebook">codebook</a>, drafted from a sample of 200 comments pooled across all five platforms and approved before coding began. Each comment was coded for <a href="https://commonsignals.org/methodology#2-building-the-codebook">stance</a> towards one central claim (advanced AI could become impossible to control and poses a serious risk, up to extinction, that justifies slowing or stopping development), for one of 16 <a href="https://commonsignals.org/glossary#framing">frames</a>, for its reaction to the format, its emotional register and ten mention flags. Because the episode is a debate, siding with a debater counts as stance: praising Soares or Yampolskiy, or attacking McAfee, is coded as agreement. All five platforms were coded in one run with the same instructions, so differences between platforms cannot come from differences in coding.</p>
-
-      <p>We checked the coding with a blind second coding of a random sample. After a first pass, we tightened two parts of the codebook: how to tell an unclear position from an off-topic comment, and when a comment about the debaters should be coded under the argument it makes instead. We recoded the 14,993 comments those changes could affect. A fresh blind <a href="https://commonsignals.org/methodology#3-coding">spot-check</a> of 347 comments, drawn at random across all five platforms, agreed with the final coding on stance for 317 (91.4%, Cohen's kappa 0.87) and on frame for 309 (89.0%, kappa 0.87). The codebook and every coded comment are published with this article.</p>
-
-      <p><a class="hero-data-link" href="/methodology">View our full research methodology &rarr;</a></p>
 
       <h2 id="the-numbers">The numbers</h2>
 
@@ -443,6 +423,26 @@
       <p>Cite as: Common Signals, '&quot;Can&#x27;t we just unplug it?&quot;: What 26,257 comments made of the Diary of a CEO AI debate', October 2026.</p>
 
       <p><a class="hero-data-link" href="/data/">Explore the data &rarr;</a></p>
+
+      <h2 id="method">Method</h2>
+
+      <p>We collected every public comment we could retrieve from the five posts between 2 and 5 October 2026, 15 to 18 days after the episode was published and 13 to 14 days after the Facebook cut went up. Each post's length and post date come from the platform's own player or metadata.</p>
+
+      <div class="table-wrap"><table><thead><tr><th>Platform</th><th>Post</th><th>Shown on page</th><th>Retrieved</th><th>Route</th></tr></thead><tbody><tr><td>YouTube, full episode</td><td><a href="https://www.youtube.com/watch?v=OhOmLqR5nN4" target="_blank" rel="noopener">watch?v=OhOmLqR5nN4</a></td><td>23,829</td><td>23,794</td><td>yt-dlp, full download</td></tr><tr><td>YouTube Shorts, 1:44 trailer</td><td><a href="https://www.youtube.com/shorts/7a6BfbZiDV4" target="_blank" rel="noopener">shorts/7a6BfbZiDV4</a></td><td>259</td><td>261</td><td>yt-dlp, full download</td></tr><tr><td>Facebook, 21:31 cut</td><td><a href="https://www.facebook.com/watch/?v=2538854556526162" target="_blank" rel="noopener">watch/?v=2538854556526162</a></td><td>6,700</td><td>2,075</td><td>Browser extraction, capped</td></tr><tr><td>TikTok, 2:08 Soares clip</td><td><a href="https://www.tiktok.com/@steven/video/7686455385967955222" target="_blank" rel="noopener">@steven/video/7686455385967955222</a></td><td>53</td><td>50</td><td>Browser extraction</td></tr><tr><td>Instagram, 2:09 Soares clip</td><td><a href="https://www.instagram.com/p/DdZq24zMeVi/" target="_blank" rel="noopener">p/DdZq24zMeVi</a></td><td>85</td><td>77</td><td>Manual copy from a logged-in session</td></tr></tbody></table></div>
+
+      <p>Usernames were replaced with salted hashes and @mentions with a placeholder before analysis, so no commenter can be identified from the dataset. On Facebook, where replies tag the person being answered by name, those names were removed too.</p>
+
+      <p>The Facebook collection was capped. Expanding all 6,700 comments froze the page at around 3,500, so we collected the first 877 top-level comments and all 1,198 of their replies. Facebook orders even its "All comments" view by relevance, so this is the most prominent part of the thread, not a random sample of it. TikTok and Instagram fall below the threshold at which frame shares are stable, so we report them descriptively, without percentages. The Instagram copy carried no like counts.</p>
+
+      <p>We excluded 238 comments from coding: 13 Instagram comments that only said "debate" or "DM" in response to the caption's offer, comments with no words in them, and Nate Soares's own comment on the Instagram clip. Replies to Soares stay in.</p>
+
+      <p>As in every study in this series, commenters are a <a href="https://commonsignals.org/methodology#what-our-studies-can-and-cant-tell-you">self-selected sample</a>: people who chose to respond, not a cross-section of viewers. Likes, which we use for <a href="https://commonsignals.org/methodology#4-analysis">engagement-weighted</a> shares, measure what caught attention, not what people believe.</p>
+
+      <p>Claude (<a href="https://www.anthropic.com" target="_blank" rel="noopener">Anthropic</a>) coded every remaining comment against a fixed <a href="https://commonsignals.org/methodology#2-building-the-codebook">codebook</a>, drafted from a sample of 200 comments pooled across all five platforms and approved before coding began. Each comment was coded for <a href="https://commonsignals.org/methodology#2-building-the-codebook">stance</a> towards one central claim (advanced AI could become impossible to control and poses a serious risk, up to extinction, that justifies slowing or stopping development), for one of 16 <a href="https://commonsignals.org/glossary#framing">frames</a>, for its reaction to the format, its emotional register and ten mention flags. Because the episode is a debate, siding with a debater counts as stance: praising Soares or Yampolskiy, or attacking McAfee, is coded as agreement. All five platforms were coded in one run with the same instructions, so differences between platforms cannot come from differences in coding.</p>
+
+      <p>We checked the coding with a blind second coding of a random sample. After a first pass, we tightened two parts of the codebook: how to tell an unclear position from an off-topic comment, and when a comment about the debaters should be coded under the argument it makes instead. We recoded the 14,993 comments those changes could affect. A fresh blind <a href="https://commonsignals.org/methodology#3-coding">spot-check</a> of 347 comments, drawn at random across all five platforms, agreed with the final coding on stance for 317 (91.4%, Cohen's kappa 0.87) and on frame for 309 (89.0%, kappa 0.87). The codebook and every coded comment are published with this article.</p>
+
+      <p><a class="hero-data-link" href="/methodology">View our full research methodology &rarr;</a></p>
 
       <h2 id="correction">Correction</h2>
 
