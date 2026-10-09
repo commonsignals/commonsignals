@@ -41,7 +41,7 @@
   "headline": "Methodology",
   "description": "Common Signals studies how the people who see messages about AI respond to them. Our theory of change explains how this work fits our wider aims. This page describes the method our studies share, so anyone can check, criticise or repeat the work. Each study publishes its own figures, codebook and dataset.",
   "datePublished": "2026-09-16",
-  "dateModified": "2026-09-23",
+  "dateModified": "2026-10-09",
   "url": "https://commonsignals.org/methodology",
   "author": { "@type": "Organization", "name": "Common Signals", "url": "https://commonsignals.org/" },
   "publisher": { "@type": "Organization", "name": "Common Signals", "url": "https://commonsignals.org/", "logo": { "@type": "ImageObject", "url": "https://commonsignals.org/og-image.png" } },
@@ -103,7 +103,7 @@
 <main id="top">
 
   <div class="article-hero">
-    <p class="article-eyebrow">Last updated: 23 September 2026</p>
+    <p class="article-eyebrow">Last updated: 9 October 2026</p>
     <div class="tag-row">
       <span class="tag-pill">Method</span>
       <span class="tag-pill">Public opinion</span>
@@ -150,6 +150,8 @@
         <li>Reddit: page captures. Collapsed replies aren't always expanded, so deep threads can be under-sampled.</li>
         <li>X: we don't use X's paid API. We read the reply feed in a signed-in browser across every sort order. Each view stops loading after a few hundred replies, so on large threads we see only the slice X's ranking shows.</li>
       </ul>
+      <p>Before any comment is collected, the artefact itself is checked and recorded from the platform: its URL, title or caption, running length and post date, read from the platform's own player or metadata (yt-dlp's info.json for YouTube; the player, oEmbed data or the post ID elsewhere), and who appears in it, checked from the transcript or from frames taken through the video. Where posts on several platforms are treated as one artefact, each is checked on its own, and a study calls them the same cut only if title, length and speakers all match. These details go into the study record at capture and are never filled in later by assumption.</p>
+      <p>This check was added in October 2026, after the Diary of a CEO debate studies. The Facebook post assumed to be a 104-second clip of Nate Soares turned out to be a 21-minute cut of the debate, posted four days after the episode. The TikTok and Instagram posts were the same two-minute Soares cut, and the YouTube Short was a 104-second trailer for the whole debate. The article built on the assumption compared different videos as if they were one clip. It was taken down, and the study records were corrected with a changelog entry for each.</p>
       <p>We remove ads and the author's own posts before coding. Before any data leaves the collection environment, usernames are replaced with salted one-way hashes, and @handles inside comments become @user. We quote comments word for word, spelling included, and never publish usernames, in line with research ethics guidance on social media data from Townsend and Wallace (2016).</p>
 
       <h3 id="2-building-the-codebook">2. Building the codebook</h3>
