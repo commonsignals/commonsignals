@@ -1,9 +1,9 @@
 {
  "slug": "doac-clip-tiktok-2026-09",
- "title": "TikTok comments on the Diary of a CEO clip of Nate Soares",
+ "title": "TikTok comments on a two-minute Diary of a CEO clip of Nate Soares",
  "series": "DOAC AI debate reception",
  "platform": "tiktok",
- "artefact_title": "Diary of a CEO clip of Nate Soares (@steven, TikTok)",
+ "artefact_title": "\"Could AI become too smart for us to control?\" (Diary of a CEO, @steven on TikTok, video, 2:08)",
  "artefact_url": "https://www.tiktok.com/@steven/video/7686455385967955222",
  "artefact_published": "2026-09-17",
  "central_claim": "Advanced AI could become impossible for humans to control and poses a serious risk, up to human extinction, that justifies slowing or stopping development.",
@@ -33,14 +33,19 @@
  "coders": "Claude (claude-opus-5-5), parallel coders of about 190 comments each; rows first coded unclear, other or debater_verdict were recoded blind under codebook v2",
  "article_url": null,
  "findings_note_url": null,
- "version": 1,
+ "version": 2,
  "changelog": [
   {
    "version": 1,
    "date": "2026-10-07",
    "note": "First release. A first pass under codebook v1 fell just short of the 90% reliability bar on stance (88.2%) and frame (88.8%). Codebook v2 defined unclear against na and added tie-breaks for debater_verdict and other; every row coded unclear, other or debater_verdict across the five DOAC studies (14,993 of 26,019) was recoded blind under it."
+  },
+  {
+   "version": 2,
+   "date": "2026-10-09",
+   "note": "Corrected the artefact. Version 1 described this post as the 104-second Diary of a CEO clip of Nate Soares. Checking the post showed it is a 2:08 clip led by Soares, published on 17 September 2026, and the same cut as the Instagram post; the 104-second YouTube Short is a different video. Title, artefact_title and notes updated; the comments and their codes are unchanged."
   }
  ],
  "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
- "notes": "Rows flagged cta_keyword, emoji_only, no_text or featured_messenger were not sent to coders and carry stance na, frame other, emotion neutral and every flag false; exclude them from frame shares. debater_verdict is inflated by pile-on reply threads about Andrew McAfee: under the codebook, attacking the sceptic counts as agree, so one thread can add over a hundred agree rows. Weight by thread or report top-level comments separately before quoting agree or frame shares."
+ "notes": "Rows flagged cta_keyword, emoji_only, no_text or featured_messenger were not sent to coders and carry stance na, frame other, emotion neutral and every flag false; exclude them from frame shares. debater_verdict is inflated by pile-on reply threads about Andrew McAfee: under the codebook, attacking the sceptic counts as agree, so one thread can add over a hundred agree rows. Weight by thread or report top-level comments separately before quoting agree or frame shares. Verified on 9 October 2026: the post is a 2:08 clip led by Nate Soares, captioned \"Could AI become too smart for us to control? 👀 AI safety expert Nate Soares says the benefits of AI can be real, and so can the harms we’re already seeing…\", published on 17 September 2026 at 10:52 UTC (decoded from the video ID). It is the same cut as the Instagram post in doac-clip-instagram-2026-09 (2:09), not the 104-second YouTube Short."
 }

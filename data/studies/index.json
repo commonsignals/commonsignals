@@ -108,7 +108,7 @@
     },
     {
       "slug": "doac-clip-instagram-2026-09",
-      "title": "Instagram comments on the Diary of a CEO clip of Nate Soares",
+      "title": "Instagram comments on a two-minute Diary of a CEO clip of Nate Soares",
       "platform": "instagram",
       "series": "DOAC AI debate reception",
       "article_url": null,
@@ -117,13 +117,18 @@
         "coded": 77,
         "clear_position_base": 38
       },
-      "version": 1,
+      "version": 2,
       "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
       "changelog": [
         {
           "version": 1,
           "date": "2026-10-07",
           "note": "First release. A first pass under codebook v1 fell just short of the 90% reliability bar on stance (88.2%) and frame (88.8%). Codebook v2 defined unclear against na and added tie-breaks for debater_verdict and other; every row coded unclear, other or debater_verdict across the five DOAC studies (14,993 of 26,019) was recoded blind under it."
+        },
+        {
+          "version": 2,
+          "date": "2026-10-09",
+          "note": "Corrected the artefact. Version 1 described this post as the 104-second Diary of a CEO clip of Nate Soares, with an assumed post date of 17 September 2026. Checking the post showed it is a 2:09 clip led by Soares, published on 17 September 2026 (now verified), and the same cut as the TikTok post; the 104-second YouTube Short is a different video. Title, artefact_title and notes updated; the comments and their codes are unchanged."
         }
       ]
     },
@@ -150,7 +155,7 @@
     },
     {
       "slug": "doac-clip-tiktok-2026-09",
-      "title": "TikTok comments on the Diary of a CEO clip of Nate Soares",
+      "title": "TikTok comments on a two-minute Diary of a CEO clip of Nate Soares",
       "platform": "tiktok",
       "series": "DOAC AI debate reception",
       "article_url": null,
@@ -159,13 +164,18 @@
         "coded": 50,
         "clear_position_base": 27
       },
-      "version": 1,
+      "version": 2,
       "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
       "changelog": [
         {
           "version": 1,
           "date": "2026-10-07",
           "note": "First release. A first pass under codebook v1 fell just short of the 90% reliability bar on stance (88.2%) and frame (88.8%). Codebook v2 defined unclear against na and added tie-breaks for debater_verdict and other; every row coded unclear, other or debater_verdict across the five DOAC studies (14,993 of 26,019) was recoded blind under it."
+        },
+        {
+          "version": 2,
+          "date": "2026-10-09",
+          "note": "Corrected the artefact. Version 1 described this post as the 104-second Diary of a CEO clip of Nate Soares. Checking the post showed it is a 2:08 clip led by Soares, published on 17 September 2026, and the same cut as the Instagram post; the 104-second YouTube Short is a different video. Title, artefact_title and notes updated; the comments and their codes are unchanged."
         }
       ]
     },
