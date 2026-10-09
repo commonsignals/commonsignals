@@ -1,11 +1,11 @@
 {
  "slug": "doac-clip-facebook-2026-09",
- "title": "Facebook comments on the Diary of a CEO clip of Nate Soares",
+ "title": "Facebook comments on a 21-minute Diary of a CEO cut of the AI debate",
  "series": "DOAC AI debate reception",
  "platform": "facebook",
- "artefact_title": "Diary of a CEO clip of Nate Soares (Facebook video; the same video is also posted as a reel)",
+ "artefact_title": "The REAL Reason AI Is Already Out Of Control (Diary of a CEO, Facebook video, 21:31)",
  "artefact_url": "https://www.facebook.com/watch/?v=2538854556526162",
- "artefact_published": "2026-09-17",
+ "artefact_published": "2026-09-21",
  "central_claim": "Advanced AI could become impossible for humans to control and poses a serious risk, up to human extinction, that justifies slowing or stopping development.",
  "capture_dates": [
   "2026-10-04",
@@ -34,14 +34,19 @@
  "coders": "Claude (claude-opus-5-5), parallel coders of about 190 comments each; rows first coded unclear, other or debater_verdict were recoded blind under codebook v2",
  "article_url": null,
  "findings_note_url": null,
- "version": 1,
+ "version": 2,
  "changelog": [
   {
    "version": 1,
    "date": "2026-10-07",
    "note": "First release. A first pass under codebook v1 fell just short of the 90% reliability bar on stance (88.2%) and frame (88.8%). Codebook v2 defined unclear against na and added tie-breaks for debater_verdict and other; every row coded unclear, other or debater_verdict across the five DOAC studies (14,993 of 26,019) was recoded blind under it."
+  },
+  {
+   "version": 2,
+   "date": "2026-10-09",
+   "note": "Corrected the artefact. Version 1 described this post as the 104-second Diary of a CEO clip of Nate Soares, published on 17 September 2026 (an assumed date). Checking the post showed it is \"The REAL Reason AI Is Already Out Of Control\", a 21:31 cut of the debate published on 21 September 2026. Title, artefact_title, artefact_published and notes updated; the comments and their codes are unchanged."
   }
  ],
  "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
- "notes": "Rows flagged cta_keyword, emoji_only, no_text or featured_messenger were not sent to coders and carry stance na, frame other, emotion neutral and every flag false; exclude them from frame shares. debater_verdict is inflated by pile-on reply threads about Andrew McAfee: under the codebook, attacking the sceptic counts as agree, so one thread can add over a hundred agree rows. Weight by thread or report top-level comments separately before quoting agree or frame shares. The post date was not recorded at capture; artefact_published assumes the clip went up on 17 September 2026, the same day as the episode and the TikTok and Shorts versions."
+ "notes": "Rows flagged cta_keyword, emoji_only, no_text or featured_messenger were not sent to coders and carry stance na, frame other, emotion neutral and every flag false; exclude them from frame shares. debater_verdict is inflated by pile-on reply threads about Andrew McAfee: under the codebook, attacking the sceptic counts as agree, so one thread can add over a hundred agree rows. Weight by thread or report top-level comments separately before quoting agree or frame shares. Verified on 9 October 2026: the URL redirects to facebook.com/SteveBartlettShow/videos/2538854556526162/, a video titled \"The REAL Reason AI Is Already Out Of Control\", 21 minutes 31 seconds long (1,290.9 seconds), published on 21 September 2026 at 19:37. It is a longer cut of the debate, not the 104-second Nate Soares clip posted to YouTube Shorts, TikTok and Instagram, so these comments are not comparable with those as reactions to the same clip. On 9 October Facebook showed 8.1K comments and 5.7M views."
 }
