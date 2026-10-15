@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script data-cfasync="false" src="/analytics.js"></script>
+<title>AI safety comms reading list: where to start: Common Signals</title>
+<meta name="description" content="A reading list of the existing research on how the public receives messages about AI risk, for anyone new to AI safety who wants to join the conversation knowing what's already been tested." />
+
+<meta property="og:title" content="AI safety comms reading list: where to start" />
+<meta property="og:description" content="A reading list of the existing research on how the public receives messages about AI risk, for anyone new to AI safety who wants to join the conversation knowing what's already been tested." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://commonsignals.org/ai-safety-comms-reading-list" />
+<meta property="og:site_name" content="Common Signals" />
+<meta property="og:image" content="https://commonsignals.org/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Common Signals: helping people explaining AI know which messages and messengers actually work." />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AI safety comms reading list: where to start" />
+<meta name="twitter:description" content="A reading list of the existing research on how the public receives messages about AI risk, for anyone new to AI safety who wants to join the conversation knowing what's already been tested." />
+<meta name="twitter:image" content="https://commonsignals.org/og-image.png" />
+
+<link rel="canonical" href="https://commonsignals.org/ai-safety-comms-reading-list" />
+<meta name="robots" content="index, follow" />
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/styles.css?v=20260929b" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI safety comms reading list: where to start",
+  "description": "A reading list of the existing research on how the public receives messages about AI risk, for anyone new to AI safety who wants to join the conversation knowing what's already been tested.",
+  "datePublished": "2026-10-15",
+  "dateModified": "2026-10-15",
+  "url": "https://commonsignals.org/ai-safety-comms-reading-list",
+  "author": { "@type": "Organization", "name": "Common Signals", "url": "https://commonsignals.org/" },
+  "publisher": { "@type": "Organization", "name": "Common Signals", "url": "https://commonsignals.org/", "logo": { "@type": "ImageObject", "url": "https://commonsignals.org/og-image.png" } },
+  "isPartOf": { "@type": "WebSite", "name": "Common Signals", "url": "https://commonsignals.org/" }
+}
+</script>
+<style>
+  .article-body .reading-list {
+    margin: 1.4rem 0;
+    padding-left: 1.4rem;
+    display: grid;
+    gap: 0.9rem;
+  }
+  .article-body .reading-list li {
+    padding-left: 0.2rem;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    min-width: 0;
+  }
+  .article-body .reading-list li::marker { color: var(--signal); }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a href="/" class="wordmark">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#7a1e49"/><path d="M4 20 Q8 12 11 20 T18 20" stroke="#f5f4ef" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M18 20 Q22 8 28 20" stroke="#f5f4ef" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
+      Common Signals
+    </a>
+    <ul class="nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/research">Research</a></li>
+      <li><a href="/tools">Tools</a></li>
+      <li><a href="/training">Training</a></li>
+      <li><a href="/workshops">Workshops</a></li>
+      <li><a href="/updates">Updates</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-search-toggle" id="searchToggle" type="button" aria-label="Search the site" aria-expanded="false" aria-controls="siteSearch">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><line x1="16" y1="16" x2="21" y2="21"/></svg>
+      </button>
+      <a class="nav-cta" href="/work-with-us">Work with us</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navDrawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="nav-drawer" id="navDrawer">
+    <ul>
+      <li><a href="/about">About</a></li>
+      <li><a href="/research">Research</a></li>
+      <li><a href="/tools">Tools</a></li>
+      <li><a href="/training">Training</a></li>
+      <li><a href="/workshops">Workshops</a></li>
+      <li><a href="/updates">Updates</a></li>
+      <li><a href="/work-with-us">Work with us</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="site-search" id="siteSearch" hidden>
+    <div class="wrap site-search-panel">
+      <form role="search" action="/sitemap">
+        <label for="siteSearchInput" class="sr-only">Search Common Signals</label>
+        <input type="search" class="search-input" id="siteSearchInput" name="q" placeholder="Search the site: try a topic, platform or person" autocomplete="off" enterkeyhint="go">
+      </form>
+      <p class="search-status" role="status" aria-live="polite"></p>
+      <ul class="search-results"></ul>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="article-hero">
+    <p class="article-eyebrow">15 October 2026</p>
+    <div class="tag-row">
+      <span class="tag-pill">Public opinion</span>
+      <span class="tag-pill">Messaging</span>
+    </div>
+    <h1>AI safety comms reading list: where to start</h1>
+    <p class="article-dek">A reading list of the existing research on how the public receives messages about AI risk, for anyone new to AI safety who wants to join the conversation knowing what's already been tested.</p>
+    <div class="hero-actions">
+      <button type="button" class="share-copy">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9 17H7a5 5 0 1 1 0-10h2"/>
+          <path d="M15 7h2a5 5 0 1 1 0 10h-2"/>
+          <line x1="8" y1="12" x2="16" y2="12"/>
+        </svg>
+        <span class="share-copy-label" aria-live="polite">Copy link</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="article-shell">
+    <aside class="article-toc" aria-label="Table of contents">
+      <p class="toc-heading">Contents</p>
+      <ul>
+        <li><a href="#why-i-put-this-list-together">1. Why I put this list together</a></li>
+        <li><a href="#if-you-only-read-five-articles">2. If you only read five articles</a></li>
+        <li><a href="#what-the-public-thinks-about-ai">3. What the public thinks about AI</a></li>
+        <li><a href="#what-the-public-thinks-about-catastrophic-ai-risk">4. What the public thinks about catastrophic AI risk</a></li>
+        <li><a href="#what-changes-how-people-respond-to-ai-risk">5. What changes how people respond to AI risk</a></li>
+        <li><a href="#why-people-respond-the-way-they-do-to-ai-risk">6. Why people respond the way they do to AI risk</a></li>
+        <li><a href="#messengers-identity-and-trust-in-ai-safety">7. Messengers, identity and trust in AI safety</a></li>
+        <li><a href="#does-public-opinion-move-policy-and-ai-governance">8. Does public opinion move policy and AI governance?</a></li>
+        <li><a href="#who-is-already-working-on-ai-safety-comms">9. Who is already working on AI safety comms</a></li>
+        <li><a href="#how-you-can-contribute-to-the-ai-safety-comms-reading-list">10. How you can contribute to the AI safety comms reading list</a></li>
+      </ul>
+    </aside>
+
+    <article class="article-body">
+
+      <h2 id="why-i-put-this-list-together">1. Why I put this list together</h2>
+      <p>I've been building <a href="https://commonsignals.org/">Common Signals</a>, which studies how the public receives messages about AI risk.</p>
+      <p>Along the way I've found a lot of existing research and previous studies, just not in one place.</p>
+      <p>It's spread across polling reports, psychology journals, think-tank articles and forum posts. Much of it is hard to find unless someone points you to it.</p>
+      <p>So, this is the list I wish I'd had at the start of my AI safety comms journey.</p>
+      <p>It's for anyone new to AI safety who wants to join the conversation knowing what's already been tested, whether you're a campaigner, creator, journalist or researcher.</p>
+      <p>Each entry says in a sentence or two what the work found, so you can choose what is most relevant for you.</p>
+      <p>For a fuller, filterable catalogue of polls and framing studies, see the Common Signals <a href="https://commonsignals.org/research/library/">research library</a>.</p>
+      <h2 id="if-you-only-read-five-articles">2. If you only read five articles</h2>
+      <ol class="reading-list">
+        <li><a href="https://www.turing.ac.uk/news/publications/understanding-public-attitudes-ai-second-survey" target="_blank" rel="noopener">How do people feel about AI?</a>, Ada Lovelace Institute and The Alan Turing Institute (2025). The most rigorous picture of UK attitudes: 3,513 adults at a 62% response rate, asked questions first used in 2022 so you can see what changed. Nearly nine in ten support independent regulation of AI.</li>
+        <li><a href="https://arxiv.org/abs/2511.06525" target="_blank" rel="noopener">From catastrophic to concrete</a>, Philip Trippenbach, Isabella Scala, Jai Bhambra and Rowan Emslie (2025). A message test with 1,063 people across five countries. Risks to jobs and children had the most potential to mobilise people, and existential risk came last in every demographic group. The authors argue extinction messages trigger mortality avoidance, and name Tech-Positive Urbanites and World Guardians as the most receptive segments.</li>
+        <li><a href="https://www.socialchangelab.org/research/which-ai-harms-and-risks.html" target="_blank" rel="noopener">Which AI harms and risks will mobilise the public to act?</a>, Markus Ostarek, Cathy Rogers, Ben Kenward and Sam Nadel, Social Change Lab (2026). A UK randomised trial with 3,467 people comparing eleven AI harms. It agrees with Trippenbach on extinction framing and disagrees on jobs. AI warfare raised concern about extinction more than extinction messaging did. Anger predicted action while anxiety did not.</li>
+        <li><a href="https://doi.org/10.1126/science.3563507" target="_blank" rel="noopener">Perception of risk</a>, Paul Slovic (1987). A short paper in Science on why the public and experts rank hazards differently. Lay judgements follow how dreaded and how unfamiliar a risk feels, a description that fits most AI risks.</li>
+        <li><a href="https://climateoutreach.org/britain-talks-climate/" target="_blank" rel="noopener">Britain Talks Climate</a>, Climate Outreach with More in Common and the European Climate Foundation (2024). Seven values-based segments of the British public, with guidance on how to talk to each about climate. Climate Outreach is the model I've based Common Signals on. It's the clearest example I know of audience research turned into a toolkit communicators use.</li>
+      </ol>
+      <h2 id="what-the-public-thinks-about-ai">3. What the public thinks about AI</h2>
+      <ul class="arrow-list">
+        <li><a href="https://hai.stanford.edu/ai-index/2026-ai-index-report/public-opinion" target="_blank" rel="noopener">AI Index Report 2026: public opinion chapter</a>, Stanford Institute for Human-Centered AI (2026). The quickest overview, drawing the major international polls into one chapter. The global share seeing more benefits than drawbacks rose from 55% to 59% between 2024 and 2025, while the share saying AI makes them nervous rose to 52%.</li>
+        <li><a href="https://www.adalovelaceinstitute.org/evidence-review/what-do-the-public-think-about-ai/" target="_blank" rel="noopener">What do the public think about AI?</a>, Octavia Field Reid, Anna Colom and Roshni Modhvadia, Ada Lovelace Institute (2023). A rapid evidence review written ahead of the UK AI Safety Summit. People welcome AI in health and science, worry about it making consequential decisions such as hiring or benefits, care about rights like privacy, and want regulation.</li>
+        <li><a href="https://www.gov.uk/government/publications/public-attitudes-to-data-and-ai-tracker-survey-wave-4/public-attitudes-to-data-and-ai-tracker-survey-wave-4-report" target="_blank" rel="noopener">Public attitudes to data and AI: tracker survey wave 4</a>, Department for Science, Innovation and Technology (2024). The UK government's annual tracker, running since December 2021, with its datasets deposited at the UK Data Service.</li>
+        <li><a href="https://www.pewresearch.org/science/2025/09/17/how-americans-view-ai-and-its-impact-on-people-and-society/" target="_blank" rel="noopener">How Americans view AI and its impact on people and society</a>, Pew Research Center (2025). The US reference point. Half of Americans say the growing use of AI in daily life makes them more concerned than excited, up from 37% in 2021.</li>
+        <li><a href="https://www.pewresearch.org/global/2025/10/15/how-people-around-the-world-view-ai/" target="_blank" rel="noopener">How people around the world view AI</a>, Pew Research Center (2025). Concern, excitement and trust in institutions to regulate AI, compared across 25 countries including the UK and Canada.</li>
+        <li><a href="https://kpmg.com/xx/en/our-insights/ai-and-technology/trust-attitudes-and-use-of-ai.html" target="_blank" rel="noopener">Trust, attitudes and use of artificial intelligence: a global study 2025</a>, KPMG and the University of Melbourne (2025). More than 48,000 people in 47 countries. 66% use AI with some regularity and 46% are willing to trust it, and trust has fallen as use has grown since the 2022 edition.</li>
+        <li><a href="https://www.anthropic.com/features/81k-interviews" target="_blank" rel="noopener">What 81,000 people want from AI</a>, Anthropic (2026). AI-led interviews with 80,508 Claude users in 159 countries. Claude users aren't the public, but the ranking still tells you something: unreliability was the most-raised of 13 concerns and existential risk the least.</li>
+      </ul>
+      <h2 id="what-the-public-thinks-about-catastrophic-ai-risk">4. What the public thinks about catastrophic AI risk</h2>
+      <ul class="arrow-list">
+        <li><a href="https://rethinkpriorities.org/s/Formatted-AI-Public-Opinion-Write-Up-3.pdf" target="_blank" rel="noopener">US public opinion of AI policy and risk</a>, Rethink Priorities (2023). 2,444 US adults, weighted to be representative. An estimated 70% would favour federal regulation of AI, yet only 4% named AI as the most likely cause of human extinction, below every other threat offered.</li>
+        <li><a href="https://forum.effectivealtruism.org/posts/Rg7h7G3KTvaYEtL55/us-public-perception-of-cais-statement-and-the-risk-of" target="_blank" rel="noopener">US public perception of CAIS statement and the risk of extinction</a>, Rethink Priorities (2023). Tested the one-sentence Center for AI Safety statement that puts AI extinction risk alongside pandemics and nuclear war. Most Americans supported it. Their own estimates of the risk varied widely, and around 1% was the most common answer.</li>
+        <li><a href="https://forum.effectivealtruism.org/posts/osHpP4ftF32RNysmQ/55-of-the-us-public-is-now-aware-of-ai-xrisk" target="_blank" rel="noopener">55% of the US public is now aware of AI xrisk</a>, Existential Risk Observatory (2026). A repeated survey of 300 Americans asked to name three things that could cause human extinction. The share mentioning AI unprompted has climbed from 7% in December 2022 to 55% in the latest round. The authors call the method rough, so read the trend more than the level. The Existential Risk Observatory campaigns on existential risk.</li>
+        <li><a href="https://www.longtermresilience.org/new-poll-shows-high-public-demand-for-the-government-to-address-extreme-risks-from-ai/" target="_blank" rel="noopener">Poll: public demand for government to address extreme risks from AI</a>, Centre for Long-Term Resilience (2023). UK polling on whether government should act on extreme risks from AI, commissioned by a think tank that works on them.</li>
+        <li><a href="https://theaipi.org/april-voters-prefer-ai-regulation-over-self-regulation/" target="_blank" rel="noopener">Voters prefer AI regulation that mandates safety measures over industry self-regulation</a>, AI Policy Institute (2024). One of a long series of US voter polls from an advocacy group. Around 80% preferred mandated safety standards for the most advanced models to self-regulation.</li>
+      </ul>
+      <h2 id="what-changes-how-people-respond-to-ai-risk">5. What changes how people respond to AI risk</h2>
+      <ul class="arrow-list">
+        <li><a href="https://existentialriskobservatory.org/papers_and_reports/The_Effectiveness_of_AI_Existential_Risk_Communication_to_the_American_and_Dutch_Public.pdf" target="_blank" rel="noopener">The effectiveness of AI existential risk communication to the American and Dutch public</a>, Alexia Georgiadis, Existential Risk Observatory (2023). One of the first tests of real media pieces: participants read or watched news articles and videos about AI extinction risk, with awareness measured before and after. The pieces raised awareness. A shorter <a href="https://forum.effectivealtruism.org/posts/fqXLT7NHZGsLmjH4o/paper-summary-the-effectiveness-of-ai-existential-risk" target="_blank" rel="noopener">summary is on the EA Forum</a>.</li>
+        <li><a href="https://doi.org/10.1093/9780198945215.003.0083" target="_blank" rel="noopener">What's risk got to do with it? Public attitudes toward AI regulation in the European Union and United States</a>, Kulani Abendroth-Dias (2025). A survey experiment with 1,310 people in the EU and US, alongside 65 expert interviews. Framing AI risk as disinformation or online child safety moved conservatives' support for regulation more than liberals'.</li>
+        <li><a href="https://doi.org/10.1080/15205436.2023.2248974" target="_blank" rel="noopener">Temporal framing in balanced news coverage of artificial intelligence and public attitudes</a>, Sukyoung Choi, Mass Communication and Society (2023). An online experiment on whether describing AI's effects as near or distant in time, inside otherwise balanced news stories, shifts attitudes.</li>
+      </ul>
+      <h2 id="why-people-respond-the-way-they-do-to-ai-risk">6. Why people respond the way they do to AI risk</h2>
+      <ul class="arrow-list">
+        <li><a href="https://doi.org/10.1111/j.0272-4332.2004.00433.x" target="_blank" rel="noopener">Risk as analysis and risk as feelings</a>, Paul Slovic, Melissa Finucane, Ellen Peters and Donald MacGregor (2004). People judge risk through fast feelings as well as slow reasoning, and each depends on the other.</li>
+        <li><a href="https://doi.org/10.1080/03637759209376276" target="_blank" rel="noopener">Putting the fear back into fear appeals: the extended parallel process model</a>, Kim Witte (1992). If you read one paper on fear appeals, make it this one. A threat message leads to action when people believe they can do something effective about it, and to denial or avoidance when they can't.</li>
+        <li><a href="https://doi.org/10.1177/109019810002700506" target="_blank" rel="noopener">A meta-analysis of fear appeals: implications for effective public health campaigns</a>, Kim Witte and Mike Allen (2000). Tests the model across the health literature. Strong fear paired with strong efficacy produced the most behaviour change; strong fear with weak efficacy produced the most defensive reactions.</li>
+        <li><a href="https://doi.org/10.1037/a0039729" target="_blank" rel="noopener">Appealing to fear: a meta-analysis of fear appeal effectiveness and theories</a>, Melanie Tannenbaum and colleagues (2015). 127 articles covering more than 27,000 people. On average fear appeals changed attitudes, intentions and behaviour, more so when they included efficacy statements and asked for a one-off action, and the authors found no evidence of backfire.</li>
+        <li><a href="https://doi.org/10.1080/17437199.2017.1415767" target="_blank" rel="noopener">Ignoring theory and misinterpreting evidence: the false belief in fear appeals</a>, Gerjo Kok and colleagues (2018). The sceptical case. Threat changes behaviour only when people feel able to act, and the authors conclude that the experimental evidence does not support positive effects of fear appeals. Read it straight after Tannenbaum.</li>
+        <li><a href="https://doi.org/10.1037/0033-2909.134.4.504" target="_blank" rel="noopener">Toward an integrative social identity model of collective action</a>, Martijn van Zomeren, Tom Postmes and Russell Spears (2008). A meta-analysis of why people act together: a sense of injustice, a belief that the group can make a difference, and a shared identity. It fits Social Change Lab's finding that anger predicts action.</li>
+        <li><a href="https://doi.org/10.1111/1467-8721.00064" target="_blank" rel="noopener">Exercise of human agency through collective efficacy</a>, Albert Bandura (2000). A short paper on collective efficacy, the belief that people acting together can change things. Most AI risks need a collective response, which makes this the kind of efficacy worth building.</li>
+      </ul>
+      <h2 id="messengers-identity-and-trust-in-ai-safety">7. Messengers, identity and trust in AI safety</h2>
+      <ul class="arrow-list">
+        <li><a href="https://doi.org/10.1111/j.1559-1816.2004.tb02547.x" target="_blank" rel="noopener">The persuasiveness of source credibility: a critical review of five decades' evidence</a>, Chanthika Pornpitakpan (2004). Credible sources usually persuade more. The review, written for practitioners choosing a spokesperson, also sets out the conditions under which credibility stops helping or works against a message.</li>
+        <li><a href="https://doi.org/10.1080/13669877.2010.511246" target="_blank" rel="noopener">Cultural cognition of scientific consensus</a>, Dan Kahan, Hank Jenkins-Smith and Donald Braman (2011). People's sense of what experts agree on bends to fit their values, tested on climate change, nuclear waste and handguns. For communicators, telling a sceptical audience that scientists agree will rarely settle the matter by itself.</li>
+        <li><a href="https://www.edelman.com/trust/2025/trust-barometer/flash-poll-trust-artifical-intelligence" target="_blank" rel="noopener">Flash poll: trust and artificial intelligence at a crossroads</a>, Edelman Trust Institute (2025). 5,000 people in five countries. Trust in AI ranged from 72% in China to 32% in the US, and people who use AI themselves tended to trust it more.</li>
+      </ul>
+      <h2 id="does-public-opinion-move-policy-and-ai-governance">8. Does public opinion move policy and AI governance?</h2>
+      <ul class="arrow-list">
+        <li><a href="https://doi.org/10.1177/106591290305600103" target="_blank" rel="noopener">The impact of public opinion on public policy: a review and an agenda</a>, Paul Burstein, Political Research Quarterly (2003). Reviews published studies and finds the impact of opinion substantial, stronger on salient issues, and still strong once lobbying by organisations and elites is taken into account.</li>
+        <li><a href="https://doi.org/10.1017/S1537592714001595" target="_blank" rel="noopener">Testing theories of American politics: elites, interest groups, and average citizens</a>, Martin Gilens and Benjamin Page, Perspectives on Politics (2014). An analysis of 1,779 US policy issues concluding that economic elites and business groups shaped outcomes while majorities of ordinary Americans had little influence.</li>
+        <li><a href="https://doi.org/10.1017/S1537592715002315" target="_blank" rel="noopener">Relative policy support and coincidental representation</a>, Peter Enns, Perspectives on Politics (2015). The best-known reply. Middle-income and affluent Americans usually rank policies in the same order, so the middle often gets what it wants anyway. Gilens answered in the same issue, and the exchange is best read as a pair.</li>
+      </ul>
+      <h2 id="who-is-already-working-on-ai-safety-comms">9. Who is already working on AI safety comms</h2>
+      <p>The field is small, and most research on messages about AI risk comes from organisations that also campaign on it. These are the pieces I'd read to see who's doing what.</p>
+      <ul class="arrow-list">
+        <li><a href="https://www.socialchangelab.org/research/ai-safety-movement.html" target="_blank" rel="noopener">AI is on the march. Is the AI safety movement ready?</a>, Social Change Lab (2025). Sorts civil-society groups into four clusters: protest and mobilisation, narrative-shaping and watchdogs, public literacy, and field-building and lobbying. It finds sharp disagreement between present-day-harms and existential-risk groups.</li>
+        <li><a href="https://report2025.seismic.org/" target="_blank" rel="noopener">On the razor's edge: AI vs. everything we care about</a>, Seismic Foundation (2025). A segmentation of more than 10,000 people in the US, UK, France, Germany and Poland, identifying five groups closest to civic action on AI. Seismic runs large surveys like this to power its own campaigns.</li>
+        <li><a href="https://forum.effectivealtruism.org/posts/KAx6vsPNZ7kHPYRDf/messages-frames-and-messengers-what-might-a-climate-outreach" target="_blank" rel="noopener">Messages, frames and messengers: what might a Climate Outreach for AI safety look like?</a>, Ben Matthews (2026). My case for applying Climate Outreach's method to AI, and the starting point for Common Signals. The comments include challenges to the analogy.</li>
+        <li><a href="https://commonsignals.org/findings">Common Signals findings</a> and <a href="https://commonsignals.org/data/">data explorer</a>. My studies so far of how audiences reacted to AI safety moments, with every coded dataset and codebook published.</li>
+      </ul>
+      <h2 id="how-you-can-contribute-to-the-ai-safety-comms-reading-list">10. How you can contribute to the AI safety comms reading list</h2>
+      <p>This list will have gaps, and I'd like to hear about them. I'm particularly interested in:</p>
+      <ul class="arrow-list">
+        <li>Studies that test how people respond to specific messages about AI</li>
+        <li>Research on what happens after a first concern, such as whether worry about jobs or children leads people on to concern about catastrophic risk</li>
+        <li>Anything I've summarised unfairly</li>
+      </ul>
+      <p>Please email me at <a href="mailto:hello@commonsignals.org">hello@commonsignals.org</a>, or <a href="https://commonsignalsorg.substack.com/" target="_blank" rel="noopener">follow Common Signals on Substack</a> for updates.</p>
+    </article>
+  </div>
+
+<section id="article-subscribe" class="reveal">
+    <div class="wrap">
+      <h2>Want more analysis like this?</h2>
+      <form class="subscribe-box" action="https://commonsignalsorg.substack.com/api/v1/free" method="POST" target="subscribe-target" novalidate>
+        <div class="subscribe-row">
+          <label for="articleSubscribeEmail" class="sr-only">Email address</label>
+          <input type="email" name="email" id="articleSubscribeEmail" placeholder="Enter your email" required autocomplete="email" />
+          <button type="submit" class="btn btn-primary subscribe-submit">Subscribe <span aria-hidden="true">&#8599;</span></button>
+        </div>
+        <div class="hp-field" aria-hidden="true">
+          <label for="articleSubscribeWebsite">Leave this field blank</label>
+          <input type="text" id="articleSubscribeWebsite" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+        <p class="subscribe-note">Stay up to speed with our research on public understanding of AI. Roughly monthly.</p>
+        <p class="subscribe-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <section id="contact" class="reveal">
+    <div class="wrap">
+      <h2>Have data, a collaborator, or funding to offer?</h2>
+      <div class="contact-card">
+        <div>
+          <div class="mail"><a href="mailto:hello@commonsignals.org">hello@commonsignals.org</a></div>
+        </div>
+        <a class="btn btn-primary" href="/contact">Say hello</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-subscribe">
+      <h3>Want to stay up to date?</h3>
+      <form id="subscribeForm" class="subscribe-box" action="https://commonsignalsorg.substack.com/api/v1/free" method="POST" target="subscribe-target" novalidate>
+        <div class="subscribe-row">
+          <label for="subscribeEmail" class="sr-only">Email address</label>
+          <input type="email" name="email" id="subscribeEmail" placeholder="Enter your email" required autocomplete="email" />
+          <button type="submit" class="btn btn-primary subscribe-submit">Subscribe <span aria-hidden="true">&#8599;</span></button>
+        </div>
+        <div class="hp-field" aria-hidden="true">
+          <label for="subscribeWebsite">Leave this field blank</label>
+          <input type="text" id="subscribeWebsite" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+        <p class="subscribe-note">Stay up to speed with our research on public understanding of AI. Roughly monthly.</p>
+        <p class="subscribe-status" id="subscribeStatus" role="status" aria-live="polite"></p>
+      </form>
+      <div class="social-links">
+        <a href="https://www.youtube.com/@commonsignals" target="_blank" rel="noopener" aria-label="Common Signals on YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2.5" y="5" width="19" height="14" rx="4"/>
+            <path d="M10 9 L15.5 12 L10 15 Z" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/commonsignals" target="_blank" rel="noopener" aria-label="Common Signals on LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <text x="12" y="16.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="10.5" fill="currentColor" stroke="none">in</text>
+          </svg>
+        </a>
+        <a href="https://commonsignalsorg.substack.com/" target="_blank" rel="noopener" aria-label="Common Signals on Substack">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <path d="M9 7 L9 17 L12 14.3 L15 17 L15 7 Z" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/about">About</a></li>
+        <li><a href="/research">Research</a></li>
+        <li><a href="/tools">Tools</a></li>
+        <li><a href="/theory-of-change">Theory of change</a></li>
+        <li><a href="/methodology">Methodology</a></li>
+        <li><a href="/glossary">Glossary</a></li>
+        <li><a href="/data/">Data explorer</a></li>
+        <li><a href="/donate">Donate</a></li>
+      </ul>
+      <ul>
+        <li><a href="/training">Training</a></li>
+        <li><a href="/workshops">Workshops</a></li>
+        <li><a href="/updates">Updates</a></li>
+        <li><a href="/work-with-us">Work with us</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+    <p class="copyright">&copy; 2026 Common Signals &middot; <a href="mailto:hello@commonsignals.org">hello@commonsignals.org</a> &middot; <a href="/privacy">Privacy policy</a> &middot; <a href="/sitemap">Sitemap</a></p>
+  </div>
+</footer>
+
+<script src="/main.js?v=20260928c" defer></script>
+
+<iframe name="subscribe-target" class="subscribe-target-frame" aria-hidden="true" tabindex="-1"></iframe>
+</body>
+</html>
