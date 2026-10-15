@@ -1035,6 +1035,13 @@ footer.site .copyright a:hover { color: var(--teal); border-color: var(--teal); 
   color: var(--ink-soft);
   margin: 0;
 }
+.article-standfirst {
+  font-family: var(--serif);
+  font-size: clamp(1.2rem, 2.6vw, 1.4rem);
+  line-height: 1.4;
+  color: var(--ink);
+  margin: 0 0 1rem;
+}
 
 .share-copy {
   display: inline-flex;
@@ -1449,3 +1456,7 @@ a.fn:hover { text-decoration: underline; }
   text-decoration: none !important;
   margin-left: 0.2em;
 }
+/* Endnotes inside an article body (no heading). */
+.article-body .article-notes { margin-top: 2rem; padding: 1.1rem 0 0; }
+.article-body .article-notes li { font-size: 0.92rem; }
+a.fn, .footnotes li { scroll-margin-top: 6rem; }
