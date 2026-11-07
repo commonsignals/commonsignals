@@ -71,6 +71,18 @@ def inline(s):
 
 # ---------------------------------------------------------------- figures
 
+
+def dims(path):
+    """Intrinsic size for width/height attributes, so lazy images don't shift the page as they load.
+    Screenshots are captured at 2x, so their CSS size is half their pixel size."""
+    if path.endswith(".png"):
+        from PIL import Image
+        w, h = Image.open(path).size
+        return w // 2, h // 2
+    raw = open(path, encoding="utf-8").read(400)
+    m = re.search(r'<svg[^>]*\bwidth="([\d.]+)"[^>]*\bheight="([\d.]+)"', raw)
+    return round(float(m.group(1))), round(float(m.group(2)))
+
 def figure(block):
     src = re.search(r'src="screenshots/([^"]+)"', block).group(1)
     alt = html.unescape(re.search(r'alt="([^"]*)"', block).group(1))
@@ -86,13 +98,16 @@ def figure(block):
             m = src.replace(".svg", "-mobile.svg")
             shutil.copyfile(os.path.join(INC, "screenshots", m), os.path.join(ASSET_DIR, m))
             mob = f"/assets/toolkit/{m}"
+    local = os.path.join(ROOT, desk.split("?")[0].lstrip("/"))
+    w, h = dims(local)
     shot = src.endswith(".png")
     cls = ' class="shot"' if shot else ""
     if mob:
-        pic = (f'<picture>\n          <source media="(max-width: 640px)" srcset="{mob}" />\n'
-               f'          <img src="{desk}" alt="{alt_a}" loading="lazy" />\n        </picture>')
+        mw, mh = dims(os.path.join(ROOT, mob.split("?")[0].lstrip("/")))
+        pic = (f'<picture>\n          <source media="(max-width: 640px)" srcset="{mob}" width="{mw}" height="{mh}" />\n'
+               f'          <img src="{desk}" alt="{alt_a}" width="{w}" height="{h}" loading="lazy" />\n        </picture>')
     else:
-        pic = f'<img src="{desk}" alt="{alt_a}" loading="lazy" />'
+        pic = f'<img src="{desk}" alt="{alt_a}" width="{w}" height="{h}" loading="lazy" />'
     return f'<figure{cls}>\n        {pic}\n        <figcaption>{cap_h}</figcaption>\n      </figure>'
 
 
@@ -227,14 +242,176 @@ style = """<style>
     .article-body .stat-pull { grid-template-columns: 1fr; }
     .article-body .stat-pull-source { grid-column: 1; }
   }
+  /* Mobile section navigator: "You are currently reading", after JRF's report pages.
+     Sits under the sticky site header; only on widths where the sidebar contents is not sticky. */
+  .section-nav { display: none; }
+  @media (max-width: 860px) {
+    .section-nav {
+      display: block;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: var(--section-nav-top, 0px);
+      z-index: 19;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: var(--sans);
+      transform: translateY(-110%);
+      visibility: hidden;
+      transition: transform 0.2s ease, visibility 0s linear 0.2s;
+      box-shadow: 0 6px 16px rgba(35, 32, 25, 0.18);
+    }
+    .section-nav.is-visible {
+      transform: translateY(0);
+      visibility: visible;
+      transition: transform 0.2s ease, visibility 0s;
+    }
+    .section-nav-bar {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.6rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-nav-current { flex: 1; min-width: 0; margin: 0; line-height: 1.3; }
+    .section-nav-label { display: block; font-size: 0.8rem; font-weight: 500; color: var(--signal-soft); }
+    .section-nav-title {
+      display: block;
+      font-size: 0.98rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .section-nav-toggle {
+      flex: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      min-height: 44px;
+      padding: 0 0.2rem;
+      background: none;
+      border: 0;
+      color: var(--paper);
+      font: 500 0.92rem var(--sans);
+      cursor: pointer;
+    }
+    .section-nav-toggle svg { width: 10px; height: 10px; transition: transform 0.2s ease; }
+    .section-nav-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+    .section-nav-toggle:focus-visible, .section-nav-list a:focus-visible { outline: 2px solid var(--signal-soft); outline-offset: 2px; }
+    .section-nav-panel {
+      border-top: 1px solid rgba(245, 244, 239, 0.16);
+      max-height: calc(100vh - var(--section-nav-top, 0px) - 4rem);
+      max-height: calc(100dvh - var(--section-nav-top, 0px) - 4rem);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+    .section-nav-list { list-style: none; margin: 0 auto; padding: 0.5rem 1rem 1rem; max-width: 1200px; }
+    .section-nav-list a {
+      display: block;
+      padding: 0.55rem 0 0.55rem 0.8rem;
+      border-left: 2px solid transparent;
+      color: rgba(245, 244, 239, 0.86);
+      text-decoration: none;
+      font-size: 0.98rem;
+      line-height: 1.35;
+    }
+    .section-nav-list a[aria-current="true"] { color: #fff; border-left-color: var(--signal-soft); font-weight: 500; }
+    .article-body h2, .article-body h3 { scroll-margin-top: calc(var(--section-nav-top, 0px) + 5.25rem); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .section-nav, .section-nav.is-visible, .section-nav-toggle svg { transition: none; }
+  }
 </style>
 """
 mid = tpl[tpl.index("</style>") + len("</style>\n"):tpl.index('<main id="top">')]
 tail = tpl[tpl.index('<section id="article-subscribe"'):]
 tags = "\n".join(f'      <span class="tag-pill">{t}</span>' for t in TAGS)
 share = re.search(r'    <div class="hero-actions">.*?\n    </div>\n', tpl, re.S).group(0)
+
+nav_items = "\n".join(f'          <li><a href="#{hid}">{inline(h)}</a></li>' for hid, h in toc)
+first_title = inline(toc[0][1])
+section_nav = f"""  <nav class="section-nav" id="sectionNav" aria-label="Sections">
+    <div class="section-nav-bar">
+      <p class="section-nav-current"><span class="section-nav-label">You are currently reading:</span>
+        <span class="section-nav-title" id="sectionNavTitle">{first_title}</span></p>
+      <button type="button" class="section-nav-toggle" id="sectionNavToggle" aria-expanded="false" aria-controls="sectionNavPanel">
+        <span class="section-nav-toggle-text">View all sections</span>
+        <svg viewBox="0 0 10 6" aria-hidden="true"><path d="M0 0h10L5 6z" fill="currentColor"/></svg>
+      </button>
+    </div>
+    <div class="section-nav-panel" id="sectionNavPanel" hidden>
+      <ul class="section-nav-list">
+{nav_items}
+      </ul>
+    </div>
+  </nav>
+"""
+section_nav_js = """<script>
+(function () {
+  var nav = document.getElementById('sectionNav');
+  if (!nav) return;
+  var header = document.querySelector('header.site');
+  var toc = document.querySelector('.article-toc');
+  var body = document.querySelector('.article-body');
+  var title = document.getElementById('sectionNavTitle');
+  var toggle = document.getElementById('sectionNavToggle');
+  var toggleText = toggle.querySelector('.section-nav-toggle-text');
+  var panel = document.getElementById('sectionNavPanel');
+  var links = Array.prototype.slice.call(panel.querySelectorAll('a'));
+  var heads = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+  var mq = window.matchMedia('(max-width: 860px)');
+  var ticking = false;
+
+  function headerHeight() { return header ? header.getBoundingClientRect().height : 0; }
+  function setTop() { document.documentElement.style.setProperty('--section-nav-top', headerHeight() + 'px'); }
+
+  function setOpen(open) {
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggleText.textContent = open ? 'Close' : 'View all sections';
+    panel.hidden = !open;
+  }
+
+  function update() {
+    ticking = false;
+    if (!mq.matches) { nav.classList.remove('is-visible'); setOpen(false); return; }
+    var top = headerHeight();
+    var line = top + nav.getBoundingClientRect().height + 24;
+    var current = 0;
+    for (var i = 0; i < heads.length; i++) {
+      if (heads[i] && heads[i].getBoundingClientRect().top <= line) current = i;
+    }
+    links.forEach(function (a, i) {
+      if (i === current) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+    });
+    title.textContent = links[current].textContent;
+    // Show once the page's own contents list has scrolled away; hide after the article ends.
+    var afterToc = toc ? toc.getBoundingClientRect().bottom < top : true;
+    var inBody = body.getBoundingClientRect().bottom > top + 80;
+    var show = afterToc && inBody;
+    nav.classList.toggle('is-visible', show);
+    if (!show) setOpen(false);
+  }
+  function onScroll() { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } }
+
+  toggle.addEventListener('click', function () { setOpen(panel.hidden); });
+  links.forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !panel.hidden) { setOpen(false); toggle.focus(); }
+  });
+  document.addEventListener('click', function (e) { if (!panel.hidden && !nav.contains(e.target)) setOpen(false); });
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', function () { setTop(); onScroll(); });
+  if (header && 'ResizeObserver' in window) new ResizeObserver(function () { setTop(); onScroll(); }).observe(header);
+  setTop();
+  update();
+})();
+</script>
+"""
 main = f"""<main id="top">
 
+{section_nav}
   <div class="article-hero">
     <p class="article-eyebrow">{DATE_TEXT} &middot; {html.escape(byline)}</p>
     <div class="tag-row">
@@ -258,6 +435,7 @@ main = f"""<main id="top">
     </article>
   </div>
 
+{section_nav_js}
 """
 open(OUT, "w", encoding="utf-8").write(head + style + mid + main + tail)
 print(f"wrote {os.path.relpath(OUT, ROOT)}: {len(toc)} sections, {len(held)} figures and callouts")
