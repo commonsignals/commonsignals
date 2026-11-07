@@ -1,9 +1,0 @@
-{
-  "name": "toolkit-screenshots",
-  "private": true,
-  "description": "Capture script for the toolkit article screenshots. Kept separate from the site's own dependencies.",
-  "type": "commonjs",
-  "dependencies": {
-    "playwright-core": "1.56.1"
-  }
-}
