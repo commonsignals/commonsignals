@@ -66,7 +66,31 @@ def inline(s):
     s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
     s = re.sub(r"(?<![\w*])\*(?!\s)(.+?)(?<!\s)\*(?![\w*])", r"<em>\1</em>", s)
     s = re.sub(r"\bhello@commonsignals\.org\b(?![^<]*</a>)", '<a href="mailto:hello@commonsignals.org">hello@commonsignals.org</a>', s)
-    return s
+    return grades(s)
+
+
+GRADE_WORD = re.compile(r"(?<![A-Za-z])(established|tested|observed)\b", re.I)
+
+
+def grade_span(word):
+    return (f'<span class="grade grade-{word.lower()}"><span class="grade-dot" aria-hidden="true"></span>'
+            f'{word}</span>')
+
+
+def grades(s):
+    """Traffic-light dot before each evidence grade: in bracketed grades such as "(Tested)" or
+    "(Established for fear and agency; tested for anger)", and on the bold labels of the grade key.
+    "untested" is left alone."""
+    def bracket(m):
+        inner = GRADE_WORD.sub(lambda w: grade_span(w.group(1)), m.group(1))
+        # Keep the opening bracket inside the first (non-wrapping) grade, so it can't be left
+        # at the end of a line while the dot wraps to the next.
+        if inner.startswith('<span class="grade '):
+            return re.sub(r'^(<span class="grade [^"]+">)', r"\1(", inner, count=1) + ")"
+        return "(" + inner + ")"
+    s = re.sub(r"\(((?:Established|Tested|Observed)\b[^()]*)\)", bracket, s)
+    return re.sub(r"<strong>(Established|Tested|Observed):</strong>",
+                  lambda m: f"<strong>{grade_span(m.group(1))}:</strong>", s)
 
 
 # ---------------------------------------------------------------- figures
@@ -87,6 +111,24 @@ def figure(block):
     src = re.search(r'src="screenshots/([^"]+)"', block).group(1)
     alt = html.unescape(re.search(r'alt="([^"]*)"', block).group(1))
     cap = html.unescape(re.search(r"<figcaption>(.*?)</figcaption>", block, re.S).group(1))
+    return figure_html(src, alt, cap)
+
+
+# Placeholders in the draft (<!-- SCREENSHOT Sxx ... --> / <!-- CHART Sxx ... -->) are filled from the
+# manifest: its file, alt text and caption (the manifest holds the corrected captions). Shots the
+# manifest marks as anything but done are dropped.
+import csv  # noqa: E402
+MANIFEST = {r["id"]: r for r in csv.DictReader(open(os.path.join(INC, "screenshots", "manifest.csv"), encoding="utf-8"))}
+
+
+def placeholder(m):
+    row = MANIFEST.get(m.group(1))
+    if not row or row["status"] != "done":
+        return ""
+    return hold(figure_html(row["file"], row["alt"], row["caption"]))
+
+
+def figure_html(src, alt, cap):
     alt_a, cap_h = html.escape(alt), html.escape(cap, quote=False)
     if src in REUSE:
         desk, mob = REUSE[src]
@@ -130,6 +172,7 @@ def hold(s):
 
 
 body = re.sub(r"<figure>.*?</figure>", lambda m: hold(figure(m.group(0))), body, flags=re.S)
+body = re.sub(r"<!-- (?:SCREENSHOT|CHART) (S\d+[ab]?)\b.*?-->", placeholder, body, flags=re.S)
 
 
 def stat(m):
@@ -144,6 +187,34 @@ def stat(m):
 body = re.sub(r"<!-- STAT CALLOUT[^>]*-->(.*?)<!-- /STAT CALLOUT -->", stat, body, flags=re.S)
 body = re.sub(r"<!--.*?-->", "", body, flags=re.S)  # editorial notes and unfilled placeholders
 
+def table(p):
+    rows = [[c.strip() for c in l.strip().strip("|").split("|")] for l in p.splitlines()]
+    head, body_rows = rows[0], [r for r in rows[2:]]
+    assert all(re.fullmatch(r":?-{3,}:?", c) for c in rows[1]), "table separator"
+    cell = lambda c: "<br>".join(inline(x.strip()) for x in c.split("<br>"))
+    ths = "".join(f'<th scope="col">{inline(h)}</th>' for h in head)
+    trs = []
+    for r in body_rows:
+        first = f'<th scope="row">{cell(r[0])}</th>'
+        rest = "".join(f'<td data-label="{html.escape(h)}">{cell(c)}</td>' for h, c in zip(head[1:], r[1:]))
+        trs.append(f"          <tr>{first}{rest}</tr>")
+    return ('<div class="table-wrap">\n        <table class="card-table">\n          <thead><tr>' + ths +
+            '</tr></thead>\n          <tbody>\n' + "\n".join(trs) + '\n          </tbody>\n        </table>\n      </div>')
+
+
+is_ul = lambda p: all(l.startswith("- ") for l in p.splitlines())
+ids = set()
+
+
+def uid(h):
+    base = slug(h)
+    hid, n = base, 2
+    while hid in ids:
+        hid, n = f"{base}-{n}", n + 1
+    ids.add(hid)
+    return hid
+
+
 out, toc = [], []
 paras = [p.strip() for p in re.split(r"\n\s*\n", body) if p.strip()]
 i = 0
@@ -157,18 +228,26 @@ while i < len(paras):
         i += 1
     elif p.startswith("## "):
         h = p[3:].strip()
-        hid = slug(h)
+        hid = uid(h)
         toc.append((hid, h))
         out.append(f'<h2 id="{hid}">{inline(h)}</h2>')
     elif p.startswith("### "):
         h = p[4:].strip()
-        out.append(f'<h3 id="{slug(h)}">{inline(h)}</h3>')
+        out.append(f'<h3 id="{uid(h)}">{inline(h)}</h3>')
     elif p.startswith("**Who this is for:**"):
         out.append('<div class="audience-callout">\n        <p class="audience-label">Who this is for</p>\n'
                    f'        <p>{inline((lambda t: t[:1].upper() + t[1:])(p[len("**Who this is for:**"):].strip()))}</p>\n      </div>')
-    elif all(l.startswith("- ") for l in p.splitlines()):
-        items = "\n".join(f"        <li>{inline(l[2:])}</li>" for l in p.splitlines())
-        out.append(f'<ul class="arrow-list">\n{items}\n      </ul>')
+    elif p.startswith("|"):
+        out.append(table(p))
+    elif is_ul(p):
+        # Items separated by blank lines are still one list.
+        lines = p.splitlines()
+        while i + 1 < len(paras) and is_ul(paras[i + 1]):
+            i += 1
+            lines += paras[i].splitlines()
+        items = "\n".join(f"        <li>{inline(l[2:])}</li>" for l in lines)
+        key = all(re.match(r"- \*\*(Established|Tested|Observed):\*\*", l) for l in lines)
+        out.append(f'<ul class="{"grade-key" if key else "arrow-list"}">\n{items}\n      </ul>')
     elif all(re.match(r"\d+\. ", l) for l in p.splitlines()):
         items = "\n".join(f"        <li>{inline(re.sub(r'^\d+\. ', '', l))}</li>" for l in p.splitlines())
         out.append(f'<ol class="toolkit-list">\n{items}\n      </ol>')
@@ -188,8 +267,8 @@ tpl = open(TEMPLATE, encoding="utf-8").read()
 OLD_T = "AI safety comms reading list: where to start"
 OLD_D = ("A reading list of the existing research on how the public receives messages about AI risk, for anyone new to AI "
          "safety who wants to join the conversation knowing what's already been tested.")
-DESC = ("An evidence-based toolkit for anyone explaining AI risks to the public: ten principles, four ground rules, six UK "
-        "mindsets and advice on seven issues, each graded by the strength of its evidence.")
+DESC = ("An evidence-based guide for anyone explaining AI risks to the public: ten principles, four ground rules, six UK "
+        "mindsets and seven issue guides, each graded by the strength of its evidence.")
 head = tpl[:tpl.index("<style>")]
 assert head.count(OLD_D) == 4 and OLD_T in head
 head = (head.replace(OLD_D, html.escape(DESC, quote=True).replace("&#x27;", "'"))
@@ -242,6 +321,40 @@ style = """<style>
     .article-body .stat-pull { grid-template-columns: 1fr; }
     .article-body .stat-pull-source { grid-column: 1; }
   }
+  /* Evidence grades: a traffic-light dot before each grade. Green and red are the site's chart
+     teal and maroon; amber is an ochre that sits on the paper background. The word always stays. */
+  .grade { white-space: nowrap; }
+  .grade-dot {
+    display: inline-block;
+    width: 0.62em;
+    height: 0.62em;
+    margin: 0 0.32em 0.06em 0.05em;
+    border-radius: 50%;
+    vertical-align: middle;
+    box-shadow: 0 0 0 1px rgba(35, 32, 25, 0.12);
+  }
+  .grade-established .grade-dot { background: #0f8a78; }
+  .grade-tested .grade-dot { background: #c98a17; }
+  .grade-observed .grade-dot { background: #a8323e; }
+  .article-body .grade-key { list-style: none; margin: 1.2rem 0 1.6rem; padding: 0; display: grid; gap: 0.7rem; }
+  .article-body .grade-key li { color: var(--ink-soft); line-height: 1.6; }
+  .article-body .grade-key .grade-dot { width: 0.8em; height: 0.8em; }
+
+  /* Mindsets table: a table on wide screens, one card per mindset on phones. */
+  .article-body .card-table th[scope="row"] { font-weight: 600; white-space: normal; border-bottom: 1px solid var(--line); color: var(--ink); }
+  .article-body .card-table th[scope="col"] { white-space: normal; }
+  .article-body .card-table { font-size: 0.95rem; }
+  @media (max-width: 640px) {
+    .article-body .card-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    .article-body .card-table, .article-body .card-table tbody, .article-body .card-table tr,
+    .article-body .card-table th, .article-body .card-table td { display: block; width: auto; }
+    .article-body .card-table tr { border: 1px solid var(--line); border-radius: 8px; margin: 0 0 1rem; padding: 0.4rem 0.9rem 0.7rem; background: rgba(255, 255, 255, 0.45); }
+    .article-body .card-table th[scope="row"] { border-bottom: 2px solid var(--ink); padding: 0.5rem 0; font-size: 1.05rem; }
+    .article-body .card-table td { padding: 0.55rem 0; border-bottom: 1px solid var(--line); }
+    .article-body .card-table td:last-child { border-bottom: 0; }
+    .article-body .card-table td::before { content: attr(data-label); display: block; font-weight: 600; color: var(--ink); font-size: 0.85rem; margin-bottom: 0.15rem; }
+  }
+
   /* Mobile section navigator: "You are currently reading", after JRF's report pages.
      Sits under the sticky site header; only on widths where the sidebar contents is not sticky. */
   .section-nav { display: none; }
