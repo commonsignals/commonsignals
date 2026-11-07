@@ -91,6 +91,86 @@
     .article-body .stat-pull { grid-template-columns: 1fr; }
     .article-body .stat-pull-source { grid-column: 1; }
   }
+  /* Mobile section navigator: "You are currently reading", after JRF's report pages.
+     Sits under the sticky site header; only on widths where the sidebar contents is not sticky. */
+  .section-nav { display: none; }
+  @media (max-width: 860px) {
+    .section-nav {
+      display: block;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: var(--section-nav-top, 0px);
+      z-index: 19;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: var(--sans);
+      transform: translateY(-110%);
+      visibility: hidden;
+      transition: transform 0.2s ease, visibility 0s linear 0.2s;
+      box-shadow: 0 6px 16px rgba(35, 32, 25, 0.18);
+    }
+    .section-nav.is-visible {
+      transform: translateY(0);
+      visibility: visible;
+      transition: transform 0.2s ease, visibility 0s;
+    }
+    .section-nav-bar {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.6rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-nav-current { flex: 1; min-width: 0; margin: 0; line-height: 1.3; }
+    .section-nav-label { display: block; font-size: 0.8rem; font-weight: 500; color: var(--signal-soft); }
+    .section-nav-title {
+      display: block;
+      font-size: 0.98rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .section-nav-toggle {
+      flex: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      min-height: 44px;
+      padding: 0 0.2rem;
+      background: none;
+      border: 0;
+      color: var(--paper);
+      font: 500 0.92rem var(--sans);
+      cursor: pointer;
+    }
+    .section-nav-toggle svg { width: 10px; height: 10px; transition: transform 0.2s ease; }
+    .section-nav-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+    .section-nav-toggle:focus-visible, .section-nav-list a:focus-visible { outline: 2px solid var(--signal-soft); outline-offset: 2px; }
+    .section-nav-panel {
+      border-top: 1px solid rgba(245, 244, 239, 0.16);
+      max-height: calc(100vh - var(--section-nav-top, 0px) - 4rem);
+      max-height: calc(100dvh - var(--section-nav-top, 0px) - 4rem);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+    .section-nav-list { list-style: none; margin: 0 auto; padding: 0.5rem 1rem 1rem; max-width: 1200px; }
+    .section-nav-list a {
+      display: block;
+      padding: 0.55rem 0 0.55rem 0.8rem;
+      border-left: 2px solid transparent;
+      color: rgba(245, 244, 239, 0.86);
+      text-decoration: none;
+      font-size: 0.98rem;
+      line-height: 1.35;
+    }
+    .section-nav-list a[aria-current="true"] { color: #fff; border-left-color: var(--signal-soft); font-weight: 500; }
+    .article-body h2, .article-body h3 { scroll-margin-top: calc(var(--section-nav-top, 0px) + 5.25rem); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .section-nav, .section-nav.is-visible, .section-nav-toggle svg { transition: none; }
+  }
 </style>
 </head>
 <body>
@@ -145,6 +225,33 @@
 </header>
 
 <main id="top">
+
+  <nav class="section-nav" id="sectionNav" aria-label="Sections">
+    <div class="section-nav-bar">
+      <p class="section-nav-current"><span class="section-nav-label">You are currently reading:</span>
+        <span class="section-nav-title" id="sectionNavTitle">What this toolkit is</span></p>
+      <button type="button" class="section-nav-toggle" id="sectionNavToggle" aria-expanded="false" aria-controls="sectionNavPanel">
+        <span class="section-nav-toggle-text">View all sections</span>
+        <svg viewBox="0 0 10 6" aria-hidden="true"><path d="M0 0h10L5 6z" fill="currentColor"/></svg>
+      </button>
+    </div>
+    <div class="section-nav-panel" id="sectionNavPanel" hidden>
+      <ul class="section-nav-list">
+          <li><a href="#what-this-toolkit-is">What this toolkit is</a></li>
+          <li><a href="#summary">Summary</a></li>
+          <li><a href="#the-big-picture">The big picture</a></li>
+          <li><a href="#ten-principles">Ten principles</a></li>
+          <li><a href="#ground-rules">Ground rules</a></li>
+          <li><a href="#six-uk-mindsets">Six UK mindsets</a></li>
+          <li><a href="#talking-about-specific-issues">Talking about specific issues</a></li>
+          <li><a href="#putting-it-into-practice">Putting it into practice</a></li>
+          <li><a href="#gaps-in-the-evidence">Gaps in the evidence</a></li>
+          <li><a href="#further-reading">Further reading</a></li>
+          <li><a href="#how-to-cite">How to cite</a></li>
+          <li><a href="#related-research">Related research</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <div class="article-hero">
     <p class="article-eyebrow">6 November 2026 &middot; Ben Matthews</p>
@@ -304,7 +411,7 @@
       <p>The tracker also shows opinion moving after real events. After OpenAI disclosed in July 2026 that two of its models had escaped their test environment and hacked Hugging Face, the share excited about AI fell from 27% to 19% and the share very concerned rose from 29% to 35%. After Jacob Coxon resigned from Anthropic in September, the share calling AI harms a top priority rose from 36% to 43%, before settling at 41%. Common Signals studied how audiences received both events (<a href="/openai-and-shut-metr-hugging-face">the disclosure</a>, <a href="/coxon-resignation-x-analysis">the resignation</a>), and principle 8 sets the two kinds of evidence side by side.</p>
 
       <figure class="shot">
-        <img src="/assets/toolkit/S18-americans-on-ai-concerned-over-time.png" alt="Line chart of US adults&#x27; concern about AI, June to October 2026" loading="lazy" />
+        <img src="/assets/toolkit/S18-americans-on-ai-concerned-over-time.png" alt="Line chart of US adults&#x27; concern about AI, June to October 2026" width="664" height="504" loading="lazy" />
         <figcaption>Concern about AI among US adults, June to October 2026. Americans on AI, CC BY 4.0.</figcaption>
       </figure>
 
@@ -333,7 +440,7 @@
       <p><strong>In practice.</strong> PauseAI's campaign page <a href="https://pauseai.info/ai-not-just-coming-for-your-job" target="_blank" rel="noopener">AI is not just coming for your job</a> (May 2026) starts from automation, quoting OpenAI's stated aim of building systems that outperform humans at most economically valuable work. It moves to who is accountable when AI decides on hiring, lending and bail, and only then to loss of control. It asks readers to share their own stories, and describes PauseAI chapters building coalitions with unions.</p>
 
       <figure class="shot">
-        <img src="/assets/toolkit/S08-pauseai-not-just-your-job.png" alt="PauseAI campaign page headed &quot;AI is not just coming for your job&quot;" loading="lazy" />
+        <img src="/assets/toolkit/S08-pauseai-not-just-your-job.png" alt="PauseAI campaign page headed &quot;AI is not just coming for your job&quot;" width="816" height="212" loading="lazy" />
         <figcaption>PauseAI's 2026 campaign starts with jobs and ends with loss of control. PauseAI, CC BY 4.0.</figcaption>
       </figure>
 
@@ -354,7 +461,7 @@
       <p>On AI the gap is wide. Only 16% of Americans say people like them can shape how much AI is part of their lives (<a href="https://www.americanson.ai/" target="_blank" rel="noopener">Americans on AI</a>, tested). Across our studies almost nobody asked what they could do, and the few practical comments were rewarded with likes (<a href="/findings">Common Signals findings</a>, observed).</p>
 
       <figure class="shot">
-        <img src="/assets/toolkit/S19-americans-on-ai-ours-to-shape.png" alt="Chart showing most Americans say AI is coming into their lives whether they want it or not" loading="lazy" />
+        <img src="/assets/toolkit/S19-americans-on-ai-ours-to-shape.png" alt="Chart showing most Americans say AI is coming into their lives whether they want it or not" width="664" height="365" loading="lazy" />
         <figcaption>Two in three Americans say AI is coming into their lives whether they want it or not. Americans on AI, CC BY 4.0.</figcaption>
       </figure>
 
@@ -363,7 +470,7 @@
       <p><strong>In practice.</strong> ControlAI's <a href="https://act.controlai.org/" target="_blank" rel="noopener">take action page</a> turns concern into one step in three parts: enter your address, review a message ControlAI has drafted, sign and send. When we checked in November 2026 it showed 10,787 people taking part against a goal of 20,000, and 2,146 people in local Citizen Groups. The same logic applies to elite audiences. In ControlAI's <a href="https://controlai.org/blog/briefing-140-lawmakers-on-ai" target="_blank" rel="noopener">account of briefing more than 140 UK lawmakers</a> (Leticia García Martínez, February 2026), one parliamentarian's response was to ask what they could do about it, and the author now offers next steps earlier in every meeting (observed). PauseAI's <a href="https://pauseai.info/email-builder" target="_blank" rel="noopener">email builder</a> and <a href="https://pauseai.info/lobby-tips" target="_blank" rel="noopener">lobby tips</a> do the same job for its supporters.</p>
 
       <figure class="shot">
-        <img src="/assets/toolkit/S09-pauseai-email-builder.png" alt="PauseAI&#x27;s email builder for writing to elected representatives" loading="lazy" />
+        <img src="/assets/toolkit/S09-pauseai-email-builder.png" alt="PauseAI&#x27;s email builder for writing to elected representatives" width="816" height="1364" loading="lazy" />
         <figcaption>PauseAI's email builder. PauseAI, CC BY 4.0.</figcaption>
       </figure>
 
@@ -371,8 +478,8 @@
 
       <figure>
         <picture>
-          <source media="(max-width: 640px)" srcset="/assets/chart-stance-mobile.svg?v=2" />
-          <img src="/assets/chart-stance.svg?v=2" alt="Bar chart of the Soares reel comments by stance: 53% accept, 24% reject, 6% accept in part, 17% other" loading="lazy" />
+          <source media="(max-width: 640px)" srcset="/assets/chart-stance-mobile.svg?v=2" width="360" height="413" />
+          <img src="/assets/chart-stance.svg?v=2" alt="Bar chart of the Soares reel comments by stance: 53% accept, 24% reject, 6% accept in part, 17% other" width="720" height="339" loading="lazy" />
         </picture>
         <figcaption>Most commenters on the Soares reel accepted that AI is a serious danger: 53% accepted the argument and 24% rejected it. Common Signals.</figcaption>
       </figure>
@@ -390,14 +497,14 @@
       <p><strong>In practice.</strong> ControlAI built its UK coalition one meeting at a time. Its <a href="https://controlai.org/impact-report-2025" target="_blank" rel="noopener">2025 impact report</a> counts more than 110 UK lawmakers who recognise superintelligent AI as a national security threat. On 8 September 2026 Alex Sobel MP introduced the <a href="https://controlai.org/uk-asi-bill" target="_blank" rel="noopener">Artificial Superintelligence Security Bill</a>, and more than 85 lawmakers signed a <a href="https://controlai.org/uk-pm-letter" target="_blank" rel="noopener">letter to the Prime Minister</a> backing its framework. ControlAI's lessons describe how the coalition grew: hardest from nothing to one supporter, steady from about ten, and self-sustaining at around 40 to 50, when members began introducing colleagues (observed).</p>
 
       <figure class="shot">
-        <img src="/assets/toolkit/S06-controlai-uk-asi-bill.png" alt="Page for the UK Artificial Superintelligence Security Bill" loading="lazy" />
+        <img src="/assets/toolkit/S06-controlai-uk-asi-bill.png" alt="Page for the UK Artificial Superintelligence Security Bill" width="1232" height="297" loading="lazy" />
         <figcaption>A coalition made visible: the bill and the letter backing it. ControlAI.</figcaption>
       </figure>
 
       <p>PauseAI's protest outside Google DeepMind's London office in June 2025 drew about 60 people by Business Insider's count, which PauseAI says made it the <a href="https://pauseai.substack.com/p/we-held-the-largest-ai-safety-protest" target="_blank" rel="noopener">largest AI safety protest</a> yet. The Future of Life Institute's <a href="https://superintelligence-statement.org/" target="_blank" rel="noopener">statement on superintelligence</a> shows its signature count on the page: 145,700 when we checked in November 2026, including 72,360 from a matching petition run by Ekō.</p>
 
       <figure class="shot">
-        <img src="/assets/toolkit/S13-fli-superintelligence-statement.png" alt="Future of Life Institute statement on superintelligence with its signature count" loading="lazy" />
+        <img src="/assets/toolkit/S13-fli-superintelligence-statement.png" alt="Future of Life Institute statement on superintelligence with its signature count" width="860" height="310" loading="lazy" />
         <figcaption>A running count makes the collective visible. Future of Life Institute.</figcaption>
       </figure>
 
@@ -417,8 +524,8 @@
 
       <figure>
         <picture>
-          <source media="(max-width: 640px)" srcset="/assets/chart-amanpour-stance-mobile.svg?v=2" />
-          <img src="/assets/chart-amanpour-stance.svg?v=2" alt="Bar chart of the Amanpour comments by stance: 68% agree, 18% disagree, 14% mixed" loading="lazy" />
+          <source media="(max-width: 640px)" srcset="/assets/chart-amanpour-stance-mobile.svg?v=2" width="360" height="340" />
+          <img src="/assets/chart-amanpour-stance.svg?v=2" alt="Bar chart of the Amanpour comments by stance: 68% agree, 18% disagree, 14% mixed" width="720" height="285" loading="lazy" />
         </picture>
         <figcaption>Under the accountability version of the story, most commenters agreed with Khlaaf: 68% agreed and 18% disagreed. Common Signals.</figcaption>
       </figure>
@@ -426,14 +533,14 @@
       <p><strong>In practice.</strong> ControlAI's <a href="https://controlai.org/artificial-guarantees" target="_blank" rel="noopener">Artificial Guarantees</a> pairs what Anthropic, OpenAI and Google DeepMind have said with what they then did. One entry sets OpenAI's commitment to publish reports on significant model releases beside its launch of GPT-4.1 with no <a href="/glossary#model-card-and-system-card">system card</a>.</p>
 
       <figure class="shot">
-        <img src="/assets/toolkit/S05-controlai-artificial-guarantees-gpt41.png" alt="ControlAI tracker entry setting an OpenAI commitment against the GPT-4.1 launch" loading="lazy" />
+        <img src="/assets/toolkit/S05-controlai-artificial-guarantees-gpt41.png" alt="ControlAI tracker entry setting an OpenAI commitment against the GPT-4.1 launch" width="1232" height="374" loading="lazy" />
         <figcaption>What they say, what they do. ControlAI.</figcaption>
       </figure>
 
       <p>PauseAI built a protest around one broken promise. Google DeepMind signed the <a href="https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024" target="_blank" rel="noopener">Frontier AI Safety Commitments</a> at the Seoul summit in 2024, then released Gemini 2.5 Pro without the promised detail on who had tested it (<a href="https://pauseai.info/google-deepmind-broken-promises" target="_blank" rel="noopener">PauseAI</a>). Business Insider's coverage led with a line from PauseAI's organising director, Ella Hughes: AI companies, she said, are less regulated than sandwich shops. Google DeepMind told Business Insider it is committed to developing AI safely and securely.</p>
 
       <figure class="shot">
-        <img src="/assets/toolkit/S10-pauseai-deepmind-broken-promises.png" alt="PauseAI page on Google DeepMind&#x27;s broken safety commitments" loading="lazy" />
+        <img src="/assets/toolkit/S10-pauseai-deepmind-broken-promises.png" alt="PauseAI page on Google DeepMind&#x27;s broken safety commitments" width="816" height="931" loading="lazy" />
         <figcaption>One company, one promise, one ask. PauseAI, CC BY 4.0.</figcaption>
       </figure>
 
@@ -450,14 +557,14 @@
       <p><strong>In practice.</strong> PauseAI's <a href="https://pauseai.info/polls-and-surveys" target="_blank" rel="noopener">polls and surveys page</a> gathers public and expert polling in one place, which saves communicators time. Americans on AI publishes its charts under CC BY 4.0, so anyone can reuse them with credit. The Ada Lovelace Institute's <a href="https://www.adalovelaceinstitute.org/policy-briefing/great-expectations/" target="_blank" rel="noopener">Great (public) expectations</a> gives UK figures from September 2025.</p>
 
       <figure class="shot">
-        <img src="/assets/toolkit/S20-ada-lovelace-key-findings.png" alt="Ada Lovelace Institute key findings on UK attitudes to AI regulation" loading="lazy" />
+        <img src="/assets/toolkit/S20-ada-lovelace-key-findings.png" alt="Ada Lovelace Institute key findings on UK attitudes to AI regulation" width="796" height="691" loading="lazy" />
         <figcaption>UK attitudes to AI regulation, September 2025. Ada Lovelace Institute.</figcaption>
       </figure>
 
       <p><strong>Where it misfired.</strong> PauseAI's homepage says 72% of citizens want AI to be slowed down by their governments. Its polls page traces the figure to a US YouGov poll reported by Vox in August 2023. On the homepage it appears without a date or a country, though more recent UK figures from 2025 make the same point.</p>
 
       <figure class="shot">
-        <img src="/assets/toolkit/S12-pauseai-homepage-72.png" alt="PauseAI homepage claim that 72% of citizens want AI slowed down" loading="lazy" />
+        <img src="/assets/toolkit/S12-pauseai-homepage-72.png" alt="PauseAI homepage claim that 72% of citizens want AI slowed down" width="816" height="135" loading="lazy" />
         <figcaption>A 2023 US figure, shown without its date or country. PauseAI.</figcaption>
       </figure>
 
@@ -478,7 +585,7 @@
       <p><strong>In practice.</strong> ControlAI's <a href="https://controlai.org/" target="_blank" rel="noopener">homepage</a> puts claim and remedy in two lines: experts warn that AI threatens human extinction, and banning runaway machine intelligence would avert it. The coverage of OpenAI's <a href="https://www.reuters.com/business/its-ai-agent-spent-days-hacking-company-sources-say-openai-did-not-notice-week-2026-07-24/" target="_blank" rel="noopener">Hugging Face disclosure</a> gave the public a concrete incident to reason about.</p>
 
       <figure class="shot">
-        <img src="/assets/toolkit/S02-controlai-homepage.png" alt="ControlAI homepage warning of extinction risk and calling for a ban on runaway machine intelligence" loading="lazy" />
+        <img src="/assets/toolkit/S02-controlai-homepage.png" alt="ControlAI homepage warning of extinction risk and calling for a ban on runaway machine intelligence" width="1280" height="800" loading="lazy" />
         <figcaption>Threat and remedy, side by side. ControlAI.</figcaption>
       </figure>
 
@@ -486,8 +593,8 @@
 
       <figure>
         <picture>
-          <source media="(max-width: 640px)" srcset="/assets/toolkit/S15-doac-four-versions-mobile.svg" />
-          <img src="/assets/toolkit/S15-doac-four-versions.svg" alt="Stacked bars showing agreement with the risk case under four cuts of one debate, from 49% to 88%" loading="lazy" />
+          <source media="(max-width: 640px)" srcset="/assets/toolkit/S15-doac-four-versions-mobile.svg" width="360" height="531" />
+          <img src="/assets/toolkit/S15-doac-four-versions.svg" alt="Stacked bars showing agreement with the risk case under four cuts of one debate, from 49% to 88%" width="720" height="480" loading="lazy" />
         </picture>
         <figcaption>Agreement with the risk case under four cuts of one debate. Common Signals.</figcaption>
       </figure>
@@ -524,8 +631,8 @@
 
       <figure>
         <picture>
-          <source media="(max-width: 640px)" srcset="/assets/mchart-lead-before-after-mobile.svg?v=2" />
-          <img src="/assets/mchart-lead-before-after.svg?v=2" alt="Paired bars comparing Reddit reactions before and after METR and Redwood&#x27;s independent report" loading="lazy" />
+          <source media="(max-width: 640px)" srcset="/assets/mchart-lead-before-after-mobile.svg?v=2" width="360" height="662" />
+          <img src="/assets/mchart-lead-before-after.svg?v=2" alt="Paired bars comparing Reddit reactions before and after METR and Redwood&#x27;s independent report" width="720" height="541" loading="lazy" />
         </picture>
         <figcaption>Same story, independently confirmed: acceptance rose from 51% to 69%. Common Signals.</figcaption>
       </figure>
@@ -548,8 +655,8 @@
 
       <figure>
         <picture>
-          <source media="(max-width: 640px)" srcset="/assets/toolkit/S23a-uk-ai-metaphors-mobile.svg" />
-          <img src="/assets/toolkit/S23a-uk-ai-metaphors.svg" alt="Bar chart of how the UK public describes AI: body or brain 23.8%, machine 21.9%, journey 2.3%" loading="lazy" />
+          <source media="(max-width: 640px)" srcset="/assets/toolkit/S23a-uk-ai-metaphors-mobile.svg" width="360" height="376" />
+          <img src="/assets/toolkit/S23a-uk-ai-metaphors.svg" alt="Bar chart of how the UK public describes AI: body or brain 23.8%, machine 21.9%, journey 2.3%" width="720" height="301" loading="lazy" />
         </picture>
         <figcaption>How the UK public describes AI. Data: Diffusion, The UK AI Compass (2026), CC BY-NC-ND 4.0. Chart: Common Signals.</figcaption>
       </figure>
@@ -596,8 +703,8 @@
 
       <figure>
         <picture>
-          <source media="(max-width: 640px)" srcset="/assets/toolkit/S23b-uk-ai-mindsets-mobile.svg" />
-          <img src="/assets/toolkit/S23b-uk-ai-mindsets.svg" alt="Bar chart of the six UK mindsets on AI as shares of UK adults, from Disengaged Traditionalists at 24.1% to the Uncertain Middle at 11.1%" loading="lazy" />
+          <source media="(max-width: 640px)" srcset="/assets/toolkit/S23b-uk-ai-mindsets-mobile.svg" width="360" height="487" />
+          <img src="/assets/toolkit/S23b-uk-ai-mindsets.svg" alt="Bar chart of the six UK mindsets on AI as shares of UK adults, from Disengaged Traditionalists at 24.1% to the Uncertain Middle at 11.1%" width="720" height="446" loading="lazy" />
         </picture>
         <figcaption>Six UK mindsets on AI, share of UK adults. Data: Diffusion, The UK AI Compass (2026). Chart: Common Signals.</figcaption>
       </figure>
@@ -667,7 +774,7 @@
       <p>This section adapts Climate Outreach's <a href="https://climateoutreach.org/btc/2025/toolkit/" target="_blank" rel="noopener">2025 communications toolkit</a>, which gives communicators three dos and a don't for each topic, an example message, and tips for different audiences. Each page below follows that pattern. The audience notes refer to the six mindsets described <a href="#six-uk-mindsets">above</a>, cover the mindsets the evidence says most about, and share the caveats set out there.</p>
 
       <figure class="shot">
-        <img src="/assets/toolkit/S01-climate-outreach-three-dos.png" alt="Climate Outreach&#x27;s three dos and a don&#x27;t for talking about climate and nature" loading="lazy" />
+        <img src="/assets/toolkit/S01-climate-outreach-three-dos.png" alt="Climate Outreach&#x27;s three dos and a don&#x27;t for talking about climate and nature" width="854" height="499" loading="lazy" />
         <figcaption>The format we've adapted. Climate Outreach, Britain Talks Climate and Nature 2025.</figcaption>
       </figure>
 
@@ -924,6 +1031,68 @@
       </div>
     </article>
   </div>
+
+<script>
+(function () {
+  var nav = document.getElementById('sectionNav');
+  if (!nav) return;
+  var header = document.querySelector('header.site');
+  var toc = document.querySelector('.article-toc');
+  var body = document.querySelector('.article-body');
+  var title = document.getElementById('sectionNavTitle');
+  var toggle = document.getElementById('sectionNavToggle');
+  var toggleText = toggle.querySelector('.section-nav-toggle-text');
+  var panel = document.getElementById('sectionNavPanel');
+  var links = Array.prototype.slice.call(panel.querySelectorAll('a'));
+  var heads = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+  var mq = window.matchMedia('(max-width: 860px)');
+  var ticking = false;
+
+  function headerHeight() { return header ? header.getBoundingClientRect().height : 0; }
+  function setTop() { document.documentElement.style.setProperty('--section-nav-top', headerHeight() + 'px'); }
+
+  function setOpen(open) {
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggleText.textContent = open ? 'Close' : 'View all sections';
+    panel.hidden = !open;
+  }
+
+  function update() {
+    ticking = false;
+    if (!mq.matches) { nav.classList.remove('is-visible'); setOpen(false); return; }
+    var top = headerHeight();
+    var line = top + nav.getBoundingClientRect().height + 24;
+    var current = 0;
+    for (var i = 0; i < heads.length; i++) {
+      if (heads[i] && heads[i].getBoundingClientRect().top <= line) current = i;
+    }
+    links.forEach(function (a, i) {
+      if (i === current) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+    });
+    title.textContent = links[current].textContent;
+    // Show once the page's own contents list has scrolled away; hide after the article ends.
+    var afterToc = toc ? toc.getBoundingClientRect().bottom < top : true;
+    var inBody = body.getBoundingClientRect().bottom > top + 80;
+    var show = afterToc && inBody;
+    nav.classList.toggle('is-visible', show);
+    if (!show) setOpen(false);
+  }
+  function onScroll() { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } }
+
+  toggle.addEventListener('click', function () { setOpen(panel.hidden); });
+  links.forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !panel.hidden) { setOpen(false); toggle.focus(); }
+  });
+  document.addEventListener('click', function (e) { if (!panel.hidden && !nav.contains(e.target)) setOpen(false); });
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', function () { setTop(); onScroll(); });
+  if (header && 'ResizeObserver' in window) new ResizeObserver(function () { setTop(); onScroll(); }).observe(header);
+  setTop();
+  update();
+})();
+</script>
 
 <section id="article-subscribe" class="reveal">
     <div class="wrap">
