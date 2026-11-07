@@ -49,6 +49,12 @@
 }
 </script>
 <style>
+  /* Running text in the heading serif, one size up from the site's 17px body */
+  .article-body > p,
+  .article-body > ul > li,
+  .article-body > ol > li { font-family: var(--serif); font-size: 18px; }
+  /* Subheadings sit between the 18px body and the 21.6px section headings */
+  .article-body h3 { font-size: 1.2rem; }
   .article-body .toolkit-list { margin: 1.2rem 0; padding-left: 1.4rem; display: grid; gap: 0.6rem; }
   .article-body .toolkit-list li { padding-left: 0.2rem; color: var(--ink-soft); line-height: 1.6; min-width: 0; }
   .article-body .toolkit-list li::marker { color: var(--signal); font-weight: 600; }
@@ -272,15 +278,15 @@
     <div class="section-nav-panel" id="sectionNavPanel" hidden>
       <ul class="section-nav-list">
           <li><a href="#what-we-mean-by-ai-safety">What we mean by AI safety</a></li>
-          <li><a href="#how-we-grade-the-evidence">How we grade the evidence</a></li>
+          <li><a href="#how-we-grade-ai-safety-evidence">How we grade AI safety evidence</a></li>
           <li><a href="#executive-summary">Executive summary</a></li>
-          <li><a href="#the-big-picture-where-the-public-stands">The big picture: where the public stands</a></li>
-          <li><a href="#4-ground-rules-for-every-communicator">4 ground rules for every communicator</a></li>
-          <li><a href="#ten-principles">Ten principles</a></li>
-          <li><a href="#six-uk-mindsets-audience-profiles">Six UK mindsets: audience profiles</a></li>
-          <li><a href="#issue-guides-three-dos-and-a-dont">Issue guides: three dos and a don't</a></li>
-          <li><a href="#10-point-pre-publication-checklist">10-point pre-publication checklist</a></li>
-          <li><a href="#putting-it-into-practice">Putting it into practice</a></li>
+          <li><a href="#where-the-public-stands-on-ai">Where the public stands on AI</a></li>
+          <li><a href="#ground-rules-for-ai-communicators">Ground rules for AI communicators</a></li>
+          <li><a href="#principles-for-ai-safety-comms">Principles for AI safety comms</a></li>
+          <li><a href="#audience-profiles">Audience profiles</a></li>
+          <li><a href="#communicating-ai-issues">Communicating AI issues</a></li>
+          <li><a href="#pre-publication-checklist">Pre-publication checklist</a></li>
+          <li><a href="#putting-this-guide-into-practice">Putting this guide into practice</a></li>
           <li><a href="#further-reading">Further reading</a></li>
           <li><a href="#how-to-cite">How to cite</a></li>
           <li><a href="#related-research">Related research</a></li>
@@ -290,10 +296,6 @@
 
   <div class="article-hero">
     <p class="article-eyebrow">6 November 2026 &middot; Ben Matthews</p>
-    <div class="tag-row">
-      <span class="tag-pill">Messaging</span>
-      <span class="tag-pill">Public opinion</span>
-    </div>
     <h1>How to communicate about AI safety</h1>
     <p class="article-dek">An evidence-based guide for anyone explaining artificial intelligence risks and safety rules to the public.</p>
     <div class="hero-actions">
@@ -313,15 +315,15 @@
       <p class="toc-heading">Contents</p>
       <ul>
         <li><a href="#what-we-mean-by-ai-safety">What we mean by AI safety</a></li>
-        <li><a href="#how-we-grade-the-evidence">How we grade the evidence</a></li>
+        <li><a href="#how-we-grade-ai-safety-evidence">How we grade AI safety evidence</a></li>
         <li><a href="#executive-summary">Executive summary</a></li>
-        <li><a href="#the-big-picture-where-the-public-stands">The big picture: where the public stands</a></li>
-        <li><a href="#4-ground-rules-for-every-communicator">4 ground rules for every communicator</a></li>
-        <li><a href="#ten-principles">Ten principles</a></li>
-        <li><a href="#six-uk-mindsets-audience-profiles">Six UK mindsets: audience profiles</a></li>
-        <li><a href="#issue-guides-three-dos-and-a-dont">Issue guides: three dos and a don't</a></li>
-        <li><a href="#10-point-pre-publication-checklist">10-point pre-publication checklist</a></li>
-        <li><a href="#putting-it-into-practice">Putting it into practice</a></li>
+        <li><a href="#where-the-public-stands-on-ai">Where the public stands on AI</a></li>
+        <li><a href="#ground-rules-for-ai-communicators">Ground rules for AI communicators</a></li>
+        <li><a href="#principles-for-ai-safety-comms">Principles for AI safety comms</a></li>
+        <li><a href="#audience-profiles">Audience profiles</a></li>
+        <li><a href="#communicating-ai-issues">Communicating AI issues</a></li>
+        <li><a href="#pre-publication-checklist">Pre-publication checklist</a></li>
+        <li><a href="#putting-this-guide-into-practice">Putting this guide into practice</a></li>
         <li><a href="#further-reading">Further reading</a></li>
         <li><a href="#how-to-cite">How to cite</a></li>
         <li><a href="#related-research">Related research</a></li>
@@ -337,15 +339,15 @@
       <p>This guide is designed to turn social science into practical advice for communicators. We draw on <a href="/ai-safety-comms-reading-list">academic research</a>, <a href="/research">six studies by Common Signals</a> that tracked public reactions to real AI events, and campaign strategies.</p>
 
       <div class="audience-callout">
-        <p class="audience-label">Who this is for</p>
-        <p>Campaigners, creators, journalists, charity communications teams, and researchers. It is written as much for people working on everyday harms, such as deepfakes, bias, and job losses, as for those working on catastrophic risks.</p>
+        <p class="audience-label">Who this toolkit is&nbsp;for</p>
+        <p>Campaigners, journalists, and researchers explaining AI to the public. If you work on immediate issues like deepfakes and job security, or systemic threats like loss of control, this guide shows what actually moves audiences to act.</p>
       </div>
 
       <h2 id="what-we-mean-by-ai-safety">What we mean by AI safety</h2>
 
       <p>We use "AI safety" in its broadest sense: making AI systems safe for the people who use them and the societies that host them. That spans everything from chatbots and hiring algorithms to systems whose builders warn they may not be able to control.</p>
 
-      <h2 id="how-we-grade-the-evidence">How we grade the evidence</h2>
+      <h2 id="how-we-grade-ai-safety-evidence">How we grade AI safety evidence</h2>
 
       <p>Every claim in this guide carries one of three grades:</p>
 
@@ -393,7 +395,7 @@
         <li>Quoting numbers without a date, country, or source (<a href="#5-show-people-theyre-in-the-majority-with-current-numbers">Principle 5</a>).</li>
       </ul>
 
-      <h2 id="the-big-picture-where-the-public-stands">The big picture: where the public stands</h2>
+      <h2 id="where-the-public-stands-on-ai">Where the public stands on AI</h2>
 
       <p>The public already has firm views on artificial intelligence. A communicator's job is rarely to raise the alarm from scratch. Far more often, the task is to give an already anxious public a practical outlet for their concerns.</p>
 
@@ -403,7 +405,7 @@
 
       <p>People strongly favour statutory laws over voluntary corporate promises. Given the choice, 85% said strong laws are needed to force companies to make AI safe; only 10% thought companies should be trusted to self-regulate. The <a href="https://www.adalovelaceinstitute.org/policy-briefing/great-expectations/" target="_blank" rel="noopener">Ada Lovelace Institute</a> found the same pattern in September 2025: 89% said independent regulation is essential, and 89% said products should not be released until proven safe, even if safety checks slow deployment.</p>
 
-      <p>Yet voters distrust the institutions meant to govern technology. 80% distrust the government's ability to control AI, and 84% worry political leaders will prioritise tech companies over the public. AI is rarely named as a top issue on its own; people prioritise the cost of living, the NHS, and jobs. But focus groups show AI already works as the "invisible infrastructure" inside those daily worries: hiring filters, utility pricing algorithms, clinical triage, and online fakes. Explaining the technology does not ease people's minds: Diffusion's most educated segment (<a href="#six-uk-mindsets-audience-profiles">Pragmatic Sceptics</a>) uses AI heavily yet remains 81% concerned.</p>
+      <p>Yet voters distrust the institutions meant to govern technology. 80% distrust the government's ability to control AI, and 84% worry political leaders will prioritise tech companies over the public. AI is rarely named as a top issue on its own; people prioritise the cost of living, the NHS, and jobs. But focus groups show AI already works as the "invisible infrastructure" inside those daily worries: hiring filters, utility pricing algorithms, clinical triage, and online fakes. Explaining the technology does not ease people's minds: Diffusion's most educated segment (<a href="#audience-profiles">Pragmatic Sceptics</a>) uses AI heavily yet remains 81% concerned.</p>
 
       <h3 id="in-the-us">In the US</h3>
 
@@ -420,7 +422,7 @@
 
       <p>International surveys show the same unease. The <a href="https://hai.stanford.edu/ai-index/2026-ai-index-report/public-opinion" target="_blank" rel="noopener">Stanford AI Index</a> noted that while the global share seeing benefits reached 59% in 2025, the share feeling nervous rose to 52%. A <a href="https://kpmg.com/xx/en/our-insights/ai-and-technology/trust-attitudes-and-use-of-ai.html" target="_blank" rel="noopener">study across 47 countries</a> by KPMG and the University of Melbourne confirmed that public trust declines as use grows. <a href="https://report2025.seismic.org/" target="_blank" rel="noopener">Seismic's survey</a> of 10,000 people across five countries found that 60% worry AI will replace human relationships, edging out the 57% who worry about mass unemployment.</p>
 
-      <h2 id="4-ground-rules-for-every-communicator">4 ground rules for every communicator</h2>
+      <h2 id="ground-rules-for-ai-communicators">Ground rules for AI communicators</h2>
 
       <ul class="arrow-list">
         <li><strong>Keep the core message identical; tailor only the entry point.</strong> Adapt your opening example to the audience, but keep your facts, policy demands, and remedies constant. ControlAI's <a href="https://controlai.org/blog/briefing-140-lawmakers-on-ai" target="_blank" rel="noopener">briefings with more than 140 lawmakers</a> led it to conclude that changing your core demands for different political factions destroys trust.</li>
@@ -429,7 +431,7 @@
         <li><strong>State your commitment to nonviolence clearly and often.</strong> Aim frustration directly at policies, boardroom decisions, and regulatory gaps, never at individual researchers or staff. Always pair warnings with a lawful, constructive way to take part in democratic change.</li>
       </ul>
 
-      <h2 id="ten-principles">Ten principles</h2>
+      <h2 id="principles-for-ai-safety-comms">Principles for AI safety comms</h2>
 
       <h3 id="1-start-from-what-people-already-worry-about">1. Start from what people already worry about</h3>
 
@@ -680,7 +682,7 @@
         <li><strong>Avoid this:</strong> Dismissive rankings: "Algorithmic bias is a minor distraction compared to the true risk of extinction."</li>
       </ul>
 
-      <h2 id="six-uk-mindsets-audience-profiles">Six UK mindsets: audience profiles</h2>
+      <h2 id="audience-profiles">Audience profiles</h2>
 
       <p><a href="https://diffusion-beta.netlify.app/assets/Diffusion-UK-AI-Compass-Report.pdf" target="_blank" rel="noopener">Diffusion's UK AI Compass</a> surveyed 2,911 UK adults to group the public into six distinct mindsets based on their concern, optimism, institutional trust, and who they think will benefit:</p>
 
@@ -708,7 +710,7 @@
         </table>
       </div>
 
-      <h2 id="issue-guides-three-dos-and-a-dont">Issue guides: three dos and a don't</h2>
+      <h2 id="communicating-ai-issues">Communicating AI issues</h2>
 
       <h3 id="1-loss-of-control-and-catastrophic-risk">1. Loss of control and catastrophic risk</h3>
 
@@ -794,7 +796,7 @@
         <li><strong>Example message:</strong> "No one is suggesting we switch off the AI that helps doctors read hospital scans or helps travellers translate a language. The proposal is narrower: halt the construction of runaway systems that could escape human control until we have verified scientific proof they can be managed safely, and secure international treaties so no corporation can race ahead recklessly at the public's expense."</li>
       </ul>
 
-      <h2 id="10-point-pre-publication-checklist">10-point pre-publication checklist</h2>
+      <h2 id="pre-publication-checklist">Pre-publication checklist</h2>
 
       <p>Before publishing your message, check your copy against these ten criteria:</p>
 
@@ -811,7 +813,7 @@
         <li><strong>Unified framing:</strong> Does the message bridge present-day consumer harms and catastrophic risks through the shared lens of democratic accountability, rather than pitting them against each other?</li>
       </ul>
 
-      <h2 id="putting-it-into-practice">Putting it into practice</h2>
+      <h2 id="putting-this-guide-into-practice">Putting this guide into practice</h2>
 
       <h3 id="testing-your-message">Testing your message</h3>
 

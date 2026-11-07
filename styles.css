@@ -1007,12 +1007,6 @@ footer.site .copyright a:hover { color: var(--teal); border-color: var(--teal); 
   color: var(--ink-faint);
   margin: 0 0 1.2rem;
 }
-.tag-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-bottom: 1.5rem;
-}
 .tag-pill {
   font-family: var(--sans);
   font-weight: 500;
