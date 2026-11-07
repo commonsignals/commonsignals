@@ -155,7 +155,7 @@ for sid in ORDER:
     base = CHART_CAPTION.get(sid) or (PH[sid].group(3) if sid in PH else "")
     assert base or sid in LEFT_FOR_BEN, (f"{sid}: no caption found. Run this against the draft with its placeholders "
                                           "still in place (it rewrites them into figures).")
-    caption = f"{base} Captured {nice(when)}." if status == "done" else base
+    caption = base  # capture dates live in the captured_at column, not the caption
     note = NEEDS_BEN.get(sid) or LEFT_FOR_BEN.get(sid) or NOTES.get(sid, "")
     if entry.get("fallback"):
         note = f"{note} Fallback: {entry['fallback']}.".strip()

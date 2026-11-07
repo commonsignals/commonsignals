@@ -116,7 +116,7 @@ The tracker also shows opinion moving after real events. After OpenAI disclosed 
 
 <figure>
   <img src="screenshots/S18-americans-on-ai-concerned-over-time.png" alt="Line chart of US adults&#x27; concern about AI, June to October 2026" />
-  <figcaption>Concern about AI among US adults, June to October 2026. Americans on AI, CC BY 4.0. Captured 7 November 2026.</figcaption>
+  <figcaption>Concern about AI among US adults, June to October 2026. Americans on AI, CC BY 4.0.</figcaption>
 </figure>
 
 ### Around the world
@@ -145,7 +145,7 @@ Diffusion's focus groups found AI concern already sitting inside cost of living,
 
 <figure>
   <img src="screenshots/S08-pauseai-not-just-your-job.png" alt="PauseAI campaign page headed &quot;AI is not just coming for your job&quot;" />
-  <figcaption>PauseAI's 2026 campaign starts with jobs and ends with loss of control. PauseAI, CC BY 4.0. Captured 7 November 2026.</figcaption>
+  <figcaption>PauseAI's 2026 campaign starts with jobs and ends with loss of control. PauseAI, CC BY 4.0.</figcaption>
 </figure>
 
 ControlAI, whose main campaign is about extinction risk, ran a [campaign against deepfakes](https://controlai.org/past-campaigns/campaign-against-deepfakes) from December 2023 to June 2024, a harm people already recognised. By its own account, 64 UK legislators endorsed its proposals and its two campaign videos drew about 20 million views (observed).
@@ -166,7 +166,7 @@ On AI the gap is wide. Only 16% of Americans say people like them can shape how 
 
 <figure>
   <img src="screenshots/S19-americans-on-ai-ours-to-shape.png" alt="Chart showing most Americans say AI is coming into their lives whether they want it or not" />
-  <figcaption>Two in three Americans say AI is coming into their lives whether they want it or not. Americans on AI, CC BY 4.0. Captured 7 November 2026.</figcaption>
+  <figcaption>Two in three Americans say AI is coming into their lives whether they want it or not. Americans on AI, CC BY 4.0.</figcaption>
 </figure>
 
 **Where the evidence disagrees.** [Gerjo Kok and colleagues](https://doi.org/10.1080/17437199.2017.1415767) argue the experimental evidence doesn't support fear appeals on their own: threat helps only once people already feel able to act (established). Social Change Lab's finding that anger predicted willingness to act and anxiety didn't (principle 4) can look like a further challenge. We read it as consistent. Anger usually comes with someone to blame and a sense that they can be made to change, which is a form of efficacy; anxiety often comes with neither. That reading is ours, and nobody has tested it on AI.
@@ -175,14 +175,14 @@ On AI the gap is wide. Only 16% of Americans say people like them can shape how 
 
 <figure>
   <img src="screenshots/S09-pauseai-email-builder.png" alt="PauseAI&#x27;s email builder for writing to elected representatives" />
-  <figcaption>PauseAI's email builder. PauseAI, CC BY 4.0. Captured 7 November 2026.</figcaption>
+  <figcaption>PauseAI's email builder. PauseAI, CC BY 4.0.</figcaption>
 </figure>
 
 **Where it misfired.** Nate Soares's "We stop AI. You help?" reel drew more than 1,600 comments, and our [study of them](https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri) shows what a threat without a route looks like. The second most-liked comment, with 8,080 likes, asked why it felt like it was already too late; fatalistic comments drew about a fifth of all likes; 28 of 1,534 coded comments asked what to do ([dataset](https://commonsignals.org/data/soares-reel-2026-08/)). Under the [Diary of a CEO debate](https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis) the share asking was under 1% of 25,661 comments. We can't tell from comments alone whether that silence reflects helplessness or simply that a comment section isn't where people ask, so treat the link to Witte's model as a hypothesis (observed).
 
 <figure>
   <img src="screenshots/S14-soares-reel-stance.svg" alt="Bar chart of the Soares reel comments by stance: 53% accept, 24% reject, 6% accept in part, 17% other" />
-  <figcaption>Most commenters on the Soares reel accepted that AI is a serious danger: 53% accepted the argument and 24% rejected it. Common Signals. Captured 7 November 2026.</figcaption>
+  <figcaption>Most commenters on the Soares reel accepted that AI is a serious danger: 53% accepted the argument and 24% rejected it. Common Signals.</figcaption>
 </figure>
 
 **Try this:** one named action that takes two minutes, with the link beside it. "Your MP will vote on this. Tell them where you stand: it takes two minutes."
@@ -199,14 +199,14 @@ People act when they believe a group can make a difference and feel part of it. 
 
 <figure>
   <img src="screenshots/S06-controlai-uk-asi-bill.png" alt="Page for the UK Artificial Superintelligence Security Bill" />
-  <figcaption>A coalition made visible: the bill and the letter backing it. ControlAI. Captured 7 November 2026.</figcaption>
+  <figcaption>A coalition made visible: the bill and the letter backing it. ControlAI.</figcaption>
 </figure>
 
 PauseAI's protest outside Google DeepMind's London office in June 2025 drew about 60 people by Business Insider's count, which PauseAI says made it the [largest AI safety protest](https://pauseai.substack.com/p/we-held-the-largest-ai-safety-protest) yet. The Future of Life Institute's [statement on superintelligence](https://superintelligence-statement.org/) shows its signature count on the page: 145,700 when we checked in November 2026, including 72,360 from a matching petition run by Ekō.
 
 <figure>
   <img src="screenshots/S13-fli-superintelligence-statement.png" alt="Future of Life Institute statement on superintelligence with its signature count" />
-  <figcaption>A running count makes the collective visible. Future of Life Institute. Captured 7 November 2026.</figcaption>
+  <figcaption>A running count makes the collective visible. Future of Life Institute.</figcaption>
 </figure>
 
 **Try this:** "Join more than 10,000 people who've already written to their representatives."
@@ -225,21 +225,21 @@ Our studies point the same way. Under [Christiane Amanpour's interview with Heid
 
 <figure>
   <img src="screenshots/S17-amanpour-stance.svg" alt="Bar chart of the Amanpour comments by stance: 68% agree, 18% disagree, 14% mixed" />
-  <figcaption>Under the accountability version of the story, most commenters agreed with Khlaaf: 68% agreed and 18% disagreed. Common Signals. Captured 7 November 2026.</figcaption>
+  <figcaption>Under the accountability version of the story, most commenters agreed with Khlaaf: 68% agreed and 18% disagreed. Common Signals.</figcaption>
 </figure>
 
 **In practice.** ControlAI's [Artificial Guarantees](https://controlai.org/artificial-guarantees) pairs what Anthropic, OpenAI and Google DeepMind have said with what they then did. One entry sets OpenAI's commitment to publish reports on significant model releases beside its launch of GPT-4.1 with no [system card](https://commonsignals.org/glossary#model-card-and-system-card).
 
 <figure>
   <img src="screenshots/S05-controlai-artificial-guarantees-gpt41.png" alt="ControlAI tracker entry setting an OpenAI commitment against the GPT-4.1 launch" />
-  <figcaption>What they say, what they do. ControlAI. Captured 7 November 2026.</figcaption>
+  <figcaption>What they say, what they do. ControlAI.</figcaption>
 </figure>
 
 PauseAI built a protest around one broken promise. Google DeepMind signed the [Frontier AI Safety Commitments](https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024) at the Seoul summit in 2024, then released Gemini 2.5 Pro without the promised detail on who had tested it ([PauseAI](https://pauseai.info/google-deepmind-broken-promises)). Business Insider's coverage led with a line from PauseAI's organising director, Ella Hughes: AI companies, she said, are less regulated than sandwich shops. Google DeepMind told Business Insider it is committed to developing AI safely and securely.
 
 <figure>
   <img src="screenshots/S10-pauseai-deepmind-broken-promises.png" alt="PauseAI page on Google DeepMind&#x27;s broken safety commitments" />
-  <figcaption>One company, one promise, one ask. PauseAI, CC BY 4.0. Captured 7 November 2026.</figcaption>
+  <figcaption>One company, one promise, one ask. PauseAI, CC BY 4.0.</figcaption>
 </figure>
 
 **Try this:** "Google promised to publish its safety tests. Then it didn't."
@@ -256,14 +256,14 @@ People who want rules often assume they're in a minority. Tell them they aren't,
 
 <figure>
   <img src="screenshots/S20-ada-lovelace-key-findings.png" alt="Ada Lovelace Institute key findings on UK attitudes to AI regulation" />
-  <figcaption>UK attitudes to AI regulation, September 2025. Ada Lovelace Institute. Captured 7 November 2026.</figcaption>
+  <figcaption>UK attitudes to AI regulation, September 2025. Ada Lovelace Institute.</figcaption>
 </figure>
 
 **Where it misfired.** PauseAI's homepage says 72% of citizens want AI to be slowed down by their governments. Its polls page traces the figure to a US YouGov poll reported by Vox in August 2023. On the homepage it appears without a date or a country, though more recent UK figures from 2025 make the same point.
 
 <figure>
   <img src="screenshots/S12-pauseai-homepage-72.png" alt="PauseAI homepage claim that 72% of citizens want AI slowed down" />
-  <figcaption>A 2023 US figure, shown without its date or country. PauseAI. Captured 7 November 2026.</figcaption>
+  <figcaption>A 2023 US figure, shown without its date or country. PauseAI.</figcaption>
 </figure>
 
 **Try this:** "Nine in ten of us want AI proven safe before it's released." Then the source and year: Ada Lovelace Institute, 2025.
@@ -284,14 +284,14 @@ Concreteness changes the picture. 78% of Americans think AI behaving in ways its
 
 <figure>
   <img src="screenshots/S02-controlai-homepage.png" alt="ControlAI homepage warning of extinction risk and calling for a ban on runaway machine intelligence" />
-  <figcaption>Threat and remedy, side by side. ControlAI. Captured 7 November 2026.</figcaption>
+  <figcaption>Threat and remedy, side by side. ControlAI.</figcaption>
 </figure>
 
 **Where it misfired.** The Diary of a CEO posted a 104-second trailer of its [AI debate](https://www.youtube.com/watch?v=OhOmLqR5nN4) to [YouTube Shorts](https://www.youtube.com/shorts/7a6BfbZiDV4) titled "WILL AI LEAD US TO EXTINCTION?". Agreement with the risk case under it was 49% against 40%, and weighted by likes the disagreeing side led, 57% to 32%. Under a 21-minute cut of the same debate on Facebook, agreement was 88%. The two cuts reached different audiences on different platforms, so we can't separate the effect of the cut from the audience ([Common Signals](https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis), observed).
 
 <figure>
   <img src="screenshots/S15-doac-four-versions.svg" alt="Stacked bars showing agreement with the risk case under four cuts of one debate, from 49% to 88%" />
-  <figcaption>Agreement with the risk case under four cuts of one debate. Common Signals. Captured 7 November 2026.</figcaption>
+  <figcaption>Agreement with the risk case under four cuts of one debate. Common Signals.</figcaption>
 </figure>
 
 **Try this:** incident, then mechanism, then stakes, then the ask. "In July two of OpenAI's models broke out of their test environment and hacked another company. Independent researchers confirmed it. The same companies say their next systems will be far more capable."
@@ -326,7 +326,7 @@ Opinion moves when something happens. Prepare for those moments, and lead with s
 
 <figure>
   <img src="screenshots/S16-metr-before-after.svg" alt="Paired bars comparing Reddit reactions before and after METR and Redwood&#x27;s independent report" />
-  <figcaption>Same story, independently confirmed: acceptance rose from 51% to 69%. Common Signals. Captured 7 November 2026.</figcaption>
+  <figcaption>Same story, independently confirmed: acceptance rose from 51% to 69%. Common Signals.</figcaption>
 </figure>
 
 **In practice.** When Christiane Amanpour interviewed Heidy Khlaaf of the [AI Now Institute](https://ainowinstitute.org) about the incident, Khlaaf framed it as a question of accountability, and 68% of comments taking a position accepted that framing ([Common Signals](https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf), observed).
@@ -347,7 +347,7 @@ Diffusion also split-tested sovereignty frames. Framing strong UK laws on AI as 
 
 <figure>
   <img src="screenshots/S23a-uk-ai-metaphors.svg" alt="Bar chart of how the UK public describes AI: body or brain 23.8%, machine 21.9%, journey 2.3%" />
-  <figcaption>How the UK public describes AI. Data: Diffusion, The UK AI Compass (2026), CC BY-NC-ND 4.0. Chart: Common Signals. Captured 7 November 2026.</figcaption>
+  <figcaption>How the UK public describes AI. Data: Diffusion, The UK AI Compass (2026), CC BY-NC-ND 4.0. Chart: Common Signals.</figcaption>
 </figure>
 
 **In practice.** PauseAI's sandwich-shop comparison turns a regulatory gap into something anyone can picture. Diffusion's regulator message started from infrastructure people already expect to be inspected, and support built in every mindset as it set out the powers to test and switch off unsafe systems.
@@ -392,7 +392,7 @@ Britain Talks Climate sorts people by their core values, using [More in Common's
 
 <figure>
   <img src="screenshots/S23b-uk-ai-mindsets.svg" alt="Bar chart of the six UK mindsets on AI as shares of UK adults, from Disengaged Traditionalists at 24.1% to the Uncertain Middle at 11.1%" />
-  <figcaption>Six UK mindsets on AI, share of UK adults. Data: Diffusion, The UK AI Compass (2026). Chart: Common Signals. Captured 7 November 2026.</figcaption>
+  <figcaption>Six UK mindsets on AI, share of UK adults. Data: Diffusion, The UK AI Compass (2026). Chart: Common Signals.</figcaption>
 </figure>
 
 Agreement across the mindsets is wider than the labels suggest. Strong majorities in every one want strong laws over voluntary guidelines, from 69% of Market Optimists to 96% of Alarmed Populists, and five of the six expect AI's gains to go mainly to the wealthy.
@@ -461,7 +461,7 @@ This section adapts Climate Outreach's [2025 communications toolkit](https://cli
 
 <figure>
   <img src="screenshots/S01-climate-outreach-three-dos.png" alt="Climate Outreach&#x27;s three dos and a don&#x27;t for talking about climate and nature" />
-  <figcaption>The format we've adapted. Climate Outreach, Britain Talks Climate and Nature 2025. Captured 7 November 2026.</figcaption>
+  <figcaption>The format we've adapted. Climate Outreach, Britain Talks Climate and Nature 2025.</figcaption>
 </figure>
 ### Loss of control and catastrophic risk
 
