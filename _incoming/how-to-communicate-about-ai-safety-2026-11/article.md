@@ -150,8 +150,6 @@ Diffusion's focus groups found AI concern already sitting inside cost of living,
 
 ControlAI, whose main campaign is about extinction risk, ran a [campaign against deepfakes](https://controlai.org/past-campaigns/campaign-against-deepfakes) from December 2023 to June 2024, a harm people already recognised. By its own account, 64 UK legislators endorsed its proposals and its two campaign videos drew about 20 million views (observed).
 
-<!-- SCREENSHOT S07: ControlAI, campaign against deepfakes page, headline and the 64 legislators line. Caption: "ControlAI's 2023 to 2024 deepfakes campaign. ControlAI." -->
-
 **Where it misfired.** The PauseAI jobs page makes a strong argument and gives readers little to check it against. Apart from the OpenAI quote, it links to no sources: the investment figures and the experts' warnings are unattributed. In our studies, calling a claim unverifiable or a marketing stunt was among the commonest objections: around half of all disagreement under [Ajeya Cotra's interview on the Dwarkesh Podcast](https://commonsignals.org/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh) took that line (observed).
 
 **Try this:** "AI is already deciding who gets a job interview. The companies building it say that's just the start."
@@ -173,10 +171,8 @@ On AI the gap is wide. Only 16% of Americans say people like them can shape how 
 
 **Where the evidence disagrees.** [Gerjo Kok and colleagues](https://doi.org/10.1080/17437199.2017.1415767) argue the experimental evidence doesn't support fear appeals on their own: threat helps only once people already feel able to act (established). Social Change Lab's finding that anger predicted willingness to act and anxiety didn't (principle 4) can look like a further challenge. We read it as consistent. Anger usually comes with someone to blame and a sense that they can be made to change, which is a form of efficacy; anxiety often comes with neither. That reading is ours, and nobody has tested it on AI.
 
-**In practice.** ControlAI's [take action page](https://act.controlai.org/) turns concern into one step in three parts: enter your address, review a message ControlAI has drafted, sign and send. When we checked in November 2026 it showed 10,556 people taking part against a goal of 20,000, and 2,144 people in local Citizen Groups. The same logic applies to elite audiences. In ControlAI's [account of briefing more than 140 UK lawmakers](https://controlai.org/blog/briefing-140-lawmakers-on-ai) (Leticia García Martínez, February 2026), one parliamentarian's response was to ask what they could do about it, and the author now offers next steps earlier in every meeting (observed). PauseAI's [email builder](https://pauseai.info/email-builder) and [lobby tips](https://pauseai.info/lobby-tips) do the same job for its supporters.
+**In practice.** ControlAI's [take action page](https://act.controlai.org/) turns concern into one step in three parts: enter your address, review a message ControlAI has drafted, sign and send. When we checked in November 2026 it showed 10,787 people taking part against a goal of 20,000, and 2,146 people in local Citizen Groups. The same logic applies to elite audiences. In ControlAI's [account of briefing more than 140 UK lawmakers](https://controlai.org/blog/briefing-140-lawmakers-on-ai) (Leticia García Martínez, February 2026), one parliamentarian's response was to ask what they could do about it, and the author now offers next steps earlier in every meeting (observed). PauseAI's [email builder](https://pauseai.info/email-builder) and [lobby tips](https://pauseai.info/lobby-tips) do the same job for its supporters.
 
-<!-- SCREENSHOT S03: ControlAI take action page with counters, act.controlai.org. Caption: "One action, three steps, and a counter showing how many have taken it. ControlAI." -->
-<!-- SCREENSHOT S04: ControlAI email tool, step 2, the drafted message. Caption: "ControlAI drafts the message; the citizen reviews, signs and sends." -->
 <figure>
   <img src="screenshots/S09-pauseai-email-builder.png" alt="PauseAI&#x27;s email builder for writing to elected representatives" />
   <figcaption>PauseAI's email builder. PauseAI, CC BY 4.0. Captured 7 November 2026.</figcaption>
@@ -186,7 +182,7 @@ On AI the gap is wide. Only 16% of Americans say people like them can shape how 
 
 <figure>
   <img src="screenshots/S14-soares-reel-stance.svg" alt="Bar chart of the Soares reel comments by stance: 53% accept, 24% reject, 6% accept in part, 17% other" />
-  <figcaption>Responses to the Soares reel by stance and emotion. Common Signals. Captured 7 November 2026.</figcaption>
+  <figcaption>Most commenters on the Soares reel accepted that AI is a serious danger: 53% accepted the argument and 24% rejected it. Common Signals. Captured 7 November 2026.</figcaption>
 </figure>
 
 **Try this:** one named action that takes two minutes, with the link beside it. "Your MP will vote on this. Tell them where you stand: it takes two minutes."
@@ -206,9 +202,8 @@ People act when they believe a group can make a difference and feel part of it. 
   <figcaption>A coalition made visible: the bill and the letter backing it. ControlAI. Captured 7 November 2026.</figcaption>
 </figure>
 
-PauseAI's protest outside Google DeepMind's London office in June 2025 drew about 60 people by Business Insider's count, which PauseAI says made it the [largest AI safety protest](https://pauseai.substack.com/p/we-held-the-largest-ai-safety-protest) yet. The Future of Life Institute's [statement on superintelligence](https://superintelligence-statement.org/) shows its signature count on the page: 78,199 when we checked.
+PauseAI's protest outside Google DeepMind's London office in June 2025 drew about 60 people by Business Insider's count, which PauseAI says made it the [largest AI safety protest](https://pauseai.substack.com/p/we-held-the-largest-ai-safety-protest) yet. The Future of Life Institute's [statement on superintelligence](https://superintelligence-statement.org/) shows its signature count on the page: 145,700 when we checked in November 2026, including 72,360 from a matching petition run by Ekō.
 
-<!-- SCREENSHOT S11: PauseAI protest outside Google DeepMind, June 2025, from pauseai.substack.com. Ben to capture (people in shot). Caption: "PauseAI outside Google DeepMind, London, June 2025. Photo: PauseAI." -->
 <figure>
   <img src="screenshots/S13-fli-superintelligence-statement.png" alt="Future of Life Institute statement on superintelligence with its signature count" />
   <figcaption>A running count makes the collective visible. Future of Life Institute. Captured 7 November 2026.</figcaption>
@@ -230,7 +225,7 @@ Our studies point the same way. Under [Christiane Amanpour's interview with Heid
 
 <figure>
   <img src="screenshots/S17-amanpour-stance.svg" alt="Bar chart of the Amanpour comments by stance: 68% agree, 18% disagree, 14% mixed" />
-  <figcaption>Under the accountability version of the story, anger outnumbered fear. Common Signals. Captured 7 November 2026.</figcaption>
+  <figcaption>Under the accountability version of the story, most commenters agreed with Khlaaf: 68% agreed and 18% disagreed. Common Signals. Captured 7 November 2026.</figcaption>
 </figure>
 
 **In practice.** ControlAI's [Artificial Guarantees](https://controlai.org/artificial-guarantees) pairs what Anthropic, OpenAI and Google DeepMind have said with what they then did. One entry sets OpenAI's commitment to publish reports on significant model releases beside its launch of GPT-4.1 with no [system card](https://commonsignals.org/glossary#model-card-and-system-card).
@@ -246,7 +241,6 @@ PauseAI built a protest around one broken promise. Google DeepMind signed the [F
   <img src="screenshots/S10-pauseai-deepmind-broken-promises.png" alt="PauseAI page on Google DeepMind&#x27;s broken safety commitments" />
   <figcaption>One company, one promise, one ask. PauseAI, CC BY 4.0. Captured 7 November 2026.</figcaption>
 </figure>
-<!-- SCREENSHOT S22: Business Insider headline on the protest (via aol.com). Headline only. Caption: "The sandwich-shop line carried the coverage. Business Insider, June 2025." -->
 
 **Try this:** "Google promised to publish its safety tests. Then it didn't."
 
@@ -315,8 +309,6 @@ Diffusion measured favourability for possible messengers on AI. Independent regu
 Our studies found calm, named experts rewarded and their backgrounds questioned. The most-liked praise under Ajeya Cotra's interview singled out her calm, unsensational delivery ([dataset](https://commonsignals.org/data/cotra-episode-2026-09/)). Early in the Amanpour thread, 26 of 283 comments raised Heidy Khlaaf's past work at OpenAI, roughly two to one against her; three days later only 6 of 322 did (observed).
 
 **In practice.** The Future of Life Institute's [statement on superintelligence](https://superintelligence-statement.org/) launched in October 2025 with signatories who rarely share a platform, from Steve Bannon to Prince Harry ([ANSA](https://www.ansa.it/amp/english/news/science_tecnology/2025/10/24/from-bannon-to-prince-harry800-against-ai-superintelligence_f2eb5ba8-a159-4e9b-ab1f-7b666f6e50d7.html)). Breadth of messenger was the message.
-
-<!-- SCREENSHOT S21: Fortune headline on the superintelligence statement, fortune.com. Headline only. Caption: "Unusual allies made the news. Fortune, October 2025." -->
 
 Parents and the charities that work with them carry authority no researcher has. In October 2024, after a Telegraph investigation found chatbots on Character.AI imitating Molly Russell and Brianna Ghey, the [Molly Rose Foundation's](https://mollyrosefoundation.org) Andy Burrows called it a gut punch, and Brianna's mother, Esther Ghey, called it another example of how dangerous the online world can be for young people ([Sky News via Q Radio](https://qradio.com/news/q-radio-national-news/a-gut-punch-character-ai-criticised-over-horrific-brianna-ghey-and-molly-russell-chatbots)). In the US, bereaved parents have formed groups such as Parents Rise to lobby on AI chatbots, and families who sued Character.AI and Google reached a settlement ([The New York Times, via The Star](https://www.thestar.com.my/tech/tech-news/2026/03/11/ai-incites-a-new-wave-of-grieving-parents-fighting-for-online-safety)).
 

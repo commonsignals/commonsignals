@@ -22,7 +22,7 @@ SLUG = "how-to-communicate-about-ai-safety"
 OUT = os.path.join(ROOT, f"{SLUG}.html")
 TEMPLATE = os.path.join(ROOT, "ai-safety-comms-reading-list.html")
 ASSET_DIR = os.path.join(ROOT, "assets", "toolkit")
-DATE_ISO, DATE_TEXT = "2026-11-07", "7 November 2026"
+DATE_ISO, DATE_TEXT = "2026-11-06", "6 November 2026"
 TAGS = ["Messaging", "Public opinion"]
 
 # Charts that already live in assets/ (with phone versions) are reused, not copied.
