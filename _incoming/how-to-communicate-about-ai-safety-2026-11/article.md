@@ -79,7 +79,7 @@ Every claim in this guide carries one of three grades:
 
 - Quoting numbers without a date, country, or source ([Principle 5](#5-show-people-theyre-in-the-majority-with-current-numbers)).
 
-## The big picture: where the public stands
+## Where the public stands on AI
 
 The public already has firm views on artificial intelligence. A communicator's job is rarely to raise the alarm from scratch. Far more often, the task is to give an already anxious public a practical outlet for their concerns.
 
