@@ -113,7 +113,7 @@ International surveys show the same unease. The [Stanford AI Index](https://hai.
 
 - **State your commitment to nonviolence clearly and often.** Aim frustration directly at policies, boardroom decisions, and regulatory gaps, never at individual researchers or staff. Always pair warnings with a lawful, constructive way to take part in democratic change.
 
-## Ten principles
+## Ten principles for AI safety communications
 
 ### 1. Start from what people already worry about
 
