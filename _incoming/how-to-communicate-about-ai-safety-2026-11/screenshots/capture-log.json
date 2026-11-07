@@ -1,0 +1,206 @@
+{
+  "S01": {
+    "id": "S01",
+    "url": "https://climateoutreach.org/btc/2025/toolkit/toolkit-climate-change-and-nature/",
+    "file": "S01-climate-outreach-three-dos.png",
+    "consent": "no banner",
+    "method": "element",
+    "clip": {
+      "x": 213,
+      "y": 1168,
+      "width": 854,
+      "height": 499
+    },
+    "captured_at": "2026-11-07T04:48:06.528Z",
+    "pageText": "Climate change and nature - Climate Outreach"
+  },
+  "S02": {
+    "id": "S02",
+    "url": "https://controlai.org/",
+    "file": "S02-controlai-homepage.png",
+    "consent": "clicked \"Only necessary\"",
+    "method": "viewport",
+    "captured_at": "2026-11-07T04:47:49.186Z",
+    "pageText": "Runaway Machine Intelligence: An Extinction Risk | ControlAI"
+  },
+  "S03": {
+    "id": "S03",
+    "url": "https://act.controlai.org/",
+    "file": "S03-controlai-take-action.png",
+    "consent": "clicked \"Only necessary\"",
+    "method": "element",
+    "clip": {
+      "x": 24,
+      "y": 169,
+      "width": 670,
+      "height": 1030
+    },
+    "captured_at": "2026-11-07T04:48:15.303Z",
+    "pageText": "ControlAI - Keep Humans in Control of AI"
+  },
+  "S05": {
+    "id": "S05",
+    "url": "https://controlai.org/artificial-guarantees",
+    "file": "S05-controlai-artificial-guarantees-gpt41.png",
+    "consent": "no banner",
+    "method": "element",
+    "clip": {
+      "x": 24,
+      "y": 6345,
+      "width": 1232,
+      "height": 374
+    },
+    "captured_at": "2026-11-07T04:48:28.885Z",
+    "pageText": "Artificial Guarantees | ControlAI"
+  },
+  "S06": {
+    "id": "S06",
+    "url": "https://controlai.org/uk-asi-bill",
+    "file": "S06-controlai-uk-asi-bill.png",
+    "consent": "clicked \"Only necessary\"",
+    "method": "element",
+    "clip": {
+      "x": 24,
+      "y": 121,
+      "width": 1232,
+      "height": 297
+    },
+    "captured_at": "2026-11-07T04:52:49.834Z",
+    "pageText": "UK Artificial Superintelligence Security Bill | ControlAI"
+  },
+  "S07": {
+    "id": "S07",
+    "url": "https://controlai.org/past-campaigns/campaign-against-deepfakes",
+    "file": "S07-controlai-deepfakes-campaign.png",
+    "consent": "no banner",
+    "method": "element",
+    "clip": {
+      "x": 24,
+      "y": 96,
+      "width": 1232,
+      "height": 1758
+    },
+    "captured_at": "2026-11-07T04:53:01.719Z",
+    "pageText": "Campaign Against Deepfakes | ControlAI"
+  },
+  "S08": {
+    "id": "S08",
+    "url": "https://pauseai.info/ai-not-just-coming-for-your-job",
+    "file": "S08-pauseai-not-just-your-job.png",
+    "consent": "no banner",
+    "method": "element",
+    "clip": {
+      "x": 232,
+      "y": 181,
+      "width": 816,
+      "height": 212
+    },
+    "captured_at": "2026-11-07T04:49:03.239Z",
+    "pageText": "AI is not just coming for your job"
+  },
+  "S09": {
+    "id": "S09",
+    "url": "https://pauseai.info/email-builder",
+    "file": "S09-pauseai-email-builder.png",
+    "consent": "no banner",
+    "method": "element",
+    "clip": {
+      "x": 232,
+      "y": 219,
+      "width": 816,
+      "height": 1364
+    },
+    "captured_at": "2026-11-07T04:51:44.976Z",
+    "pageText": "Email Builder"
+  },
+  "S10": {
+    "id": "S10",
+    "url": "https://pauseai.info/google-deepmind-broken-promises",
+    "file": "S10-pauseai-deepmind-broken-promises.png",
+    "consent": "no banner",
+    "method": "element",
+    "clip": {
+      "x": 232,
+      "y": 181,
+      "width": 816,
+      "height": 931
+    },
+    "captured_at": "2026-11-07T04:51:55.139Z",
+    "pageText": "Google DeepMind's Broken Promises"
+  },
+  "S12": {
+    "id": "S12",
+    "url": "https://pauseai.info/",
+    "file": "S12-pauseai-homepage-72.png",
+    "consent": "no banner",
+    "method": "element",
+    "clip": {
+      "x": 232,
+      "y": 2812,
+      "width": 816,
+      "height": 135
+    },
+    "captured_at": "2026-11-07T04:52:19.259Z",
+    "pageText": "We need to Pause AI"
+  },
+  "S13": {
+    "id": "S13",
+    "url": "https://superintelligence-statement.org/",
+    "file": "S13-fli-superintelligence-statement.png",
+    "consent": "no banner",
+    "method": "element",
+    "clip": {
+      "x": 210,
+      "y": 561,
+      "width": 860,
+      "height": 310
+    },
+    "captured_at": "2026-11-07T04:54:28.478Z",
+    "pageText": "Statement on Superintelligence"
+  },
+  "S18": {
+    "id": "S18",
+    "url": "https://www.americanson.ai/",
+    "file": "S18-americans-on-ai-concerned-over-time.png",
+    "consent": "no banner",
+    "method": "element",
+    "clip": {
+      "x": 308,
+      "y": 3144,
+      "width": 664,
+      "height": 504
+    },
+    "captured_at": "2026-11-07T04:50:21.658Z",
+    "pageText": "Overall – Americans on AI"
+  },
+  "S19": {
+    "id": "S19",
+    "url": "https://www.americanson.ai/",
+    "file": "S19-americans-on-ai-ours-to-shape.png",
+    "consent": "no banner",
+    "method": "element",
+    "clip": {
+      "x": 308,
+      "y": 4290,
+      "width": 664,
+      "height": 365
+    },
+    "captured_at": "2026-11-07T04:50:35.004Z",
+    "pageText": "Overall – Americans on AI"
+  },
+  "S20": {
+    "id": "S20",
+    "url": "https://www.adalovelaceinstitute.org/policy-briefing/great-expectations/",
+    "file": "S20-ada-lovelace-key-findings.png",
+    "consent": "no banner",
+    "method": "element",
+    "clip": {
+      "x": 242,
+      "y": 1548,
+      "width": 796,
+      "height": 691
+    },
+    "captured_at": "2026-11-07T04:50:49.300Z",
+    "pageText": "Great (public) expectations | Ada Lovelace Institute"
+  }
+}
