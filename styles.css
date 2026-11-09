@@ -1029,6 +1029,13 @@ footer.site .copyright a:hover { color: var(--teal); border-color: var(--teal); 
   color: var(--ink-soft);
   margin: 0;
 }
+.article-subtitle {
+  font-family: var(--serif);
+  font-size: clamp(1.15rem, 2.4vw, 1.3rem);
+  line-height: 1.4;
+  color: var(--ink-soft);
+  margin: 0 0 1rem;
+}
 .article-standfirst {
   font-family: var(--serif);
   font-size: clamp(1.2rem, 2.6vw, 1.4rem);
@@ -1036,6 +1043,21 @@ footer.site .copyright a:hover { color: var(--teal); border-color: var(--teal); 
   color: var(--ink);
   margin: 0 0 1rem;
 }
+.short-answer {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.2rem 1.4rem;
+  margin: 1.4rem 0 1.6rem;
+}
+.short-answer-label {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--teal-text);
+  margin: 0 0 0.4rem;
+}
+.short-answer p:last-child { margin: 0; }
 
 .share-copy {
   display: inline-flex;
