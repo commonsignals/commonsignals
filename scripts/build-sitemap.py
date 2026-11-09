@@ -2,7 +2,11 @@
 
 Run from the repo root: python3 scripts/build-sitemap.py
 Pages marked noindex (the per-comment templates under data/*/c/, and 404.html
-itself) are left out. The 404 page searches search-index.json in the browser.
+itself) are left out, and so is anything in NOT_PAGES or that isn't a complete HTML
+document. The 404 page searches search-index.json in the browser.
+
+Partials must not end in .html, because Cloudflare Pages serves every .html file in
+the repo as a public page. The 404 partials are scripts/404-head.inc and 404-main.inc.
 """
 import datetime
 import json
@@ -14,6 +18,7 @@ from pathlib import Path
 SITE = "https://commonsignals.org"
 TODAY = datetime.date.today().isoformat()
 ROOT = Path(__file__).resolve().parent.parent
+NOT_PAGES = ("scripts/", "_incoming/")
 
 SECTIONS = [
     ("Main pages", ["index.html", "about.html", "research.html", "findings.html", "tools.html",
@@ -35,10 +40,10 @@ def pages():
     out = []
     for f in files:
         p = ROOT / f
-        if not p.exists():
+        if f.startswith(NOT_PAGES) or not p.exists():
             continue
         s = p.read_text(encoding="utf-8")
-        if 'content="noindex' in s:
+        if 'content="noindex' in s or not re.search(r"<html[\s>]", s, re.I):
             continue
         canon = re.search(r'<link rel="canonical" href="([^"]+)"', s)
         url = canon.group(1) if canon else SITE + "/" + re.sub(r"(index)?\.html$", "", f)
@@ -157,8 +162,8 @@ def write_404():
     head = re.sub(r'<link rel="canonical"[^>]*>\n', "", head)
     head = re.sub(r'<meta property="og:url"[^>]*>\n', "", head)
     head = head.replace('<meta name="robots" content="index, follow" />', '<meta name="robots" content="noindex" />')
-    head = head.replace("</head>", (ROOT / "scripts" / "404-head.html").read_text(encoding="utf-8") + "</head>")
-    main = (ROOT / "scripts" / "404-main.html").read_text(encoding="utf-8")
+    head = head.replace("</head>", (ROOT / "scripts" / "404-head.inc").read_text(encoding="utf-8") + "</head>")
+    main = (ROOT / "scripts" / "404-main.inc").read_text(encoding="utf-8")
     (ROOT / "404.html").write_text(head + main + foot, encoding="utf-8")
 
 
