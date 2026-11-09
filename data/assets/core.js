@@ -91,20 +91,6 @@ window.CS = window.CS || {};
     return `<span class="${cls}" tabindex="0" aria-describedby="${tipId}">${CS.esc(label)}<span class="code-chip-tip" role="tooltip" id="${tipId}">${CS.esc(definition)}</span></span>`;
   };
 
-  // A <details> block, closed by default (per contract, one click to expand,
-  // not buried), listing a study's version history from study.json's
-  // changelog (oldest first, as stored). Used on both a study's own explorer
-  // page and its card on /data/, so a revised study's history (a recode, a
-  // superseded run) is visible in both places without opening study.json.
-  CS.changelogHTML = function changelogHTML(changelog, version) {
-    if (!changelog || !changelog.length) return '';
-    const items = changelog.map((c) =>
-      `<li><strong>v${CS.esc(c.version)}</strong>, ${CS.esc(CS.formatDate(c.date))}: ${CS.esc(c.note)}</li>`
-    ).join('');
-    const label = version ? `Changelog (version ${CS.esc(version)})` : 'Changelog';
-    return `<details class="study-changelog"><summary>${label}</summary><ul>${items}</ul></details>`;
-  };
-
   CS.fetchErrorHTML = function fetchErrorHTML(err, slug) {
     const subject = encodeURIComponent('Data explorer: ' + (slug || ''));
     return `<p class="study-empty">Could not load this study's data (${CS.esc(err.message)}). Try the raw files directly: <a href="/data/studies/${CS.esc(slug)}/study.json">study.json</a>, <a href="/data/studies/${CS.esc(slug)}/comments.csv">comments.csv</a>, or <a href="mailto:hello@commonsignals.org?subject=${subject}">tell us if that looks wrong</a>.</p>`;

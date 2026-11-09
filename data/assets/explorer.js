@@ -232,23 +232,12 @@
     const allDims = buildAllDims(codebook, comments);
 
     document.title = study.title + ': Common Signals data explorer';
-    const h1 = document.getElementById('studyTitle');
-    if (h1) h1.textContent = study.title;
-    const metaEl = document.getElementById('studyMeta');
-    if (metaEl) {
-      metaEl.innerHTML = `<strong>${study.counts.coded.toLocaleString()}</strong> comments coded &middot; <strong>${study.counts.clear_position_base.toLocaleString()}</strong> take a clear position &middot; ${CS.esc(study.platform)}`;
-      if ((study.changelog || []).length) {
-        metaEl.insertAdjacentHTML('afterend', CS.changelogHTML(study.changelog, study.version));
-      }
-    }
+    // The title, counts, changelog and article link are pre-rendered by
+    // scripts/build-data-pages.py, so this script only runs the explorer itself.
     document.querySelectorAll('[data-study-slug]').forEach((el) => { el.textContent = slug; });
     document.querySelectorAll('a[data-study-link]').forEach((el) => {
       el.setAttribute('href', el.getAttribute('data-study-link').replace('SLUG', encodeURIComponent(slug)));
     });
-    if (study.article_url) {
-      const articleLink = document.getElementById('articleLink');
-      if (articleLink) { articleLink.href = study.article_url; articleLink.hidden = false; }
-    }
 
     let state = stateFromURL(allDims);
 

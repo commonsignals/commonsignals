@@ -35,6 +35,7 @@
 
 <link rel="stylesheet" href="/styles.css?v=20260929b" />
 <link rel="stylesheet" href="/data/assets/explorer.css?v=20260928" />
+<!-- build-data:start jsonld -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -43,9 +44,28 @@
   "description": "Search and filter all 261 coded YouTube Shorts comments on the Diary of a CEO trailer for its AI debate: stance, frame, emotion and engagement, comment by comment.",
   "url": "https://commonsignals.org/data/doac-clip-shorts-2026-09/",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "isPartOf": { "@type": "WebSite", "name": "Common Signals", "url": "https://commonsignals.org/" }
+  "creator": {
+    "@type": "Organization",
+    "name": "Common Signals",
+    "url": "https://commonsignals.org/"
+  },
+  "datePublished": "2026-10-07",
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "comments.csv",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://commonsignals.org/data/studies/doac-clip-shorts-2026-09/comments.csv"
+    }
+  ],
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Common Signals",
+    "url": "https://commonsignals.org/"
+  }
 }
 </script>
+<!-- build-data:end jsonld -->
 </head>
 <body>
 
@@ -101,8 +121,11 @@
 <main id="top">
 
   <div class="page-hero study-hero">
-    <h1 id="studyTitle">Loading study&hellip;</h1>
-    <p id="studyMeta" class="meta"></p>
+    <!-- build-data:start hero -->
+    <h1 id="studyTitle">YouTube Shorts comments on the Diary of a CEO trailer for its AI debate</h1>
+    <p id="studyMeta" class="meta"><strong>261</strong> comments coded &middot; <strong>171</strong> take a clear position &middot; youtube_shorts</p>
+    <details class="study-changelog"><summary>Changelog (version 2)</summary><ul><li><strong>v1</strong>, 7 Oct 2026: First release. A first pass under codebook v1 fell just short of the 90% reliability bar on stance (88.2%) and frame (88.8%). Codebook v2 defined unclear against na and added tie-breaks for debater_verdict and other; every row coded unclear, other or debater_verdict across the five DOAC studies (14,993 of 26,019) was recoded blind under it.</li><li><strong>v2</strong>, 9 Oct 2026: Corrected the artefact. Version 1 described this post as the 104-second Diary of a CEO clip of Nate Soares, posted to four platforms. Checking the transcript and frames showed it is a trailer for the full debate, a montage of the host and all four panellists in which Soares has one line, and a different video from the TikTok, Instagram and Facebook posts. Title, artefact_title and notes updated; the comments and their codes are unchanged.</li></ul></details>
+    <!-- build-data:end hero -->
   </div>
 
   <div class="study-layout wrap">
@@ -137,7 +160,7 @@
 
   <section class="study-contract-note">
     <div class="wrap">
-      <p>Full data contract, licence and the other studies in this series: <a href="/data/studies/README.md">/data/studies/README.md</a>. Raw files for this study: <a href="/data/studies/doac-clip-shorts-2026-09/study.json">study.json</a>, <a href="/data/studies/doac-clip-shorts-2026-09/codebook.json">codebook.json</a>, <a href="/data/studies/doac-clip-shorts-2026-09/comments.csv">comments.csv</a>. Codebook: <a href="/data/doac-clip-shorts-2026-09/codebook/">/data/doac-clip-shorts-2026-09/codebook/</a>. Companion article: <a id="articleLink" href="#" hidden>read it here</a>.</p>
+      <p>Full data contract, licence and the other studies in this series: <a href="/data/studies/README.md">/data/studies/README.md</a>. Raw files for this study: <a href="/data/studies/doac-clip-shorts-2026-09/study.json">study.json</a>, <a href="/data/studies/doac-clip-shorts-2026-09/codebook.json">codebook.json</a>, <a href="/data/studies/doac-clip-shorts-2026-09/comments.csv">comments.csv</a>. Codebook: <a href="/data/doac-clip-shorts-2026-09/codebook/">/data/doac-clip-shorts-2026-09/codebook/</a>. Companion article: <a id="articleLink" href="https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis">read it here</a>.</p>
     </div>
   </section>
 

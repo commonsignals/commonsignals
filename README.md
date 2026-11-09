@@ -22,6 +22,18 @@ python3 -m http.server 8000
 
 Then open http://localhost:8000.
 
+## Data pages
+
+`data/index.html` and every `data/<slug>/` and `data/<slug>/codebook/` page hold pre-rendered content between `build-data:start` and `build-data:end` markers, so search engines and AI assistants can read them without running JavaScript. After changing a study, run:
+
+```bash
+python3 scripts/data-export.py index
+python3 scripts/data-export.py build <slug>
+python3 scripts/build-data-pages.py
+```
+
+Only the comment explorer itself still loads in the browser.
+
 ## Glossary and editorial conventions
 
 Glossary terms live in one file, `data/glossary-terms.json`. To add or change a term, edit that file and run:
