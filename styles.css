@@ -1059,7 +1059,9 @@ footer.site .copyright a:hover { color: var(--teal); border-color: var(--teal); 
 }
 .short-answer p:last-child { margin: 0; }
 
-.share-copy {
+/* .ai-copy is the Copy for AI button: the same look, its own click handler. */
+.share-copy,
+.ai-copy {
   display: inline-flex;
   align-items: center;
   gap: 0.5em;
@@ -1074,9 +1076,12 @@ footer.site .copyright a:hover { color: var(--teal); border-color: var(--teal); 
   cursor: pointer;
   transition: color 0.15s ease;
 }
-.share-copy svg { width: 18px; height: 18px; flex: none; }
-.share-copy:hover { color: var(--teal); }
-.share-copy[data-copied="true"] { color: #296b35; }
+.share-copy svg,
+.ai-copy svg { width: 18px; height: 18px; flex: none; }
+.share-copy:hover,
+.ai-copy:hover { color: var(--teal); }
+.share-copy[data-copied="true"],
+.ai-copy[data-copied="true"] { color: #296b35; }
 
 .hero-actions {
   display: flex;
@@ -1085,7 +1090,8 @@ footer.site .copyright a:hover { color: var(--teal); border-color: var(--teal); 
   gap: 0.5rem 1.8rem;
   margin-top: 1.4rem;
 }
-.hero-actions .share-copy { margin-top: 0; }
+.hero-actions .share-copy,
+.hero-actions .ai-copy { margin-top: 0; }
 .hero-data-link {
   font-family: var(--mono);
   font-size: 1rem;

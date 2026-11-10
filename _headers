@@ -1,0 +1,71 @@
+# Response headers for Cloudflare Pages.
+# Everything between the build-markdown markers is written by scripts/build-markdown.py:
+# never edit it by hand. Add any other rules outside the markers.
+
+# build-markdown:start
+/about.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://commonsignals.org/about>; rel="canonical"
+
+/ai-risk-reel-analysis-nate-soares-miri.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri>; rel="canonical"
+
+/ai-safety-comms-reading-list.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://commonsignals.org/ai-safety-comms-reading-list>; rel="canonical"
+
+/cant-we-just-unplug-it-doac-ai-debate-comment-analysis.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis>; rel="canonical"
+
+/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://commonsignals.org/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh>; rel="canonical"
+
+/coxon-resignation-x-analysis.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://commonsignals.org/coxon-resignation-x-analysis>; rel="canonical"
+
+/data/index.html.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://commonsignals.org/data/>; rel="canonical"
+
+/findings.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://commonsignals.org/findings>; rel="canonical"
+
+/glossary.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://commonsignals.org/glossary>; rel="canonical"
+
+/how-to-communicate-about-ai-safety.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://commonsignals.org/how-to-communicate-about-ai-safety>; rel="canonical"
+
+/methodology.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://commonsignals.org/methodology>; rel="canonical"
+
+/openai-and-shut-metr-hugging-face.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://commonsignals.org/openai-and-shut-metr-hugging-face>; rel="canonical"
+
+/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf>; rel="canonical"
+
+/research/library/index.html.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://commonsignals.org/research/library/>; rel="canonical"
+
+/theory-of-change.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://commonsignals.org/theory-of-change>; rel="canonical"
+
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+
+/llms-full.txt
+  Content-Type: text/plain; charset=utf-8
+# build-markdown:end

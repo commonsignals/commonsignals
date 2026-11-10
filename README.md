@@ -34,6 +34,17 @@ python3 scripts/build-data-pages.py
 
 Only the comment explorer itself still loads in the browser.
 
+## Markdown versions and llms.txt
+
+Each research page has a markdown copy beside it for AI tools: `/methodology` has `/methodology.md`, and `/data/` has `/data/index.html.md`. `/llms.txt` indexes them and `/llms-full.txt` holds them all in one file. They are converted from the pages' own HTML, so after changing one of those pages, a study's `study.json` or `data/studies/index.json`, run:
+
+```bash
+python3 scripts/build-markdown.py
+python3 scripts/check-markdown.py
+```
+
+The build also keeps each page's `<link rel="alternate" type="text/markdown">`, the Copy for AI button in article heroes and the build-markdown region of `_headers`. Never edit those or the generated files by hand. The check compares every markdown file with its page and lists anything missing.
+
 ## Glossary and editorial conventions
 
 Glossary terms live in one file, `data/glossary-terms.json`. To add or change a term, edit that file and run:

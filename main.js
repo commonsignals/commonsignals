@@ -347,6 +347,45 @@ document.addEventListener('click', async (e) => {
   }, 2000);
 });
 
+// Copy for AI, the button scripts/build-markdown.py puts in article heroes.
+// It copies the page's markdown version (data-md) for pasting into an AI tool,
+// and opens that file instead when the clipboard is unavailable. Safari only
+// allows a clipboard write that starts during the click, so the text goes in
+// as a promise; browsers without ClipboardItem fall back to writeText.
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.ai-copy');
+  if (!btn) return;
+  const url = btn.dataset.md;
+  const clipboard = window.isSecureContext && navigator.clipboard;
+  if (!clipboard) {
+    location.href = url;
+    return;
+  }
+  const label = btn.querySelector('.ai-copy-label');
+  if (label && btn.dataset.defaultLabel === undefined) btn.dataset.defaultLabel = label.textContent;
+  const text = fetch(url).then((r) => {
+    if (!r.ok) throw new Error(r.status);
+    return r.text();
+  });
+  let copied;
+  try {
+    copied = clipboard.write([new ClipboardItem({ 'text/plain': text.then((t) => new Blob([t], { type: 'text/plain' })) })]);
+  } catch {
+    copied = Promise.reject();
+  }
+  clearTimeout(btn._resetTimer);
+  copied.catch(() => text.then((t) => clipboard.writeText(t))).then(() => {
+    if (label) label.textContent = 'Copied';
+    btn.setAttribute('data-copied', 'true');
+    btn._resetTimer = setTimeout(() => {
+      if (label) label.textContent = btn.dataset.defaultLabel;
+      btn.removeAttribute('data-copied');
+    }, 2000);
+  }, () => {
+    location.href = url;
+  });
+});
+
 // Site search, shared by the header search panel and the 404 page. Pages
 // are scored against search-index.json (built by scripts/build-sitemap.py):
 // a word in the title counts 3, in the URL 2, in the description 1.

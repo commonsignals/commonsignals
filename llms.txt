@@ -1,0 +1,37 @@
+# Common Signals
+
+> Common Signals helps people explaining AI know which messages actually work: research, tools, training and workshops for anyone talking about AI.
+
+The coded data lives at [/data/](https://commonsignals.org/data/). The coding and compilation are CC BY 4.0; comment text remains its authors'.
+
+## Studies
+
+- [YouTube comments on the Amanpour and Company Khlaaf segment](https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf.md): Central claim: The real story of the OpenAI agent-swarm incident is corporate negligence and hype, not a machine going rogue.
+- [YouTube comments on the Dwarkesh Podcast episode with Ajeya Cotra, "This might be the clearest warning shot we ever get"](https://commonsignals.org/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh.md): Central claim: The incident is real, accurately described, and a serious warning about losing control of AI agents.
+- [X replies to Jacob Coxon's Anthropic resignation thread](https://commonsignals.org/coxon-resignation-x-analysis.md): Central claim: Neither OpenAI nor Anthropic is acting responsibly with frontier AI, and both are racing towards dangerous self-improving superintelligence.
+- [Facebook comments on a 21-minute Diary of a CEO cut of the AI debate](https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis.md): Central claim: Advanced AI could become impossible for humans to control and poses a serious risk, up to human extinction, that justifies slowing or stopping development.
+- [Instagram comments on a two-minute Diary of a CEO clip of Nate Soares](https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis.md): Central claim: Advanced AI could become impossible for humans to control and poses a serious risk, up to human extinction, that justifies slowing or stopping development.
+- [YouTube Shorts comments on the Diary of a CEO trailer for its AI debate](https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis.md): Central claim: Advanced AI could become impossible for humans to control and poses a serious risk, up to human extinction, that justifies slowing or stopping development.
+- [TikTok comments on a two-minute Diary of a CEO clip of Nate Soares](https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis.md): Central claim: Advanced AI could become impossible for humans to control and poses a serious risk, up to human extinction, that justifies slowing or stopping development.
+- [YouTube comments on the Diary of a CEO AI debate episode](https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis.md): Central claim: Advanced AI could become impossible for humans to control and poses a serious risk, up to human extinction, that justifies slowing or stopping development.
+- [Reddit reception of the OpenAI and Hugging Face incident, before and after the METR investigation](https://commonsignals.org/openai-and-shut-metr-hugging-face.md): Central claim: The incident happened broadly as OpenAI and METR describe it, and it matters.
+- [Instagram comments on Nate Soares's reel "We stop AI. You help?"](https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri.md): Central claim: AI poses a serious existential danger to humanity, and this is worth taking seriously and acting on.
+
+## Articles
+
+- [How to communicate about AI safety](https://commonsignals.org/how-to-communicate-about-ai-safety.md): An evidence-based guide for anyone explaining AI risks to the public: ten principles, four ground rules and seven issue guides, each graded by the strength of its evidence.
+- [Findings so far: what four comment-thread studies say about explaining AI risk](https://commonsignals.org/findings.md): Four studies, 3,617 coded comments across three platforms, and nine patterns that hold across at least two of the four, each stated as a hypothesis with the base it was measured on.
+
+## Methods and data
+
+- [Methodology](https://commonsignals.org/methodology.md): Common Signals studies how the people who see messages about AI respond to them. Our theory of change explains how this work fits our wider aims. This page describes the method our studies share, so anyone can check, criticise or repeat the work. Each study publishes its own figures, codebook and dataset.
+- [Data](https://commonsignals.org/data/index.html.md): Browse and filter the coded comment datasets behind Common Signals' reception studies: every comment, its stance, frame and emotion, published under CC BY 4.0.
+- [The studies data contract](https://commonsignals.org/data/studies/README.md): Each study folder under /data/studies/ holds comments.csv, codebook.json and study.json.
+
+## Optional
+
+- [AI safety comms reading list: where to start](https://commonsignals.org/ai-safety-comms-reading-list.md): A reading list of the existing research on how the public receives messages about AI risk, for anyone new to AI safety who wants to join the conversation knowing what's already been tested.
+- [Creating a social mandate for AI governance](https://commonsignals.org/theory-of-change.md): Why AI governance needs a public mandate to be durable, and how Common Signals plans to help build one.
+- [About](https://commonsignals.org/about.md): Common Signals is an independent, neutral research initiative building the evidence base for public understanding of AI.
+- [AI Safety Glossary](https://commonsignals.org/glossary.md): Plain-English definitions of the terms Common Signals uses across its research, tools and strategy.
+- [Research library](https://commonsignals.org/research/library/index.html.md): A directory of existing research on public attitudes to AI, and on how to frame and communicate AI risk, across both the existential-risk and present-day-harms conversations.
