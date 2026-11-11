@@ -4,12 +4,12 @@ url: "https://commonsignals.org/research/agenda"
 published: 2026-11-11
 updated: 2026-11-11
 publisher: "Common Signals"
-cite: "Ben Matthews, Common Signals, 'Common Signals research agenda', version 0.1, 11 November 2026, https://commonsignals.org/research/agenda."
+cite: "Ben Matthews, Common Signals, 'Common Signals research agenda', version 0.2, 11 November 2026, https://commonsignals.org/research/agenda."
 ---
 
 # Common Signals research agenda
 
-11 November 2026 · Ben Matthews · Version 0.1
+11 November 2026 · Ben Matthews · Version 0.2
 
 Eleven hypotheses about how audiences receive messages on AI risk, the four to settle first in 2027, and how each can be tested.
 
@@ -63,6 +63,7 @@ H1 to H9 keep the numbering of the nine patterns on our earlier findings page. H
 - **Status:** recurring. The cause is unknown.
 - **Evidence:** 28 of 1,534 comments under the reel asked what to do, 6 of 1,245 under the Cotra interview, and none of 283 in the first Khlaaf capture. Under 1% did on the debate's YouTube and Facebook threads (25,661 coded comments).
 - **Limits:** a comment section may not be where people ask about action. The debate study says its data cannot separate that from helplessness.
+- **Tested elsewhere:** fear-appeal research finds that warnings move people to act only when they also believe an effective response exists, as [Gerjo Kok and colleagues](https://doi.org/10.1080/17437199.2017.1415767) argue, which predicts this pattern. In [Social Change Lab's randomised trial](https://www.socialchangelab.org/research/which-ai-harms-and-risks.html), over a quarter of participants clicked through to sign a real AI regulation petition. Neither tests whether adding a step to AI coverage changes what commenters ask.
 - **Test:** one incident story with and without a single concrete step, measuring clicks to that step or stated intention to act.
 - **Who needs the answer:** campaign organisations deciding what to ask of a newly worried audience.
 
@@ -71,6 +72,7 @@ H1 to H9 keep the numbering of the nine patterns on our earlier findings page. H
 - **Status:** recurring, and confounded by audience.
 - **Evidence:** an abstract warning produced resignation, with fatalistic comments drawing a fifth of likes under the reel. A mechanism-rich incident produced fear: 35% of agreeing comments under Cotra, against 11% resigned. A named corporate target produced anger: 44% of agreeing comments under Khlaaf, against 3% fearful.
 - **Limits:** each telling reached a different audience. Kim Witte's 1992 fear-appeals model predicts the resignation result. It does not predict the anger result, because no commenter in the first Khlaaf capture asked what to do either.
+- **Tested elsewhere:** in [Social Change Lab's randomised trial](https://www.socialchangelab.org/research/which-ai-harms-and-risks.html), messages that generated justified outrage outperformed messages that generated fear or anxiety, and reading about AI-enabled warfare raised concern about existential risk more than reading about existential risk itself. That supports the anger result. Whether the telling or the audience produced the emotions in our threads is still open.
 - **Test:** one incident written three ways, measuring emotion and intention to act.
 - **Who needs the answer:** writers and producers deciding how to tell the next incident.
 
@@ -111,6 +113,7 @@ H1 to H9 keep the numbering of the nine patterns on our earlier findings page. H
 - **Status:** contested. This is the hypothesis we most want tested.
 - **Evidence for:** under the reel it was the one frame both sides used. Under Cotra, 93 comments centred OpenAI's conduct and 74 of them were coded mixed. Under Khlaaf the frame took 23% of comments and 56% of likes. On X, replies blaming greed agreed with Coxon 74% of the time.
 - **Evidence against:** under the debate's Shorts trailer, comments saying the people who control AI are the danger held 41% of likes, and commenters set that against the risk case. The frame may replace the risk argument instead of carrying it.
+- **Tested elsewhere:** in [Diffusion's dial tests](https://diffusion-beta.netlify.app/articles/uk-compass-report) with a nationally representative UK sample, the strongest messages named who is responsible, the choice they are making, what is at stake and what should be done. That supports leading with responsibility. It does not test whether the frame carries the risk argument or replaces it, which is why H8 stays contested. Principle 10 of our guide, which grades [connecting present-day harms and catastrophic risk](https://commonsignals.org/how-to-communicate-about-ai-safety#10-connect-present-day-harms-and-catastrophic-risk-instead-of-ranking-them) as tested, rests on evidence about leading with a concrete harm, not about who is blamed.
 - **Test:** an accountability frame against a machine-agency frame, measuring agreement with the risk case as well as with the frame, with and without a policy ask.
 - **Who needs the answer:** existential-risk and present-day-harms organisations deciding whether they can share a message.
 
@@ -184,15 +187,20 @@ The Diary of a CEO study meets all five. The five earlier studies were each chec
 
 ## Citing and taking on a hypothesis
 
-Cite the agenda with its version and the hypothesis number, for example: Ben Matthews, Common Signals, Research agenda v0.1, 11 November 2026, H6.
+Cite the agenda with its version and the hypothesis number, for example: Ben Matthews, Common Signals, Research agenda v0.2, 11 November 2026, H6.
 
 Numbers are permanent. A refuted hypothesis keeps its number and is marked refuted. New hypotheses take the next number. Every change of status is logged here with its date and the study behind it.
 
 To take on a hypothesis, email [hello@commonsignals.org](mailto:hello@commonsignals.org). We will share the datasets and codebooks, and we ask only that the result is reported whatever it shows. We will link to it from this page.
 
+## Version history
+
+- 0.2, 11 November 2026: added a "Tested elsewhere" line to H2, H3 and H8, setting out what controlled studies by others already show. No status changed.
+- 0.1, 11 November 2026: first published version.
+
 ## How to cite
 
-Cite as: Ben Matthews, Common Signals, 'Common Signals research agenda', version 0.1, 11 November 2026, [https://commonsignals.org/research/agenda](https://commonsignals.org/research/agenda).
+Cite as: Ben Matthews, Common Signals, 'Common Signals research agenda', version 0.2, 11 November 2026, [https://commonsignals.org/research/agenda](https://commonsignals.org/research/agenda).
 
 ### Disclosure
 
