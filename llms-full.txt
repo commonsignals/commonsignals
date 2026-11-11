@@ -410,7 +410,7 @@ Anyone planning to raise AI risk on X. Anyone weighing whether an insider gets a
 ## Key findings
 
 - Of the 1,840 replies where we could tell what the writer thought, 43% agreed with Coxon that the labs are racing recklessly towards superintelligence, 40% disagreed and 18% were mixed.
-- Counting likes, agreement rises to 51%. That is still well below [our earlier research](https://commonsignals.org/research), where agreement ran from 68% to 98%.
+- Counting likes, agreement rises to 51%. Counting comments, the 43% is below all of [our earlier studies](https://commonsignals.org/research), where agreement ran from 51% to 69%.
 - The most-liked reply, with 28,913 likes, was a joke: "Well this was a pleasant read right before bed." Jokes, one-liners and bare agreement were 23% of replies but took nearly 60% of likes.
 - The most common objection, from one in five sceptical replies, was that AI can't improve itself into the superintelligence Coxon warns of. Next, at 13%, was that slowing down would just hand the lead to China.
 - A third of agreeing replies were afraid. A third of disagreeing replies were angry, and almost none were afraid. The sceptics weren't shrugging Coxon off; many were angry about what he said.
@@ -452,7 +452,7 @@ What was coded. Stance percentages use the 1,840 base; frame and format shares u
 
 ## Disagreement with Coxon
 
-Replies split almost evenly: 43% agreed with Coxon that the labs are racing recklessly towards superintelligence, and 40% disagreed. Counting likes, it was 51% to 38%. Our earlier studies were far more one-sided: 98% of comments that took a view on [the Soares reel](https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri) agreed, and 68% on [the Amanpour segment](https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf).
+Replies split almost evenly: 43% agreed with Coxon that the labs are racing recklessly towards superintelligence, and 40% disagreed. Counting likes, it was 51% to 38%. Our earlier studies were more one-sided. Of comments that took a view, 59% agreed on [the Cotra interview](https://commonsignals.org/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh) and 68% on [the Amanpour segment](https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf). On [Reddit](https://commonsignals.org/openai-and-shut-metr-hugging-face) it was 51% before the METR and Redwood Research report and 69% after it. On [the Soares reel](https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri) it was 53%, but that base also includes the 17% of comments whose stance was unclear.
 
 We believe that many of the people replying work in or near the AI industry and treat Coxon as one of their peers.
 
@@ -533,6 +533,8 @@ Replies that blamed greed or the urge for control, rather than the technology, a
 Codebook and dataset: [commonsignals.org/data/coxon-resignation-2026-09/](https://commonsignals.org/data/coxon-resignation-2026-09/).
 
 Cite as: Common Signals, '"Neither company is acting responsibly": how X received Jacob Coxon's resignation from Anthropic', September 2026.
+
+Corrected 11 November 2026: we compared Coxon's reception with our earlier studies using the wrong figures. Agreement in those studies ran from 51% to 69%, not 68% to 98%, and 53% on the Soares reel, not 98%.
 
 [Explore the data →](https://commonsignals.org/data/coxon-resignation-2026-09/)
 
