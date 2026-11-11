@@ -45,6 +45,11 @@
     "definition": "The shared belief that people acting together can achieve a result. Albert Bandura introduced the idea alongside self-efficacy. Research on protest and campaigning finds it is one of the strongest predictors of whether people take part in collective action, alongside anger at an injustice and identifying with the group."
   },
   {
+    "id": "comment-thread-study",
+    "term": "Comment-thread study",
+    "definition": "A Common Signals study of the comments people left under one piece of AI communication, such as a podcast episode, news interview, reel or Reddit thread. Each comment is coded for its stance on the piece's central claim, its frame, its reaction to the format and the messenger, and its emotional register. Commenters choose themselves and platforms rank what gets seen, so a study describes one audience's reaction to one piece and generates hypotheses for testing, not findings about what the public thinks."
+  },
+  {
     "id": "compute-governance",
     "term": "Compute governance",
     "definition": "Using the physical hardware needed to train and run large AI models, mainly advanced chips and data centres, as a lever for policy: tracking who has it, restricting exports, or attaching obligations to large training runs. Chips are physical, countable and made by very few companies, which is why policymakers focus on them."
@@ -68,6 +73,11 @@
     "id": "efficacy",
     "term": "Efficacy",
     "definition": "In communication research, a person's belief that a threat can be dealt with. Self-efficacy is the belief that you can carry out the recommended action; response efficacy is the belief that the action would work. Messages that raise fear without either tend to produce avoidance rather than action."
+  },
+  {
+    "id": "established-evidence-grade",
+    "term": "Established (evidence grade)",
+    "definition": "One of the three evidence grades in the Common Signals toolkit, How to communicate about AI safety. A claim graded established rests on findings replicated across multiple studies and fields, such as public health and climate communications."
   },
   {
     "id": "eu-ai-act",
@@ -145,6 +155,11 @@
     "definition": "Documentation released alongside a model describing what it was trained to do, how it was evaluated and where it falls short. The model card format was proposed by Margaret Mitchell and colleagues in 2019; \"system card\" is the term several developers now use for longer reports covering safety testing."
   },
   {
+    "id": "observed-evidence-grade",
+    "term": "Observed (evidence grade)",
+    "definition": "One of the three evidence grades in the Common Signals toolkit, How to communicate about AI safety. A claim graded observed rests on real-world patterns noticed in focus groups, comment-thread studies and campaign reports."
+  },
+  {
     "id": "open-weights",
     "term": "Open weights",
     "definition": "A model whose trained parameters (weights) are published so anyone can download and run it. This is not the same as open source, which would also require the training data and code. Open weights cannot be recalled once released, which is why they feature in debates about misuse."
@@ -153,6 +168,11 @@
     "id": "present-day-harms",
     "term": "Present-day harms",
     "definition": "Harms from AI systems already in use: discrimination, misinformation, privacy leaks, toxic content, effects on jobs and the environment. DeepMind's 2021 taxonomy identified 21 such risks from language models across six areas."
+  },
+  {
+    "id": "readable-position",
+    "term": "Readable position",
+    "definition": "In a comment-thread study, the comments whose stance on the central claim can be read: in most studies, those coded agree, disagree or mixed. Comments coded not applicable, such as jokes, questions and off-topic remarks, are always left out, and most studies also leave out those coded unclear. Stance percentages are shares of this base, and each study states which comments it includes."
   },
   {
     "id": "red-teaming",
@@ -200,6 +220,11 @@
     "definition": "A model's knowledge of what it is and what is happening to it, including whether it is being tested or used for real. Matters because a model that can tell it is being evaluated could behave differently under test."
   },
   {
+    "id": "stance",
+    "term": "Stance",
+    "definition": "In a comment-thread study, a comment's position on the central claim of the piece it responds to: agree, disagree, mixed, unclear or not applicable. The central claim is written down before coding starts, and where a piece argues against an earlier account, agree means accepting its reframing."
+  },
+  {
     "id": "suffering-risk-s-risk",
     "term": "Suffering risk (s-risk)",
     "definition": "A risk of outcomes involving suffering on an enormous scale, distinct from extinction. A minority concern within the field, associated mainly with the Center on Long-Term Risk."
@@ -218,5 +243,10 @@
     "id": "takeoff-fast-and-slow",
     "term": "Takeoff (fast and slow)",
     "definition": "How quickly AI might go from roughly human-level to far beyond it. \"Fast takeoff\" means weeks or months; \"slow takeoff\" means years or decades, with warning signs along the way. Which is more likely is a live disagreement that shapes what policies people favour."
+  },
+  {
+    "id": "tested-evidence-grade",
+    "term": "Tested (evidence grade)",
+    "definition": "One of the three evidence grades in the Common Signals toolkit, How to communicate about AI safety. A claim graded tested rests on a single controlled experiment, dial test or representative survey focused directly on AI."
   }
 ]

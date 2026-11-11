@@ -4,7 +4,7 @@ URL: https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggi
 title: "How did Amanpour and Company viewers react to the OpenAI and Hugging Face incident?"
 url: "https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf"
 published: 2026-09-14
-updated: 2026-11-10
+updated: 2026-11-11
 publisher: "Common Signals"
 cite: "Common Signals, '\"A problem they created\": how a news audience received the accountability version of the OpenAI and Hugging Face incident', September 2026."
 ---
@@ -57,7 +57,7 @@ We exported all 322 comments (232 top-level and 90 replies) with like counts. Cl
 
 The codebook from the first capture wasn't archived, so frame comparisons between the two captures, including the credential figure, show direction only. Stance, format and emotion use fixed categories shared across all our studies, so those comparisons are firmer.
 
-Limits: this is a small thread with a PBS-leaning audience, comment sections over-represent strong reactions, and likes measure attention rather than persuasion. The Cotra comments also came from YouTube, so the move from fear to anger across our studies isn't simply a platform effect. Method, codebook and data are on the [method page](https://commonsignals.org/methodology).
+Limits: this is a small thread with a PBS-leaning audience, comment sections over-represent strong reactions, and likes measure attention rather than persuasion. The Cotra comments also came from YouTube, so the move from fear to anger across our studies isn't simply a platform effect. The method is on the [method page](https://commonsignals.org/methodology), and the codebook and data are in the [data explorer](https://commonsignals.org/data/amanpour-segment-2026-09/).
 
 Chart: What was coded. Funnel: 322 comments retrieved, 322 contain text and were coded, 223 take a readable position.
 
@@ -167,7 +167,7 @@ Over a third of everything coded disagree or mixed here came from people who tho
 
 ## Data and citation
 
-Codebook and dataset: [method page](https://commonsignals.org/methodology).
+Codebook and dataset: [commonsignals.org/data/amanpour-segment-2026-09/](https://commonsignals.org/data/amanpour-segment-2026-09/).
 
 Cite as: Common Signals, '"A problem they created": how a news audience received the accountability version of the OpenAI and Hugging Face incident', September 2026.
 
@@ -382,7 +382,7 @@ URL: https://commonsignals.org/coxon-resignation-x-analysis
 title: "How did X react to Jacob Coxon's resignation from Anthropic?"
 url: "https://commonsignals.org/coxon-resignation-x-analysis"
 published: 2026-09-25
-updated: 2026-11-09
+updated: 2026-11-11
 publisher: "Common Signals"
 cite: "Common Signals, '\"Neither company is acting responsibly\": how X received Jacob Coxon's resignation from Anthropic', September 2026."
 ---
@@ -440,7 +440,7 @@ We collected 2,480 comments after removing ads and Coxon's own posts.
 
 An LLM then coded each comment, categorising them using stance, frame and emotion.
 
-Our research team checked a random sample of 40 and agreed with 38.
+Ben Matthews spot-checked a random sample of 40 and agreed with 38.
 
 [View our full research methodology →](https://commonsignals.org/methodology)
 
@@ -530,7 +530,7 @@ Replies that blamed greed or the urge for control, rather than the technology, a
 
 ## Data and citation
 
-Codebook and dataset: [method page](https://commonsignals.org/methodology).
+Codebook and dataset: [commonsignals.org/data/coxon-resignation-2026-09/](https://commonsignals.org/data/coxon-resignation-2026-09/).
 
 Cite as: Common Signals, '"Neither company is acting responsibly": how X received Jacob Coxon's resignation from Anthropic', September 2026.
 
@@ -553,7 +553,7 @@ URL: https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-ana
 title: "How did viewers react to the Diary of a CEO debate on AI extinction risk?"
 url: "https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis"
 published: 2026-10-09
-updated: 2026-11-09
+updated: 2026-11-11
 publisher: "Common Signals"
 cite: "Common Signals, '\"Can't we just unplug it?\": The Diary of a CEO AI debate analysed through 26,000 comments', October 2026."
 ---
@@ -1166,7 +1166,7 @@ URL: https://commonsignals.org/how-to-communicate-about-ai-safety
 title: "How to communicate about AI safety"
 url: "https://commonsignals.org/how-to-communicate-about-ai-safety"
 published: 2026-11-06
-updated: 2026-11-06
+updated: 2026-11-11
 publisher: "Common Signals"
 cite: "Common Signals, \"How to communicate about AI safety\", November 2026."
 ---
@@ -1585,7 +1585,7 @@ URL: https://commonsignals.org/findings
 title: "Findings so far: what four comment-thread studies say about explaining AI risk"
 url: "https://commonsignals.org/findings"
 published: 2026-09-14
-updated: 2026-09-23
+updated: 2026-11-11
 publisher: "Common Signals"
 cite: "Common Signals, \"Findings so far: what four comment-thread studies say about explaining AI risk\", September 2026, with the date of the version used."
 ---
@@ -1705,7 +1705,7 @@ Comment threads are not samples of anyone. Commenters self-select, platforms ran
 
 ## Data and citation
 
-Codebooks and anonymised coded datasets for each study are available on request from [hello@commonsignals.org](mailto:hello@commonsignals.org), or browsable comment by comment at [/data/](https://commonsignals.org/data/). [Re-codings and criticism are wanted.](https://commonsignals.org/about) Cite as: Common Signals, "Findings so far: what four comment-thread studies say about explaining AI risk", September 2026, with the date of the version used.
+Codebooks and anonymised coded datasets for each study are published in our [data explorer](https://commonsignals.org/data/), browsable comment by comment: [the Soares reel](https://commonsignals.org/data/soares-reel-2026-08/), [Reddit before and after the METR report](https://commonsignals.org/data/metr-report-reddit-2026-09/), [the Cotra episode](https://commonsignals.org/data/cotra-episode-2026-09/) and [the Amanpour and Company segment](https://commonsignals.org/data/amanpour-segment-2026-09/). [Re-codings and criticism are wanted.](https://commonsignals.org/about) Cite as: Common Signals, "Findings so far: what four comment-thread studies say about explaining AI risk", September 2026, with the date of the version used.
 
 ### Disclosure
 
@@ -1717,13 +1717,13 @@ URL: https://commonsignals.org/methodology
 title: "Methodology"
 url: "https://commonsignals.org/methodology"
 published: 2026-09-16
-updated: 2026-10-09
+updated: 2026-11-11
 publisher: "Common Signals"
 ---
 
 # Methodology
 
-Last updated: 9 October 2026
+Last updated: 11 November 2026
 
 Common Signals studies how the people who see messages about AI respond to them. Our [theory of change](https://commonsignals.org/theory-of-change) explains how this work fits our wider aims. This page describes the method our studies share, so anyone can check, criticise or repeat the work. Each study publishes its own figures, codebook and dataset.
 
@@ -1770,7 +1770,7 @@ We write down the central claim that stance is coded against. If a piece argues 
 
 [Claude](https://www.anthropic.com/claude), a large language model made by Anthropic, codes every comment in parallel batches against the written codebook. For replies, it also sees the comment being replied to. Language models can [match or beat trained crowd workers on annotation tasks like this](https://doi.org/10.1073/pnas.2305016120) (Gilardi, Alizadeh and Kubli, 2023). They can also drift from the codebook over long batches, overuse catch-all categories and misread irony.
 
-We check the output in two ways. Software confirms that every code comes from the allowed list and that every comment is coded exactly once. A person then spot-checks a random sample of 40 comments against the codebook, and each study publishes the result. Where a heavily liked comment affects the engagement-weighted results, we review its codes individually and note any correction.
+We check the output in two ways. Software confirms that every code comes from the allowed list and that every comment is coded exactly once. A person then spot-checks a random sample of 40 comments against the codebook, and each study publishes the result. The Diary of a CEO study was checked by a blind second coding instead, described under limitations. Where a heavily liked comment affects the engagement-weighted results, we review its codes individually and note any correction.
 
 A 40-comment check is thin evidence. That's why we report percentages as whole numbers and treat them as accurate to within a few points.
 
@@ -1790,7 +1790,7 @@ The sample is self-selected and ranked by the platform, as described above.
 
 2
 
-Coding is done by one model and checked by one person on a small sample. There is no second independent coder yet, so no inter-rater reliability figure.
+Coding is done by one model. The newest study, on the Diary of a CEO debate, has a blind second coding: a random sample of 347 comments was coded a second time by a separate run of the same model, and the two agreed on stance for 91% (Cohen's kappa 0.87) and on frame for 89% (kappa 0.87). Because both runs used the same model, they can share the same mistakes. The five earlier studies were checked by one person on a sample of 40 and have no second coder, so no agreement figure.
 
 3
 
@@ -1810,7 +1810,7 @@ Our closing advice sometimes draws on established research, such as [Kim Witte's
 
 Several of these changes follow the method used by the [AI Dialogue Report](https://aidialoguereport.org/findings/).
 
-- More than one coder. Models from different developers make different mistakes. We plan to code each comment with more than one model, accept the codes they agree on and send disagreements to an arbiter, which also gives us an agreement figure to publish.
+- More than one coder. The Diary of a CEO study took a first step, with a blind second coding of a random sample by a separate run of the same model. Models from different developers make different mistakes, so we plan to code each comment with more than one model, accept the codes they agree on and send disagreements to an arbiter, which gives every study an agreement figure to publish.
 - Quote-backed codes. Each code will cite the words in the comment that support it, and software will check the words are there.
 - A larger human benchmark. A bigger hand-coded sample will let us report precision and recall for each category, and correct published shares for the measured error rate using the [Rogan-Gladen method](https://doi.org/10.1093/oxfordjournals.aje.a112510) (Rogan and Gladen, 1978).
 - Corrections for multiple comparisons. When we compare many groups, such as stance across every frame, some differences will look real by chance. We will report only those that survive a [Benjamini-Hochberg false discovery rate correction](https://doi.org/10.1111/j.2517-6161.1995.tb02031.x) (Benjamini and Hochberg, 1995).
@@ -2105,13 +2105,13 @@ URL: https://commonsignals.org/ai-safety-comms-reading-list
 title: "AI safety comms reading list: where to start"
 url: "https://commonsignals.org/ai-safety-comms-reading-list"
 published: 2026-10-15
-updated: 2026-10-15
+updated: 2026-11-11
 publisher: "Common Signals"
 ---
 
 # AI safety comms reading list: where to start
 
-15 October 2026
+15 October 2026 · Ben Matthews
 
 The reading list I wish I'd had at the start of my AI safety comms journey.
 
@@ -2149,6 +2149,9 @@ For a fuller, filterable catalogue of polls and framing studies, see the Common 
 - [How people around the world view AI](https://www.pewresearch.org/global/2025/10/15/how-people-around-the-world-view-ai/), Pew Research Center (2025). Concern, excitement and trust in institutions to regulate AI, compared across 25 countries including the UK and Canada.
 - [Trust, attitudes and use of artificial intelligence: a global study 2025](https://kpmg.com/xx/en/our-insights/ai-and-technology/trust-attitudes-and-use-of-ai.html), KPMG and the University of Melbourne (2025). More than 48,000 people in 47 countries. 66% use AI with some regularity and 46% are willing to trust it, and trust has fallen as use has grown since the 2022 edition.
 - [What 81,000 people want from AI](https://www.anthropic.com/features/81k-interviews), Anthropic (2026). AI-led interviews with 80,508 Claude users in 159 countries. Claude users aren't the public, but the ranking still tells you something: unreliability was the most-raised of 13 concerns and existential risk the least.
+- [The UK AI Compass](https://diffusion-beta.netlify.app/assets/Diffusion-UK-AI-Compass-Report.pdf), Daniel Stone, Diffusion (2026). Six UK mindsets on AI, dial-tested messages, metaphor analysis, and platform data from a YouGov survey of 2,911 UK adults.
+- [Americans on AI](https://www.americanson.ai/), Athena Insights (2026, ongoing). A biweekly US tracker fielded by NORC, with data and code [open on GitHub](https://github.com/athena-insights/aoai-public).
+- [Great (public) expectations](https://www.adalovelaceinstitute.org/policy-briefing/great-expectations/), Nuala Polo and Roshni Modhvadia, Ada Lovelace Institute (2025). What 1,928 UK adults expect from AI governance.
 
 ## What the public thinks about catastrophic AI risk
 
@@ -2204,7 +2207,15 @@ This list will have gaps, and I'd like to hear about them. I'm particularly inte
 
 Please email me at [hello@commonsignals.org](mailto:hello@commonsignals.org), or [follow Common Signals on Substack](https://commonsignalsorg.substack.com/) for updates.
 
-Corrected 11 November 2026: the Trippenbach paper's message test was run with 1,063 adults in the US, not across five countries. The five-country data comes from the Seismic Foundation's survey.
+## How to cite
+
+Common Signals, "AI safety comms reading list: where to start", October 2026.
+
+Corrected 11 November 2026: the Trippenbach paper's message test was run with 1,063 adults in the US, not across five countries. The five-country data comes from the Seismic Foundation's survey. Added 11 November 2026: The UK AI Compass, Americans on AI and Great (public) expectations.
+
+### Disclosure
+
+An LLM was used to structure and review this article, with the first and final edits made by a human.
 
 URL: https://commonsignals.org/theory-of-change
 
@@ -2677,7 +2688,7 @@ Global AI investment reached around $581.7bn in 2025 (Stanford HAI, 2026 AI Inde
 
 **What has been published so far?**
 
-Four comment-thread studies, each coding the full public response to one piece of AI communication: an Instagram reel explaining AI risk (1,534 comments), the Dwarkesh Podcast interview with METR's Ajeya Cotra (1,245), Amanpour and Company's interview with Heidy Khlaaf (322), and a before-and-after study of Reddit's reaction to the OpenAI and Hugging Face incident (516). The theory of change and the methodology behind the studies are also published. All of it is on the research page.
+Six comment-thread studies, each coding the public response to one piece of AI communication: an Instagram reel explaining AI risk (1,534 comments), the Dwarkesh Podcast interview with METR's Ajeya Cotra (1,245), Amanpour and Company's interview with Heidy Khlaaf (322), a before-and-after study of Reddit's reaction to the OpenAI and Hugging Face incident (516), X replies to Jacob Coxon's resignation from Anthropic (2,480) and the Diary of a CEO debate on AI extinction risk across five platforms (26,019). We have also published a toolkit for communicators, How to communicate about AI safety, and a reading list of existing research, as well as the theory of change and the methodology behind the studies. All of it is on the research page.
 
 **How do I get involved?**
 
@@ -2715,7 +2726,7 @@ publisher: "Common Signals"
 
 Plain-English definitions of the terms that come up when people explain AI risk to the public.
 
-**44 terms** · Last reviewed September 2026 · Links were live at the time of review
+**50 terms** · Last reviewed September 2026 · Links were live at the time of review
 
 ## Missing a term, or think one of these is wrong?
 
@@ -2809,6 +2820,16 @@ Read more: [Exercise of human agency through collective efficacy](https://doi.or
 
 See also [Efficacy](https://commonsignals.org/glossary#efficacy), [Fear appeal](https://commonsignals.org/glossary#fear-appeal)
 
+### [Comment-thread study](https://commonsignals.org/glossary#comment-thread-study)
+
+comment-thread studies · reception study · reception studies
+
+A Common Signals study of the comments people left under one piece of AI communication, such as a podcast episode, news interview, reel or Reddit thread. Each comment is coded for its stance on the piece's central claim, its frame, its reaction to the format and the messenger, and its emotional register. Commenters choose themselves and platforms rank what gets seen, so a study describes one audience's reaction to one piece and generates hypotheses for testing, not findings about what the public thinks.
+
+Read more: [Methodology](https://commonsignals.org/methodology) (Common Signals)
+
+See also [Stance](https://commonsignals.org/glossary#stance), [Readable position](https://commonsignals.org/glossary#readable-position), [Framing](https://commonsignals.org/glossary#framing)
+
 ### [Compute governance](https://commonsignals.org/glossary#compute-governance)
 
 Using the physical hardware needed to train and run large AI models, mainly advanced chips and data centres, as a lever for policy: tracking who has it, restricting exports, or attaching obligations to large training runs. Chips are physical, countable and made by very few companies, which is why policymakers focus on them.
@@ -2854,6 +2875,16 @@ In communication research, a person's belief that a threat can be dealt with. Se
 Read more: [Self-efficacy: toward a unifying theory of behavioral change](https://doi.org/10.1037/0033-295X.84.2.191) (Psychological Review)
 
 See also [Collective efficacy](https://commonsignals.org/glossary#collective-efficacy), [Extended parallel process model](https://commonsignals.org/glossary#extended-parallel-process-model-eppm)
+
+### [Established (evidence grade)](https://commonsignals.org/glossary#established-evidence-grade)
+
+established
+
+One of the three evidence grades in the Common Signals toolkit, How to communicate about AI safety. A claim graded established rests on findings replicated across multiple studies and fields, such as public health and climate communications.
+
+Read more: [How we grade AI safety evidence](https://commonsignals.org/how-to-communicate-about-ai-safety#how-we-grade-ai-safety-evidence) (Common Signals)
+
+See also [Tested](https://commonsignals.org/glossary#tested-evidence-grade), [Observed](https://commonsignals.org/glossary#observed-evidence-grade)
 
 ### [EU AI Act](https://commonsignals.org/glossary#eu-ai-act)
 
@@ -3013,6 +3044,16 @@ See also [Capability evaluations](https://commonsignals.org/glossary#capability-
 
 ## O
 
+### [Observed (evidence grade)](https://commonsignals.org/glossary#observed-evidence-grade)
+
+observed
+
+One of the three evidence grades in the Common Signals toolkit, How to communicate about AI safety. A claim graded observed rests on real-world patterns noticed in focus groups, comment-thread studies and campaign reports.
+
+Read more: [How we grade AI safety evidence](https://commonsignals.org/how-to-communicate-about-ai-safety#how-we-grade-ai-safety-evidence) (Common Signals)
+
+See also [Established](https://commonsignals.org/glossary#established-evidence-grade), [Tested](https://commonsignals.org/glossary#tested-evidence-grade), [Comment-thread study](https://commonsignals.org/glossary#comment-thread-study)
+
 ### [Open weights](https://commonsignals.org/glossary#open-weights)
 
 open source
@@ -3034,6 +3075,16 @@ Read more: [Ethical and social risks of harm from language models](https://arxiv
 See also [Algorithmic bias](https://commonsignals.org/glossary#algorithmic-bias), [Existential risk](https://commonsignals.org/glossary#existential-risk-x-risk)
 
 ## R
+
+### [Readable position](https://commonsignals.org/glossary#readable-position)
+
+readable positions · clear position
+
+In a comment-thread study, the comments whose stance on the central claim can be read: in most studies, those coded agree, disagree or mixed. Comments coded not applicable, such as jokes, questions and off-topic remarks, are always left out, and most studies also leave out those coded unclear. Stance percentages are shares of this base, and each study states which comments it includes.
+
+Read more: [Methodology: analysis](https://commonsignals.org/methodology#4-analysis) (Common Signals)
+
+See also [Stance](https://commonsignals.org/glossary#stance), [Comment-thread study](https://commonsignals.org/glossary#comment-thread-study)
 
 ### [Red teaming](https://commonsignals.org/glossary#red-teaming)
 
@@ -3117,6 +3168,14 @@ Read more: [The Situational Awareness Dataset](https://arxiv.org/abs/2407.04694)
 
 See also [Sandbagging](https://commonsignals.org/glossary#sandbagging), [Alignment faking](https://commonsignals.org/glossary#alignment-faking)
 
+### [Stance](https://commonsignals.org/glossary#stance)
+
+In a comment-thread study, a comment's position on the central claim of the piece it responds to: agree, disagree, mixed, unclear or not applicable. The central claim is written down before coding starts, and where a piece argues against an earlier account, agree means accepting its reframing.
+
+Read more: [Methodology: building the codebook](https://commonsignals.org/methodology#2-building-the-codebook) (Common Signals)
+
+See also [Readable position](https://commonsignals.org/glossary#readable-position), [Comment-thread study](https://commonsignals.org/glossary#comment-thread-study)
+
 ### [Suffering risk (s-risk)](https://commonsignals.org/glossary#suffering-risk-s-risk)
 
 s-risk
@@ -3156,6 +3215,16 @@ How quickly AI might go from roughly human-level to far beyond it. "Fast takeoff
 Read more: [Takeoff](https://ai-safety-atlas.com/chapters/v1/capabilities/takeoff/) (AI Safety Atlas)
 
 See also [Superintelligence](https://commonsignals.org/glossary#superintelligence), [Artificial general intelligence](https://commonsignals.org/glossary#artificial-general-intelligence-agi)
+
+### [Tested (evidence grade)](https://commonsignals.org/glossary#tested-evidence-grade)
+
+tested
+
+One of the three evidence grades in the Common Signals toolkit, How to communicate about AI safety. A claim graded tested rests on a single controlled experiment, dial test or representative survey focused directly on AI.
+
+Read more: [How we grade AI safety evidence](https://commonsignals.org/how-to-communicate-about-ai-safety#how-we-grade-ai-safety-evidence) (Common Signals)
+
+See also [Established](https://commonsignals.org/glossary#established-evidence-grade), [Observed](https://commonsignals.org/glossary#observed-evidence-grade)
 
 URL: https://commonsignals.org/research/library/
 

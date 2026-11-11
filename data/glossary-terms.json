@@ -143,6 +143,26 @@
     "contested": false
   },
   {
+    "term": "Comment-thread study",
+    "aliases": [
+      "comment-thread studies",
+      "reception study",
+      "reception studies"
+    ],
+    "definition": "A Common Signals study of the comments people left under one piece of AI communication, such as a podcast episode, news interview, reel or Reddit thread. Each comment is coded for its stance on the piece's central claim, its frame, its reaction to the format and the messenger, and its emotional register. Commenters choose themselves and platforms rank what gets seen, so a study describes one audience's reaction to one piece and generates hypotheses for testing, not findings about what the public thinks.",
+    "source": {
+      "title": "Methodology",
+      "org": "Common Signals",
+      "href": "https://commonsignals.org/methodology"
+    },
+    "also": [
+      "stance",
+      "readable-position",
+      "framing"
+    ],
+    "contested": false
+  },
+  {
     "term": "Compute governance",
     "aliases": [],
     "definition": "Using the physical hardware needed to train and run large AI models, mainly advanced chips and data centres, as a lever for policy: tracking who has it, restricting exports, or attaching obligations to large training runs. Chips are physical, countable and made by very few companies, which is why policymakers focus on them.",
@@ -216,6 +236,23 @@
     "also": [
       "collective-efficacy",
       "extended-parallel-process-model-eppm"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Established (evidence grade)",
+    "aliases": [
+      "established"
+    ],
+    "definition": "One of the three evidence grades in the Common Signals toolkit, How to communicate about AI safety. A claim graded established rests on findings replicated across multiple studies and fields, such as public health and climate communications.",
+    "source": {
+      "title": "How we grade AI safety evidence",
+      "org": "Common Signals",
+      "href": "https://commonsignals.org/how-to-communicate-about-ai-safety#how-we-grade-ai-safety-evidence"
+    },
+    "also": [
+      "tested-evidence-grade",
+      "observed-evidence-grade"
     ],
     "contested": false
   },
@@ -464,6 +501,24 @@
     "contested": false
   },
   {
+    "term": "Observed (evidence grade)",
+    "aliases": [
+      "observed"
+    ],
+    "definition": "One of the three evidence grades in the Common Signals toolkit, How to communicate about AI safety. A claim graded observed rests on real-world patterns noticed in focus groups, comment-thread studies and campaign reports.",
+    "source": {
+      "title": "How we grade AI safety evidence",
+      "org": "Common Signals",
+      "href": "https://commonsignals.org/how-to-communicate-about-ai-safety#how-we-grade-ai-safety-evidence"
+    },
+    "also": [
+      "established-evidence-grade",
+      "tested-evidence-grade",
+      "comment-thread-study"
+    ],
+    "contested": false
+  },
+  {
     "term": "Open weights",
     "aliases": [
       "open source"
@@ -491,6 +546,24 @@
     "also": [
       "algorithmic-bias",
       "existential-risk-x-risk"
+    ],
+    "contested": false
+  },
+  {
+    "term": "Readable position",
+    "aliases": [
+      "readable positions",
+      "clear position"
+    ],
+    "definition": "In a comment-thread study, the comments whose stance on the central claim can be read: in most studies, those coded agree, disagree or mixed. Comments coded not applicable, such as jokes, questions and off-topic remarks, are always left out, and most studies also leave out those coded unclear. Stance percentages are shares of this base, and each study states which comments it includes.",
+    "source": {
+      "title": "Methodology: analysis",
+      "org": "Common Signals",
+      "href": "https://commonsignals.org/methodology#4-analysis"
+    },
+    "also": [
+      "stance",
+      "comment-thread-study"
     ],
     "contested": false
   },
@@ -636,6 +709,21 @@
     "contested": false
   },
   {
+    "term": "Stance",
+    "aliases": [],
+    "definition": "In a comment-thread study, a comment's position on the central claim of the piece it responds to: agree, disagree, mixed, unclear or not applicable. The central claim is written down before coding starts, and where a piece argues against an earlier account, agree means accepting its reframing.",
+    "source": {
+      "title": "Methodology: building the codebook",
+      "org": "Common Signals",
+      "href": "https://commonsignals.org/methodology#2-building-the-codebook"
+    },
+    "also": [
+      "readable-position",
+      "comment-thread-study"
+    ],
+    "contested": false
+  },
+  {
     "term": "Suffering risk (s-risk)",
     "aliases": [
       "s-risk"
@@ -700,5 +788,22 @@
       "artificial-general-intelligence-agi"
     ],
     "contested": true
+  },
+  {
+    "term": "Tested (evidence grade)",
+    "aliases": [
+      "tested"
+    ],
+    "definition": "One of the three evidence grades in the Common Signals toolkit, How to communicate about AI safety. A claim graded tested rests on a single controlled experiment, dial test or representative survey focused directly on AI.",
+    "source": {
+      "title": "How we grade AI safety evidence",
+      "org": "Common Signals",
+      "href": "https://commonsignals.org/how-to-communicate-about-ai-safety#how-we-grade-ai-safety-evidence"
+    },
+    "also": [
+      "established-evidence-grade",
+      "observed-evidence-grade"
+    ],
+    "contested": false
   }
 ]

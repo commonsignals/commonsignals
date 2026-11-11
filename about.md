@@ -54,7 +54,7 @@ Global AI investment reached around $581.7bn in 2025 (Stanford HAI, 2026 AI Inde
 
 **What has been published so far?**
 
-Four comment-thread studies, each coding the full public response to one piece of AI communication: an Instagram reel explaining AI risk (1,534 comments), the Dwarkesh Podcast interview with METR's Ajeya Cotra (1,245), Amanpour and Company's interview with Heidy Khlaaf (322), and a before-and-after study of Reddit's reaction to the OpenAI and Hugging Face incident (516). The theory of change and the methodology behind the studies are also published. All of it is on the research page.
+Six comment-thread studies, each coding the public response to one piece of AI communication: an Instagram reel explaining AI risk (1,534 comments), the Dwarkesh Podcast interview with METR's Ajeya Cotra (1,245), Amanpour and Company's interview with Heidy Khlaaf (322), a before-and-after study of Reddit's reaction to the OpenAI and Hugging Face incident (516), X replies to Jacob Coxon's resignation from Anthropic (2,480) and the Diary of a CEO debate on AI extinction risk across five platforms (26,019). We have also published a toolkit for communicators, How to communicate about AI safety, and a reading list of existing research, as well as the theory of change and the methodology behind the studies. All of it is on the research page.
 
 **How do I get involved?**
 

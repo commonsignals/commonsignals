@@ -8,7 +8,7 @@ publisher: "Common Signals"
 
 Plain-English definitions of the terms that come up when people explain AI risk to the public.
 
-**44 terms** · Last reviewed September 2026 · Links were live at the time of review
+**50 terms** · Last reviewed September 2026 · Links were live at the time of review
 
 ## Missing a term, or think one of these is wrong?
 
@@ -102,6 +102,16 @@ Read more: [Exercise of human agency through collective efficacy](https://doi.or
 
 See also [Efficacy](https://commonsignals.org/glossary#efficacy), [Fear appeal](https://commonsignals.org/glossary#fear-appeal)
 
+### [Comment-thread study](https://commonsignals.org/glossary#comment-thread-study)
+
+comment-thread studies · reception study · reception studies
+
+A Common Signals study of the comments people left under one piece of AI communication, such as a podcast episode, news interview, reel or Reddit thread. Each comment is coded for its stance on the piece's central claim, its frame, its reaction to the format and the messenger, and its emotional register. Commenters choose themselves and platforms rank what gets seen, so a study describes one audience's reaction to one piece and generates hypotheses for testing, not findings about what the public thinks.
+
+Read more: [Methodology](https://commonsignals.org/methodology) (Common Signals)
+
+See also [Stance](https://commonsignals.org/glossary#stance), [Readable position](https://commonsignals.org/glossary#readable-position), [Framing](https://commonsignals.org/glossary#framing)
+
 ### [Compute governance](https://commonsignals.org/glossary#compute-governance)
 
 Using the physical hardware needed to train and run large AI models, mainly advanced chips and data centres, as a lever for policy: tracking who has it, restricting exports, or attaching obligations to large training runs. Chips are physical, countable and made by very few companies, which is why policymakers focus on them.
@@ -147,6 +157,16 @@ In communication research, a person's belief that a threat can be dealt with. Se
 Read more: [Self-efficacy: toward a unifying theory of behavioral change](https://doi.org/10.1037/0033-295X.84.2.191) (Psychological Review)
 
 See also [Collective efficacy](https://commonsignals.org/glossary#collective-efficacy), [Extended parallel process model](https://commonsignals.org/glossary#extended-parallel-process-model-eppm)
+
+### [Established (evidence grade)](https://commonsignals.org/glossary#established-evidence-grade)
+
+established
+
+One of the three evidence grades in the Common Signals toolkit, How to communicate about AI safety. A claim graded established rests on findings replicated across multiple studies and fields, such as public health and climate communications.
+
+Read more: [How we grade AI safety evidence](https://commonsignals.org/how-to-communicate-about-ai-safety#how-we-grade-ai-safety-evidence) (Common Signals)
+
+See also [Tested](https://commonsignals.org/glossary#tested-evidence-grade), [Observed](https://commonsignals.org/glossary#observed-evidence-grade)
 
 ### [EU AI Act](https://commonsignals.org/glossary#eu-ai-act)
 
@@ -306,6 +326,16 @@ See also [Capability evaluations](https://commonsignals.org/glossary#capability-
 
 ## O
 
+### [Observed (evidence grade)](https://commonsignals.org/glossary#observed-evidence-grade)
+
+observed
+
+One of the three evidence grades in the Common Signals toolkit, How to communicate about AI safety. A claim graded observed rests on real-world patterns noticed in focus groups, comment-thread studies and campaign reports.
+
+Read more: [How we grade AI safety evidence](https://commonsignals.org/how-to-communicate-about-ai-safety#how-we-grade-ai-safety-evidence) (Common Signals)
+
+See also [Established](https://commonsignals.org/glossary#established-evidence-grade), [Tested](https://commonsignals.org/glossary#tested-evidence-grade), [Comment-thread study](https://commonsignals.org/glossary#comment-thread-study)
+
 ### [Open weights](https://commonsignals.org/glossary#open-weights)
 
 open source
@@ -327,6 +357,16 @@ Read more: [Ethical and social risks of harm from language models](https://arxiv
 See also [Algorithmic bias](https://commonsignals.org/glossary#algorithmic-bias), [Existential risk](https://commonsignals.org/glossary#existential-risk-x-risk)
 
 ## R
+
+### [Readable position](https://commonsignals.org/glossary#readable-position)
+
+readable positions · clear position
+
+In a comment-thread study, the comments whose stance on the central claim can be read: in most studies, those coded agree, disagree or mixed. Comments coded not applicable, such as jokes, questions and off-topic remarks, are always left out, and most studies also leave out those coded unclear. Stance percentages are shares of this base, and each study states which comments it includes.
+
+Read more: [Methodology: analysis](https://commonsignals.org/methodology#4-analysis) (Common Signals)
+
+See also [Stance](https://commonsignals.org/glossary#stance), [Comment-thread study](https://commonsignals.org/glossary#comment-thread-study)
 
 ### [Red teaming](https://commonsignals.org/glossary#red-teaming)
 
@@ -410,6 +450,14 @@ Read more: [The Situational Awareness Dataset](https://arxiv.org/abs/2407.04694)
 
 See also [Sandbagging](https://commonsignals.org/glossary#sandbagging), [Alignment faking](https://commonsignals.org/glossary#alignment-faking)
 
+### [Stance](https://commonsignals.org/glossary#stance)
+
+In a comment-thread study, a comment's position on the central claim of the piece it responds to: agree, disagree, mixed, unclear or not applicable. The central claim is written down before coding starts, and where a piece argues against an earlier account, agree means accepting its reframing.
+
+Read more: [Methodology: building the codebook](https://commonsignals.org/methodology#2-building-the-codebook) (Common Signals)
+
+See also [Readable position](https://commonsignals.org/glossary#readable-position), [Comment-thread study](https://commonsignals.org/glossary#comment-thread-study)
+
 ### [Suffering risk (s-risk)](https://commonsignals.org/glossary#suffering-risk-s-risk)
 
 s-risk
@@ -449,3 +497,13 @@ How quickly AI might go from roughly human-level to far beyond it. "Fast takeoff
 Read more: [Takeoff](https://ai-safety-atlas.com/chapters/v1/capabilities/takeoff/) (AI Safety Atlas)
 
 See also [Superintelligence](https://commonsignals.org/glossary#superintelligence), [Artificial general intelligence](https://commonsignals.org/glossary#artificial-general-intelligence-agi)
+
+### [Tested (evidence grade)](https://commonsignals.org/glossary#tested-evidence-grade)
+
+tested
+
+One of the three evidence grades in the Common Signals toolkit, How to communicate about AI safety. A claim graded tested rests on a single controlled experiment, dial test or representative survey focused directly on AI.
+
+Read more: [How we grade AI safety evidence](https://commonsignals.org/how-to-communicate-about-ai-safety#how-we-grade-ai-safety-evidence) (Common Signals)
+
+See also [Established](https://commonsignals.org/glossary#established-evidence-grade), [Observed](https://commonsignals.org/glossary#observed-evidence-grade)

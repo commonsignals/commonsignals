@@ -2,7 +2,7 @@
 title: "Findings so far: what four comment-thread studies say about explaining AI risk"
 url: "https://commonsignals.org/findings"
 published: 2026-09-14
-updated: 2026-09-23
+updated: 2026-11-11
 publisher: "Common Signals"
 cite: "Common Signals, \"Findings so far: what four comment-thread studies say about explaining AI risk\", September 2026, with the date of the version used."
 ---
@@ -122,7 +122,7 @@ Comment threads are not samples of anyone. Commenters self-select, platforms ran
 
 ## Data and citation
 
-Codebooks and anonymised coded datasets for each study are available on request from [hello@commonsignals.org](mailto:hello@commonsignals.org), or browsable comment by comment at [/data/](https://commonsignals.org/data/). [Re-codings and criticism are wanted.](https://commonsignals.org/about) Cite as: Common Signals, "Findings so far: what four comment-thread studies say about explaining AI risk", September 2026, with the date of the version used.
+Codebooks and anonymised coded datasets for each study are published in our [data explorer](https://commonsignals.org/data/), browsable comment by comment: [the Soares reel](https://commonsignals.org/data/soares-reel-2026-08/), [Reddit before and after the METR report](https://commonsignals.org/data/metr-report-reddit-2026-09/), [the Cotra episode](https://commonsignals.org/data/cotra-episode-2026-09/) and [the Amanpour and Company segment](https://commonsignals.org/data/amanpour-segment-2026-09/). [Re-codings and criticism are wanted.](https://commonsignals.org/about) Cite as: Common Signals, "Findings so far: what four comment-thread studies say about explaining AI risk", September 2026, with the date of the version used.
 
 ### Disclosure
 

@@ -2,7 +2,7 @@
 title: "How did X react to Jacob Coxon's resignation from Anthropic?"
 url: "https://commonsignals.org/coxon-resignation-x-analysis"
 published: 2026-09-25
-updated: 2026-11-09
+updated: 2026-11-11
 publisher: "Common Signals"
 cite: "Common Signals, '\"Neither company is acting responsibly\": how X received Jacob Coxon's resignation from Anthropic', September 2026."
 ---
@@ -60,7 +60,7 @@ We collected 2,480 comments after removing ads and Coxon's own posts.
 
 An LLM then coded each comment, categorising them using stance, frame and emotion.
 
-Our research team checked a random sample of 40 and agreed with 38.
+Ben Matthews spot-checked a random sample of 40 and agreed with 38.
 
 [View our full research methodology →](https://commonsignals.org/methodology)
 
@@ -150,7 +150,7 @@ Replies that blamed greed or the urge for control, rather than the technology, a
 
 ## Data and citation
 
-Codebook and dataset: [method page](https://commonsignals.org/methodology).
+Codebook and dataset: [commonsignals.org/data/coxon-resignation-2026-09/](https://commonsignals.org/data/coxon-resignation-2026-09/).
 
 Cite as: Common Signals, '"Neither company is acting responsibly": how X received Jacob Coxon's resignation from Anthropic', September 2026.
 

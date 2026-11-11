@@ -2,7 +2,7 @@
 title: "How did Amanpour and Company viewers react to the OpenAI and Hugging Face incident?"
 url: "https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf"
 published: 2026-09-14
-updated: 2026-11-10
+updated: 2026-11-11
 publisher: "Common Signals"
 cite: "Common Signals, '\"A problem they created\": how a news audience received the accountability version of the OpenAI and Hugging Face incident', September 2026."
 ---
@@ -55,7 +55,7 @@ We exported all 322 comments (232 top-level and 90 replies) with like counts. Cl
 
 The codebook from the first capture wasn't archived, so frame comparisons between the two captures, including the credential figure, show direction only. Stance, format and emotion use fixed categories shared across all our studies, so those comparisons are firmer.
 
-Limits: this is a small thread with a PBS-leaning audience, comment sections over-represent strong reactions, and likes measure attention rather than persuasion. The Cotra comments also came from YouTube, so the move from fear to anger across our studies isn't simply a platform effect. Method, codebook and data are on the [method page](https://commonsignals.org/methodology).
+Limits: this is a small thread with a PBS-leaning audience, comment sections over-represent strong reactions, and likes measure attention rather than persuasion. The Cotra comments also came from YouTube, so the move from fear to anger across our studies isn't simply a platform effect. The method is on the [method page](https://commonsignals.org/methodology), and the codebook and data are in the [data explorer](https://commonsignals.org/data/amanpour-segment-2026-09/).
 
 Chart: What was coded. Funnel: 322 comments retrieved, 322 contain text and were coded, 223 take a readable position.
 
@@ -165,7 +165,7 @@ Over a third of everything coded disagree or mixed here came from people who tho
 
 ## Data and citation
 
-Codebook and dataset: [method page](https://commonsignals.org/methodology).
+Codebook and dataset: [commonsignals.org/data/amanpour-segment-2026-09/](https://commonsignals.org/data/amanpour-segment-2026-09/).
 
 Cite as: Common Signals, '"A problem they created": how a news audience received the accountability version of the OpenAI and Hugging Face incident', September 2026.
 

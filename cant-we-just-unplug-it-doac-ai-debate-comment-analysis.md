@@ -2,7 +2,7 @@
 title: "How did viewers react to the Diary of a CEO debate on AI extinction risk?"
 url: "https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis"
 published: 2026-10-09
-updated: 2026-11-09
+updated: 2026-11-11
 publisher: "Common Signals"
 cite: "Common Signals, '\"Can't we just unplug it?\": The Diary of a CEO AI debate analysed through 26,000 comments', October 2026."
 ---

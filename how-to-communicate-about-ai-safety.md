@@ -2,7 +2,7 @@
 title: "How to communicate about AI safety"
 url: "https://commonsignals.org/how-to-communicate-about-ai-safety"
 published: 2026-11-06
-updated: 2026-11-06
+updated: 2026-11-11
 publisher: "Common Signals"
 cite: "Common Signals, \"How to communicate about AI safety\", November 2026."
 ---

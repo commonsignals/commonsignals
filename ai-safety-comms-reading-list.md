@@ -2,13 +2,13 @@
 title: "AI safety comms reading list: where to start"
 url: "https://commonsignals.org/ai-safety-comms-reading-list"
 published: 2026-10-15
-updated: 2026-10-15
+updated: 2026-11-11
 publisher: "Common Signals"
 ---
 
 # AI safety comms reading list: where to start
 
-15 October 2026
+15 October 2026 · Ben Matthews
 
 The reading list I wish I'd had at the start of my AI safety comms journey.
 
@@ -46,6 +46,9 @@ For a fuller, filterable catalogue of polls and framing studies, see the Common 
 - [How people around the world view AI](https://www.pewresearch.org/global/2025/10/15/how-people-around-the-world-view-ai/), Pew Research Center (2025). Concern, excitement and trust in institutions to regulate AI, compared across 25 countries including the UK and Canada.
 - [Trust, attitudes and use of artificial intelligence: a global study 2025](https://kpmg.com/xx/en/our-insights/ai-and-technology/trust-attitudes-and-use-of-ai.html), KPMG and the University of Melbourne (2025). More than 48,000 people in 47 countries. 66% use AI with some regularity and 46% are willing to trust it, and trust has fallen as use has grown since the 2022 edition.
 - [What 81,000 people want from AI](https://www.anthropic.com/features/81k-interviews), Anthropic (2026). AI-led interviews with 80,508 Claude users in 159 countries. Claude users aren't the public, but the ranking still tells you something: unreliability was the most-raised of 13 concerns and existential risk the least.
+- [The UK AI Compass](https://diffusion-beta.netlify.app/assets/Diffusion-UK-AI-Compass-Report.pdf), Daniel Stone, Diffusion (2026). Six UK mindsets on AI, dial-tested messages, metaphor analysis, and platform data from a YouGov survey of 2,911 UK adults.
+- [Americans on AI](https://www.americanson.ai/), Athena Insights (2026, ongoing). A biweekly US tracker fielded by NORC, with data and code [open on GitHub](https://github.com/athena-insights/aoai-public).
+- [Great (public) expectations](https://www.adalovelaceinstitute.org/policy-briefing/great-expectations/), Nuala Polo and Roshni Modhvadia, Ada Lovelace Institute (2025). What 1,928 UK adults expect from AI governance.
 
 ## What the public thinks about catastrophic AI risk
 
@@ -101,4 +104,12 @@ This list will have gaps, and I'd like to hear about them. I'm particularly inte
 
 Please email me at [hello@commonsignals.org](mailto:hello@commonsignals.org), or [follow Common Signals on Substack](https://commonsignalsorg.substack.com/) for updates.
 
-Corrected 11 November 2026: the Trippenbach paper's message test was run with 1,063 adults in the US, not across five countries. The five-country data comes from the Seismic Foundation's survey.
+## How to cite
+
+Common Signals, "AI safety comms reading list: where to start", October 2026.
+
+Corrected 11 November 2026: the Trippenbach paper's message test was run with 1,063 adults in the US, not across five countries. The five-country data comes from the Seismic Foundation's survey. Added 11 November 2026: The UK AI Compass, Americans on AI and Great (public) expectations.
+
+### Disclosure
+
+An LLM was used to structure and review this article, with the first and final edits made by a human.
