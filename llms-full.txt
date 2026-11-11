@@ -1174,16 +1174,16 @@ url: "https://commonsignals.org/research/agenda"
 published: 2026-11-11
 updated: 2026-11-11
 publisher: "Common Signals"
-cite: "Ben Matthews, Common Signals, 'Common Signals research agenda', version 0.2, 11 November 2026, https://commonsignals.org/research/agenda."
+cite: "Ben Matthews, Common Signals, 'Common Signals research agenda', version 0.3, 11 November 2026, https://commonsignals.org/research/agenda."
 ---
 
 # Common Signals research agenda
 
-11 November 2026 · Ben Matthews · Version 0.2
+11 November 2026 · Ben Matthews · Version 0.3
 
 Eleven hypotheses about how audiences receive messages on AI risk, the four to settle first in 2027, and how each can be tested.
 
-[Download PDF (version 0.2)](https://commonsignals.org/assets/pdf/common-signals-research-agenda-v0.2.pdf)
+[Download PDF (version 0.3)](https://commonsignals.org/assets/pdf/common-signals-research-agenda-v0.3.pdf)
 
 ## What this agenda is
 
@@ -1259,7 +1259,7 @@ H1 to H9 keep the numbering of the nine patterns on our earlier findings page. H
 ### H5. Once capability is conceded, disagreement is about motive and messenger
 
 - **Status:** recurring.
-- **Evidence:** 53% of disagreeing comments under Cotra called the story hype, marketing or staged. Before the independent report, 12% of Reddit comments called the incident a stunt. 8% of comments under Khlaaf called it hype or staged. On X, a smaller group read Coxon's thread as marketing timed to Anthropic's expected IPO.
+- **Evidence:** about half of the 108 rejecting comments under Cotra called the story hype, marketing or staged. Before the independent report, 12% of Reddit comments called the incident a stunt. 8% of comments under Khlaaf called it hype or staged. On X, a smaller group read Coxon's thread as marketing timed to Anthropic's expected IPO.
 - **A distinction that matters:** two objections that sound alike come from opposite stances. Across the Reddit data, the 46 stunt comments ran 83% reject and none accept. The 38 comments blaming the test setup ran 61% mixed and 39% accept, with no rejections.
 - **Test:** a rebuttal aimed at motive against more evidence of capability, shown to sceptics.
 - **Who needs the answer:** labs and evaluators writing incident disclosures, and journalists covering them.
@@ -1359,7 +1359,7 @@ The Diary of a CEO study meets all five. The five earlier studies were each chec
 
 ## Citing and taking on a hypothesis
 
-Cite the agenda with its version and the hypothesis number, for example: Ben Matthews, Common Signals, Research agenda v0.2, 11 November 2026, H6.
+Cite the agenda with its version and the hypothesis number, for example: Ben Matthews, Common Signals, Research agenda v0.3, 11 November 2026, H6.
 
 Numbers are permanent. A refuted hypothesis keeps its number and is marked refuted. New hypotheses take the next number. Every change of status is logged here with its date and the study behind it.
 
@@ -1367,12 +1367,13 @@ To take on a hypothesis, email [hello@commonsignals.org](mailto:hello@commonsign
 
 ## Version history
 
+- 0.3, 11 November 2026: H5's evidence now gives the Cotra figure as the Cotra article does, about half of the 108 rejecting comments. The 53% it gave before has no source on file. No status changed.
 - 0.2, 11 November 2026: added a "Tested elsewhere" line to H2, H3 and H8, setting out what controlled studies by others already show. No status changed.
 - 0.1, 11 November 2026: first published version.
 
 ## How to cite
 
-Cite as: Ben Matthews, Common Signals, 'Common Signals research agenda', version 0.2, 11 November 2026, [https://commonsignals.org/research/agenda](https://commonsignals.org/research/agenda).
+Cite as: Ben Matthews, Common Signals, 'Common Signals research agenda', version 0.3, 11 November 2026, [https://commonsignals.org/research/agenda](https://commonsignals.org/research/agenda).
 
 ### Disclosure
 
