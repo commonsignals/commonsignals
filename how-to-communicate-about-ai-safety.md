@@ -135,7 +135,7 @@ Two in three Americans say AI is coming into their lives whether they want it or
 
 PauseAI's email builder. PauseAI, CC BY 4.0.
 
-- **Where it misfired:** A [short video reel by Nate Soares](https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri) titled "We stop AI. You help?" drew [1,600 comments](https://commonsignals.org/data/soares-reel-2026-08/). The second most-liked comment (over 8,000 likes) asked why it felt like it was already too late; hopeless comments took a fifth of all likes, and fewer than 2% asked what they could actually do (Observed).
+- **Where it misfired:** A [short video reel by Nate Soares](https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri) titled "We stop AI. You help?" had [1,703 comments](https://commonsignals.org/data/soares-reel-2026-08/), of which 1,534 were coded. The second most-liked comment (over 8,000 likes) asked why it felt like it was already too late; hopeless comments took a fifth of all likes, and fewer than 2% asked what they could actually do (Observed).
 
 Chart: Did commenters accept that AI is a serious danger? Bar chart of the Soares reel comments by stance: 53% accept, 24% reject, 6% accept in part, 17% other.
 
@@ -212,7 +212,7 @@ Abstract warnings about human extinction fall flat with a general audience. Grou
 
 Threat and remedy, side by side. ControlAI.
 
-- **Where it misfired:** A [104-second YouTube Shorts trailer](https://www.youtube.com/shorts/7a6BfbZiDV4) for a [Diary of a CEO debate](https://www.youtube.com/watch?v=OhOmLqR5nN4) titled "WILL AI LEAD US TO EXTINCTION?" led to pushback, with critical comments taking 57% of likes among comments that took a position. In contrast, a [21-minute cut](https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis) of the same debate on Facebook saw 88% of commenters taking a position agreeing that precautionary rules were necessary (Observed). Because the two cuts reached different audiences on different platforms, we can't separate the effect of the cut from the audience.
+- **Where it misfired:** A [104-second YouTube Shorts trailer](https://www.youtube.com/shorts/7a6BfbZiDV4) for a [Diary of a CEO debate](https://www.youtube.com/watch?v=OhOmLqR5nN4) titled "WILL AI LEAD US TO EXTINCTION?" led to pushback, with critical comments taking 57% of likes among comments that took a position. In contrast, a [21-minute cut](https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis) of the same debate on Facebook saw 88% of commenters taking a position agree with the risk case (Observed). Because the two cuts reached different audiences on different platforms, we can't separate the effect of the cut from the audience.
 
 Chart: Four versions of one debate: agreement from 49% to 88%. Stacked bars showing agreement with the risk case under four cuts of one debate, from 49% to 88%.
 
@@ -241,7 +241,7 @@ Chart: What changed when someone else checked the work. Paired bars comparing Re
 
 Same story, independently confirmed: acceptance rose from 51% to 69%. Common Signals.
 
-- **In practice:** When [Christiane Amanpour interviewed Heidy Khlaaf](https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf) ([AI Now Institute](https://ainowinstitute.org)) about autonomous model failures, Khlaaf kept the discussion focused on corporate accountability and engineering standards. [68% of commenters](https://commonsignals.org/data/amanpour-segment-2026-09/) taking a stand agreed with that framing (Observed).
+- **In practice:** When [Hari Sreenivasan interviewed Heidy Khlaaf](https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf) ([AI Now Institute](https://ainowinstitute.org)) on Amanpour and Company about autonomous model failures, Khlaaf kept the discussion focused on corporate accountability and engineering standards. [68% of commenters](https://commonsignals.org/data/amanpour-segment-2026-09/) taking a stand agreed with that framing (Observed).
 
 Chart: Did commenters accept the central claim? Bar chart of the Amanpour comments by stance: 68% agree, 18% disagree, 14% mixed.
 
@@ -401,6 +401,8 @@ The [AI safety comms reading list](https://commonsignals.org/ai-safety-comms-rea
 If you quote or adapt this guide, please cite it as:
 
 Common Signals, "How to communicate about AI safety", November 2026.
+
+Corrected 11 November 2026: Hari Sreenivasan, not Christiane Amanpour, interviewed Heidy Khlaaf on Amanpour and Company. The 88% figure for the Facebook cut of the Diary of a CEO debate is agreement with the risk case, not with the need for precautionary rules. The Soares reel had 1,703 comments, of which 1,534 were coded, not 1,600.
 
 ## Related research
 

@@ -50,7 +50,7 @@ No. We take no position on which rules are right, which risks matter most, or wh
 
 **Why does this need to exist?**
 
-Global AI investment reached around $581.7bn in 2025 (Stanford HAI, 2026 AI Index), and a very small share of that goes to safety, let alone to public understanding. The people explaining AI to the public mostly work from instinct, and the early evidence, including the Seismic Foundation's 2025 study and Trippenbach et al. (2025), suggests the field's dominant framings underperform. Climate communication went through the same problem twenty years ago and solved part of it with shared, neutral audience research. We are applying that model to AI while the gap is still open.
+Global AI investment reached around $581.7bn in 2025 (Stanford HAI, 2026 AI Index), and a very small share of that goes to safety, let alone to public understanding. The people explaining AI to the public mostly work from instinct, and the early evidence, including a 2025 message-testing paper by Philip Trippenbach and colleagues at the Seismic Foundation, Blue State and the Centre for Future Generations, suggests the field's dominant framings underperform. Climate communication went through the same problem twenty years ago and solved part of it with shared, neutral audience research. We are applying that model to AI while the gap is still open.
 
 **What has been published so far?**
 

@@ -555,7 +555,7 @@ url: "https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-an
 published: 2026-10-09
 updated: 2026-11-09
 publisher: "Common Signals"
-cite: "Common Signals, '\"Can't we just unplug it?\": What 26,257 comments made of the Diary of a CEO AI debate', October 2026."
+cite: "Common Signals, '\"Can't we just unplug it?\": The Diary of a CEO AI debate analysed through 26,000 comments', October 2026."
 ---
 
 # How did viewers react to the Diary of a CEO debate on AI extinction risk?
@@ -715,7 +715,9 @@ This study cannot separate the effect of the cut from the effect of the audience
 
 The codebook and every coded comment are published in our data explorer as five datasets, one per post: [the full episode on YouTube](https://commonsignals.org/data/doac-debate-youtube-2026-09/), [the trailer on YouTube Shorts](https://commonsignals.org/data/doac-clip-shorts-2026-09/), [the 21-minute cut on Facebook](https://commonsignals.org/data/doac-clip-facebook-2026-09/), and the Soares clip on [TikTok](https://commonsignals.org/data/doac-clip-tiktok-2026-09/) and [Instagram](https://commonsignals.org/data/doac-clip-instagram-2026-09/). All are licensed CC BY 4.0. The full method is on the [Common Signals methodology page](https://commonsignals.org/methodology).
 
-Cite as: Common Signals, '"Can't we just unplug it?": What 26,257 comments made of the Diary of a CEO AI debate', October 2026.
+Cite as: Common Signals, '"Can't we just unplug it?": The Diary of a CEO AI debate analysed through 26,000 comments', October 2026.
+
+Corrected 11 November 2026: the citation now gives the article's title. We retrieved 26,257 comments and coded 26,019.
 
 [Explore the data →](https://commonsignals.org/data/)
 
@@ -1297,7 +1299,7 @@ Two in three Americans say AI is coming into their lives whether they want it or
 
 PauseAI's email builder. PauseAI, CC BY 4.0.
 
-- **Where it misfired:** A [short video reel by Nate Soares](https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri) titled "We stop AI. You help?" drew [1,600 comments](https://commonsignals.org/data/soares-reel-2026-08/). The second most-liked comment (over 8,000 likes) asked why it felt like it was already too late; hopeless comments took a fifth of all likes, and fewer than 2% asked what they could actually do (Observed).
+- **Where it misfired:** A [short video reel by Nate Soares](https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri) titled "We stop AI. You help?" had [1,703 comments](https://commonsignals.org/data/soares-reel-2026-08/), of which 1,534 were coded. The second most-liked comment (over 8,000 likes) asked why it felt like it was already too late; hopeless comments took a fifth of all likes, and fewer than 2% asked what they could actually do (Observed).
 
 Chart: Did commenters accept that AI is a serious danger? Bar chart of the Soares reel comments by stance: 53% accept, 24% reject, 6% accept in part, 17% other.
 
@@ -1374,7 +1376,7 @@ Abstract warnings about human extinction fall flat with a general audience. Grou
 
 Threat and remedy, side by side. ControlAI.
 
-- **Where it misfired:** A [104-second YouTube Shorts trailer](https://www.youtube.com/shorts/7a6BfbZiDV4) for a [Diary of a CEO debate](https://www.youtube.com/watch?v=OhOmLqR5nN4) titled "WILL AI LEAD US TO EXTINCTION?" led to pushback, with critical comments taking 57% of likes among comments that took a position. In contrast, a [21-minute cut](https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis) of the same debate on Facebook saw 88% of commenters taking a position agreeing that precautionary rules were necessary (Observed). Because the two cuts reached different audiences on different platforms, we can't separate the effect of the cut from the audience.
+- **Where it misfired:** A [104-second YouTube Shorts trailer](https://www.youtube.com/shorts/7a6BfbZiDV4) for a [Diary of a CEO debate](https://www.youtube.com/watch?v=OhOmLqR5nN4) titled "WILL AI LEAD US TO EXTINCTION?" led to pushback, with critical comments taking 57% of likes among comments that took a position. In contrast, a [21-minute cut](https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis) of the same debate on Facebook saw 88% of commenters taking a position agree with the risk case (Observed). Because the two cuts reached different audiences on different platforms, we can't separate the effect of the cut from the audience.
 
 Chart: Four versions of one debate: agreement from 49% to 88%. Stacked bars showing agreement with the risk case under four cuts of one debate, from 49% to 88%.
 
@@ -1403,7 +1405,7 @@ Chart: What changed when someone else checked the work. Paired bars comparing Re
 
 Same story, independently confirmed: acceptance rose from 51% to 69%. Common Signals.
 
-- **In practice:** When [Christiane Amanpour interviewed Heidy Khlaaf](https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf) ([AI Now Institute](https://ainowinstitute.org)) about autonomous model failures, Khlaaf kept the discussion focused on corporate accountability and engineering standards. [68% of commenters](https://commonsignals.org/data/amanpour-segment-2026-09/) taking a stand agreed with that framing (Observed).
+- **In practice:** When [Hari Sreenivasan interviewed Heidy Khlaaf](https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf) ([AI Now Institute](https://ainowinstitute.org)) on Amanpour and Company about autonomous model failures, Khlaaf kept the discussion focused on corporate accountability and engineering standards. [68% of commenters](https://commonsignals.org/data/amanpour-segment-2026-09/) taking a stand agreed with that framing (Observed).
 
 Chart: Did commenters accept the central claim? Bar chart of the Amanpour comments by stance: 68% agree, 18% disagree, 14% mixed.
 
@@ -1563,6 +1565,8 @@ The [AI safety comms reading list](https://commonsignals.org/ai-safety-comms-rea
 If you quote or adapt this guide, please cite it as:
 
 Common Signals, "How to communicate about AI safety", November 2026.
+
+Corrected 11 November 2026: Hari Sreenivasan, not Christiane Amanpour, interviewed Heidy Khlaaf on Amanpour and Company. The 88% figure for the Facebook cut of the Diary of a CEO debate is agreement with the risk case, not with the need for precautionary rules. The Soares reel had 1,703 comments, of which 1,534 were coded, not 1,600.
 
 ## Related research
 
@@ -2130,7 +2134,7 @@ For a fuller, filterable catalogue of polls and framing studies, see the Common 
 ## If you only read five articles
 
 1. [How do people feel about AI?](https://www.turing.ac.uk/news/publications/understanding-public-attitudes-ai-second-survey), Ada Lovelace Institute and The Alan Turing Institute (2025). The most rigorous picture of UK attitudes: 3,513 adults at a 62% response rate, asked questions first used in 2022 so you can see what changed. Nearly nine in ten support independent regulation of AI.
-2. [From catastrophic to concrete](https://arxiv.org/abs/2511.06525), Philip Trippenbach, Isabella Scala, Jai Bhambra and Rowan Emslie (2025). A message test with 1,063 people across five countries. Risks to jobs and children had the most potential to mobilise people, and existential risk came last in every demographic group. The authors argue extinction messages trigger mortality avoidance, and name Tech-Positive Urbanites and World Guardians as the most receptive segments.
+2. [From catastrophic to concrete](https://arxiv.org/abs/2511.06525), Philip Trippenbach, Isabella Scala, Jai Bhambra and Rowan Emslie (2025). A message-testing paper by researchers at the Seismic Foundation, Blue State and the Centre for Future Generations. It draws on Seismic's survey in five countries and checks the findings with a message test of 1,063 US adults. Risks to jobs and children had the most potential to mobilise people, and existential risk came last in every demographic group. The authors argue extinction messages trigger mortality avoidance, and name Tech-Positive Urbanites and World Guardians as the most receptive segments.
 3. [Which AI harms and risks will mobilise the public to act?](https://www.socialchangelab.org/research/which-ai-harms-and-risks.html), Markus Ostarek, Cathy Rogers, Ben Kenward and Sam Nadel, Social Change Lab (2026). A UK randomised trial with 3,467 people comparing eleven AI harms. It agrees with Trippenbach on extinction framing and disagrees on jobs. AI warfare raised concern about extinction more than extinction messaging did. Anger predicted action while anxiety did not.
 4. [Perception of risk](https://doi.org/10.1126/science.3563507), Paul Slovic (1987). A short paper in Science on why the public and experts rank hazards differently. Lay judgements follow how dreaded and how unfamiliar a risk feels, a description that fits most AI risks.
 5. [AI is on the march. Is the AI safety movement ready?](https://www.socialchangelab.org/research/ai-safety-movement.html), Social Change Lab (2025). Sorts civil-society groups into four clusters: protest and mobilisation, narrative-shaping and watchdogs, public literacy, and field-building and lobbying. It finds sharp disagreement between present-day-harms and existential-risk groups.
@@ -2199,6 +2203,8 @@ This list will have gaps, and I'd like to hear about them. I'm particularly inte
 - Anything I've summarised unfairly
 
 Please email me at [hello@commonsignals.org](mailto:hello@commonsignals.org), or [follow Common Signals on Substack](https://commonsignalsorg.substack.com/) for updates.
+
+Corrected 11 November 2026: the Trippenbach paper's message test was run with 1,063 adults in the US, not across five countries. The five-country data comes from the Seismic Foundation's survey.
 
 URL: https://commonsignals.org/theory-of-change
 
@@ -2667,7 +2673,7 @@ No. We take no position on which rules are right, which risks matter most, or wh
 
 **Why does this need to exist?**
 
-Global AI investment reached around $581.7bn in 2025 (Stanford HAI, 2026 AI Index), and a very small share of that goes to safety, let alone to public understanding. The people explaining AI to the public mostly work from instinct, and the early evidence, including the Seismic Foundation's 2025 study and Trippenbach et al. (2025), suggests the field's dominant framings underperform. Climate communication went through the same problem twenty years ago and solved part of it with shared, neutral audience research. We are applying that model to AI while the gap is still open.
+Global AI investment reached around $581.7bn in 2025 (Stanford HAI, 2026 AI Index), and a very small share of that goes to safety, let alone to public understanding. The people explaining AI to the public mostly work from instinct, and the early evidence, including a 2025 message-testing paper by Philip Trippenbach and colleagues at the Seismic Foundation, Blue State and the Centre for Future Generations, suggests the field's dominant framings underperform. Climate communication went through the same problem twenty years ago and solved part of it with shared, neutral audience research. We are applying that model to AI while the gap is still open.
 
 **What has been published so far?**
 
