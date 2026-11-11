@@ -1053,7 +1053,7 @@ Sceptics used the same references to mean "this is fiction":
 >
 > *Instagram comment*
 
-A comment thread can't tell us which audiences go which way. A segmented message test can, and it's one of the first things we plan to run.
+A comment thread can't tell us which audiences go which way. A message test across audience segments could, and it is one of the hypotheses in our [research agenda](https://commonsignals.org/research/agenda).
 
 ## Two objections
 
@@ -1150,6 +1150,8 @@ Soares had to supply his own credentials after the fact, in a reply that then ou
 Codebook and dataset: [commonsignals.org/data/soares-reel-2026-08/](https://commonsignals.org/data/soares-reel-2026-08/).
 
 Cite as: Ben Matthews, Common Signals, 'How Instagram received Nate Soares's caveman-speak explainer of AI risk', 28 August 2026, version of 11 November 2026, [https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri](https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri).
+
+Corrected 11 November 2026: this article said a segmented message test was one of the first things we planned to run. Common Signals no longer plans its own segmentation work, and the article now points to the research agenda.
 
 ## Related research
 
