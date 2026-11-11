@@ -83,7 +83,7 @@ Yet voters distrust the institutions meant to govern technology. 80% distrust th
 
 The [Americans on AI](https://www.americanson.ai/) tracker, run biweekly by NORC at the University of Chicago, shows that 70% of American adults were concerned about AI's growing role in October 2026, against 21% who were excited. 79% called tackling AI harms an important or top priority for government, placing it ahead of immigration and climate change.
 
-Americans report seeing harms in their daily lives: 73% say AI is worsening job security, and 80% see people struggling to tell what is real. Public opinion also shifts around real-world events, though the tracker can't show what caused each shift. When OpenAI [disclosed](https://www.reuters.com/business/its-ai-agent-spent-days-hacking-company-sources-say-openai-did-not-notice-week-2026-07-24/) in July 2026 that two models broke out of their test environment and hacked Hugging Face, the share of Americans who were very concerned rose from 29% to 35%. Following Jacob Coxon's [public resignation](https://www.wsj.com/tech/ai/anthropic-researcher-quits-over-out-of-control-ai-fears-707b7628) from Anthropic in September 2026, the share calling AI harms a top priority rose from 36% to 43%.
+Americans report seeing harms in their daily lives: 73% say AI is worsening job security, and 80% see people struggling to tell what is real. Public opinion also shifts around real-world events, though the tracker can't show what caused each shift. When OpenAI [disclosed](https://www.reuters.com/business/its-ai-agent-spent-days-hacking-company-sources-say-openai-did-not-notice-week-2026-07-24/) in July 2026 that a swarm of OpenAI research agents had broken out of their test environment and hacked Hugging Face, the share of Americans who were very concerned rose from 29% to 35%. Following Jacob Coxon's [public resignation](https://www.wsj.com/tech/ai/anthropic-researcher-quits-over-out-of-control-ai-fears-707b7628) from Anthropic in September 2026, the share calling AI harms a top priority rose from 36% to 43%.
 
 Chart: Line chart of US adults' concern about AI, June to October 2026.
 
@@ -218,7 +218,7 @@ Chart: Four versions of one debate: agreement from 49% to 88%. Stacked bars show
 
 Agreement with the risk case under four cuts of one debate. Common Signals.
 
-- **Try this:** Sequence your case: incident → mechanism → stakes → policy ask. "In July, two OpenAI models broke containment and hacked an external network. Independent researchers confirmed it. Companies admit their next models will be far more capable. We need a watchdog with the legal power to halt unsafe systems."
+- **Try this:** Sequence your case: incident → mechanism → stakes → policy ask. "In July, a swarm of OpenAI research agents broke containment and hacked an external network. Independent researchers confirmed it. Companies admit their next models will be far more capable. We need a watchdog with the legal power to halt unsafe systems."
 - **Avoid this:** Leading with "human extinction," "apocalypse," or internal terms like "p(doom)" when talking to a general audience.
 
 ### 7. Choose messengers your audience already trusts, and prepare them for scrutiny
@@ -285,7 +285,7 @@ This issue covers situations where autonomous systems act outside human intent, 
 - **Do** quote public statements from lab leaders and researchers admitting they cannot fully predict or control their models.
 - **Do** pair every catastrophic warning with a specific legislative remedy, such as an independent public regulator empowered to halt unsafe model training.
 - **Don't** lead with extinction rhetoric when speaking to a general audience.
-- **Example message:** "In July, two of OpenAI's advanced models broke out of their test environment and spent days hacking another company's systems. According to Reuters, the company failed to notice the breach for an entire week. Independent security researchers confirmed what happened. Tech companies are now building far more autonomous systems, yet the UK has no regulator with the legal power to stop an unsafe release. We need an independent watchdog that can inspect these models and halt them if they fail basic safety tests."
+- **Example message:** "In July, a swarm of OpenAI research agents broke out of their test environment and spent days hacking another company's systems. According to Reuters, the company failed to notice the breach for an entire week. Independent security researchers confirmed what happened. Tech companies are now building far more autonomous systems, yet the UK has no regulator with the legal power to stop an unsafe release. We need an independent watchdog that can inspect these models and halt them if they fail basic safety tests."
 
 Read the full issue guide: [How to talk about loss of control and catastrophic risk](https://commonsignals.org/how-to-talk-about-loss-of-control)
 
@@ -402,7 +402,7 @@ If you quote or adapt this guide, please cite it as:
 
 Common Signals, "How to communicate about AI safety", November 2026.
 
-Corrected 11 November 2026: Hari Sreenivasan, not Christiane Amanpour, interviewed Heidy Khlaaf on Amanpour and Company. The 88% figure for the Facebook cut of the Diary of a CEO debate is agreement with the risk case, not with the need for precautionary rules. The Soares reel had 1,703 comments, of which 1,534 were coded, not 1,600. Common Signals plans workshops but does not yet run them.
+Corrected 11 November 2026: Hari Sreenivasan, not Christiane Amanpour, interviewed Heidy Khlaaf on Amanpour and Company. The 88% figure for the Facebook cut of the Diary of a CEO debate is agreement with the risk case, not with the need for precautionary rules. The Soares reel had 1,703 comments, of which 1,534 were coded, not 1,600. Common Signals plans workshops but does not yet run them. The OpenAI incident involved a swarm of research agents, not two models.
 
 ## Related research
 
