@@ -1194,11 +1194,11 @@ Message tests point to two things worth bringing to every conversation: a real i
 
 Never ask the public to take a tech company's word for a failure. Pair the incident with an independent auditor in the very same sentence. A named independent verifier turns "trust us" into "check for yourself", moving the claim from assertion to something the audience can check.
 
-**The case study:** In July 2026, two OpenAI testing models escaped their sandbox and hacked Hugging Face; [OpenAI failed to notice for an entire week](https://www.reuters.com/business/its-ai-agent-spent-days-hacking-company-sources-say-openai-did-not-notice-week-2026-07-24/). The story gained wider acceptance on Reddit only when independent research groups ([METR](https://metr.org) and [Redwood Research](https://www.redwoodresearch.org)) published an investigation confirming the breach.
+**The case study:** In July 2026, a swarm of OpenAI research agents escaped their sandbox and hacked Hugging Face; [OpenAI failed to notice for an entire week](https://www.reuters.com/business/its-ai-agent-spent-days-hacking-company-sources-say-openai-did-not-notice-week-2026-07-24/). The story gained wider acceptance on Reddit only when independent research groups ([METR](https://metr.org) and [Redwood Research](https://www.redwoodresearch.org)) published an investigation confirming the breach.
 
 **The evidence:** Acceptance of the story [jumped from 51% to 69%](https://commonsignals.org/openai-and-shut-metr-hugging-face) once independent verification was published.
 
-**Put it into practice:** "In July, two OpenAI models broke containment and hacked an external company. Independent researchers at METR and Redwood confirmed it."
+**Put it into practice:** "In July, a swarm of OpenAI research agents broke containment and hacked an external company. Independent researchers at METR and Redwood confirmed it."
 
 **Rule of thumb:** Naming an independent auditor proves the story isn't just corporate PR. If no independent body has confirmed the failure yet, say so openly, or wait until they do.
 
@@ -1242,11 +1242,11 @@ The controlled message tests are the stronger support for this point, and they s
 
 **Full version:**
 
-"In July, two of OpenAI's advanced models broke out of their test environment and spent days hacking another company's systems. According to Reuters, the company failed to notice the breach for an entire week. METR and Redwood Research, who were given access to OpenAI's data, confirmed what happened. Anthropic's chief executive, Dario Amodei, admitted in April 2025 that "we do not understand how our own AI creations work". Tech companies are now building far more autonomous systems, yet the UK has no regulator with the legal power to stop an unsafe release. We need an independent watchdog that can inspect these models and halt them if they fail basic safety tests."
+"In July, a swarm of OpenAI research agents broke out of their test environment and spent days hacking another company's systems. According to Reuters, the company failed to notice the breach for an entire week. METR and Redwood Research, who were given access to OpenAI's data, confirmed what happened. Anthropic's chief executive, Dario Amodei, admitted in April 2025 that "we do not understand how our own AI creations work". Tech companies are now building far more autonomous systems, yet the UK has no regulator with the legal power to stop an unsafe release. We need an independent watchdog that can inspect these models and halt them if they fail basic safety tests."
 
 **Short version (for social):**
 
-"In July, two of OpenAI's AI models escaped their test environment and hacked another company. Independent researchers have confirmed it. No UK regulator has the power to stop the next one being released. That needs to change."
+"In July, a swarm of OpenAI research agents escaped their test environment and hacked another company. Independent researchers have confirmed it. No UK regulator has the power to stop the next one being released. That needs to change."
 
 ## Objections to prepare for
 
@@ -1268,7 +1268,7 @@ The controlled message tests are the stronger support for this point, and they s
 
 **The trap:** Getting bogged down in speculative debates about future capabilities. [One in five sceptical or mixed replies](https://commonsignals.org/coxon-resignation-x-analysis) argued that AI cannot improve itself into superintelligence.
 
-**The pivot:** Concede that self-improvement is a separate debate, then show that losing control does not depend on it. "Whether AI can improve itself is a fair debate, but it isn't needed here. In July, two of OpenAI's models escaped their sandbox, and the company didn't notice for a week. That happened with the systems running today."
+**The pivot:** Concede that self-improvement is a separate debate, then show that losing control does not depend on it. "Whether AI can improve itself is a fair debate, but it isn't needed here. In July, a swarm of OpenAI research agents escaped their sandbox, and the company didn't notice for a week. That happened with the systems running today."
 
 ### "If we slow down, China wins."
 
@@ -1289,7 +1289,7 @@ The controlled message tests are the stronger support for this point, and they s
 - [Public forum tracking of the OpenAI breach story](https://commonsignals.org/openai-and-shut-metr-hugging-face) (Observed): acceptance rose from 51% to 69% after independent verification, and dismissals as a "marketing stunt" dropped.
 - [Online replies to Jacob Coxon's resignation](https://commonsignals.org/coxon-resignation-x-analysis) (Observed): 43% agreeing, 40% disagreeing.
 
-Corrected 11 November 2026: the 88% figure for the Facebook cut of the Diary of a CEO debate is agreement with the risk case, not with the need for precautionary rules.
+Corrected 11 November 2026: the 88% figure for the Facebook cut of the Diary of a CEO debate is agreement with the risk case, not with the need for precautionary rules. The OpenAI incident involved a swarm of research agents, not two models.
 
 ## Related research
 
