@@ -51,7 +51,7 @@ This is the first mainstream news audience in our research.
 
 We captured the comments twice: 283 on 13 September, ten days after broadcast, and 322 on 16 September, by which time views had grown from 183,000 to 222,387. Figures come from the later capture unless we say otherwise.
 
-We exported all 322 comments (232 top-level and 90 replies) with like counts. Claude coded each one for stance on Khlaaf's central claim, frame, reaction to format, emotion and six mention flags, against a written codebook. "Agree" means accepting her reframing. "Disagree" includes the AI-safety objection that she understated what the swarm did. Ben Matthews spot-checked a random 40 comments.
+We exported all 322 comments (232 top-level and 90 replies) with like counts. Claude coded each one for stance on Khlaaf's central claim, frame, reaction to format, emotion and six mention flags, against a written codebook. "Agree" means accepting her reframing. "Disagree" includes the AI-safety objection that she understated what the swarm did. Ben Matthews spot-checked a random 40 comments before publication, but the result was not recorded.
 
 The codebook from the first capture wasn't archived, so frame comparisons between the two captures, including the credential figure, show direction only. Stance, format and emotion use fixed categories shared across all our studies, so those comparisons are firmer.
 

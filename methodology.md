@@ -55,7 +55,7 @@ We write down the central claim that stance is coded against. If a piece argues 
 
 [Claude](https://www.anthropic.com/claude), a large language model made by Anthropic, codes every comment in parallel batches against the written codebook. For replies, it also sees the comment being replied to. Language models can [match or beat trained crowd workers on annotation tasks like this](https://doi.org/10.1073/pnas.2305016120) (Gilardi, Alizadeh and Kubli, 2023). They can also drift from the codebook over long batches, overuse catch-all categories and misread irony.
 
-We check the output in two ways. Software confirms that every code comes from the allowed list and that every comment is coded exactly once. A person then spot-checks a random sample of 40 comments against the codebook, and each study publishes the result. The Diary of a CEO study was checked by a blind second coding instead, described under limitations. Where a heavily liked comment affects the engagement-weighted results, we review its codes individually and note any correction.
+We check the output in two ways. Software confirms that every code comes from the allowed list and that every comment is coded exactly once. A person then spot-checks a random sample of 40 comments against the codebook, and each study publishes the result, except the Amanpour and Company study, whose result was not recorded. The Diary of a CEO study was checked by a blind second coding instead, described under limitations. Where a heavily liked comment affects the engagement-weighted results, we review its codes individually and note any correction.
 
 A 40-comment check is thin evidence. That's why we report percentages as whole numbers and treat them as accurate to within a few points.
 
@@ -95,7 +95,7 @@ Our closing advice sometimes draws on established research, such as [Kim Witte's
 
 Several of these changes follow the method used by the [AI Dialogue Report](https://aidialoguereport.org/findings/).
 
-- More than one coder. The Diary of a CEO study took a first step, with a blind second coding of a random sample by a separate run of the same model. Models from different developers make different mistakes, so we plan to code each comment with more than one model, accept the codes they agree on and send disagreements to an arbiter, which gives every study an agreement figure to publish.
+- More than one coder. The Diary of a CEO study took a first step, with a blind second coding of a random sample by a separate run of the same model. Models from different developers make different mistakes, so we plan to code each comment with more than one model, accept the codes they agree on and send disagreements to an arbiter, which gives every study an agreement figure to publish. We also plan a blind second coding of the five earlier studies.
 - Quote-backed codes. Each code will cite the words in the comment that support it, and software will check the words are there.
 - A larger human benchmark. A bigger hand-coded sample will let us report precision and recall for each category, and correct published shares for the measured error rate using the [Rogan-Gladen method](https://doi.org/10.1093/oxfordjournals.aje.a112510) (Rogan and Gladen, 1978).
 - Corrections for multiple comparisons. When we compare many groups, such as stance across every frame, some differences will look real by chance. We will report only those that survive a [Benjamini-Hochberg false discovery rate correction](https://doi.org/10.1111/j.2517-6161.1995.tb02031.x) (Benjamini and Hochberg, 1995).

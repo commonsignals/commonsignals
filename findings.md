@@ -9,7 +9,7 @@ cite: "Common Signals, \"Findings so far: what four comment-thread studies say a
 
 # Findings
 
-Last updated: 14 September 2026
+Last updated: 11 November 2026
 
 Nine patterns that hold across at least two of four coded comment-thread studies on how the public receives AI risk messaging, each stated as a hypothesis with the base it was measured on.
 
@@ -116,13 +116,15 @@ Each finding above is a hypothesis drawn from self-selected audiences under a ra
 
 ## Method and limits
 
-Comments are retrieved by the most complete route each platform allows, anonymised, and [coded by a language model against a codebook](https://commonsignals.org/tools/comment-analyser/) drafted from the thread and approved before coding starts. Stance, format reaction and emotional register use fixed categories across studies; frames are drafted fresh per artefact. A 40-comment human spot-check is published per study and has run 37 to 40 out of 40, which is why percentages are reported to the nearest few points.
+Comments are retrieved by the most complete route each platform allows, anonymised, and [coded by a language model against a codebook](https://commonsignals.org/tools/comment-analyser/) drafted from the thread and approved before coding starts. Stance, format reaction and emotional register use fixed categories across studies; frames are drafted fresh per artefact. A person spot-checked a random 40 comments in each study. Where the result was recorded it ran 37 to 40 out of 40; for the Amanpour and Company study it was not recorded. That is why percentages are reported to the nearest few points. The later Diary of a CEO study, not covered here, was checked instead by a blind second coding of 347 comments, which agreed on stance for 91% (kappa 0.87) and on frame for 89% (kappa 0.87).
 
 Comment threads are not samples of anyone. Commenters self-select, platforms rank, and the people who watched and moved on are invisible. The coding is single-pass and machine-led. Cross-study comparisons are across different audiences, platforms and central claims at once, so our research can suggest that framing changes reception but cannot isolate framing from audience. The full method, including the stance-base definitions and known failure modes, is on the [methodology page](https://commonsignals.org/methodology).
 
 ## Data and citation
 
 Codebooks and anonymised coded datasets for each study are published in our [data explorer](https://commonsignals.org/data/), browsable comment by comment: [the Soares reel](https://commonsignals.org/data/soares-reel-2026-08/), [Reddit before and after the METR report](https://commonsignals.org/data/metr-report-reddit-2026-09/), [the Cotra episode](https://commonsignals.org/data/cotra-episode-2026-09/) and [the Amanpour and Company segment](https://commonsignals.org/data/amanpour-segment-2026-09/). [Re-codings and criticism are wanted.](https://commonsignals.org/about) Cite as: Common Signals, "Findings so far: what four comment-thread studies say about explaining AI risk", September 2026, with the date of the version used.
+
+Corrected 11 November 2026: the spot-check result for the Amanpour and Company study was not recorded, so the range of 37 to 40 out of 40 covers the other three studies.
 
 ### Disclosure
 
