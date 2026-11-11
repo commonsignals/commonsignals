@@ -222,12 +222,12 @@
 {
 "t": "Tools",
 "u": "/tools",
-"d": "Free, open tools for anyone communicating about AI: a graded toolkit, How to communicate about AI safety, and an AI safety messenger map."
+"d": "Free, open tools for anyone communicating about AI: a graded toolkit, How to communicate about AI safety, an AI safety messenger map and a comment analyser."
 },
 {
 "t": "Comment analyser",
 "u": "/tools/comment-analyser/",
-"d": "Upload a comment export or paste a Hacker News link and get a coded analysis of how a post landed: stance, frames, engagement and the charts to show it."
+"d": "Upload a comment export or paste a Hacker News link, and code how a post landed with your own Anthropic API key: stance, frames, engagement and the charts to show it."
 },
 {
 "t": "AI safety messenger map",

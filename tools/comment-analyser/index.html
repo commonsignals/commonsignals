@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <script data-cfasync="false" src="/analytics.js"></script>
 <title>Comment analyser: Common Signals</title>
-<meta name="description" content="Upload a comment export or paste a Hacker News link and get a coded analysis of how a post landed: stance, frames, engagement and the charts to show it." />
+<meta name="description" content="Upload a comment export or paste a Hacker News link, and code how a post landed with your own Anthropic API key: stance, frames, engagement and the charts to show it." />
 
 <meta property="og:title" content="Comment analyser: Common Signals" />
 <meta property="og:description" content="Paste a Hacker News link or upload a comment export, and get a coded read of how a post landed." />
@@ -39,7 +39,7 @@
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Comment analyser",
-  "description": "Upload a comment export or paste a Hacker News link and get a coded analysis of how a post landed: stance, frames, engagement and the charts to show it.",
+  "description": "Upload a comment export or paste a Hacker News link, and code how a post landed with your own Anthropic API key: stance, frames, engagement and the charts to show it.",
   "url": "https://commonsignals.org/tools/comment-analyser/",
   "isPartOf": { "@type": "WebSite", "name": "Common Signals", "url": "https://commonsignals.org/" }
 }
@@ -73,6 +73,7 @@
   }
   .tool-card input[type="text"],
   .tool-card input[type="url"],
+  .tool-card input[type="password"],
   .tool-card textarea {
     width: 100%;
     font-family: var(--sans);
@@ -86,6 +87,8 @@
   .tool-card input::placeholder, .tool-card textarea::placeholder { color: var(--ink-faint); }
   .tool-card input:focus, .tool-card textarea:focus { outline: none; border-color: var(--signal); }
   .tool-card textarea { min-height: 140px; font-family: var(--mono); font-size: 1rem; }
+  .tool-card textarea#claim { min-height: 4.5rem; font-family: var(--sans); }
+  .tool-card .tool-hint { color: var(--ink-faint); font-size: 0.95rem; margin: 0.5rem 0 0; }
   .tool-drop {
     border: 2px dashed var(--line);
     border-radius: 10px;
@@ -206,17 +209,17 @@
   <div class="page-hero">
     <p class="label tool-eyebrow">Tools / Comment analyser</p>
     <h1>How did that post actually land?</h1>
-    <p class="sub">Paste a Hacker News link, or upload a comment export from any platform, and get a coded read of the reaction: who agreed, which frames they used, what carried the engagement, and the charts to show it. Same method as our published analyses, run on your thread.</p>
+    <p class="sub">Paste a Hacker News link, or upload a comment export from any platform, and get a coded read of the reaction: who agreed, which frames they used, what carried the engagement, and the charts to show it. Same method as our published analyses, run on your thread with your own Anthropic API key.</p>
   </div>
 
   <div class="tool-main">
     <div class="tool-card">
       <h2>1. Get the comments in</h2>
       <label class="tool-label" for="url">A link, for platforms with an open route</label>
-      <input type="url" id="url" placeholder="https://news.ycombinator.com/item?id=... (Reddit and YouTube need the worker, below)">
+      <input type="url" id="url" placeholder="https://news.ycombinator.com/item?id=... (Reddit and YouTube links need a collaborator code)">
       <label class="tool-label">Or an export file (TSV or CSV: id, parent_id, text, engagement, created_at; coded files may also carry stance, frame, format_reaction, emotion)</label>
       <div class="tool-drop" id="drop">Drop a file here, or click to choose<input type="file" id="file" accept=".tsv,.csv,.txt" class="hide"></div>
-      <details><summary>Optional: worker endpoint and access code (for Reddit, YouTube and AI coding)</summary>
+      <details><summary>For collaborators: worker endpoint and access code (Reddit and YouTube links)</summary>
         <label class="tool-label" for="worker">Worker URL</label><input type="url" id="worker" placeholder="https://comment-analyser.your-account.workers.dev" value="https://comment-analyser.ben-d00.workers.dev">
         <label class="tool-label" for="code">Access code</label><input type="text" id="code" placeholder="shared with collaborators, not public">
       </details>
@@ -228,12 +231,18 @@
 
     <div class="tool-card hide" id="codePanel">
       <h2>2. Code the comments</h2>
-      <p>This file is not coded yet. Coding needs a frame list drafted from the thread and approved by a person; that is the one step we never automate away. Edit the draft below, then send batches to the worker, or download a batch pack and code with the Common Signals skill.</p>
+      <p>This file is not coded yet. Coding needs a central claim and a frame list, drafted from the thread and approved by a person; that is the one step we never automate away. Draft them from a sample, edit them, then approve and code. Claude codes each comment for stance on the claim, frame, reaction to the format and emotion, the same dimensions as our published studies.</p>
+      <label class="tool-label" for="apiKey">Your Anthropic API key</label>
+      <input type="password" id="apiKey" class="ph-no-capture" autocomplete="off" spellcheck="false" placeholder="sk-ant-...">
+      <p class="tool-hint">Coding runs in this page with Claude Opus 5.5. Your browser sends the comments and your key straight to Anthropic, which bills your account at its list prices; the page shows the running cost as it codes. Common Signals never receives your key or the comments, and the key is forgotten when you close the tab. Get a key from the <a href="https://platform.claude.com/" target="_blank" rel="noopener">Claude Console</a>.</p>
+      <label class="tool-label" for="claim">Central claim (stance is coded against it)</label>
+      <textarea id="claim" placeholder="One sentence: what the post argues"></textarea>
       <label class="tool-label" for="frames">Frame list (one per line: key | one-line definition)</label>
       <textarea id="frames"></textarea>
       <div class="tool-btn-row">
-        <button class="btn btn-primary" id="draftFrames">Draft frames from a sample (worker)</button>
-        <button class="btn btn-primary" id="runCode">Approve and code (worker)</button>
+        <button class="btn btn-primary" id="draftFrames">Draft claim and frames</button>
+        <button class="btn btn-primary" id="runCode">Approve and code</button>
+        <button class="btn btn-ghost hide" id="stopCode">Stop</button>
         <button class="btn btn-ghost" id="pack">Download batch pack</button>
       </div>
       <div class="tool-status" id="s2"></div>
@@ -490,7 +499,7 @@
     try {
       if (/news\.ycombinator\.com|hn\.algolia/.test(url)) rows = await fetchHN(url);
       else if (/reddit\.com|youtube\.com|youtu\.be/.test(url)) rows = await viaWorker("/fetch", { url });
-      else throw new Error("Instagram, TikTok, X, LinkedIn and Facebook do not allow fetching from a website. Export the comments (see the Common Signals skill) and upload the file.");
+      else throw new Error("Instagram, TikTok, X, LinkedIn and Facebook do not allow fetching from a website. Export the comments and upload the file.");
       $("s1").textContent = `Retrieved ${rows.length} comments${onPage ? ` of ${onPage} on the page` : ""}.`; render();
     } catch (e) { $("s1").textContent = "Could not load: " + e.message; }
   };
@@ -509,25 +518,72 @@
   }
 
   // coding panel
+  // Coding runs with the visitor's own Anthropic API key (claude-coder.js, exposed as window.CSClaude),
+  // or, for collaborators with an access code and no key, through the worker.
+  const apiKey = () => $("apiKey").value.trim();
+  const useWorker = () => !apiKey() && $("code").value.trim();
+  const dollars = n => n < 0.01 ? "under 1 cent" : "about $" + n.toFixed(2);
+  let usage = null, stopping = false;
   $("draftFrames").onclick = async () => {
-    try { $("s2").textContent = "Drafting frames from a sample of the thread..."; const sample = sampleRows(200); const j = await viaWorker("/frames", { sample }); $("frames").value = j.frames.map(f => `${f.key} | ${f.definition}`).join("\n"); $("s2").textContent = "Draft ready. Edit, then approve and code."; } catch (e) { $("s2").textContent = e.message; }
+    if (!apiKey() && !useWorker()) { $("s2").textContent = "Add your Anthropic API key first."; return; }
+    try {
+      $("s2").textContent = "Drafting the claim and frames from a sample of the thread...";
+      const sample = sampleRows(200);
+      if (useWorker()) { const j = await viaWorker("/frames", { sample }); $("frames").value = j.frames.map(f => `${f.key} | ${f.definition}`).join("\n"); }
+      else {
+        const C = window.CSClaude; usage = usage || C.emptyUsage();
+        const d = await C.draftFrames(apiKey(), sample, $("claim").value); C.addUsage(usage, d.usage);
+        $("claim").value = d.claim; $("frames").value = d.frames.map(f => `${f.key} | ${f.definition}`).join("\n");
+      }
+      $("s2").textContent = `Draft ready${usage ? ` (cost so far ${dollars(window.CSClaude.cost(usage))})` : ""}. Edit the claim and frames, then approve and code.`;
+    } catch (e) { $("s2").textContent = window.CSClaude ? window.CSClaude.explain(e) : e.message; }
   };
   $("runCode").onclick = async () => {
     const frames = parseFrames(); if (frames.length < 3) { $("s2").textContent = "Give the coder at least three frames."; return; }
-    const todo = rows.filter(r => (r.text || "").trim()); const byId = Object.fromEntries(rows.map(r => [r.id, r])); const B = 40; let done = 0;
-    try {
-      for (let i = 0; i < todo.length; i += B) {
-        const batch = todo.slice(i, i + B).map(r => ({ id: r.id, text: r.text, parent_text: r.parent_id && byId[r.parent_id] ? byId[r.parent_id].text.slice(0, 300) : "" }));
-        const j = await viaWorker("/code", { frames, batch }); (j.coded || []).forEach(c => Object.assign(byId[c.id] || {}, c)); done += batch.length; $("s2").textContent = `Coded ${done} of ${todo.length}...`;
+    if (!apiKey() && !useWorker()) { $("s2").textContent = "Add your Anthropic API key first."; return; }
+    const claim = $("claim").value.trim(); if (!useWorker() && !claim) { $("s2").textContent = "Write the central claim first: stance is coded against it."; return; }
+    const byId = Object.fromEntries(rows.map(r => [r.id, r])); const B = 40;
+    // Only comments not yet coded, so a stopped or interrupted run picks up where it left off.
+    const todo = rows.filter(r => (r.text || "").trim() && !r.stance);
+    const batches = []; for (let i = 0; i < todo.length; i += B) batches.push(todo.slice(i, i + B).map(r => ({ id: r.id, text: r.text, parent_text: r.parent_id && byId[r.parent_id] ? byId[r.parent_id].text.slice(0, 300) : "" })));
+    if (!batches.length) { $("s2").textContent = "Every comment with text is already coded."; return; }
+    if (useWorker()) {
+      let done = 0;
+      try { for (const batch of batches) { const j = await viaWorker("/code", { frames, batch }); (j.coded || []).forEach(c => Object.assign(byId[c.id] || {}, c)); done += batch.length; $("s2").textContent = `Coded ${done} of ${todo.length}...`; } $("s2").textContent = `Coded ${done} comments.`; render(); }
+      catch (e) { $("s2").textContent = "Stopped: " + e.message; }
+      return;
+    }
+    const C = window.CSClaude; usage = usage || C.emptyUsage(); stopping = false;
+    let done = 0, declined = 0, failure = null; const queue = batches.slice();
+    $("runCode").disabled = true; $("draftFrames").disabled = true; $("stopCode").classList.remove("hide");
+    const progress = () => { $("s2").textContent = `Coded ${done} of ${todo.length} with ${C.MODEL_NAME}, ${dollars(C.cost(usage))} so far...`; };
+    progress();
+    // Three batches at a time; the SDK retries rate limits and server errors on its own.
+    async function worker() {
+      while (queue.length && !stopping && !failure) {
+        const batch = queue.shift();
+        try { const j = await C.codeBatch(apiKey(), claim, frames, batch); C.addUsage(usage, j.usage); j.coded.forEach(c => Object.assign(byId[c.id] || {}, c)); done += j.coded.length; progress(); }
+        catch (e) { if (e.refused) declined += batch.length; else failure = e; }
       }
-      $("s2").textContent = `Coded ${done} comments.`; render();
-    } catch (e) { $("s2").textContent = "Stopped: " + e.message; }
+    }
+    await Promise.all([worker(), worker(), worker()]);
+    $("runCode").disabled = false; $("draftFrames").disabled = false; $("stopCode").classList.add("hide");
+    const left = rows.filter(r => (r.text || "").trim() && !r.stance).length;
+    let msg = `Coded ${done} comments with ${C.MODEL_NAME} for ${dollars(C.cost(usage))} at Anthropic's list prices (estimate).`;
+    if (declined) msg += ` Claude declined to code ${declined}; they stay uncoded.`;
+    if (failure) msg += " Stopped early: " + C.explain(failure);
+    else if (stopping) msg += " Stopped at your request.";
+    if (left && (failure || stopping)) msg += ` ${left} are left; press Approve and code to continue.`;
+    if (done) msg += " Before relying on the results, check a random 40 against the codebook, as we do for every study.";
+    $("s2").textContent = msg; if (done) render();
   };
+  $("stopCode").onclick = () => { stopping = true; $("s2").textContent = "Stopping after the batches already sent..."; };
   $("pack").onclick = () => {
     const frames = parseFrames(); const todo = rows.filter(r => (r.text || "").trim()); const byId = Object.fromEntries(rows.map(r => [r.id, r]));
     const jsonl = todo.map(r => JSON.stringify({ id: r.id, text: r.text, parent_text: r.parent_id && byId[r.parent_id] ? byId[r.parent_id].text.slice(0, 300) : "" })).join("\n");
-    const codebook = "# Codebook\n\nFixed dimensions: stance (agree|disagree|mixed|unclear|na), format_reaction (praise|mock|condescended|imitates|none), emotion (fear|resignation|anger|humour|hope|neutral).\n\nFrames:\n" + frames.map(f => `- ${f.key}: ${f.definition}`).join("\n") + "\n\nOutput one JSON object per id with keys id, stance, frame, format_reaction, emotion.";
-    download("batch.jsonl", jsonl); download("codebook.md", codebook); $("s2").textContent = "Batch pack downloaded. Code it with the Common Signals skill or scripts, then upload the coded file here.";
+    const claim = $("claim").value.trim();
+    const codebook = "# Codebook\n\n" + (claim ? `Central claim, which stance is coded against: ${claim}\n\n` : "") + "Fixed dimensions: stance (agree|disagree|mixed|unclear|na), format_reaction (praise|mock|condescended|imitates|none), emotion (fear|resignation|anger|humour|hope|neutral).\n\nFrames:\n" + frames.map(f => `- ${f.key}: ${f.definition}`).join("\n") + "\n\nOutput one JSON object per id with keys id, stance, frame, format_reaction, emotion.";
+    download("batch.jsonl", jsonl); download("codebook.md", codebook); $("s2").textContent = "Batch pack downloaded. Code it with your own tools, then upload the coded file here.";
   };
   function parseFrames() { return $("frames").value.split("\n").map(l => l.trim()).filter(Boolean).map(l => { const [k, ...d] = l.split("|"); return { key: k.trim(), definition: d.join("|").trim() }; }).filter(f => f.key); }
   function sampleRows(n) { const t = rows.filter(r => (r.text || "").trim()); const top = t.slice().sort((a, b) => (parseFloat(b.engagement) || 0) - (parseFloat(a.engagement) || 0)).slice(0, 50); const rest = t.slice().sort(() => Math.random() - .5).slice(0, n - 50); return top.concat(rest).map(r => ({ id: r.id, text: r.text.slice(0, 500), engagement: r.engagement })); }
@@ -552,6 +608,10 @@
   $("dlSvg").onclick = () => Object.entries(svgs).forEach(([n, s]) => download(n, s, "image/svg+xml"));
   $("dlTsv").onclick = () => { const cols = Object.keys(rows[0]).filter(k => !k.startsWith("_")); download("coded.tsv", [cols.join("\t")].concat(rows.map(r => cols.map(c => String(r[c] ?? "").replace(/\t/g, "\\t").replace(/\n/g, "\\n")).join("\t"))).join("\n")); };
 })();
+</script>
+<script type="module" data-cfasync="false">
+import * as CSClaude from "/tools/comment-analyser/claude-coder.js";
+window.CSClaude = CSClaude;
 </script>
 <iframe name="subscribe-target" class="subscribe-target-frame" aria-hidden="true" tabindex="-1"></iframe>
 </body>
