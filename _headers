@@ -59,6 +59,10 @@
   Content-Type: text/markdown; charset=utf-8
   Link: <https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf>; rel="canonical"
 
+/research/agenda.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://commonsignals.org/research/agenda>; rel="canonical"
+
 /research/library/index.html.md
   Content-Type: text/markdown; charset=utf-8
   Link: <https://commonsignals.org/research/library/>; rel="canonical"

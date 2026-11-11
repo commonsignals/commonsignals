@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parent.parent
 NOT_PAGES = ("scripts/", "_incoming/")
 
 SECTIONS = [
-    ("Main pages", ["index.html", "about.html", "research.html", "findings.html", "tools.html",
+    ("Main pages", ["index.html", "about.html", "research.html", "research/agenda.html", "findings.html", "tools.html",
                     "training.html", "workshops.html", "work-with-us.html", "donate.html", "updates.html", "theory-of-change.html",
                     "methodology.html", "glossary.html", "privacy.html", "contact.html", "sitemap.html"]),
     ("Research articles", None),

@@ -14,7 +14,7 @@ Common Signals' theory of change: why public engagement is critical to durable A
 
 ### Note added 11 November 2026
 
-Common Signals no longer plans its own segmentation survey or the US pilot described in sections 7.2 to 7.4 and 8.1, and it has no contracted quantitative partner. The rest of this document is unchanged from September 2026. Our current priorities are on the [research page](https://commonsignals.org/research).
+Common Signals no longer plans its own segmentation survey or the US pilot described in sections 7.2 to 7.4 and 8.1, and it has no contracted quantitative partner. The rest of this document is unchanged from September 2026. Our current priorities are set out in the [research agenda](https://commonsignals.org/research/agenda).
 
 ### About this document
 

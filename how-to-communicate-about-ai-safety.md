@@ -396,6 +396,8 @@ The [AI safety comms reading list](https://commonsignals.org/ai-safety-comms-rea
 - [Americans on AI](https://www.americanson.ai/), Athena Insights (2026, ongoing). A biweekly US tracker fielded by NORC, with data and code [open on GitHub](https://github.com/athena-insights/aoai-public).
 - [Great (public) expectations](https://www.adalovelaceinstitute.org/policy-briefing/great-expectations/), Nuala Polo and Roshni Modhvadia, Ada Lovelace Institute (2025). What 1,928 UK adults expect from AI governance.
 
+For the hypotheses our own studies raise, and how each could be tested, see the [Common Signals research agenda](https://commonsignals.org/research/agenda).
+
 ## How to cite
 
 If you quote or adapt this guide, please cite it as:
