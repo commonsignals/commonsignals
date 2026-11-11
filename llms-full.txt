@@ -353,7 +353,7 @@ About half of all disagreement here called the story marketing, staged or unveri
 
 ### 4. End with a step, however small
 
-59% of positioned comments agreed the incident was a serious warning, but only six people out of nearly 1,600 asked what to do next. The closest thing to a shared ask was more coverage ("Please, 60 Minutes, do a piece on this", 94 likes); giving viewers an explicit next step, rather than leaving them to invent one, would meet demand that's clearly there but unaddressed.
+59% of positioned comments agreed the incident was a serious warning, but only six of the 1,245 comments we coded asked what to do next. The closest thing to a shared ask was more coverage ("Please, 60 Minutes, do a piece on this", 94 likes); giving viewers an explicit next step, rather than leaving them to invent one, would meet demand that's clearly there but unaddressed.
 
 ### 5. Let the memorable details carry the claim
 
@@ -364,6 +364,8 @@ The most-liked comment in the thread (1,100 likes) was a joke riffing on the age
 Codebook and dataset: [commonsignals.org/data/cotra-episode-2026-09/](https://commonsignals.org/data/cotra-episode-2026-09/).
 
 Cite as: Ben Matthews, Common Signals, '"Please honor commit": how the OpenAI agent-swarm story landed with the audience most likely to believe it', 9 September 2026, version of 11 November 2026, [https://commonsignals.org/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh](https://commonsignals.org/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh).
+
+Corrected 11 November 2026: section 4 said six people out of nearly 1,600 asked what to do. The six came from the 1,245 comments we coded, not the 1,569 on the video.
 
 ## Related research
 
