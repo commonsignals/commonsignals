@@ -21,8 +21,8 @@ const PREFLIGHT = {
 };
 
 // 120 requests a minute per IP, counted per isolate, so only approximately:
-// Cloudflare runs many isolates. The survey's KV limiter is not reused because KV
-// takes one write a second per key, and 1,000 writes a day on the Free plan.
+// Cloudflare runs many isolates. KV isn't used for the counts because it takes one
+// write a second per key, and 1,000 writes a day on the Free plan.
 const LIMIT = 120;
 const WINDOW_MS = 60_000;
 const windows = new Map();
