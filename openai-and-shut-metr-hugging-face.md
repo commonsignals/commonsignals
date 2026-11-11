@@ -2,14 +2,14 @@
 title: "Did METR's report change how Reddit saw the OpenAI and Hugging Face incident?"
 url: "https://commonsignals.org/openai-and-shut-metr-hugging-face"
 published: 2026-09-04
-updated: 2026-11-09
+updated: 2026-11-11
 publisher: "Common Signals"
-cite: "Common Signals, 'OpenAI and shut? What an independent report did to the marketing-stunt argument', September 2026."
+cite: "Ben Matthews, Common Signals, 'OpenAI and shut? What an independent report did to the marketing-stunt argument', 4 September 2026, version of 11 November 2026, https://commonsignals.org/openai-and-shut-metr-hugging-face."
 ---
 
 # Did METR's report change how Reddit saw the OpenAI and Hugging Face incident?
 
-4 September 2026
+4 September 2026 · Ben Matthews
 
 OpenAI and shut? What an independent report did to the marketing-stunt argument
 
@@ -163,7 +163,7 @@ Whether naming an independent verifier moves belief more than a company statemen
 
 Codebook and dataset: [commonsignals.org/data/metr-report-reddit-2026-09/](https://commonsignals.org/data/metr-report-reddit-2026-09/).
 
-Cite as: Common Signals, 'OpenAI and shut? What an independent report did to the marketing-stunt argument', September 2026.
+Cite as: Ben Matthews, Common Signals, 'OpenAI and shut? What an independent report did to the marketing-stunt argument', 4 September 2026, version of 11 November 2026, [https://commonsignals.org/openai-and-shut-metr-hugging-face](https://commonsignals.org/openai-and-shut-metr-hugging-face).
 
 Updated 18 September 2026: method and figures revised to match the archived recode of 516 comments.
 

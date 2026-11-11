@@ -4,12 +4,12 @@ url: "https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-hugg
 published: 2026-09-14
 updated: 2026-11-11
 publisher: "Common Signals"
-cite: "Common Signals, '\"A problem they created\": how a news audience received the accountability version of the OpenAI and Hugging Face incident', September 2026."
+cite: "Ben Matthews, Common Signals, '\"A problem they created\": how a news audience received the accountability version of the OpenAI and Hugging Face incident', 14 September 2026, version of 11 November 2026, https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf."
 ---
 
 # How did Amanpour and Company viewers react to the OpenAI and Hugging Face incident?
 
-14 September 2026
+14 September 2026 · Ben Matthews
 
 "A problem they created": how a news audience received the accountability version of the OpenAI and Hugging Face incident
 
@@ -167,7 +167,7 @@ Over a third of everything coded disagree or mixed here came from people who tho
 
 Codebook and dataset: [commonsignals.org/data/amanpour-segment-2026-09/](https://commonsignals.org/data/amanpour-segment-2026-09/).
 
-Cite as: Common Signals, '"A problem they created": how a news audience received the accountability version of the OpenAI and Hugging Face incident', September 2026.
+Cite as: Ben Matthews, Common Signals, '"A problem they created": how a news audience received the accountability version of the OpenAI and Hugging Face incident', 14 September 2026, version of 11 November 2026, [https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf](https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf).
 
 Updated 16 September 2026 with a second capture. Credential figure corrected on 18 September 2026 from 7 to 6, to match the archived coding file.
 

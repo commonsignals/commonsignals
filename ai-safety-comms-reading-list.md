@@ -106,7 +106,7 @@ Please email me at [hello@commonsignals.org](mailto:hello@commonsignals.org), or
 
 ## How to cite
 
-Common Signals, "AI safety comms reading list: where to start", October 2026.
+Ben Matthews, Common Signals, "AI safety comms reading list: where to start", 15 October 2026, version of 11 November 2026, [https://commonsignals.org/ai-safety-comms-reading-list](https://commonsignals.org/ai-safety-comms-reading-list).
 
 Corrected 11 November 2026: the Trippenbach paper's message test was run with 1,063 adults in the US, not across five countries. The five-country data comes from the Seismic Foundation's survey. Added 11 November 2026: The UK AI Compass, Americans on AI and Great (public) expectations.
 

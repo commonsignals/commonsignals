@@ -2,14 +2,14 @@
 title: "How did Instagram react to Nate Soares explaining AI risk?"
 url: "https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri"
 published: 2026-08-28
-updated: 2026-11-09
+updated: 2026-11-11
 publisher: "Common Signals"
-cite: "Common Signals, 'How Instagram received Nate Soares's caveman-speak explainer of AI risk', August 2026."
+cite: "Ben Matthews, Common Signals, 'How Instagram received Nate Soares's caveman-speak explainer of AI risk', 28 August 2026, version of 11 November 2026, https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri."
 ---
 
 # How did Instagram react to Nate Soares explaining AI risk?
 
-28 August 2026
+28 August 2026 · Ben Matthews
 
 How Instagram received Nate Soares's caveman-speak explainer of AI risk
 
@@ -200,7 +200,7 @@ Soares had to supply his own credentials after the fact, in a reply that then ou
 
 Codebook and dataset: [commonsignals.org/data/soares-reel-2026-08/](https://commonsignals.org/data/soares-reel-2026-08/).
 
-Cite as: Common Signals, 'How Instagram received Nate Soares's caveman-speak explainer of AI risk', August 2026.
+Cite as: Ben Matthews, Common Signals, 'How Instagram received Nate Soares's caveman-speak explainer of AI risk', 28 August 2026, version of 11 November 2026, [https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri](https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri).
 
 ## Related research
 

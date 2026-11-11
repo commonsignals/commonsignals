@@ -6,12 +6,12 @@ url: "https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-hugg
 published: 2026-09-14
 updated: 2026-11-11
 publisher: "Common Signals"
-cite: "Common Signals, '\"A problem they created\": how a news audience received the accountability version of the OpenAI and Hugging Face incident', September 2026."
+cite: "Ben Matthews, Common Signals, '\"A problem they created\": how a news audience received the accountability version of the OpenAI and Hugging Face incident', 14 September 2026, version of 11 November 2026, https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf."
 ---
 
 # How did Amanpour and Company viewers react to the OpenAI and Hugging Face incident?
 
-14 September 2026
+14 September 2026 · Ben Matthews
 
 "A problem they created": how a news audience received the accountability version of the OpenAI and Hugging Face incident
 
@@ -169,7 +169,7 @@ Over a third of everything coded disagree or mixed here came from people who tho
 
 Codebook and dataset: [commonsignals.org/data/amanpour-segment-2026-09/](https://commonsignals.org/data/amanpour-segment-2026-09/).
 
-Cite as: Common Signals, '"A problem they created": how a news audience received the accountability version of the OpenAI and Hugging Face incident', September 2026.
+Cite as: Ben Matthews, Common Signals, '"A problem they created": how a news audience received the accountability version of the OpenAI and Hugging Face incident', 14 September 2026, version of 11 November 2026, [https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf](https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf).
 
 Updated 16 September 2026 with a second capture. Credential figure corrected on 18 September 2026 from 7 to 6, to match the archived coding file.
 
@@ -194,12 +194,12 @@ url: "https://commonsignals.org/clearest-warning-shot-openai-hugging-face-metr-c
 published: 2026-09-09
 updated: 2026-11-11
 publisher: "Common Signals"
-cite: "Common Signals, '\"Please honor commit\": how the OpenAI agent-swarm story landed with the audience most likely to believe it', September 2026."
+cite: "Ben Matthews, Common Signals, '\"Please honor commit\": how the OpenAI agent-swarm story landed with the audience most likely to believe it', 9 September 2026, version of 11 November 2026, https://commonsignals.org/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh."
 ---
 
 # How did Dwarkesh Podcast viewers react to Ajeya Cotra on the OpenAI and Hugging Face incident?
 
-9 September 2026
+9 September 2026 · Ben Matthews
 
 "Please honor commit": how the OpenAI agent-swarm story landed with the audience most likely to believe it
 
@@ -363,7 +363,7 @@ The most-liked comment in the thread (1,100 likes) was a joke riffing on the age
 
 Codebook and dataset: [commonsignals.org/data/cotra-episode-2026-09/](https://commonsignals.org/data/cotra-episode-2026-09/).
 
-Cite as: Common Signals, '"Please honor commit": how the OpenAI agent-swarm story landed with the audience most likely to believe it', September 2026.
+Cite as: Ben Matthews, Common Signals, '"Please honor commit": how the OpenAI agent-swarm story landed with the audience most likely to believe it', 9 September 2026, version of 11 November 2026, [https://commonsignals.org/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh](https://commonsignals.org/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh).
 
 ## Related research
 
@@ -384,12 +384,12 @@ url: "https://commonsignals.org/coxon-resignation-x-analysis"
 published: 2026-09-25
 updated: 2026-11-11
 publisher: "Common Signals"
-cite: "Common Signals, '\"Neither company is acting responsibly\": how X received Jacob Coxon's resignation from Anthropic', September 2026."
+cite: "Ben Matthews, Common Signals, '\"Neither company is acting responsibly\": how X received Jacob Coxon's resignation from Anthropic', 25 September 2026, version of 11 November 2026, https://commonsignals.org/coxon-resignation-x-analysis."
 ---
 
 # How did X react to Jacob Coxon's resignation from Anthropic?
 
-25 September 2026
+25 September 2026 · Ben Matthews
 
 "Neither company is acting responsibly": how X received Jacob Coxon's resignation from Anthropic
 
@@ -532,7 +532,7 @@ Replies that blamed greed or the urge for control, rather than the technology, a
 
 Codebook and dataset: [commonsignals.org/data/coxon-resignation-2026-09/](https://commonsignals.org/data/coxon-resignation-2026-09/).
 
-Cite as: Common Signals, '"Neither company is acting responsibly": how X received Jacob Coxon's resignation from Anthropic', September 2026.
+Cite as: Ben Matthews, Common Signals, '"Neither company is acting responsibly": how X received Jacob Coxon's resignation from Anthropic', 25 September 2026, version of 11 November 2026, [https://commonsignals.org/coxon-resignation-x-analysis](https://commonsignals.org/coxon-resignation-x-analysis).
 
 Corrected 11 November 2026: we compared Coxon's reception with our earlier studies using the wrong figures. Agreement in those studies ran from 51% to 69%, not 68% to 98%, and 53% on the Soares reel, not 98%.
 
@@ -557,12 +557,12 @@ url: "https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-an
 published: 2026-10-09
 updated: 2026-11-11
 publisher: "Common Signals"
-cite: "Common Signals, '\"Can't we just unplug it?\": The Diary of a CEO AI debate analysed through 26,000 comments', October 2026."
+cite: "Ben Matthews, Common Signals, '\"Can't we just unplug it?\": The Diary of a CEO AI debate analysed through 26,000 comments', 9 October 2026, version of 11 November 2026, https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis."
 ---
 
 # How did viewers react to the Diary of a CEO debate on AI extinction risk?
 
-9 October 2026
+9 October 2026 · Ben Matthews
 
 "Can't we just unplug it?": The Diary of a CEO AI debate analysed through 26,000 comments
 
@@ -717,7 +717,7 @@ This study cannot separate the effect of the cut from the effect of the audience
 
 The codebook and every coded comment are published in our data explorer as five datasets, one per post: [the full episode on YouTube](https://commonsignals.org/data/doac-debate-youtube-2026-09/), [the trailer on YouTube Shorts](https://commonsignals.org/data/doac-clip-shorts-2026-09/), [the 21-minute cut on Facebook](https://commonsignals.org/data/doac-clip-facebook-2026-09/), and the Soares clip on [TikTok](https://commonsignals.org/data/doac-clip-tiktok-2026-09/) and [Instagram](https://commonsignals.org/data/doac-clip-instagram-2026-09/). All are licensed CC BY 4.0. The full method is on the [Common Signals methodology page](https://commonsignals.org/methodology).
 
-Cite as: Common Signals, '"Can't we just unplug it?": The Diary of a CEO AI debate analysed through 26,000 comments', October 2026.
+Cite as: Ben Matthews, Common Signals, '"Can't we just unplug it?": The Diary of a CEO AI debate analysed through 26,000 comments', 9 October 2026, version of 11 November 2026, [https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis](https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis).
 
 Corrected 11 November 2026: the citation now gives the article's title. We retrieved 26,257 comments and coded 26,019.
 
@@ -769,14 +769,14 @@ URL: https://commonsignals.org/openai-and-shut-metr-hugging-face
 title: "Did METR's report change how Reddit saw the OpenAI and Hugging Face incident?"
 url: "https://commonsignals.org/openai-and-shut-metr-hugging-face"
 published: 2026-09-04
-updated: 2026-11-09
+updated: 2026-11-11
 publisher: "Common Signals"
-cite: "Common Signals, 'OpenAI and shut? What an independent report did to the marketing-stunt argument', September 2026."
+cite: "Ben Matthews, Common Signals, 'OpenAI and shut? What an independent report did to the marketing-stunt argument', 4 September 2026, version of 11 November 2026, https://commonsignals.org/openai-and-shut-metr-hugging-face."
 ---
 
 # Did METR's report change how Reddit saw the OpenAI and Hugging Face incident?
 
-4 September 2026
+4 September 2026 · Ben Matthews
 
 OpenAI and shut? What an independent report did to the marketing-stunt argument
 
@@ -930,7 +930,7 @@ Whether naming an independent verifier moves belief more than a company statemen
 
 Codebook and dataset: [commonsignals.org/data/metr-report-reddit-2026-09/](https://commonsignals.org/data/metr-report-reddit-2026-09/).
 
-Cite as: Common Signals, 'OpenAI and shut? What an independent report did to the marketing-stunt argument', September 2026.
+Cite as: Ben Matthews, Common Signals, 'OpenAI and shut? What an independent report did to the marketing-stunt argument', 4 September 2026, version of 11 November 2026, [https://commonsignals.org/openai-and-shut-metr-hugging-face](https://commonsignals.org/openai-and-shut-metr-hugging-face).
 
 Updated 18 September 2026: method and figures revised to match the archived recode of 516 comments.
 
@@ -951,14 +951,14 @@ URL: https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri
 title: "How did Instagram react to Nate Soares explaining AI risk?"
 url: "https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri"
 published: 2026-08-28
-updated: 2026-11-09
+updated: 2026-11-11
 publisher: "Common Signals"
-cite: "Common Signals, 'How Instagram received Nate Soares's caveman-speak explainer of AI risk', August 2026."
+cite: "Ben Matthews, Common Signals, 'How Instagram received Nate Soares's caveman-speak explainer of AI risk', 28 August 2026, version of 11 November 2026, https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri."
 ---
 
 # How did Instagram react to Nate Soares explaining AI risk?
 
-28 August 2026
+28 August 2026 · Ben Matthews
 
 How Instagram received Nate Soares's caveman-speak explainer of AI risk
 
@@ -1149,7 +1149,7 @@ Soares had to supply his own credentials after the fact, in a reply that then ou
 
 Codebook and dataset: [commonsignals.org/data/soares-reel-2026-08/](https://commonsignals.org/data/soares-reel-2026-08/).
 
-Cite as: Common Signals, 'How Instagram received Nate Soares's caveman-speak explainer of AI risk', August 2026.
+Cite as: Ben Matthews, Common Signals, 'How Instagram received Nate Soares's caveman-speak explainer of AI risk', 28 August 2026, version of 11 November 2026, [https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri](https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri).
 
 ## Related research
 
@@ -1311,7 +1311,7 @@ url: "https://commonsignals.org/how-to-communicate-about-ai-safety"
 published: 2026-11-06
 updated: 2026-11-11
 publisher: "Common Signals"
-cite: "Common Signals, \"How to communicate about AI safety\", November 2026."
+cite: "Ben Matthews, Common Signals, \"How to communicate about AI safety\", 6 November 2026, version of 11 November 2026, https://commonsignals.org/how-to-communicate-about-ai-safety."
 ---
 
 # How to communicate about AI safety
@@ -1576,7 +1576,7 @@ How the UK public describes AI. Data: Diffusion, The UK AI Compass (2026), CC BY
 
 Campaigners working on immediate algorithmic harms and those working on extinction risks often treat each other as rivals. Yet research shows their audiences overlap, and a promising narrative bridge between them is the question of who controls the technology.
 
-- **What the evidence says:** [Social Change Lab](https://www.socialchangelab.org/research/ai-safety-movement.html) found persistent fighting between [near-term harm](https://commonsignals.org/glossary#present-day-harms) advocates and long-term risk groups (Tested). Yet [trials](https://www.socialchangelab.org/research/which-ai-harms-and-risks.html) suggest that showing people concrete present-day harms can build concern about large-scale future failures better than direct warnings, though the link has to be built deliberately (Tested). When [Diffusion tested arguments](https://diffusion-beta.netlify.app/articles/uk-compass-report) for restraining tech executives, the message focused on control beat the message focused purely on wealth accumulation among Pragmatic Sceptics and Market Optimists, while the wealth message did better with Alarmed Populists (Tested).
+- **What the evidence says:** [Social Change Lab](https://www.socialchangelab.org/research/ai-safety-movement.html) found persistent fighting between [near-term harm](https://commonsignals.org/glossary#present-day-harms) advocates and long-term risk groups (Observed). Yet [trials](https://www.socialchangelab.org/research/which-ai-harms-and-risks.html) suggest that showing people concrete present-day harms can build concern about large-scale future failures better than direct warnings, though the link has to be built deliberately (Tested). When [Diffusion tested arguments](https://diffusion-beta.netlify.app/articles/uk-compass-report) for restraining tech executives, the message focused on control beat the message focused purely on wealth accumulation among Pragmatic Sceptics and Market Optimists, while the wealth message did better with Alarmed Populists (Tested).
 - **In practice:** ControlAI's [deepfakes campaign](https://controlai.org/past-campaigns/campaign-against-deepfakes) and PauseAI's [jobs campaign](https://pauseai.info/ai-not-just-coming-for-your-job) both open with present-day harms before connecting them to systemic loss of control. In media appearances, framing corporate negligence as a consistent pattern allows communicators to validate immediate harms while highlighting severe future risks.
 - **Where it misfired:** The [short trailer](https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis) for the Diary of a CEO debate pit the two sides against each other, using a clip that accused catastrophic risk advocates of wasting energy on hypothetical threats while ignoring current harms. The audience comments split down the middle, copying the fight shown on screen (Observed).
 - **Try this:** "The same companies cutting corners on children's safety and hiring algorithms today admit they are building systems they may not be able to control tomorrow."
@@ -1707,9 +1707,9 @@ The [AI safety comms reading list](https://commonsignals.org/ai-safety-comms-rea
 
 If you quote or adapt this guide, please cite it as:
 
-Common Signals, "How to communicate about AI safety", November 2026.
+Ben Matthews, Common Signals, "How to communicate about AI safety", 6 November 2026, version of 11 November 2026, [https://commonsignals.org/how-to-communicate-about-ai-safety](https://commonsignals.org/how-to-communicate-about-ai-safety).
 
-Corrected 11 November 2026: Hari Sreenivasan, not Christiane Amanpour, interviewed Heidy Khlaaf on Amanpour and Company. The 88% figure for the Facebook cut of the Diary of a CEO debate is agreement with the risk case, not with the need for precautionary rules. The Soares reel had 1,703 comments, of which 1,534 were coded, not 1,600. Common Signals plans workshops but does not yet run them. The OpenAI incident involved a swarm of research agents, not two models.
+Corrected 11 November 2026: Hari Sreenivasan, not Christiane Amanpour, interviewed Heidy Khlaaf on Amanpour and Company. The 88% figure for the Facebook cut of the Diary of a CEO debate is agreement with the risk case, not with the need for precautionary rules. The Soares reel had 1,703 comments, of which 1,534 were coded, not 1,600. Common Signals plans workshops but does not yet run them. The OpenAI incident involved a swarm of research agents, not two models. Social Change Lab's finding of fighting between near-term harm advocates and long-term risk groups, in principle 10, comes from a map of the AI safety movement, not an experiment or survey, so it is graded observed, not tested.
 
 ## Related research
 
@@ -2354,7 +2354,7 @@ Please email me at [hello@commonsignals.org](mailto:hello@commonsignals.org), or
 
 ## How to cite
 
-Common Signals, "AI safety comms reading list: where to start", October 2026.
+Ben Matthews, Common Signals, "AI safety comms reading list: where to start", 15 October 2026, version of 11 November 2026, [https://commonsignals.org/ai-safety-comms-reading-list](https://commonsignals.org/ai-safety-comms-reading-list).
 
 Corrected 11 November 2026: the Trippenbach paper's message test was run with 1,063 adults in the US, not across five countries. The five-country data comes from the Seismic Foundation's survey. Added 11 November 2026: The UK AI Compass, Americans on AI and Great (public) expectations.
 

@@ -4,7 +4,7 @@ url: "https://commonsignals.org/how-to-communicate-about-ai-safety"
 published: 2026-11-06
 updated: 2026-11-11
 publisher: "Common Signals"
-cite: "Common Signals, \"How to communicate about AI safety\", November 2026."
+cite: "Ben Matthews, Common Signals, \"How to communicate about AI safety\", 6 November 2026, version of 11 November 2026, https://commonsignals.org/how-to-communicate-about-ai-safety."
 ---
 
 # How to communicate about AI safety
@@ -269,7 +269,7 @@ How the UK public describes AI. Data: Diffusion, The UK AI Compass (2026), CC BY
 
 Campaigners working on immediate algorithmic harms and those working on extinction risks often treat each other as rivals. Yet research shows their audiences overlap, and a promising narrative bridge between them is the question of who controls the technology.
 
-- **What the evidence says:** [Social Change Lab](https://www.socialchangelab.org/research/ai-safety-movement.html) found persistent fighting between [near-term harm](https://commonsignals.org/glossary#present-day-harms) advocates and long-term risk groups (Tested). Yet [trials](https://www.socialchangelab.org/research/which-ai-harms-and-risks.html) suggest that showing people concrete present-day harms can build concern about large-scale future failures better than direct warnings, though the link has to be built deliberately (Tested). When [Diffusion tested arguments](https://diffusion-beta.netlify.app/articles/uk-compass-report) for restraining tech executives, the message focused on control beat the message focused purely on wealth accumulation among Pragmatic Sceptics and Market Optimists, while the wealth message did better with Alarmed Populists (Tested).
+- **What the evidence says:** [Social Change Lab](https://www.socialchangelab.org/research/ai-safety-movement.html) found persistent fighting between [near-term harm](https://commonsignals.org/glossary#present-day-harms) advocates and long-term risk groups (Observed). Yet [trials](https://www.socialchangelab.org/research/which-ai-harms-and-risks.html) suggest that showing people concrete present-day harms can build concern about large-scale future failures better than direct warnings, though the link has to be built deliberately (Tested). When [Diffusion tested arguments](https://diffusion-beta.netlify.app/articles/uk-compass-report) for restraining tech executives, the message focused on control beat the message focused purely on wealth accumulation among Pragmatic Sceptics and Market Optimists, while the wealth message did better with Alarmed Populists (Tested).
 - **In practice:** ControlAI's [deepfakes campaign](https://controlai.org/past-campaigns/campaign-against-deepfakes) and PauseAI's [jobs campaign](https://pauseai.info/ai-not-just-coming-for-your-job) both open with present-day harms before connecting them to systemic loss of control. In media appearances, framing corporate negligence as a consistent pattern allows communicators to validate immediate harms while highlighting severe future risks.
 - **Where it misfired:** The [short trailer](https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis) for the Diary of a CEO debate pit the two sides against each other, using a clip that accused catastrophic risk advocates of wasting energy on hypothetical threats while ignoring current harms. The audience comments split down the middle, copying the fight shown on screen (Observed).
 - **Try this:** "The same companies cutting corners on children's safety and hiring algorithms today admit they are building systems they may not be able to control tomorrow."
@@ -400,9 +400,9 @@ The [AI safety comms reading list](https://commonsignals.org/ai-safety-comms-rea
 
 If you quote or adapt this guide, please cite it as:
 
-Common Signals, "How to communicate about AI safety", November 2026.
+Ben Matthews, Common Signals, "How to communicate about AI safety", 6 November 2026, version of 11 November 2026, [https://commonsignals.org/how-to-communicate-about-ai-safety](https://commonsignals.org/how-to-communicate-about-ai-safety).
 
-Corrected 11 November 2026: Hari Sreenivasan, not Christiane Amanpour, interviewed Heidy Khlaaf on Amanpour and Company. The 88% figure for the Facebook cut of the Diary of a CEO debate is agreement with the risk case, not with the need for precautionary rules. The Soares reel had 1,703 comments, of which 1,534 were coded, not 1,600. Common Signals plans workshops but does not yet run them. The OpenAI incident involved a swarm of research agents, not two models.
+Corrected 11 November 2026: Hari Sreenivasan, not Christiane Amanpour, interviewed Heidy Khlaaf on Amanpour and Company. The 88% figure for the Facebook cut of the Diary of a CEO debate is agreement with the risk case, not with the need for precautionary rules. The Soares reel had 1,703 comments, of which 1,534 were coded, not 1,600. Common Signals plans workshops but does not yet run them. The OpenAI incident involved a swarm of research agents, not two models. Social Change Lab's finding of fighting between near-term harm advocates and long-term risk groups, in principle 10, comes from a map of the AI safety movement, not an experiment or survey, so it is graded observed, not tested.
 
 ## Related research
 

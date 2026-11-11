@@ -4,12 +4,12 @@ url: "https://commonsignals.org/coxon-resignation-x-analysis"
 published: 2026-09-25
 updated: 2026-11-11
 publisher: "Common Signals"
-cite: "Common Signals, '\"Neither company is acting responsibly\": how X received Jacob Coxon's resignation from Anthropic', September 2026."
+cite: "Ben Matthews, Common Signals, '\"Neither company is acting responsibly\": how X received Jacob Coxon's resignation from Anthropic', 25 September 2026, version of 11 November 2026, https://commonsignals.org/coxon-resignation-x-analysis."
 ---
 
 # How did X react to Jacob Coxon's resignation from Anthropic?
 
-25 September 2026
+25 September 2026 · Ben Matthews
 
 "Neither company is acting responsibly": how X received Jacob Coxon's resignation from Anthropic
 
@@ -152,7 +152,7 @@ Replies that blamed greed or the urge for control, rather than the technology, a
 
 Codebook and dataset: [commonsignals.org/data/coxon-resignation-2026-09/](https://commonsignals.org/data/coxon-resignation-2026-09/).
 
-Cite as: Common Signals, '"Neither company is acting responsibly": how X received Jacob Coxon's resignation from Anthropic', September 2026.
+Cite as: Ben Matthews, Common Signals, '"Neither company is acting responsibly": how X received Jacob Coxon's resignation from Anthropic', 25 September 2026, version of 11 November 2026, [https://commonsignals.org/coxon-resignation-x-analysis](https://commonsignals.org/coxon-resignation-x-analysis).
 
 Corrected 11 November 2026: we compared Coxon's reception with our earlier studies using the wrong figures. Agreement in those studies ran from 51% to 69%, not 68% to 98%, and 53% on the Soares reel, not 98%.
 

@@ -4,12 +4,12 @@ url: "https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-an
 published: 2026-10-09
 updated: 2026-11-11
 publisher: "Common Signals"
-cite: "Common Signals, '\"Can't we just unplug it?\": The Diary of a CEO AI debate analysed through 26,000 comments', October 2026."
+cite: "Ben Matthews, Common Signals, '\"Can't we just unplug it?\": The Diary of a CEO AI debate analysed through 26,000 comments', 9 October 2026, version of 11 November 2026, https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis."
 ---
 
 # How did viewers react to the Diary of a CEO debate on AI extinction risk?
 
-9 October 2026
+9 October 2026 · Ben Matthews
 
 "Can't we just unplug it?": The Diary of a CEO AI debate analysed through 26,000 comments
 
@@ -164,7 +164,7 @@ This study cannot separate the effect of the cut from the effect of the audience
 
 The codebook and every coded comment are published in our data explorer as five datasets, one per post: [the full episode on YouTube](https://commonsignals.org/data/doac-debate-youtube-2026-09/), [the trailer on YouTube Shorts](https://commonsignals.org/data/doac-clip-shorts-2026-09/), [the 21-minute cut on Facebook](https://commonsignals.org/data/doac-clip-facebook-2026-09/), and the Soares clip on [TikTok](https://commonsignals.org/data/doac-clip-tiktok-2026-09/) and [Instagram](https://commonsignals.org/data/doac-clip-instagram-2026-09/). All are licensed CC BY 4.0. The full method is on the [Common Signals methodology page](https://commonsignals.org/methodology).
 
-Cite as: Common Signals, '"Can't we just unplug it?": The Diary of a CEO AI debate analysed through 26,000 comments', October 2026.
+Cite as: Ben Matthews, Common Signals, '"Can't we just unplug it?": The Diary of a CEO AI debate analysed through 26,000 comments', 9 October 2026, version of 11 November 2026, [https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis](https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis).
 
 Corrected 11 November 2026: the citation now gives the article's title. We retrieved 26,257 comments and coded 26,019.
 
