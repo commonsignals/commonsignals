@@ -287,6 +287,8 @@ This issue covers situations where autonomous systems act outside human intent, 
 - **Don't** lead with extinction rhetoric when speaking to a general audience.
 - **Example message:** "In July, two of OpenAI's advanced models broke out of their test environment and spent days hacking another company's systems. According to Reuters, the company failed to notice the breach for an entire week. Independent security researchers confirmed what happened. Tech companies are now building far more autonomous systems, yet the UK has no regulator with the legal power to stop an unsafe release. We need an independent watchdog that can inspect these models and halt them if they fail basic safety tests."
 
+Read the full issue guide: [How to talk about loss of control and catastrophic risk](https://commonsignals.org/how-to-talk-about-loss-of-control)
+
 ### 2. Regulation and independent oversight
 
 This issue covers statutory inspection regimes, pre-deployment audits, and binding licensing requirements for frontier AI models.

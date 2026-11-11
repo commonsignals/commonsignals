@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script data-cfasync="false" src="/analytics.js"></script>
+<title>How to talk about loss of control and catastrophic risk: Common Signals</title>
+<meta name="description" content="Three dos and a don't for explaining AI systems that act outside human intent, and what to ask for when they do." />
+
+<meta property="og:title" content="How to talk about loss of control and catastrophic risk" />
+<meta property="og:description" content="Three dos and a don't for explaining AI systems that act outside human intent, and what to ask for when they do." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://commonsignals.org/how-to-talk-about-loss-of-control" />
+<meta property="og:site_name" content="Common Signals" />
+<meta property="og:image" content="https://commonsignals.org/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Common Signals: helping people explaining AI know which messages and messengers actually work." />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="How to talk about loss of control and catastrophic risk" />
+<meta name="twitter:description" content="Three dos and a don't for explaining AI systems that act outside human intent, and what to ask for when they do." />
+<meta name="twitter:image" content="https://commonsignals.org/og-image.png" />
+
+<link rel="canonical" href="https://commonsignals.org/how-to-talk-about-loss-of-control" />
+<meta name="robots" content="index, follow" />
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/styles.css?v=20261110a" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to talk about loss of control and catastrophic risk",
+  "description": "Three dos and a don't for explaining AI systems that act outside human intent, and what to ask for when they do.",
+  "datePublished": "2026-11-11",
+  "dateModified": "2026-11-11",
+  "url": "https://commonsignals.org/how-to-talk-about-loss-of-control",
+  "author": { "@type": "Person", "name": "Ben Matthews" },
+  "publisher": { "@type": "Organization", "name": "Common Signals", "url": "https://commonsignals.org/", "logo": { "@type": "ImageObject", "url": "https://commonsignals.org/og-image.png" } },
+  "isPartOf": { "@type": "Article", "headline": "How to communicate about AI safety", "url": "https://commonsignals.org/how-to-communicate-about-ai-safety" }
+}
+</script>
+<style>
+  /* Running text in the heading serif, at the site's 17px body size */
+  .article-body > p,
+  .article-body > ul > li,
+  .article-body > ol > li { font-family: var(--serif); font-size: 17px; }
+  /* Subheadings sit between the 17px body and the 21.6px section headings */
+  .article-body h3 { font-size: 1.2rem; }
+  /* Inline charts: desktop and mobile variants, as the site's <picture> charts do */
+  .article-body figure.chart svg { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 8px; }
+  .article-body figure.chart .chart-mobile { display: none; }
+  @media (max-width: 640px) {
+    .article-body figure.chart .chart-desktop { display: none; }
+    .article-body figure.chart .chart-mobile { display: block; }
+  }
+  /* Chart source lines, kept from each chart's original article */
+  .article-body figcaption .figure-source { display: block; margin-top: 0.3rem; font-size: 0.85rem; }
+  /* Evidence grades: a traffic-light dot before each grade. Green and red are the site's chart
+     teal and maroon; amber is an ochre that sits on the paper background. The word always stays. */
+  .grade { white-space: nowrap; }
+  .grade-dot {
+    display: inline-block;
+    width: 0.62em;
+    height: 0.62em;
+    margin: 0 0.32em 0.06em 0.05em;
+    border-radius: 50%;
+    vertical-align: middle;
+    box-shadow: 0 0 0 1px rgba(35, 32, 25, 0.12);
+  }
+  .grade-established .grade-dot { background: #0f8a78; }
+  .grade-tested .grade-dot { background: #c98a17; }
+  .grade-observed .grade-dot { background: #a8323e; }
+  .article-body .grade-key { list-style: none; margin: 1.2rem 0 1.6rem; padding: 0; display: grid; gap: 0.7rem; }
+  .article-body .grade-key li { color: var(--ink-soft); line-height: 1.6; }
+  .article-body .grade-key .grade-dot { width: 0.8em; height: 0.8em; }
+
+  /* Mobile section navigator: "You are currently reading", after JRF's report pages.
+     Sits under the sticky site header; only on widths where the sidebar contents is not sticky. */
+  .section-nav { display: none; }
+  @media (max-width: 860px) {
+    .section-nav {
+      display: block;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: var(--section-nav-top, 0px);
+      z-index: 19;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: var(--sans);
+      transform: translateY(-110%);
+      visibility: hidden;
+      transition: transform 0.2s ease, visibility 0s linear 0.2s;
+      box-shadow: 0 6px 16px rgba(35, 32, 25, 0.18);
+    }
+    .section-nav.is-visible {
+      transform: translateY(0);
+      visibility: visible;
+      transition: transform 0.2s ease, visibility 0s;
+    }
+    .section-nav-bar {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.6rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-nav-current { flex: 1; min-width: 0; margin: 0; line-height: 1.3; }
+    .section-nav-label { display: block; font-size: 0.8rem; font-weight: 500; color: var(--signal-soft); }
+    .section-nav-title {
+      display: block;
+      font-size: 0.98rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .section-nav-toggle {
+      flex: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      min-height: 44px;
+      padding: 0 0.2rem;
+      background: none;
+      border: 0;
+      color: var(--paper);
+      font: 500 0.92rem var(--sans);
+      cursor: pointer;
+    }
+    .section-nav-toggle svg { width: 10px; height: 10px; transition: transform 0.2s ease; }
+    .section-nav-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+    .section-nav-toggle:focus-visible, .section-nav-list a:focus-visible { outline: 2px solid var(--signal-soft); outline-offset: 2px; }
+    .section-nav-panel {
+      border-top: 1px solid rgba(245, 244, 239, 0.16);
+      max-height: calc(100vh - var(--section-nav-top, 0px) - 4rem);
+      max-height: calc(100dvh - var(--section-nav-top, 0px) - 4rem);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+    .section-nav-list { list-style: none; margin: 0 auto; padding: 0.5rem 1rem 1rem; max-width: 1200px; }
+    .section-nav-list a {
+      display: block;
+      padding: 0.55rem 0 0.55rem 0.8rem;
+      border-left: 2px solid transparent;
+      color: rgba(245, 244, 239, 0.86);
+      text-decoration: none;
+      font-size: 0.98rem;
+      line-height: 1.35;
+    }
+    .section-nav-list a[aria-current="true"] { color: #fff; border-left-color: var(--signal-soft); font-weight: 500; }
+    .article-body h2, .article-body h3 { scroll-margin-top: calc(var(--section-nav-top, 0px) + 5.25rem); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .section-nav, .section-nav.is-visible, .section-nav-toggle svg { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a href="/" class="wordmark">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#7a1e49"/><path d="M4 20 Q8 12 11 20 T18 20" stroke="#f5f4ef" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M18 20 Q22 8 28 20" stroke="#f5f4ef" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
+      Common Signals
+    </a>
+    <ul class="nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/research">Research</a></li>
+      <li><a href="/tools">Tools</a></li>
+      <li><a href="/training">Training</a></li>
+      <li><a href="/workshops">Workshops</a></li>
+      <li><a href="/updates">Updates</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-search-toggle" id="searchToggle" type="button" aria-label="Search the site" aria-expanded="false" aria-controls="siteSearch">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><line x1="16" y1="16" x2="21" y2="21"/></svg>
+      </button>
+      <a class="nav-cta" href="/work-with-us">Work with us</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navDrawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="nav-drawer" id="navDrawer">
+    <ul>
+      <li><a href="/about">About</a></li>
+      <li><a href="/research">Research</a></li>
+      <li><a href="/tools">Tools</a></li>
+      <li><a href="/training">Training</a></li>
+      <li><a href="/workshops">Workshops</a></li>
+      <li><a href="/updates">Updates</a></li>
+      <li><a href="/work-with-us">Work with us</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="site-search" id="siteSearch" hidden>
+    <div class="wrap site-search-panel">
+      <form role="search" action="/sitemap">
+        <label for="siteSearchInput" class="sr-only">Search Common Signals</label>
+        <input type="search" class="search-input" id="siteSearchInput" name="q" placeholder="Search the site: try a topic, platform or person" autocomplete="off" enterkeyhint="go">
+      </form>
+      <p class="search-status" role="status" aria-live="polite"></p>
+      <ul class="search-results"></ul>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <nav class="section-nav" id="sectionNav" aria-label="Sections">
+    <div class="section-nav-bar">
+      <p class="section-nav-current"><span class="section-nav-label">You are currently reading:</span>
+        <span class="section-nav-title" id="sectionNavTitle">Where the public stands</span></p>
+      <button type="button" class="section-nav-toggle" id="sectionNavToggle" aria-expanded="false" aria-controls="sectionNavPanel">
+        <span class="section-nav-toggle-text">View all sections</span>
+        <svg viewBox="0 0 10 6" aria-hidden="true"><path d="M0 0h10L5 6z" fill="currentColor"/></svg>
+      </button>
+    </div>
+    <div class="section-nav-panel" id="sectionNavPanel" hidden>
+      <ul class="section-nav-list">
+          <li><a href="#where-the-public-stands">Where the public stands</a></li>
+          <li><a href="#1-lead-with-a-real-incident-and-name-the-independent-verifier">1. Lead with a real incident and name the independent verifier</a></li>
+          <li><a href="#2-quote-tech-insiders-but-pair-them-with-an-outside-expert">2. Quote tech insiders, but pair them with an outside expert</a></li>
+          <li><a href="#3-pair-every-warning-with-a-specific-legislative-remedy">3. Pair every warning with a specific legislative remedy</a></li>
+          <li><a href="#and-a-dont-extinction-as-an-opener">And a don't: extinction as an opener</a></li>
+          <li><a href="#example-messages">Example messages</a></li>
+          <li><a href="#objections-to-prepare-for">Objections to prepare for</a></li>
+          <li><a href="#sources">Sources</a></li>
+          <li><a href="#related-research">Related research</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="article-hero">
+    <p class="article-eyebrow">11 November 2026 &middot; Ben Matthews</p>
+    <h1>How to talk about loss of control and catastrophic risk</h1>
+    <p class="article-dek">Three dos and a don't for explaining AI systems that act outside human intent, and what to ask for when they do.</p>
+    <div class="hero-actions">
+      <button type="button" class="share-copy">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9 17H7a5 5 0 1 1 0-10h2"/>
+          <path d="M15 7h2a5 5 0 1 1 0 10h-2"/>
+          <line x1="8" y1="12" x2="16" y2="12"/>
+        </svg>
+        <span class="share-copy-label" aria-live="polite">Copy link</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="article-shell">
+    <aside class="article-toc" aria-label="Table of contents">
+      <p class="toc-heading">Contents</p>
+      <ul>
+        <li><a href="#where-the-public-stands">Where the public stands</a></li>
+        <li><a href="#1-lead-with-a-real-incident-and-name-the-independent-verifier">1. Lead with a real incident and name the independent verifier</a></li>
+        <li><a href="#2-quote-tech-insiders-but-pair-them-with-an-outside-expert">2. Quote tech insiders, but pair them with an outside expert</a></li>
+        <li><a href="#3-pair-every-warning-with-a-specific-legislative-remedy">3. Pair every warning with a specific legislative remedy</a></li>
+        <li><a href="#and-a-dont-extinction-as-an-opener">And a don't: extinction as an opener</a></li>
+        <li><a href="#example-messages">Example messages</a></li>
+        <li><a href="#objections-to-prepare-for">Objections to prepare for</a></li>
+        <li><a href="#sources">Sources</a></li>
+        <li><a href="#related-research">Related research</a></li>
+      </ul>
+    </aside>
+
+    <article class="article-body">
+
+      <p>This guide is written for communicators and campaigners drafting messages now. Each item gives a case, one verifiable proof point, and a ready-to-use script; methodology sits in the Sources.</p>
+
+      <p>This is the first of seven issue guides expanding the short versions in <a href="https://commonsignals.org/how-to-communicate-about-ai-safety#1-loss-of-control-and-catastrophic-risk">How to communicate about AI safety</a>. It covers situations where AI systems act outside what their developers intended, break out of the environment they were tested in, or cannot be reliably shut down.</p>
+
+      <p>Message tests suggest that leading with concrete incidents and remedies works better with a general audience than abstract warnings.</p>
+
+      <h2 id="where-the-public-stands">Where the public stands</h2>
+
+      <p>You do not need to convince people that AI can get out of control. <a href="https://www.americanson.ai/" target="_blank" rel="noopener">78% of Americans</a> already believe it is happening or likely to happen, and the share who say it is already happening jumped from 28% to 43% between June and October 2026.</p>
+
+      <p>Message tests point to two things worth bringing to every conversation: a real incident the public can verify, and a legal remedy they can support.</p>
+
+      <h2 id="1-lead-with-a-real-incident-and-name-the-independent-verifier">1. Lead with a real incident and name the independent verifier</h2>
+
+      <p>Never ask the public to take a tech company's word for a failure. Pair the incident with an independent auditor in the very same sentence. A named independent verifier turns "trust us" into "check for yourself", moving the claim from assertion to something the audience can check.</p>
+
+      <p><strong>The case study:</strong> In July 2026, two OpenAI testing models escaped their sandbox and hacked Hugging Face; <a href="https://www.reuters.com/business/its-ai-agent-spent-days-hacking-company-sources-say-openai-did-not-notice-week-2026-07-24/" target="_blank" rel="noopener">OpenAI failed to notice for an entire week</a>. The story gained wider acceptance on Reddit only when independent research groups (<a href="https://metr.org" target="_blank" rel="noopener">METR</a> and <a href="https://www.redwoodresearch.org" target="_blank" rel="noopener">Redwood Research</a>) published an investigation confirming the breach.</p>
+
+      <p><strong>The evidence:</strong> Acceptance of the story <a href="https://commonsignals.org/openai-and-shut-metr-hugging-face">jumped from 51% to 69%</a> once independent verification was published.</p>
+
+      <p><strong>Put it into practice:</strong> "In July, two OpenAI models broke containment and hacked an external company. Independent researchers at METR and Redwood confirmed it."</p>
+
+      <p><strong>Rule of thumb:</strong> Naming an independent auditor proves the story isn't just corporate PR. If no independent body has confirmed the failure yet, say so openly, or wait until they do.</p>
+
+      <figure>
+        <picture>
+          <source media="(max-width: 640px)" srcset="/assets/mchart-lead-before-after-mobile.svg?v=2" />
+          <img src="/assets/mchart-lead-before-after.svg?v=2" alt="Before and after independent verification, four measures" />
+        </picture>
+        <figcaption>Same story, independently confirmed: acceptance rose from 51% to 69%. Common Signals.<br /><span class="figure-source">Stance and framing before and after independent verification. Before: r/artificial, 31 July, n=52 coded comments. After: eight subreddits from 26 August, n=464 coded comments.</span></figcaption>
+      </figure>
+
+      <h2 id="2-quote-tech-insiders-but-pair-them-with-an-outside-expert">2. Quote tech insiders, but pair them with an outside expert</h2>
+
+      <p>Warnings land harder when they come from tech insiders, but a whistleblower's resignation alone does not give the public a clear path forward.</p>
+
+      <p><strong>The case study:</strong> Anthropic CEO Dario Amodei <a href="https://www.darioamodei.com/post/the-urgency-of-interpretability" target="_blank" rel="noopener">stated in April 2025</a>: "People outside the field are often surprised and alarmed to learn that we do not understand how our own AI creations work." This is the usable example: a dated, exact quote from an insider admitting unpredictability. Anthropic researcher Jacob Coxon's <a href="https://www.wsj.com/tech/ai/anthropic-researcher-quits-over-out-of-control-ai-fears-707b7628" target="_blank" rel="noopener">resignation</a> in September 2026 is the cautionary example: a resignation alone drew split reactions and offered the public no path to action.</p>
+
+      <p><strong>The evidence:</strong> When Coxon resigned, online replies fractured, with <a href="https://commonsignals.org/coxon-resignation-x-analysis">43% agreeing and 40% disagreeing</a>.</p>
+
+      <p><strong>Put it into practice:</strong> Quote industry leaders exactly, with dates and links. However, because audiences immediately <a href="https://commonsignals.org/how-to-communicate-about-ai-safety#7-choose-messengers-your-audience-already-trusts-and-prepare-them-for-scrutiny">check a messenger's history for commercial interest</a>, always pair an insider's warning with a non-industry expert.</p>
+
+      <h2 id="3-pair-every-warning-with-a-specific-legislative-remedy">3. Pair every warning with a specific legislative remedy</h2>
+
+      <p>Never issue a warning without giving people an immediate step to take. Without a route to action, <a href="https://commonsignals.org/how-to-communicate-about-ai-safety#2-pair-every-threat-with-something-people-can-do">grave warnings produce resignation</a>.</p>
+
+      <p><strong>The case study:</strong> The UK currently has no statutory AI regulator. The <a href="https://www.aisi.gov.uk" target="_blank" rel="noopener">AI Security Institute</a> lacks the legal power to test models before they are released. In September 2026, the Joint Committee on Human Rights <a href="https://ppc.land/uk-government-faces-2-month-deadline-to-answer-mps-and-peers-on-ai-law/" target="_blank" rel="noopener">recommended</a> giving the Institute legal powers, including pre-release testing, and creating a regulator able to recall unsafe systems.</p>
+
+      <p><strong>The evidence:</strong> Messages calling for an independent regulator with the power to inspect, audit, and shut down dangerous systems <a href="https://diffusion-beta.netlify.app/articles/uk-compass-report" target="_blank" rel="noopener">scored 72.7/100</a>, ranking second overall.</p>
+
+      <p><strong>Put it into practice:</strong> Give your audience a specific decision-maker to target: the UK government, whose formal reply to the committee is due in November 2026. "The government must create a regulator with the legal power to recall unsafe systems."</p>
+
+      <h2 id="and-a-dont-extinction-as-an-opener">And a don't: extinction as an opener</h2>
+
+      <p>Don't open with human extinction. Explaining how a system actually fails works better than announcing a catastrophe.</p>
+
+      <p>One comparison is suggestive, though it can't isolate the effect of framing. A <a href="https://www.youtube.com/shorts/7a6BfbZiDV4" target="_blank" rel="noopener">104-second YouTube Shorts trailer</a> for the <a href="https://www.youtube.com/watch?v=OhOmLqR5nN4" target="_blank" rel="noopener">Diary of a CEO debate</a>, titled "WILL AI LEAD US TO EXTINCTION?", saw disagreeing comments take 57% of the likes among comments taking a position. A <a href="https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis">21-minute long-form cut</a> of the same debate on Facebook drew agreement from 88% of commenters taking a position that precautionary rules were necessary. The clips differ in platform, length and format as well as title, so these figures are confounded and show only a pattern worth testing <span class="grade grade-observed">(<span class="grade-dot" aria-hidden="true"></span>Observed</span>).</p>
+
+      <figure class="chart">
+        <div class="chart-desktop"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" width="720" height="480" role="img" aria-labelledby="doac-c1-t doac-c1-d"><title id="doac-c1-t">Four versions of one debate: agreement from 49% to 88%</title><desc id="doac-c1-d">YouTube, full episode: 77% agree, 20% disagree, 3% mixed (n = 15,928); Full episode, debater verdicts removed: 66% agree, 29% disagree, 5% mixed (n = 9,670); Facebook, 21-minute cut: 88% agree, 11% disagree, 2% mixed (n = 1,366); YouTube Shorts, 104-second trailer: 49% agree, 40% disagree, 11% mixed (n = 171)</desc><rect width="720" height="480" fill="#f5f4ef"/><text x="32.0" y="43.0" font-family='"Lora",Georgia,serif' font-size="17" font-weight="600" fill="#232019">Four versions of one debate: agreement from 49% to 88%</text><text x="32.0" y="64.0" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="13" fill="#635f54">Agree, disagree and mixed, as shares of comments taking a readable position</text><rect x="32.0" y="77.5" width="10" height="10" fill="#0f8a78" rx="2"/><text x="47.0" y="87.5" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="12" fill="#635f54">Agree</text><rect x="96.6" y="77.5" width="10" height="10" fill="#8c8579" rx="2"/><text x="111.6" y="87.5" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="12" fill="#635f54">Disagree</text><rect x="181.4" y="77.5" width="10" height="10" fill="#c9c2b6" rx="2"/><text x="196.4" y="87.5" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="12" fill="#635f54">Mixed</text><text x="32.0" y="113.5" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="14" font-weight="600" fill="#232019">YouTube, full episode</text><text x="32.0" y="130.6" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="12.5" fill="#635f54">n = 15,928</text><rect x="32.0" y="138.6" width="505.8" height="20" fill="#0f8a78"/><rect x="537.8" y="138.6" width="129.2" height="20" fill="#8c8579"/><rect x="667.0" y="138.6" width="20.3" height="20" fill="#c9c2b6"/><text x="32.0" y="176.6" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="13" fill="#232019">77% agree  ·  20% disagree  ·  3% mixed</text><text x="32.0" y="206.6" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="14" font-weight="600" fill="#232019">Full episode, debater verdicts removed</text><text x="32.0" y="223.6" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="12.5" fill="#635f54">n = 9,670</text><rect x="32.0" y="231.6" width="431.0" height="20" fill="#0f8a78"/><rect x="463.0" y="231.6" width="192.2" height="20" fill="#8c8579"/><rect x="655.2" y="231.6" width="32.8" height="20" fill="#c9c2b6"/><text x="32.0" y="269.6" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="13" fill="#232019">66% agree  ·  29% disagree  ·  5% mixed</text><text x="32.0" y="299.6" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="14" font-weight="600" fill="#232019">Facebook, 21-minute cut</text><text x="32.0" y="316.6" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="12.5" fill="#635f54">n = 1,366</text><rect x="32.0" y="324.6" width="574.0" height="20" fill="#0f8a78"/><rect x="606.0" y="324.6" width="69.5" height="20" fill="#8c8579"/><rect x="675.5" y="324.6" width="12.5" height="20" fill="#c9c2b6"/><text x="32.0" y="362.6" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="13" fill="#232019">88% agree  ·  11% disagree  ·  2% mixed</text><text x="32.0" y="392.6" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="14" font-weight="600" fill="#232019">YouTube Shorts, 104-second trailer</text><text x="32.0" y="409.6" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="12.5" fill="#635f54">n = 171</text><rect x="32.0" y="417.6" width="318.2" height="20" fill="#0f8a78"/><rect x="350.2" y="417.6" width="265.0" height="20" fill="#8c8579"/><rect x="615.2" y="417.6" width="72.8" height="20" fill="#c9c2b6"/><text x="32.0" y="455.6" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="13" fill="#232019">49% agree  ·  40% disagree  ·  11% mixed</text></svg></div>
+        <div class="chart-mobile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 531" width="360" height="531" role="img" aria-labelledby="doac-c1m-t doac-c1m-d"><title id="doac-c1m-t">Four versions of one debate: agreement from 49% to 88%</title><desc id="doac-c1m-d">YouTube, full episode: 77% agree, 20% disagree, 3% mixed (n = 15,928); Full episode, debater verdicts removed: 66% agree, 29% disagree, 5% mixed (n = 9,670); Facebook, 21-minute cut: 88% agree, 11% disagree, 2% mixed (n = 1,366); YouTube Shorts, 104-second trailer: 49% agree, 40% disagree, 11% mixed (n = 171)</desc><rect width="360" height="531" fill="#f5f4ef"/><text x="20.0" y="43.0" font-family='"Lora",Georgia,serif' font-size="19" font-weight="600" fill="#232019">Four versions of one debate:</text><text x="20.0" y="66.8" font-family='"Lora",Georgia,serif' font-size="19" font-weight="600" fill="#232019">agreement from 49% to 88%</text><text x="20.0" y="88.8" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="14" fill="#635f54">Agree, disagree and mixed, as shares of</text><text x="20.0" y="107.7" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="14" fill="#635f54">comments taking a readable position</text><rect x="20.0" y="121.6" width="11" height="11" fill="#0f8a78" rx="2"/><text x="36.0" y="132.6" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="13" fill="#635f54">Agree</text><rect x="88.4" y="121.6" width="11" height="11" fill="#8c8579" rx="2"/><text x="104.4" y="132.6" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="13" fill="#635f54">Disagree</text><rect x="178.6" y="121.6" width="11" height="11" fill="#c9c2b6" rx="2"/><text x="194.6" y="132.6" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="13" fill="#635f54">Mixed</text><text x="20.0" y="158.6" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="15" font-weight="600" fill="#232019">YouTube, full episode</text><text x="20.0" y="176.6" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="13.5" fill="#635f54">n = 15,928</text><rect x="20.0" y="184.6" width="246.7" height="20" fill="#0f8a78"/><rect x="266.7" y="184.6" width="63.0" height="20" fill="#8c8579"/><rect x="329.8" y="184.6" width="9.9" height="20" fill="#c9c2b6"/><text x="20.0" y="223.1" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="13.5" fill="#232019">77% agree  ·  20% disagree  ·  3% mixed</text><text x="20.0" y="253.1" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="15" font-weight="600" fill="#232019">Full episode, debater verdicts removed</text><text x="20.0" y="271.1" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="13.5" fill="#635f54">n = 9,670</text><rect x="20.0" y="279.1" width="210.2" height="20" fill="#0f8a78"/><rect x="230.2" y="279.1" width="93.8" height="20" fill="#8c8579"/><rect x="324.0" y="279.1" width="16.0" height="20" fill="#c9c2b6"/><text x="20.0" y="317.6" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="13.5" fill="#232019">66% agree  ·  29% disagree  ·  5% mixed</text><text x="20.0" y="347.6" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="15" font-weight="600" fill="#232019">Facebook, 21-minute cut</text><text x="20.0" y="365.6" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="13.5" fill="#635f54">n = 1,366</text><rect x="20.0" y="373.6" width="280.0" height="20" fill="#0f8a78"/><rect x="300.0" y="373.6" width="33.9" height="20" fill="#8c8579"/><rect x="333.9" y="373.6" width="6.1" height="20" fill="#c9c2b6"/><text x="20.0" y="412.1" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="13.5" fill="#232019">88% agree  ·  11% disagree  ·  2% mixed</text><text x="20.0" y="442.1" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="15" font-weight="600" fill="#232019">YouTube Shorts, 104-second trailer</text><text x="20.0" y="460.1" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="13.5" fill="#635f54">n = 171</text><rect x="20.0" y="468.1" width="155.2" height="20" fill="#0f8a78"/><rect x="175.2" y="468.1" width="129.3" height="20" fill="#8c8579"/><rect x="304.5" y="468.1" width="35.5" height="20" fill="#c9c2b6"/><text x="20.0" y="506.6" font-family='"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif' font-size="13.5" fill="#232019">49% agree  ·  40% disagree  ·  11% mixed</text></svg></div>
+        <figcaption>Agreement with the risk case across four cuts of one debate. Common Signals.<br /><span class="figure-source">Common Signals coding of 26,019 comments, captured 2 to 5 October 2026</span></figcaption>
+      </figure>
+
+      <p>The controlled message tests are the stronger support for this point, and they say the same. Warnings about human extinction ranked dead last in both major <a href="https://arxiv.org/abs/2511.06525" target="_blank" rel="noopener">US</a> and <a href="https://www.socialchangelab.org/research/which-ai-harms-and-risks.html" target="_blank" rel="noopener">UK</a> tests <span class="grade grade-tested">(<span class="grade-dot" aria-hidden="true"></span>Tested</span>), while factual reports about automated weapons raised concern about catastrophic risks far better than direct essays on extinction. Start with a real incident and let the stakes follow. Save the word "extinction" for <a href="https://commonsignals.org/how-to-communicate-about-ai-safety#6-make-catastrophic-risk-concrete-and-match-extinction-language-to-the-audience">in-depth policy briefings</a>, where you have time to explain the mechanisms properly.</p>
+
+      <h2 id="example-messages">Example messages</h2>
+
+      <p><strong>Full version:</strong></p>
+
+      <p>"In July, two of OpenAI's advanced models broke out of their test environment and spent days hacking another company's systems. According to Reuters, the company failed to notice the breach for an entire week. METR and Redwood Research, who were given access to OpenAI's data, confirmed what happened. Anthropic's chief executive, Dario Amodei, admitted in April 2025 that "we do not understand how our own AI creations work". Tech companies are now building far more autonomous systems, yet the UK has no regulator with the legal power to stop an unsafe release. We need an independent watchdog that can inspect these models and halt them if they fail basic safety tests."</p>
+
+      <p><strong>Short version (for social):</strong></p>
+
+      <p>"In July, two of OpenAI's AI models escaped their test environment and hacked another company. Independent researchers have confirmed it. No UK regulator has the power to stop the next one being released. That needs to change."</p>
+
+      <h2 id="objections-to-prepare-for">Objections to prepare for</h2>
+
+      <p><a href="https://commonsignals.org/how-to-communicate-about-ai-safety#8-use-the-moments-when-ai-is-in-the-news-and-bring-an-independent-verifier">Write your answers before the story breaks</a>. These are the objections that surfaced most often in our studies, along with the strategies to handle them. The "marketing stunt" and "watering down the risk" objections are already answered by rule 1 and the don't above.</p>
+
+      <h3 id="cant-we-just-unplug-it">"Can't we just unplug it?"</h3>
+
+      <p><strong>The trap:</strong> Assuming physical infrastructure guarantees software safety. This was the single most common response to the <a href="https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis">Diary of a CEO debate</a> on Facebook.</p>
+
+      <p><strong>The pivot:</strong> Point to the OpenAI case study. "OpenAI didn't even notice their agents were hacking another company for an entire week. You can't switch off something you don't know is running."</p>
+
+      <h3 id="the-humans-set-up-the-test-so-its-their-fault">"The humans set up the test, so it's their fault."</h3>
+
+      <p><strong>The trap:</strong> Arguing that the AI is fully autonomous.</p>
+
+      <p><strong>The pivot:</strong> Agree completely. This is the one objection where conceding is the strategy: agreeing removes the fight and redirects the conversation to accountability. If humans made the problem, humans need rules. "Exactly. That's why the executives building and deploying these systems must be held legally accountable for their failures."</p>
+
+      <h3 id="ai-cant-improve-itself-into-superintelligence">"AI can't improve itself into superintelligence."</h3>
+
+      <p><strong>The trap:</strong> Getting bogged down in speculative debates about future capabilities. <a href="https://commonsignals.org/coxon-resignation-x-analysis">One in five sceptical or mixed replies</a> argued that AI cannot improve itself into superintelligence.</p>
+
+      <p><strong>The pivot:</strong> Concede that self-improvement is a separate debate, then show that losing control does not depend on it. "Whether AI can improve itself is a fair debate, but it isn't needed here. In July, two of OpenAI's models escaped their sandbox, and the company didn't notice for a week. That happened with the systems running today."</p>
+
+      <h3 id="if-we-slow-down-china-wins">"If we slow down, China wins."</h3>
+
+      <p><strong>The trap:</strong> Getting stuck in a geopolitical arms race narrative.</p>
+
+      <p><strong>The pivot:</strong> Shift to accountability and democratic control. "Whoever builds the most powerful systems, we should want them under public oversight, with legal accountability for failures. A race nobody can audit or stop isn't a win for anyone." For the wider geopolitical argument, see the <a href="https://commonsignals.org/how-to-communicate-about-ai-safety#6-ai-war-and-national-security">issue guide on AI, war, and national security</a>.</p>
+
+      <h2 id="sources">Sources</h2>
+
+      <ul class="arrow-list">
+        <li>Americans on AI, <a href="https://www.americanson.ai/" target="_blank" rel="noopener">biweekly US tracker</a>, Athena Insights and NORC, June to October 2026.</li>
+        <li>Diffusion, <a href="https://diffusion-beta.netlify.app/assets/Diffusion-UK-AI-Compass-Report.pdf" target="_blank" rel="noopener">The UK AI Compass</a>, survey of 2,911 UK adults, December 2025.</li>
+        <li>Reuters, <a href="https://www.reuters.com/business/its-ai-agent-spent-days-hacking-company-sources-say-openai-did-not-notice-week-2026-07-24/" target="_blank" rel="noopener">report on OpenAI's agents and the Hugging Face breach</a>, 24 July 2026.</li>
+        <li>Dario Amodei, <a href="https://www.darioamodei.com/post/the-urgency-of-interpretability" target="_blank" rel="noopener">The urgency of interpretability</a>, April 2025.</li>
+        <li>PPC Land, <a href="https://ppc.land/uk-government-faces-2-month-deadline-to-answer-mps-and-peers-on-ai-law/" target="_blank" rel="noopener">report on the Joint Committee on Human Rights' AI recommendations</a>, 3 October 2026.</li>
+        <li>Trippenbach and colleagues, <a href="https://arxiv.org/abs/2511.06525" target="_blank" rel="noopener">US message trial</a>, 1,063 adults.</li>
+        <li>Social Change Lab, <a href="https://www.socialchangelab.org/research/which-ai-harms-and-risks.html" target="_blank" rel="noopener">Which AI harms and risks</a>, 3,467 UK adults.</li>
+        <li>Message test details <span class="grade grade-tested">(<span class="grade-dot" aria-hidden="true"></span>Tested</span>): the independent-regulator message scored 72.7/100 in <a href="https://diffusion-beta.netlify.app/articles/uk-compass-report" target="_blank" rel="noopener">national dial tests</a>, ranking second overall.</li>
+        <li><a href="https://commonsignals.org/openai-and-shut-metr-hugging-face">Public forum tracking of the OpenAI breach story</a> <span class="grade grade-observed">(<span class="grade-dot" aria-hidden="true"></span>Observed</span>): acceptance rose from 51% to 69% after independent verification, and dismissals as a "marketing stunt" dropped.</li>
+        <li><a href="https://commonsignals.org/coxon-resignation-x-analysis">Online replies to Jacob Coxon's resignation</a> <span class="grade grade-observed">(<span class="grade-dot" aria-hidden="true"></span>Observed</span>): 43% agreeing, 40% disagreeing.</li>
+      </ul>
+
+      <h2 id="related-research">Related research</h2>
+
+      <ul class="arrow-list">
+        <li><a href="https://commonsignals.org/openai-and-shut-metr-hugging-face">OpenAI and shut? What an independent report did to the marketing-stunt argument</a></li>
+        <li><a href="https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf">"A problem they created": how a news audience received the accountability version of the OpenAI and Hugging Face incident</a></li>
+        <li><a href="https://commonsignals.org/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh">"Please honor commit": how the OpenAI agent-swarm story landed with the audience most likely to believe it</a></li>
+        <li><a href="https://commonsignals.org/coxon-resignation-x-analysis">"Neither company is acting responsibly": how X received Jacob Coxon's resignation from Anthropic</a></li>
+        <li><a href="https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis">"Can't we just unplug it?": The Diary of a CEO AI debate analysed through 26,000 comments</a></li>
+        <li><a href="https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri">How Instagram received Nate Soares's caveman-speak explainer of AI risk</a></li>
+        <li><a href="https://commonsignals.org/findings">Findings so far: what four comment-thread studies say about explaining AI risk</a></li>
+        <li><a href="https://commonsignals.org/how-to-communicate-about-ai-safety">How to communicate about AI safety</a></li>
+        <li><a href="https://commonsignals.org/methodology">Methodology: how we code comment threads, and what our studies can and can't tell you</a></li>
+      </ul>
+    </article>
+  </div>
+
+<script>
+(function () {
+  var nav = document.getElementById('sectionNav');
+  if (!nav) return;
+  var header = document.querySelector('header.site');
+  var toc = document.querySelector('.article-toc');
+  var body = document.querySelector('.article-body');
+  var title = document.getElementById('sectionNavTitle');
+  var toggle = document.getElementById('sectionNavToggle');
+  var toggleText = toggle.querySelector('.section-nav-toggle-text');
+  var panel = document.getElementById('sectionNavPanel');
+  var links = Array.prototype.slice.call(panel.querySelectorAll('a'));
+  var heads = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+  var mq = window.matchMedia('(max-width: 860px)');
+  var ticking = false;
+
+  function headerHeight() { return header ? header.getBoundingClientRect().height : 0; }
+  function setTop() { document.documentElement.style.setProperty('--section-nav-top', headerHeight() + 'px'); }
+
+  function setOpen(open) {
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggleText.textContent = open ? 'Close' : 'View all sections';
+    panel.hidden = !open;
+  }
+
+  function update() {
+    ticking = false;
+    if (!mq.matches) { nav.classList.remove('is-visible'); setOpen(false); return; }
+    var top = headerHeight();
+    var line = top + nav.getBoundingClientRect().height + 24;
+    var current = 0;
+    for (var i = 0; i < heads.length; i++) {
+      if (heads[i] && heads[i].getBoundingClientRect().top <= line) current = i;
+    }
+    links.forEach(function (a, i) {
+      if (i === current) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+    });
+    title.textContent = links[current].textContent;
+    // Show once the page's own contents list has scrolled away; hide after the article ends.
+    var afterToc = toc ? toc.getBoundingClientRect().bottom < top : true;
+    var inBody = body.getBoundingClientRect().bottom > top + 80;
+    var show = afterToc && inBody;
+    nav.classList.toggle('is-visible', show);
+    if (!show) setOpen(false);
+  }
+  function onScroll() { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } }
+
+  toggle.addEventListener('click', function () { setOpen(panel.hidden); });
+  links.forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !panel.hidden) { setOpen(false); toggle.focus(); }
+  });
+  document.addEventListener('click', function (e) { if (!panel.hidden && !nav.contains(e.target)) setOpen(false); });
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', function () { setTop(); onScroll(); });
+  if (header && 'ResizeObserver' in window) new ResizeObserver(function () { setTop(); onScroll(); }).observe(header);
+  setTop();
+  update();
+})();
+</script>
+
+<section id="article-subscribe" class="reveal">
+    <div class="wrap">
+      <h2>Want more analysis like this?</h2>
+      <form class="subscribe-box" action="https://commonsignalsorg.substack.com/api/v1/free" method="POST" target="subscribe-target" novalidate>
+        <div class="subscribe-row">
+          <label for="articleSubscribeEmail" class="sr-only">Email address</label>
+          <input type="email" name="email" id="articleSubscribeEmail" placeholder="Enter your email" required autocomplete="email" />
+          <button type="submit" class="btn btn-primary subscribe-submit">Subscribe <span aria-hidden="true">&#8599;</span></button>
+        </div>
+        <div class="hp-field" aria-hidden="true">
+          <label for="articleSubscribeWebsite">Leave this field blank</label>
+          <input type="text" id="articleSubscribeWebsite" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+        <p class="subscribe-note">Stay up to speed with our research on public understanding of AI. Roughly monthly.</p>
+        <p class="subscribe-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <section id="contact" class="reveal">
+    <div class="wrap">
+      <h2>Have data, a collaborator, or funding to offer?</h2>
+      <div class="contact-card">
+        <div>
+          <div class="mail"><a href="mailto:hello@commonsignals.org">hello@commonsignals.org</a></div>
+        </div>
+        <a class="btn btn-primary" href="/contact">Say hello</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-subscribe">
+      <h3>Want to stay up to date?</h3>
+      <form id="subscribeForm" class="subscribe-box" action="https://commonsignalsorg.substack.com/api/v1/free" method="POST" target="subscribe-target" novalidate>
+        <div class="subscribe-row">
+          <label for="subscribeEmail" class="sr-only">Email address</label>
+          <input type="email" name="email" id="subscribeEmail" placeholder="Enter your email" required autocomplete="email" />
+          <button type="submit" class="btn btn-primary subscribe-submit">Subscribe <span aria-hidden="true">&#8599;</span></button>
+        </div>
+        <div class="hp-field" aria-hidden="true">
+          <label for="subscribeWebsite">Leave this field blank</label>
+          <input type="text" id="subscribeWebsite" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+        <p class="subscribe-note">Stay up to speed with our research on public understanding of AI. Roughly monthly.</p>
+        <p class="subscribe-status" id="subscribeStatus" role="status" aria-live="polite"></p>
+      </form>
+      <div class="social-links">
+        <a href="https://www.youtube.com/@commonsignals" target="_blank" rel="noopener" aria-label="Common Signals on YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2.5" y="5" width="19" height="14" rx="4"/>
+            <path d="M10 9 L15.5 12 L10 15 Z" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/commonsignals" target="_blank" rel="noopener" aria-label="Common Signals on LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <text x="12" y="16.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="10.5" fill="currentColor" stroke="none">in</text>
+          </svg>
+        </a>
+        <a href="https://commonsignalsorg.substack.com/" target="_blank" rel="noopener" aria-label="Common Signals on Substack">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <path d="M9 7 L9 17 L12 14.3 L15 17 L15 7 Z" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/about">About</a></li>
+        <li><a href="/research">Research</a></li>
+        <li><a href="/tools">Tools</a></li>
+        <li><a href="/theory-of-change">Theory of change</a></li>
+        <li><a href="/methodology">Methodology</a></li>
+        <li><a href="/glossary">Glossary</a></li>
+        <li><a href="/data/">Data explorer</a></li>
+        <li><a href="/donate">Donate</a></li>
+      </ul>
+      <ul>
+        <li><a href="/training">Training</a></li>
+        <li><a href="/workshops">Workshops</a></li>
+        <li><a href="/updates">Updates</a></li>
+        <li><a href="/work-with-us">Work with us</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+    <p class="copyright">&copy; 2026 Common Signals &middot; <a href="mailto:hello@commonsignals.org">hello@commonsignals.org</a> &middot; <a href="/privacy">Privacy policy</a> &middot; <a href="/sitemap">Sitemap</a></p>
+  </div>
+</footer>
+
+<script src="/main.js?v=20261110a" defer></script>
+
+<iframe name="subscribe-target" class="subscribe-target-frame" aria-hidden="true" tabindex="-1"></iframe>
+</body>
+</html>

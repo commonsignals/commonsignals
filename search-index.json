@@ -165,6 +165,11 @@
 "d": "An evidence-based guide for anyone explaining AI risks to the public: ten principles, four ground rules and seven issue guides, each graded by the strength of its evidence."
 },
 {
+"t": "How to talk about loss of control and catastrophic risk",
+"u": "/how-to-talk-about-loss-of-control",
+"d": "Three dos and a don't for explaining AI systems that act outside human intent, and what to ask for when they do."
+},
+{
 "t": "Home",
 "u": "/",
 "d": "Common Signals helps people explaining AI know which messages actually work: research, tools, training and workshops for anyone talking about AI."
