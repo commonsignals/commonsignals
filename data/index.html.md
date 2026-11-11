@@ -15,16 +15,17 @@ YouTube
 
 Coded: 322
 
-Positioned: 220
+Positioned: 223
 
 [Explore comments](https://commonsignals.org/data/amanpour-segment-2026-09/) [Read the article](https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf)
 
 [study.json](https://commonsignals.org/data/studies/amanpour-segment-2026-09/study.json) · [codebook](https://commonsignals.org/data/amanpour-segment-2026-09/codebook/) · [comments.csv](https://commonsignals.org/data/studies/amanpour-segment-2026-09/comments.csv)
 
-**Changelog (version 2)**
+**Changelog (version 3)**
 
-- **v1**, 16 Sept 2026: Second-capture coding run behind the published article (322 comments, two parallel coders, 14 frames plus other). Not archived as a row-level file; described only in the article's method section and the project findings note.
-- **v2**, 18 Sept 2026: Row-level recode from the raw yt-dlp export, since coded_full.json was never archived. Frame list redrafted from the article's own documented frames and quotes, aimed at reproducing the published figures rather than an independent fresh read. Reproduces the published article's structural counts exactly (322 rows, 232/90 top-level/reply split, 1,048 likes, 237 authors) and lands close on most headline figures (disagree's like share exact at 1.6%; hype-or-staged, regulation and hostile-dismissal within a point of the published shares). Runs higher on agree share (72.7% vs 67.7% published) and lower on mixed (8.6% vs 14.3%), and under-counts explicit messenger-credential mentions (3 of 322 here vs 7 published) despite a targeted check against the article's own quoted examples. Ben Matthews spot-checked a random 40-comment sample and approved proceeding, 40/40.
+- **v1**, 16 Sept 2026: Original coding of the second capture (322 comments, two parallel coders, 14 frames plus other), the run behind the published article's second-capture figures. Believed at the time not to have been archived as a row-level file; the article's method section and the project findings note were the only record.
+- **v2**, 18 Sept 2026: Interim reconstruction, built from the raw yt-dlp export before the original coding file was located. Frame list redrafted from the article's own documented frames and quotes, aimed at reproducing the published figures rather than an independent read. It reproduced the structural counts exactly (322 rows, 232/90 top-level/reply split, 1,048 likes, 237 authors) but ran higher on agree share (72.7% vs 67.7% published) and lower on mixed (8.6% vs 14.3%), and under-counted messenger-credential mentions (3 of 322 vs the 7 then published). Ben Matthews spot-checked a random 40-comment sample of it, 40/40. Superseded by v3; figures taken from it should be discarded.
+- **v3**, 18 Sept 2026: Restored from the genuine original coding file (coded.tsv, with coded_full.json and analysis.json), found in this repository's _incoming/ folder (files dated 17 September 2026). Same 322 comment IDs; stance, frame (15 values including other), format reaction (4 values), emotion and the six mention flags are exactly as the original run assigned them, with the six m_ flags renamed mentions_. Comment text is the file's anonymised text. Replaces v2 entirely. It matches the published article on every figure checked (the 223-comment stance base and its 67.7/17.9/14.3 split, like-weighted shares, frame and engagement shares, emotion among agreeing comments, regulation and US-administration mention rates, reply and top-level agree rates, top-comment like counts) except messenger-credential mentions: published as 7 (2.2%), 6 (1.9%) in this file. The article has been corrected to 6.
 
 ## YouTube comments on the Dwarkesh Podcast episode with Ajeya Cotra, "This might be the clearest warning shot we ever get"
 

@@ -17,6 +17,8 @@ Much of the support for the AI risk case was a verdict on one debater, and almos
 
 We coded over 26,000 comments on the Diary of a CEO's AI risk debate: the full episode and three shorter cuts of it, posted across five platforms. Agreement with the risk case ran from 88% under a 21-minute cut on Facebook to 49% under a 104-second trailer on YouTube Shorts.
 
+Hypothesis generation, not a claim about public opinion. [Read the methodology →](https://commonsignals.org/methodology)
+
 Short answer
 
 Of the 15,928 comments on the full YouTube episode taking a readable position when we collected them in October 2026, 77% agree with the risk case, though 33% of comments judge the debaters, mostly Andrew McAfee, and setting these aside gives an estimated 66%. Agreement ran from 88% under a 21-minute cut on Facebook to 49% under a 104-second trailer on YouTube Shorts, and almost nobody asked what they could do about it.

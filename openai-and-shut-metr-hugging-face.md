@@ -15,6 +15,8 @@ OpenAI and shut? What an independent report did to the marketing-stunt argument
 
 We compared Reddit comments on the OpenAI and Hugging Face incident before and after METR and Redwood Research published an independent investigation. Afterwards, fewer people called it a stunt and more accepted it happened. The ones still calling it a stunt got harder to shift.
 
+Hypothesis generation, not a claim about public opinion. [Read the methodology →](https://commonsignals.org/methodology)
+
 Short answer
 
 Among the Reddit comments we captured on 3 and 4 September 2026 that took a position, acceptance rose from 51% to 69% after the report and rejection fell from 22% to 14%. The comparison sets one subreddit against seven, so the audience changed as well as the evidence: treat the direction as the finding and the exact percentages as approximate.

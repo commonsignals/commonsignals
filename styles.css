@@ -994,6 +994,15 @@ footer.site .copyright {
 }
 footer.site .copyright a { color: var(--teal-text); text-decoration: none; border-bottom: 1px solid var(--teal-text); }
 footer.site .copyright a:hover { color: var(--teal); border-color: var(--teal); }
+footer.site .footer-licence {
+  width: 100%;
+  margin: 0.6rem 0 0;
+  font-family: var(--mono);
+  font-size: 1rem;
+  color: var(--ink-faint);
+}
+footer.site .footer-licence a { color: var(--teal-text); text-decoration: none; border-bottom: 1px solid var(--teal-text); }
+footer.site .footer-licence a:hover { color: var(--teal); border-color: var(--teal); }
 
 /* ---------- Article template (tags, audience callout, table of contents) ---------- */
 .article-hero {
@@ -1482,3 +1491,30 @@ a.fn:hover { text-decoration: underline; }
 .article-body .article-notes { margin-top: 2rem; padding: 1.1rem 0 0; }
 .article-body .article-notes li { font-size: 0.92rem; }
 a.fn, .footnotes li { scroll-margin-top: 6rem; }
+
+/* ---------- Study caveat and pre-pilot banner ---------- */
+.caveat-line {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  color: var(--ink-faint);
+  margin: 0.6rem 0 0;
+}
+.caveat-line a { color: var(--teal-text); text-decoration: none; border-bottom: 1px solid var(--teal-text); }
+.caveat-line a:hover { color: var(--teal); border-color: var(--teal); }
+.featured-desc:has(+ .caveat-line) { margin-bottom: 0.4rem; }
+.featured-desc + .caveat-line { margin: 0 0 1.4rem; }
+.coming-soon-banner {
+  background: var(--signal-soft);
+  border-bottom: 1px solid var(--line);
+  padding: 0.9rem 1.5rem;
+}
+.coming-soon-banner .wrap { padding: 0; }
+.coming-soon-banner p {
+  margin: 0;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.98rem;
+  color: var(--signal);
+  text-align: center;
+}
+.coming-soon-banner a { color: var(--signal); text-decoration: underline; text-underline-offset: 2px; }

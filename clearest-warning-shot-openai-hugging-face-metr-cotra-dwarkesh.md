@@ -15,6 +15,8 @@ cite: "Common Signals, '\"Please honor commit\": how the OpenAI agent-swarm stor
 
 We coded 1,245 YouTube comments on the Dwarkesh Podcast's interview with METR's Ajeya Cotra about the OpenAI agent-swarm incident. The audience accepted the danger, joked about it, praised the messenger, and had no idea what to do next.
 
+Hypothesis generation, not a claim about public opinion. [Read the methodology →](https://commonsignals.org/methodology)
+
 Short answer
 
 Of 618 comments taking a readable position in our 8 September 2026 capture, 59% accepted that the incident is a serious warning about losing control of AI agents, 24% accepted it but blamed OpenAI instead of the AI, and 17% rejected it. Fear was the most common emotion among people who agreed (35%), and 6 comments out of 1,245 asked what to do.
