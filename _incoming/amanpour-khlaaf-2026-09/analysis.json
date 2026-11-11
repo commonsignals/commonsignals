@@ -1,0 +1,690 @@
+{
+  "bases": {
+    "rows_in_file": 322,
+    "with_text_coded": 322,
+    "readable_position": 223,
+    "engagement_available": true,
+    "total_engagement": 1048
+  },
+  "stance_all": {
+    "agree": [
+      46.9,
+      151
+    ],
+    "na": [
+      23.0,
+      74
+    ],
+    "mixed": [
+      9.9,
+      32
+    ],
+    "disagree": [
+      12.4,
+      40
+    ],
+    "unclear": [
+      7.8,
+      25
+    ]
+  },
+  "stance_positioned": {
+    "agree": [
+      67.7,
+      151
+    ],
+    "mixed": [
+      14.3,
+      32
+    ],
+    "disagree": [
+      17.9,
+      40
+    ]
+  },
+  "stance_positioned_weighted": {
+    "agree": 96.2,
+    "mixed": 2.0,
+    "disagree": 1.7
+  },
+  "frames": {
+    "accountability": [
+      22.7,
+      73
+    ],
+    "hype_staged": [
+      8.1,
+      26
+    ],
+    "hostile_dismissal": [
+      3.4,
+      11
+    ],
+    "offtopic_meta": [
+      7.8,
+      25
+    ],
+    "regulation": [
+      9.6,
+      31
+    ],
+    "anti_anthropomorphism": [
+      5.0,
+      16
+    ],
+    "analogous_crisis": [
+      4.3,
+      14
+    ],
+    "other": [
+      13.0,
+      42
+    ],
+    "warning_shot_dispute": [
+      7.8,
+      25
+    ],
+    "us_politics": [
+      3.4,
+      11
+    ],
+    "credential_contested": [
+      1.6,
+      5
+    ],
+    "geopolitical_race": [
+      1.9,
+      6
+    ],
+    "existential_dread": [
+      5.6,
+      18
+    ],
+    "praise_guest": [
+      4.3,
+      14
+    ],
+    "pop_culture_ref": [
+      1.6,
+      5
+    ]
+  },
+  "frames_engagement_share": {
+    "accountability": 55.5,
+    "hype_staged": 3.1,
+    "hostile_dismissal": 0.8,
+    "offtopic_meta": 1.4,
+    "regulation": 10.0,
+    "anti_anthropomorphism": 1.5,
+    "analogous_crisis": 5.0,
+    "other": 1.8,
+    "warning_shot_dispute": 1.2,
+    "us_politics": 4.1,
+    "credential_contested": 0.2,
+    "geopolitical_race": 0.3,
+    "existential_dread": 0.4,
+    "praise_guest": 13.5,
+    "pop_culture_ref": 1.0
+  },
+  "stance_by_frame": {
+    "accountability": {
+      "agree": 89.0,
+      "disagree": 0.0,
+      "mixed": 11.0
+    },
+    "regulation": {
+      "agree": 76.7,
+      "disagree": 0.0,
+      "mixed": 23.3
+    },
+    "anti_anthropomorphism": {
+      "agree": 100.0,
+      "disagree": 0.0,
+      "mixed": 0.0
+    },
+    "analogous_crisis": {
+      "agree": 100.0,
+      "disagree": 0.0,
+      "mixed": 0.0
+    },
+    "other": {
+      "agree": 0.0,
+      "disagree": 33.3,
+      "mixed": 66.7
+    },
+    "warning_shot_dispute": {
+      "agree": 0.0,
+      "disagree": 84.0,
+      "mixed": 16.0
+    },
+    "credential_contested": {
+      "agree": 20.0,
+      "disagree": 60.0,
+      "mixed": 20.0
+    },
+    "hype_staged": {
+      "agree": 79.2,
+      "disagree": 0.0,
+      "mixed": 20.8
+    },
+    "existential_dread": {
+      "agree": 11.1,
+      "disagree": 55.6,
+      "mixed": 33.3
+    },
+    "hostile_dismissal": {
+      "agree": 0.0,
+      "disagree": 100.0,
+      "mixed": 0.0
+    },
+    "pop_culture_ref": {
+      "agree": 0.0,
+      "disagree": 100.0,
+      "mixed": 0.0
+    },
+    "praise_guest": {
+      "agree": 100.0,
+      "disagree": 0.0,
+      "mixed": 0.0
+    },
+    "us_politics": {
+      "agree": 100.0,
+      "disagree": 0.0,
+      "mixed": 0.0
+    },
+    "geopolitical_race": {
+      "agree": 0.0,
+      "disagree": 100.0,
+      "mixed": 0.0
+    }
+  },
+  "disagree_mixed_by_frame": {
+    "accountability": [
+      11.1,
+      8
+    ],
+    "other": [
+      8.3,
+      6
+    ],
+    "warning_shot_dispute": [
+      34.7,
+      25
+    ],
+    "regulation": [
+      9.7,
+      7
+    ],
+    "credential_contested": [
+      5.6,
+      4
+    ],
+    "hype_staged": [
+      6.9,
+      5
+    ],
+    "existential_dread": [
+      11.1,
+      8
+    ],
+    "hostile_dismissal": [
+      8.3,
+      6
+    ],
+    "pop_culture_ref": [
+      1.4,
+      1
+    ],
+    "geopolitical_race": [
+      2.8,
+      2
+    ]
+  },
+  "format_reaction": {
+    "none": [
+      85.7,
+      276
+    ],
+    "praise": [
+      6.8,
+      22
+    ],
+    "mock": [
+      6.2,
+      20
+    ],
+    "condescended": [
+      1.2,
+      4
+    ]
+  },
+  "emotion_by_stance": {
+    "agree": {
+      "anger": [
+        43.7,
+        66
+      ],
+      "neutral": [
+        35.8,
+        54
+      ],
+      "resignation": [
+        4.6,
+        7
+      ],
+      "fear": [
+        2.6,
+        4
+      ],
+      "hope": [
+        7.3,
+        11
+      ],
+      "humour": [
+        6.0,
+        9
+      ]
+    },
+    "mixed": {
+      "neutral": [
+        37.5,
+        12
+      ],
+      "anger": [
+        31.2,
+        10
+      ],
+      "fear": [
+        28.1,
+        9
+      ],
+      "resignation": [
+        3.1,
+        1
+      ]
+    },
+    "disagree": {
+      "fear": [
+        35.0,
+        14
+      ],
+      "anger": [
+        45.0,
+        18
+      ],
+      "neutral": [
+        20.0,
+        8
+      ]
+    }
+  },
+  "mention_flags": {
+    "m_messenger_credentials": {
+      "share": 1.9,
+      "count": 6,
+      "stance": {
+        "disagree": [
+          50.0,
+          3
+        ],
+        "agree": [
+          33.3,
+          2
+        ],
+        "mixed": [
+          16.7,
+          1
+        ]
+      }
+    },
+    "m_leaders_policy": {
+      "share": 12.4,
+      "count": 40,
+      "stance": {
+        "agree": [
+          65.0,
+          26
+        ],
+        "mixed": [
+          25.0,
+          10
+        ],
+        "na": [
+          7.5,
+          3
+        ],
+        "disagree": [
+          2.5,
+          1
+        ]
+      }
+    },
+    "m_administration_politics": {
+      "share": 4.7,
+      "count": 15,
+      "stance": {
+        "na": [
+          13.3,
+          2
+        ],
+        "agree": [
+          73.3,
+          11
+        ],
+        "disagree": [
+          6.7,
+          1
+        ],
+        "unclear": [
+          6.7,
+          1
+        ]
+      }
+    },
+    "m_hugging_face": {
+      "share": 1.6,
+      "count": 5,
+      "stance": {
+        "agree": [
+          20.0,
+          1
+        ],
+        "na": [
+          20.0,
+          1
+        ],
+        "mixed": [
+          40.0,
+          2
+        ],
+        "disagree": [
+          20.0,
+          1
+        ]
+      }
+    },
+    "m_other_coverage": {
+      "share": 2.5,
+      "count": 8,
+      "stance": {
+        "disagree": [
+          87.5,
+          7
+        ],
+        "unclear": [
+          12.5,
+          1
+        ]
+      }
+    },
+    "m_named_individual": {
+      "share": 2.8,
+      "count": 9,
+      "stance": {
+        "agree": [
+          88.9,
+          8
+        ],
+        "na": [
+          11.1,
+          1
+        ]
+      }
+    }
+  },
+  "by_level": {
+    "top_level": {
+      "n": 232,
+      "stance": {
+        "agree": [
+          43.5,
+          101
+        ],
+        "na": [
+          25.4,
+          59
+        ],
+        "disagree": [
+          14.2,
+          33
+        ],
+        "unclear": [
+          7.8,
+          18
+        ],
+        "mixed": [
+          9.1,
+          21
+        ]
+      }
+    },
+    "replies": {
+      "n": 90,
+      "stance": {
+        "na": [
+          16.7,
+          15
+        ],
+        "mixed": [
+          12.2,
+          11
+        ],
+        "agree": [
+          55.6,
+          50
+        ],
+        "disagree": [
+          7.8,
+          7
+        ],
+        "unclear": [
+          7.8,
+          7
+        ]
+      }
+    }
+  },
+  "engagement_concentration": {
+    "top10_share": 54.3,
+    "zero_engagement_share": 58.4
+  },
+  "top_comments": [
+    {
+      "id": "Ugw78umOaajp3M3vcHN4AaABAg",
+      "engagement": 134,
+      "stance": "agree",
+      "frame": "accountability",
+      "is_reply": false,
+      "text": "“Trying to sell us a solution to a problem they created”— I don’t think I’ve ever said this before, but I wish I could give this multiple 👍"
+    },
+    {
+      "id": "UgzvphiKK0nX2IwMR3Z4AaABAg",
+      "engagement": 77,
+      "stance": "agree",
+      "frame": "accountability",
+      "is_reply": false,
+      "text": "Behind every 'rogue' AI, is a wizard of Oz type rogue human."
+    },
+    {
+      "id": "UgzDcuwljWJE-GNKdrh4AaABAg",
+      "engagement": 65,
+      "stance": "agree",
+      "frame": "accountability",
+      "is_reply": false,
+      "text": "I think we're in big trouble as long as these tech companies are allowed to continue with no regulations or laws. They're basically sociopaths training AI like children, so of course, the kids will grow up to also be sociopaths. They are training them to break in and steal info, so I believe this gu"
+    },
+    {
+      "id": "UgzgoxD5PiIPFh9SJB94AaABAg",
+      "engagement": 54,
+      "stance": "agree",
+      "frame": "accountability",
+      "is_reply": false,
+      "text": "I love that she mentions that the perpetuating of saying AI itself is evil absolves openAI from their responsibility THIS is the key message."
+    },
+    {
+      "id": "UgxIIOY1898MJWW3jXJ4AaABAg",
+      "engagement": 47,
+      "stance": "agree",
+      "frame": "regulation",
+      "is_reply": false,
+      "text": "A new \"Watchdog\" agency is needed for all of this."
+    },
+    {
+      "id": "Ugz_bTUS_WvVi8B6WkV4AaABAg",
+      "engagement": 44,
+      "stance": "agree",
+      "frame": "accountability",
+      "is_reply": false,
+      "text": "Been saying for awhile the danger isn't AI it's who's developing & controlling it. The AI industry has an incentive to mystify the whole thing so they become the new High Priests."
+    },
+    {
+      "id": "UgxBzS2LHVgaOTE8HPh4AaABAg",
+      "engagement": 41,
+      "stance": "agree",
+      "frame": "praise_guest",
+      "is_reply": false,
+      "text": "Wow! Phenomenal guest very informational. Thank you"
+    },
+    {
+      "id": "Ugx2b_x2z1k0b_LTaC54AaABAg",
+      "engagement": 38,
+      "stance": "agree",
+      "frame": "praise_guest",
+      "is_reply": false,
+      "text": "This is the most intelligent, cogent, clearly stated and non-sensationalistic commentary on the issue that I've seen. She should be on every talk show!"
+    },
+    {
+      "id": "UgxxfJqP7ie5UXemHld4AaABAg",
+      "engagement": 35,
+      "stance": "agree",
+      "frame": "accountability",
+      "is_reply": false,
+      "text": "Never trust Sam Altman"
+    },
+    {
+      "id": "UgwIdI63n4DgdaoMdaR4AaABAg",
+      "engagement": 34,
+      "stance": "agree",
+      "frame": "regulation",
+      "is_reply": false,
+      "text": "One would think that after an incident like this Congress would have been busy drawing up regulations to govern the companies and what they are allowed to do with this technology. As usual though, all these new technologies are designed for military and government contracts. More tools for the state"
+    },
+    {
+      "id": "UgzARDkHbtRcX2ggeaB4AaABAg",
+      "engagement": 25,
+      "stance": "agree",
+      "frame": "accountability",
+      "is_reply": false,
+      "text": "Thanks PBS for not falling for the 'agents went rogue' explanation and seeing this for what it is - carelessness on the part of AI companies. We need more people like Heidi Khlaaf and more journalists like those at PBS."
+    },
+    {
+      "id": "UgyJ7wXdLCbgQbtgLEF4AaABAg",
+      "engagement": 21,
+      "stance": "agree",
+      "frame": "praise_guest",
+      "is_reply": false,
+      "text": "I'm glad I watched this commentary. Heidi Khlaaf is brilliant and was really good at explaining what happened in a manner that actually made sense to a computer language illiterate such as myself.  :hand-purple-blue-peace:"
+    },
+    {
+      "id": "UgxMTYd7dg8cpb5nqiV4AaABAg",
+      "engagement": 21,
+      "stance": "agree",
+      "frame": "analogous_crisis",
+      "is_reply": false,
+      "text": "A report I read said that the 162 schoolgirls who were killed \"by mistake\" by the U.S. forces in Iran,  were in fact killed by a mistake..A mistake in the AI  used for targeting.   Then the group responsible for the programming of the attack absolved itself from any responsibility by claiming that i"
+    },
+    {
+      "id": "UgzGdlitr6yMaK6jquJ4AaABAg",
+      "engagement": 20,
+      "stance": "agree",
+      "frame": "praise_guest",
+      "is_reply": false,
+      "text": "EXACTLY the guest needed for this story!"
+    },
+    {
+      "id": "UgwG7mx9kFMfXeb9N9h4AaABAg",
+      "engagement": 20,
+      "stance": "agree",
+      "frame": "analogous_crisis",
+      "is_reply": false,
+      "text": "I haven't listened to the whole thing yet, but at about 4:25 I was thinking there was an analogue between this testing and the Trump aura testing just how far they can go before someone insists they stop, until they know what is happening. The people who know about AI should really take a stand on t"
+    }
+  ],
+  "top_by_frame": {
+    "accountability": {
+      "engagement": 134,
+      "stance": "agree",
+      "text": "“Trying to sell us a solution to a problem they created”— I don’t think I’ve ever said this before, but I wish I could give this multiple 👍"
+    },
+    "hype_staged": {
+      "engagement": 10,
+      "stance": "agree",
+      "text": "I bet Open AI let this happen as a form of marketing."
+    },
+    "hostile_dismissal": {
+      "engagement": 5,
+      "stance": "unclear",
+      "text": " @user  Yeah, Ketamine's a helluva drug."
+    },
+    "offtopic_meta": {
+      "engagement": 3,
+      "stance": "na",
+      "text": "If I had wallpaper like that I'd be insane in 6 months."
+    },
+    "regulation": {
+      "engagement": 47,
+      "stance": "agree",
+      "text": "A new \"Watchdog\" agency is needed for all of this."
+    },
+    "anti_anthropomorphism": {
+      "engagement": 9,
+      "stance": "agree",
+      "text": "What is called artificial \"intelligence\" is not sentient, but the vocabulary used to talk about it too often contextually suggests that it is."
+    },
+    "analogous_crisis": {
+      "engagement": 21,
+      "stance": "agree",
+      "text": "A report I read said that the 162 schoolgirls who were killed \"by mistake\" by the U.S. forces in Iran,  were in fact killed by a mistake..A mistake in the AI  used for targeting.   Then the group responsible for the programming of the attack absolved itself from any responsibility by claiming that i"
+    },
+    "other": {
+      "engagement": 8,
+      "stance": "na",
+      "text": "Fun fact: parrots have been known to speak human language."
+    },
+    "warning_shot_dispute": {
+      "engagement": 2,
+      "stance": "mixed",
+      "text": "Except this is version 1 of the story, and we are on version 4 at least. The swarm had already solved the Exploit Gym exam before they decided to attack Hugging Face. Its complicated."
+    },
+    "us_politics": {
+      "engagement": 12,
+      "stance": "agree",
+      "text": "In any other administration OpenAI would be investigated and prosecuted. This is irresponsible criminal conduct."
+    },
+    "credential_contested": {
+      "engagement": 1,
+      "stance": "disagree",
+      "text": "This is complete bullshit about what happened. She’s working with OpenAI probably"
+    },
+    "geopolitical_race": {
+      "engagement": 2,
+      "stance": "disagree",
+      "text": "China has Open Sourced their models and weights and aren't in a domestic arms race for your 401k. Instead, they have a bunch of collaborative projects for the good of their economy. Industry, agriculture, etc."
+    },
+    "existential_dread": {
+      "engagement": 1,
+      "stance": "disagree",
+      "text": "We are on the verge of our own destruction... forget nuclear bombs for now AI will destroy us.🧐"
+    },
+    "praise_guest": {
+      "engagement": 41,
+      "stance": "agree",
+      "text": "Wow! Phenomenal guest very informational. Thank you"
+    },
+    "pop_culture_ref": {
+      "engagement": 10,
+      "stance": "na",
+      "text": "Science Fiction becoming reality...it's a whole new world my grandkids will be living in."
+    }
+  }
+}
