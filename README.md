@@ -47,7 +47,7 @@ The build also keeps each page's `<link rel="alternate" type="text/markdown">`, 
 
 ## MCP server for AI tools
 
-`/mcp` is a read-only MCP server (`functions/mcp/`) that lets a communicator's own AI tool query the studies and the pages in `/llms.txt`. `/data/ai-tools/` explains how to use it. `package.json` pins its two dependencies, which Cloudflare Pages installs before bundling Functions; run `npm install` once to work on it locally.
+`/mcp` is a read-only MCP server (`functions/mcp/`) that lets a communicator's own AI tool query the studies and the pages in `/llms.txt`. `/data/ai-tools/` explains how to use it. `package.json` pins its two dependencies. The Pages project's build command, `npm ci` (Settings, Build, in the Cloudflare dashboard), installs them before Pages bundles Functions; with no build command Pages skips the install and the Functions build fails. Run `npm install` once to work on it locally.
 
 It reads the published files at request time, plus two things built from them:
 
