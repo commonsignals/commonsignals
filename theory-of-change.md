@@ -2,7 +2,7 @@
 title: "Creating a social mandate for AI governance"
 url: "https://commonsignals.org/theory-of-change"
 published: 2026-09
-updated: 2026-09
+updated: 2026-11-11
 publisher: "Common Signals"
 ---
 
@@ -141,7 +141,7 @@ The lesson is that backsliding is possible, and that holding ground needs an ong
 - **Concern without conversation:** polling across countries shows high concern about AI, alongside low knowledge and low discussion. People are worried.
 - **Governance on several tracks:** the [EU AI Act](https://artificialintelligenceact.eu/) is coming into force in stages, [California's SB 53](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB53) has set frontier-model transparency rules, and the US federal government is pressing to pre-empt state laws. None of these was driven by visible public pressure.
 - **A field split:** existential-risk and present-day-harms communicators work from different evidence, different funders and different vocabularies.
-- **Evidence that the dominant framings underperform:** [Seismic Foundation's 2025 message-testing study](https://arxiv.org/abs/2511.06525) found the field's leading frames, including [existential risk](https://commonsignals.org/glossary#existential-risk-x-risk), performed worse than expected. [Our own analysis of 1,534 comments on a viral MIRI reel](https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri) found that the argument persuaded most people who replied, then left them resigned.
+- **Evidence that the dominant framings underperform:** a [2025 message-testing paper](https://arxiv.org/abs/2511.06525) by Philip Trippenbach and colleagues at the Seismic Foundation, Blue State and the Centre for Future Generations found the field's leading frames, including [existential risk](https://commonsignals.org/glossary#existential-risk-x-risk), performed worse than expected. [Our own analysis of 1,534 comments on a viral MIRI reel](https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri) found that the argument persuaded most people who replied, then left them resigned.
 - **Backlash forming locally:** opposition to data centres over water, power and land is the first mass, cross-partisan public reaction to AI infrastructure, and it is happening without any connection to the safety debate.
 - **Populism and polarisation:** AI is not yet a partisan issue in most countries. That window will not stay open. The US debate over state pre-emption is the first place it is starting to close.
 - **Harms arriving in daily life:** chatbot harms to children, deepfakes, hiring and welfare algorithms, and job losses attributed to AI are making the technology concrete for people who had no view on it a year ago.
@@ -401,7 +401,7 @@ An organisation whose whole case is that evidence beats instinct has to evidence
 ## References
 
 - Stanford HAI (2026) [AI Index Report 2026, economy chapter](https://hai.stanford.edu/ai-index/2026-ai-index-report/economy).
-- Seismic Foundation (2025) [message-testing study, arXiv:2511.06525](https://arxiv.org/abs/2511.06525).
+- Trippenbach et al. (2025) [From catastrophic to concrete, arXiv:2511.06525](https://arxiv.org/abs/2511.06525).
 - Ada Lovelace Institute and Alan Turing Institute, Public Voices in AI ([attitudestoai.uk](http://attitudestoai.uk)).
 - Common Signals (2026) [How Instagram received Nate Soares's caveman-speak explainer of AI risk](https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri)
 - [Social Change Lab](https://www.socialchangelab.org/research) (2022) research highlights on protest and public opinion.

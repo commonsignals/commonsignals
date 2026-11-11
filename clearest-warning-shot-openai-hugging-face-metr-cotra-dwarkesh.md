@@ -2,7 +2,7 @@
 title: "How did Dwarkesh Podcast viewers react to Ajeya Cotra on the OpenAI and Hugging Face incident?"
 url: "https://commonsignals.org/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh"
 published: 2026-09-09
-updated: 2026-11-09
+updated: 2026-11-11
 publisher: "Common Signals"
 cite: "Common Signals, '\"Please honor commit\": how the OpenAI agent-swarm story landed with the audience most likely to believe it', September 2026."
 ---
@@ -171,7 +171,7 @@ The most-liked comment in the thread (1,100 likes) was a joke riffing on the age
 
 ## Data and citation
 
-Codebook and dataset: [method page](https://commonsignals.org/methodology).
+Codebook and dataset: [commonsignals.org/data/cotra-episode-2026-09/](https://commonsignals.org/data/cotra-episode-2026-09/).
 
 Cite as: Common Signals, '"Please honor commit": how the OpenAI agent-swarm story landed with the audience most likely to believe it', September 2026.
 
