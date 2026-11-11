@@ -1,0 +1,10 @@
+{
+  "name": "commonsignals",
+  "private": true,
+  "type": "module",
+  "description": "Runtime dependencies of the read-only MCP server in functions/mcp/. Cloudflare Pages installs them before bundling Functions.",
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.4.0",
+    "zod": "4.6.7"
+  }
+}

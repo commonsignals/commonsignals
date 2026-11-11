@@ -6,3 +6,12 @@
 doac-ai-debate-coding-pack/
 doac-ai-debate-coding-pack.zip
 *.info.json
+
+# npm packages for the MCP server in functions/mcp/ (package-lock.json pins them)
+node_modules/
+
+# Acceptance-test keys, transcripts and scorecards (scripts/mcp/); never deployed
+_review/
+
+# Python bytecode from running the scripts
+__pycache__/

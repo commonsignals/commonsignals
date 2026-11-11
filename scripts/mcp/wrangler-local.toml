@@ -1,0 +1,13 @@
+# Local-only configuration for the MCP server's D1 copy of the comments.
+#
+# scripts/mcp/load-d1.py --local uses it to fill the copy that
+# `wrangler pages dev --d1 MCP_DB=local-only --persist-to .wrangler/state` serves.
+# "local-only" identifies that local copy and nothing else. The production
+# database belongs in the site's wrangler.toml once it has been created.
+name = "commonsignals-mcp-local"
+compatibility_date = "2026-09-24"
+
+[[d1_databases]]
+binding = "MCP_DB"
+database_name = "commonsignals-mcp"
+database_id = "local-only"

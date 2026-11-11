@@ -45,6 +45,29 @@ python3 scripts/check-markdown.py
 
 The build also keeps each page's `<link rel="alternate" type="text/markdown">`, the Copy for AI button in article heroes and the build-markdown region of `_headers`. Never edit those or the generated files by hand. The check compares every markdown file with its page and lists anything missing.
 
+## MCP server for AI tools
+
+`/mcp` is a read-only MCP server (`functions/mcp/`) that lets a communicator's own AI tool query the studies and the pages in `/llms.txt`. `/data/ai-tools/` explains how to use it. `package.json` pins its two dependencies, which Cloudflare Pages installs before bundling Functions; run `npm install` once to work on it locally.
+
+It reads the published files at request time, plus two things built from them:
+
+- `python3 scripts/data-export.py build` writes each study's counts to `/data/mcp/<slug>.json`, beside its `data.json`.
+- Comment search uses a D1 copy of each `comments.csv`, because the largest study is too big to search within the Workers Free plan's CPU limit. After a recode, correction, takedown or new study, reload it with `python3 scripts/mcp/load-d1.py --remote`. Until then the server refuses to search that study rather than quote an out-of-date copy.
+
+After changing the server's instructions or tools, run `node scripts/mcp/build-page.mjs`, which rewrites the rules and tool list on `/data/ai-tools/` and the server's version.
+
+To run it locally and test it:
+
+```bash
+npm install
+python3 scripts/mcp/load-d1.py --local
+npx wrangler@4.160.0 pages dev --port 8788 --d1 MCP_DB=local-only --persist-to .wrangler/state
+```
+
+Then, in another terminal, `python3 scripts/mcp/test-mechanical.py` runs the mechanical tests through the MCP Inspector, and `node --disallow-code-generation-from-strings scripts/mcp/cpu-bench.mjs` measures CPU time per tool call.
+
+The production database does not exist yet. Before the first deploy that should search comments, create it with `npx wrangler@4.160.0 d1 create commonsignals-mcp`, add it to `wrangler.toml` as a `[[d1_databases]]` binding named `MCP_DB`, and load it with `--remote`. Without the binding, every tool except `search_comments` still works.
+
 ## Glossary and editorial conventions
 
 Glossary terms live in one file, `data/glossary-terms.json`. To add or change a term, edit that file and run:

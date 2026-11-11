@@ -15,11 +15,14 @@ slug is passed) against the contract described in /data/studies/README.md.
 codebook.json verbatim, plus every comments.csv row as an object with flag
 columns as real JSON booleans and `likes` as a number or null. This is what
 the explorer UI under /data/<slug>/ fetches; nothing here pre-aggregates
-facet counts, which the UI computes itself from the loaded array.
+facet counts, which the UI computes itself from the loaded array. `build`
+also writes /data/mcp/<slug>.json, the counts the MCP server at /mcp reads
+(see mcp_figures below).
 `export` is not implemented yet -- all studies currently on file arrived
 already in contract shape.
 """
 import csv
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -343,6 +346,50 @@ def compute_similar(comments: list, codebook: dict, top_n: int = 5) -> None:
         r["similar_ids"] = similar.get(r["id"], [])
 
 
+# Rows a study excluded before coding keep a coder value starting with this;
+# like empty stubs, they stay in the file and in counts.coded.
+NOT_SENT_CODER_PREFIX = "not_sent_to_coders"
+
+
+def mcp_figures(codebook: dict, rows: list, csv_sha256: str) -> dict:
+    """The counts in /data/mcp/<slug>.json. The MCP server at /mcp reads them to
+    answer get_study and compare_studies without parsing comments.csv on every
+    request: each single and flag dimension counted over all rows, the
+    clear-position base, how many rows were never really coded, and the same for
+    each value of every group dimension. comments_sha256 is how the server tells
+    that its D1 copy of the comments (scripts/mcp/load-d1.py) is out of date."""
+    dims = [d for d in codebook["dimensions"] if d["kind"] in ("single", "flag")]
+    stance = next((d for d in codebook["dimensions"] if d["key"] == "stance"), None)
+    # The rule validate_study uses for counts.clear_position_base.
+    stance_note = codebook.get("stance_note", "")
+    positioned = [v["value"] for v in stance["values"] if v["value"] in stance_note] if stance else []
+    missing = [d["key"] for d in codebook["dimensions"] if d["kind"] != "meta" and rows and d["key"] not in rows[0]]
+    if missing:
+        raise SystemExit(f"comments.csv has no column for codebook dimension(s) {missing}")
+
+    def tally(subset):
+        counts = {}
+        for d in dims:
+            values = [v["value"] for v in d["values"]] if d["kind"] == "single" else ["true", "false"]
+            tallied = dict.fromkeys(values, 0)
+            for r in subset:
+                tallied[r[d["key"]]] += 1
+            counts[d["key"]] = tallied
+        return {
+            "base": len(subset),
+            "clear_position_base": sum(1 for r in subset if r.get("stance") in positioned),
+            "uncoded": sum(1 for r in subset if r.get("coder", "") == STUB_CODER_VALUE
+                           or r.get("coder", "").startswith(NOT_SENT_CODER_PREFIX)),
+            "counts": counts,
+        }
+
+    groups = {g["key"]: [dict(value=v["value"], **tally([r for r in rows if r[g["key"]] == v["value"]]))
+                         for v in g["values"]]
+              for g in codebook["dimensions"] if g["kind"] == "group"}
+    return {"comments_sha256": csv_sha256, "rows": len(rows), "clear_position_values": positioned,
+            "all": tally(rows), "groups": groups}
+
+
 def cmd_build(args):
     root = STUDIES_ROOT
     slugs = [args[0]] if args else study_slugs(root)
@@ -383,6 +430,14 @@ def cmd_build(args):
         # 25 MiB per-file limit, and the spaces add about 5% for nothing.
         out_path.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + "\n")
         print(f"wrote {out_path} ({len(comments)} comments)")
+
+        mcp_dir = data_root / "mcp"
+        mcp_dir.mkdir(exist_ok=True)
+        sha = hashlib.sha256((folder / "comments.csv").read_bytes()).hexdigest()
+        mcp_path = mcp_dir / f"{slug}.json"
+        figures = {"slug": slug, **mcp_figures(codebook, rows, sha)}
+        mcp_path.write_text(json.dumps(figures, ensure_ascii=False, separators=(",", ":")) + "\n")
+        print(f"wrote {mcp_path}")
 
 
 if __name__ == "__main__":
