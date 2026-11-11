@@ -16,7 +16,7 @@ A world where the public understands AI well enough to shape it, not just live w
 
 Mission
 
-We build the shared, neutral evidence base for public understanding of AI: tested messages, mapped messengers and trained communicators, published openly for everyone working on this.
+We build a shared, neutral evidence base for public understanding of AI: reception studies of real AI moments, a graded toolkit and an open agenda of hypotheses, published openly for everyone working on this.
 
 ## Theory of change
 
@@ -38,7 +38,7 @@ He co-founded [Empower](https://empower.agency/), a B Corp digital agency that h
 
 **What does Common Signals actually do?**
 
-We find out which messages about AI get through to which audiences, and which messengers those audiences trust, then publish what we find for anyone to use. The work has three parts: research (values-based audience segmentation, message testing and messenger mapping), a free toolkit built from the findings, and training and workshops that help communicators apply them.
+We study how real moments in the AI story land with the public, and publish what we find for anyone to use. The work has three parts: reception studies, which code the public comments under a news interview, podcast, reel or resignation; a free toolkit, [How to communicate about AI safety](https://commonsignals.org/how-to-communicate-about-ai-safety), which packages the evidence and grades every claim as established, tested or observed; and an open agenda of hypotheses for researchers, campaigners and platforms to test. We do not run our own audience segmentation: we build on the segmentations Diffusion and the Seismic Foundation have published. Workshops and training are planned but not yet on offer.
 
 **Who is this for?**
 
@@ -62,19 +62,19 @@ Email [hello@commonsignals.org](mailto:hello@commonsignals.org). We are looking 
 
 **What does "neutral" mean in practice?**
 
-Four things. We publish everything, including null results and findings that contradict what the field assumes. Our advisory group and, once incorporated, our board are balanced across the field's main perspectives. We publish our funder list and cap any single funder's share of income. And findings go to every side at once, never to one organisation first.
+Four things. We publish everything, including null results and findings that contradict what the field assumes. Our advisory group and, once incorporated, our board are balanced across the field's main perspectives. We will publish our funder list once we have funders, and cap any single funder's share of income. And findings go to every side at once, never to one organisation first.
 
 **Where does the model come from?**
 
-Climate Outreach, and specifically its Britain Talks Climate programme, which segmented the British public by values rather than demographics and tested which climate messages and messengers worked with each segment. That research became shared infrastructure for the whole climate movement. We are doing the same for AI, and building on existing work rather than duplicating it: Public Voices in AI (Ada Lovelace Institute and Alan Turing Institute), More in Common's segmentation craft, and the Seismic Foundation's message testing.
+The inspiration is Climate Outreach, and specifically its Britain Talks Climate programme, which segmented the British public by values rather than demographics and tested which climate messages and messengers worked with each segment. That research became shared infrastructure for the whole climate movement. We take the idea of shared, neutral evidence, not the survey. For AI, others have already published segmentations, notably Diffusion's six UK mindsets and the Seismic Foundation's segments across five countries, so we build on them, and on work such as Public Voices in AI (Ada Lovelace Institute and Alan Turing Institute), instead of running our own.
 
 **Why segment by values rather than demographics?**
 
-Because values predict how people respond to a message better than age, income or location do. Two people in the same postcode can hear the same claim about AI in opposite ways depending on what they already believe about institutions, fairness and change. Segmenting by values lets a communicator pick the frame and the messenger that fit the audience they are trying to reach.
+Because values predict how people respond to a message better than age, income or location do. Two people in the same postcode can hear the same claim about AI in opposite ways depending on what they already believe about institutions, fairness and change. We do not segment audiences ourselves. We use the segmentations others have published, such as Diffusion's six UK mindsets, which the toolkit draws on, so that a communicator can pick the frame and the messenger that fit the audience they are trying to reach.
 
 **How is Common Signals funded?**
 
-It is pre-funding. The pilot is being pitched to seed funders now, with early grants ring-fenced as untied research funding. The longer plan is a mix of grants from neutral trusts, a diversified funder base with no single funder above 25% of income, and a small line of earned income from workshops and message reviews, always under an open-methodology rule.
+It is pre-funding. Any early grants will be ring-fenced as untied research funding. The longer plan is a mix of grants from neutral trusts, a diversified funder base with no single funder above 25% of income, and a small line of earned income from workshops and message reviews once they are on offer, always under an open-methodology rule.
 
 **Can I criticise the work?**
 

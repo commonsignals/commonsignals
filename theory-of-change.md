@@ -12,6 +12,10 @@ September 2026
 
 Common Signals' theory of change: why public engagement is critical to durable AI governance, and how a social mandate for it gets built.
 
+### Note added 11 November 2026
+
+Common Signals no longer plans its own segmentation survey or the US pilot described in sections 7.2 to 7.4 and 8.1, and it has no contracted quantitative partner. The rest of this document is unchanged from September 2026. Our current priorities are on the [research page](https://commonsignals.org/research).
+
 ### About this document
 
 Common Signals is a neutral research body working to widen and deepen public engagement with AI. Through [audience research](https://commonsignals.org/research), [tested messages](https://commonsignals.org/tools), [practical guides](https://commonsignals.org/updates) and [messenger training](https://commonsignals.org/training), we help organisations explain AI to the public in ways that fit the values of their audiences.

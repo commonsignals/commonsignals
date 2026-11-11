@@ -27,7 +27,7 @@ SECTIONS = [
     ("Research articles", None),
     ("Data explorer", "data/"),
     ("Tools and library", ["research/library/index.html", "tools/comment-analyser/index.html",
-                           "tools/messengers/index.html", "tools/segments/index.html"]),
+                           "tools/messengers/index.html"]),
 ]
 
 

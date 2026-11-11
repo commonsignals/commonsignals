@@ -25,3 +25,7 @@
 # Articles used to link the method page at /method.
 /method                         /methodology                              301
 /method/                        /methodology                              301
+
+# The AI attitudes segment calculator was removed in November 2026.
+/tools/segments                 /tools                                    301
+/tools/segments/                /tools                                    301

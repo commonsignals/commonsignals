@@ -177,7 +177,7 @@
 {
 "t": "Home",
 "u": "/",
-"d": "Common Signals helps people explaining AI know which messages actually work: research, tools, training and workshops for anyone talking about AI."
+"d": "Common Signals helps people explaining AI see how their messages land: reception studies of real AI moments, a graded toolkit, and open hypotheses for others to test."
 },
 {
 "t": "Methodology",
@@ -202,7 +202,7 @@
 {
 "t": "Research",
 "u": "/research",
-"d": "Common Signals runs values-segmented research testing which messages and messengers shift public understanding of AI, and publishes the findings openly."
+"d": "Common Signals studies how the public receives real AI moments, packages the evidence in a graded toolkit, and publishes open hypotheses for others to test."
 },
 {
 "t": "Research library",
@@ -217,7 +217,7 @@
 {
 "t": "Tools",
 "u": "/tools",
-"d": "A free, open toolkit for anyone communicating about AI: an AI safety messenger map, a comment analyser, and message guides built from tested evidence."
+"d": "Free, open tools for anyone communicating about AI: a graded toolkit, How to communicate about AI safety, and an AI safety messenger map."
 },
 {
 "t": "Comment analyser",
@@ -230,14 +230,9 @@
 "d": "A directory of people and organisations explaining AI risk to the public, across both the existential-risk and present-day-harms conversations."
 },
 {
-"t": "AI attitudes segment calculator (concept demo)",
-"u": "/tools/segments/",
-"d": "A working demo of a values-based segmentation quiz, the method behind Britain Talks Climate, applied to AI. The segments are illustrative placeholders, not real research findings."
-},
-{
 "t": "Training",
 "u": "/training",
-"d": "Common Signals is building a messenger-training programme grounded in evidence about who audiences actually trust to talk about AI."
+"d": "Common Signals plans training for communicators, built on its toolkit and reception studies. It is not available yet."
 },
 {
 "t": "Updates",
@@ -252,6 +247,6 @@
 {
 "t": "Workshops",
 "u": "/workshops",
-"d": "Hands-on workshops from Common Signals help organisations apply tested evidence to their own AI messaging and materials."
+"d": "Common Signals plans hands-on workshops that apply its toolkit and reception studies to an organisation's own AI messaging. They are not available yet."
 }
 ]

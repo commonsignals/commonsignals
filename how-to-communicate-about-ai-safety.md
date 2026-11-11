@@ -368,7 +368,7 @@ Before publishing your message, check your copy against these ten criteria:
 
 ### Testing your message
 
-If you can, test what people do. A small paid test on a social platform, comparing two versions of a message by the share of people who click through to take action, tells you far more than raw engagement. Forward Action's [framing guide](https://climateoutreach.org/britain-talks-climate/downloads/) explains how to run tests like this. Common Signals is building a message tester to help AI communicators do the same, and runs [workshops](https://commonsignals.org/workshops) where teams review their materials against the research.
+If you can, test what people do. A small paid test on a social platform, comparing two versions of a message by the share of people who click through to take action, tells you far more than raw engagement. Forward Action's [framing guide](https://climateoutreach.org/britain-talks-climate/downloads/) explains how to run tests like this. Common Signals is building a message tester to help AI communicators do the same, and plans [workshops](https://commonsignals.org/workshops) where teams can review their materials against the research.
 
 ### Where each mindset is online
 
@@ -402,7 +402,7 @@ If you quote or adapt this guide, please cite it as:
 
 Common Signals, "How to communicate about AI safety", November 2026.
 
-Corrected 11 November 2026: Hari Sreenivasan, not Christiane Amanpour, interviewed Heidy Khlaaf on Amanpour and Company. The 88% figure for the Facebook cut of the Diary of a CEO debate is agreement with the risk case, not with the need for precautionary rules. The Soares reel had 1,703 comments, of which 1,534 were coded, not 1,600.
+Corrected 11 November 2026: Hari Sreenivasan, not Christiane Amanpour, interviewed Heidy Khlaaf on Amanpour and Company. The 88% figure for the Facebook cut of the Diary of a CEO debate is agreement with the risk case, not with the need for precautionary rules. The Soares reel had 1,703 comments, of which 1,534 were coded, not 1,600. Common Signals plans workshops but does not yet run them.
 
 ## Related research
 
