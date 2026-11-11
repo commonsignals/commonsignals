@@ -11,7 +11,7 @@
   "2026-09-13",
   "2026-09-16"
  ],
- "capture_method": "Complete yt-dlp export (--write-comments --extractor-args \"youtube:max_comments=999999,all,999999,all\"), full threading, like counts and timestamps. Second capture; the first (13 September) underpins the published article's headline numbers, which this recode targets rather than supersedes.",
+ "capture_method": "Complete yt-dlp export (--write-comments --extractor-args \"youtube:max_comments=999999,all,999999,all\") taken 16 September 2026: 322 of 322 comments on the page, with full threading, like counts and timestamps (approximate for comments older than a day). Second capture. The first (13 September, 283 comments, coded with an earlier frame list) is not part of this dataset; the published article cites it only for comparison.",
  "counts": {
   "on_page_at_second_capture": 322,
   "retrieved": 322,
@@ -20,31 +20,36 @@
   "replies": 90,
   "authors": 237,
   "total_likes": 1048,
-  "clear_position_base": 220
+  "clear_position_base": 223
  },
  "spot_check": {
   "sample": 40,
-  "agreed": 40,
+  "agreed": null,
   "checked_by": "Ben Matthews",
-  "date": "2026-09-18",
-  "note": "Random 40-comment sample (with parent text for replies) checked against the codebook on stance, frame, format reaction and emotion; 40/40 agreed, no corrections."
+  "date": null,
+  "note": "The published article states that Ben Matthews spot-checked a random 40-comment sample of the original coding against the codebook before publication. The result, the date and the sampled rows were not recorded with the restored file, so comments.csv's spot_checked column is false throughout and this field is the only record. The 40/40 check recorded against v2 on 18 September 2026 was of the interim reconstruction, not of this coding, and is not carried over."
  },
- "coders": "Claude (claude-sonnet-5), two parallel coders of 161 comments each",
+ "coders": "Claude, two parallel coders (original coding run, 16 September 2026). The model version, batch sizes and per-row coder assignment were not recorded in the restored file.",
  "article_url": "https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf",
  "findings_note_url": null,
- "version": 2,
+ "version": 3,
  "changelog": [
   {
    "version": 1,
    "date": "2026-09-16",
-   "note": "Second-capture coding run behind the published article (322 comments, two parallel coders, 14 frames plus other). Not archived as a row-level file; described only in the article's method section and the project findings note."
+   "note": "Original coding of the second capture (322 comments, two parallel coders, 14 frames plus other), the run behind the published article's second-capture figures. Believed at the time not to have been archived as a row-level file; the article's method section and the project findings note were the only record."
   },
   {
    "version": 2,
    "date": "2026-09-18",
-   "note": "Row-level recode from the raw yt-dlp export, since coded_full.json was never archived. Frame list redrafted from the article's own documented frames and quotes, aimed at reproducing the published figures rather than an independent fresh read. Reproduces the published article's structural counts exactly (322 rows, 232/90 top-level/reply split, 1,048 likes, 237 authors) and lands close on most headline figures (disagree's like share exact at 1.6%; hype-or-staged, regulation and hostile-dismissal within a point of the published shares). Runs higher on agree share (72.7% vs 67.7% published) and lower on mixed (8.6% vs 14.3%), and under-counts explicit messenger-credential mentions (3 of 322 here vs 7 published) despite a targeted check against the article's own quoted examples. Ben Matthews spot-checked a random 40-comment sample and approved proceeding, 40/40."
+   "note": "Interim reconstruction, built from the raw yt-dlp export before the original coding file was located. Frame list redrafted from the article's own documented frames and quotes, aimed at reproducing the published figures rather than an independent read. It reproduced the structural counts exactly (322 rows, 232/90 top-level/reply split, 1,048 likes, 237 authors) but ran higher on agree share (72.7% vs 67.7% published) and lower on mixed (8.6% vs 14.3%), and under-counted messenger-credential mentions (3 of 322 vs the 7 then published). Ben Matthews spot-checked a random 40-comment sample of it, 40/40. Superseded by v3; figures taken from it should be discarded."
+  },
+  {
+   "version": 3,
+   "date": "2026-09-18",
+   "note": "Restored from the genuine original coding file (coded.tsv, with coded_full.json and analysis.json), found in this repository's _incoming/ folder (files dated 17 September 2026). Same 322 comment IDs; stance, frame (15 values including other), format reaction (4 values), emotion and the six mention flags are exactly as the original run assigned them, with the six m_ flags renamed mentions_. Comment text is the file's anonymised text. Replaces v2 entirely. It matches the published article on every figure checked (the 223-comment stance base and its 67.7/17.9/14.3 split, like-weighted shares, frame and engagement shares, emotion among agreeing comments, regulation and US-administration mention rates, reply and top-level agree rates, top-comment like counts) except messenger-credential mentions: published as 7 (2.2%), 6 (1.9%) in this file. The article has been corrected to 6."
   }
  ],
  "licence": "CC BY 4.0 (coding and compilation; comment text remains its authors')",
- "notes": "Unlike the Soares, Cotra and METR recodes in this series, the published article and findings note for this study are already accurate and current (verified against each other line by line before this recode began); this dataset is a best-effort reconstruction of the missing row-level file, not a correction. Where this recode's shares diverge from the published article (see changelog v2), that is expected drift from a redrafted codebook and should not be read as the published figures being wrong."
+ "notes": "Restored from the original coding file, not recoded: stance, frame (15 values including other), format reaction (4 values), emotion and six mention flags are exactly as the original run assigned them. The original coder brief was not archived with the file, so the codebook's definitions and examples were written afterwards from the frame names and the coded comments; they describe how the codes were applied, not the wording the coders were given. The mention flags are judgement calls, not keyword matches (3 of the 8 comments that name Hugging Face are not flagged mentions_hugging_face), so flag counts are lower bounds. No non_english flag was coded. Author hashes and timestamps are the original file's and differ from v2's. Frame-level figures use a codebook drafted for this thread and are not comparable with other studies' frames; stance, format reaction and emotion use the series' shared categories. The article stated messenger-credential mentions as 7 (2.2%); the coding file has 6 (1.9%) and the article has been corrected. The interim v2 file (18 September 2026) is superseded; figures taken from it should be discarded."
 }

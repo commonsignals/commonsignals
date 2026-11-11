@@ -15,6 +15,8 @@ cite: "Common Signals, '\"Neither company is acting responsibly\": how X receive
 
 We coded 2,480 replies to a former Anthropic researcher's resignation thread on X.
 
+Hypothesis generation, not a claim about public opinion. [Read the methodology →](https://commonsignals.org/methodology)
+
 Short answer
 
 Of 2,480 replies coded in September 2026, the 1,840 where we could tell what the writer thought split almost evenly: 43% agreed with Coxon that the labs are racing recklessly towards superintelligence, 40% disagreed and 18% were mixed. The most common objection, from one in five sceptical replies, was that AI can't improve itself into the superintelligence Coxon warns of.

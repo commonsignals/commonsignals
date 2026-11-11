@@ -15,6 +15,8 @@ cite: "Common Signals, '\"A problem they created\": how a news audience received
 
 We coded 322 YouTube comments on Amanpour and Company's interview with Heidy Khlaaf, who argues the "rogue AI" story is the wrong one. Most of the audience agreed with her, got angrier as the thread aged, and asked for regulation without being prompted.
 
+Hypothesis generation, not a claim about public opinion. [Read the methodology →](https://commonsignals.org/methodology)
+
 Short answer
 
 Of the 223 comments taking a readable position in our 16 September 2026 capture, 68% accepted Heidy Khlaaf's argument that the real story is corporate negligence, 18% rejected it and 14% accepted part of it. Among agreeing comments 44% were angry, and 12% of comments called for regulation, prosecution or a watchdog.

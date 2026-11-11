@@ -15,6 +15,8 @@ How Instagram received Nate Soares's caveman-speak explainer of AI risk
 
 We coded 1,534 Instagram comments on a one-minute reel by Nate Soares of the Machine Intelligence Research Institute (MIRI). Most commenters accepted the argument. Many said it was already too late, and almost nobody asked what to do.
 
+Hypothesis generation, not a claim about public opinion. [Read the methodology →](https://commonsignals.org/methodology)
+
 Short answer
 
 Of the 1,224 comments taking a readable position in our August 2026 capture, 53% accepted that AI is a serious danger, 24% rejected it and 6% accepted part of the argument. The most common response among believers was resignation, and almost nobody asked what to do.

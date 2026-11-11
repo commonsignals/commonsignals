@@ -1,7 +1,7 @@
 {
  "central_claim": "The real story of the OpenAI agent-swarm incident is corporate negligence and hype, not a machine going rogue.",
- "stance_note": "agree = accepts Khlaaf's reframing that the real story is corporate negligence, not a rogue machine; disagree = rejects this and defends the rogue/dangerous-AI framing, including from the AI-safety side; mixed = accepts part, rejects or reframes part.",
- "coder_instructions": "For replies, parent-comment text is supplied as context only; code the reply itself, not its parent. Comments with no readable position (jokes, tangents, single reactions) are stance na. When a comment fits two frames, pick the one it leads with. This codebook was redrafted from the second capture (16 September 2026); the original 13 September codebook was not archived, so frame-level figures are a best-effort reconstruction aimed at the published article's own numbers, not an independent fresh read.",
+ "stance_note": "agree = accepts Khlaaf's reframing that the real story is corporate negligence and hype, not a rogue machine; disagree = rejects it and defends the rogue or dangerous-AI framing, including the objection from the AI-safety side that she understates what the swarm did, or dismisses her account outright; mixed = accepts part of the reframing and rejects or reframes part.",
+ "coder_instructions": "The original coder brief was not archived with the coding file, so this text does not reproduce it. It records the conventions the coded output is consistent with, written on 18 September 2026 from the coded comments themselves. Stance is coded against the central claim: a comment that takes no readable position on it is na, and one that engages with the incident but whose position cannot be read is unclear. Every comment carries exactly one frame, one format reaction and one emotion, the dominant one; frame is the point the comment leads with. Mention flags are independent yes/no marks and can accompany any frame. Flags are judgement calls, not keyword matches: 3 of the 8 comments that name Hugging Face are not flagged mentions_hugging_face, so flag counts are lower bounds on keyword mentions. Definitions and examples in this codebook describe how the codes were applied; they are not the wording the coders were given.",
  "dimensions": [
   {
    "key": "stance",
@@ -9,11 +9,31 @@
    "kind": "single",
    "shared": true,
    "values": [
-    {"value": "agree", "label": "Agree", "definition": "accepts Khlaaf's reframing: corporate negligence, not a rogue machine"},
-    {"value": "disagree", "label": "Disagree", "definition": "rejects this; defends the rogue/dangerous-AI framing"},
-    {"value": "mixed", "label": "Mixed", "definition": "accepts part, rejects or reframes part"},
-    {"value": "na", "label": "Na", "definition": "on topic but no readable position"},
-    {"value": "unclear", "label": "Unclear", "definition": "genuinely cannot be told either way; used sparingly"}
+    {
+     "value": "agree",
+     "label": "agree",
+     "definition": "accepts Khlaaf's reframing: the real story is corporate negligence and hype, not a machine going rogue"
+    },
+    {
+     "value": "disagree",
+     "label": "disagree",
+     "definition": "rejects the reframing and defends the rogue or dangerous-AI account, including the objection from the AI-safety side that she understates what the swarm did, or dismisses her account outright"
+    },
+    {
+     "value": "mixed",
+     "label": "mixed",
+     "definition": "accepts part of the reframing and rejects or reframes part"
+    },
+    {
+     "value": "unclear",
+     "label": "unclear",
+     "definition": "engages with the incident but the position cannot be read"
+    },
+    {
+     "value": "na",
+     "label": "na",
+     "definition": "no position on the central claim: jokes, reactions, questions, remarks about the production, tangents"
+    }
    ]
   },
   {
@@ -22,21 +42,96 @@
    "kind": "single",
    "shared": false,
    "values": [
-    {"value": "accountability_frame", "label": "Accountability frame", "definition": "the real problem is corporate negligence, decisions or incentives, not the AI acting on its own"},
-    {"value": "warning_shot_dispute", "label": "Warning-shot dispute", "definition": "disputes Khlaaf's account from the AI-safety side; argues she understates what the swarm did"},
-    {"value": "hype_or_staged", "label": "Hype or staged", "definition": "dismisses the incident or segment as staged, exaggerated or a stunt, without a specific capability argument"},
-    {"value": "capability_scepticism", "label": "Capability scepticism", "definition": "doubts the premise on technical grounds; the incident is overblown because the AI isn't that capable"},
-    {"value": "credential_attack", "label": "Credential attack", "definition": "attacks Khlaaf's expertise or trustworthiness, naming her OpenAI background or credentials"},
-    {"value": "credential_defense", "label": "Credential defense", "definition": "defends Khlaaf's expertise or credentials against an attack"},
-    {"value": "hostile_dismissal", "label": "Hostile dismissal", "definition": "dismisses or attacks Khlaaf or the segment with open hostility, without naming a credential"},
-    {"value": "messenger_praise", "label": "Messenger praise", "definition": "praises Khlaaf specifically (clarity, courage, expertise) without a credential fight"},
-    {"value": "regulation_policy", "label": "Regulation or policy", "definition": "calls for or references regulation, watchdogs, Congress, prosecution or oversight"},
-    {"value": "us_politics", "label": "US politics", "definition": "mentions the current US administration or American politics"},
-    {"value": "resignation_fatalism", "label": "Resignation or fatalism", "definition": "nothing will change regardless"},
-    {"value": "general_agreement", "label": "General agreement", "definition": "short agreement or praise with no further elaboration"},
-    {"value": "humour_only", "label": "Humour only", "definition": "a joke or meme with no other content and no stance-bearing frame"},
-    {"value": "scifi_reference", "label": "Scifi reference", "definition": "leads with a reference to a film, book, game or fictional AI"},
-    {"value": "other", "label": "Other", "definition": "doesn't fit any of the above, including off-topic tangents"}
+    {
+     "value": "accountability",
+     "label": "Accountability",
+     "definition": "the real problem is corporate negligence, choices or incentives (OpenAI, its executives, the AI industry), not machines acting on their own; echoes Khlaaf's reframing, or calls out or blames the companies",
+     "example": "Behind every 'rogue' AI, is a wizard of Oz type rogue human."
+    },
+    {
+     "value": "regulation",
+     "label": "Regulation",
+     "definition": "calls for or discusses regulation, a watchdog, legislation, prosecution or government oversight of AI companies",
+     "example": "A new \"Watchdog\" agency is needed for all of this."
+    },
+    {
+     "value": "us_politics",
+     "label": "US politics",
+     "definition": "reads the incident through American politics: the current US administration or its officials as the reason nothing will be done, elections, party politics",
+     "example": "In any other administration OpenAI would be investigated and prosecuted. This is irresponsible criminal conduct."
+    },
+    {
+     "value": "hype_staged",
+     "label": "Hype or staged",
+     "definition": "dismisses the incident or the segment as staged, exaggerated, a publicity stunt, marketing or stock manipulation",
+     "example": "Smells like a publicity stunt to me."
+    },
+    {
+     "value": "warning_shot_dispute",
+     "label": "Warning-shot dispute",
+     "definition": "disputes Khlaaf's account from the AI-safety side: says she understates or misdescribes what the swarm did, that the agents showed intent, scheming or coordination, or that this really was a dangerous-AI event",
+     "example": "They don't have intent? Are you blind? This hack was a whole series of intent chained together."
+    },
+    {
+     "value": "anti_anthropomorphism",
+     "label": "Anti-anthropomorphism",
+     "definition": "objects to describing the agents as autonomous, sentient or 'escaping'; they only did what they were programmed and instructed to do",
+     "example": "\"AI\" is NOT AUTONOMOUS. \"It\" does not \"escape\" and it does not \"think\"."
+    },
+    {
+     "value": "existential_dread",
+     "label": "Existential dread",
+     "definition": "fear, fatalism or doom about AI itself (loss of control, being wiped out) without engaging Khlaaf's argument",
+     "example": "Oh boy, first official espionage task. I don’t think we are driving this truck anymore."
+    },
+    {
+     "value": "analogous_crisis",
+     "label": "Analogous crisis",
+     "definition": "compares the incident to another failure of corporate or institutional accountability (an unlocked bank vault, Equifax, LifeLock, lab leak, gain-of-function research)",
+     "example": "What if a bank \"tested\" what would happen if it left it's vault unlocked and it's doors open all night in a busy city?"
+    },
+    {
+     "value": "credential_contested",
+     "label": "Credential contested",
+     "definition": "argues about who Khlaaf is: her OpenAI background, funding, independence or expertise, attacking or defending her (the flag mentions_messenger_credentials marks any such mention, whatever the frame)",
+     "example": "Oh shes a very good AI PR person"
+    },
+    {
+     "value": "hostile_dismissal",
+     "label": "Hostile dismissal",
+     "definition": "dismisses or attacks Khlaaf or the segment with open hostility, without naming a credential or making an argument",
+     "example": "Why should I trust this woman?"
+    },
+    {
+     "value": "praise_guest",
+     "label": "Praise for the guest",
+     "definition": "praise for Khlaaf, the interview or the programme is the main content of the comment: clarity, expertise, calm",
+     "example": "EXACTLY the guest needed for this story!"
+    },
+    {
+     "value": "geopolitical_race",
+     "label": "Geopolitical race",
+     "definition": "frames AI as a race between countries (China, Russia), so that guardrails are unlikely or unwise",
+     "example": "The trouble is no country wants to put guards rails up if their competition is operating without guardrails"
+    },
+    {
+     "value": "pop_culture_ref",
+     "label": "Pop-culture reference",
+     "definition": "leads with a fictional or cultural reference: Frankenstein, Star Trek, science fiction",
+     "example": "Mary Shelley’s Frankenstein runaway is where we are headed."
+    },
+    {
+     "value": "offtopic_meta",
+     "label": "Off-topic or meta",
+     "definition": "about the video or the thread rather than the incident: captions, sound, the guest's appearance or speaking pace, banter with other commenters",
+     "example": "The sound quality is superb."
+    },
+    {
+     "value": "other",
+     "label": "Other",
+     "definition": "nothing above fits, including on-topic remarks with no distinct argument, reactions too short to read, and unrelated tangents",
+     "example": "Fun fact: parrots have been known to speak human language."
+    }
    ]
   },
   {
@@ -45,9 +140,26 @@
    "kind": "single",
    "shared": true,
    "values": [
-    {"value": "none", "label": "None", "definition": "no reaction to the interview or its presentation"},
-    {"value": "praise", "label": "Praise", "definition": "praises the interview, journalism or Amanpour and Company"},
-    {"value": "criticism", "label": "Criticism", "definition": "criticises the interview, journalism or presentation itself"}
+    {
+     "value": "praise",
+     "label": "praise",
+     "definition": "praises the interview, the guest or the programme"
+    },
+    {
+     "value": "mock",
+     "label": "mock",
+     "definition": "ridicules or sneers at the guest, the segment or another commenter"
+    },
+    {
+     "value": "condescended",
+     "label": "condescended",
+     "definition": "talks down to the guest or others, or objects to being talked down to; in this thread mostly remarks that the guest speaks too fast"
+    },
+    {
+     "value": "none",
+     "label": "none",
+     "definition": "no reaction to the segment as a format"
+    }
    ]
   },
   {
@@ -56,55 +168,129 @@
    "kind": "single",
    "shared": true,
    "values": [
-    {"value": "neutral", "label": "Neutral", "definition": "dominant emotional register: neutral"},
-    {"value": "fear", "label": "Fear", "definition": "dominant emotional register: fear"},
-    {"value": "anger", "label": "Anger", "definition": "dominant emotional register: anger"},
-    {"value": "resignation", "label": "Resignation", "definition": "dominant emotional register: resignation"},
-    {"value": "humour", "label": "Humour", "definition": "dominant emotional register: humour"},
-    {"value": "hope", "label": "Hope", "definition": "dominant emotional register: hope"}
+    {
+     "value": "fear",
+     "label": "fear",
+     "definition": "fear, alarm or dread"
+    },
+    {
+     "value": "resignation",
+     "label": "resignation",
+     "definition": "fatalism, weariness, a sense that nothing can be done"
+    },
+    {
+     "value": "anger",
+     "label": "anger",
+     "definition": "anger, outrage or contempt"
+    },
+    {
+     "value": "humour",
+     "label": "humour",
+     "definition": "joking, sarcasm played for laughs, laughing emoji"
+    },
+    {
+     "value": "hope",
+     "label": "hope",
+     "definition": "gratitude, admiration or optimism"
+    },
+    {
+     "value": "neutral",
+     "label": "neutral",
+     "definition": "no dominant emotion; a level tone"
+    }
    ]
   },
   {
    "key": "mentions_messenger_credentials",
-   "label": "mentions_messenger_credentials",
-   "kind": "flag",
-   "shared": false,
-   "values": [{"value": "true", "label": "mentions_messenger_credentials", "definition": "names Khlaaf's OpenAI background, credentials or expertise, attacking or defending"}]
-  },
-  {
-   "key": "mentions_regulation",
-   "label": "mentions_regulation",
-   "kind": "flag",
-   "shared": false,
-   "values": [{"value": "true", "label": "mentions_regulation", "definition": "mentions regulation, watchdogs, Congress, prosecution or government oversight"}]
-  },
-  {
-   "key": "mentions_us_politics",
-   "label": "mentions_us_politics",
-   "kind": "flag",
-   "shared": false,
-   "values": [{"value": "true", "label": "mentions_us_politics", "definition": "mentions the current US administration or American politics"}]
-  },
-  {
-   "key": "mentions_companies",
-   "label": "mentions_companies",
-   "kind": "flag",
-   "shared": false,
-   "values": [{"value": "true", "label": "mentions_companies", "definition": "names OpenAI, Hugging Face, other AI companies, or executives as responsible parties"}]
-  },
-  {
-   "key": "mentions_cultural_reference",
-   "label": "mentions_cultural_reference",
+   "label": "m_messenger_credentials",
    "kind": "flag",
    "shared": true,
-   "values": [{"value": "true", "label": "mentions_cultural_reference", "definition": "references any film, book, game or fictional AI/robot"}]
+   "values": [
+    {
+     "value": "true",
+     "label": "m_messenger_credentials",
+     "definition": "comments on Khlaaf's expertise, experience, employer, funding or affiliations, including her former OpenAI role, attacking or defending her"
+    }
+   ]
   },
   {
-   "key": "non_english",
-   "label": "non_english",
+   "key": "mentions_leaders_policy",
+   "label": "m_leaders_policy",
    "kind": "flag",
    "shared": true,
-   "values": [{"value": "true", "label": "non_english", "definition": "mostly not in English"}]
+   "values": [
+    {
+     "value": "true",
+     "label": "m_leaders_policy",
+     "definition": "governments, regulators, politicians, Congress, laws or regulation, prosecution, oversight or a watchdog"
+    }
+   ]
+  },
+  {
+   "key": "mentions_administration_politics",
+   "label": "m_administration_politics",
+   "kind": "flag",
+   "shared": false,
+   "values": [
+    {
+     "value": "true",
+     "label": "m_administration_politics",
+     "definition": "the current US administration, its officials or American party politics, typically as the reason nothing will be done"
+    }
+   ]
+  },
+  {
+   "key": "mentions_hugging_face",
+   "label": "m_hugging_face",
+   "kind": "flag",
+   "shared": false,
+   "values": [
+    {
+     "value": "true",
+     "label": "m_hugging_face",
+     "definition": "refers to Hugging Face, the platform the agents breached, or to what it said or did"
+    }
+   ]
+  },
+  {
+   "key": "mentions_other_coverage",
+   "label": "m_other_coverage",
+   "kind": "flag",
+   "shared": false,
+   "values": [
+    {
+     "value": "true",
+     "label": "m_other_coverage",
+     "definition": "refers to other coverage or reports of the incident, such as the Atlantic, CNN, OpenAI's own report or the METR and Redwood Research investigation"
+    }
+   ]
+  },
+  {
+   "key": "mentions_named_individual",
+   "label": "m_named_individual",
+   "kind": "flag",
+   "shared": false,
+   "values": [
+    {
+     "value": "true",
+     "label": "m_named_individual",
+     "definition": "names a specific person other than the guest: the host, AI-company executives such as Sam Altman, or politicians and regulators"
+    }
+   ]
+  },
+  {
+   "key": "reply_count",
+   "label": "Direct replies",
+   "kind": "meta",
+   "shared": true,
+   "values": []
+  },
+  {
+   "key": "published_at_precision",
+   "label": "Timestamp precision",
+   "kind": "meta",
+   "shared": true,
+   "values": []
   }
  ]
 }
