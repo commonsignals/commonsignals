@@ -19,6 +19,7 @@ The coded data lives at [/data/](https://commonsignals.org/data/). The coding an
 
 ## Articles
 
+- [How to talk about loss of control and catastrophic risk](https://commonsignals.org/how-to-talk-about-loss-of-control.md): Three dos and a don't for explaining AI systems that act outside human intent, and what to ask for when they do.
 - [How to communicate about AI safety](https://commonsignals.org/how-to-communicate-about-ai-safety.md): An evidence-based guide for anyone explaining AI risks to the public: ten principles, four ground rules and seven issue guides, each graded by the strength of its evidence.
 - [Findings so far: what four comment-thread studies say about explaining AI risk](https://commonsignals.org/findings.md): Four studies, 3,617 coded comments across three platforms, and nine patterns that hold across at least two of the four, each stated as a hypothesis with the base it was measured on.
 
