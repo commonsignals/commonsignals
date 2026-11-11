@@ -1,6 +1,6 @@
 # Common Signals
 
-[commonsignals.org](https://commonsignals.org) — Common Signals helps people explaining AI know which messages actually work: research, tools, training and workshops for anyone talking about AI.
+[commonsignals.org](https://commonsignals.org) — Common Signals helps people explaining AI see how their messages land: reception studies of real AI moments, a graded toolkit, and open hypotheses for others to test.
 
 ## About this repo
 
