@@ -1183,6 +1183,8 @@ cite: "Ben Matthews, Common Signals, 'Common Signals research agenda', version 0
 
 Eleven hypotheses about how audiences receive messages on AI risk, the four to settle first in 2027, and how each can be tested.
 
+[Download PDF (version 0.2)](https://commonsignals.org/assets/pdf/common-signals-research-agenda-v0.2.pdf)
+
 ## What this agenda is
 
 This agenda sets out eleven hypotheses about how audiences receive messages on AI risk, ranks the four to settle first in 2027, and says how each can be tested. The hypotheses come from six published Common Signals studies covering 32,027 coded comments.
@@ -1533,6 +1535,8 @@ cite: "Ben Matthews, Common Signals, \"How to communicate about AI safety\", 6 N
 6 November 2026 · Ben Matthews
 
 An evidence-based guide for anyone explaining artificial intelligence risks and safety rules to the public.
+
+[Download PDF (version of 11 November 2026)](https://commonsignals.org/assets/pdf/how-to-communicate-about-ai-safety-2026-11-11.pdf)
 
 Most people in Britain and the United States are already worried about artificial intelligence, and broad majorities want clear rules in place. They do not believe ordinary people have any say in what happens next. How might AI safety communicators help change that?
 

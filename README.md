@@ -45,6 +45,17 @@ python3 scripts/check-markdown.py
 
 The build also keeps each page's `<link rel="alternate" type="text/markdown">`, the Copy for AI button in article heroes and the build-markdown region of `_headers`. Never edit those or the generated files by hand. The check compares every markdown file with its page and lists anything missing.
 
+## PDF versions
+
+The toolkit and the research agenda each have a PDF in `assets/pdf/`, named by version, and a "Download PDF" link in the page's hero. After changing either page and deploying the change, run:
+
+```bash
+python3 scripts/build-pdfs.py
+python3 scripts/build-markdown.py
+```
+
+The script prints each page with headless Chrome, using the live site's stylesheet, fonts and charts, adds the page's own citation line under the dek, and moves the page's link to the new file. Earlier PDFs stay, so links to them keep working.
+
 ## MCP server for AI tools
 
 `/mcp` is a read-only MCP server (`functions/mcp/`) that lets a communicator's own AI tool query the studies and the pages in `/llms.txt`. `/data/ai-tools/` explains how to use it. `package.json` pins its two dependencies. The Pages project's build command, `npm ci` (Settings, Build, in the Cloudflare dashboard), installs them before Pages bundles Functions; with no build command Pages skips the install and the Functions build fails. Run `npm install` once to work on it locally.

@@ -13,6 +13,8 @@ cite: "Ben Matthews, Common Signals, 'Common Signals research agenda', version 0
 
 Eleven hypotheses about how audiences receive messages on AI risk, the four to settle first in 2027, and how each can be tested.
 
+[Download PDF (version 0.2)](https://commonsignals.org/assets/pdf/common-signals-research-agenda-v0.2.pdf)
+
 ## What this agenda is
 
 This agenda sets out eleven hypotheses about how audiences receive messages on AI risk, ranks the four to settle first in 2027, and says how each can be tested. The hypotheses come from six published Common Signals studies covering 32,027 coded comments.

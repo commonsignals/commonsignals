@@ -13,6 +13,8 @@ cite: "Ben Matthews, Common Signals, \"How to communicate about AI safety\", 6 N
 
 An evidence-based guide for anyone explaining artificial intelligence risks and safety rules to the public.
 
+[Download PDF (version of 11 November 2026)](https://commonsignals.org/assets/pdf/how-to-communicate-about-ai-safety-2026-11-11.pdf)
+
 Most people in Britain and the United States are already worried about artificial intelligence, and broad majorities want clear rules in place. They do not believe ordinary people have any say in what happens next. How might AI safety communicators help change that?
 
 This guide draws on research into public attitudes to answer a practical question: which messages, messengers, and moments move people to act, and which leave them feeling helpless?
