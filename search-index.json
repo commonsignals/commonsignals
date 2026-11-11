@@ -35,6 +35,11 @@
 "d": "We coded 2,480 replies to a former Anthropic researcher's resignation thread on X."
 },
 {
+"t": "Using Common Signals' evidence from an AI tool",
+"u": "/data/ai-tools/",
+"d": "Give your own AI tool Common Signals' coded studies and articles: paste a page's markdown link or llms.txt, or connect the read-only MCP server at commonsignals.org/mcp."
+},
+{
 "t": "Codebook: YouTube comments on the Amanpour and Company Khlaaf segment",
 "u": "/data/amanpour-segment-2026-09/codebook/",
 "d": "The full coding scheme behind the YouTube comments on the Amanpour and Company Khlaaf segment dataset: central claim, stance note, and every dimension and value with its definition and example."
