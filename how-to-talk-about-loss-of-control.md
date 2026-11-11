@@ -133,6 +133,6 @@ Corrected 11 November 2026: the 88% figure for the Facebook cut of the Diary of 
 - ["Neither company is acting responsibly": how X received Jacob Coxon's resignation from Anthropic](https://commonsignals.org/coxon-resignation-x-analysis)
 - ["Can't we just unplug it?": The Diary of a CEO AI debate analysed through 26,000 comments](https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis)
 - [How Instagram received Nate Soares's caveman-speak explainer of AI risk](https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri)
-- [Findings so far: what four comment-thread studies say about explaining AI risk](https://commonsignals.org/findings)
+- [Common Signals research agenda](https://commonsignals.org/research/agenda)
 - [How to communicate about AI safety](https://commonsignals.org/how-to-communicate-about-ai-safety)
 - [Methodology: how we code comment threads, and what our studies can and can't tell you](https://commonsignals.org/methodology)
