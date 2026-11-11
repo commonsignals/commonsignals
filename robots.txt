@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /survey/
 Disallow: /api/
 Disallow: /mcp
 

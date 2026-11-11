@@ -29,3 +29,7 @@
 # The AI attitudes segment calculator was removed in November 2026.
 /tools/segments                 /tools                                    301
 /tools/segments/                /tools                                    301
+
+# The Britain Talks AI and America Talks AI survey was retired in November 2026.
+/survey                         /research                                 301
+/survey/*                       /research                                 301
