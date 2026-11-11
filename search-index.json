@@ -87,7 +87,7 @@
 {
 "t": "Instagram comments on a two-minute Diary of a CEO clip of Nate Soares",
 "u": "/data/doac-clip-instagram-2026-09/",
-"d": "Search and filter all 77 coded Instagram comments on the Instagram clip of the Diary of a CEO AI debate: stance, frame, emotion and engagement, comment by comment."
+"d": "Search and filter all 77 coded Instagram comments on the Instagram clip of the Diary of a CEO AI debate: stance, frame and emotion, comment by comment."
 },
 {
 "t": "Codebook: YouTube Shorts comments on the Diary of a CEO trailer for its AI debate",
@@ -142,7 +142,7 @@
 {
 "t": "Instagram comments on Nate Soares's reel \"We stop AI. You help?\"",
 "u": "/data/soares-reel-2026-08/",
-"d": "Search and filter all 2,136 coded Instagram comments behind the Soares reel article: stance, frame, emotion and engagement, comment by comment."
+"d": "Search and filter all 2,136 coded Instagram comments behind the Soares reel article: stance, frame and emotion, comment by comment."
 },
 {
 "t": "Donate",
@@ -185,7 +185,7 @@
 "d": "How Common Signals collects, uses and shares personal data on commonsignals.org, including data from our newsletter, analytics and the public comment data we code for research."
 },
 {
-"t": "How did Amanpour and Company viewers react to Heidy Khlaaf on the OpenAI and Hugging Face incident?",
+"t": "How did Amanpour and Company viewers react to the OpenAI and Hugging Face incident?",
 "u": "/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf",
 "d": "We coded 322 YouTube comments on Amanpour and Company's interview with Heidy Khlaaf, who argues the \"rogue AI\" story is the wrong one. Most of the audience agreed with her, got angrier as the thread aged, and asked for regulation without being prompted."
 },

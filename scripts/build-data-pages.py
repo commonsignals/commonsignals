@@ -9,14 +9,18 @@ replaces only the regions between the build-data:start/end markers in:
   data/<slug>/index.html            the Dataset JSON-LD, title, counts, platform and
                                     changelog, plus the companion article link
   data/<slug>/codebook/index.html   the title and the whole codebook
+  data/compare/index.html           the cross-study bars, tallied from each study's
+                                    data/<slug>/data.json
 
 The comment explorer on data/<slug>/ stays client-side. Run this after
-scripts/data-export.py index whenever a study changes. Running it twice changes
-nothing the second time.
+scripts/data-export.py index and build whenever a study changes. Running it twice
+changes nothing the second time.
 """
 import json
 import re
+from decimal import ROUND_HALF_UP, Decimal
 from pathlib import Path
+from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -183,6 +187,88 @@ def codebook_body(slug, codebook):
     <p class="study-download"><a id="cbDownload" href="/data/studies/{esc(slug)}/codebook.md">Download this codebook as markdown</a></p>"""
 
 
+# /data/compare/ used to be drawn in the browser by data/assets/compare.js, which
+# fetched every study's data.json. These are its dimensions and intros, and the
+# functions below reproduce its tallies and markup.
+COMPARE_DIMENSIONS = [
+    ("stance", "Stance",
+     "Percentages use each study's own clear-position base (agree, disagree and mixed only, excluding na and unclear), shown against that study's total coded count for context."),
+    ("emotion", "Emotion",
+     "Percentages use each study's total coded count. Every study uses the same six categories."),
+    ("format_reaction", "Format reaction",
+     "Percentages use each study's total coded count. Every study except the Amanpour segment shares one category list (none, mock, condescended, imitates, praise). The Amanpour segment uses a narrower, interview-specific list (none, praise, criticism), since it is reacting to a broadcast interview rather than a reel, thread or podcast episode. Read its bars as their own thing, not a like-for-like slice of the other studies' categories."),
+]
+
+
+def to_fixed_1(x):
+    """Same as JavaScript's x.toFixed(1), which rounds the exact binary value with
+    ties going up. Python's own formatting sends ties to the even digit."""
+    return str(Decimal(x).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP))
+
+
+def positioned_values(codebook):
+    """Stance values counted as positioned: those whose own string appears in the
+    codebook's stance_note, as scripts/data-export.py's validator decides."""
+    stance = next(d for d in codebook["dimensions"] if d["key"] == "stance")
+    note = codebook.get("stance_note") or ""
+    return {v["value"] for v in stance.get("values") or [] if v["value"] in note}
+
+
+def compare_block(data, key):
+    study, codebook, comments = data["study"], data["codebook"], data["comments"]
+    dim = next((d for d in codebook["dimensions"] if d["key"] == key), None)
+    if not dim:
+        return ""
+    counts = study["counts"]
+    allowed = positioned_values(codebook) if key == "stance" else None
+    values = [v for v in dim.get("values") or [] if allowed is None or v["value"] in allowed]
+    if key == "stance":
+        base = counts["clear_position_base"]
+        note = f'{base:,} of {counts["coded"]:,} coded take a clear position'
+    else:
+        base = counts["coded"]
+        note = f"Out of {base:,} coded"
+    tally = {}
+    for c in comments:
+        v = c.get(key)
+        if v and (allowed is None or v in allowed):
+            tally[v] = tally.get(v, 0) + 1
+
+    rows = []
+    for v in values:
+        n = tally.get(v["value"], 0)
+        pct = to_fixed_1(100 * n / base if base else 0)
+        rows.append(f"""              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">{esc(v["label"])}</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:{pct}%"></div></div>
+                <span class="cmp-bar-pct">{pct}% <span class="cmp-bar-n">({n:,})</span></span>
+              </div>""")
+    rows = "\n".join(rows)
+    return f"""            <div class="cmp-study-block">
+              <h3><a href="/data/{esc(quote(study["slug"], safe=""))}/">{esc(study["title"])}</a></h3>
+{rows}
+              <p class="cmp-base-note">{esc(note)}</p>
+            </div>"""
+
+
+def build_compare(index):
+    loaded = [json.loads((DATA / s["slug"] / "data.json").read_text(encoding="utf-8")) for s in index["studies"]]
+    sections = []
+    for key, label, intro in COMPARE_DIMENSIONS:
+        blocks = "\n".join(b for b in (compare_block(d, key) for d in loaded) if b)
+        sections.append(f"""        <section class="cmp-dimension">
+          <h2>{esc(label)}</h2>
+          <p class="cmp-dimension-intro">{esc(intro)}</p>
+          <div class="cmp-study-grid">
+{blocks}
+          </div>
+        </section>""")
+    body = '      <div id="cmpDimensions">\n' + "\n".join(sections) + "\n      </div>"
+    path = DATA / "compare" / "index.html"
+    original = path.read_text(encoding="utf-8")
+    write_if_changed(path, replace_region(original, path, "compare", body), original)
+
+
 def build_home(index):
     path = DATA / "index.html"
     original = path.read_text(encoding="utf-8")
@@ -215,4 +301,5 @@ if __name__ == "__main__":
     build_home(index)
     for entry in index["studies"]:
         build_study(entry["slug"])
+    build_compare(index)
     print(f"{len(index['studies'])} studies rendered")

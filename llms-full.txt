@@ -1,15 +1,15 @@
 URL: https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf
 
 ---
-title: "How did Amanpour and Company viewers react to Heidy Khlaaf on the OpenAI and Hugging Face incident?"
+title: "How did Amanpour and Company viewers react to the OpenAI and Hugging Face incident?"
 url: "https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf"
 published: 2026-09-14
-updated: 2026-11-09
+updated: 2026-11-10
 publisher: "Common Signals"
 cite: "Common Signals, '\"A problem they created\": how a news audience received the accountability version of the OpenAI and Hugging Face incident', September 2026."
 ---
 
-# How did Amanpour and Company viewers react to Heidy Khlaaf on the OpenAI and Hugging Face incident?
+# How did Amanpour and Company viewers react to the OpenAI and Hugging Face incident?
 
 14 September 2026
 

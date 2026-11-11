@@ -102,13 +102,843 @@
   <div class="page-hero">
     <p><a class="back-link" href="/data/">&larr; Back to data</a></p>
     <h1>Compare</h1>
-    <p class="sub">Stance, emotion and format reaction, compared across every study on each study's own base. Loaded from the same data.json files the explorer pages use.</p>
+    <p class="sub">Stance, emotion and format reaction, compared across every study on each study's own base. Counted from the same data.json files the explorer pages use.</p>
   </div>
 
-  <section id="compare-root" class="reveal">
+  <section id="compare-root">
     <div class="wrap">
-      <p class="study-empty" id="cmpLoading">Loading studies&hellip;</p>
-      <div id="cmpDimensions"></div>
+      <!-- build-data:start compare -->
+      <div id="cmpDimensions">
+        <section class="cmp-dimension">
+          <h2>Stance</h2>
+          <p class="cmp-dimension-intro">Percentages use each study's own clear-position base (agree, disagree and mixed only, excluding na and unclear), shown against that study's total coded count for context.</p>
+          <div class="cmp-study-grid">
+            <div class="cmp-study-block">
+              <h3><a href="/data/amanpour-segment-2026-09/">YouTube comments on the Amanpour and Company Khlaaf segment</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Agree</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:72.7%"></div></div>
+                <span class="cmp-bar-pct">72.7% <span class="cmp-bar-n">(160)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Disagree</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:18.6%"></div></div>
+                <span class="cmp-bar-pct">18.6% <span class="cmp-bar-n">(41)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Mixed</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:8.6%"></div></div>
+                <span class="cmp-bar-pct">8.6% <span class="cmp-bar-n">(19)</span></span>
+              </div>
+              <p class="cmp-base-note">220 of 322 coded take a clear position</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/cotra-episode-2026-09/">YouTube comments on the Dwarkesh Podcast episode with Ajeya Cotra, &quot;This might be the clearest warning shot we ever get&quot;</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">agree</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:69.6%"></div></div>
+                <span class="cmp-bar-pct">69.6% <span class="cmp-bar-n">(1,107)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">disagree</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:9.9%"></div></div>
+                <span class="cmp-bar-pct">9.9% <span class="cmp-bar-n">(158)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">mixed</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:20.4%"></div></div>
+                <span class="cmp-bar-pct">20.4% <span class="cmp-bar-n">(325)</span></span>
+              </div>
+              <p class="cmp-base-note">1,590 of 2,999 coded take a clear position</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/coxon-resignation-2026-09/">X replies to Jacob Coxon's Anthropic resignation thread</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Agree</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:42.5%"></div></div>
+                <span class="cmp-bar-pct">42.5% <span class="cmp-bar-n">(782)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Disagree</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:39.9%"></div></div>
+                <span class="cmp-bar-pct">39.9% <span class="cmp-bar-n">(735)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Mixed</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:17.6%"></div></div>
+                <span class="cmp-bar-pct">17.6% <span class="cmp-bar-n">(323)</span></span>
+              </div>
+              <p class="cmp-base-note">1,840 of 2,480 coded take a clear position</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/doac-clip-facebook-2026-09/">Facebook comments on a 21-minute Diary of a CEO cut of the AI debate</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Agree</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:87.5%"></div></div>
+                <span class="cmp-bar-pct">87.5% <span class="cmp-bar-n">(1,195)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Disagree</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:10.6%"></div></div>
+                <span class="cmp-bar-pct">10.6% <span class="cmp-bar-n">(145)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Mixed</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:1.9%"></div></div>
+                <span class="cmp-bar-pct">1.9% <span class="cmp-bar-n">(26)</span></span>
+              </div>
+              <p class="cmp-base-note">1,366 of 2,075 coded take a clear position</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/doac-clip-instagram-2026-09/">Instagram comments on a two-minute Diary of a CEO clip of Nate Soares</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Agree</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:65.8%"></div></div>
+                <span class="cmp-bar-pct">65.8% <span class="cmp-bar-n">(25)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Disagree</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:28.9%"></div></div>
+                <span class="cmp-bar-pct">28.9% <span class="cmp-bar-n">(11)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Mixed</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:5.3%"></div></div>
+                <span class="cmp-bar-pct">5.3% <span class="cmp-bar-n">(2)</span></span>
+              </div>
+              <p class="cmp-base-note">38 of 77 coded take a clear position</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/doac-clip-shorts-2026-09/">YouTube Shorts comments on the Diary of a CEO trailer for its AI debate</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Agree</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:48.5%"></div></div>
+                <span class="cmp-bar-pct">48.5% <span class="cmp-bar-n">(83)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Disagree</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:40.4%"></div></div>
+                <span class="cmp-bar-pct">40.4% <span class="cmp-bar-n">(69)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Mixed</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:11.1%"></div></div>
+                <span class="cmp-bar-pct">11.1% <span class="cmp-bar-n">(19)</span></span>
+              </div>
+              <p class="cmp-base-note">171 of 261 coded take a clear position</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/doac-clip-tiktok-2026-09/">TikTok comments on a two-minute Diary of a CEO clip of Nate Soares</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Agree</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:63.0%"></div></div>
+                <span class="cmp-bar-pct">63.0% <span class="cmp-bar-n">(17)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Disagree</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:29.6%"></div></div>
+                <span class="cmp-bar-pct">29.6% <span class="cmp-bar-n">(8)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Mixed</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:7.4%"></div></div>
+                <span class="cmp-bar-pct">7.4% <span class="cmp-bar-n">(2)</span></span>
+              </div>
+              <p class="cmp-base-note">27 of 50 coded take a clear position</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/doac-debate-youtube-2026-09/">YouTube comments on the Diary of a CEO AI debate episode</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Agree</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:77.1%"></div></div>
+                <span class="cmp-bar-pct">77.1% <span class="cmp-bar-n">(12,287)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Disagree</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:19.7%"></div></div>
+                <span class="cmp-bar-pct">19.7% <span class="cmp-bar-n">(3,140)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Mixed</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:3.1%"></div></div>
+                <span class="cmp-bar-pct">3.1% <span class="cmp-bar-n">(501)</span></span>
+              </div>
+              <p class="cmp-base-note">15,928 of 23,794 coded take a clear position</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/metr-report-reddit-2026-09/">Reddit reception of the OpenAI and Hugging Face incident, before and after the METR investigation</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">agree</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:66.8%"></div></div>
+                <span class="cmp-bar-pct">66.8% <span class="cmp-bar-n">(264)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">disagree</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:14.7%"></div></div>
+                <span class="cmp-bar-pct">14.7% <span class="cmp-bar-n">(58)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">mixed</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:18.5%"></div></div>
+                <span class="cmp-bar-pct">18.5% <span class="cmp-bar-n">(73)</span></span>
+              </div>
+              <p class="cmp-base-note">395 of 516 coded take a clear position</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/soares-reel-2026-08/">Instagram comments on Nate Soares's reel &quot;We stop AI. You help?&quot;</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Agree</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:60.3%"></div></div>
+                <span class="cmp-bar-pct">60.3% <span class="cmp-bar-n">(766)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Disagree</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:19.4%"></div></div>
+                <span class="cmp-bar-pct">19.4% <span class="cmp-bar-n">(247)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Mixed</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:20.3%"></div></div>
+                <span class="cmp-bar-pct">20.3% <span class="cmp-bar-n">(258)</span></span>
+              </div>
+              <p class="cmp-base-note">1,271 of 2,136 coded take a clear position</p>
+            </div>
+          </div>
+        </section>
+        <section class="cmp-dimension">
+          <h2>Emotion</h2>
+          <p class="cmp-dimension-intro">Percentages use each study's total coded count. Every study uses the same six categories.</p>
+          <div class="cmp-study-grid">
+            <div class="cmp-study-block">
+              <h3><a href="/data/amanpour-segment-2026-09/">YouTube comments on the Amanpour and Company Khlaaf segment</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Neutral</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:45.0%"></div></div>
+                <span class="cmp-bar-pct">45.0% <span class="cmp-bar-n">(145)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Fear</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:12.7%"></div></div>
+                <span class="cmp-bar-pct">12.7% <span class="cmp-bar-n">(41)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Anger</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:26.1%"></div></div>
+                <span class="cmp-bar-pct">26.1% <span class="cmp-bar-n">(84)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Resignation</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:3.4%"></div></div>
+                <span class="cmp-bar-pct">3.4% <span class="cmp-bar-n">(11)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Humour</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:11.5%"></div></div>
+                <span class="cmp-bar-pct">11.5% <span class="cmp-bar-n">(37)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Hope</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:1.2%"></div></div>
+                <span class="cmp-bar-pct">1.2% <span class="cmp-bar-n">(4)</span></span>
+              </div>
+              <p class="cmp-base-note">Out of 322 coded</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/cotra-episode-2026-09/">YouTube comments on the Dwarkesh Podcast episode with Ajeya Cotra, &quot;This might be the clearest warning shot we ever get&quot;</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">fear</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:12.3%"></div></div>
+                <span class="cmp-bar-pct">12.3% <span class="cmp-bar-n">(368)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">resignation</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:4.5%"></div></div>
+                <span class="cmp-bar-pct">4.5% <span class="cmp-bar-n">(134)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">anger</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:12.6%"></div></div>
+                <span class="cmp-bar-pct">12.6% <span class="cmp-bar-n">(377)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">humour</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:20.6%"></div></div>
+                <span class="cmp-bar-pct">20.6% <span class="cmp-bar-n">(618)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">hope</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:1.7%"></div></div>
+                <span class="cmp-bar-pct">1.7% <span class="cmp-bar-n">(52)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">neutral</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:48.3%"></div></div>
+                <span class="cmp-bar-pct">48.3% <span class="cmp-bar-n">(1,450)</span></span>
+              </div>
+              <p class="cmp-base-note">Out of 2,999 coded</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/coxon-resignation-2026-09/">X replies to Jacob Coxon's Anthropic resignation thread</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Neutral</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:52.8%"></div></div>
+                <span class="cmp-bar-pct">52.8% <span class="cmp-bar-n">(1,310)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Fear</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:12.5%"></div></div>
+                <span class="cmp-bar-pct">12.5% <span class="cmp-bar-n">(309)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Anger</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:16.1%"></div></div>
+                <span class="cmp-bar-pct">16.1% <span class="cmp-bar-n">(399)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Resignation</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:3.4%"></div></div>
+                <span class="cmp-bar-pct">3.4% <span class="cmp-bar-n">(85)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Humour</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:11.6%"></div></div>
+                <span class="cmp-bar-pct">11.6% <span class="cmp-bar-n">(287)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Hope</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:3.6%"></div></div>
+                <span class="cmp-bar-pct">3.6% <span class="cmp-bar-n">(90)</span></span>
+              </div>
+              <p class="cmp-base-note">Out of 2,480 coded</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/doac-clip-facebook-2026-09/">Facebook comments on a 21-minute Diary of a CEO cut of the AI debate</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Fear</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:13.3%"></div></div>
+                <span class="cmp-bar-pct">13.3% <span class="cmp-bar-n">(277)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Resignation</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:8.8%"></div></div>
+                <span class="cmp-bar-pct">8.8% <span class="cmp-bar-n">(182)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Anger</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:10.3%"></div></div>
+                <span class="cmp-bar-pct">10.3% <span class="cmp-bar-n">(213)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Humour</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:16.0%"></div></div>
+                <span class="cmp-bar-pct">16.0% <span class="cmp-bar-n">(331)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Hope</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:1.6%"></div></div>
+                <span class="cmp-bar-pct">1.6% <span class="cmp-bar-n">(33)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Neutral</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:50.1%"></div></div>
+                <span class="cmp-bar-pct">50.1% <span class="cmp-bar-n">(1,039)</span></span>
+              </div>
+              <p class="cmp-base-note">Out of 2,075 coded</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/doac-clip-instagram-2026-09/">Instagram comments on a two-minute Diary of a CEO clip of Nate Soares</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Fear</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:11.7%"></div></div>
+                <span class="cmp-bar-pct">11.7% <span class="cmp-bar-n">(9)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Resignation</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:9.1%"></div></div>
+                <span class="cmp-bar-pct">9.1% <span class="cmp-bar-n">(7)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Anger</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:11.7%"></div></div>
+                <span class="cmp-bar-pct">11.7% <span class="cmp-bar-n">(9)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Humour</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:2.6%"></div></div>
+                <span class="cmp-bar-pct">2.6% <span class="cmp-bar-n">(2)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Hope</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:5.2%"></div></div>
+                <span class="cmp-bar-pct">5.2% <span class="cmp-bar-n">(4)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Neutral</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:59.7%"></div></div>
+                <span class="cmp-bar-pct">59.7% <span class="cmp-bar-n">(46)</span></span>
+              </div>
+              <p class="cmp-base-note">Out of 77 coded</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/doac-clip-shorts-2026-09/">YouTube Shorts comments on the Diary of a CEO trailer for its AI debate</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Fear</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:10.3%"></div></div>
+                <span class="cmp-bar-pct">10.3% <span class="cmp-bar-n">(27)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Resignation</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:5.0%"></div></div>
+                <span class="cmp-bar-pct">5.0% <span class="cmp-bar-n">(13)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Anger</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:24.9%"></div></div>
+                <span class="cmp-bar-pct">24.9% <span class="cmp-bar-n">(65)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Humour</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:10.3%"></div></div>
+                <span class="cmp-bar-pct">10.3% <span class="cmp-bar-n">(27)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Hope</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:7.3%"></div></div>
+                <span class="cmp-bar-pct">7.3% <span class="cmp-bar-n">(19)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Neutral</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:42.1%"></div></div>
+                <span class="cmp-bar-pct">42.1% <span class="cmp-bar-n">(110)</span></span>
+              </div>
+              <p class="cmp-base-note">Out of 261 coded</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/doac-clip-tiktok-2026-09/">TikTok comments on a two-minute Diary of a CEO clip of Nate Soares</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Fear</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:22.0%"></div></div>
+                <span class="cmp-bar-pct">22.0% <span class="cmp-bar-n">(11)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Resignation</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:8.0%"></div></div>
+                <span class="cmp-bar-pct">8.0% <span class="cmp-bar-n">(4)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Anger</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:4.0%"></div></div>
+                <span class="cmp-bar-pct">4.0% <span class="cmp-bar-n">(2)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Humour</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:8.0%"></div></div>
+                <span class="cmp-bar-pct">8.0% <span class="cmp-bar-n">(4)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Hope</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:6.0%"></div></div>
+                <span class="cmp-bar-pct">6.0% <span class="cmp-bar-n">(3)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Neutral</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:52.0%"></div></div>
+                <span class="cmp-bar-pct">52.0% <span class="cmp-bar-n">(26)</span></span>
+              </div>
+              <p class="cmp-base-note">Out of 50 coded</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/doac-debate-youtube-2026-09/">YouTube comments on the Diary of a CEO AI debate episode</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Fear</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:8.8%"></div></div>
+                <span class="cmp-bar-pct">8.8% <span class="cmp-bar-n">(2,085)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Resignation</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:4.0%"></div></div>
+                <span class="cmp-bar-pct">4.0% <span class="cmp-bar-n">(951)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Anger</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:24.0%"></div></div>
+                <span class="cmp-bar-pct">24.0% <span class="cmp-bar-n">(5,705)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Humour</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:19.5%"></div></div>
+                <span class="cmp-bar-pct">19.5% <span class="cmp-bar-n">(4,649)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Hope</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:2.4%"></div></div>
+                <span class="cmp-bar-pct">2.4% <span class="cmp-bar-n">(579)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Neutral</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:41.3%"></div></div>
+                <span class="cmp-bar-pct">41.3% <span class="cmp-bar-n">(9,825)</span></span>
+              </div>
+              <p class="cmp-base-note">Out of 23,794 coded</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/metr-report-reddit-2026-09/">Reddit reception of the OpenAI and Hugging Face incident, before and after the METR investigation</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">fear</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:12.0%"></div></div>
+                <span class="cmp-bar-pct">12.0% <span class="cmp-bar-n">(62)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">resignation</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:4.7%"></div></div>
+                <span class="cmp-bar-pct">4.7% <span class="cmp-bar-n">(24)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">anger</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:8.9%"></div></div>
+                <span class="cmp-bar-pct">8.9% <span class="cmp-bar-n">(46)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">humour</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:19.8%"></div></div>
+                <span class="cmp-bar-pct">19.8% <span class="cmp-bar-n">(102)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">hope</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:1.6%"></div></div>
+                <span class="cmp-bar-pct">1.6% <span class="cmp-bar-n">(8)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">neutral</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:53.1%"></div></div>
+                <span class="cmp-bar-pct">53.1% <span class="cmp-bar-n">(274)</span></span>
+              </div>
+              <p class="cmp-base-note">Out of 516 coded</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/soares-reel-2026-08/">Instagram comments on Nate Soares's reel &quot;We stop AI. You help?&quot;</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Neutral</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:45.6%"></div></div>
+                <span class="cmp-bar-pct">45.6% <span class="cmp-bar-n">(975)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Fear</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:11.8%"></div></div>
+                <span class="cmp-bar-pct">11.8% <span class="cmp-bar-n">(251)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Anger</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:13.7%"></div></div>
+                <span class="cmp-bar-pct">13.7% <span class="cmp-bar-n">(292)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Resignation</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:8.0%"></div></div>
+                <span class="cmp-bar-pct">8.0% <span class="cmp-bar-n">(171)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Humour</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:18.1%"></div></div>
+                <span class="cmp-bar-pct">18.1% <span class="cmp-bar-n">(387)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Hope</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:2.8%"></div></div>
+                <span class="cmp-bar-pct">2.8% <span class="cmp-bar-n">(60)</span></span>
+              </div>
+              <p class="cmp-base-note">Out of 2,136 coded</p>
+            </div>
+          </div>
+        </section>
+        <section class="cmp-dimension">
+          <h2>Format reaction</h2>
+          <p class="cmp-dimension-intro">Percentages use each study's total coded count. Every study except the Amanpour segment shares one category list (none, mock, condescended, imitates, praise). The Amanpour segment uses a narrower, interview-specific list (none, praise, criticism), since it is reacting to a broadcast interview rather than a reel, thread or podcast episode. Read its bars as their own thing, not a like-for-like slice of the other studies' categories.</p>
+          <div class="cmp-study-grid">
+            <div class="cmp-study-block">
+              <h3><a href="/data/amanpour-segment-2026-09/">YouTube comments on the Amanpour and Company Khlaaf segment</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">None</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:87.6%"></div></div>
+                <span class="cmp-bar-pct">87.6% <span class="cmp-bar-n">(282)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Praise</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:5.9%"></div></div>
+                <span class="cmp-bar-pct">5.9% <span class="cmp-bar-n">(19)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Criticism</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:6.5%"></div></div>
+                <span class="cmp-bar-pct">6.5% <span class="cmp-bar-n">(21)</span></span>
+              </div>
+              <p class="cmp-base-note">Out of 322 coded</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/cotra-episode-2026-09/">YouTube comments on the Dwarkesh Podcast episode with Ajeya Cotra, &quot;This might be the clearest warning shot we ever get&quot;</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">praise</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:8.9%"></div></div>
+                <span class="cmp-bar-pct">8.9% <span class="cmp-bar-n">(268)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">mock</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:9.1%"></div></div>
+                <span class="cmp-bar-pct">9.1% <span class="cmp-bar-n">(272)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">condescended</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:4.6%"></div></div>
+                <span class="cmp-bar-pct">4.6% <span class="cmp-bar-n">(138)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">imitates</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:1.8%"></div></div>
+                <span class="cmp-bar-pct">1.8% <span class="cmp-bar-n">(53)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">none</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:75.6%"></div></div>
+                <span class="cmp-bar-pct">75.6% <span class="cmp-bar-n">(2,268)</span></span>
+              </div>
+              <p class="cmp-base-note">Out of 2,999 coded</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/coxon-resignation-2026-09/">X replies to Jacob Coxon's Anthropic resignation thread</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">None</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:75.2%"></div></div>
+                <span class="cmp-bar-pct">75.2% <span class="cmp-bar-n">(1,866)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Mock</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:18.2%"></div></div>
+                <span class="cmp-bar-pct">18.2% <span class="cmp-bar-n">(451)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Condescended</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:1.7%"></div></div>
+                <span class="cmp-bar-pct">1.7% <span class="cmp-bar-n">(43)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Imitates</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:0.4%"></div></div>
+                <span class="cmp-bar-pct">0.4% <span class="cmp-bar-n">(11)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Praise</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:4.4%"></div></div>
+                <span class="cmp-bar-pct">4.4% <span class="cmp-bar-n">(109)</span></span>
+              </div>
+              <p class="cmp-base-note">Out of 2,480 coded</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/doac-clip-facebook-2026-09/">Facebook comments on a 21-minute Diary of a CEO cut of the AI debate</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Praise</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:0.2%"></div></div>
+                <span class="cmp-bar-pct">0.2% <span class="cmp-bar-n">(4)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Mock</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:0.6%"></div></div>
+                <span class="cmp-bar-pct">0.6% <span class="cmp-bar-n">(12)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Condescended</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:0.0%"></div></div>
+                <span class="cmp-bar-pct">0.0% <span class="cmp-bar-n">(0)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Imitates</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:0.0%"></div></div>
+                <span class="cmp-bar-pct">0.0% <span class="cmp-bar-n">(0)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">None</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:99.2%"></div></div>
+                <span class="cmp-bar-pct">99.2% <span class="cmp-bar-n">(2,059)</span></span>
+              </div>
+              <p class="cmp-base-note">Out of 2,075 coded</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/doac-clip-instagram-2026-09/">Instagram comments on a two-minute Diary of a CEO clip of Nate Soares</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Praise</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:2.6%"></div></div>
+                <span class="cmp-bar-pct">2.6% <span class="cmp-bar-n">(2)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Mock</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:1.3%"></div></div>
+                <span class="cmp-bar-pct">1.3% <span class="cmp-bar-n">(1)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Condescended</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:0.0%"></div></div>
+                <span class="cmp-bar-pct">0.0% <span class="cmp-bar-n">(0)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Imitates</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:0.0%"></div></div>
+                <span class="cmp-bar-pct">0.0% <span class="cmp-bar-n">(0)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">None</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:96.1%"></div></div>
+                <span class="cmp-bar-pct">96.1% <span class="cmp-bar-n">(74)</span></span>
+              </div>
+              <p class="cmp-base-note">Out of 77 coded</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/doac-clip-shorts-2026-09/">YouTube Shorts comments on the Diary of a CEO trailer for its AI debate</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Praise</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:1.5%"></div></div>
+                <span class="cmp-bar-pct">1.5% <span class="cmp-bar-n">(4)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Mock</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:0.8%"></div></div>
+                <span class="cmp-bar-pct">0.8% <span class="cmp-bar-n">(2)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Condescended</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:0.0%"></div></div>
+                <span class="cmp-bar-pct">0.0% <span class="cmp-bar-n">(0)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Imitates</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:0.0%"></div></div>
+                <span class="cmp-bar-pct">0.0% <span class="cmp-bar-n">(0)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">None</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:97.7%"></div></div>
+                <span class="cmp-bar-pct">97.7% <span class="cmp-bar-n">(255)</span></span>
+              </div>
+              <p class="cmp-base-note">Out of 261 coded</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/doac-clip-tiktok-2026-09/">TikTok comments on a two-minute Diary of a CEO clip of Nate Soares</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Praise</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:0.0%"></div></div>
+                <span class="cmp-bar-pct">0.0% <span class="cmp-bar-n">(0)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Mock</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:0.0%"></div></div>
+                <span class="cmp-bar-pct">0.0% <span class="cmp-bar-n">(0)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Condescended</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:0.0%"></div></div>
+                <span class="cmp-bar-pct">0.0% <span class="cmp-bar-n">(0)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Imitates</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:0.0%"></div></div>
+                <span class="cmp-bar-pct">0.0% <span class="cmp-bar-n">(0)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">None</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:100.0%"></div></div>
+                <span class="cmp-bar-pct">100.0% <span class="cmp-bar-n">(50)</span></span>
+              </div>
+              <p class="cmp-base-note">Out of 50 coded</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/doac-debate-youtube-2026-09/">YouTube comments on the Diary of a CEO AI debate episode</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Praise</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:3.8%"></div></div>
+                <span class="cmp-bar-pct">3.8% <span class="cmp-bar-n">(911)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Mock</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:2.5%"></div></div>
+                <span class="cmp-bar-pct">2.5% <span class="cmp-bar-n">(585)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Condescended</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:0.0%"></div></div>
+                <span class="cmp-bar-pct">0.0% <span class="cmp-bar-n">(2)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Imitates</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:0.0%"></div></div>
+                <span class="cmp-bar-pct">0.0% <span class="cmp-bar-n">(7)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">None</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:93.7%"></div></div>
+                <span class="cmp-bar-pct">93.7% <span class="cmp-bar-n">(22,289)</span></span>
+              </div>
+              <p class="cmp-base-note">Out of 23,794 coded</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/metr-report-reddit-2026-09/">Reddit reception of the OpenAI and Hugging Face incident, before and after the METR investigation</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">praise</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:1.0%"></div></div>
+                <span class="cmp-bar-pct">1.0% <span class="cmp-bar-n">(5)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">mock</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:5.8%"></div></div>
+                <span class="cmp-bar-pct">5.8% <span class="cmp-bar-n">(30)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">condescended</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:2.9%"></div></div>
+                <span class="cmp-bar-pct">2.9% <span class="cmp-bar-n">(15)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">imitates</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:1.9%"></div></div>
+                <span class="cmp-bar-pct">1.9% <span class="cmp-bar-n">(10)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">none</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:88.4%"></div></div>
+                <span class="cmp-bar-pct">88.4% <span class="cmp-bar-n">(456)</span></span>
+              </div>
+              <p class="cmp-base-note">Out of 516 coded</p>
+            </div>
+            <div class="cmp-study-block">
+              <h3><a href="/data/soares-reel-2026-08/">Instagram comments on Nate Soares's reel &quot;We stop AI. You help?&quot;</a></h3>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">None</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:79.7%"></div></div>
+                <span class="cmp-bar-pct">79.7% <span class="cmp-bar-n">(1,703)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Imitates</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:10.3%"></div></div>
+                <span class="cmp-bar-pct">10.3% <span class="cmp-bar-n">(220)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Mock</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:3.9%"></div></div>
+                <span class="cmp-bar-pct">3.9% <span class="cmp-bar-n">(83)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Condescended</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:2.2%"></div></div>
+                <span class="cmp-bar-pct">2.2% <span class="cmp-bar-n">(47)</span></span>
+              </div>
+              <div class="cmp-bar-row">
+                <span class="cmp-bar-label">Praise</span>
+                <div class="cmp-bar-track"><div class="cmp-bar-fill" style="width:3.9%"></div></div>
+                <span class="cmp-bar-pct">3.9% <span class="cmp-bar-n">(83)</span></span>
+              </div>
+              <p class="cmp-base-note">Out of 2,136 coded</p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- build-data:end compare -->
       <div class="cmp-frame-note">
         <p><strong>Frame is not compared here.</strong> Each study's frame list is drafted fresh from that artefact and its own comments, so the categories are not the same list under different names: they are genuinely different categories from study to study (Coxon's 17 frames, for one, do not appear anywhere else in the series). A shared chart would imply a comparability that does not exist. See each study's own <a href="/data/studies/README.md">codebook</a> for its frame breakdown.</p>
       </div>
@@ -179,8 +1009,6 @@
 </footer>
 
 <script src="/main.js?v=20260928c" defer></script>
-<script src="/data/assets/core.js"></script>
-<script src="/data/assets/compare.js"></script>
 
 <iframe name="subscribe-target" class="subscribe-target-frame" aria-hidden="true" tabindex="-1"></iframe>
 </body>
