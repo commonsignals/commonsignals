@@ -14,6 +14,13 @@ binding = "SURVEY_DB"
 database_name = "commonsignals-survey"
 database_id = "abbf1d32-76de-451c-93d1-80ce64a1fa73"
 
+# The MCP server's copy of each study's comments, which search_comments in
+# functions/mcp/ reads. scripts/mcp/load-d1.py --remote loads it; see the README.
+[[d1_databases]]
+binding = "MCP_DB"
+database_name = "commonsignals-mcp"
+database_id = "879b7c6a-03ed-4d8d-8962-806a8a982612"
+
 # Used only to rate-limit /api/survey/save.
 [[kv_namespaces]]
 binding = "SURVEY_RATE_LIMIT"

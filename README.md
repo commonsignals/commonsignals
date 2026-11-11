@@ -66,7 +66,7 @@ npx wrangler@4.160.0 pages dev --port 8788 --d1 MCP_DB=local-only --persist-to .
 
 Then, in another terminal, `python3 scripts/mcp/test-mechanical.py` runs the mechanical tests through the MCP Inspector, and `node --disallow-code-generation-from-strings scripts/mcp/cpu-bench.mjs` measures CPU time per tool call.
 
-The production database does not exist yet. Before the first deploy that should search comments, create it with `npx wrangler@4.160.0 d1 create commonsignals-mcp`, add it to `wrangler.toml` as a `[[d1_databases]]` binding named `MCP_DB`, and load it with `--remote`. Without the binding, every tool except `search_comments` still works.
+The production copy is the D1 database `commonsignals-mcp`, bound as `MCP_DB` in `wrangler.toml`, and `load-d1.py --remote` loads it. Without the binding, every tool except `search_comments` still works.
 
 ## Glossary and editorial conventions
 
