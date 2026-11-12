@@ -56,7 +56,3 @@ Cite as: Ben Matthews, Common Signals, 'Findings: the six studies behind the res
 Rewritten 11 November 2026: the nine patterns this page listed are now H1 to H9 in the research agenda.
 
 Corrected 11 November 2026: the spot-check result for the Amanpour and Company study was not recorded, so the range of 37 to 40 out of 40 covers the other three studies.
-
-### Disclosure
-
-An LLM was used to structure and review this article, with the first and final edits made by a human.

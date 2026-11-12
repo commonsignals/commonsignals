@@ -205,7 +205,3 @@ We checked the coding with a blind second coding of a random sample. After a fir
 - ["Please honor commit": how the OpenAI agent-swarm story landed with the audience most likely to believe it](https://commonsignals.org/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh)
 - ["A problem they created": how a news audience received the accountability version of the OpenAI and Hugging Face incident](https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf)
 - [OpenAI and shut? What an independent report did to the marketing-stunt argument](https://commonsignals.org/openai-and-shut-metr-hugging-face)
-
-### Disclosure
-
-An LLM was used to structure and review this article, with the first and final edits made by a human.

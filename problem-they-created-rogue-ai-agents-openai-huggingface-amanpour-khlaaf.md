@@ -179,7 +179,3 @@ See also our [theory of change](https://commonsignals.org/theory-of-change) and 
 - ["Please honor commit": how the OpenAI agent-swarm story landed with the audience most likely to believe it](https://commonsignals.org/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh)
 - [OpenAI and shut? What an independent report did to the marketing-stunt argument](https://commonsignals.org/openai-and-shut-metr-hugging-face)
 - ["Neither company is acting responsibly": how X received Jacob Coxon's resignation from Anthropic](https://commonsignals.org/coxon-resignation-x-analysis)
-
-### Disclosure
-
-An LLM was used to structure and review this article, with the first and final edits made by a human.

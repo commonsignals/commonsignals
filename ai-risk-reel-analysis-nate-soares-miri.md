@@ -210,7 +210,3 @@ Corrected 11 November 2026: this article said a segmented message test was one o
 - ["A problem they created": how a news audience received the accountability version of the OpenAI and Hugging Face incident](https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf)
 - [OpenAI and shut? What an independent report did to the marketing-stunt argument](https://commonsignals.org/openai-and-shut-metr-hugging-face)
 - ["Neither company is acting responsibly": how X received Jacob Coxon's resignation from Anthropic](https://commonsignals.org/coxon-resignation-x-analysis)
-
-### Disclosure
-
-An LLM was used to structure and review this article, with the first and final edits made by a human.

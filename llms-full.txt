@@ -182,10 +182,6 @@ See also our [theory of change](https://commonsignals.org/theory-of-change) and 
 - [OpenAI and shut? What an independent report did to the marketing-stunt argument](https://commonsignals.org/openai-and-shut-metr-hugging-face)
 - ["Neither company is acting responsibly": how X received Jacob Coxon's resignation from Anthropic](https://commonsignals.org/coxon-resignation-x-analysis)
 
-### Disclosure
-
-An LLM was used to structure and review this article, with the first and final edits made by a human.
-
 URL: https://commonsignals.org/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh
 
 ---
@@ -374,10 +370,6 @@ Corrected 11 November 2026: section 4 said six people out of nearly 1,600 asked 
 - [OpenAI and shut? What an independent report did to the marketing-stunt argument](https://commonsignals.org/openai-and-shut-metr-hugging-face)
 - ["Neither company is acting responsibly": how X received Jacob Coxon's resignation from Anthropic](https://commonsignals.org/coxon-resignation-x-analysis)
 
-### Disclosure
-
-An LLM was used to structure and review this article, with the first and final edits made by a human.
-
 URL: https://commonsignals.org/coxon-resignation-x-analysis
 
 ---
@@ -546,10 +538,6 @@ Corrected 11 November 2026: we compared Coxon's reception with our earlier studi
 - ["Please honor commit": how the OpenAI agent-swarm story landed with the audience most likely to believe it](https://commonsignals.org/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh)
 - ["A problem they created": how a news audience received the accountability version of the OpenAI and Hugging Face incident](https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf)
 - [OpenAI and shut? What an independent report did to the marketing-stunt argument](https://commonsignals.org/openai-and-shut-metr-hugging-face)
-
-### Disclosure
-
-An LLM was used to structure and review this article, with the first and final edits made by a human.
 
 URL: https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis
 
@@ -761,10 +749,6 @@ We checked the coding with a blind second coding of a random sample. After a fir
 - ["A problem they created": how a news audience received the accountability version of the OpenAI and Hugging Face incident](https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf)
 - [OpenAI and shut? What an independent report did to the marketing-stunt argument](https://commonsignals.org/openai-and-shut-metr-hugging-face)
 
-### Disclosure
-
-An LLM was used to structure and review this article, with the first and final edits made by a human.
-
 URL: https://commonsignals.org/openai-and-shut-metr-hugging-face
 
 ---
@@ -942,10 +926,6 @@ Updated 18 September 2026: method and figures revised to match the archived reco
 - ["Please honor commit": how the OpenAI agent-swarm story landed with the audience most likely to believe it](https://commonsignals.org/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh)
 - ["A problem they created": how a news audience received the accountability version of the OpenAI and Hugging Face incident](https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf)
 - ["Neither company is acting responsibly": how X received Jacob Coxon's resignation from Anthropic](https://commonsignals.org/coxon-resignation-x-analysis)
-
-### Disclosure
-
-An LLM was used to structure and review this article, with the first and final edits made by a human.
 
 URL: https://commonsignals.org/ai-risk-reel-analysis-nate-soares-miri
 
@@ -1162,10 +1142,6 @@ Corrected 11 November 2026: this article said a segmented message test was one o
 - [OpenAI and shut? What an independent report did to the marketing-stunt argument](https://commonsignals.org/openai-and-shut-metr-hugging-face)
 - ["Neither company is acting responsibly": how X received Jacob Coxon's resignation from Anthropic](https://commonsignals.org/coxon-resignation-x-analysis)
 
-### Disclosure
-
-An LLM was used to structure and review this article, with the first and final edits made by a human.
-
 URL: https://commonsignals.org/research/agenda
 
 ---
@@ -1374,10 +1350,6 @@ To take on a hypothesis, email [hello@commonsignals.org](mailto:hello@commonsign
 ## How to cite
 
 Cite as: Ben Matthews, Common Signals, 'Common Signals research agenda', version 0.3, 11 November 2026, [https://commonsignals.org/research/agenda](https://commonsignals.org/research/agenda).
-
-### Disclosure
-
-An LLM was used to structure and review this article, with the first and final edits made by a human.
 
 URL: https://commonsignals.org/how-to-talk-about-loss-of-control
 
@@ -2004,10 +1976,6 @@ Rewritten 11 November 2026: the nine patterns this page listed are now H1 to H9 
 
 Corrected 11 November 2026: the spot-check result for the Amanpour and Company study was not recorded, so the range of 37 to 40 out of 40 covers the other three studies.
 
-### Disclosure
-
-An LLM was used to structure and review this article, with the first and final edits made by a human.
-
 URL: https://commonsignals.org/methodology
 
 ---
@@ -2127,10 +2095,6 @@ Each study's codebook and coded dataset are published with it. Terms used here a
 - Slattery, P. et al. (2025). [The AI Risk Repository: a comprehensive meta-review, database, and taxonomy of risks from artificial intelligence](https://arxiv.org/abs/2408.12622). arXiv:2408.12622.
 - Townsend, L. and Wallace, C. (2016). Social media research: a guide to ethics. University of Aberdeen.
 - Witte, K. (1992). [Putting the fear back into fear appeals: the extended parallel process model](https://doi.org/10.1080/03637759209376276). Communication Monographs 59(4), 329-347.
-
-### Disclosure
-
-An LLM was used to structure and review this article, with the first and final edits made by a human.
 
 URL: https://commonsignals.org/data/
 
@@ -2509,10 +2473,6 @@ Please email me at [hello@commonsignals.org](mailto:hello@commonsignals.org), or
 Ben Matthews, Common Signals, "AI safety comms reading list: where to start", 15 October 2026, version of 11 November 2026, [https://commonsignals.org/ai-safety-comms-reading-list](https://commonsignals.org/ai-safety-comms-reading-list).
 
 Corrected 11 November 2026: the Trippenbach paper's message test was run with 1,063 adults in the US, not across five countries. The five-country data comes from the Seismic Foundation's survey. Added 11 November 2026: The UK AI Compass, Americans on AI and Great (public) expectations.
-
-### Disclosure
-
-An LLM was used to structure and review this article, with the first and final edits made by a human.
 
 URL: https://commonsignals.org/theory-of-change
 

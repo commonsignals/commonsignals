@@ -204,7 +204,3 @@ To take on a hypothesis, email [hello@commonsignals.org](mailto:hello@commonsign
 ## How to cite
 
 Cite as: Ben Matthews, Common Signals, 'Common Signals research agenda', version 0.3, 11 November 2026, [https://commonsignals.org/research/agenda](https://commonsignals.org/research/agenda).
-
-### Disclosure
-
-An LLM was used to structure and review this article, with the first and final edits made by a human.

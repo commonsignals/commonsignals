@@ -115,7 +115,3 @@ Each study's codebook and coded dataset are published with it. Terms used here a
 - Slattery, P. et al. (2025). [The AI Risk Repository: a comprehensive meta-review, database, and taxonomy of risks from artificial intelligence](https://arxiv.org/abs/2408.12622). arXiv:2408.12622.
 - Townsend, L. and Wallace, C. (2016). Social media research: a guide to ethics. University of Aberdeen.
 - Witte, K. (1992). [Putting the fear back into fear appeals: the extended parallel process model](https://doi.org/10.1080/03637759209376276). Communication Monographs 59(4), 329-347.
-
-### Disclosure
-
-An LLM was used to structure and review this article, with the first and final edits made by a human.

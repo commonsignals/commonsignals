@@ -173,7 +173,3 @@ Updated 18 September 2026: method and figures revised to match the archived reco
 - ["Please honor commit": how the OpenAI agent-swarm story landed with the audience most likely to believe it](https://commonsignals.org/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh)
 - ["A problem they created": how a news audience received the accountability version of the OpenAI and Hugging Face incident](https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf)
 - ["Neither company is acting responsibly": how X received Jacob Coxon's resignation from Anthropic](https://commonsignals.org/coxon-resignation-x-analysis)
-
-### Disclosure
-
-An LLM was used to structure and review this article, with the first and final edits made by a human.
