@@ -1357,7 +1357,7 @@ URL: https://commonsignals.org/how-to-talk-about-loss-of-control
 title: "How to talk about loss of control and catastrophic risk"
 url: "https://commonsignals.org/how-to-talk-about-loss-of-control"
 published: 2026-11-11
-updated: 2026-11-11
+updated: 2026-11-12
 publisher: "Common Signals"
 ---
 
@@ -1365,7 +1365,7 @@ publisher: "Common Signals"
 
 11 November 2026 · Ben Matthews
 
-Three dos and a don't for explaining AI systems that act outside human intent, and what to ask for when they do.
+Three dos and a don't for explaining AI systems that act outside human intent.
 
 This guide is written for communicators and campaigners drafting messages now. Each item gives a case, one verifiable proof point, and a ready-to-use script; methodology sits in the Sources.
 
@@ -1379,7 +1379,7 @@ You do not need to convince people that AI can get out of control. [78% of Ameri
 
 Message tests point to two things worth bringing to every conversation: a real incident the public can verify, and a legal remedy they can support.
 
-## 1. Lead with a real incident and name the independent verifier
+## 1. Lead with a real incident
 
 Never ask the public to take a tech company's word for a failure. Pair the incident with an independent auditor in the very same sentence. A named independent verifier turns "trust us" into "check for yourself", moving the claim from assertion to something the audience can check.
 
@@ -1395,7 +1395,7 @@ Chart: What changed when someone else checked the work. Before and after indepen
 
 Same story, independently confirmed: acceptance rose from 51% to 69%. Common Signals. Stance and framing before and after independent verification. Before: r/artificial, 31 July, n=52 coded comments. After: eight subreddits from 26 August, n=464 coded comments.
 
-## 2. Quote tech insiders, but pair them with an outside expert
+## 2. Pair tech insiders with an outside expert
 
 Warnings land harder when they come from tech insiders, but a whistleblower's resignation alone does not give the public a clear path forward.
 
@@ -1405,7 +1405,7 @@ Warnings land harder when they come from tech insiders, but a whistleblower's re
 
 **Put it into practice:** Quote industry leaders exactly, with dates and links. However, because audiences immediately [check a messenger's history for commercial interest](https://commonsignals.org/how-to-communicate-about-ai-safety#7-choose-messengers-your-audience-already-trusts-and-prepare-them-for-scrutiny), always pair an insider's warning with a non-industry expert.
 
-## 3. Pair every warning with a specific legislative remedy
+## 3. Pair every warning with a specific next step
 
 Never issue a warning without giving people an immediate step to take. Without a route to action, [grave warnings produce resignation](https://commonsignals.org/how-to-communicate-about-ai-safety#2-pair-every-threat-with-something-people-can-do).
 
@@ -1415,7 +1415,7 @@ Never issue a warning without giving people an immediate step to take. Without a
 
 **Put it into practice:** Give your audience a specific decision-maker to target: the UK government, whose formal reply to the committee is due in November 2026. "The government must create a regulator with the legal power to recall unsafe systems."
 
-## And a don't: extinction as an opener
+## 4. Don't lead with extinction as the opener
 
 Don't open with human extinction. Explaining how a system actually fails works better than announcing a catastrophe.
 

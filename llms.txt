@@ -20,7 +20,7 @@ The coded data lives at [/data/](https://commonsignals.org/data/). The coding an
 ## Articles
 
 - [Research agenda](https://commonsignals.org/research/agenda.md): Eleven hypotheses from six Common Signals comment-thread studies about how audiences receive messages on AI risk, the four to settle first in 2027, and how each can be tested.
-- [How to talk about loss of control and catastrophic risk](https://commonsignals.org/how-to-talk-about-loss-of-control.md): Three dos and a don't for explaining AI systems that act outside human intent, and what to ask for when they do.
+- [How to talk about loss of control and catastrophic risk](https://commonsignals.org/how-to-talk-about-loss-of-control.md): Three dos and a don't for explaining AI systems that act outside human intent.
 - [How to communicate about AI safety](https://commonsignals.org/how-to-communicate-about-ai-safety.md): An evidence-based guide for anyone explaining AI risks to the public: ten principles, four ground rules and seven issue guides, each graded by the strength of its evidence.
 - [Findings: the six studies behind the research agenda](https://commonsignals.org/findings.md): The six Common Signals comment-thread studies in one table, and where each of the nine patterns this page used to list now sits in the research agenda as a hypothesis.
 
