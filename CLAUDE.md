@@ -10,6 +10,6 @@ When publishing or updating an article from `_incoming/`:
 
 The editorial rules for the questions themselves are in the Common Signals style guide, not here.
 
-## Site footer
+## Site header and footer
 
-The footer is shared. Edit `scripts/footer.inc`, never a page's footer, then run `python3 scripts/build-footer.py`. When adding a new page, copy any existing page's footer and run the script.
+The header and footer are shared. Edit `scripts/header.inc` or `scripts/footer.inc`, never a page's own copy, then run `python3 scripts/build-partials.py`. When adding a new page, copy any existing page's header and footer and run the script. Before committing any page, run `python3 scripts/build-partials.py --check`; if it reports a page, you have edited from a stale copy.

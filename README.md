@@ -22,15 +22,15 @@ python3 -m http.server 8000
 
 Then open http://localhost:8000.
 
-## Footer
+## Header and footer
 
-Every page carries its own copy of the site footer, so it works without JavaScript and search engines can read its links. The single source is `scripts/footer.inc`. To change the footer, edit that file and run:
+Every page carries its own copy of the site header and footer, so they work without JavaScript and search engines can read their links. The single sources are `scripts/header.inc` and `scripts/footer.inc`. To change either, edit the partial and run:
 
 ```bash
-python3 scripts/build-footer.py
+python3 scripts/build-partials.py
 ```
 
-The script rewrites the region from `<footer class="site">` to `</footer>` in every page, including new pages not yet committed, and leaves the rest of each page alone. Never edit a page's footer by hand: the next run will overwrite it. `python3 scripts/build-footer.py --check` lists any page whose footer has drifted. A page whose footer differs on purpose (the comment analyser's newsletter form ids) is declared in `VARIANTS` in the script.
+The script rewrites the regions from `<header class="site">` to `</header>` and from `<footer class="site">` to `</footer>` in every page, including new pages not yet committed, and leaves the rest of each page alone. Never edit a page's header or footer by hand: the next run will overwrite it. `python3 scripts/build-partials.py --check` lists any page that has drifted. A page that differs on purpose (the comment analyser's newsletter form ids) is declared in `PARTS` in the script.
 
 ## Data pages
 
