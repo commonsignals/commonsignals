@@ -1355,6 +1355,17 @@ footer.site .footer-licence a:hover { color: var(--teal); border-color: var(--te
   color: var(--ink-soft);
   line-height: 1.7;
 }
+/* Article "Questions people ask": built by scripts/build-questions.py.
+   The top rule comes from the site-wide section rule; only its padding is undone. */
+.article-body .questions {
+  padding: 0;
+  margin-top: 2.4rem;
+}
+.article-body .questions h2 { margin-top: 1.8rem; }
+.article-body .questions h3 {
+  margin: 1.6rem 0 0.4rem;
+  scroll-margin-top: 6rem;
+}
 .article-box figure { margin: 1.4rem 0 0; }
 
 .placeholder {
