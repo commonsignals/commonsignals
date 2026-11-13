@@ -10,6 +10,13 @@ unfilled screenshot placeholders never reach the page.
 Handles only the Markdown this draft uses: #-headings, paragraphs, - and 1. lists, **bold**, *italic*,
 [links](url), raw <figure> blocks and the STAT CALLOUT block.
 """
+import sys
+
+# RETIRED 13 November 2026. The live page is now edited directly on main, so this builder's output
+# is stale: three merges of it overwrote a week of edits on main. Edit how-to-communicate-about-ai-safety.html
+# on main instead. Kept for reference only.
+if "--i-know-this-overwrites-main-edits" not in sys.argv:
+    sys.exit("build_page.py is retired: main's how-to-communicate-about-ai-safety.html is the source of truth now.")
 import html
 import json
 import os
