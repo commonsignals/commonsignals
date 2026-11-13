@@ -434,7 +434,7 @@ style = """<style>
       line-height: 1.35;
     }
     .section-nav-list a[aria-current="true"] { color: #fff; border-left-color: var(--signal-soft); font-weight: 500; }
-    .article-body h2, .article-body h3 { scroll-margin-top: calc(var(--section-nav-top, 0px) + 5.25rem); }
+    .article-body h2, .article-body h3 { scroll-margin-top: calc(var(--section-nav-top, 4.3rem) + 5.25rem); }
   }
   @media (prefers-reduced-motion: reduce) {
     .section-nav, .section-nav.is-visible, .section-nav-toggle svg { transition: none; }
