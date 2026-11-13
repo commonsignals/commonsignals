@@ -492,3 +492,7 @@ These are the Common Signals studies this guide draws on most. Each analyses how
 - ["A problem they created": the accountability version of the OpenAI and Hugging Face incident](https://commonsignals.org/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf)
 
 - [OpenAI and shut? What an independent report did to the marketing-stunt argument](https://commonsignals.org/openai-and-shut-metr-hugging-face)
+
+### Disclosure
+
+Claude (Anthropic) was used to research, structure and draft this guide. Every figure was checked against its source, and the final edit was made by a human.

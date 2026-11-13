@@ -11,6 +11,7 @@ Handles only the Markdown this draft uses: #-headings, paragraphs, - and 1. list
 [links](url), raw <figure> blocks and the STAT CALLOUT block.
 """
 import html
+import json
 import os
 import re
 import shutil
@@ -355,6 +356,9 @@ style = """<style>
     .article-body .card-table td::before { content: attr(data-label); display: block; font-weight: 600; color: var(--ink); font-size: 0.85rem; margin-bottom: 0.15rem; }
   }
 
+  /* In-page jumps land below the sticky site header (the phone rule further down adds the section bar). */
+  .article-body h2, .article-body h3 { scroll-margin-top: 5.5rem; }
+
   /* Mobile section navigator: "You are currently reading", after JRF's report pages.
      Sits under the sticky site header; only on widths where the sidebar contents is not sticky. */
   .section-nav { display: none; }
@@ -522,6 +526,56 @@ section_nav_js = """<script>
 })();
 </script>
 """
+# Section addresses from earlier live versions of the page, so links shared since 6 November still
+# land on the right section. Sections that were cut outright are left out (those open at the top).
+OLD_ANCHORS = {
+    "what-this-toolkit-is": "what-we-mean-by-ai-safety",
+    "how-to-read-the-evidence": "how-we-grade-the-evidence",
+    "summary": "executive-summary",
+    "the-big-picture": "where-the-public-stands-on-ai",
+    "the-big-picture-where-the-public-stands": "where-the-public-stands-on-ai",
+    "ten-principles": "ten-principles-for-ai-safety-communications",
+    "ground-rules": "4-ground-rules-for-every-communicator",
+    "six-uk-mindsets": "six-uk-mindsets-audience-profiles",
+    "disengaged-traditionalists-24-1": "six-uk-mindsets-audience-profiles",
+    "alarmed-populists-19-5": "six-uk-mindsets-audience-profiles",
+    "pragmatic-sceptics-16-3": "six-uk-mindsets-audience-profiles",
+    "market-optimists-16-3": "six-uk-mindsets-audience-profiles",
+    "hopeful-regulators-12-8": "six-uk-mindsets-audience-profiles",
+    "uncertain-middle-11-1": "six-uk-mindsets-audience-profiles",
+    "talking-about-specific-issues": "issue-guides-three-dos-and-a-dont",
+    "loss-of-control-and-catastrophic-risk": "1-loss-of-control-and-catastrophic-risk",
+    "regulation-and-independent-oversight": "2-regulation-and-independent-oversight",
+    "jobs-and-the-economy": "3-jobs-and-the-economy",
+    "children-and-young-people": "4-children-and-young-people",
+    "deepfakes-and-knowing-whats-real": "5-deepfakes-and-synthetic-media",
+    "ai-war-and-national-security": "6-ai-war-and-national-security",
+    "a-pause-ban-or-treaty": "7-a-pause-ban-or-treaty",
+    "a-ten-question-check": "10-point-pre-publication-checklist",
+    "cutting-long-form-content-for-social": "cutting-long-form-content-for-social-media",
+}
+missing = {k: v for k, v in OLD_ANCHORS.items() if v not in ids}
+assert not missing, f"old-address targets not on the page: {missing}"
+assert not set(OLD_ANCHORS) & ids, "an old address is still a live id"
+old_anchor_js = """<script>
+(function () {
+  var moved = %s;
+  function follow() {
+    var old = decodeURIComponent(location.hash.slice(1));
+    if (!old || document.getElementById(old) || !moved[old]) return;
+    var target = document.getElementById(moved[old]);
+    if (!target) return;
+    history.replaceState(null, '', '#' + moved[old]);
+    target.scrollIntoView();
+  }
+  window.addEventListener('hashchange', follow);
+  // Wait for the web fonts: text above the target reflows when they load and would push it off.
+  var ready = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
+  ready.then(function () { if (document.readyState === 'complete') follow(); else window.addEventListener('load', follow); });
+})();
+</script>
+""" % json.dumps(OLD_ANCHORS, separators=(",", ":"))
+
 main = f"""<main id="top">
 
 {section_nav}
@@ -549,6 +603,7 @@ main = f"""<main id="top">
   </div>
 
 {section_nav_js}
+{old_anchor_js}
 """
 open(OUT, "w", encoding="utf-8").write(head + style + mid + main + tail)
 print(f"wrote {os.path.relpath(OUT, ROOT)}: {len(toc)} sections, {len(held)} figures and callouts")
