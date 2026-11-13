@@ -5,24 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <script data-cfasync="false" src="/analytics.js"></script>
 <title>How to communicate about AI safety: Common Signals</title>
-<meta name="description" content="An evidence-based guide for anyone explaining AI risks to the public: ten principles, four ground rules, six UK mindsets and seven issue guides, each graded by the strength of its evidence." />
+<meta name="description" content="An evidence-based guide for anyone explaining AI risks to the public: ten principles, four ground rules and seven issue guides, each graded by the strength of its evidence." />
 
 <meta property="og:title" content="How to communicate about AI safety" />
-<meta property="og:description" content="An evidence-based guide for anyone explaining AI risks to the public: ten principles, four ground rules, six UK mindsets and seven issue guides, each graded by the strength of its evidence." />
+<meta property="og:description" content="An evidence-based guide for anyone explaining AI risks to the public: ten principles, four ground rules and seven issue guides, each graded by the strength of its evidence." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://commonsignals.org/how-to-communicate-about-ai-safety" />
 <meta property="og:site_name" content="Common Signals" />
-<meta property="og:image" content="https://commonsignals.org/og-image.png" />
+<meta property="og:image" content="https://commonsignals.org/og-image.png?v=20261111" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Common Signals: helping people explaining AI know which messages and messengers actually work." />
+<meta property="og:image:alt" content="Common Signals: helping people explaining AI see how their messages actually land." />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="How to communicate about AI safety" />
-<meta name="twitter:description" content="An evidence-based guide for anyone explaining AI risks to the public: ten principles, four ground rules, six UK mindsets and seven issue guides, each graded by the strength of its evidence." />
-<meta name="twitter:image" content="https://commonsignals.org/og-image.png" />
+<meta name="twitter:description" content="An evidence-based guide for anyone explaining AI risks to the public: ten principles, four ground rules and seven issue guides, each graded by the strength of its evidence." />
+<meta name="twitter:image" content="https://commonsignals.org/og-image.png?v=20261111" />
 
 <link rel="canonical" href="https://commonsignals.org/how-to-communicate-about-ai-safety" />
+<link rel="alternate" type="text/markdown" href="https://commonsignals.org/how-to-communicate-about-ai-safety.md" />
 <meta name="robots" content="index, follow" />
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -33,15 +34,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="/styles.css?v=20260929b" />
+<link rel="stylesheet" href="/styles.css?v=20261111" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "How to communicate about AI safety",
-  "description": "An evidence-based guide for anyone explaining AI risks to the public: ten principles, four ground rules, six UK mindsets and seven issue guides, each graded by the strength of its evidence.",
+  "description": "An evidence-based guide for anyone explaining AI risks to the public: ten principles, four ground rules and seven issue guides, each graded by the strength of its evidence.",
   "datePublished": "2026-11-06",
-  "dateModified": "2026-11-06",
+  "dateModified": "2026-11-11",
   "url": "https://commonsignals.org/how-to-communicate-about-ai-safety",
   "author": { "@type": "Person", "name": "Ben Matthews" },
   "publisher": { "@type": "Organization", "name": "Common Signals", "url": "https://commonsignals.org/", "logo": { "@type": "ImageObject", "url": "https://commonsignals.org/og-image.png" } },
@@ -49,6 +50,12 @@
 }
 </script>
 <style>
+  /* Running text in the heading serif, at the site's 17px body size */
+  .article-body > p,
+  .article-body > ul > li,
+  .article-body > ol > li { font-family: var(--serif); font-size: 17px; }
+  /* Subheadings sit between the 17px body and the 21.6px section headings */
+  .article-body h3 { font-size: 1.2rem; }
   .article-body .toolkit-list { margin: 1.2rem 0; padding-left: 1.4rem; display: grid; gap: 0.6rem; }
   .article-body .toolkit-list li { padding-left: 0.2rem; color: var(--ink-soft); line-height: 1.6; min-width: 0; }
   .article-body .toolkit-list li::marker { color: var(--signal); font-weight: 600; }
@@ -109,21 +116,6 @@
   .article-body .grade-key { list-style: none; margin: 1.2rem 0 1.6rem; padding: 0; display: grid; gap: 0.7rem; }
   .article-body .grade-key li { color: var(--ink-soft); line-height: 1.6; }
   .article-body .grade-key .grade-dot { width: 0.8em; height: 0.8em; }
-
-  /* Mindsets table: a table on wide screens, one card per mindset on phones. */
-  .article-body .card-table th[scope="row"] { font-weight: 600; white-space: normal; border-bottom: 1px solid var(--line); color: var(--ink); }
-  .article-body .card-table th[scope="col"] { white-space: normal; }
-  .article-body .card-table { font-size: 0.95rem; }
-  @media (max-width: 640px) {
-    .article-body .card-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-    .article-body .card-table, .article-body .card-table tbody, .article-body .card-table tr,
-    .article-body .card-table th, .article-body .card-table td { display: block; width: auto; }
-    .article-body .card-table tr { border: 1px solid var(--line); border-radius: 8px; margin: 0 0 1rem; padding: 0.4rem 0.9rem 0.7rem; background: rgba(255, 255, 255, 0.45); }
-    .article-body .card-table th[scope="row"] { border-bottom: 2px solid var(--ink); padding: 0.5rem 0; font-size: 1.05rem; }
-    .article-body .card-table td { padding: 0.55rem 0; border-bottom: 1px solid var(--line); }
-    .article-body .card-table td:last-child { border-bottom: 0; }
-    .article-body .card-table td::before { content: attr(data-label); display: block; font-weight: 600; color: var(--ink); font-size: 0.85rem; margin-bottom: 0.15rem; }
-  }
 
   /* In-page jumps land below the sticky site header (the phone rule further down adds the section bar). */
   .article-body h2, .article-body h3 { scroll-margin-top: 5.5rem; }
@@ -275,15 +267,14 @@
     <div class="section-nav-panel" id="sectionNavPanel" hidden>
       <ul class="section-nav-list">
           <li><a href="#what-we-mean-by-ai-safety">What we mean by AI safety</a></li>
-          <li><a href="#how-we-grade-the-evidence">How we grade the evidence</a></li>
+          <li><a href="#how-we-grade-ai-safety-evidence">How we grade AI safety evidence</a></li>
           <li><a href="#executive-summary">Executive summary</a></li>
           <li><a href="#where-the-public-stands-on-ai">Where the public stands on AI</a></li>
-          <li><a href="#4-ground-rules-for-every-communicator">4 ground rules for every communicator</a></li>
-          <li><a href="#ten-principles-for-ai-safety-communications">Ten principles for AI safety communications</a></li>
-          <li><a href="#six-uk-mindsets-audience-profiles">Six UK mindsets: audience profiles</a></li>
-          <li><a href="#issue-guides-three-dos-and-a-dont">Issue guides: three dos and a don't</a></li>
-          <li><a href="#10-point-pre-publication-checklist">10-point pre-publication checklist</a></li>
-          <li><a href="#putting-it-into-practice">Putting it into practice</a></li>
+          <li><a href="#ground-rules-for-ai-communicators">Ground rules for AI communicators</a></li>
+          <li><a href="#principles-for-ai-safety-comms">Ten principles for AI safety communications</a></li>
+          <li><a href="#communicating-ai-issues">Communicating AI issues</a></li>
+          <li><a href="#pre-publication-checklist">Pre-publication checklist</a></li>
+          <li><a href="#putting-this-guide-into-practice">Putting this guide into practice</a></li>
           <li><a href="#further-reading">Further reading</a></li>
           <li><a href="#how-to-cite">How to cite</a></li>
           <li><a href="#related-research">Related research</a></li>
@@ -293,10 +284,6 @@
 
   <div class="article-hero">
     <p class="article-eyebrow">6 November 2026 &middot; Ben Matthews</p>
-    <div class="tag-row">
-      <span class="tag-pill">Messaging</span>
-      <span class="tag-pill">Public opinion</span>
-    </div>
     <h1>How to communicate about AI safety</h1>
     <p class="article-dek">An evidence-based guide for anyone explaining artificial intelligence risks and safety rules to the public.</p>
     <div class="hero-actions">
@@ -308,6 +295,15 @@
         </svg>
         <span class="share-copy-label" aria-live="polite">Copy link</span>
       </button>
+      <a class="hero-data-link pdf-download" href="/assets/pdf/how-to-communicate-about-ai-safety-2026-11-11.pdf">Download PDF (version of 11 November 2026)</a>
+      <button type="button" class="ai-copy" data-md="/how-to-communicate-about-ai-safety.md">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="9" y="9" width="11" height="11" rx="2"/>
+          <path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"/>
+        </svg>
+        <span class="ai-copy-label" aria-live="polite">Copy for AI</span>
+      </button>
+      <a class="hero-data-link md-view" href="/how-to-communicate-about-ai-safety.md">View as markdown</a>
     </div>
   </div>
 
@@ -316,15 +312,14 @@
       <p class="toc-heading">Contents</p>
       <ul>
         <li><a href="#what-we-mean-by-ai-safety">What we mean by AI safety</a></li>
-        <li><a href="#how-we-grade-the-evidence">How we grade the evidence</a></li>
+        <li><a href="#how-we-grade-ai-safety-evidence">How we grade AI safety evidence</a></li>
         <li><a href="#executive-summary">Executive summary</a></li>
         <li><a href="#where-the-public-stands-on-ai">Where the public stands on AI</a></li>
-        <li><a href="#4-ground-rules-for-every-communicator">4 ground rules for every communicator</a></li>
-        <li><a href="#ten-principles-for-ai-safety-communications">Ten principles for AI safety communications</a></li>
-        <li><a href="#six-uk-mindsets-audience-profiles">Six UK mindsets: audience profiles</a></li>
-        <li><a href="#issue-guides-three-dos-and-a-dont">Issue guides: three dos and a don't</a></li>
-        <li><a href="#10-point-pre-publication-checklist">10-point pre-publication checklist</a></li>
-        <li><a href="#putting-it-into-practice">Putting it into practice</a></li>
+        <li><a href="#ground-rules-for-ai-communicators">Ground rules for AI communicators</a></li>
+        <li><a href="#principles-for-ai-safety-comms">Ten principles for AI safety communications</a></li>
+        <li><a href="#communicating-ai-issues">Communicating AI issues</a></li>
+        <li><a href="#pre-publication-checklist">Pre-publication checklist</a></li>
+        <li><a href="#putting-this-guide-into-practice">Putting this guide into practice</a></li>
         <li><a href="#further-reading">Further reading</a></li>
         <li><a href="#how-to-cite">How to cite</a></li>
         <li><a href="#related-research">Related research</a></li>
@@ -333,20 +328,22 @@
 
     <article class="article-body">
 
-      <p>Most people in Britain and the United States are already worried about artificial intelligence, and broad majorities want clear rules in place. They simply do not believe ordinary people have any say in what happens next. This guide draws on research into public attitudes to answer a practical question: which messages, messengers, and moments move people to act, and which leave them feeling helpless?</p>
+      <p>Most people in Britain and the United States are already worried about artificial intelligence, and broad majorities want clear rules in place. They do not believe ordinary people have any say in what happens next. How might AI safety communicators help change that?</p>
+
+      <p>This guide draws on research into public attitudes to answer a practical question: which messages, messengers, and moments move people to act, and which leave them feeling helpless?</p>
 
       <p>This guide is designed to turn social science into practical advice for communicators. We draw on <a href="/ai-safety-comms-reading-list">academic research</a>, <a href="/research">six studies by Common Signals</a> that tracked public reactions to real AI events, and campaign strategies.</p>
 
       <div class="audience-callout">
-        <p class="audience-label">Who this is for</p>
-        <p>Campaigners, creators, journalists, charity communications teams, and researchers. It is written as much for people working on everyday harms, such as deepfakes, bias, and job losses, as for those working on catastrophic risks.</p>
+        <p class="audience-label">Who this toolkit is&nbsp;for</p>
+        <p>Campaigners, journalists, and researchers explaining AI to the public. If you work on immediate issues like deepfakes and job security, or systemic threats like loss of control, this guide shows what actually moves audiences to act.</p>
       </div>
 
       <h2 id="what-we-mean-by-ai-safety">What we mean by AI safety</h2>
 
       <p>We use "AI safety" in its broadest sense: making AI systems safe for the people who use them and the societies that host them. That spans everything from chatbots and hiring algorithms to systems whose builders warn they may not be able to control.</p>
 
-      <h2 id="how-we-grade-the-evidence">How we grade the evidence</h2>
+      <h2 id="how-we-grade-ai-safety-evidence">How we grade AI safety evidence</h2>
 
       <p>Every claim in this guide carries one of three grades:</p>
 
@@ -365,7 +362,7 @@
         <li><strong>They want rules</strong> <span class="grade grade-tested">(<span class="grade-dot" aria-hidden="true"></span>Tested</span>). 89% of UK adults say AI products should not be rolled out until proven safe, even if that slows things down (<a href="https://www.adalovelaceinstitute.org/policy-briefing/great-expectations/" target="_blank" rel="noopener">Ada Lovelace Institute, 2025</a>).</li>
         <li><strong>They feel they have little say</strong> <span class="grade grade-tested">(<span class="grade-dot" aria-hidden="true"></span>Tested</span>). 67% of Americans say AI is coming into their lives whether they want it or not; only 16% say people like them can shape it (<a href="https://www.americanson.ai/" target="_blank" rel="noopener">Americans on AI</a>).</li>
         <li><strong>Extinction is the weakest entry point, while belief in loss of control is rising</strong> <span class="grade grade-tested">(<span class="grade-dot" aria-hidden="true"></span>Tested</span>). Warnings about human extinction ranked dead last in driving action across <a href="#1-start-from-what-people-already-worry-about">two message tests</a>. Meanwhile, the share of Americans who say AI already acts outside its developers' intent rose from 28% to 43% between June and October 2026.</li>
-        <li><strong>Concern turns into action when it has a clear target and a route</strong> <span class="grade grade-established">(<span class="grade-dot" aria-hidden="true"></span>Established</span> for fear and agency; <span class="grade grade-tested"><span class="grade-dot" aria-hidden="true"></span>tested</span> for anger). Threats only motivate people when they see an effective step they can take. Anger predicts action while anxiety does not, and messages score best when they name who is responsible.</li>
+        <li><strong>Concern turns into action when it has a clear target and a route</strong> <span class="grade grade-established">(<span class="grade-dot" aria-hidden="true"></span>Established</span> for fear and agency; <span class="grade grade-tested"><span class="grade-dot" aria-hidden="true"></span>tested</span> for anger). Threats only motivate people when they see an effective step they can take.</li>
       </ul>
 
       <h3 id="what-to-do">What to do</h3>
@@ -404,13 +401,13 @@
 
       <p>People strongly favour statutory laws over voluntary corporate promises. Given the choice, 85% said strong laws are needed to force companies to make AI safe; only 10% thought companies should be trusted to self-regulate. The <a href="https://www.adalovelaceinstitute.org/policy-briefing/great-expectations/" target="_blank" rel="noopener">Ada Lovelace Institute</a> found the same pattern in September 2025: 89% said independent regulation is essential, and 89% said products should not be released until proven safe, even if safety checks slow deployment.</p>
 
-      <p>Yet voters distrust the institutions meant to govern technology. 80% distrust the government's ability to control AI, and 84% worry political leaders will prioritise tech companies over the public. AI is rarely named as a top issue on its own; people prioritise the cost of living, the NHS, and jobs. But focus groups show AI already works as the "invisible infrastructure" inside those daily worries: hiring filters, utility pricing algorithms, clinical triage, and online fakes. Explaining the technology does not ease people's minds: Diffusion's most educated segment (<a href="#six-uk-mindsets-audience-profiles">Pragmatic Sceptics</a>) uses AI heavily yet remains 81% concerned.</p>
+      <p>Yet voters distrust the institutions meant to govern technology. 80% distrust the government's ability to control AI, and 84% worry political leaders will prioritise tech companies over the public. AI is rarely named as a top issue on its own; people prioritise the cost of living, the NHS, and jobs. But focus groups show AI already works as the "invisible infrastructure" inside those daily worries: hiring filters, utility pricing algorithms, clinical triage, and online fakes.</p>
 
       <h3 id="in-the-us">In the US</h3>
 
       <p>The <a href="https://www.americanson.ai/" target="_blank" rel="noopener">Americans on AI</a> tracker, run biweekly by NORC at the University of Chicago, shows that 70% of American adults were concerned about AI's growing role in October 2026, against 21% who were excited. 79% called tackling AI harms an important or top priority for government, placing it ahead of immigration and climate change.</p>
 
-      <p>Americans report seeing harms in their daily lives: 73% say AI is worsening job security, and 80% see people struggling to tell what is real. Public opinion also shifts around real-world events, though the tracker can't show what caused each shift. When OpenAI <a href="https://www.reuters.com/business/its-ai-agent-spent-days-hacking-company-sources-say-openai-did-not-notice-week-2026-07-24/" target="_blank" rel="noopener">disclosed</a> in July 2026 that two models broke out of their test environment and hacked Hugging Face, the share of Americans who were very concerned rose from 29% to 35%. Following Jacob Coxon's <a href="https://www.wsj.com/tech/ai/anthropic-researcher-quits-over-out-of-control-ai-fears-707b7628" target="_blank" rel="noopener">public resignation</a> from Anthropic in September 2026, the share calling AI harms a top priority rose from 36% to 43%.</p>
+      <p>Americans report seeing harms in their daily lives: 73% say AI is worsening job security, and 80% see people struggling to tell what is real. Public opinion also shifts around real-world events, though the tracker can't show what caused each shift. When OpenAI <a href="https://www.reuters.com/business/its-ai-agent-spent-days-hacking-company-sources-say-openai-did-not-notice-week-2026-07-24/" target="_blank" rel="noopener">disclosed</a> in July 2026 that a swarm of OpenAI research agents had broken out of their test environment and hacked Hugging Face, the share of Americans who were very concerned rose from 29% to 35%. Following Jacob Coxon's <a href="https://www.wsj.com/tech/ai/anthropic-researcher-quits-over-out-of-control-ai-fears-707b7628" target="_blank" rel="noopener">public resignation</a> from Anthropic in September 2026, the share calling AI harms a top priority rose from 36% to 43%.</p>
 
       <figure class="shot">
         <picture>
@@ -424,7 +421,7 @@
 
       <p>International surveys show the same unease. The <a href="https://hai.stanford.edu/ai-index/2026-ai-index-report/public-opinion" target="_blank" rel="noopener">Stanford AI Index</a> noted that while the global share seeing benefits reached 59% in 2025, the share feeling nervous rose to 52%. A <a href="https://kpmg.com/xx/en/our-insights/ai-and-technology/trust-attitudes-and-use-of-ai.html" target="_blank" rel="noopener">study across 47 countries</a> by KPMG and the University of Melbourne confirmed that public trust declines as use grows. <a href="https://report2025.seismic.org/" target="_blank" rel="noopener">Seismic's survey</a> of 10,000 people across five countries found that 60% worry AI will replace human relationships, edging out the 57% who worry about mass unemployment.</p>
 
-      <h2 id="4-ground-rules-for-every-communicator">4 ground rules for every communicator</h2>
+      <h2 id="ground-rules-for-ai-communicators">Ground rules for AI communicators</h2>
 
       <ul class="arrow-list">
         <li><strong>Keep the core message identical; tailor only the entry point.</strong> Adapt your opening example to the audience, but keep your facts, policy demands, and remedies constant. ControlAI's <a href="https://controlai.org/blog/briefing-140-lawmakers-on-ai" target="_blank" rel="noopener">briefings with more than 140 lawmakers</a> led it to conclude that changing your core demands for different political factions destroys trust.</li>
@@ -433,7 +430,7 @@
         <li><strong>State your commitment to nonviolence clearly and often.</strong> Aim frustration directly at policies, boardroom decisions, and regulatory gaps, never at individual researchers or staff. Always pair warnings with a lawful, constructive way to take part in democratic change.</li>
       </ul>
 
-      <h2 id="ten-principles-for-ai-safety-communications">Ten principles for AI safety communications</h2>
+      <h2 id="principles-for-ai-safety-comms">Ten principles for AI safety communications</h2>
 
       <h3 id="1-start-from-what-people-already-worry-about">1. Start from what people already worry about</h3>
 
@@ -454,7 +451,7 @@
       </figure>
 
       <ul class="arrow-list">
-        <li><strong>Where it misfired:</strong> PauseAI's jobs page made bold claims about investments and timelines without inline links. Our comment analysis suggests that unsourced claims are easily dismissed as PR stunts; roughly half of the pushback under <a href="/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh">Ajeya Cotra's Dwarkesh Podcast interview</a> dismissed the story as marketing, staged or unverifiable <span class="grade grade-observed">(<span class="grade-dot" aria-hidden="true"></span>Observed</span>).</li>
+        <li><strong>Where it misfired:</strong> Our comment analysis suggests that unsourced claims are easily dismissed as PR stunts; roughly half of the pushback under <a href="/clearest-warning-shot-openai-hugging-face-metr-cotra-dwarkesh">Ajeya Cotra's Dwarkesh Podcast interview</a> dismissed the story as marketing, staged or unverifiable <span class="grade grade-observed">(<span class="grade-dot" aria-hidden="true"></span>Observed</span>).</li>
         <li><strong>Try this:</strong> "AI is already deciding who gets shortlisted for a job interview. The companies building it say that is just the start."</li>
         <li><strong>Avoid this:</strong> Opening with sci-fi scenarios that your audience has no daily reference point for.</li>
       </ul>
@@ -489,7 +486,7 @@
       </figure>
 
       <ul class="arrow-list">
-        <li><strong>Where it misfired:</strong> A <a href="/ai-risk-reel-analysis-nate-soares-miri">short video reel by Nate Soares</a> titled "We stop AI. You help?" drew <a href="/data/soares-reel-2026-08/">1,600 comments</a>. The second most-liked comment (over 8,000 likes) asked why it felt like it was already too late; hopeless comments took a fifth of all likes, and fewer than 2% asked what they could actually do <span class="grade grade-observed">(<span class="grade-dot" aria-hidden="true"></span>Observed</span>).</li>
+        <li><strong>Where it misfired:</strong> A <a href="/ai-risk-reel-analysis-nate-soares-miri">short video reel by Nate Soares</a> titled "We stop AI. You help?" had <a href="/data/soares-reel-2026-08/">1,703 comments</a>, of which 1,534 were coded. The second most-liked comment (over 8,000 likes) asked why it felt like it was already too late; hopeless comments took a fifth of all likes, and fewer than 2% asked what they could actually do <span class="grade grade-observed">(<span class="grade-dot" aria-hidden="true"></span>Observed</span>).</li>
       </ul>
 
       <figure>
@@ -570,7 +567,7 @@
       <p>People who want strong safety rules often assume they are alone. Reassure them that they belong to an overwhelming majority, using numbers that are recent, local, and sourced.</p>
 
       <ul class="arrow-list">
-        <li><strong>What the evidence says:</strong> Across different polling methods, the public demand for safety rules remains high and steady <span class="grade grade-tested">(<span class="grade-dot" aria-hidden="true"></span>Tested</span>). In climate communications, researchers found the public <a href="https://adeptnet.org.uk/sites/default/files/media/2026-03/CC%20Comms%20Guide_FINAL_March2026.pdf" target="_blank" rel="noopener">underestimates peer concern by 20%</a>, which <a href="https://climateoutreach.org/britain-talks-climate/2024-summary-recommendations/" target="_blank" rel="noopener">Climate Outreach says</a> has a chilling effect on what feels possible <span class="grade grade-tested">(<span class="grade-dot" aria-hidden="true"></span>Tested</span> on climate). A similar silence may exist around AI, where people assume their neighbours do not care, but no one has tested this.</li>
+        <li><strong>What the evidence says:</strong> Across different polling methods, the public demand for safety rules remains high and steady <span class="grade grade-tested">(<span class="grade-dot" aria-hidden="true"></span>Tested</span>). In climate communications, researchers found the public <a href="https://adeptnet.org.uk/sites/default/files/media/2026-03/CC%20Comms%20Guide_FINAL_March2026.pdf" target="_blank" rel="noopener">underestimates peer concern by 20%</a>, which <a href="https://climateoutreach.org/britain-talks-climate/2024-summary-recommendations/" target="_blank" rel="noopener">Climate Outreach says</a> has a chilling effect on what feels possible <span class="grade grade-tested">(<span class="grade-dot" aria-hidden="true"></span>Tested</span> on climate).</li>
         <li><strong>In practice:</strong> PauseAI maintains an <a href="https://pauseai.info/polls-and-surveys" target="_blank" rel="noopener">open polling directory</a>; Americans on AI publishes <a href="https://www.americanson.ai/" target="_blank" rel="noopener">open-access tracker graphics</a>; the Ada Lovelace Institute supplies detailed UK benchmark numbers.</li>
       </ul>
 
@@ -605,7 +602,7 @@
 
       <ul class="arrow-list">
         <li><strong>What the evidence says:</strong> Direct <a href="/glossary#existential-risk-x-risk">extinction warnings</a> came dead last in both message trials <span class="grade grade-tested">(<span class="grade-dot" aria-hidden="true"></span>Tested</span>). <a href="https://www.socialchangelab.org/research/which-ai-harms-and-risks.html" target="_blank" rel="noopener">Social Change Lab</a> found that reading factual reports on autonomous weapons made people more worried about catastrophic outcomes than reading essays on human extinction did <span class="grade grade-tested">(<span class="grade-dot" aria-hidden="true"></span>Tested</span>). Furthermore, <a href="https://diffusion-beta.netlify.app/articles/uk-compass-report" target="_blank" rel="noopener">Diffusion's message</a> about keeping AI under human control briefly provoked net disagreement before recovering <span class="grade grade-tested">(<span class="grade-dot" aria-hidden="true"></span>Tested</span>). In contrast, <a href="https://www.americanson.ai/" target="_blank" rel="noopener">78% of Americans</a> already view loss of control (systems acting outside their developers' intent) as likely or currently happening <span class="grade grade-tested">(<span class="grade-dot" aria-hidden="true"></span>Tested</span>).</li>
-        <li><strong>Where studies disagree:</strong> Aides warned campaigners that MPs would refuse to sign anything containing the word "extinction," yet ControlAI <a href="https://controlai.org/blog/briefing-140-lawmakers-on-ai" target="_blank" rel="noopener">secured signatures from more than 100 parliamentarians</a> while keeping the word in the statement they signed <span class="grade grade-observed">(<span class="grade-dot" aria-hidden="true"></span>Observed</span>). In-depth, face-to-face briefings seem to follow different rules from social media posts. Furthermore, while some strategists advise avoiding technical capability debates, <a href="/findings">comment tracking</a> shows that citing an independently confirmed failure settles capability doubts faster than rhetoric.</li>
+        <li><strong>Where studies disagree:</strong> Aides warned campaigners that MPs would refuse to sign anything containing the word "extinction," yet ControlAI <a href="https://controlai.org/blog/briefing-140-lawmakers-on-ai" target="_blank" rel="noopener">secured signatures from more than 100 parliamentarians</a> while keeping the word in the statement they signed <span class="grade grade-observed">(<span class="grade-dot" aria-hidden="true"></span>Observed</span>). In-depth, face-to-face briefings seem to follow different rules from social media posts.</li>
         <li><strong>In practice:</strong> <a href="https://controlai.org/" target="_blank" rel="noopener">ControlAI pairs clear claims with clear remedies</a>: independent oversight and bans on runaway models. The <a href="https://www.reuters.com/business/its-ai-agent-spent-days-hacking-company-sources-say-openai-did-not-notice-week-2026-07-24/" target="_blank" rel="noopener">media coverage of OpenAI's Hugging Face incident</a> gave the public a concrete, real-world case study showing that loss of control is an engineering reality, not science fiction.</li>
       </ul>
 
@@ -618,7 +615,7 @@
       </figure>
 
       <ul class="arrow-list">
-        <li><strong>Where it misfired:</strong> A <a href="https://www.youtube.com/shorts/7a6BfbZiDV4" target="_blank" rel="noopener">104-second YouTube Shorts trailer</a> for a <a href="https://www.youtube.com/watch?v=OhOmLqR5nN4" target="_blank" rel="noopener">Diary of a CEO debate</a> titled "WILL AI LEAD US TO EXTINCTION?" led to pushback, with critical comments taking 57% of likes among comments that took a position. In contrast, a <a href="/cant-we-just-unplug-it-doac-ai-debate-comment-analysis">21-minute cut</a> of the same debate on Facebook saw 88% of commenters taking a position agreeing that precautionary rules were necessary <span class="grade grade-observed">(<span class="grade-dot" aria-hidden="true"></span>Observed</span>). Because the two cuts reached different audiences on different platforms, we can't separate the effect of the cut from the audience.</li>
+        <li><strong>Where it misfired:</strong> A <a href="https://www.youtube.com/shorts/7a6BfbZiDV4" target="_blank" rel="noopener">104-second YouTube Shorts trailer</a> for a <a href="https://www.youtube.com/watch?v=OhOmLqR5nN4" target="_blank" rel="noopener">Diary of a CEO debate</a> titled "WILL AI LEAD US TO EXTINCTION?" led to pushback, with critical comments taking 57% of likes among comments that took a position. In contrast, a <a href="/cant-we-just-unplug-it-doac-ai-debate-comment-analysis">21-minute cut</a> of the same debate on Facebook saw 88% of commenters taking a position agree with the risk case <span class="grade grade-observed">(<span class="grade-dot" aria-hidden="true"></span>Observed</span>). Because the two cuts reached different audiences on different platforms, we can't separate the effect of the cut from the audience.</li>
       </ul>
 
       <figure>
@@ -630,7 +627,7 @@
       </figure>
 
       <ul class="arrow-list">
-        <li><strong>Try this:</strong> Sequence your case: incident → mechanism → stakes → policy ask. "In July, two OpenAI models broke containment and hacked an external network. Independent researchers confirmed it. Companies admit their next models will be far more capable. We need a watchdog with the legal power to halt unsafe systems."</li>
+        <li><strong>Try this:</strong> Sequence your case: incident → mechanism → stakes → policy ask. "In July, a swarm of OpenAI research agents broke containment and hacked an external network. Independent researchers confirmed it. Companies admit their next models will be far more capable. We need a watchdog with the legal power to halt unsafe systems."</li>
         <li><strong>Avoid this:</strong> Leading with "human extinction," "apocalypse," or internal terms like "p(doom)" when talking to a general audience.</li>
       </ul>
 
@@ -640,7 +637,7 @@
 
       <ul class="arrow-list">
         <li><strong>What the evidence says:</strong> <a href="https://doi.org/10.1111/j.1559-1816.2004.tb02547.x" target="_blank" rel="noopener">Trust depends on perceived independence and shared values</a> <span class="grade grade-established">(<span class="grade-dot" aria-hidden="true"></span>Established</span>). In <a href="https://diffusion-beta.netlify.app/articles/uk-compass-report" target="_blank" rel="noopener">Diffusion's favourability polling</a>, independent regulators scored highest (+26 net favourability), followed by the police (+19), civil liberties groups (+15), and trade unions (+15). Tech companies scored -24, US tech firms scored -33, and Elon Musk scored -53 <span class="grade grade-tested">(<span class="grade-dot" aria-hidden="true"></span>Tested</span>). <a href="/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf">Comment tracking</a> shows that while the public rewards calm, measured technical experts, online audiences quickly check a spokesperson's career history for conflicts of interest <span class="grade grade-observed">(<span class="grade-dot" aria-hidden="true"></span>Observed</span>).</li>
-        <li><strong>In practice:</strong> The Future of Life Institute launched its <a href="https://superintelligence-statement.org/" target="_blank" rel="noopener">2025 superintelligence statement</a> with <a href="https://www.ansa.it/amp/english/news/science_tecnology/2025/10/24/from-bannon-to-prince-harry800-against-ai-superintelligence_f2eb5ba8-a159-4e9b-ab1f-7b666f6e50d7.html" target="_blank" rel="noopener">signatories from across the political spectrum</a>, proving safety is not a partisan hobby. When chatbots imitating deceased teenagers <a href="https://qradio.com/news/q-radio-national-news/a-gut-punch-character-ai-criticised-over-horrific-brianna-ghey-and-molly-russell-chatbots" target="_blank" rel="noopener">surfaced online</a>, the <a href="https://mollyrosefoundation.org" target="_blank" rel="noopener">Molly Rose Foundation</a> and <a href="https://www.thestar.com.my/tech/tech-news/2026/03/11/ai-incites-a-new-wave-of-grieving-parents-fighting-for-online-safety" target="_blank" rel="noopener">bereaved families</a> spoke with moral authority that technical researchers could not match.</li>
+        <li><strong>In practice:</strong> The Future of Life Institute launched its <a href="https://superintelligence-statement.org/" target="_blank" rel="noopener">2025 superintelligence statement</a> with <a href="https://www.ansa.it/amp/english/news/science_tecnology/2025/10/24/from-bannon-to-prince-harry800-against-ai-superintelligence_f2eb5ba8-a159-4e9b-ab1f-7b666f6e50d7.html" target="_blank" rel="noopener">signatories from across the political spectrum</a>. When chatbots imitating deceased teenagers <a href="https://qradio.com/news/q-radio-national-news/a-gut-punch-character-ai-criticised-over-horrific-brianna-ghey-and-molly-russell-chatbots" target="_blank" rel="noopener">surfaced online</a>, the <a href="https://mollyrosefoundation.org" target="_blank" rel="noopener">Molly Rose Foundation</a> and <a href="https://www.thestar.com.my/tech/tech-news/2026/03/11/ai-incites-a-new-wave-of-grieving-parents-fighting-for-online-safety" target="_blank" rel="noopener">bereaved families</a> spoke with moral authority that technical researchers could not match.</li>
         <li><strong>Where it misfired:</strong> During the <a href="https://www.youtube.com/watch?v=OhOmLqR5nN4" target="_blank" rel="noopener">Diary of a CEO panel</a>, <a href="/cant-we-just-unplug-it-doac-ai-debate-comment-analysis">31% of audience comments</a> focused on tech-optimist Andrew McAfee, mostly his combative style, rather than the arguments <span class="grade grade-observed">(<span class="grade-dot" aria-hidden="true"></span>Observed</span>). The debate format turned the communicators into the story, leading viewers to judge the personalities rather than the risks.</li>
         <li><strong>Try this:</strong> Frontline professionals, affected parents, independent safety auditors, and former tech company engineers who resigned on ethical grounds. Prepare them thoroughly for questions about their past employers and funding.</li>
         <li><strong>Avoid this:</strong> Fronting your campaign with tech billionaires, or treating "scientists agree" as a magical phrase that replaces evidence.</li>
@@ -663,7 +660,7 @@
       </figure>
 
       <ul class="arrow-list">
-        <li><strong>In practice:</strong> When <a href="/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf">Christiane Amanpour interviewed Heidy Khlaaf</a> (<a href="https://ainowinstitute.org" target="_blank" rel="noopener">AI Now Institute</a>) about autonomous model failures, Khlaaf kept the discussion focused on corporate accountability and engineering standards. <a href="/data/amanpour-segment-2026-09/">68% of commenters</a> taking a stand agreed with that framing <span class="grade grade-observed">(<span class="grade-dot" aria-hidden="true"></span>Observed</span>).</li>
+        <li><strong>In practice:</strong> When <a href="/problem-they-created-rogue-ai-agents-openai-huggingface-amanpour-khlaaf">Hari Sreenivasan interviewed Heidy Khlaaf</a> (<a href="https://ainowinstitute.org" target="_blank" rel="noopener">AI Now Institute</a>) on Amanpour and Company about autonomous model failures, Khlaaf kept the discussion focused on corporate accountability and engineering standards. <a href="/data/amanpour-segment-2026-09/">68% of commenters</a> taking a stand agreed with that framing <span class="grade grade-observed">(<span class="grade-dot" aria-hidden="true"></span>Observed</span>).</li>
       </ul>
 
       <figure>
@@ -675,7 +672,7 @@
       </figure>
 
       <ul class="arrow-list">
-        <li><strong>Where it misfired:</strong> When Anthropic researcher Jacob Coxon resigned in September 2026, <a href="/coxon-resignation-x-analysis">social media replies on X</a> split into 43% agreeing and 40% pushing back. Sceptics argued that self-improving AI is impossible (20%) or that slowing down hands leadership to China (13%) <span class="grade grade-observed">(<span class="grade-dot" aria-hidden="true"></span>Observed</span>). These predictable objections were not answered in the initial announcement, and they shaped the sceptical response.</li>
+        <li><strong>Where it misfired:</strong> When Anthropic researcher Jacob Coxon resigned in September 2026, <a href="/coxon-resignation-x-analysis">social media replies on X</a> split into 43% agreeing and 40% pushing back. Sceptics argued that self-improving AI is impossible (20%) or that slowing down hands leadership to China (13%) <span class="grade grade-observed">(<span class="grade-dot" aria-hidden="true"></span>Observed</span>).</li>
         <li><strong>Try this:</strong> Write clear answers to the three most obvious objections before a story breaks, and name the independent body that verified the facts.</li>
         <li><strong>Avoid this:</strong> Sharing dramatic technical claims that rest entirely on an unverified press release from a commercial AI lab.</li>
       </ul>
@@ -707,42 +704,14 @@
       <p>Campaigners working on immediate algorithmic harms and those working on extinction risks often treat each other as rivals. Yet research shows their audiences overlap, and a promising narrative bridge between them is the question of who controls the technology.</p>
 
       <ul class="arrow-list">
-        <li><strong>What the evidence says:</strong> <a href="https://www.socialchangelab.org/research/ai-safety-movement.html" target="_blank" rel="noopener">Social Change Lab</a> found persistent fighting between <a href="/glossary#present-day-harms">near-term harm</a> advocates and long-term risk groups <span class="grade grade-tested">(<span class="grade-dot" aria-hidden="true"></span>Tested</span>). Yet <a href="https://www.socialchangelab.org/research/which-ai-harms-and-risks.html" target="_blank" rel="noopener">trials</a> suggest that showing people concrete present-day harms can build concern about large-scale future failures better than direct warnings, though the link has to be built deliberately <span class="grade grade-tested">(<span class="grade-dot" aria-hidden="true"></span>Tested</span>). When <a href="https://diffusion-beta.netlify.app/articles/uk-compass-report" target="_blank" rel="noopener">Diffusion tested arguments</a> for restraining tech executives, the message focused on control beat the message focused purely on wealth accumulation among Pragmatic Sceptics and Market Optimists, while the wealth message did better with Alarmed Populists <span class="grade grade-tested">(<span class="grade-dot" aria-hidden="true"></span>Tested</span>).</li>
+        <li><strong>What the evidence says:</strong> <a href="https://www.socialchangelab.org/research/ai-safety-movement.html" target="_blank" rel="noopener">Social Change Lab</a> found persistent fighting between <a href="/glossary#present-day-harms">near-term harm</a> advocates and long-term risk groups <span class="grade grade-observed">(<span class="grade-dot" aria-hidden="true"></span>Observed</span>). Yet <a href="https://www.socialchangelab.org/research/which-ai-harms-and-risks.html" target="_blank" rel="noopener">trials</a> suggest that showing people concrete present-day harms can build concern about large-scale future failures better than direct warnings, though the link has to be built deliberately <span class="grade grade-tested">(<span class="grade-dot" aria-hidden="true"></span>Tested</span>). When <a href="https://diffusion-beta.netlify.app/articles/uk-compass-report" target="_blank" rel="noopener">Diffusion tested arguments</a> for restraining tech executives, the message focused on control beat the message focused purely on wealth accumulation among Pragmatic Sceptics and Market Optimists, while the wealth message did better with Alarmed Populists <span class="grade grade-tested">(<span class="grade-dot" aria-hidden="true"></span>Tested</span>).</li>
         <li><strong>In practice:</strong> ControlAI's <a href="https://controlai.org/past-campaigns/campaign-against-deepfakes" target="_blank" rel="noopener">deepfakes campaign</a> and PauseAI's <a href="https://pauseai.info/ai-not-just-coming-for-your-job" target="_blank" rel="noopener">jobs campaign</a> both open with present-day harms before connecting them to systemic loss of control. In media appearances, framing corporate negligence as a consistent pattern allows communicators to validate immediate harms while highlighting severe future risks.</li>
         <li><strong>Where it misfired:</strong> The <a href="/cant-we-just-unplug-it-doac-ai-debate-comment-analysis">short trailer</a> for the Diary of a CEO debate pit the two sides against each other, using a clip that accused catastrophic risk advocates of wasting energy on hypothetical threats while ignoring current harms. The audience comments split down the middle, copying the fight shown on screen <span class="grade grade-observed">(<span class="grade-dot" aria-hidden="true"></span>Observed</span>).</li>
         <li><strong>Try this:</strong> "The same companies cutting corners on children's safety and hiring algorithms today admit they are building systems they may not be able to control tomorrow."</li>
         <li><strong>Avoid this:</strong> Dismissive rankings: "Algorithmic bias is a minor distraction compared to the true risk of extinction."</li>
       </ul>
 
-      <h2 id="six-uk-mindsets-audience-profiles">Six UK mindsets: audience profiles</h2>
-
-      <p><a href="https://diffusion-beta.netlify.app/assets/Diffusion-UK-AI-Compass-Report.pdf" target="_blank" rel="noopener">Diffusion's UK AI Compass</a> surveyed 2,911 UK adults to group the public into six distinct mindsets based on their concern, optimism, institutional trust, and who they think will benefit:</p>
-
-      <p><strong>How far to trust these profiles.</strong> Treat them as a starting map. They come from one survey of 2,911 people, so the shares are estimates. Only five policy messages were dial-tested across the mindsets, and only one of those was about catastrophic risk. The "What works" column draws on Diffusion's recommendations and our reading of its data, and none of it has been tested as a message aimed at a single mindset. Channel figures in brackets come from Diffusion's platform data; the other channels listed are suggestions to test.</p>
-
-      <figure>
-        <picture>
-          <source media="(max-width: 640px)" srcset="/assets/toolkit/S23b-uk-ai-mindsets-mobile.svg" width="360" height="487" />
-          <img src="/assets/toolkit/S23b-uk-ai-mindsets.svg" alt="Bar chart of the six UK mindsets on AI as shares of UK adults, from Disengaged Traditionalists at 24.1% to the Uncertain Middle at 11.1%" width="720" height="446" loading="lazy" />
-        </picture>
-        <figcaption>Six UK mindsets on AI, share of UK adults. Data: Diffusion, The UK AI Compass (2026). Chart: Common Signals.</figcaption>
-      </figure>
-
-      <div class="table-wrap">
-        <table class="card-table">
-          <thead><tr><th scope="col">Mindset &amp; share</th><th scope="col">Profile &amp; core attitudes</th><th scope="col">What works</th><th scope="col">Best channels</th></tr></thead>
-          <tbody>
-          <tr><th scope="row">Disengaged Traditionalists<br>(24.1% of UK)</th><td data-label="Profile &amp; core attitudes">Older (67% aged 55+); 83% concerned despite only 31% using AI tools; their most distinctive view of AI is something "fake" or intrusive.</td><td data-label="What works">Focus on disruptions to daily life: automated phone queues, customer service bots, and altered energy bills. Stress consumer protection.</td><td data-label="Best channels">Facebook (used by 67%), local newspapers, traditional TV news.</td></tr>
-          <tr><th scope="row">Alarmed Populists<br>(19.5% of UK)</th><td data-label="Profile &amp; core attitudes">Near-universal concern (97%) with almost no trust in government (3%); highly active civically (57% signed petitions); split between Reform UK and the Greens.</td><td data-label="What works">Show visible human control and clear enforcement. Focus on corporate power: 91% want to rein in tech billionaires who profit at public expense.</td><td data-label="Best channels">Online petition sites, local constituency groups, regional TV and radio.</td></tr>
-          <tr><th scope="row">Pragmatic Sceptics<br>(16.3% of UK)</th><td data-label="Profile &amp; core attitudes">Educated professionals (72% ABC1); heavy AI users (82%) who remain 81% concerned; deeply sceptical of government pledges (10% trust); see AI as a machine or wild animal.</td><td data-label="What works">Share transparent policy proposals, documented failures, and verifiable sources. Skip vague reassurances; this group will check your citations.</td><td data-label="Best channels">Reddit (used by 32%), Bluesky (10%), technical podcasts, long-form press.</td></tr>
-          <tr><th scope="row">Market Optimists<br>(16.3% of UK)</th><td data-label="Profile &amp; core attitudes">Majority male (66%); heavy daily users (81%); the only group where optimism (58%) exceeds concern; relatively high trust in government (41%).</td><td data-label="What works">Frame regulation as product quality control and standardisation: clear rules make AI reliable enough for serious business use.</td><td data-label="Best channels">Professional business networks, LinkedIn, financial and trade press.</td></tr>
-          <tr><th scope="row">Hopeful Regulators<br>(12.8% of UK)</th><td data-label="Profile &amp; core attitudes">Young, tech-literate heavy users (83%); balanced between excitement (42%) and concern (46%); exhibit high trust in government (38%).</td><td data-label="What works">Present constructive rules that protect the tools they enjoy using. Avoid sweeping calls to stop all computing, which push this group towards industry self-regulation.</td><td data-label="Best channels">TikTok (used by 39%), YouTube, Instagram, tech-focused digital media.</td></tr>
-          <tr><th scope="row">Uncertain Middle<br>(11.1% of UK)</th><td data-label="Profile &amp; core attitudes">The undecideds (24% cannot say if they are excited or concerned); lower daily usage; rarely engaged in politics; open to oversight once shown corporate practices.</td><td data-label="What works">Keep campaign asks small and clear. Focus on everyday consumer impacts and the commonsense need for basic public safety protections.</td><td data-label="Best channels">Terrestrial broadcast television, daytime commercial radio, general print news.</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2 id="issue-guides-three-dos-and-a-dont">Issue guides: three dos and a don't</h2>
+      <h2 id="communicating-ai-issues">Communicating AI issues</h2>
 
       <h3 id="1-loss-of-control-and-catastrophic-risk">1. Loss of control and catastrophic risk</h3>
 
@@ -753,8 +722,10 @@
         <li><strong>Do</strong> quote public statements from lab leaders and researchers admitting they cannot fully predict or control their models.</li>
         <li><strong>Do</strong> pair every catastrophic warning with a specific legislative remedy, such as an independent public regulator empowered to halt unsafe model training.</li>
         <li><strong>Don't</strong> lead with extinction rhetoric when speaking to a general audience.</li>
-        <li><strong>Example message:</strong> "In July, two of OpenAI's advanced models broke out of their test environment and spent days hacking another company's systems. According to Reuters, the company failed to notice the breach for an entire week. Independent security researchers confirmed what happened. Tech companies are now building far more autonomous systems, yet the UK has no regulator with the legal power to stop an unsafe release. We need an independent watchdog that can inspect these models and halt them if they fail basic safety tests."</li>
+        <li><strong>Example message:</strong> "In July, a swarm of OpenAI research agents broke out of their test environment and spent days hacking another company's systems. According to Reuters, the company failed to notice the breach for an entire week. Independent security researchers confirmed what happened. Tech companies are now building far more autonomous systems, yet the UK has no regulator with the legal power to stop an unsafe release. We need an independent watchdog that can inspect these models and halt them if they fail basic safety tests."</li>
       </ul>
+
+      <p>Read the full issue guide: <a href="/how-to-talk-about-loss-of-control">How to talk about loss of control and catastrophic risk</a></p>
 
       <h3 id="2-regulation-and-independent-oversight">2. Regulation and independent oversight</h3>
 
@@ -828,7 +799,7 @@
         <li><strong>Example message:</strong> "No one is suggesting we switch off the AI that helps doctors read hospital scans or helps travellers translate a language. The proposal is narrower: halt the construction of runaway systems that could escape human control until we have verified scientific proof they can be managed safely, and secure international treaties so no corporation can race ahead recklessly at the public's expense."</li>
       </ul>
 
-      <h2 id="10-point-pre-publication-checklist">10-point pre-publication checklist</h2>
+      <h2 id="pre-publication-checklist">Pre-publication checklist</h2>
 
       <p>Before publishing your message, check your copy against these ten criteria:</p>
 
@@ -845,11 +816,11 @@
         <li><strong>Unified framing:</strong> Does the message bridge present-day consumer harms and catastrophic risks through the shared lens of democratic accountability, rather than pitting them against each other?</li>
       </ul>
 
-      <h2 id="putting-it-into-practice">Putting it into practice</h2>
+      <h2 id="putting-this-guide-into-practice">Putting this guide into practice</h2>
 
       <h3 id="testing-your-message">Testing your message</h3>
 
-      <p>Comment sections and likes measure attention more than belief. If you can, test what people do. A small paid test on a social platform, comparing two versions of a message by the share of people who click through to take action, tells you far more than raw engagement. Forward Action's <a href="https://climateoutreach.org/britain-talks-climate/downloads/" target="_blank" rel="noopener">framing guide</a> explains how to run tests like this. Common Signals is building a message tester to help AI communicators do the same, and runs <a href="/workshops">workshops</a> where teams review their materials against the research.</p>
+      <p>If you can, test what people do. A small paid test on a social platform, comparing two versions of a message by the share of people who click through to take action, tells you far more than raw engagement. Forward Action's <a href="https://climateoutreach.org/britain-talks-climate/downloads/" target="_blank" rel="noopener">framing guide</a> explains how to run tests like this. Common Signals wants to run such tests with partner organisations, and its <a href="/research/agenda#how-to-test-each-hypothesis">research agenda</a> sets out how. It also plans <a href="/workshops">workshops</a> where teams can review their materials against the research.</p>
 
       <h3 id="where-each-mindset-is-online">Where each mindset is online</h3>
 
@@ -881,11 +852,15 @@
         <li><a href="https://www.adalovelaceinstitute.org/policy-briefing/great-expectations/" target="_blank" rel="noopener">Great (public) expectations</a>, Nuala Polo and Roshni Modhvadia, Ada Lovelace Institute (2025). What 1,928 UK adults expect from AI governance.</li>
       </ul>
 
+      <p>For the hypotheses our own studies raise, and how each could be tested, see the <a href="/research/agenda">Common Signals research agenda</a>.</p>
+
       <h2 id="how-to-cite">How to cite</h2>
 
       <p>If you quote or adapt this guide, please cite it as:</p>
 
-      <p>Common Signals, "How to communicate about AI safety", November 2026.</p>
+      <p>Ben Matthews, Common Signals, "How to communicate about AI safety", 6 November 2026, version of 11 November 2026, <a href="https://commonsignals.org/how-to-communicate-about-ai-safety">https://commonsignals.org/how-to-communicate-about-ai-safety</a>.</p>
+
+      <p>Corrected 11 November 2026: Hari Sreenivasan, not Christiane Amanpour, interviewed Heidy Khlaaf on Amanpour and Company. The 88% figure for the Facebook cut of the Diary of a CEO debate is agreement with the risk case, not with the need for precautionary rules. The Soares reel had 1,703 comments, of which 1,534 were coded, not 1,600. Common Signals plans workshops but does not yet run them. The OpenAI incident involved a swarm of research agents, not two models. Social Change Lab's finding of fighting between near-term harm advocates and long-term risk groups, in principle 10, comes from a map of the AI safety movement, not an experiment or survey, so it is graded observed, not tested. Common Signals is not building a message tester.</p>
 
       <h2 id="related-research">Related research</h2>
 
@@ -971,7 +946,7 @@
 
 <script>
 (function () {
-  var moved = {"what-this-toolkit-is":"what-we-mean-by-ai-safety","how-to-read-the-evidence":"how-we-grade-the-evidence","summary":"executive-summary","the-big-picture":"where-the-public-stands-on-ai","the-big-picture-where-the-public-stands":"where-the-public-stands-on-ai","ten-principles":"ten-principles-for-ai-safety-communications","ground-rules":"4-ground-rules-for-every-communicator","six-uk-mindsets":"six-uk-mindsets-audience-profiles","disengaged-traditionalists-24-1":"six-uk-mindsets-audience-profiles","alarmed-populists-19-5":"six-uk-mindsets-audience-profiles","pragmatic-sceptics-16-3":"six-uk-mindsets-audience-profiles","market-optimists-16-3":"six-uk-mindsets-audience-profiles","hopeful-regulators-12-8":"six-uk-mindsets-audience-profiles","uncertain-middle-11-1":"six-uk-mindsets-audience-profiles","talking-about-specific-issues":"issue-guides-three-dos-and-a-dont","loss-of-control-and-catastrophic-risk":"1-loss-of-control-and-catastrophic-risk","regulation-and-independent-oversight":"2-regulation-and-independent-oversight","jobs-and-the-economy":"3-jobs-and-the-economy","children-and-young-people":"4-children-and-young-people","deepfakes-and-knowing-whats-real":"5-deepfakes-and-synthetic-media","ai-war-and-national-security":"6-ai-war-and-national-security","a-pause-ban-or-treaty":"7-a-pause-ban-or-treaty","a-ten-question-check":"10-point-pre-publication-checklist","cutting-long-form-content-for-social":"cutting-long-form-content-for-social-media"};
+  var moved = {"what-this-toolkit-is":"what-we-mean-by-ai-safety","how-to-read-the-evidence":"how-we-grade-ai-safety-evidence","how-we-grade-the-evidence":"how-we-grade-ai-safety-evidence","summary":"executive-summary","the-big-picture":"where-the-public-stands-on-ai","the-big-picture-where-the-public-stands":"where-the-public-stands-on-ai","ten-principles":"principles-for-ai-safety-comms","ten-principles-for-ai-safety-communications":"principles-for-ai-safety-comms","ground-rules":"ground-rules-for-ai-communicators","4-ground-rules-for-every-communicator":"ground-rules-for-ai-communicators","talking-about-specific-issues":"communicating-ai-issues","issue-guides-three-dos-and-a-dont":"communicating-ai-issues","loss-of-control-and-catastrophic-risk":"1-loss-of-control-and-catastrophic-risk","regulation-and-independent-oversight":"2-regulation-and-independent-oversight","jobs-and-the-economy":"3-jobs-and-the-economy","children-and-young-people":"4-children-and-young-people","deepfakes-and-knowing-whats-real":"5-deepfakes-and-synthetic-media","ai-war-and-national-security":"6-ai-war-and-national-security","a-pause-ban-or-treaty":"7-a-pause-ban-or-treaty","a-ten-question-check":"pre-publication-checklist","10-point-pre-publication-checklist":"pre-publication-checklist","putting-it-into-practice":"putting-this-guide-into-practice","cutting-long-form-content-for-social":"cutting-long-form-content-for-social-media"};
   function follow() {
     var old = decodeURIComponent(location.hash.slice(1));
     if (!old || document.getElementById(old) || !moved[old]) return;
@@ -1074,14 +1049,17 @@
         <li><a href="/workshops">Workshops</a></li>
         <li><a href="/updates">Updates</a></li>
         <li><a href="/work-with-us">Work with us</a></li>
+        <li><a href="/write-for-us">Write for us</a></li>
         <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>
     <p class="copyright">&copy; 2026 Common Signals &middot; <a href="mailto:hello@commonsignals.org">hello@commonsignals.org</a> &middot; <a href="/privacy">Privacy policy</a> &middot; <a href="/sitemap">Sitemap</a></p>
+    <p class="footer-licence">Articles and coded datasets are published under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a> (comment text remains its original authors').</p>
   </div>
 </footer>
 
-<script src="/main.js?v=20260928c" defer></script>
+<script src="/grade-cards.js?v=20261112" defer></script>
+<script src="/main.js?v=20261110a" defer></script>
 
 <iframe name="subscribe-target" class="subscribe-target-frame" aria-hidden="true" tabindex="-1"></iframe>
 </body>
