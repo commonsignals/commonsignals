@@ -33,3 +33,7 @@
 # The Britain Talks AI and America Talks AI survey was retired in November 2026.
 /survey                         /research                                 301
 /survey/*                       /research                                 301
+
+# CLAUDE.md is working instructions for coding sessions, not a page. Pages
+# serves the repo root, so redirect it away rather than publish it.
+/CLAUDE.md                      /                                         301
