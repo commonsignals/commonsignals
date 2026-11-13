@@ -108,6 +108,25 @@ def dims(path):
     m = re.search(r'<svg[^>]*\bwidth="([\d.]+)"[^>]*\bheight="([\d.]+)"', raw)
     return round(float(m.group(1))), round(float(m.group(2)))
 
+
+def to_webp(png):
+    """WebP beside the PNG (which stays as the fallback). Text screenshots go lossless: smaller than the
+    PNG and pixel-identical. Photographic ones (where lossless barely helps) go lossy at quality 85."""
+    from PIL import Image
+    import io
+    out = png[:-4] + ".webp"
+    im = Image.open(png).convert("RGB")
+    lossless = io.BytesIO()
+    im.save(lossless, "WEBP", lossless=True, method=6)
+    if lossless.tell() < os.path.getsize(png) * 0.6:
+        data = lossless.getvalue()
+    else:
+        lossy = io.BytesIO()
+        im.save(lossy, "WEBP", quality=85, method=6)
+        data = lossy.getvalue()
+    open(out, "wb").write(data)
+    return out
+
 def figure(block):
     src = re.search(r'src="screenshots/([^"]+)"', block).group(1)
     alt = html.unescape(re.search(r'alt="([^"]*)"', block).group(1))
@@ -148,6 +167,10 @@ def figure_html(src, alt, cap):
     if mob:
         mw, mh = dims(os.path.join(ROOT, mob.split("?")[0].lstrip("/")))
         pic = (f'<picture>\n          <source media="(max-width: 640px)" srcset="{mob}" width="{mw}" height="{mh}" />\n'
+               f'          <img src="{desk}" alt="{alt_a}" width="{w}" height="{h}" loading="lazy" />\n        </picture>')
+    elif shot:
+        webp = to_webp(local)
+        pic = (f'<picture>\n          <source type="image/webp" srcset="{desk[:-4]}.webp" />\n'
                f'          <img src="{desk}" alt="{alt_a}" width="{w}" height="{h}" loading="lazy" />\n        </picture>')
     else:
         pic = f'<img src="{desk}" alt="{alt_a}" width="{w}" height="{h}" loading="lazy" />'
