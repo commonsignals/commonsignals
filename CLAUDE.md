@@ -9,3 +9,7 @@ When publishing or updating an article from `_incoming/`:
 3. Never publish `<!-- Q SOURCE: ... -->` comments. They are internal notes. The build drops them and refuses to write a page containing one; don't copy them across by any other route.
 
 The editorial rules for the questions themselves are in the Common Signals style guide, not here.
+
+## Site footer
+
+The footer is shared. Edit `scripts/footer.inc`, never a page's footer, then run `python3 scripts/build-footer.py`. When adding a new page, copy any existing page's footer and run the script.

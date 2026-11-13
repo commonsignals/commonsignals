@@ -22,6 +22,16 @@ python3 -m http.server 8000
 
 Then open http://localhost:8000.
 
+## Footer
+
+Every page carries its own copy of the site footer, so it works without JavaScript and search engines can read its links. The single source is `scripts/footer.inc`. To change the footer, edit that file and run:
+
+```bash
+python3 scripts/build-footer.py
+```
+
+The script rewrites the region from `<footer class="site">` to `</footer>` in every page, including new pages not yet committed, and leaves the rest of each page alone. Never edit a page's footer by hand: the next run will overwrite it. `python3 scripts/build-footer.py --check` lists any page whose footer has drifted. A page whose footer differs on purpose (the comment analyser's newsletter form ids) is declared in `VARIANTS` in the script.
+
 ## Data pages
 
 `data/index.html` and every `data/<slug>/` and `data/<slug>/codebook/` page hold pre-rendered content between `build-data:start` and `build-data:end` markers, so search engines and AI assistants can read them without running JavaScript. After changing a study, run:
