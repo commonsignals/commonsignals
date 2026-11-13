@@ -126,7 +126,8 @@ def check(path, kind):
     # 5. Yes/no headings answered directly.
     bad = []
     for i, n, lvl, t in heads:
-        if lvl in (2, 3) and first_word(t) in YES_NO_STARTS:
+        # A heading in quotation marks quotes someone else's question (an objection), so it is skipped.
+        if lvl in (2, 3) and not t.startswith(('"', "'", "“", "‘")) and first_word(t) in YES_NO_STARTS:
             nxt = next(((m, x) for m, x in lines[i + 1:] if x.strip() and not is_comment(x)), None)
             if nxt is None or heading(nxt[1])[0] or first_word(nxt[1]) not in ANSWER_STARTS:
                 got = first_word(nxt[1]) if nxt else "nothing"
