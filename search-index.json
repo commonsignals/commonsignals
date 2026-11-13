@@ -253,5 +253,10 @@
 "t": "Workshops",
 "u": "/workshops",
 "d": "Common Signals plans hands-on workshops that apply its toolkit and reception studies to an organisation's own AI messaging. They are not available yet."
+},
+{
+"t": "Write for Common Signals",
+"u": "/write-for-us",
+"d": "Common Signals publishes evidence on how the public responds to messages about AI. If you have tested a message, studied a reaction or run a campaign, and can show what happened, we would like to publish it."
 }
 ]
