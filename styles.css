@@ -12,7 +12,7 @@
   --noise: #b7b0a0;
   --serif: "Lora", "Iowan Old Style", ui-serif, Georgia, serif;
   --sans: var(--serif); /* body text matches headings */
-  --mono: "IBM Plex Sans", -apple-system, sans-serif;
+  --mono: var(--serif); /* labels and UI match headings */
   --max: 64rem;
   color-scheme: light;
 }
