@@ -11,7 +11,7 @@
   --teal-text: #006375;
   --noise: #b7b0a0;
   --serif: "Lora", "Iowan Old Style", ui-serif, Georgia, serif;
-  --sans: "IBM Plex Sans", -apple-system, sans-serif;
+  --sans: var(--serif); /* body text matches headings */
   --mono: "IBM Plex Sans", -apple-system, sans-serif;
   --max: 64rem;
   color-scheme: light;
