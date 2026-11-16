@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 1056" width="360" height="1056" role="img" aria-label="The causal chain from activities to impact: activities lead to outputs, which lead to communicator outcomes, which lead to public outcomes, which lead to a durable social mandate for AI governance, each step carrying an assumption"><style>
 .title{font-family:"Lora",Georgia,serif;font-size:19px;font-weight:600;fill:#232019}
-.head{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:15px;font-weight:600;fill:#232019}
-.body,.sub,.pilltext{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:14px;fill:#5a564c}
+.head{font-family:"Lora",Georgia,serif;font-size:15px;font-weight:600;fill:#232019}
+.body,.sub,.pilltext{font-family:"Lora",Georgia,serif;font-size:14px;fill:#5a564c}
 .sub{fill:#006375}
 .pilltext{fill:#232019}
-.as{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:14px;fill:#5a564c}
+.as{font-family:"Lora",Georgia,serif;font-size:14px;fill:#5a564c}
 .ask{font-weight:600;fill:#006375}
-.grp{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:14px;font-weight:600;fill:#006375}
+.grp{font-family:"Lora",Georgia,serif;font-size:14px;font-weight:600;fill:#006375}
 .box-control{fill:#dde9e7;stroke:#006375;stroke-width:1.4}
 .box-contrib{fill:#f5f4ef;stroke:#008ba3;stroke-width:1.4;stroke-dasharray:5 4}
 .pill{fill:#e8efec;stroke:#008ba3;stroke-width:1;stroke-opacity:.45}

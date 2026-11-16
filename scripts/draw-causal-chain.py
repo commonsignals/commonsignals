@@ -169,13 +169,13 @@ def build(W, phone):
 
     style = f"""
 .title{{font-family:"Lora",Georgia,serif;font-size:{s['title']}px;font-weight:600;fill:{INK}}}
-.head{{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:{s['head']}px;font-weight:600;fill:{INK}}}
-.body,.sub,.pilltext{{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:{s['body']}px;fill:{SOFT}}}
+.head{{font-family:"Lora",Georgia,serif;font-size:{s['head']}px;font-weight:600;fill:{INK}}}
+.body,.sub,.pilltext{{font-family:"Lora",Georgia,serif;font-size:{s['body']}px;fill:{SOFT}}}
 .sub{{fill:{TEAL}}}
 .pilltext{{fill:{INK}}}
-.as{{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:{s['assume']}px;fill:{SOFT}}}
+.as{{font-family:"Lora",Georgia,serif;font-size:{s['assume']}px;fill:{SOFT}}}
 .ask{{font-weight:600;fill:{TEAL}}}
-.grp{{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:{s['group']}px;font-weight:600;fill:{TEAL}}}
+.grp{{font-family:"Lora",Georgia,serif;font-size:{s['group']}px;font-weight:600;fill:{TEAL}}}
 .box-control{{fill:{TINT};stroke:{TEAL};stroke-width:1.4}}
 .box-contrib{{fill:{PAPER};stroke:{TEAL2};stroke-width:1.4;stroke-dasharray:5 4}}
 .pill{{fill:{TINT2};stroke:{TEAL2};stroke-width:1;stroke-opacity:.45}}

@@ -33,7 +33,7 @@ STANCE = {
 NEUTRAL_DARK, NEUTRAL_LIGHT = "#5b554c", "#c9c2b6"
 LEGEND_DEFAULT = {"agree": "Agrees", "agree_part": "Agrees in part", "mixed": "Mixed",
                   "disagree": "Disagrees", "none": "No clear position", "action": "Names an action"}
-SANS = '"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif'
+SANS = '"Lora",Georgia,serif'
 SERIF = '"Lora",Georgia,serif'
 
 # Two sizes: desktop is 720 wide (shown ~640-700px), phone is 360 wide (shown ~330-350px).

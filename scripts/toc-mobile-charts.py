@@ -8,7 +8,7 @@ import html
 
 W, PAD = 360, 20
 INK, MUTED, ACC, PAPER, RULE = "#232019", "#635f54", "#7a1e49", "#f5f4ef", "#d8d6d1"
-SANS = '"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif'
+SANS = '"Lora",Georgia,serif'
 SERIF = '"Lora",Georgia,serif'
 
 

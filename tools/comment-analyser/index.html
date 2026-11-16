@@ -31,7 +31,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="/styles.css?v=20261111" />
 <script type="application/ld+json">
@@ -418,7 +418,7 @@
 
   // ---- charts (return SVG strings) ----
   const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-  const STYLE = `<style>.t{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:12px;fill:${MUTED}}.n{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:13px;font-weight:600;fill:${INK}}.l{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:14px;fill:${INK}}.q{font-family:"IBM Plex Sans",-apple-system,sans-serif;font-size:13px;fill:${INK}}.h{font-family:"Lora",Georgia,serif;font-size:17px;font-weight:600;fill:${INK}}.ax{stroke:${LINE};stroke-width:1}</style>`;
+  const STYLE = `<style>.t{font-family:"Lora",Georgia,serif;font-size:12px;fill:${MUTED}}.n{font-family:"Lora",Georgia,serif;font-size:13px;font-weight:600;fill:${INK}}.l{font-family:"Lora",Georgia,serif;font-size:14px;fill:${INK}}.q{font-family:"Lora",Georgia,serif;font-size:13px;fill:${INK}}.h{font-family:"Lora",Georgia,serif;font-size:17px;font-weight:600;fill:${INK}}.ax{stroke:${LINE};stroke-width:1}</style>`;
   const wrap = (w, h, body, label) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="100%" role="img" aria-label="${esc(label)}">${STYLE}<rect width="${w}" height="${h}" fill="${PAPER}"/>${body}</svg>`;
   const fmt = n => Number(n).toLocaleString("en-GB");
 
