@@ -1484,17 +1484,7 @@ a.fn:hover { text-decoration: underline; }
 .article-body .article-notes li { font-size: 0.92rem; }
 a.fn, .footnotes li { scroll-margin-top: 6rem; }
 
-/* ---------- Study caveat and pre-pilot banner ---------- */
-.caveat-line {
-  font-family: var(--sans);
-  font-size: 0.95rem;
-  color: var(--ink-faint);
-  margin: 0.6rem 0 0;
-}
-.caveat-line a { color: var(--teal-text); text-decoration: none; border-bottom: 1px solid var(--teal-text); }
-.caveat-line a:hover { color: var(--teal); border-color: var(--teal); }
-.featured-desc:has(+ .caveat-line) { margin-bottom: 0.4rem; }
-.featured-desc + .caveat-line { margin: 0 0 1.4rem; }
+/* ---------- Pre-pilot banner ---------- */
 .coming-soon-banner {
   background: var(--signal-soft);
   border-bottom: 1px solid var(--line);

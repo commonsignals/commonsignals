@@ -17,8 +17,6 @@ cite: "Ben Matthews, Common Signals, '\"A problem they created\": how a news aud
 
 We coded 322 YouTube comments on Amanpour and Company's interview with Heidy Khlaaf, who argues the "rogue AI" story is the wrong one. Most of the audience agreed with her, got angrier as the thread aged, and asked for regulation without being prompted.
 
-Hypothesis generation, not a claim about public opinion. [Read the methodology →](https://commonsignals.org/methodology)
-
 Short answer
 
 Of the 223 comments taking a readable position in our 16 September 2026 capture, 68% accepted Heidy Khlaaf's argument that the real story is corporate negligence, 18% rejected it and 14% accepted part of it. Among agreeing comments 44% were angry, and 12% of comments called for regulation, prosecution or a watchdog.
@@ -200,8 +198,6 @@ cite: "Ben Matthews, Common Signals, '\"Please honor commit\": how the OpenAI ag
 "Please honor commit": how the OpenAI agent-swarm story landed with the audience most likely to believe it
 
 We coded 1,245 YouTube comments on the Dwarkesh Podcast's interview with METR's Ajeya Cotra about the OpenAI agent-swarm incident. The audience accepted the danger, joked about it, praised the messenger, and had no idea what to do next.
-
-Hypothesis generation, not a claim about public opinion. [Read the methodology →](https://commonsignals.org/methodology)
 
 Short answer
 
@@ -389,8 +385,6 @@ cite: "Ben Matthews, Common Signals, '\"Neither company is acting responsibly\":
 
 We coded 2,480 replies to a former Anthropic researcher's resignation thread on X.
 
-Hypothesis generation, not a claim about public opinion. [Read the methodology →](https://commonsignals.org/methodology)
-
 Short answer
 
 Of 2,480 replies coded in September 2026, the 1,840 where we could tell what the writer thought split almost evenly: 43% agreed with Coxon that the labs are racing recklessly towards superintelligence, 40% disagreed and 18% were mixed. The most common objection, from one in five sceptical replies, was that AI can't improve itself into the superintelligence Coxon warns of.
@@ -559,8 +553,6 @@ cite: "Ben Matthews, Common Signals, '\"Can't we just unplug it?\": The Diary of
 Much of the support for the AI risk case was a verdict on one debater, and almost no one asked what to do about AI risks.
 
 We coded over 26,000 comments on the Diary of a CEO's AI risk debate: the full episode and three shorter cuts of it, posted across five platforms. Agreement with the risk case ran from 88% under a 21-minute cut on Facebook to 49% under a 104-second trailer on YouTube Shorts.
-
-Hypothesis generation, not a claim about public opinion. [Read the methodology →](https://commonsignals.org/methodology)
 
 Short answer
 
@@ -768,8 +760,6 @@ OpenAI and shut? What an independent report did to the marketing-stunt argument
 
 We compared Reddit comments on the OpenAI and Hugging Face incident before and after METR and Redwood Research published an independent investigation. Afterwards, fewer people called it a stunt and more accepted it happened. The ones still calling it a stunt got harder to shift.
 
-Hypothesis generation, not a claim about public opinion. [Read the methodology →](https://commonsignals.org/methodology)
-
 Short answer
 
 Among the Reddit comments we captured on 3 and 4 September 2026 that took a position, acceptance rose from 51% to 69% after the report and rejection fell from 22% to 14%. The comparison sets one subreddit against seven, so the audience changed as well as the evidence: treat the direction as the finding and the exact percentages as approximate.
@@ -965,8 +955,6 @@ cite: "Ben Matthews, Common Signals, 'How Instagram received Nate Soares's cavem
 How Instagram received Nate Soares's caveman-speak explainer of AI risk
 
 We coded 1,534 Instagram comments on a one-minute reel by Nate Soares of the Machine Intelligence Research Institute (MIRI). Most commenters accepted the argument. Many said it was already too late, and almost nobody asked what to do.
-
-Hypothesis generation, not a claim about public opinion. [Read the methodology →](https://commonsignals.org/methodology)
 
 Short answer
 
