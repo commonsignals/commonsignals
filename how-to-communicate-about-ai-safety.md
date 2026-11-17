@@ -301,6 +301,8 @@ This issue covers statutory inspection regimes, pre-deployment audits, and bindi
 - **Don't** adopt industry vocabulary like "light-touch regulation," "pro-innovation regimes," or voluntary "responsible self-governance."
 - **Example message:** "We expect our bridges, aeroplanes, and prescription medicines to be tested by independent inspectors before anyone uses them. Nine in ten of us believe AI should meet that exact same standard. Yet right now, commercial tech firms are allowed to mark their own homework in secret. An independent public watchdog with the legal power to inspect advanced systems, investigate failures, and switch off dangerous software is what people already expect. It is time the law caught up."
 
+Read the full issue guide: [How to talk about AI regulation and independent oversight](https://commonsignals.org/how-to-talk-about-ai-regulation)
+
 ### 3. Jobs and the economy
 
 This issue addresses workplace automation, algorithmic management, and long-term job security.
