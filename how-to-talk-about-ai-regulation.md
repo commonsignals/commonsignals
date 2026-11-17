@@ -16,8 +16,6 @@ This guide is written for communicators and campaigners drafting messages now. E
 
 This is the second of seven issue guides expanding the short versions in [How to communicate about AI safety](https://commonsignals.org/how-to-communicate-about-ai-safety#2-regulation-and-independent-oversight). It covers the case for an independent regulator, testing before release, and binding rules for the most powerful AI models.
 
-In Diffusion's UK dial test, the message for an independent regulator ranked second of the five tested (72.7 out of 100), and independent regulators had the best net favourability of any institution in the survey. That favourable score applies to independent regulators in general. Asked about by name, the AI Security Institute scored net -8. Most of the other issue guides end on this remedy, so this is the argument you are likely to make most often.
-
 ## Does the public want AI regulated?
 
 Yes, so you do not need to convince people that AI needs rules. In [Diffusion's survey](https://diffusion-beta.netlify.app/assets/Diffusion-UK-AI-Compass-Report.pdf) of 2,911 UK adults, 85% said the UK needs stronger laws to make AI safe, and 10% would rather trust companies to regulate themselves.
