@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script data-cfasync="false" src="/analytics.js"></script>
+<title>How to talk about AI, jobs and the economy: Common Signals</title>
+<meta name="description" content="Three dos and a don&#x27;t for talking about automation at work: who decides, who gains, and how workers get a say." />
+
+<meta property="og:title" content="How to talk about AI, jobs and the economy" />
+<meta property="og:description" content="Three dos and a don&#x27;t for talking about automation at work: who decides, who gains, and how workers get a say." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://commonsignals.org/how-to-talk-about-ai-and-jobs" />
+<meta property="og:site_name" content="Common Signals" />
+<meta property="og:image" content="https://commonsignals.org/og-image.png?v=20261111" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Common Signals: helping people explaining AI see how their messages actually land." />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="How to talk about AI, jobs and the economy" />
+<meta name="twitter:description" content="Three dos and a don&#x27;t for talking about automation at work: who decides, who gains, and how workers get a say." />
+<meta name="twitter:image" content="https://commonsignals.org/og-image.png?v=20261111" />
+
+<link rel="canonical" href="https://commonsignals.org/how-to-talk-about-ai-and-jobs" />
+<link rel="alternate" type="text/markdown" href="https://commonsignals.org/how-to-talk-about-ai-and-jobs.md" />
+<meta name="robots" content="index, follow" />
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/styles.css?v=20261111" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to talk about AI, jobs and the economy",
+  "description": "Three dos and a don't for talking about automation at work: who decides, who gains, and how workers get a say.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "url": "https://commonsignals.org/how-to-talk-about-ai-and-jobs",
+  "author": {"@type": "Person", "name": "Ben Matthews"},
+  "publisher": {"@type": "Organization", "name": "Common Signals", "url": "https://commonsignals.org/", "logo": {"@type": "ImageObject", "url": "https://commonsignals.org/og-image.png"}},
+  "isPartOf": {"@type": "Article", "headline": "How to communicate about AI safety", "url": "https://commonsignals.org/how-to-communicate-about-ai-safety"}
+}
+</script>
+<!-- build-questions:start jsonld -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How strong is the evidence behind these rules?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It varies by rule, and the Sources label each figure. The opinion figures and Diffusion's dial-test scores are Tested, meaning a single survey or experiment. The two message studies disagree on jobs and neither has been replicated. The PauseAI and TUC examples are Observed: they show what campaigners did, and nobody measured the effect. Rule 2 applies findings from other tests. Build on the Tested figures and treat the rest as hypotheses to try."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this advice apply outside the UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Partly. The strongest support for leading with jobs is American: the US message test ranked jobs first, and 74% of US adults say AI is making job security worse. The figures on who gains and on a say for workers are British, and the don't comes from a UK message with a British flag in it. Elsewhere, keep the structure: a named decision-maker, an example from a familiar workplace, and a link to who checks the companies."
+      }
+    }
+  ]
+}
+</script>
+<!-- build-questions:end jsonld -->
+<style>
+  /* Running text in the heading serif, at the site's 17px body size */
+  .article-body > p,
+  .article-body > ul > li,
+  .article-body > ol > li { font-family: var(--serif); font-size: 17px; }
+  /* Subheadings sit between the 17px body and the 21.6px section headings */
+  .article-body h3 { font-size: 1.2rem; }
+  /* Inline charts: desktop and mobile variants, as the site's <picture> charts do */
+  .article-body figure.chart svg { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 8px; }
+  .article-body figure.chart .chart-mobile { display: none; }
+  @media (max-width: 640px) {
+    .article-body figure.chart .chart-desktop { display: none; }
+    .article-body figure.chart .chart-mobile { display: block; }
+  }
+  /* Chart source lines, kept from each chart's original article */
+  .article-body figcaption .figure-source { display: block; margin-top: 0.3rem; font-size: 0.85rem; }
+  /* Screenshots of other organisations' pages: framed so they read as images, not as this page. */
+  .article-body figure.shot img { border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+  /* Evidence grades: a traffic-light dot before each grade. Green and red are the site's chart
+     teal and maroon; amber is an ochre that sits on the paper background. The word always stays. */
+  .grade { white-space: nowrap; }
+  .grade-dot {
+    display: inline-block;
+    width: 0.62em;
+    height: 0.62em;
+    margin: 0 0.32em 0.06em 0.05em;
+    border-radius: 50%;
+    vertical-align: middle;
+    box-shadow: 0 0 0 1px rgba(35, 32, 25, 0.12);
+  }
+  .grade-established .grade-dot { background: #0f8a78; }
+  .grade-tested .grade-dot { background: #c98a17; }
+  .grade-observed .grade-dot { background: #a8323e; }
+  .article-body .grade-key { list-style: none; margin: 1.2rem 0 1.6rem; padding: 0; display: grid; gap: 0.7rem; }
+  .article-body .grade-key li { color: var(--ink-soft); line-height: 1.6; }
+  .article-body .grade-key .grade-dot { width: 0.8em; height: 0.8em; }
+
+  /* Mobile section navigator: "You are currently reading", after JRF's report pages.
+     Sits under the sticky site header; only on widths where the sidebar contents is not sticky. */
+  .section-nav { display: none; }
+  @media (max-width: 860px) {
+    .section-nav {
+      display: block;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: var(--section-nav-top, 0px);
+      z-index: 19;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: var(--sans);
+      transform: translateY(-110%);
+      visibility: hidden;
+      transition: transform 0.2s ease, visibility 0s linear 0.2s;
+      box-shadow: 0 6px 16px rgba(35, 32, 25, 0.18);
+    }
+    .section-nav.is-visible {
+      transform: translateY(0);
+      visibility: visible;
+      transition: transform 0.2s ease, visibility 0s;
+    }
+    .section-nav-bar {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.6rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-nav-current { flex: 1; min-width: 0; margin: 0; line-height: 1.3; }
+    .section-nav-label { display: block; font-size: 0.8rem; font-weight: 500; color: var(--signal-soft); }
+    .section-nav-title {
+      display: block;
+      font-size: 0.98rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .section-nav-toggle {
+      flex: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      min-height: 44px;
+      padding: 0 0.2rem;
+      background: none;
+      border: 0;
+      color: var(--paper);
+      font: 500 0.92rem var(--sans);
+      cursor: pointer;
+    }
+    .section-nav-toggle svg { width: 10px; height: 10px; transition: transform 0.2s ease; }
+    .section-nav-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+    .section-nav-toggle:focus-visible, .section-nav-list a:focus-visible { outline: 2px solid var(--signal-soft); outline-offset: 2px; }
+    .section-nav-panel {
+      border-top: 1px solid rgba(245, 244, 239, 0.16);
+      max-height: calc(100vh - var(--section-nav-top, 0px) - 4rem);
+      max-height: calc(100dvh - var(--section-nav-top, 0px) - 4rem);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+    .section-nav-list { list-style: none; margin: 0 auto; padding: 0.5rem 1rem 1rem; max-width: 1200px; }
+    .section-nav-list a {
+      display: block;
+      padding: 0.55rem 0 0.55rem 0.8rem;
+      border-left: 2px solid transparent;
+      color: rgba(245, 244, 239, 0.86);
+      text-decoration: none;
+      font-size: 0.98rem;
+      line-height: 1.35;
+    }
+    .section-nav-list a[aria-current="true"] { color: #fff; border-left-color: var(--signal-soft); font-weight: 500; }
+    .article-body h2, .article-body h3 { scroll-margin-top: calc(var(--section-nav-top, 0px) + 5.25rem); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .section-nav, .section-nav.is-visible, .section-nav-toggle svg { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a href="/" class="wordmark">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#7a1e49"/><path d="M4 20 Q8 12 11 20 T18 20" stroke="#f5f4ef" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M18 20 Q22 8 28 20" stroke="#f5f4ef" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
+      Common Signals
+    </a>
+    <ul class="nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/research">Research</a></li>
+      <li><a href="/tools">Tools</a></li>
+      <li><a href="/training">Training</a></li>
+      <li><a href="/workshops">Workshops</a></li>
+      <li><a href="/updates">Updates</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-search-toggle" id="searchToggle" type="button" aria-label="Search the site" aria-expanded="false" aria-controls="siteSearch">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><line x1="16" y1="16" x2="21" y2="21"/></svg>
+      </button>
+      <a class="nav-cta" href="/work-with-us">Work with us</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navDrawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="nav-drawer" id="navDrawer">
+    <ul>
+      <li><a href="/about">About</a></li>
+      <li><a href="/research">Research</a></li>
+      <li><a href="/tools">Tools</a></li>
+      <li><a href="/training">Training</a></li>
+      <li><a href="/workshops">Workshops</a></li>
+      <li><a href="/updates">Updates</a></li>
+      <li><a href="/work-with-us">Work with us</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="site-search" id="siteSearch" hidden>
+    <div class="wrap site-search-panel">
+      <form role="search" action="/sitemap">
+        <label for="siteSearchInput" class="sr-only">Search Common Signals</label>
+        <input type="search" class="search-input" id="siteSearchInput" name="q" placeholder="Search the site: try a topic, platform or person" autocomplete="off" enterkeyhint="go">
+      </form>
+      <p class="search-status" role="status" aria-live="polite"></p>
+      <ul class="search-results"></ul>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <nav class="section-nav" id="sectionNav" aria-label="Sections">
+    <div class="section-nav-bar">
+      <p class="section-nav-current"><span class="section-nav-label">You are currently reading:</span>
+        <span class="section-nav-title" id="sectionNavTitle">Are people worried about AI and their jobs?</span></p>
+      <button type="button" class="section-nav-toggle" id="sectionNavToggle" aria-expanded="false" aria-controls="sectionNavPanel">
+        <span class="section-nav-toggle-text">View all sections</span>
+        <svg viewBox="0 0 10 6" aria-hidden="true"><path d="M0 0h10L5 6z" fill="currentColor"/></svg>
+      </button>
+    </div>
+    <div class="section-nav-panel" id="sectionNavPanel" hidden>
+      <ul class="section-nav-list">
+          <li><a href="#are-people-worried-about-ai-and-their-jobs">Are people worried about AI and their jobs?</a></li>
+          <li><a href="#does-worry-about-jobs-move-people-to-act">Does worry about jobs move people to act?</a></li>
+          <li><a href="#1-name-who-decides-to-automate-and-who-gains">1. Name who decides to automate, and who gains</a></li>
+          <li><a href="#2-start-with-the-ai-people-already-meet-at-work">2. Start with the AI people already meet at work</a></li>
+          <li><a href="#3-connect-a-say-for-workers-to-oversight-of-the-companies">3. Connect a say for workers to oversight of the companies</a></li>
+          <li><a href="#and-a-dont-nostalgia-for-the-british-worker">And a don't: nostalgia for the British worker</a></li>
+          <li><a href="#example-messages">Example messages</a></li>
+          <li><a href="#objections-to-prepare-for">Objections to prepare for</a></li>
+          <li><a href="#questions-people-ask">Questions people ask</a></li>
+          <li><a href="#sources">Sources</a></li>
+          <li><a href="#related-research">Related research</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="article-hero">
+    <p class="article-eyebrow">24 November 2026 &middot; Ben Matthews</p>
+    <h1>How to talk about AI, jobs and the economy</h1>
+    <p class="article-dek">Three dos and a don't for talking about automation at work: who decides, who gains, and how workers get a say.</p>
+    <div class="hero-actions">
+      <button type="button" class="share-copy">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9 17H7a5 5 0 1 1 0-10h2"/>
+          <path d="M15 7h2a5 5 0 1 1 0 10h-2"/>
+          <line x1="8" y1="12" x2="16" y2="12"/>
+        </svg>
+        <span class="share-copy-label" aria-live="polite">Copy link</span>
+      </button>
+      <button type="button" class="ai-copy" data-md="/how-to-talk-about-ai-and-jobs.md">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="9" y="9" width="11" height="11" rx="2"/>
+          <path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"/>
+        </svg>
+        <span class="ai-copy-label" aria-live="polite">Copy for AI</span>
+      </button>
+      <a class="hero-data-link md-view" href="/how-to-talk-about-ai-and-jobs.md">View as markdown</a>
+    </div>
+  </div>
+
+  <div class="article-shell">
+    <aside class="article-toc" aria-label="Table of contents">
+      <p class="toc-heading">Contents</p>
+      <ul>
+        <li><a href="#are-people-worried-about-ai-and-their-jobs">Are people worried about AI and their jobs?</a></li>
+        <li><a href="#does-worry-about-jobs-move-people-to-act">Does worry about jobs move people to act?</a></li>
+        <li><a href="#1-name-who-decides-to-automate-and-who-gains">1. Name who decides to automate, and who gains</a></li>
+        <li><a href="#2-start-with-the-ai-people-already-meet-at-work">2. Start with the AI people already meet at work</a></li>
+        <li><a href="#3-connect-a-say-for-workers-to-oversight-of-the-companies">3. Connect a say for workers to oversight of the companies</a></li>
+        <li><a href="#and-a-dont-nostalgia-for-the-british-worker">And a don't: nostalgia for the British worker</a></li>
+        <li><a href="#example-messages">Example messages</a></li>
+        <li><a href="#objections-to-prepare-for">Objections to prepare for</a></li>
+        <!-- build-questions:start toc -->
+        <li><a href="#questions-people-ask">Questions people ask</a></li>
+        <!-- build-questions:end toc -->
+        <li><a href="#sources">Sources</a></li>
+        <li><a href="#related-research">Related research</a></li>
+      </ul>
+    </aside>
+
+    <article class="article-body">
+
+      <p>This guide is for communicators and campaigners drafting messages now. It is the third of seven issue guides expanding on <a href="https://commonsignals.org/how-to-communicate-about-ai-safety#3-jobs-and-the-economy">How to communicate about AI safety</a>, covering workplace automation, software that hires, schedules and monitors staff, and more.</p>
+
+      <p>Each section gives a real-world example, a verifiable proof point, and a ready-to-use script.</p>
+
+      <h2 id="are-people-worried-about-ai-and-their-jobs">Are people worried about AI and their jobs?</h2>
+
+      <p>Yes, and the worry cuts across party lines. In a Survation poll for the <a href="https://www.tuc.org.uk/node/531493" target="_blank" rel="noopener">TUC</a> (2,605 UK adults, July 2025), 51% of adults said they were concerned about the impact of AI and new technologies on their job, rising to 62% among workers aged 25 to 34. Concern was almost identical across voters: 52% of Labour voters, 49% of Conservatives, and 52% of Reform voters.</p>
+
+      <figure>
+        <picture>
+          <source media="(max-width: 640px)" srcset="/assets/ai-and-jobs/IG3-A-concern-by-age-and-vote-mobile.svg" width="360" height="468" />
+          <img src="/assets/ai-and-jobs/IG3-A-concern-by-age-and-vote.svg" alt="Bar chart of UK adults concerned about the impact of AI on their job: all adults 51%, workers aged 25 to 34 62%, Labour voters 52%, Conservative voters 49%, Reform voters 52%" width="720" height="393" loading="lazy" />
+        </picture>
+        <figcaption>Concern about AI and jobs by age and vote. TUC and Survation, 2025.</figcaption>
+      </figure>
+
+      <p>Other surveys show the same pattern:</p>
+
+      <ul class="arrow-list">
+
+        <li>In <a href="https://diffusion-beta.netlify.app/assets/Diffusion-UK-AI-Compass-Report.pdf" target="_blank" rel="noopener">Diffusion's survey</a> of 2,911 UK adults, 74% expected AI to reduce the number of jobs available, while only 10% expected it to create them.</li>
+
+        <li>In the US, 74% of adults say AI is making job security worse, compared with 13% who say better (<a href="https://www.americanson.ai/" target="_blank" rel="noopener">Americans on AI</a>, October-November 2026).</li>
+
+        <li>People also have a clear view on who profits: 68% of UK adults expect AI to benefit mainly the wealthiest households and corporations, while just 10% expect it to benefit working- or middle-class families (Diffusion).</li>
+
+      </ul>
+
+      <h2 id="does-worry-about-jobs-move-people-to-act">Does worry about jobs move people to act?</h2>
+
+      <p>Not on its own. Two studies tested job-focused messaging and got different results because they measured different things:</p>
+
+      <ul class="arrow-list">
+
+        <li><strong>High appeal:</strong> In a US message test by <a href="https://arxiv.org/abs/2511.06525" target="_blank" rel="noopener">Philip Trippenbach and colleagues</a> (1,063 adults choosing between 18 messages across six themes), jobs scored highest on average and ranked first in most demographic groups.</li>
+
+        <li><strong>Low action:</strong> In a UK randomised trial by <a href="https://www.socialchangelab.org/research/which-ai-harms-and-risks.html" target="_blank" rel="noopener">Social Change Lab</a> (3,467 adults reading short news-style reports on eleven AI harms), job displacement was the harm people mentioned most without prompting, yet it ranked poorly on willingness to act. As the authors put it: "salience is not a reliable proxy for action."</li>
+
+      </ul>
+
+      <p>The studies differ in country, method and measure, and neither has been replicated. Still, the US focus groups point to the likely reason for the gap: people rarely connect risks to their job with political action, treating them instead as a personal problem to manage alone.</p>
+
+      <p>To turn job worry into support for rules, you have to build the bridge deliberately. The evidence points to three practical habits (treat them as <a href="https://commonsignals.org/how-to-communicate-about-ai-safety#how-we-grade-ai-safety-evidence">hypotheses to test</a> with your audience): name who is deciding to automate, ground the story in a workplace people recognise, and link a say at work to <a href="https://commonsignals.org/how-to-talk-about-ai-regulation">independent oversight of AI companies</a>.</p>
+
+      <h2 id="1-name-who-decides-to-automate-and-who-gains">1. Name who decides to automate, and who gains</h2>
+
+      <p>Automation isn't the weather; someone decides to do it, and the public already assumes the profits will go to the top. Use a company's own words to show the decision, then ask who benefits.</p>
+
+      <p><strong>The case study:</strong> In June 2025, Amazon CEO Andy Jassy <a href="https://www.aboutamazon.com/news/company-news/amazon-ceo-andy-jassy-on-generative-ai" target="_blank" rel="noopener">wrote publicly to staff</a> that generative AI "will reduce our total corporate workforce." Jassy was talking only about corporate staff, not warehouse or frontline workers, and this specific quote hasn't been message-tested.</p>
+
+      <figure class="shot">
+        <picture>
+          <source type="image/webp" srcset="/assets/ai-and-jobs/IG3-1-amazon-jassy-memo.webp" />
+          <img src="/assets/ai-and-jobs/IG3-1-amazon-jassy-memo.png" alt="Paragraph from Andy Jassy&#x27;s June 2025 message to Amazon staff saying generative AI will reduce the corporate workforce" width="868" height="192" loading="lazy" />
+        </picture>
+        <figcaption>The decision, in the company's own words. Amazon. Captured 24 November 2026.</figcaption>
+      </figure>
+
+      <p><strong>The evidence:</strong> In <a href="https://diffusion-beta.netlify.app/assets/Diffusion-UK-AI-Compass-Report.pdf" target="_blank" rel="noopener">Diffusion's forced-choice UK survey</a>, 63.5% of adults chose reining in the power of billionaires over supporting business and engineers to drive growth (27.1%). Reform UK voters split 55% to 34% the same way.</p>
+
+      <p>In <a href="https://diffusion-beta.netlify.app/articles/uk-compass-report" target="_blank" rel="noopener">Diffusion's dial tests</a> (scored 0 to 100, with 50 as neutral), the messages that scored highest, and held up on reflection, named a specific actor, a concrete harm, and a clear remedy. The top scorer of all five (75.4) was actually a work-related copyright message: requiring consent and payment before AI companies use what people have created.</p>
+
+      <p>One caution from those same dial tests: Diffusion's workers message included a line accusing global corporations of replacing British workers and sending profits overseas. At that line, scores among two of six audience groups dipped just below neutral (47.5 and 48.9).</p>
+
+      <p>Keep the blame line short and move quickly to the remedy.</p>
+
+      <p><strong>Put it into practice:</strong></p>
+
+      <p>"Amazon's chief executive has told staff that AI will mean fewer corporate jobs. Automation is a decision, and decisions can be made with the people they affect. Most people expect the gains to go to the top, so they should be shared."</p>
+
+      <p><strong>Rule of thumb:</strong> Quote the company directly, with a date and a link. If you're talking to writers, musicians or designers, lead with the copyright version: it's the highest-scoring work message on record.</p>
+
+      <h2 id="2-start-with-the-ai-people-already-meet-at-work">2. Start with the AI people already meet at work</h2>
+
+      <p>For many workers, AI isn't a future threat; it's already the software screening CVs, setting shifts, or tracking output. Start with something your audience can check against their own working week before talking about where the technology is heading.</p>
+
+      <p><strong>The case study:</strong> PauseAI's campaign page <a href="https://pauseai.info/ai-not-just-coming-for-your-job" target="_blank" rel="noopener">AI is not just coming for your job</a> (May 2026) gets the sequence right. It opens with AI companies' stated aims, including OpenAI's mission to build systems that outperform humans at most economically valuable work, then moves to accountability when AI makes decisions on hiring, firing, lending and bail. Only after that does it raise loss of control, ending with actions readers can take. (One weakness to avoid: aside from the OpenAI quote, the page doesn't link to sources, leaving readers unable to verify its claims.)</p>
+
+      <figure class="shot">
+        <picture>
+          <source type="image/webp" srcset="/assets/toolkit/S08-pauseai-not-just-your-job.webp" />
+          <img src="/assets/toolkit/S08-pauseai-not-just-your-job.png" alt="PauseAI campaign page headed &quot;AI is not just coming for your job&quot;" width="816" height="212" loading="lazy" />
+        </picture>
+        <figcaption>Start with the job, then widen out. PauseAI, CC BY 4.0. Captured 7 November 2026.</figcaption>
+      </figure>
+
+      <p><strong>The evidence:</strong> In the TUC poll, the 51% of adults worried about AI cited changes to terms and conditions alongside job losses: people care about how their job is run, not just whether it exists. <a href="https://arxiv.org/abs/2511.06525" target="_blank" rel="noopener">Trippenbach and colleagues</a> also argue that extinction warnings underperform partly because people have no personal reference point for them, whereas jobs and children hit closer to home. In the US, 49% of adults say they are already seeing people pressured to do more, faster (<a href="https://www.americanson.ai/" target="_blank" rel="noopener">Americans on AI</a>). While no study has directly tested a current-workplace example against a future forecast, grounding your message in what people already experience gives them a concrete anchor.</p>
+
+      <p><strong>Put it into practice:</strong></p>
+
+      <p>"AI is already deciding who gets a job interview. The companies building it say that's just the start."</p>
+
+      <p><strong>Rule of thumb:</strong> Pick an example your audience could have encountered this month, then link to the company statement you're quoting.</p>
+
+      <h2 id="3-connect-a-say-for-workers-to-oversight-of-the-companies">3. Connect a say for workers to oversight of the companies</h2>
+
+      <p>Worry about a job doesn't automatically translate into support for AI governance. Make the link explicit in the same message: who tests these systems, who can see how they make decisions about people, and who answers when they get it wrong?</p>
+
+      <p><strong>The case study:</strong> In August 2025, the TUC launched a <a href="https://www.tuc.org.uk/node/531493" target="_blank" rel="noopener">"worker first" AI strategy</a> alongside its poll. It paired workplace demands (a voice in how AI is used on the job and how productivity gains are shared) with governance demands (a say in AI regulation and public funding, a model AI bill, and workers on company boards). Nobody has measured whether the platform shifted public opinion, but it's a clean template for linking the two.</p>
+
+      <p><strong>The evidence:</strong> Half of UK adults (50%) agree that workers and unions should have an equal say with business in shaping AI and technology, while just 17% disagree (<a href="https://www.tuc.org.uk/node/531493" target="_blank" rel="noopener">TUC/Survation</a>).</p>
+
+      <p>Extending it to oversight of AI labs is an untested step, but a logical one: Trippenbach and colleagues note that concern about everyday harms can spill over into support for governing the most powerful systems, just not automatically. You have to draw the line for the listener.</p>
+
+      <p><strong>Put it into practice:</strong></p>
+
+      <p>"You should get a say in how AI is used in your job. And the companies building it should be checked by someone independent before their systems decide who gets hired."</p>
+
+      <p><strong>Rule of thumb:</strong> Don't end on the job. Add one sentence that takes the listener from their workplace to who checks the companies.</p>
+
+      <h2 id="and-a-dont-nostalgia-for-the-british-worker">And a don't: nostalgia for the British worker</h2>
+
+      <p><a href="https://diffusion-beta.netlify.app/articles/uk-compass-report" target="_blank" rel="noopener">Diffusion's UK dial-test message</a> on AI and jobs opened with a patriotic picture of the industrial worker. Don't use that framing. While the substance of the message engaged every audience group, the opening split the room: Alarmed Populists rated the message 79.4, while Hopeful Regulators gave it 69.6.</p>
+
+      <p>In two focus groups of service-economy professionals, five of nine participants rejected the opening outright. One employment lawyer suggested naming workers in call centres, hospitals, warehouses and classrooms instead; her advice was to keep the substance and "lose the flag." Diffusion's own recommendation is the same: keep the named actor and the remedy, and open with today's workforce.</p>
+
+      <h2 id="example-messages">Example messages</h2>
+
+      <p><strong>Full version:</strong></p>
+
+      <p>"Whether you work in a call centre, a hospital, a warehouse or a classroom, AI companies say openly that they are building systems to do the work you are paid for. Most of us expect the gains to go to the wealthiest. That is a choice, and it can be made differently. Workers should have a seat at the table on how AI is used at work, and the companies building it should answer to an independent regulator as well as to their investors."</p>
+
+      <p><strong>Short version (for social):</strong></p>
+
+      <p>"Half of UK adults are worried about what AI will do to their job. Half want workers to have an equal say with business in how it's used. Start there: a say at work, and independent checks on the companies building it."</p>
+
+      <h2 id="objections-to-prepare-for">Objections to prepare for</h2>
+
+      <p>Write your answers before you need them. The first and third are standard industry lines, so expect them more from company spokespeople than from the public.</p>
+
+      <h3 id="technology-always-creates-new-jobs">"Technology always creates new jobs."</h3>
+
+      <p><strong>The trap:</strong> Arguing over a future forecast nobody can prove.</p>
+
+      <p><strong>The pivot:</strong> Shift from how many jobs to who decides. Since 74% of UK adults already expect AI to reduce jobs (Diffusion), the forecast argument rarely persuades the public anyway.</p>
+
+      <p><strong>Script:</strong> "Maybe it will. The question is who decides how the change happens, and whether the people doing the work get a say."</p>
+
+      <h3 id="its-inevitable">"It's inevitable."</h3>
+
+      <p><strong>The trap:</strong> Denying how people feel. In the US, 68% of adults say AI is coming into their lives whether they want it or not, and only 16% think people like them can shape it (<a href="https://www.americanson.ai/" target="_blank" rel="noopener">Americans on AI</a>).</p>
+
+      <p><strong>The pivot:</strong> Validate the feeling, then point to one decision that is still up for grabs.</p>
+
+      <p><strong>Script:</strong> "The technology is coming. How it's used in your workplace is still a decision, and right now it's being made without you."</p>
+
+      <figure class="shot">
+        <picture>
+          <source type="image/webp" srcset="/assets/ai-and-jobs/S19-americans-on-ai-inevitable.webp" />
+          <img src="/assets/ai-and-jobs/S19-americans-on-ai-inevitable.png" alt="Chart showing most Americans say AI is coming into their lives whether they want it or not" width="664" height="385" loading="lazy" />
+        </picture>
+        <figcaption>Most Americans say AI is coming into their lives whether they want it or not. Americans on AI. Captured 24 November 2026.</figcaption>
+      </figure>
+
+      <h3 id="ai-will-make-us-more-productive-and-everyone-benefits">"AI will make us more productive, and everyone benefits."</h3>
+
+      <p><strong>The trap:</strong> Arguing against productivity.</p>
+
+      <p><strong>The pivot:</strong> Ask who gets the gains: 68% of UK adults already expect them to go to the wealthiest households and corporations (Diffusion).</p>
+
+      <p><strong>Script:</strong> "Good. Then let's agree now how the gains are shared." (The TUC calls this a "digital dividend".)</p>
+
+      <!-- build-questions:start section -->
+      <section id="questions-people-ask" class="questions">
+        <h2>Questions people ask</h2>
+        <h3 id="how-strong-is-the-evidence-behind-these-rules">How strong is the evidence behind these rules?</h3>
+        <p>It varies by rule, and the Sources label each figure. The opinion figures and Diffusion's dial-test scores are Tested, meaning a single survey or experiment. The two message studies disagree on jobs and neither has been replicated. The PauseAI and TUC examples are Observed: they show what campaigners did, and nobody measured the effect. Rule 2 applies findings from other tests. Build on the Tested figures and treat the rest as <a href="https://commonsignals.org/how-to-communicate-about-ai-safety#how-we-grade-ai-safety-evidence" target="_blank" rel="noopener">hypotheses to try</a>.</p>
+        <h3 id="does-this-advice-apply-outside-the-uk">Does this advice apply outside the UK?</h3>
+        <p>Partly. The strongest support for leading with jobs is American: the US message test ranked jobs first, and 74% of US adults say AI is making job security worse. The figures on who gains and on a say for workers are British, and the don't comes from a UK message with a British flag in it. Elsewhere, keep the structure: a named decision-maker, an example from a familiar workplace, and a link to who checks the companies.</p>
+      </section>
+      <!-- build-questions:end section -->
+      <h2 id="sources">Sources</h2>
+
+      <ul class="arrow-list">
+
+        <li>TUC, <a href="https://www.tuc.org.uk/node/531493" target="_blank" rel="noopener">worker first AI strategy and Survation poll</a>, 2,605 UK adults, fieldwork July 2025, published 27 August 2025 (Tested for poll figures; Observed for the strategy as a campaign example).</li>
+
+        <li>Diffusion, <a href="https://diffusion-beta.netlify.app/assets/Diffusion-UK-AI-Compass-Report.pdf" target="_blank" rel="noopener">The UK AI Compass</a>, survey of 2,911 UK adults, December 2025, plus <a href="https://diffusion-beta.netlify.app/articles/uk-compass-report" target="_blank" rel="noopener">dial-test and focus-group results</a> (Tested for survey and dial tests; focus groups are qualitative).</li>
+
+        <li>Americans on AI, <a href="https://www.americanson.ai/" target="_blank" rel="noopener">biweekly US tracker</a>, Athena Insights and NORC, surveys fielded 22 October to 8 November 2026 <span class="grade grade-tested">(<span class="grade-dot" aria-hidden="true"></span>Tested)</span>.</li>
+
+        <li>Philip Trippenbach, Jai Bhambra, Isabella Scala and Rowan Emslie, <a href="https://arxiv.org/abs/2511.06525" target="_blank" rel="noopener">From catastrophic to concrete</a>, preprint, November 2025. Message test with 1,063 US adults, fielded 20 to 21 October 2025 <span class="grade grade-tested">(<span class="grade-dot" aria-hidden="true"></span>Tested)</span>; focus-group finding is qualitative.</li>
+
+        <li>Markus Ostarek, Cathy Rogers, Ben Kenward and Sam Nadel (Social Change Lab), <a href="https://www.socialchangelab.org/research/which-ai-harms-and-risks.html" target="_blank" rel="noopener">Which AI harms and risks will mobilise the public to act?</a>, randomised trial with 3,467 UK adults, 2026 <span class="grade grade-tested">(<span class="grade-dot" aria-hidden="true"></span>Tested)</span>.</li>
+
+        <li>Amazon, <a href="https://www.aboutamazon.com/news/company-news/amazon-ceo-andy-jassy-on-generative-ai" target="_blank" rel="noopener">message from CEO Andy Jassy on generative AI</a>, 17 June 2025.</li>
+
+        <li>PauseAI, <a href="https://pauseai.info/ai-not-just-coming-for-your-job" target="_blank" rel="noopener">AI is not just coming for your job</a>, May 2026 <span class="grade grade-observed">(<span class="grade-dot" aria-hidden="true"></span>Observed)</span>.</li>
+
+        <li>Message test details <span class="grade grade-tested">(<span class="grade-dot" aria-hidden="true"></span>Tested)</span>: In <a href="https://diffusion-beta.netlify.app/articles/uk-compass-report" target="_blank" rel="noopener">Diffusion's dial tests</a>, the copyright message scored 75.4 out of 100 (highest of five) and the workers message scored 72.2. Alarmed Populists rated the workers message 79.4; Hopeful Regulators rated it 69.6.</li>
+
+      </ul>
+
+      <h2 id="related-research">Related research</h2>
+
+      <ul class="arrow-list">
+
+        <li><a href="https://commonsignals.org/cant-we-just-unplug-it-doac-ai-debate-comment-analysis">"Can't we just unplug it?": The Diary of a CEO AI debate analysed through 26,000 comments</a></li>
+
+        <li><a href="https://commonsignals.org/findings">Findings so far: what four comment-thread studies say about explaining AI risk</a></li>
+
+        <li><a href="https://commonsignals.org/how-to-talk-about-ai-regulation">How to talk about AI regulation and independent oversight</a></li>
+
+        <li><a href="https://commonsignals.org/how-to-communicate-about-ai-safety">How to communicate about AI safety</a></li>
+
+        <li><a href="https://commonsignals.org/ai-safety-comms-reading-list">AI safety comms reading list</a></li>
+
+        <li><a href="https://commonsignals.org/methodology">Methodology: how we code comment threads, and what our studies can and can't tell you</a></li>
+
+      </ul>
+    </article>
+  </div>
+
+<script>
+(function () {
+  var nav = document.getElementById('sectionNav');
+  if (!nav) return;
+  var header = document.querySelector('header.site');
+  var toc = document.querySelector('.article-toc');
+  var body = document.querySelector('.article-body');
+  var title = document.getElementById('sectionNavTitle');
+  var toggle = document.getElementById('sectionNavToggle');
+  var toggleText = toggle.querySelector('.section-nav-toggle-text');
+  var panel = document.getElementById('sectionNavPanel');
+  var links = Array.prototype.slice.call(panel.querySelectorAll('a'));
+  var heads = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+  var mq = window.matchMedia('(max-width: 860px)');
+  var ticking = false;
+
+  function headerHeight() { return header ? header.getBoundingClientRect().height : 0; }
+  function setTop() { document.documentElement.style.setProperty('--section-nav-top', headerHeight() + 'px'); }
+
+  function setOpen(open) {
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggleText.textContent = open ? 'Close' : 'View all sections';
+    panel.hidden = !open;
+  }
+
+  function update() {
+    ticking = false;
+    if (!mq.matches) { nav.classList.remove('is-visible'); setOpen(false); return; }
+    var top = headerHeight();
+    var line = top + nav.getBoundingClientRect().height + 24;
+    var current = 0;
+    for (var i = 0; i < heads.length; i++) {
+      if (heads[i] && heads[i].getBoundingClientRect().top <= line) current = i;
+    }
+    links.forEach(function (a, i) {
+      if (i === current) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+    });
+    title.textContent = links[current].textContent;
+    // Show once the page's own contents list has scrolled away; hide after the article ends.
+    var afterToc = toc ? toc.getBoundingClientRect().bottom < top : true;
+    var inBody = body.getBoundingClientRect().bottom > top + 80;
+    var show = afterToc && inBody;
+    nav.classList.toggle('is-visible', show);
+    if (!show) setOpen(false);
+  }
+  function onScroll() { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } }
+
+  toggle.addEventListener('click', function () { setOpen(panel.hidden); });
+  links.forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !panel.hidden) { setOpen(false); toggle.focus(); }
+  });
+  document.addEventListener('click', function (e) { if (!panel.hidden && !nav.contains(e.target)) setOpen(false); });
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', function () { setTop(); onScroll(); });
+  if (header && 'ResizeObserver' in window) new ResizeObserver(function () { setTop(); onScroll(); }).observe(header);
+  setTop();
+  update();
+})();
+</script>
+
+<section id="article-subscribe" class="reveal">
+    <div class="wrap">
+      <h2>Want more analysis like this?</h2>
+      <form class="subscribe-box" action="https://commonsignalsorg.substack.com/api/v1/free" method="POST" target="subscribe-target" novalidate>
+        <div class="subscribe-row">
+          <label for="articleSubscribeEmail" class="sr-only">Email address</label>
+          <input type="email" name="email" id="articleSubscribeEmail" placeholder="Enter your email" required autocomplete="email" />
+          <button type="submit" class="btn btn-primary subscribe-submit">Subscribe <span aria-hidden="true">&#8599;</span></button>
+        </div>
+        <div class="hp-field" aria-hidden="true">
+          <label for="articleSubscribeWebsite">Leave this field blank</label>
+          <input type="text" id="articleSubscribeWebsite" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+        <p class="subscribe-note">Stay up to speed with our research on public understanding of AI. Roughly monthly.</p>
+        <p class="subscribe-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <section id="contact" class="reveal">
+    <div class="wrap">
+      <h2>Have data, a collaborator, or funding to offer?</h2>
+      <div class="contact-card">
+        <div>
+          <div class="mail"><a href="mailto:hello@commonsignals.org">hello@commonsignals.org</a></div>
+        </div>
+        <a class="btn btn-primary" href="/contact">Say hello</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-subscribe">
+      <h3>Want to stay up to date?</h3>
+      <form id="subscribeForm" class="subscribe-box" action="https://commonsignalsorg.substack.com/api/v1/free" method="POST" target="subscribe-target" novalidate>
+        <div class="subscribe-row">
+          <label for="subscribeEmail" class="sr-only">Email address</label>
+          <input type="email" name="email" id="subscribeEmail" placeholder="Enter your email" required autocomplete="email" />
+          <button type="submit" class="btn btn-primary subscribe-submit">Subscribe <span aria-hidden="true">&#8599;</span></button>
+        </div>
+        <div class="hp-field" aria-hidden="true">
+          <label for="subscribeWebsite">Leave this field blank</label>
+          <input type="text" id="subscribeWebsite" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+        <p class="subscribe-note">Stay up to speed with our research on public understanding of AI. Roughly monthly.</p>
+        <p class="subscribe-status" id="subscribeStatus" role="status" aria-live="polite"></p>
+      </form>
+      <div class="social-links">
+        <a href="https://www.youtube.com/@commonsignals" target="_blank" rel="noopener" aria-label="Common Signals on YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2.5" y="5" width="19" height="14" rx="4"/>
+            <path d="M10 9 L15.5 12 L10 15 Z" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/commonsignals" target="_blank" rel="noopener" aria-label="Common Signals on LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <text x="12" y="16.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="10.5" fill="currentColor" stroke="none">in</text>
+          </svg>
+        </a>
+        <a href="https://commonsignalsorg.substack.com/" target="_blank" rel="noopener" aria-label="Common Signals on Substack">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <path d="M9 7 L9 17 L12 14.3 L15 17 L15 7 Z" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/about">About</a></li>
+        <li><a href="/research">Research</a></li>
+        <li><a href="/tools">Tools</a></li>
+        <li><a href="/theory-of-change">Theory of change</a></li>
+        <li><a href="/methodology">Methodology</a></li>
+        <li><a href="/glossary">Glossary</a></li>
+        <li><a href="/data/">Data explorer</a></li>
+        <li><a href="/donate">Donate</a></li>
+      </ul>
+      <ul>
+        <li><a href="/training">Training</a></li>
+        <li><a href="/workshops">Workshops</a></li>
+        <li><a href="/updates">Updates</a></li>
+        <li><a href="/work-with-us">Work with us</a></li>
+        <li><a href="/write-for-us">Write for us</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+    <p class="copyright">&copy; 2026 Common Signals &middot; <a href="mailto:hello@commonsignals.org">hello@commonsignals.org</a> &middot; <a href="/privacy">Privacy policy</a> &middot; <a href="/sitemap">Sitemap</a></p>
+    <p class="footer-licence">Articles and coded datasets are published under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a> (comment text remains its original authors').</p>
+  </div>
+</footer>
+
+<script src="/grade-cards.js?v=20261112" defer></script>
+<script src="/main.js?v=20261110a" defer></script>
+
+<iframe name="subscribe-target" class="subscribe-target-frame" aria-hidden="true" tabindex="-1"></iframe>
+</body>
+</html>

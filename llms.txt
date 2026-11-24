@@ -19,6 +19,7 @@ The coded data lives at [/data/](https://commonsignals.org/data/). The coding an
 
 ## Articles
 
+- [How to talk about AI, jobs and the economy](https://commonsignals.org/how-to-talk-about-ai-and-jobs.md): Three dos and a don't for talking about automation at work: who decides, who gains, and how workers get a say.
 - [How to talk about AI regulation and independent oversight](https://commonsignals.org/how-to-talk-about-ai-regulation.md): Three dos and a don't for making the case for rules with teeth, and the words to avoid while you do it.
 - [Research agenda](https://commonsignals.org/research/agenda.md): Eleven hypotheses from six Common Signals comment-thread studies about how audiences receive messages on AI risk, the four to settle first in 2027, and how each can be tested.
 - [How to talk about loss of control and catastrophic risk](https://commonsignals.org/how-to-talk-about-loss-of-control.md): Three dos and a don't for explaining AI systems that act outside human intent.

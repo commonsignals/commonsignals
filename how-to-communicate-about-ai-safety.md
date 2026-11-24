@@ -313,6 +313,8 @@ This issue addresses workplace automation, algorithmic management, and long-term
 - **Don't** rely on outdated factory-floor imagery; modern automated systems directly impact office staff, healthcare workers, and teachers.
 - **Example message:** "Whether you work in a customer service centre, a hospital ward, a warehouse, or a school, tech companies are openly designing software to automate the work you are paid to do. If that happens, the economic rewards will flow entirely to a handful of tech monopolies unless democratic rules say otherwise. Working people deserve a direct seat at the table on how automation is rolled out, and the companies developing these systems must answer to the public, not just their investors."
 
+Read the full issue guide: [How to talk about AI, jobs and the economy](https://commonsignals.org/how-to-talk-about-ai-and-jobs)
+
 ### 4. Children and young people
 
 This issue covers conversational companions, algorithmic addiction, online exploitation, and psychological safety for minors.
