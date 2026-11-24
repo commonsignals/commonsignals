@@ -66,7 +66,7 @@ The government made its own promise. In the July 2024 King's Speech, the governm
 
 ![ControlAI tracker entry setting an OpenAI commitment against the GPT-4.1 launch](https://commonsignals.org/assets/toolkit/S05-controlai-artificial-guarantees-gpt41.png)
 
-What was promised, and what happened. ControlAI. Captured 17 November 2026.
+What was promised, and what happened. ControlAI. Captured 7 November 2026.
 
 **The evidence:** In [Diffusion's dial tests](https://diffusion-beta.netlify.app/articles/uk-compass-report), the highest-scoring messages named a specific actor, a tangible consequence and a clear remedy. Messages that offered hope without anyone accountable did well in the moment and faded on reflection. No tested message used the promise-versus-outcome structure, so the gap framing is an application of the accountable-actor finding, not something the dial tests measured directly.
 
