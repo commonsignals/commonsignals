@@ -9,7 +9,7 @@ cite: "Ben Matthews, Common Signals, 'How Instagram received Nate Soares's cavem
 
 # How did Instagram react to Nate Soares explaining AI risk?
 
-28 August 2026 · Ben Matthews
+28 August 2026
 
 How Instagram received Nate Soares's caveman-speak explainer of AI risk
 

@@ -11,10 +11,11 @@ and licence. It carries <base href> set to the live URL, so every link in the
 PDF points at commonsignals.org and the stylesheet, fonts and charts load from
 the live site: build after the page's assets are deployed.
 
-The version in the file name comes from the citation line: "version 0.2" gives
--v0.2, "version of 11 November 2026" gives -2026-11-11. The script then points
-the page's <a class="hero-data-link pdf-download"> link at the new file and
-names its version in the label. Older PDFs are kept, so links to them still
+The tag in the file name comes from the citation line: "version 0.2" gives
+-v0.2, "version of 11 November 2026" gives -2026-11-11, and a citation with no
+version gives its first date, so "11 November 2026" also gives -2026-11-11. The
+script then points the page's <a class="hero-data-link pdf-download"> link at
+the new file, labelled "Download PDF" with no version. Older PDFs are kept, so links to them still
 work. Run scripts/build-markdown.py afterwards so the markdown carries the link.
 
 Chrome is found at its usual macOS path, or set CHROME to its binary.
@@ -59,20 +60,23 @@ def citation(source):
     for p in re.findall(r"<p>(.*?)</p>", source, re.S):
         text = html.unescape(re.sub(r"<[^>]+>", "", p)).strip()
         text = re.sub(r"^Cite as:\s*", "", text)
-        if text.startswith("Ben Matthews, Common Signals,") and "version" in text:
+        if text.startswith("Ben Matthews, Common Signals,") and re.search(r"\d{4}", text):
             return text
-    raise SystemExit("no citation line with a version found")
+    raise SystemExit("no citation line with a date found")
 
 
 def version_tag(cite):
-    """The file-name tag and the link label's wording for the citation's version."""
+    """The file-name tag for the citation's version, or for its date when it names no version."""
     m = re.search(r"version (\d+(?:\.\d+)+)", cite)
     if m:
-        return "v" + m.group(1), "version " + m.group(1)
+        return "v" + m.group(1)
     m = re.search(r"version of (\d{1,2} \w+ \d{4})", cite)
     if m:
-        return datetime.datetime.strptime(m.group(1), "%d %B %Y").date().isoformat(), "version of " + m.group(1)
-    raise SystemExit(f"no version in: {cite}")
+        return datetime.datetime.strptime(m.group(1), "%d %B %Y").date().isoformat()
+    m = re.search(r"(\d{1,2} [A-Z][a-z]+ \d{4})", cite)
+    if m:
+        return datetime.datetime.strptime(m.group(1), "%d %B %Y").date().isoformat()
+    raise SystemExit(f"no version or date in: {cite}")
 
 
 def print_copy(source, url, cite):
@@ -92,7 +96,7 @@ def main():
         source = f.read_text(encoding="utf-8")
         url = re.search(r'<link rel="canonical" href="([^"]+)"', source).group(1)
         cite = citation(source)
-        tag, wording = version_tag(cite)
+        tag = version_tag(cite)
         pdf = OUT / f"{name}-{tag}.pdf"
         with tempfile.TemporaryDirectory() as tmp:
             copy = Path(tmp) / "page.html"
@@ -102,7 +106,7 @@ def main():
                             f"--print-to-pdf={pdf}", copy.as_uri()],
                            check=True, capture_output=True)
         href = "/" + pdf.relative_to(ROOT).as_posix()
-        label = f"Download PDF ({wording})"
+        label = "Download PDF"
         edited, n = re.subn(r'<a class="hero-data-link pdf-download" href="[^"]*">[^<]*</a>',
                             f'<a class="hero-data-link pdf-download" href="{href}">{label}</a>', source)
         if n != 1:

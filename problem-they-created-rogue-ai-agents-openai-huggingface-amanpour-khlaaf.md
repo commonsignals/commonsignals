@@ -9,7 +9,7 @@ cite: "Ben Matthews, Common Signals, '\"A problem they created\": how a news aud
 
 # How did Amanpour and Company viewers react to the OpenAI and Hugging Face incident?
 
-14 September 2026 · Ben Matthews
+14 September 2026
 
 "A problem they created": how a news audience received the accountability version of the OpenAI and Hugging Face incident
 

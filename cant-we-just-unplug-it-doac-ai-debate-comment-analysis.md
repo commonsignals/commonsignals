@@ -9,7 +9,7 @@ cite: "Ben Matthews, Common Signals, '\"Can't we just unplug it?\": The Diary of
 
 # How did viewers react to the Diary of a CEO debate on AI extinction risk?
 
-9 October 2026 · Ben Matthews
+9 October 2026
 
 "Can't we just unplug it?": The Diary of a CEO AI debate analysed through 26,000 comments
 

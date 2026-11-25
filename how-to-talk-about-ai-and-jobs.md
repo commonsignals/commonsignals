@@ -8,7 +8,7 @@ publisher: "Common Signals"
 
 # How to talk about AI, jobs and the economy
 
-24 November 2026 · Ben Matthews
+24 November 2026
 
 Three dos and a don't for talking about automation at work: who decides, who gains, and how workers get a say.
 

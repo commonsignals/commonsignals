@@ -9,7 +9,7 @@ cite: "Ben Matthews, Common Signals, '\"Please honor commit\": how the OpenAI ag
 
 # How did Dwarkesh Podcast viewers react to Ajeya Cotra on the OpenAI and Hugging Face incident?
 
-9 September 2026 · Ben Matthews
+9 September 2026
 
 "Please honor commit": how the OpenAI agent-swarm story landed with the audience most likely to believe it
 

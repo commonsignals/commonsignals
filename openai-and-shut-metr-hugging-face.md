@@ -9,7 +9,7 @@ cite: "Ben Matthews, Common Signals, 'OpenAI and shut? What an independent repor
 
 # Did METR's report change how Reddit saw the OpenAI and Hugging Face incident?
 
-4 September 2026 · Ben Matthews
+4 September 2026
 
 OpenAI and shut? What an independent report did to the marketing-stunt argument
 

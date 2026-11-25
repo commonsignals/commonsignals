@@ -9,7 +9,7 @@ cite: "Ben Matthews, Common Signals, \"How to communicate about AI safety\", 6 N
 
 # How to communicate about AI safety
 
-6 November 2026 · Ben Matthews
+6 November 2026
 
 An evidence-based guide for anyone explaining artificial intelligence risks and safety rules to the public.
 

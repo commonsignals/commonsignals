@@ -8,7 +8,7 @@ publisher: "Common Signals"
 
 # How to talk about AI regulation and independent oversight
 
-17 November 2026 · Ben Matthews
+17 November 2026
 
 Three dos and a don't for making the case for rules with teeth, and the words to avoid while you do it.
 

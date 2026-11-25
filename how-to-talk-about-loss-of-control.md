@@ -8,7 +8,7 @@ publisher: "Common Signals"
 
 # How to talk about loss of control and catastrophic risk
 
-11 November 2026 · Ben Matthews
+11 November 2026
 
 Three dos and a don't for explaining AI systems that act outside human intent.
 

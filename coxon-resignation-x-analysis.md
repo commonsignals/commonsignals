@@ -9,7 +9,7 @@ cite: "Ben Matthews, Common Signals, '\"Neither company is acting responsibly\":
 
 # How did X react to Jacob Coxon's resignation from Anthropic?
 
-25 September 2026 · Ben Matthews
+25 September 2026
 
 "Neither company is acting responsibly": how X received Jacob Coxon's resignation from Anthropic
 

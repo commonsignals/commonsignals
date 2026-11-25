@@ -11,7 +11,7 @@ cite: "Ben Matthews, Common Signals, '\"A problem they created\": how a news aud
 
 # How did Amanpour and Company viewers react to the OpenAI and Hugging Face incident?
 
-14 September 2026 · Ben Matthews
+14 September 2026
 
 "A problem they created": how a news audience received the accountability version of the OpenAI and Hugging Face incident
 
@@ -193,7 +193,7 @@ cite: "Ben Matthews, Common Signals, '\"Please honor commit\": how the OpenAI ag
 
 # How did Dwarkesh Podcast viewers react to Ajeya Cotra on the OpenAI and Hugging Face incident?
 
-9 September 2026 · Ben Matthews
+9 September 2026
 
 "Please honor commit": how the OpenAI agent-swarm story landed with the audience most likely to believe it
 
@@ -379,7 +379,7 @@ cite: "Ben Matthews, Common Signals, '\"Neither company is acting responsibly\":
 
 # How did X react to Jacob Coxon's resignation from Anthropic?
 
-25 September 2026 · Ben Matthews
+25 September 2026
 
 "Neither company is acting responsibly": how X received Jacob Coxon's resignation from Anthropic
 
@@ -546,7 +546,7 @@ cite: "Ben Matthews, Common Signals, '\"Can't we just unplug it?\": The Diary of
 
 # How did viewers react to the Diary of a CEO debate on AI extinction risk?
 
-9 October 2026 · Ben Matthews
+9 October 2026
 
 "Can't we just unplug it?": The Diary of a CEO AI debate analysed through 26,000 comments
 
@@ -754,7 +754,7 @@ cite: "Ben Matthews, Common Signals, 'OpenAI and shut? What an independent repor
 
 # Did METR's report change how Reddit saw the OpenAI and Hugging Face incident?
 
-4 September 2026 · Ben Matthews
+4 September 2026
 
 OpenAI and shut? What an independent report did to the marketing-stunt argument
 
@@ -950,7 +950,7 @@ cite: "Ben Matthews, Common Signals, 'How Instagram received Nate Soares's cavem
 
 # How did Instagram react to Nate Soares explaining AI risk?
 
-28 August 2026 · Ben Matthews
+28 August 2026
 
 How Instagram received Nate Soares's caveman-speak explainer of AI risk
 
@@ -1162,7 +1162,7 @@ publisher: "Common Signals"
 
 # How to talk about AI, jobs and the economy
 
-24 November 2026 · Ben Matthews
+24 November 2026
 
 Three dos and a don't for talking about automation at work: who decides, who gains, and how workers get a say.
 
@@ -1343,7 +1343,7 @@ publisher: "Common Signals"
 
 # How to talk about AI regulation and independent oversight
 
-17 November 2026 · Ben Matthews
+17 November 2026
 
 Three dos and a don't for making the case for rules with teeth, and the words to avoid while you do it.
 
@@ -1505,16 +1505,16 @@ url: "https://commonsignals.org/research/agenda"
 published: 2026-11-11
 updated: 2026-11-11
 publisher: "Common Signals"
-cite: "Ben Matthews, Common Signals, 'Common Signals research agenda', version 0.3, 11 November 2026, https://commonsignals.org/research/agenda."
+cite: "Ben Matthews, Common Signals, 'Common Signals research agenda', 11 November 2026, https://commonsignals.org/research/agenda."
 ---
 
 # Common Signals research agenda
 
-11 November 2026 · Ben Matthews · Version 0.3
+11 November 2026
 
 Eleven hypotheses about how audiences receive messages on AI risk, the four to settle first in 2027, and how each can be tested.
 
-[Download PDF (version 0.3)](https://commonsignals.org/assets/pdf/common-signals-research-agenda-v0.3.pdf)
+[Download PDF](https://commonsignals.org/assets/pdf/common-signals-research-agenda-v0.3.pdf)
 
 ## What this agenda is
 
@@ -1690,7 +1690,7 @@ The Diary of a CEO study meets all five. The five earlier studies were each chec
 
 ## Citing and taking on a hypothesis
 
-Cite the agenda with its version and the hypothesis number, for example: Ben Matthews, Common Signals, Research agenda v0.3, 11 November 2026, H6.
+Cite the agenda with its date and the hypothesis number, for example: Ben Matthews, Common Signals, Research agenda, 11 November 2026, H6.
 
 Numbers are permanent. A refuted hypothesis keeps its number and is marked refuted. New hypotheses take the next number. Every change of status is logged here with its date and the study behind it.
 
@@ -1698,13 +1698,13 @@ To take on a hypothesis, email [hello@commonsignals.org](mailto:hello@commonsign
 
 ## Version history
 
-- 0.3, 11 November 2026: H5's evidence now gives the Cotra figure as the Cotra article does, about half of the 108 rejecting comments. The 53% it gave before has no source on file. No status changed.
-- 0.2, 11 November 2026: added a "Tested elsewhere" line to H2, H3 and H8, setting out what controlled studies by others already show. No status changed.
-- 0.1, 11 November 2026: first published version.
+- 11 November 2026: H5's evidence now gives the Cotra figure as the Cotra article does, about half of the 108 rejecting comments. The 53% it gave before has no source on file. No status changed.
+- 11 November 2026: added a "Tested elsewhere" line to H2, H3 and H8, setting out what controlled studies by others already show. No status changed.
+- 11 November 2026: first published version.
 
 ## How to cite
 
-Cite as: Ben Matthews, Common Signals, 'Common Signals research agenda', version 0.3, 11 November 2026, [https://commonsignals.org/research/agenda](https://commonsignals.org/research/agenda).
+Cite as: Ben Matthews, Common Signals, 'Common Signals research agenda', 11 November 2026, [https://commonsignals.org/research/agenda](https://commonsignals.org/research/agenda).
 
 URL: https://commonsignals.org/how-to-talk-about-loss-of-control
 
@@ -1718,7 +1718,7 @@ publisher: "Common Signals"
 
 # How to talk about loss of control and catastrophic risk
 
-11 November 2026 · Ben Matthews
+11 November 2026
 
 Three dos and a don't for explaining AI systems that act outside human intent.
 
@@ -1860,7 +1860,7 @@ cite: "Ben Matthews, Common Signals, \"How to communicate about AI safety\", 6 N
 
 # How to communicate about AI safety
 
-6 November 2026 · Ben Matthews
+6 November 2026
 
 An evidence-based guide for anyone explaining artificial intelligence risks and safety rules to the public.
 
@@ -2731,7 +2731,7 @@ publisher: "Common Signals"
 
 # AI safety comms reading list: where to start
 
-15 October 2026 · Ben Matthews
+15 October 2026
 
 The reading list I wish I'd had at the start of my AI safety comms journey.
 

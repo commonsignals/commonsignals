@@ -8,7 +8,7 @@ publisher: "Common Signals"
 
 # AI safety comms reading list: where to start
 
-15 October 2026 · Ben Matthews
+15 October 2026
 
 The reading list I wish I'd had at the start of my AI safety comms journey.
 

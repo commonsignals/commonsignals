@@ -4,16 +4,16 @@ url: "https://commonsignals.org/research/agenda"
 published: 2026-11-11
 updated: 2026-11-11
 publisher: "Common Signals"
-cite: "Ben Matthews, Common Signals, 'Common Signals research agenda', version 0.3, 11 November 2026, https://commonsignals.org/research/agenda."
+cite: "Ben Matthews, Common Signals, 'Common Signals research agenda', 11 November 2026, https://commonsignals.org/research/agenda."
 ---
 
 # Common Signals research agenda
 
-11 November 2026 · Ben Matthews · Version 0.3
+11 November 2026
 
 Eleven hypotheses about how audiences receive messages on AI risk, the four to settle first in 2027, and how each can be tested.
 
-[Download PDF (version 0.3)](https://commonsignals.org/assets/pdf/common-signals-research-agenda-v0.3.pdf)
+[Download PDF](https://commonsignals.org/assets/pdf/common-signals-research-agenda-v0.3.pdf)
 
 ## What this agenda is
 
@@ -189,7 +189,7 @@ The Diary of a CEO study meets all five. The five earlier studies were each chec
 
 ## Citing and taking on a hypothesis
 
-Cite the agenda with its version and the hypothesis number, for example: Ben Matthews, Common Signals, Research agenda v0.3, 11 November 2026, H6.
+Cite the agenda with its date and the hypothesis number, for example: Ben Matthews, Common Signals, Research agenda, 11 November 2026, H6.
 
 Numbers are permanent. A refuted hypothesis keeps its number and is marked refuted. New hypotheses take the next number. Every change of status is logged here with its date and the study behind it.
 
@@ -197,10 +197,10 @@ To take on a hypothesis, email [hello@commonsignals.org](mailto:hello@commonsign
 
 ## Version history
 
-- 0.3, 11 November 2026: H5's evidence now gives the Cotra figure as the Cotra article does, about half of the 108 rejecting comments. The 53% it gave before has no source on file. No status changed.
-- 0.2, 11 November 2026: added a "Tested elsewhere" line to H2, H3 and H8, setting out what controlled studies by others already show. No status changed.
-- 0.1, 11 November 2026: first published version.
+- 11 November 2026: H5's evidence now gives the Cotra figure as the Cotra article does, about half of the 108 rejecting comments. The 53% it gave before has no source on file. No status changed.
+- 11 November 2026: added a "Tested elsewhere" line to H2, H3 and H8, setting out what controlled studies by others already show. No status changed.
+- 11 November 2026: first published version.
 
 ## How to cite
 
-Cite as: Ben Matthews, Common Signals, 'Common Signals research agenda', version 0.3, 11 November 2026, [https://commonsignals.org/research/agenda](https://commonsignals.org/research/agenda).
+Cite as: Ben Matthews, Common Signals, 'Common Signals research agenda', 11 November 2026, [https://commonsignals.org/research/agenda](https://commonsignals.org/research/agenda).
